@@ -35,15 +35,28 @@ set(QBSP_SOURCES
 add_library(libqbsp STATIC ${QBSP_SOURCES})
 target_link_libraries(libqbsp common ${CMAKE_THREAD_LIBS_INIT} TBB::tbb TBB::tbbmalloc fmt::fmt nlohmann_json::nlohmann_json pareto)
 
+# Both frontends share one compiler implementation. The qbsp target is retained
+# for upstream tooling; it also contains downstream corrections on this branch.
+execute_process(COMMAND git rev-parse HEAD WORKING_DIRECTORY ${PROJECT_SOURCE_DIR}
+    OUTPUT_VARIABLE QQBSP_REVISION OUTPUT_STRIP_TRAILING_WHITESPACE)
+execute_process(COMMAND git status --porcelain --untracked-files=no WORKING_DIRECTORY ${PROJECT_SOURCE_DIR}
+    OUTPUT_VARIABLE QQBSP_DIRTY OUTPUT_STRIP_TRAILING_WHITESPACE)
+if(QQBSP_DIRTY)
+    string(APPEND QQBSP_REVISION "-dirty")
+endif()
+if(NOT QQBSP_REVISION)
+    message(FATAL_ERROR "qqbsp identity requires a Git checkout")
+endif()
+add_executable(qqbsp main.cc)
+target_compile_definitions(qqbsp PRIVATE
+    QQBSP_BUILD_ID="Qartographer qqbsp; upstream=ccaeb8457a1267860ebe99ed1df7394ebdd6b435; downstream=${QQBSP_REVISION}; patches=P1")
 add_executable(qbsp main.cc)
-target_link_libraries(qbsp libqbsp)
-
-install(TARGETS qbsp RUNTIME DESTINATION .)
-
-# HACK: copy .dll dependencies
-add_custom_command(TARGET qbsp POST_BUILD
-                   COMMAND ${CMAKE_COMMAND} -E copy_if_different "$<TARGET_FILE:TBB::tbb>" "$<TARGET_FILE_DIR:qbsp>"
-				   COMMAND ${CMAKE_COMMAND} -E copy_if_different "$<TARGET_FILE:TBB::tbbmalloc>" "$<TARGET_FILE_DIR:qbsp>")
-
-copy_mingw_dlls(qbsp)
-add_loader_path_to_rpath(qbsp)
+foreach(compiler IN ITEMS qqbsp qbsp)
+    target_link_libraries(${compiler} libqbsp)
+    install(TARGETS ${compiler} RUNTIME DESTINATION .)
+    add_custom_command(TARGET ${compiler} POST_BUILD
+        COMMAND ${CMAKE_COMMAND} -E copy_if_different "$<TARGET_FILE:TBB::tbb>" "$<TARGET_FILE_DIR:${compiler}>"
+        COMMAND ${CMAKE_COMMAND} -E copy_if_different "$<TARGET_FILE:TBB::tbbmalloc>" "$<TARGET_FILE_DIR:${compiler}>")
+    copy_mingw_dlls(${compiler})
+    add_loader_path_to_rpath(${compiler})
+endforeach()

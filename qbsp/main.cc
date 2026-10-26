@@ -17,12 +17,17 @@
     See file, 'COPYING', for details.
 */
 
+#include <cstdio>
 #include <qbsp/qbsp.hh>
 #include <common/settings.hh>
 #include <common/log.hh>
 
 int main(int argc, const char **argv)
 {
+#ifdef QQBSP_BUILD_ID
+    // Printed alongside the existing startup/help version banner on every run.
+    std::puts(QQBSP_BUILD_ID);
+#endif
     logging::preinitialize();
 
     try {
