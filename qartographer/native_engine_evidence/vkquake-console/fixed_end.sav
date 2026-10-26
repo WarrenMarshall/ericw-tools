@@ -1,0 +1,369 @@
+5
+______________________kills:__0/__0____
+4097.000000
+100.000000
+0.000000
+25.000000
+0.000000
+0.000000
+0.000000
+1.000000
+0.000000
+0.000000
+0.000000
+0.000000
+0.000000
+0.000000
+0.000000
+0.000000
+1
+fixed
+3.286111
+m
+mmnmmommommnonmmonqnmmo
+abcdefghijklmnopqrstuvwxyzyxwvutsrqponmlkjihgfedcba
+mmmmmaaaaammmmmaaaaaabcdefgabcdefg
+mamamamamama
+jklmnopqrstuvwxyzyxwvutsrqponmlkj
+nmonqnmomnmomomno
+mmmaaaabcdefgmmmmaaaammmaamm
+mmmaaammmaaammmabcdefaaaammmmabcdefmmmaaaa
+aaaaaaaazzzzzzzz
+mmamammmmammamamaaamammma
+abcdefghijklmnopqrrqponmlkjihgfedcba
+m
+m
+m
+m
+m
+m
+m
+m
+m
+m
+m
+m
+m
+m
+m
+m
+m
+m
+m
+m
+m
+m
+m
+m
+m
+m
+m
+m
+m
+m
+m
+m
+m
+m
+m
+m
+m
+m
+m
+m
+m
+m
+m
+m
+m
+m
+m
+m
+m
+m
+m
+a
+{
+"self" "1"
+"other" "0"
+"world" "0"
+"time" "3.272222"
+"frametime" "0.013889"
+"force_retouch" "0.000000"
+"mapname" "routed"
+"deathmatch" "0.000000"
+"coop" "0.000000"
+"teamplay" "0.000000"
+"serverflags" "0.000000"
+"total_secrets" "0.000000"
+"total_monsters" "0.000000"
+"found_secrets" "0.000000"
+"killed_monsters" "0.000000"
+"parm1" "4097.000000"
+"parm2" "100.000000"
+"parm3" "0.000000"
+"parm4" "25.000000"
+"parm5" "0.000000"
+"parm6" "0.000000"
+"parm7" "0.000000"
+"parm8" "1.000000"
+"parm9" "0.000000"
+"parm10" "0.000000"
+"parm11" "0.000000"
+"parm12" "0.000000"
+"parm13" "0.000000"
+"parm14" "0.000000"
+"parm15" "0.000000"
+"parm16" "0.000000"
+"v_forward_x" "-0.000000"
+"v_forward_y" "1.000000"
+"v_forward_z" "-0.000000"
+"v_up_x" "0.000000"
+"v_up_y" "0.000000"
+"v_up_z" "1.000000"
+"v_right_x" "1.000000"
+"v_right_y" "0.000000"
+"v_right_z" "-0.000000"
+"trace_allsolid" "0.000000"
+"trace_startsolid" "0.000000"
+"trace_fraction" "0.000000"
+"trace_endpos_x" "0.000000"
+"trace_endpos_y" "0.000000"
+"trace_endpos_z" "0.000000"
+"trace_plane_normal_x" "0.000000"
+"trace_plane_normal_y" "0.000000"
+"trace_plane_normal_z" "0.000000"
+"trace_plane_dist" "0.000000"
+"trace_ent" "0"
+"trace_inopen" "0.000000"
+"trace_inwater" "0.000000"
+"msg_entity" "0"
+"VEC_ORIGIN_x" "0.000000"
+"VEC_ORIGIN_y" "0.000000"
+"VEC_ORIGIN_z" "0.000000"
+"VEC_HULL_MIN_x" "-16.000000"
+"VEC_HULL_MIN_y" "-16.000000"
+"VEC_HULL_MIN_z" "-24.000000"
+"VEC_HULL_MAX_x" "16.000000"
+"VEC_HULL_MAX_y" "16.000000"
+"VEC_HULL_MAX_z" "32.000000"
+"VEC_HULL2_MIN_x" "-32.000000"
+"VEC_HULL2_MIN_y" "-32.000000"
+"VEC_HULL2_MIN_z" "-24.000000"
+"VEC_HULL2_MAX_x" "32.000000"
+"VEC_HULL2_MAX_y" "32.000000"
+"VEC_HULL2_MAX_z" "64.000000"
+"movedist" "0.000000"
+"gameover" "0.000000"
+"string_null" ""
+"empty_float" "0.000000"
+"newmis" "0"
+"activator" "0"
+"damage_attacker" "0"
+"framecount" "146.000000"
+"skill" "1.000000"
+"enemy_vis" "0.000000"
+"enemy_infront" "0.000000"
+"enemy_range" "0.000000"
+"enemy_yaw" "0.000000"
+"current_yaw" "0.000000"
+"sight_entity" "0"
+"sight_entity_time" "0.000000"
+"multi_ent" "0"
+"multi_damage" "0.000000"
+"lastspawn" "0"
+"bodyque_head" "2"
+"modelindex_eyes" "3.000000"
+"modelindex_player" "2.000000"
+"intermission_running" "0.000000"
+"intermission_exittime" "0.000000"
+"nextmap" ""
+"stemp" "0"
+"otemp" "0"
+"s" "0"
+"old" "0"
+"le1" "0"
+"le2" "0"
+"lightning_end" "0.000000"
+"hknight_type" "0.000000"
+"shub" "0"
+}
+{
+"modelindex" "1.000000"
+"movetype" "7.000000"
+"solid" "4.000000"
+"classname" "worldspawn"
+"model" "maps/routed.bsp"
+"wad" "/tmp/qartographer-graphical.2BZ5dK/data/godot/app_userdata/qartographer/qartographer_core.wad"
+}
+{
+"modelindex" "2.000000"
+"absmin" "-1417.000000 -1681.000000 155.000000"
+"absmax" "-1383.000000 -1647.000000 213.000000"
+"movetype" "3.000000"
+"solid" "3.000000"
+"origin" "-1400.000000 -1664.000000 180.000000"
+"oldorigin" "-1400.000000 -1664.000000 180.000000"
+"angles" "0.000000 90.000000 0.000000"
+"classname" "player"
+"model" "progs/player.mdl"
+"frame" "15.000000"
+"mins" "-16.000000 -16.000000 -24.000000"
+"maxs" "16.000000 16.000000 32.000000"
+"size" "32.000000 32.000000 56.000000"
+"think" "player_stand1"
+"nextthink" "3.313888"
+"health" "10000.000000"
+"weapon" "1.000000"
+"weaponmodel" "progs/v_shot.mdl"
+"currentammo" "25.000000"
+"ammo_shells" "25.000000"
+"items" "4353.000000"
+"takedamage" "2.000000"
+"view_ofs" "0.000000 0.000000 22.000000"
+"fixangle" "1.000000"
+"v_angle" "0.000000 90.000000 0.000000"
+"netname" "player"
+"flags" "4104.000000"
+"colormap" "1.000000"
+"team" "1.000000"
+"max_health" "100.000000"
+"watertype" "-1.000000"
+"th_pain" "player_pain"
+"th_die" "PlayerDie"
+"walkframe" "4.000000"
+"attack_finished" "1.313889"
+"jump_flag" "-200.000046"
+"air_finished" "15.272223"
+"dmg" "2.000000"
+}
+{
+"absmin" "-1.000000 -1.000000 -1.000000"
+"absmax" "1.000000 1.000000 1.000000"
+"classname" "bodyque"
+"owner" "3"
+}
+{
+"absmin" "-1.000000 -1.000000 -1.000000"
+"absmax" "1.000000 1.000000 1.000000"
+"classname" "bodyque"
+"owner" "4"
+}
+{
+"absmin" "-1.000000 -1.000000 -1.000000"
+"absmax" "1.000000 1.000000 1.000000"
+"classname" "bodyque"
+"owner" "5"
+}
+{
+"absmin" "-1.000000 -1.000000 -1.000000"
+"absmax" "1.000000 1.000000 1.000000"
+"classname" "bodyque"
+"owner" "2"
+}
+{
+"absmin" "-1401.000000 -1665.000000 179.000000"
+"absmax" "-1399.000000 -1663.000000 181.000000"
+"origin" "-1400.000000 -1664.000000 180.000000"
+"angles" "0.000000 90.000000 0.000000"
+"classname" "info_player_start"
+}
+{
+}
+/*
+// QuakeSpasm extended savegame
+sv.model_precache 1 "maps/fixed.bsp"
+sv.model_precache 2 "progs/player.mdl"
+sv.model_precache 3 "progs/eyes.mdl"
+sv.model_precache 4 "progs/h_player.mdl"
+sv.model_precache 5 "progs/gib1.mdl"
+sv.model_precache 6 "progs/gib2.mdl"
+sv.model_precache 7 "progs/gib3.mdl"
+sv.model_precache 8 "progs/s_bubble.spr"
+sv.model_precache 9 "progs/s_explod.spr"
+sv.model_precache 10 "progs/v_axe.mdl"
+sv.model_precache 11 "progs/v_shot.mdl"
+sv.model_precache 12 "progs/v_nail.mdl"
+sv.model_precache 13 "progs/v_rock.mdl"
+sv.model_precache 14 "progs/v_shot2.mdl"
+sv.model_precache 15 "progs/v_nail2.mdl"
+sv.model_precache 16 "progs/v_rock2.mdl"
+sv.model_precache 17 "progs/bolt.mdl"
+sv.model_precache 18 "progs/bolt2.mdl"
+sv.model_precache 19 "progs/bolt3.mdl"
+sv.model_precache 20 "progs/lavaball.mdl"
+sv.model_precache 21 "progs/missile.mdl"
+sv.model_precache 22 "progs/grenade.mdl"
+sv.model_precache 23 "progs/spike.mdl"
+sv.model_precache 24 "progs/s_spike.mdl"
+sv.model_precache 25 "progs/backpack.mdl"
+sv.model_precache 26 "progs/zom_gib.mdl"
+sv.model_precache 27 "progs/v_light.mdl"
+sv.sound_precache 1 "weapons/r_exp3.wav"
+sv.sound_precache 2 "weapons/rocket1i.wav"
+sv.sound_precache 3 "weapons/sgun1.wav"
+sv.sound_precache 4 "weapons/guncock.wav"
+sv.sound_precache 5 "weapons/ric1.wav"
+sv.sound_precache 6 "weapons/ric2.wav"
+sv.sound_precache 7 "weapons/ric3.wav"
+sv.sound_precache 8 "weapons/spike2.wav"
+sv.sound_precache 9 "weapons/tink1.wav"
+sv.sound_precache 10 "weapons/grenade.wav"
+sv.sound_precache 11 "weapons/bounce.wav"
+sv.sound_precache 12 "weapons/shotgn2.wav"
+sv.sound_precache 13 "demon/dland2.wav"
+sv.sound_precache 14 "misc/h2ohit1.wav"
+sv.sound_precache 15 "items/itembk2.wav"
+sv.sound_precache 16 "player/plyrjmp8.wav"
+sv.sound_precache 17 "player/land.wav"
+sv.sound_precache 18 "player/land2.wav"
+sv.sound_precache 19 "player/drown1.wav"
+sv.sound_precache 20 "player/drown2.wav"
+sv.sound_precache 21 "player/gasp1.wav"
+sv.sound_precache 22 "player/gasp2.wav"
+sv.sound_precache 23 "player/h2odeath.wav"
+sv.sound_precache 24 "misc/talk.wav"
+sv.sound_precache 25 "player/teledth1.wav"
+sv.sound_precache 26 "misc/r_tele1.wav"
+sv.sound_precache 27 "misc/r_tele2.wav"
+sv.sound_precache 28 "misc/r_tele3.wav"
+sv.sound_precache 29 "misc/r_tele4.wav"
+sv.sound_precache 30 "misc/r_tele5.wav"
+sv.sound_precache 31 "weapons/lock4.wav"
+sv.sound_precache 32 "weapons/pkup.wav"
+sv.sound_precache 33 "items/armor1.wav"
+sv.sound_precache 34 "weapons/lhit.wav"
+sv.sound_precache 35 "weapons/lstart.wav"
+sv.sound_precache 36 "items/damage3.wav"
+sv.sound_precache 37 "misc/power.wav"
+sv.sound_precache 38 "player/gib.wav"
+sv.sound_precache 39 "player/udeath.wav"
+sv.sound_precache 40 "player/tornoff2.wav"
+sv.sound_precache 41 "player/pain1.wav"
+sv.sound_precache 42 "player/pain2.wav"
+sv.sound_precache 43 "player/pain3.wav"
+sv.sound_precache 44 "player/pain4.wav"
+sv.sound_precache 45 "player/pain5.wav"
+sv.sound_precache 46 "player/pain6.wav"
+sv.sound_precache 47 "player/death1.wav"
+sv.sound_precache 48 "player/death2.wav"
+sv.sound_precache 49 "player/death3.wav"
+sv.sound_precache 50 "player/death4.wav"
+sv.sound_precache 51 "player/death5.wav"
+sv.sound_precache 52 "weapons/ax1.wav"
+sv.sound_precache 53 "player/axhit1.wav"
+sv.sound_precache 54 "player/axhit2.wav"
+sv.sound_precache 55 "player/h2ojump.wav"
+sv.sound_precache 56 "player/slimbrn2.wav"
+sv.sound_precache 57 "player/inh2o.wav"
+sv.sound_precache 58 "player/inlava.wav"
+sv.sound_precache 59 "misc/outwater.wav"
+sv.sound_precache 60 "player/lburn1.wav"
+sv.sound_precache 61 "player/lburn2.wav"
+sv.sound_precache 62 "misc/water1.wav"
+sv.sound_precache 63 "misc/water2.wav"
+sv.serverflags 0
+fog 0 0.3 0.3 0.3
+sky ""
+skyfog 0
+*/

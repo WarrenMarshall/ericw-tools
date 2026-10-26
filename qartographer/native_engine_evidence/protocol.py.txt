@@ -1,0 +1,14 @@
+from pathlib import Path
+import shutil,subprocess,time,signal,os,json
+root=Path('/tmp/qqbsp-engine-investigation');out=root/'vk-protocol666';game=out/'id1';game.mkdir(parents=True);src=root/'vkquake-unattended/id1'
+shutil.copytree(src/'maps',game/'maps')
+for n in ['pak0.pak','pak1.pak']:(game/n).symlink_to((src/n).resolve())
+for n in ['stock_seed.sav','fixed_seed.sav']:shutil.copyfile(src/n,game/n)
+(game/'acceptance.cfg').write_text('developer 1\nsv_protocol 666\n'+(src/'acceptance.cfg').read_text())
+cmd=['/tmp/appimage_extracted_e624bbed38655658b240d734d34ddc01/usr/bin/vkquake','-basedir',str(out),'-window','-width','960','-height','640','-nosound','+exec','acceptance.cfg']
+t=time.monotonic()
+with (out/'stdout.log').open('w') as f:
+ p=subprocess.Popen(cmd,stdout=f,stderr=subprocess.STDOUT,start_new_session=True)
+ try:code=p.wait(timeout=15);timeout=False
+ except subprocess.TimeoutExpired:timeout=True;os.killpg(p.pid,signal.SIGKILL);code=p.wait(timeout=5)
+r={'command':cmd,'elapsed':time.monotonic()-t,'exit':code,'timeout':timeout};(out/'process.json').write_text(json.dumps(r,indent=2)+'\n');print(r)

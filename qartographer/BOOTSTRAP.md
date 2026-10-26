@@ -1,6 +1,11 @@
 # QQBSP bootstrap — 2026-10-26
 
 A validated Linux `qqbsp` development baseline is established and deployed locally.
+
+Later native-infrastructure investigation resolved the apparent Qrusty quit stall
+using `exitstyle 2`; see [current engine findings](NATIVE_ENGINE.md). The bootstrap
+evidence below remains the historical record; current promotion requires a normal
+engine exit and does not accept a timeout from saved states alone.
 This is not a production exporter migration or a portable compiler release.
 
 ## Source and build

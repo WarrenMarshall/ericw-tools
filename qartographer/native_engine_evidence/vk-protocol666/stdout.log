@@ -1,0 +1,143 @@
+Command line: /tmp/appimage_extracted_e624bbed38655658b240d734d34ddc01/usr/bin/vkquake -basedir /tmp/qqbsp-engine-investigation/vk-protocol666 -window -width 960 -height 640 -nosound +exec acceptance.cfg
+Using SDL version 3.4.12
+Detected 32 CPUs.
+Initializing vkQuake 1.35.0
+Built with GCC 11.4.0
+Host_Init
+Playing registered version.
+Console initialized.
+UDP4 Initialized
+UDPv6 Initialized
+Server using protocol 999+ (FTE-RMQ)
+Exe: 04:56:36 Jul  8 2026 
+SDL Video Driver: x11
+
+Vulkan Initialization
+Using Vulkan 1.1
+Instance extensions:
+ VK_KHR_surface
+ VK_KHR_xlib_surface
+ VK_KHR_get_surface_capabilities2
+ VK_KHR_get_physical_device_properties2
+
+Vendor: NVIDIA
+Device: NVIDIA GeForce RTX 3090
+Driver: NVIDIA 580.178.04
+Using subgroup operations
+Using ray queries
+Using present wait
+Device extensions:
+ VK_KHR_swapchain
+ VK_KHR_get_memory_requirements2
+ VK_KHR_dedicated_allocation
+ VK_EXT_subgroup_size_control
+ VK_KHR_present_id
+ VK_KHR_present_wait
+ VK_KHR_acceleration_structure
+ VK_KHR_push_descriptor
+ VK_EXT_descriptor_indexing
+ VK_KHR_buffer_device_address
+ VK_KHR_deferred_host_operations
+ VK_KHR_shader_float_controls
+ VK_KHR_spirv_1_4
+ VK_KHR_acceleration_structure
+ VK_KHR_ray_query
+Using A2B10G10R10 color buffer format
+Using D32_S8 depth buffer format
+
+Creating command buffers
+Initializing staging
+Creating descriptor set layouts
+Reallocating dynamic vertex buffers (256 KB)
+Reallocating dynamic index buffers (1024 KB)
+Reallocating dynamic uniform buffers (256 KB)
+Initializing samplers
+Texture lod bias: 0.000000
+Creating pipeline layouts
+Allocating lightstyles buffer (0 KB)
+Allocating lights buffer (12 KB)
+Allocating submodel transforms buffer (768 KB)
+
+Language initialization
+Using IMMEDIATE present mode
+Creating color buffer
+AA disabled
+Creating depth buffer
+Creating render passes
+Creating frame buffers
+Creating pipelines
+Couldn't load 'localization/loc_english.txt'
+from '/tmp/qqbsp-engine-investigation/vk-protocol666'
+
+========= Quake Initialized =========
+
+execing quake.rc
+Using IMMEDIATE present mode
+Creating color buffer
+AA disabled
+Creating depth buffer
+Creating render passes
+Creating frame buffers
+Creating pipelines
+Initializing samplers
+Texture lod bias: 0.000000
+execing default.cfg
+couldn't exec config.cfg
+couldn't exec autoexec.cfg
+execing acceptance.cfg
+Unknown command "joystick"
+Disabling renderer/network isolation.
+Loading game from /tmp/qqbsp-engine-investigation/vk-protocol666/id1/stock_seed.sav...
+SpawnServer: stock
+Clearing memory
+progs.dat occupies 403K.
+Warning: Missing external texture 'skip' in wads, using BSP
+Texture skip extends past end of lump
+Warning: Missing external texture 'NO_TEXTURE' in wads, using BSP
+Texture NO_TEXTURE extends past end of lump
+Mod_LoadTexinfo: 50 texture(s) missing from BSP file
+0 entities inhibited
+Server spawned.
+CL_EstablishConnection: connected to local
+Client LOCAL connected
+Saving game to /tmp/qqbsp-engine-investigation/vk-protocol666/id1/stock_start.sav...
+done.
+Saving game to /tmp/qqbsp-engine-investigation/vk-protocol666/id1/stock_end.sav...
+done.
+Loading game from /tmp/qqbsp-engine-investigation/vk-protocol666/id1/fixed_seed.sav...
+Sending clc_disconnect
+Client unconnected removed
+SpawnServer: fixed
+Clearing memory
+progs.dat occupies 403K.
+Warning: Missing external texture 'skip' in wads, using BSP
+Texture skip extends past end of lump
+Warning: Missing external texture 'NO_TEXTURE' in wads, using BSP
+Texture NO_TEXTURE extends past end of lump
+Mod_LoadTexinfo: 50 texture(s) missing from BSP file
+0 entities inhibited
+Server spawned.
+CL_EstablishConnection: connected to local
+Client LOCAL connected
+Saving game to /tmp/qqbsp-engine-investigation/vk-protocol666/id1/fixed_start.sav...
+done.
+Saving game to /tmp/qqbsp-engine-investigation/vk-protocol666/id1/fixed_end.sav...
+done.
+Sending clc_disconnect
+Client unconnected removed
+SpawnServer: ordinary
+Clearing memory
+progs.dat occupies 403K.
+Mod_LoadTexinfo: 6 texture(s) missing from BSP file
+trying to open external vis file
+maps/ordinary.vis not found, trying id1.vis
+external vis not found
+"mapversion" is not a field
+0 entities inhibited
+Server spawned.
+CL_EstablishConnection: connected to local
+Client LOCAL connected
+Can't savegame with a dead player
+QQBSP_NATIVE_DONE 
+Sending clc_disconnect
+Client unconnected removed

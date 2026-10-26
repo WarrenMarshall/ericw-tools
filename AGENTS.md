@@ -122,15 +122,41 @@ on failure. Report unavailable destinations/failures explicitly. Never overwrite
 qbsp, vis, light, other utilities or their libraries. This validated local deployment
 is authorized; publication, packaging and production editor integration are not.
 
-If an engine stalls only during shutdown after writing all complete native states,
-the runner forcibly cleans up its process group and records that limitation; all
-state assertions still apply. Incomplete/missing states fail. To inspect completed
-states after a shutdown failure without rerunning passing compiler checks:
+## Native engine operation
+
+QrustyQuake remains preferred. Read qartographer/NATIVE_ENGINE.md for the vkQuake
+comparison and preserved evidence. The old apparent shutdown stall was interactive
+quit UI: acceptance.cfg now sets `exitstyle 2` to bypass confirmation/exit screens.
+No compiler or collision expectation changed to accommodate another engine.
+
+Native-only validation, reusing existing compiler artifacts and consumed BSP29:
 
 ```sh
-python3 qartographer/tiers.py --tier 3 --work /tmp/qqbsp-work --results /tmp/qqbsp-tier3-new --resume-native /tmp/qqbsp-tier3-new/native --engine /path/to/extracted/AppRun
+SDL_VIDEODRIVER=dummy python3 qartographer/native.py --work /tmp/qqbsp-work --output /tmp/qqbsp-native-new --ordinary /tmp/qqbsp-tier3-existing/compatibility/ordinary.bsp
+python3 qartographer/test_native.py
 ```
 
-The resume command requires the earlier successful compatibility checkpoint and
-matching binary/input identities. Prefer --engine /path/to/extracted/AppRun for
-AppImage/FUSE problems; validated_build.py also accepts --engine and --id1.
+The dummy driver passed on the local installed Qrusty build; omit the environment
+prefix for desktop operation. --engine and --id1 override the installed defaults;
+validated_build.py also accepts them. Underlying command:
+`qrustyquake -basedir OUTPUT -window -width 960 -height 640 -nosound +exec acceptance.cfg`.
+The script preserves 1/72-second frames, speed 100, 144 movement waits and 72
+ordinary-map waits. Stock stays at (-1400,-1664,180); P1 advances more than 100
+units in Y, ends above Z=130 and grounded in WALK. Both server clocks must advance;
+the BSP29 player must be alive and grounded. Original hull assertions remain.
+
+Require exit 0 within 55 seconds, QQBSP_NATIVE_DONE, all saves and state assertions.
+A timeout kills the isolated process group with SIGKILL, reaps it within 5 seconds,
+records INCOMPLETE and fails. Nonzero exit or incomplete states fail. Retain logs,
+process.json, results.json and saves; never treat paused input as a compiler defect.
+
+To attach a matching normal-exit native PASS to a completed Tier 3 checkpoint:
+
+```sh
+python3 qartographer/tiers.py --tier 3 --work /tmp/qqbsp-work --results /tmp/qqbsp-tier3-existing --resume-native /tmp/qqbsp-native-new
+```
+
+Binary/input/engine identity and normal-exit process receipt must match. Historical
+saves without that receipt are inspection only and cannot promote Tier 3. vkQuake's
+current script readiness differs; it is an unaccepted research alternative. Native
+hull 2 is not covered by this player fixture: retain Tier 2 independent hulls 0/1/2.

@@ -1,0 +1,14 @@
+from pathlib import Path
+import shutil,subprocess,time,os,signal,json
+root=Path('/tmp/qqbsp-engine-investigation');out=root/'vk-signon';game=out/'id1';game.mkdir(parents=True)
+shutil.copytree(root/'vkquake/id1/maps',game/'maps')
+for n in ['pak0.pak','pak1.pak']:(game/n).symlink_to((root/'vkquake/id1'/n).resolve())
+shutil.copyfile(root/'vkquake/id1/fixed_seed.sav',game/'fixed_seed.sav')
+lines=['developer 1','host_framerate 0.013888889','host_maxfps 72','cl_forwardspeed 100','sv_maxspeed 100','load fixed_seed']+['wait']*72+['save begin','+forward']+['wait']*144+['-forward','save end','status','toggleconsole','quit']
+(game/'probe.cfg').write_text('\n'.join(lines)+'\n')
+cmd=['/tmp/appimage_extracted_e624bbed38655658b240d734d34ddc01/usr/bin/vkquake','-basedir',str(out),'-window','-width','960','-height','640','-nosound','+exec','probe.cfg']
+with (out/'stdout.log').open('w') as f:
+ p=subprocess.Popen(cmd,stdout=f,stderr=subprocess.STDOUT,start_new_session=True)
+ try:r=p.wait(timeout=15)
+ except subprocess.TimeoutExpired:os.killpg(p.pid,signal.SIGKILL);r=p.wait(timeout=5)
+print(r)

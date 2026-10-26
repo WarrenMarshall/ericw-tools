@@ -1,0 +1,20 @@
+{
+  "command": [
+    "/tmp/appimage_extracted_740db85dc4875cfdb26a910527520a99/usr/bin/qrustyquake",
+    "-basedir",
+    "/tmp/qqbsp-engine-investigation/headless-qrusty",
+    "-window",
+    "-width",
+    "960",
+    "-height",
+    "640",
+    "-nosound",
+    "+exec",
+    "acceptance.cfg"
+  ],
+  "timeout_seconds": 55,
+  "acceptance": "PASS",
+  "exit": 0,
+  "elapsed_seconds": 5.222532297018915,
+  "timeout": false
+}

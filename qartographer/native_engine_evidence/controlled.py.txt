@@ -1,0 +1,21 @@
+from pathlib import Path
+import subprocess,shutil,json,time,os,signal
+ROOT=Path('/tmp/qqbsp-engine-investigation')
+for label in ['qrustyquake','vkquake']:
+ src=ROOT/label/'id1';out=ROOT/(label+'-console');game=out/'id1';game.mkdir(parents=True)
+ shutil.copytree(src/'maps',game/'maps')
+ for n in ['pak0.pak','pak1.pak']:(game/n).symlink_to((src/n).resolve())
+ for n in ['stock_seed.sav','fixed_seed.sav']:shutil.copyfile(src/n,game/n)
+ cfg=(src/'acceptance.cfg').read_text()
+ # Isolate quit-menu behavior. Keep every movement/load/wait command identical.
+ cfg=cfg.removesuffix('quit\n')+'toggleconsole\nquit\n'
+ (game/'acceptance.cfg').write_text(cfg)
+ engine=Path('/tmp/appimage_extracted_'+('740db85dc4875cfdb26a910527520a99' if label=='qrustyquake' else 'e624bbed38655658b240d734d34ddc01')+'/AppRun').resolve()
+ cmd=[str(engine),'-basedir',str(out),'-window','-width','960','-height','640','-nosound','-condebug','+exec','acceptance.cfg']
+ start=time.monotonic()
+ with (out/'stdout.log').open('w') as log:
+  p=subprocess.Popen(cmd,stdout=log,stderr=subprocess.STDOUT,start_new_session=True)
+  try:code=p.wait(timeout=15);timeout=False
+  except subprocess.TimeoutExpired:timeout=True;os.killpg(p.pid,signal.SIGKILL);code=p.wait(timeout=5)
+ result={'command':cmd,'elapsed':time.monotonic()-start,'exit':code,'timeout':timeout,'saves':sorted(p.name for p in game.glob('*.sav'))}
+ (out/'process.json').write_text(json.dumps(result,indent=2)+'\n');print(label,result,flush=True)

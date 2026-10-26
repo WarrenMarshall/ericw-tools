@@ -1,0 +1,64 @@
+{
+  "compiler_sha256": {
+    "pristine": "b80a35bc57eee9906c259abf2aa30a475c6a3f0864b6e4f9c16f233f9658d880",
+    "qqbsp": "9a36f9b449da4484e7c13f87d4f72698a9b998fc42e3a9e21bd5e8624e068d1a"
+  },
+  "shutdown": "normal",
+  "engine": "/home/warrenmarshall/.local/share/Steam/steamapps/common/Quake/qrustyquake",
+  "engine_sha256": "cefbd107e21a6cb362401f8b1009c313f7d5b94053364165a4a8d141c8e08656",
+  "command": [
+    "/home/warrenmarshall/.local/share/Steam/steamapps/common/Quake/qrustyquake",
+    "-basedir",
+    "/tmp/qqbsp-engine-investigation/default-headless-qrusty",
+    "-window",
+    "-width",
+    "960",
+    "-height",
+    "640",
+    "-nosound",
+    "+exec",
+    "acceptance.cfg"
+  ],
+  "pak_sha256": {
+    "pak0.pak": "35a9c55e5e5a284a159ad2a62e0e8def23d829561fe2f54eb402dbc0a9a946af",
+    "pak1.pak": "94e355836ec42bc464e4cbe794cfb7b5163c6efa1bcc575622bb36475bf1cf30"
+  },
+  "stock": {
+    "start": {
+      "origin": "-1400.000000 -1664.000000 180.000000",
+      "velocity": "0",
+      "movetype": "3.000000",
+      "flags": "4104.000000",
+      "server_time": 3.286111
+    },
+    "end": {
+      "origin": "-1400.000000 -1664.000000 180.000000",
+      "velocity": "0",
+      "movetype": "3.000000",
+      "flags": "4104.000000",
+      "server_time": 5.272222
+    }
+  },
+  "fixed": {
+    "start": {
+      "origin": "-1400.000000 -1664.000000 180.000000",
+      "velocity": "0",
+      "movetype": "3.000000",
+      "flags": "4104.000000",
+      "server_time": 3.286111
+    },
+    "end": {
+      "origin": "-1400.000000 -1502.543823 168.025421",
+      "velocity": "0.000000 100.000000 0.000000",
+      "movetype": "3.000000",
+      "flags": "4616.000000",
+      "server_time": 5.272222
+    }
+  },
+  "ordinary": {
+    "origin": "-56.000000 -96.000000 88.031250",
+    "movetype": "3.000000",
+    "flags": "4616.000000"
+  },
+  "acceptance": "PASS"
+}

@@ -1,0 +1,18 @@
+{
+  "command": [
+    "/tmp/appimage_extracted_e624bbed38655658b240d734d34ddc01/usr/bin/vkquake",
+    "-basedir",
+    "/tmp/qqbsp-engine-investigation/vk-protocol666",
+    "-window",
+    "-width",
+    "960",
+    "-height",
+    "640",
+    "-nosound",
+    "+exec",
+    "acceptance.cfg"
+  ],
+  "elapsed": 6.274311881978065,
+  "exit": 0,
+  "timeout": false
+}

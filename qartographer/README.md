@@ -181,10 +181,12 @@ binary, in addition to the collision suite receipt. The earlier regress.py-only
 commands remain useful for focused investigation but do not authorize deployment.
 Use tiers.py --tier 3 followed by deploy.py, or validated_build.py, for promotion.
 
-Native engine teardown is distinct from movement correctness: this host can stall
-in shutdown after writing every required save. The runner cleans up the test process
-group and validates all saved endpoints; missing states still fail. The bootstrap
-preserved two completed replays and used --resume-native after that observed stall,
-without repeating the successful compiler/consumer checks. See BOOTSTRAP.md for
-the explicit limitation. --engine and --id1 also pass through validated_build.py;
-an already extracted AppRun avoids AppImage/FUSE launcher dependencies.
+QrustyQuake remains the preferred native engine. The old apparent shutdown stall
+was interactive quit UI, resolved by `exitstyle 2` in the generated script. Normal
+exit 0, the completion marker and all movement/grounding assertions are now required;
+a timeout kills the isolated process group and cannot pass the unattended gate.
+The local build also passes with SDL_VIDEODRIVER=dummy for headless execution.
+See NATIVE_ENGINE.md and ../AGENTS.md for exact standalone/resume commands, timeout
+behavior and the bounded vkQuake comparison. A normal-exit native-only PASS can be
+attached to otherwise completed Tier 3 evidence without repeating compiler tests;
+historical timeout saves are inspection only. No engine replacement is necessary.

@@ -4,6 +4,7 @@ import argparse,hashlib,json,os,re,shutil,struct,subprocess,sys,xml.etree.Elemen
 from pathlib import Path
 sys.dont_write_bytecode=True
 from deploy import DEFAULT,sha
+from native import DEFAULT_ENGINE,DEFAULT_ID1
 HERE=Path(__file__).resolve().parent
 FAST='qbsp.duplicatePlanes:qbsp.emptyBrush:testmapsQ1.simpleSealed'
 CORRECTNESS=FAST+':testmapsQ1.chopNoChange:testmapsQ1.cube:testmapsQ1.cubes:testmapsQ1.brushClippingOrder:testmapsQ1.angledBrush:testmapsQ1.sealingContents:testmapsQ1.detailTouchingWater:testmapsQ1.hull1ContentTypes:testmapsQ1.sealingHull1Onnode:testmapsQ1.csg'
@@ -17,11 +18,11 @@ def main():
     ap=argparse.ArgumentParser(description=__doc__)
     ap.add_argument('--tier',type=int,choices=[1,2,3],required=True)
     ap.add_argument('--work',type=Path,required=True);ap.add_argument('--results',type=Path,required=True)
-    ap.add_argument('--engine',type=Path,default=Path.home()/'.steam/steam/steamapps/common/Quake/qrustyquake')
-    ap.add_argument('--id1',type=Path,default=Path.home()/'.local/share/Steam/steamapps/common/Quake/id1')
+    ap.add_argument('--engine',type=Path,default=DEFAULT_ENGINE)
+    ap.add_argument('--id1',type=Path,default=DEFAULT_ID1)
     ap.add_argument('--utilities',type=Path,default=DEFAULT.parent)
     ap.add_argument('--performance-note',default='')
-    ap.add_argument('--resume-native',type=Path,help='Validate completed native saves after a shutdown failure; reuse earlier passing checks')
+    ap.add_argument('--resume-native',type=Path,help='Attach a matching completed native run; historical saves without a normal-exit PASS are inspection only')
     a=ap.parse_args();a.results=a.results.resolve();a.work=a.work.resolve()
     if a.resume_native:
         report=json.loads((a.results/'tier-results.json').read_text())
@@ -38,10 +39,21 @@ def main():
         assert banner in (native/'fixed-compile.log').read_text()
         assert sha(native/'id1/maps/ordinary.bsp')==sha(a.results/'compatibility/ordinary.bsp')
         from native import validate_saved
-        report['native']=validate_saved(stock,fixed,a.engine.resolve(),a.id1.resolve(),native,shutdown='Resumed completed saves after engine shutdown timeout; test processes forcibly cleaned up')
-        report['acceptance']='PASS'
+        process_path=native/'process.json'
+        process=json.loads(process_path.read_text()) if process_path.exists() else {}
+        normal=process.get('acceptance')=='PASS' and process.get('exit')==0 and process.get('timeout') is False
+        if normal:
+            saved=json.loads((native/'results.json').read_text())
+            assert saved['compiler_sha256']=={'pristine':sha(stock),'qqbsp':sha(fixed)}
+            assert saved['engine_sha256']==sha(a.engine.resolve())
+            assert 'QQBSP_NATIVE_DONE' in (native/'engine.log').read_text()
+        report['native']=validate_saved(stock,fixed,a.engine.resolve(),a.id1.resolve(),native,cmd=process.get('command'),shutdown='normal' if normal else 'Historical saved-state inspection; no clean exit receipt',write_result=normal)
+        report['acceptance']='PASS' if normal else 'INCOMPLETE'
+        if not normal:report['native']['acceptance']='SAVED_STATE_INSPECTION_ONLY'
         (a.results/'tier-results.json').write_text(json.dumps(report,indent=2)+'\n')
-        print(json.dumps(report,indent=2));return
+        print(json.dumps(report,indent=2))
+        if not normal:raise RuntimeError('Saved states inspected; a fresh native.py normal-exit PASS is required for promotion')
+        return
     assert not a.results.exists(),'Use a new results directory'
     a.results.mkdir(parents=True)
     m=json.loads((a.work/'patched-manifest.json').read_text());binary=Path(m['binary']);stock=a.work/'pristine-build/qbsp/qbsp'

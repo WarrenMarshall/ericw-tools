@@ -1,0 +1,27 @@
+{
+  "command": [
+    "/tmp/appimage_extracted_e624bbed38655658b240d734d34ddc01/usr/bin/vkquake",
+    "-basedir",
+    "/tmp/qqbsp-engine-investigation/vkquake-console",
+    "-window",
+    "-width",
+    "960",
+    "-height",
+    "640",
+    "-nosound",
+    "-condebug",
+    "+exec",
+    "acceptance.cfg"
+  ],
+  "elapsed": 6.07193749898579,
+  "exit": 0,
+  "timeout": false,
+  "saves": [
+    "fixed_end.sav",
+    "fixed_seed.sav",
+    "fixed_start.sav",
+    "stock_end.sav",
+    "stock_seed.sav",
+    "stock_start.sav"
+  ]
+}

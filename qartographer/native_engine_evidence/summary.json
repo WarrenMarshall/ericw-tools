@@ -1,0 +1,659 @@
+{
+  "decision": "Keep QrustyQuake preferred; exitstyle 2 fixes unattended exit. Stop further vkQuake adaptation per user direction.",
+  "inputs": {
+    "stock.bsp": "81b80b31f3f075dc0c58eccb2243eef4b73d42b7de3d9232b84e6a315498bef4",
+    "fixed.bsp": "046c0f8f163128c8c5e9c5ef988c49a3922f4545bc607948754072d2d7fa1bb7",
+    "ordinary.bsp": "171eb2ab4f592aef0929fa86046d01b0d0762671ed15605ab6d9d487997cc250",
+    "stock.map": "52e2bd497cd800fde4fad79f896546c77464e7b9159b26d68578db7d0221cb24",
+    "fixed.map": "52e2bd497cd800fde4fad79f896546c77464e7b9159b26d68578db7d0221cb24"
+  },
+  "runs": {
+    "vkquake": {
+      "states": {
+        "fixed_end": {
+          "server_time": 3.286111,
+          "origin": "-1400.000000 -1664.000000 180.000000",
+          "flags": "4104.000000",
+          "movetype": "3.000000",
+          "health": "10000.000000"
+        },
+        "fixed_start": {
+          "server_time": 3.286111,
+          "origin": "-1400.000000 -1664.000000 180.000000",
+          "flags": "4104.000000",
+          "movetype": "3.000000",
+          "health": "10000.000000"
+        },
+        "stock_end": {
+          "server_time": 3.286111,
+          "origin": "-1400.000000 -1664.000000 180.000000",
+          "flags": "4104.000000",
+          "movetype": "3.000000",
+          "health": "10000.000000"
+        },
+        "stock_start": {
+          "server_time": 3.286111,
+          "origin": "-1400.000000 -1664.000000 180.000000",
+          "flags": "4104.000000",
+          "movetype": "3.000000",
+          "health": "10000.000000"
+        }
+      }
+    },
+    "qrustyquake": {
+      "states": {
+        "fixed_end": {
+          "server_time": 5.272222,
+          "origin": "-1400.000000 -1502.543823 168.025421",
+          "flags": "4616.000000",
+          "movetype": "3.000000",
+          "health": "10000.000000"
+        },
+        "fixed_start": {
+          "server_time": 3.286111,
+          "origin": "-1400.000000 -1664.000000 180.000000",
+          "flags": "4104.000000",
+          "movetype": "3.000000",
+          "health": "10000.000000"
+        },
+        "ordinary_start": {
+          "server_time": 2.286111,
+          "origin": "-56.000000 -96.000000 88.031250",
+          "flags": "4616.000000",
+          "movetype": "3.000000",
+          "health": "100.000000"
+        },
+        "stock_end": {
+          "server_time": 5.272222,
+          "origin": "-1400.000000 -1664.000000 180.000000",
+          "flags": "4104.000000",
+          "movetype": "3.000000",
+          "health": "10000.000000"
+        },
+        "stock_start": {
+          "server_time": 3.286111,
+          "origin": "-1400.000000 -1664.000000 180.000000",
+          "flags": "4104.000000",
+          "movetype": "3.000000",
+          "health": "10000.000000"
+        }
+      }
+    },
+    "qrustyquake-console": {
+      "states": {
+        "fixed_end": {
+          "server_time": 5.272222,
+          "origin": "-1400.000000 -1502.543823 168.025421",
+          "flags": "4616.000000",
+          "movetype": "3.000000",
+          "health": "10000.000000"
+        },
+        "fixed_start": {
+          "server_time": 3.286111,
+          "origin": "-1400.000000 -1664.000000 180.000000",
+          "flags": "4104.000000",
+          "movetype": "3.000000",
+          "health": "10000.000000"
+        },
+        "ordinary_start": {
+          "server_time": 2.286111,
+          "origin": "-56.000000 -96.000000 88.031250",
+          "flags": "4616.000000",
+          "movetype": "3.000000",
+          "health": "100.000000"
+        },
+        "stock_end": {
+          "server_time": 5.272222,
+          "origin": "-1400.000000 -1664.000000 180.000000",
+          "flags": "4104.000000",
+          "movetype": "3.000000",
+          "health": "10000.000000"
+        },
+        "stock_start": {
+          "server_time": 3.286111,
+          "origin": "-1400.000000 -1664.000000 180.000000",
+          "flags": "4104.000000",
+          "movetype": "3.000000",
+          "health": "10000.000000"
+        }
+      },
+      "process": {
+        "command": [
+          "/tmp/appimage_extracted_740db85dc4875cfdb26a910527520a99/usr/bin/qrustyquake",
+          "-basedir",
+          "/tmp/qqbsp-engine-investigation/qrustyquake-console",
+          "-window",
+          "-width",
+          "960",
+          "-height",
+          "640",
+          "-nosound",
+          "-condebug",
+          "+exec",
+          "acceptance.cfg"
+        ],
+        "elapsed": 15.031702219042927,
+        "exit": -9,
+        "timeout": true,
+        "saves": [
+          "fixed_end.sav",
+          "fixed_seed.sav",
+          "fixed_start.sav",
+          "ordinary_start.sav",
+          "stock_end.sav",
+          "stock_seed.sav",
+          "stock_start.sav"
+        ]
+      }
+    },
+    "vkquake-console": {
+      "states": {
+        "fixed_end": {
+          "server_time": 3.286111,
+          "origin": "-1400.000000 -1664.000000 180.000000",
+          "flags": "4104.000000",
+          "movetype": "3.000000",
+          "health": "10000.000000"
+        },
+        "fixed_start": {
+          "server_time": 3.286111,
+          "origin": "-1400.000000 -1664.000000 180.000000",
+          "flags": "4104.000000",
+          "movetype": "3.000000",
+          "health": "10000.000000"
+        },
+        "stock_end": {
+          "server_time": 3.286111,
+          "origin": "-1400.000000 -1664.000000 180.000000",
+          "flags": "4104.000000",
+          "movetype": "3.000000",
+          "health": "10000.000000"
+        },
+        "stock_start": {
+          "server_time": 3.286111,
+          "origin": "-1400.000000 -1664.000000 180.000000",
+          "flags": "4104.000000",
+          "movetype": "3.000000",
+          "health": "10000.000000"
+        }
+      },
+      "process": {
+        "command": [
+          "/tmp/appimage_extracted_e624bbed38655658b240d734d34ddc01/usr/bin/vkquake",
+          "-basedir",
+          "/tmp/qqbsp-engine-investigation/vkquake-console",
+          "-window",
+          "-width",
+          "960",
+          "-height",
+          "640",
+          "-nosound",
+          "-condebug",
+          "+exec",
+          "acceptance.cfg"
+        ],
+        "elapsed": 6.07193749898579,
+        "exit": 0,
+        "timeout": false,
+        "saves": [
+          "fixed_end.sav",
+          "fixed_seed.sav",
+          "fixed_start.sav",
+          "stock_end.sav",
+          "stock_seed.sav",
+          "stock_start.sav"
+        ]
+      }
+    },
+    "qrustyquake-unattended": {
+      "states": {
+        "fixed_end": {
+          "server_time": 5.272222,
+          "origin": "-1400.000000 -1502.543823 168.025421",
+          "flags": "4616.000000",
+          "movetype": "3.000000",
+          "health": "10000.000000"
+        },
+        "fixed_start": {
+          "server_time": 3.286111,
+          "origin": "-1400.000000 -1664.000000 180.000000",
+          "flags": "4104.000000",
+          "movetype": "3.000000",
+          "health": "10000.000000"
+        },
+        "ordinary_start": {
+          "server_time": 2.286111,
+          "origin": "-56.000000 -96.000000 88.031250",
+          "flags": "4616.000000",
+          "movetype": "3.000000",
+          "health": "100.000000"
+        },
+        "stock_end": {
+          "server_time": 5.272222,
+          "origin": "-1400.000000 -1664.000000 180.000000",
+          "flags": "4104.000000",
+          "movetype": "3.000000",
+          "health": "10000.000000"
+        },
+        "stock_start": {
+          "server_time": 3.286111,
+          "origin": "-1400.000000 -1664.000000 180.000000",
+          "flags": "4104.000000",
+          "movetype": "3.000000",
+          "health": "10000.000000"
+        }
+      },
+      "process": {
+        "command": [
+          "/tmp/appimage_extracted_740db85dc4875cfdb26a910527520a99/usr/bin/qrustyquake",
+          "-basedir",
+          "/tmp/qqbsp-engine-investigation/qrustyquake-unattended",
+          "-window",
+          "-width",
+          "960",
+          "-height",
+          "640",
+          "-nosound",
+          "-condebug",
+          "+exec",
+          "acceptance.cfg"
+        ],
+        "elapsed": 5.822597653022967,
+        "exit": 0,
+        "timeout": false,
+        "saves": [
+          "fixed_end.sav",
+          "fixed_seed.sav",
+          "fixed_start.sav",
+          "ordinary_start.sav",
+          "stock_end.sav",
+          "stock_seed.sav",
+          "stock_start.sav"
+        ]
+      }
+    },
+    "vkquake-unattended": {
+      "states": {
+        "fixed_end": {
+          "server_time": 3.286111,
+          "origin": "-1400.000000 -1664.000000 180.000000",
+          "flags": "4104.000000",
+          "movetype": "3.000000",
+          "health": "10000.000000"
+        },
+        "fixed_start": {
+          "server_time": 3.286111,
+          "origin": "-1400.000000 -1664.000000 180.000000",
+          "flags": "4104.000000",
+          "movetype": "3.000000",
+          "health": "10000.000000"
+        },
+        "stock_end": {
+          "server_time": 3.286111,
+          "origin": "-1400.000000 -1664.000000 180.000000",
+          "flags": "4104.000000",
+          "movetype": "3.000000",
+          "health": "10000.000000"
+        },
+        "stock_start": {
+          "server_time": 3.286111,
+          "origin": "-1400.000000 -1664.000000 180.000000",
+          "flags": "4104.000000",
+          "movetype": "3.000000",
+          "health": "10000.000000"
+        }
+      },
+      "process": {
+        "command": [
+          "/tmp/appimage_extracted_e624bbed38655658b240d734d34ddc01/usr/bin/vkquake",
+          "-basedir",
+          "/tmp/qqbsp-engine-investigation/vkquake-unattended",
+          "-window",
+          "-width",
+          "960",
+          "-height",
+          "640",
+          "-nosound",
+          "-condebug",
+          "+exec",
+          "acceptance.cfg"
+        ],
+        "elapsed": 6.27313431003131,
+        "exit": 0,
+        "timeout": false,
+        "saves": [
+          "fixed_end.sav",
+          "fixed_seed.sav",
+          "fixed_start.sav",
+          "stock_end.sav",
+          "stock_seed.sav",
+          "stock_start.sav"
+        ]
+      }
+    },
+    "vk-signon": {
+      "states": {
+        "begin": {
+          "server_time": 3.286111,
+          "origin": "-1400.000000 -1664.000000 180.000000",
+          "flags": "4104.000000",
+          "movetype": "3.000000",
+          "health": "10000.000000"
+        },
+        "end": {
+          "server_time": 3.286111,
+          "origin": "-1400.000000 -1664.000000 180.000000",
+          "flags": "4104.000000",
+          "movetype": "3.000000",
+          "health": "10000.000000"
+        }
+      }
+    },
+    "vk-protocol666": {
+      "states": {
+        "fixed_end": {
+          "server_time": 3.286111,
+          "origin": "-1400.000000 -1664.000000 180.000000",
+          "flags": "4104.000000",
+          "movetype": "3.000000",
+          "health": "10000.000000"
+        },
+        "fixed_start": {
+          "server_time": 3.286111,
+          "origin": "-1400.000000 -1664.000000 180.000000",
+          "flags": "4104.000000",
+          "movetype": "3.000000",
+          "health": "10000.000000"
+        },
+        "stock_end": {
+          "server_time": 3.286111,
+          "origin": "-1400.000000 -1664.000000 180.000000",
+          "flags": "4104.000000",
+          "movetype": "3.000000",
+          "health": "10000.000000"
+        },
+        "stock_start": {
+          "server_time": 3.286111,
+          "origin": "-1400.000000 -1664.000000 180.000000",
+          "flags": "4104.000000",
+          "movetype": "3.000000",
+          "health": "10000.000000"
+        }
+      },
+      "process": {
+        "command": [
+          "/tmp/appimage_extracted_e624bbed38655658b240d734d34ddc01/usr/bin/vkquake",
+          "-basedir",
+          "/tmp/qqbsp-engine-investigation/vk-protocol666",
+          "-window",
+          "-width",
+          "960",
+          "-height",
+          "640",
+          "-nosound",
+          "+exec",
+          "acceptance.cfg"
+        ],
+        "elapsed": 6.274311881978065,
+        "exit": 0,
+        "timeout": false
+      }
+    },
+    "final-qrusty": {
+      "states": {
+        "fixed_end": {
+          "server_time": 5.272222,
+          "origin": "-1400.000000 -1502.543823 168.025421",
+          "flags": "4616.000000",
+          "movetype": "3.000000",
+          "health": "10000.000000"
+        },
+        "fixed_start": {
+          "server_time": 3.286111,
+          "origin": "-1400.000000 -1664.000000 180.000000",
+          "flags": "4104.000000",
+          "movetype": "3.000000",
+          "health": "10000.000000"
+        },
+        "ordinary_start": {
+          "server_time": 2.286111,
+          "origin": "-56.000000 -96.000000 88.031250",
+          "flags": "4616.000000",
+          "movetype": "3.000000",
+          "health": "100.000000"
+        },
+        "stock_end": {
+          "server_time": 5.272222,
+          "origin": "-1400.000000 -1664.000000 180.000000",
+          "flags": "4104.000000",
+          "movetype": "3.000000",
+          "health": "10000.000000"
+        },
+        "stock_start": {
+          "server_time": 3.286111,
+          "origin": "-1400.000000 -1664.000000 180.000000",
+          "flags": "4104.000000",
+          "movetype": "3.000000",
+          "health": "10000.000000"
+        }
+      },
+      "process": {
+        "command": [
+          "/tmp/appimage_extracted_740db85dc4875cfdb26a910527520a99/usr/bin/qrustyquake",
+          "-basedir",
+          "/tmp/qqbsp-engine-investigation/final-qrusty",
+          "-window",
+          "-width",
+          "960",
+          "-height",
+          "640",
+          "-nosound",
+          "+exec",
+          "acceptance.cfg"
+        ],
+        "timeout_seconds": 55,
+        "acceptance": "PASS",
+        "exit": 0,
+        "elapsed_seconds": 5.672131423954852,
+        "timeout": false
+      }
+    },
+    "headless-qrusty": {
+      "states": {
+        "fixed_end": {
+          "server_time": 5.272222,
+          "origin": "-1400.000000 -1502.543823 168.025421",
+          "flags": "4616.000000",
+          "movetype": "3.000000",
+          "health": "10000.000000"
+        },
+        "fixed_start": {
+          "server_time": 3.286111,
+          "origin": "-1400.000000 -1664.000000 180.000000",
+          "flags": "4104.000000",
+          "movetype": "3.000000",
+          "health": "10000.000000"
+        },
+        "ordinary_start": {
+          "server_time": 2.286111,
+          "origin": "-56.000000 -96.000000 88.031250",
+          "flags": "4616.000000",
+          "movetype": "3.000000",
+          "health": "100.000000"
+        },
+        "stock_end": {
+          "server_time": 5.272222,
+          "origin": "-1400.000000 -1664.000000 180.000000",
+          "flags": "4104.000000",
+          "movetype": "3.000000",
+          "health": "10000.000000"
+        },
+        "stock_start": {
+          "server_time": 3.286111,
+          "origin": "-1400.000000 -1664.000000 180.000000",
+          "flags": "4104.000000",
+          "movetype": "3.000000",
+          "health": "10000.000000"
+        }
+      },
+      "process": {
+        "command": [
+          "/tmp/appimage_extracted_740db85dc4875cfdb26a910527520a99/usr/bin/qrustyquake",
+          "-basedir",
+          "/tmp/qqbsp-engine-investigation/headless-qrusty",
+          "-window",
+          "-width",
+          "960",
+          "-height",
+          "640",
+          "-nosound",
+          "+exec",
+          "acceptance.cfg"
+        ],
+        "timeout_seconds": 55,
+        "acceptance": "PASS",
+        "exit": 0,
+        "elapsed_seconds": 5.222532297018915,
+        "timeout": false
+      },
+      "environment": {
+        "SDL_VIDEODRIVER": "dummy"
+      }
+    },
+    "default-headless-qrusty": {
+      "states": {
+        "fixed_end": {
+          "server_time": 5.272222,
+          "origin": "-1400.000000 -1502.543823 168.025421",
+          "flags": "4616.000000",
+          "movetype": "3.000000",
+          "health": "10000.000000"
+        },
+        "fixed_start": {
+          "server_time": 3.286111,
+          "origin": "-1400.000000 -1664.000000 180.000000",
+          "flags": "4104.000000",
+          "movetype": "3.000000",
+          "health": "10000.000000"
+        },
+        "ordinary_start": {
+          "server_time": 2.286111,
+          "origin": "-56.000000 -96.000000 88.031250",
+          "flags": "4616.000000",
+          "movetype": "3.000000",
+          "health": "100.000000"
+        },
+        "stock_end": {
+          "server_time": 5.272222,
+          "origin": "-1400.000000 -1664.000000 180.000000",
+          "flags": "4104.000000",
+          "movetype": "3.000000",
+          "health": "10000.000000"
+        },
+        "stock_start": {
+          "server_time": 3.286111,
+          "origin": "-1400.000000 -1664.000000 180.000000",
+          "flags": "4104.000000",
+          "movetype": "3.000000",
+          "health": "10000.000000"
+        }
+      },
+      "process": {
+        "command": [
+          "/home/warrenmarshall/.local/share/Steam/steamapps/common/Quake/qrustyquake",
+          "-basedir",
+          "/tmp/qqbsp-engine-investigation/default-headless-qrusty",
+          "-window",
+          "-width",
+          "960",
+          "-height",
+          "640",
+          "-nosound",
+          "+exec",
+          "acceptance.cfg"
+        ],
+        "timeout_seconds": 55,
+        "acceptance": "PASS",
+        "exit": 0,
+        "elapsed_seconds": 5.272528472007252,
+        "timeout": false
+      },
+      "environment": {
+        "SDL_VIDEODRIVER": "dummy"
+      }
+    }
+  },
+  "initial_process_comparison": {
+    "vkquake": {
+      "command": [
+        "/tmp/appimage_extracted_e624bbed38655658b240d734d34ddc01/usr/bin/vkquake",
+        "-basedir",
+        "/tmp/qqbsp-engine-investigation/vkquake",
+        "-window",
+        "-width",
+        "960",
+        "-height",
+        "640",
+        "-nosound",
+        "-condebug",
+        "+exec",
+        "acceptance.cfg"
+      ],
+      "sha256": "e4cce50e86c90cc922633744e6e638cbb8f4733810a074bc95066048c6c557c1",
+      "elapsed": 7.437106654047966,
+      "exit": 0,
+      "timeout": false,
+      "saves": [
+        "fixed_end.sav",
+        "fixed_seed.sav",
+        "fixed_start.sav",
+        "stock_end.sav",
+        "stock_seed.sav",
+        "stock_start.sav"
+      ]
+    },
+    "qrustyquake": {
+      "command": [
+        "/tmp/appimage_extracted_740db85dc4875cfdb26a910527520a99/usr/bin/qrustyquake",
+        "-basedir",
+        "/tmp/qqbsp-engine-investigation/qrustyquake",
+        "-window",
+        "-width",
+        "960",
+        "-height",
+        "640",
+        "-nosound",
+        "-condebug",
+        "+exec",
+        "acceptance.cfg"
+      ],
+      "sha256": "a367fc302ace3e808b7db73b461830ba375747d72039b596e745f39baa464e02",
+      "elapsed": 15.11526324506849,
+      "exit": -9,
+      "timeout": true,
+      "saves": [
+        "fixed_end.sav",
+        "fixed_seed.sav",
+        "fixed_start.sav",
+        "ordinary_start.sav",
+        "stock_end.sav",
+        "stock_seed.sav",
+        "stock_start.sav"
+      ]
+    }
+  },
+  "engine_artifacts": {
+    "qrustyquake": {
+      "installed": "/home/warrenmarshall/.local/share/Steam/steamapps/common/Quake/qrustyquake",
+      "installed_sha256": "cefbd107e21a6cb362401f8b1009c313f7d5b94053364165a4a8d141c8e08656",
+      "extracted": "/tmp/appimage_extracted_740db85dc4875cfdb26a910527520a99/usr/bin/qrustyquake",
+      "extracted_sha256": "a367fc302ace3e808b7db73b461830ba375747d72039b596e745f39baa464e02"
+    },
+    "vkquake": {
+      "installed": "/home/warrenmarshall/.local/share/Steam/steamapps/common/Quake/vkQuake",
+      "installed_sha256": "e27e9ead57028d3e64f8ba219a7418e2f6d1963124227a2f9e94efa669bfbb98",
+      "extracted": "/tmp/appimage_extracted_e624bbed38655658b240d734d34ddc01/usr/bin/vkquake",
+      "extracted_sha256": "e4cce50e86c90cc922633744e6e638cbb8f4733810a074bc95066048c6c557c1"
+    }
+  }
+}

@@ -1,0 +1,24 @@
+from pathlib import Path
+import subprocess,shutil,json,time,os,signal,hashlib
+ROOT=Path('/tmp/qqbsp-engine-investigation');src=Path('/tmp/qqbsp-bootstrap/tier3/native-retry/id1')
+engines={'vkquake':Path('/tmp/appimage_extracted_e624bbed38655658b240d734d34ddc01/AppRun').resolve(),'qrustyquake':Path('/tmp/appimage_extracted_740db85dc4875cfdb26a910527520a99/AppRun').resolve()}
+results={}
+for label,engine in engines.items():
+ out=ROOT/label;game=out/'id1';game.mkdir(parents=True)
+ shutil.copytree(src/'maps',game/'maps')
+ for n in ['pak0.pak','pak1.pak']:(game/n).symlink_to((src/n).resolve())
+ for n in ['stock_seed.sav','fixed_seed.sav','acceptance.cfg']:shutil.copyfile(src/n,game/n)
+ # Exact historical inputs and quit command. Only add console logging.
+ cmd=[str(engine),'-basedir',str(out),'-window','-width','960','-height','640','-nosound','-condebug','+exec','acceptance.cfg']
+ start=time.monotonic()
+ with (out/'stdout.log').open('w') as log:
+  p=subprocess.Popen(cmd,stdout=log,stderr=subprocess.STDOUT,start_new_session=True)
+  try:code=p.wait(timeout=15);timeout=False
+  except subprocess.TimeoutExpired:
+   timeout=True
+   # Read-only /proc evidence distinguishes wait/menu from a shutdown deadlock.
+   (out/'process.txt').write_text(Path(f'/proc/{p.pid}/status').read_text()+ '\nwchan: '+Path(f'/proc/{p.pid}/wchan').read_text())
+   os.killpg(p.pid,signal.SIGKILL);code=p.wait(timeout=5)
+ results[label]={'command':cmd,'sha256':hashlib.sha256(engine.read_bytes()).hexdigest(),'elapsed':time.monotonic()-start,'exit':code,'timeout':timeout,'saves':sorted(p.name for p in game.glob('*.sav'))}
+ (ROOT/'comparison.json').write_text(json.dumps(results,indent=2)+'\n')
+ print(label,results[label],flush=True)
