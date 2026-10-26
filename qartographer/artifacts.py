@@ -74,6 +74,58 @@ def prepare(work):
     print(json.dumps({k:result[k] for k in ['binary','binary_sha256','development_sha256','development_bytes','deployment_bytes']},indent=2))
     return result
 
+def canonical_bsp(path):
+    """Only normalize observed nonsemantic ordering; preserve every other byte.
+
+    QBSP's pointer-sorted leaf face lists and stock LIGHT's atomic allocation
+    can differ between identical compiler runs. Keep membership multiplicity and
+    every per-face lightmap byte, including allocation padding, when reordering.
+    """
+    b=bytearray(path.read_bytes());version=bytes(b[:4])
+    assert version in [b'BSP2',struct.pack('<i',29)],'Unsupported comparison BSP format'
+    bsp2=version==b'BSP2'
+    lumps=[struct.unpack_from('<ii',b,4+i*8) for i in range(15)]
+    leaf_size,mark_size,face_size=(44,4,28) if bsp2 else (28,2,20)
+    changes=[]
+    lo,ln=lumps[10];mo,mn=lumps[11];fo,fn=lumps[7]
+    assert ln%leaf_size==mn%mark_size==fn%face_size==0
+    mark_fmt='I' if bsp2 else 'H';cursor=0
+    for at in range(lo,lo+ln,leaf_size):
+        start,count=struct.unpack_from('<II' if bsp2 else '<HH',b,at+(32 if bsp2 else 20))
+        assert start==cursor and start+count<=mn//mark_size,'Noncontiguous leaf face ranges'
+        values=list(struct.unpack_from('<'+mark_fmt*count,b,mo+start*mark_size))
+        assert all(v<fn//face_size for v in values),'Invalid leaf face index'
+        ordered=sorted(values)
+        if ordered!=values and 'leaf_face_order' not in changes:changes.append('leaf_face_order')
+        struct.pack_into('<'+mark_fmt*count,b,mo+start*mark_size,*ordered)
+        cursor+=count
+    assert cursor==mn//mark_size,'Unreferenced leaf face records'
+    lighto,lightn=lumps[8]
+    if lightn:
+        fields=[at+face_size-4 for at in range(fo,fo+fn,face_size)]
+        offsets=[struct.unpack_from('<i',b,at)[0] for at in fields]
+        starts=sorted(o for o in offsets if o>=0)
+        assert starts and starts[0]==0 and starts[-1]<lightn and len(starts)==len(set(starts)), 'Unsupported shared/noncontiguous lightmap allocation'
+        lights=bytes(b[lighto:lighto+lightn])
+        chunks={start:lights[start:(starts[i+1] if i+1<len(starts) else lightn)] for i,start in enumerate(starts)}
+        reordered=bytearray()
+        for field,offset in zip(fields,offsets):
+            if offset<0:continue
+            struct.pack_into('<i',b,field,len(reordered));reordered.extend(chunks[offset])
+        assert len(reordered)==lightn
+        if bytes(reordered)!=lights or [struct.unpack_from('<i',b,f)[0] for f in fields]!=offsets:
+            changes.append('lightmap_allocation_order')
+        b[lighto:lighto+lightn]=reordered
+    return bytes(b),changes
+
+def compare_bsp(a,b):
+    left,right=sha(a),sha(b)
+    if left==right:return {'byte_identical':True,'development_sha256':left,'deployment_sha256':right}
+    ca,na=canonical_bsp(a);cb,nb=canonical_bsp(b)
+    assert ca==cb,('BSP semantic/output difference',str(a),str(b))
+    return {'byte_identical':False,'development_sha256':left,'deployment_sha256':right,
+        'canonical_sha256':hashlib.sha256(ca).hexdigest(),'normalizations':sorted(set(na+nb))}
+
 def compare(work,results):
     dev=load_artifact(work);packed=load_artifact(work,'deployment')
     reports={k:json.loads((results/k/'tier-results.json').read_text()) for k in ['development','deployment']}
@@ -82,20 +134,22 @@ def compare(work,results):
         assert r['tier']==3 and r['acceptance']=='PASS' and r['artifact_kind']==k
         assert r['binary_sha256']==m['binary_sha256']
         assert r['native']['compiler_sha256']['qqbsp']==m['binary_sha256'] and r['native']['shutdown']=='normal'
-    left=results/'development';right=results/'deployment';files={}
+    left=results/'development';right=results/'deployment';maps={};bsps={}
     for suffix in ['.map','.bsp']:
         paths={str(p.relative_to(left)) for p in left.rglob('*'+suffix)}
         assert paths=={str(p.relative_to(right)) for p in right.rglob('*'+suffix)},'Artifact fixture sets differ'
         assert paths,'Missing fixture outputs'
         for name in sorted(paths):
             a,b=left/name,right/name
-            assert sha(a)==sha(b),('Development/deployment output differs',name)
-            files[name]=sha(a)
+            if suffix=='.map':
+                assert sha(a)==sha(b),('Development/deployment MAP differs',name)
+                maps[name]=sha(a)
+            else:bsps[name]=compare_bsp(a,b)
     assert (left/'identity.txt').read_text()==(right/'identity.txt').read_text(),'Build identity differs'
     for name in ['stock','fixed','ordinary','engine_sha256','pak_sha256']:
         assert reports['development']['native'][name]==reports['deployment']['native'][name],('Native state differs',name)
     result={'acceptance':'PASS','development_sha256':dev['binary_sha256'],'deployment_sha256':packed['binary_sha256'],
-        'development_results':str(left),'deployment_results':str(right),'identical_map_and_bsp_sha256':files,
+        'development_results':str(left),'deployment_results':str(right),'identical_map_sha256':maps,'bsp_comparison':bsps,
         'native_states_identical':True,'identity_identical':True}
     (results/'artifact-comparison.json').write_text(json.dumps(result,indent=2)+'\n')
     print(json.dumps(result,indent=2))

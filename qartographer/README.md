@@ -104,7 +104,14 @@ unchanged byte copies; installed runtime libraries are never touched.
 
 For promotion, both artifacts independently pass Tier 3 using the same fixtures,
 flags, stock VIS/LIGHT and Qrusty `exitstyle 2` native replay. The comparison gate
-requires identical MAP/BSP bytes, native states and identity. Separate receipts bind
+requires identical MAP bytes, native states and identity. For BSPs, pointer-ordered
+leaf face lists and stock LIGHT allocation order are normalized in memory only;
+leaf membership multiplicity and per-face lightmap chunks must remain exact.
+Every other byte must match, including collision geometry, model data and unknown
+trailing data. Both raw hashes and the specific normalization are recorded. This
+handles nondeterminism observed even in pristine-to-pristine control outputs,
+without modifying any BSP or weakening source-derived collision expectations.
+Separate receipts bind
 each test run to its actual executable hash. The upstream QBSP library tests are
 shared; all executable compilation/oracle/native checks use the selected artifact.
 

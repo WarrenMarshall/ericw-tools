@@ -124,8 +124,12 @@ build with `python3 qartographer/artifacts.py prepare --work /tmp/qqbsp-work`.
 Run `python3 qartographer/test_artifacts.py` for focused packaging guards.
 
 Deployment requires a clean committed build, separate development/deployment Tier 3
-PASS receipts and artifact-comparison.json. MAP/BSP bytes, native states and identity
-must match across the two executables. Tier/native --artifact defaults to development;
+PASS receipts and artifact-comparison.json. MAP bytes, native states and identity must match across the two executables. BSP
+comparison preserves every byte except observed pointer-ordered leaf face lists and
+stock LIGHT allocation order: each leaf face multiset and each face lightmap chunk
+(including padding) must still match exactly. Changed geometry, collision, membership
+or pixels fail; no oracle sample or tolerance is relaxed. Both raw hashes and any
+normalization are recorded in the comparison receipt. Tier/native --artifact defaults to development;
 select deployment explicitly when validating the stripped copy. Receipt hashes must
 identify the actual selected artifact, never substitute its development hash.
 Before replacing qqbsp, deployment archives the full matching debug executable and

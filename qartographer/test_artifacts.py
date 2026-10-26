@@ -1,7 +1,7 @@
 """Packaging must preserve development symbols and bind validation to actual bytes."""
-import contextlib,io,json,subprocess,tempfile,unittest
+import contextlib,io,json,struct,subprocess,tempfile,unittest
 from pathlib import Path
-from artifacts import elf_profile,load_artifact,prepare,sha
+from artifacts import compare_bsp,elf_profile,load_artifact,prepare,sha
 
 class ArtifactTests(unittest.TestCase):
     def setUp(self):
@@ -34,5 +34,37 @@ class ArtifactTests(unittest.TestCase):
         m=json.loads(self.manifest.read_text());m['changed']='new build record'
         self.manifest.write_text(json.dumps(m))
         with self.assertRaises(AssertionError):load_artifact(self.work,'deployment')
+
+class BspComparisonTests(unittest.TestCase):
+    def fixture(self,marks,offsets=(-1,-1),light=b''):
+        # Minimal storage-level fixture; this tests comparison, not geometry.
+        lumps=[b'']*15
+        faces=[bytearray(20),bytearray(20)]
+        for f,o in zip(faces,offsets):struct.pack_into('<i',f,16,o)
+        lumps[7]=b''.join(faces);lumps[8]=light
+        leaf=bytearray(28);struct.pack_into('<HH',leaf,20,0,len(marks))
+        lumps[10]=bytes(leaf);lumps[11]=struct.pack('<'+'H'*len(marks),*marks)
+        b=bytearray(124);struct.pack_into('<i',b,0,29)
+        for i,data in enumerate(lumps):
+            struct.pack_into('<ii',b,4+i*8,len(b),len(data));b.extend(data)
+        return bytes(b)
+
+    def compare(self,a,b,pass_expected):
+        with tempfile.TemporaryDirectory() as d:
+            left,right=Path(d)/'a.bsp',Path(d)/'b.bsp';left.write_bytes(a);right.write_bytes(b)
+            if pass_expected:self.assertFalse(compare_bsp(left,right)['byte_identical'])
+            else:
+                with self.assertRaises(AssertionError):compare_bsp(left,right)
+
+    def test_leaf_order_preserves_membership_and_duplicates(self):
+        self.compare(self.fixture([0,1]),self.fixture([1,0]),True)
+        self.compare(self.fixture([0,1]),self.fixture([1,1]),False)
+
+    def test_light_allocation_preserves_pixels_and_other_face_fields(self):
+        a=self.fixture([0,1],(0,3),b'aaabbb');b=self.fixture([0,1],(3,0),b'bbbaaa')
+        self.compare(a,b,True)
+        self.compare(a,self.fixture([0,1],(3,0),b'bbbaac'),False)
+        damaged=bytearray(b);face_offset=struct.unpack_from('<i',damaged,4+7*8)[0];damaged[face_offset]^=1
+        self.compare(a,bytes(damaged),False)
 
 if __name__=='__main__':unittest.main()
