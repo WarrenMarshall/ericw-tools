@@ -154,3 +154,29 @@ the build environment. Missing/incompatible libraries cause explicit failure
 before replacement. The current local compiler directory supplies TBB .so.12 and
 TBB malloc .so.2. This startup check establishes local loader compatibility; it is
 not a portable Linux package or a full compile under every destination runtime.
+
+## Testing tiers and promotion
+
+The operational commands and permanent policy are in ../AGENTS.md. `tiers.py`
+provides tiers 1/2/3; higher tiers include earlier applicable checks. `build.py`
+now enables only the additional qqbsp_tests target, compiled from unchanged
+upstream test_qbsp.cc and test_main.cc. It copies upstream MAP fixtures into the
+build directory and links no VIS/LIGHT code. Thirteen selected upstream cases
+exercise ordinary rooms, duplicate/empty brushes, shared boundaries, brush order,
+angled geometry, sealing and mixed actor/point contents. Four historical thin-cell
+and intentional-opening fixtures reuse the original independent halfspace oracle.
+
+Tier 3 adds a fresh matched-save RollerSpline WALK replay using QrustyQuake,
+plus ordinary BSP29 compilation consumed by stock VIS/LIGHT and the engine.
+Configure --engine, --id1 and --utilities in tiers.py for another machine. The
+frozen seed save is test state, not a game asset package. Missing engine/assets or
+display are infrastructure blockers to Tier 3, never a reason to deploy unchecked.
+The full-map pair uses BSP2; the small compatibility fixture uses ordinary BSP29.
+Performance observations are recorded; an increase above 25% requests a review
+note without labelling geometry incorrect. This is a review trigger, not a
+statistical performance certification or permission to hide unexplained slowdowns.
+
+`deploy.py` now requires results/tier-results.json with a Tier 3 PASS bound to the
+binary, in addition to the collision suite receipt. The earlier regress.py-only
+commands remain useful for focused investigation but do not authorize deployment.
+Use tiers.py --tier 3 followed by deploy.py, or validated_build.py, for promotion.

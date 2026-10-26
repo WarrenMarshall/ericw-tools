@@ -25,7 +25,7 @@ def main():
         d=a.output/label;d.mkdir()
         identity=subprocess.run([str(binary),'-help'],capture_output=True,text=True)
         (d/'identity.txt').write_text(identity.stdout+identity.stderr)
-        if label=='patched':assert 'Qartographer qqbsp,' in identity.stdout and 'patches=P1' in identity.stdout
+        if label=='patched':assert 'Qartographer qqbsp;' in identity.stdout and 'patches=P1' in identity.stdout
         reduced=d/'reduced'
         rc=invoke([sys.executable,HERE/'wildspline_bsp_collision_compile.py',binary,reduced],d/'reduced.log')
         data=json.loads((reduced/'results.json').read_text())

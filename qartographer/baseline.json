@@ -27,7 +27,13 @@
     "full-off.map": "d5f2ab2a0c5a22d2f0ecaecf77a1bbd72a3c2ce2e3c444fe0b4c517092e5986c",
     "full-on.map": "16250e50546f9d1c4654d75e0a6683f70f7eff332ec730793c5f836d39716318",
     "reduced.map": "5f4c588e6f4482f933138def59a2cd64660491b146cbcf0683f32266bcd24d93",
-    "roller-direct.map": "a281bdf08b070bfc7a728acf8212f5e401b04b572a706a353716fc898d861300"
+    "roller-direct.map": "a281bdf08b070bfc7a728acf8212f5e401b04b572a706a353716fc898d861300",
+    "roller-seed.sav": "55d9b6186fc57fb51c18ba990c241ec23da3a5a62f1414dabbcfddfb0825c339",
+    "thin/essential-floor.map": "2b98b34d9b1813f93df03da6ff522d7721c63bacc8c3a7c66d9802a4da007196",
+    "thin/essential-wedge.map": "0fb6c7f16bb90ea201d075dbdf1c4c2452a481e8152403e4a22e4bdeaf9d4f87",
+    "thin/geometry.json": "db36e2c534711f979b291049959ee2e8dee5c597683d2cc34484c6e8a9836f9e",
+    "thin/passage-32.map": "831ddd99cd88688404accd99989a36aec4ebc6bd6343565630c2013f2302a17b",
+    "thin/passage-64.map": "8fe46e874b73c80887ba6d5d7ea1af27c105050ac5f8dc55a0bdf87c4bfc9d70"
   },
   "editor_revision": "12eb800110fade17798777e1b097b0bfc0a165a4",
   "p1_patch_sha256": "eac568b773767b7b8afa8a1db98f256ed31368aff2067f77c2066fb877ea1bdb"

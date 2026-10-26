@@ -17,11 +17,12 @@ def main():
     manifest=work/'pristine-manifest.json'
     if manifest.exists():
         m=json.loads(manifest.read_text())
-        assert m['lock']==json.loads((HERE/'baseline.json').read_text()),'Pristine lock changed; use a new work directory'
+        current=json.loads((HERE/'baseline.json').read_text())
+        assert all(m['lock'][k]==current[k] for k in ['upstream','submodules','archives','googletest']),'Pristine source/dependency lock changed; use a new work directory'
         assert hashlib.sha256(Path(m['binary']).read_bytes()).hexdigest()==m['binary_sha256']
     else:run(HERE/'build.py','--work',work,'--pristine')
     run(HERE/'build.py','--work',work)
-    run(HERE/'regress.py',work/'pristine-build/qbsp/qbsp',work/'patched-build/qbsp/qqbsp',a.results,'--full')
+    run(HERE/'tiers.py','--tier',3,'--work',work,'--results',a.results)
     args=[HERE/'deploy.py','--work',work,'--results',a.results]
     if a.destination:args+=['--destination',a.destination]
     run(*args)

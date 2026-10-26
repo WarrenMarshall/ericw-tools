@@ -8,16 +8,18 @@ def identity(p):
     env=dict(os.environ);env.pop('LD_LIBRARY_PATH',None);env.pop('LD_PRELOAD',None)
     r=subprocess.run([str(p),'-help'],cwd=p.parent,env=env,capture_output=True,text=True)
     assert r.returncode==0,(r.returncode,r.stderr)
-    return next(line for line in r.stdout.splitlines() if line.startswith('Qartographer qqbsp,'))
+    return next(line for line in r.stdout.splitlines() if line.startswith('Qartographer qqbsp;'))
 def deploy(work,results,destination):
     manifest=json.loads((work/'patched-manifest.json').read_text())
-    evidence=json.loads((results/'results.json').read_text())
+    tier=json.loads((results/'tier-results.json').read_text())
+    assert tier['tier']==3 and tier['acceptance']=='PASS','Tier 3 validation required'
+    evidence=json.loads((results/'collision/results.json').read_text())
     assert evidence['acceptance']=='PASS' and evidence['full'] is True,'Full validation required for deployment'
     binary=Path(manifest['binary'])
     expected=manifest['binary_sha256']
-    assert sha(binary)==expected==evidence['patched']['sha256'],'Binary changed since build/validation'
+    assert sha(binary)==expected==evidence['patched']['sha256']==tier['binary_sha256'],'Binary changed since build/validation'
     assert not manifest['tracked_changes'],'Only clean committed builds may be deployed'
-    want=next(line for line in manifest['identity'].splitlines() if line.startswith('Qartographer qqbsp,'))
+    want=next(line for line in manifest['identity'].splitlines() if line.startswith('Qartographer qqbsp;'))
     assert identity(binary)==want,'Build identity changed'
     assert destination.name=='qqbsp','Destination must be named qqbsp; stock tools are protected'
     assert destination.parent.is_dir(),'Destination directory unavailable'

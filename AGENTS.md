@@ -1,89 +1,123 @@
-# Qartographer QQBSP
+# QQBSP agent instructions
 
-This is a small downstream EricW Tools compiler fork, not a new compiler or a
-fork of light/VIS. The supported artifact is `qqbsp` (`qqbsp.exe` on Windows).
-Retain upstream's `qbsp` target; both targets share compiler code. A `qbsp` built
-on this downstream branch also includes our corrections. Use a pristine source
-snapshot for stock comparisons. Never install over the user's stock tools.
+## Scope
 
-Keep conventional MAP input, standard Quake BSP output, and existing engine/tool
-compatibility. Do not add formats, engine hooks, exporter adaptations, speculative
-collision repairs, or threaded execution paths without explicit scope approval.
-P1 is the accepted correction. P2 in qartographer/P2-unapplied.patch is only a
-candidate; do not apply it as part of maintenance.
+This fork exists exclusively for QQBSP, Qartographer's customized EricW QBSP.
+In scope: QBSP geometry/collision correctness, shared code directly required by
+QBSP, minimal CMake changes, QBSP regressions/benchmarks/diagnostics, identity,
+provenance and deployment. Shared-source changes require a demonstrated QBSP
+requirement, narrow scope and independent testing proportional to dependencies.
 
-Keep each compiler correction in a separate commit, with a source explanation
-and a regression that fails before and passes after. Build/identity and workflow
-changes belong in separate commits. Preserve upstream notices and licenses.
+Do not modify VIS/LIGHT source, tests, algorithms, performance or build behavior.
+Light preview, texture utilities, other EricW applications, general modernization,
+unrelated upstream bugs, speculative optimization, shared-library rewrites and
+customized complete toolchain builds/distribution are out of scope. Stock VIS,
+LIGHT and other utilities remain authoritative. They may consume test BSPs for
+compatibility checks. Build only qqbsp, its dependencies, qqbsp_tests and pristine
+qbsp for comparison. Never run package/all targets or unrelated application suites.
 
-Read qartographer/README.md and baseline.json before building. Use the pinned
-Linux recipe, configure before recording a binary identity, and record source,
-dependencies, flags, toolchain, hashes and results. Do not claim bit-for-bit
-reproducibility from one build or confuse a dependency needed by CMake with a
-runtime dependency. No production editor integration by default; validated local deployment is authorized.
+Success: identifiable, validated qqbsp accepting standard Quake MAP and emitting
+standard Quake BSP, with the smallest maintained set of demonstrated corrections.
+Keep upstream's qbsp target and share compiler code; a downstream-built qbsp also
+contains our patches and is not the pristine control. Never overwrite stock qbsp.
+No new BSP formats, engine requirements, speculative collision repairs, production
+exporter integration or threaded architecture without explicit assignment scope.
 
-For a local P1-path correction run the reduced and frozen Roller tests with
-regress.py. Run --full for a baseline upgrade, release candidate, or changes to
-shared winding/hull/BSP behavior. Research probes report failures as data;
-regress.py is the assertive acceptance entry point. Do not weaken oracles or
-silently skip expected stock failures. Expand upstream degenerate/coplanar and
-contents coverage when the change creates that risk; ordinary docs/build edits
-need only relevant checks. Native engine and full lighting acceptance are separate
-release/adoption gates, not implied by occupancy tests.
+## Baseline and maintenance
 
-For upstream updates follow the merge/patch retirement procedure in README.md;
-never reset this branch to upstream or blindly apply a patch already in history.
+Read qartographer/README.md, baseline.json and BOOTSTRAP.md. The original
+investigation is ../qartographer/docs/qbsp_fork_feasibility.md. P1 is accepted;
+P2-unapplied.patch is a separate candidate and must stay unapplied. Each compiler
+correction needs an isolated commit, explanation and failing-before/passing-after
+regression. Separate build/workflow changes. Preserve upstream licenses/notices.
+Use Item for editor construction objects. Do not spawn agents by default.
 
-Do not spawn sub-agents by default. Keep validation proportional and stop once
-the changed behavior and material risks are demonstrated.
+Follow README.md's upstream merge/retirement procedure: inspect and pin the
+candidate upstream SHA; do not reset downstream history, reapply existing patches,
+or keep duplicate implementations. Review fill defaults, dependency changes and
+intentional BSP differences. Retire patches only after tested upstream equivalents.
 
-## Build, validate and deploy
+## Commands and testing tiers
 
-The authorized local workflow automatically deploys only after full validation:
+Run from the repository root. Reference Linux tools and dependency provisioning
+are in README.md. --work holds downloads, builds and manifests; --results must be
+a new disposable directory. Nothing writes authored maps or installed game assets.
 
-```
-python3 qartographer/validated_build.py --work /tmp/qqbsp-work --results /tmp/qqbsp-results-new
-```
-
-For separate steps:
-
-```
+```sh
+# First checkout: pin the submodules; build pristine only once per baseline.
+git submodule update --init --recursive
 python3 qartographer/build.py --work /tmp/qqbsp-work --pristine
+# Build qqbsp plus the QBSP-only upstream test target.
 python3 qartographer/build.py --work /tmp/qqbsp-work
-python3 qartographer/regress.py /tmp/qqbsp-work/pristine-build/qbsp/qbsp /tmp/qqbsp-work/patched-build/qbsp/qqbsp /tmp/qqbsp-results-new --full
-python3 qartographer/deploy.py --work /tmp/qqbsp-work --results /tmp/qqbsp-results-new
+# Tier 1: relevant changes, frequent development checks.
+python3 qartographer/tiers.py --tier 1 --work /tmp/qqbsp-work --results /tmp/qqbsp-tier1-new
+# Tier 2: before accepting a compiler change; includes applicable Tier 1 checks.
+python3 qartographer/tiers.py --tier 2 --work /tmp/qqbsp-work --results /tmp/qqbsp-tier2-new
+# Tier 3: before promotion; includes Tier 1/2 and release checks.
+python3 qartographer/tiers.py --tier 3 --work /tmp/qqbsp-work --results /tmp/qqbsp-tier3-new
+# Deploy independently only from a matching Tier 3 PASS receipt.
+python3 qartographer/deploy.py --work /tmp/qqbsp-work --results /tmp/qqbsp-tier3-new
+# Normal local workflow: Build -> Validate (Tier 3) -> Deploy -> Verify.
+python3 qartographer/validated_build.py --work /tmp/qqbsp-work --results /tmp/qqbsp-release-new
 ```
 
-Default deployment is
-/mnt/fb91e326-b6dc-4352-b43c-7517fcce8b77/Dropbox/Quake/Utils/linux/qqbsp.
-Use --destination or QQBSP_DEPLOY_PATH to configure it. Never deploy a dirty or
-unvalidated build, replace qbsp/vis/light, or overwrite their runtime libraries.
-Deployment stages in the destination directory, tests its actual loader/startup,
-then atomically replaces only qqbsp and verifies hash/build identity. Report
-failures explicitly and preserve the previous working executable. See README.md
-for dependency provisioning and limitations. This local deployment is authorized;
-publication, packaging and production editor integration remain separately scoped.
+Tier 1 compiles successfully, checks startup/build identity, the reduced coplanar
+regression, ordinary sealed MAPs, duplicate planes and empty-brush handling. Add
+focused tests for the changed behavior when these do not exercise it.
 
-## Strict project scope — QQBSP only
+Tier 2 adds frozen RollerSpline default/chopfragment, hulls 0/1/2, coplanar and
+near-coplanar supports, thin recovered cells, intentional openings, shared brush
+boundaries, mixed contents, degenerate handling, full Halloween collision oracle,
+and the relevant upstream QBSP filter. qqbsp_tests reuses unchanged upstream QBSP
+tests without linking LIGHT/VIS. Tests write into copied build-directory fixtures.
+Expand the selected cases when a change creates a materially different risk.
 
-This fork exists exclusively to develop and maintain QQBSP, Qartographer's
-customized EricW QBSP. In scope are QBSP geometry/collision correctness, shared
-code directly required by QBSP, minimal CMake changes for qqbsp, QBSP-specific
-regressions/benchmarks/diagnostics, identity, provenance and deployment.
+Tier 3 requires all applicable earlier checks, full-map compilation and review of
+BSP structure/collision/performance. It freshly replays matched ordinary native
+WALK movement on RollerSpline, tests BSP29 with installed stock VIS/LIGHT and
+loads that ordinary result in Quake. --engine, --id1 and --utilities configure
+local consumers/assets. Default paths are in tiers.py. No assets are redistributed.
+Native player evidence does not replace independent hull-2 checks or establish
+full-map gameplay/lighting acceptance. Add relevant native cases for changed risks.
 
-VIS and LIGHT functionality, algorithms, performance, source, tests and build
-behavior are out of scope. Do not modify them. Light preview, texture utilities,
-other EricW applications, repository modernization, unrelated upstream bugs,
-speculative optimization and distribution of a customized complete toolchain are
-also out of scope. Existing stock utilities remain authoritative for those stages.
+## Evidence and acceptance
 
-Build only targets required to produce and validate qqbsp: qqbsp and its shared
-dependencies, plus pristine qbsp for comparison. Do not run whole-toolchain builds
-or package targets. CMake may require configure-time dependencies for other tools;
-that does not authorize compiling or changing those tools. Shared-source changes
-require a demonstrated QBSP defect, narrow scope and independent testing. Do not
-rewrite shared libraries merely to simplify this fork.
+Fixtures and independent MAP/configuration-space/BSP oracles live under
+qartographer/fixtures and qartographer/*oracle.py, direct_probe.py and
+wildspline_bsp_collision_compile.py. baseline.json pins hashes. regress.py wraps
+research JSON reports with nonzero pass/fail assertions; never infer PASS merely
+from a research driver's exit code. tiers.py is the acceptance entry point.
 
-Success means an independently identifiable, validated qqbsp accepting standard
-Quake MAP and emitting standard Quake BSP, correcting demonstrated defects with
-a small maintainable patch set. Upstream source remains intact outside this scope.
+Keep reduced regressions for confirmed defects and representative historical
+fixtures. Independently derived geometry expectations remain separate from BSP
+outputs. Include hulls 0/1/2 where relevant. Pristine and patched BSPs may differ
+for intentional corrections; hashes identify artifacts, not correctness. Separate
+correctness from intentional collision-envelope semantics. Never weaken tolerances,
+remove failing samples or bless a changed output merely to make tests pass.
+
+Failed runs retain logs, XML, MAP copies, BSPs and JSON in --results; inspect those
+before rerunning. Missing assets/display/dependencies and compiler execution errors
+are infrastructure failures, not valid geometry evidence. Tier receipts remain
+INCOMPLETE on failure; never deploy them. A passing result remains useful until
+relevant code/dependencies/binary change. Stop testing when material questions are
+answered. Do not run exhaustive suites for documentation or workflow-only edits.
+
+Record source/patch/dependency identities, binary/runtime hashes and results.
+Inspect timings against pristine and historical evidence; noisy differences are
+not correctness failures. A >25% full compile increase requires investigation and
+an explanatory --performance-note, not automatic baseline promotion. Change fixture
+or performance baselines only with reviewed reasons and preserved prior evidence;
+if upstream fixes P1, explicitly retire the stock-negative expectation. Do not claim
+bit-for-bit reproducibility without two independently verified clean builds.
+
+## Deployment
+
+Deployment requires a clean committed build, matching full Tier 3 PASS receipt,
+matching hashes/build identity, and successful destination startup. Default:
+/mnt/fb91e326-b6dc-4352-b43c-7517fcce8b77/Dropbox/Quake/Utils/linux/qqbsp
+Use --destination /directory/qqbsp or QQBSP_DEPLOY_PATH to override. Stage a temporary
+file in that directory, preserve executable permissions, verify loader/hash/identity,
+then atomically replace only qqbsp and verify again. Preserve the previous executable
+on failure. Report unavailable destinations/failures explicitly. Never overwrite
+qbsp, vis, light, other utilities or their libraries. This validated local deployment
+is authorized; publication, packaging and production editor integration are not.

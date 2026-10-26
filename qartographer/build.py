@@ -58,8 +58,8 @@ def main():
     prefix=f"{deps}/tbb/oneapi-tbb-2021.11.0/lib/cmake/tbb;{deps}/embree/lib/cmake/embree-4.4.0"
     # Embree archive is rooted directly at lib/, unlike the TBB archive.
     env=dict(os.environ,GITHUB_REF_NAME='2.0.0-alpha10')
-    configure=['cmake','-S',source,'-B',build,'-G','Ninja','-DCMAKE_BUILD_TYPE=RelWithDebInfo','-DCMAKE_C_COMPILER=/usr/bin/cc','-DCMAKE_CXX_COMPILER=/usr/bin/c++','-DDISABLE_TESTS=ON','-DDISABLE_DOCS=ON','-DENABLE_LIGHTPREVIEW=OFF',f'-DCMAKE_PREFIX_PATH={prefix}',f'-DFETCHCONTENT_SOURCE_DIR_GOOGLETEST={gtest}',f'-DFETCHCONTENT_SOURCE_DIR_JSON={deps}/json/json','-DFETCHCONTENT_FULLY_DISCONNECTED=ON']
-    run(configure,env=env);run(['cmake','--build',build,'--target',target,'-j',a.jobs])
+    configure=['cmake','-S',source,'-B',build,'-G','Ninja','-DCMAKE_BUILD_TYPE=RelWithDebInfo','-DCMAKE_C_COMPILER=/usr/bin/cc','-DCMAKE_CXX_COMPILER=/usr/bin/c++','-DQQBSP_BUILD_TESTS='+('OFF' if a.pristine else 'ON'),'-DDISABLE_TESTS=ON','-DDISABLE_DOCS=ON','-DENABLE_LIGHTPREVIEW=OFF',f'-DCMAKE_PREFIX_PATH={prefix}',f'-DFETCHCONTENT_SOURCE_DIR_GOOGLETEST={gtest}',f'-DFETCHCONTENT_SOURCE_DIR_JSON={deps}/json/json','-DFETCHCONTENT_FULLY_DISCONNECTED=ON']
+    run(configure,env=env);run(['cmake','--build',build,'--target',target,*([] if a.pristine else ['qqbsp_tests']),'-j',a.jobs])
     binary=build/'qbsp'/target
     identity=subprocess.run([str(binary),'-help'],capture_output=True,text=True)
     runtime={p.name:sha(p) for p in (build/'qbsp').glob('*.so*') if p.is_file()}

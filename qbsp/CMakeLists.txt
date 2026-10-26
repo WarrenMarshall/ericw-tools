@@ -60,3 +60,8 @@ foreach(compiler IN ITEMS qqbsp qbsp)
     copy_mingw_dlls(${compiler})
     add_loader_path_to_rpath(${compiler})
 endforeach()
+
+option(QQBSP_BUILD_TESTS "Build QBSP-only upstream regression tests" OFF)
+if(QQBSP_BUILD_TESTS)
+    add_subdirectory(${PROJECT_SOURCE_DIR}/qartographer ${PROJECT_BINARY_DIR}/qartographer)
+endif()
