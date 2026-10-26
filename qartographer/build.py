@@ -65,5 +65,8 @@ def main():
     runtime={p.name:sha(p) for p in (build/'qbsp').glob('*.so*') if p.is_file()}
     manifest={'label':label,'upstream':LOCK['upstream'],'downstream':output(['git','-C',ROOT,'rev-parse','HEAD']),'tracked_changes':output(['git','-C',ROOT,'status','--porcelain','--untracked-files=no']),'toolchain':versions,'platform':output(['uname','-a']),'libc':output(['ldd','--version']).splitlines()[0],'lock':LOCK,'configure':list(map(str,configure)),'binary':str(binary),'binary_sha256':sha(binary),'runtime_sha256':runtime,'ldd':output(['ldd',binary]),'identity':identity.stdout,'cache_sha256':sha(build/'CMakeCache.txt')}
     (a.work/(label+'-manifest.json')).write_text(json.dumps(manifest,indent=2)+'\n')
+    if not a.pristine:
+        from artifacts import prepare
+        prepare(a.work)
     print(binary)
 if __name__=='__main__':main()

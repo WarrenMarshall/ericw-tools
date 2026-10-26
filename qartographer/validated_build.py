@@ -24,10 +24,14 @@ def main():
         assert hashlib.sha256(Path(m['binary']).read_bytes()).hexdigest()==m['binary_sha256']
     else:run(HERE/'build.py','--work',work,'--pristine')
     run(HERE/'build.py','--work',work)
-    test_args=[HERE/'tiers.py','--tier',3,'--work',work,'--results',a.results]
-    if a.engine:test_args+=['--engine',a.engine]
-    if a.id1:test_args+=['--id1',a.id1]
-    run(*test_args)
+    assert not a.results.exists(),'Use a new results directory'
+    a.results.mkdir(parents=True)
+    for kind in ['development','deployment']:
+        test_args=[HERE/'tiers.py','--tier',3,'--artifact',kind,'--work',work,'--results',a.results/kind]
+        if a.engine:test_args+=['--engine',a.engine]
+        if a.id1:test_args+=['--id1',a.id1]
+        run(*test_args)
+    run(HERE/'artifacts.py','compare','--work',work,'--results',a.results)
     args=[HERE/'deploy.py','--work',work,'--results',a.results]
     if a.destination:args+=['--destination',a.destination]
     run(*args)

@@ -82,11 +82,14 @@ def validate_saved(stock,fixed,engine,id1,out,cmd=None,shutdown=None,write_resul
 
 def main():
     ap=argparse.ArgumentParser(description=__doc__)
+    ap.add_argument('--artifact',choices=['development','deployment'],default='development')
     ap.add_argument('--work',type=Path,required=True)
     ap.add_argument('--output',type=Path,required=True)
     ap.add_argument('--ordinary',type=Path,required=True,help='Existing stock-VIS/LIGHT-consumed ordinary BSP29 fixture')
     ap.add_argument('--engine',type=Path,default=DEFAULT_ENGINE,help='QrustyQuake executable or extracted AppRun')
     ap.add_argument('--id1',type=Path,default=DEFAULT_ID1)
     a=ap.parse_args();work=a.work.resolve()
-    print(json.dumps(run_native(work/'pristine-build/qbsp/qbsp',work/'patched-build/qbsp/qqbsp',a.engine.resolve(),a.id1.resolve(),a.output.resolve(),a.ordinary.resolve()),indent=2))
+    from artifacts import load_artifact
+    fixed=Path(load_artifact(work,a.artifact)['binary'])
+    print(json.dumps(run_native(work/'pristine-build/qbsp/qbsp',fixed,a.engine.resolve(),a.id1.resolve(),a.output.resolve(),a.ordinary.resolve()),indent=2))
 if __name__=='__main__':main()

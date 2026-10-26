@@ -47,16 +47,18 @@ a new disposable directory. Nothing writes authored maps or installed game asset
 # First checkout: pin the submodules; build pristine only once per baseline.
 git submodule update --init --recursive
 python3 qartographer/build.py --work /tmp/qqbsp-work --pristine
-# Build qqbsp plus the QBSP-only upstream test target.
+# Build symbol-rich qqbsp, QBSP-only tests and a separate debug-stripped copy.
 python3 qartographer/build.py --work /tmp/qqbsp-work
 # Tier 1: relevant changes, frequent development checks.
 python3 qartographer/tiers.py --tier 1 --work /tmp/qqbsp-work --results /tmp/qqbsp-tier1-new
 # Tier 2: before accepting a compiler change; includes applicable Tier 1 checks.
 python3 qartographer/tiers.py --tier 2 --work /tmp/qqbsp-work --results /tmp/qqbsp-tier2-new
-# Tier 3: before promotion; includes Tier 1/2 and release checks.
-python3 qartographer/tiers.py --tier 3 --work /tmp/qqbsp-work --results /tmp/qqbsp-tier3-new
-# Deploy independently only from a matching Tier 3 PASS receipt.
-python3 qartographer/deploy.py --work /tmp/qqbsp-work --results /tmp/qqbsp-tier3-new
+# Tier 3: independently validate both artifacts, then compare exact outputs.
+python3 qartographer/tiers.py --tier 3 --artifact development --work /tmp/qqbsp-work --results /tmp/qqbsp-release-new/development
+python3 qartographer/tiers.py --tier 3 --artifact deployment --work /tmp/qqbsp-work --results /tmp/qqbsp-release-new/deployment
+python3 qartographer/artifacts.py compare --work /tmp/qqbsp-work --results /tmp/qqbsp-release-new
+# Independently deploy only from both matching Tier 3 receipts and comparison PASS.
+python3 qartographer/deploy.py --work /tmp/qqbsp-work --results /tmp/qqbsp-release-new
 # Normal local workflow: Build -> Validate (Tier 3) -> Deploy -> Verify.
 python3 qartographer/validated_build.py --work /tmp/qqbsp-work --results /tmp/qqbsp-release-new
 ```
@@ -112,8 +114,28 @@ bit-for-bit reproducibility without two independently verified clean builds.
 
 ## Deployment
 
-Deployment requires a clean committed build, matching full Tier 3 PASS receipt,
-matching hashes/build identity, and successful destination startup. Default:
+Development stays RelWithDebInfo at WORK/patched-build/qbsp/qqbsp, recorded by
+patched-manifest.json. build.py also copies and runs GNU `strip --strip-debug` on
+WORK/deployment/qqbsp, recorded separately by deployment-artifact.json. Never strip
+the development file, use --strip-all, alter optimization, or strip runtime libraries.
+Preparation asserts unchanged allocated sections, program headers, build ID, dynamic
+symbols/unwind data and defined diagnostic symbols. Independently prepare an existing
+build with `python3 qartographer/artifacts.py prepare --work /tmp/qqbsp-work`.
+Run `python3 qartographer/test_artifacts.py` for focused packaging guards.
+
+Deployment requires a clean committed build, separate development/deployment Tier 3
+PASS receipts and artifact-comparison.json. MAP/BSP bytes, native states and identity
+must match across the two executables. Tier/native --artifact defaults to development;
+select deployment explicitly when validating the stripped copy. Receipt hashes must
+identify the actual selected artifact, never substitute its development hash.
+Before replacing qqbsp, deployment archives the full matching debug executable and
+build manifest in ignored build-symbols/DEVELOPMENT_SHA256/ under this repository.
+Keep that archive for the installed version; it survives later rebuilds/workdir cleanup.
+The development workdir executable also remains untouched. Neither archive is shipped
+to the utilities directory. Both artifacts retain the same ELF build ID; use the
+archived unstripped file with GDB for source/line debugging. No separate debug file
+is needed. The deployment receipt records both SHA-256 hashes and the archive path.
+Atomic deployment still verifies hashes/build identity and destination startup. Default:
 /mnt/fb91e326-b6dc-4352-b43c-7517fcce8b77/Dropbox/Quake/Utils/linux/qqbsp
 Use --destination /directory/qqbsp or QQBSP_DEPLOY_PATH to override. Stage a temporary
 file in that directory, preserve executable permissions, verify loader/hash/identity,
@@ -132,7 +154,7 @@ No compiler or collision expectation changed to accommodate another engine.
 Native-only validation, reusing existing compiler artifacts and consumed BSP29:
 
 ```sh
-SDL_VIDEODRIVER=dummy python3 qartographer/native.py --work /tmp/qqbsp-work --output /tmp/qqbsp-native-new --ordinary /tmp/qqbsp-tier3-existing/compatibility/ordinary.bsp
+SDL_VIDEODRIVER=dummy python3 qartographer/native.py --work /tmp/qqbsp-work --artifact deployment --output /tmp/qqbsp-native-new --ordinary /tmp/qqbsp-release-existing/deployment/compatibility/ordinary.bsp
 python3 qartographer/test_native.py
 ```
 
@@ -153,7 +175,7 @@ process.json, results.json and saves; never treat paused input as a compiler def
 To attach a matching normal-exit native PASS to a completed Tier 3 checkpoint:
 
 ```sh
-python3 qartographer/tiers.py --tier 3 --work /tmp/qqbsp-work --results /tmp/qqbsp-tier3-existing --resume-native /tmp/qqbsp-native-new
+python3 qartographer/tiers.py --tier 3 --work /tmp/qqbsp-work --artifact deployment --results /tmp/qqbsp-release-existing/deployment --resume-native /tmp/qqbsp-native-new
 ```
 
 Binary/input/engine identity and normal-exit process receipt must match. Historical

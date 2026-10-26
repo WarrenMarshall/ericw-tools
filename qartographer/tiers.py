@@ -5,6 +5,7 @@ from pathlib import Path
 sys.dont_write_bytecode=True
 from deploy import DEFAULT,sha
 from native import DEFAULT_ENGINE,DEFAULT_ID1
+from artifacts import load_artifact
 HERE=Path(__file__).resolve().parent
 FAST='qbsp.duplicatePlanes:qbsp.emptyBrush:testmapsQ1.simpleSealed'
 CORRECTNESS=FAST+':testmapsQ1.chopNoChange:testmapsQ1.cube:testmapsQ1.cubes:testmapsQ1.brushClippingOrder:testmapsQ1.angledBrush:testmapsQ1.sealingContents:testmapsQ1.detailTouchingWater:testmapsQ1.hull1ContentTypes:testmapsQ1.sealingHull1Onnode:testmapsQ1.csg'
@@ -16,6 +17,7 @@ def lumps(p):
     b=p.read_bytes();return b[:4],{i:b[o:o+n] for i in range(15) for o,n in [struct.unpack_from('<ii',b,4+i*8)]}
 def main():
     ap=argparse.ArgumentParser(description=__doc__)
+    ap.add_argument('--artifact',choices=['development','deployment'],default='development')
     ap.add_argument('--tier',type=int,choices=[1,2,3],required=True)
     ap.add_argument('--work',type=Path,required=True);ap.add_argument('--results',type=Path,required=True)
     ap.add_argument('--engine',type=Path,default=DEFAULT_ENGINE)
@@ -26,8 +28,9 @@ def main():
     a=ap.parse_args();a.results=a.results.resolve();a.work=a.work.resolve()
     if a.resume_native:
         report=json.loads((a.results/'tier-results.json').read_text())
-        manifest=json.loads((a.work/'patched-manifest.json').read_text())
+        manifest=load_artifact(a.work,a.artifact)
         fixed=Path(manifest['binary']);stock=a.work/'pristine-build/qbsp/qbsp'
+        assert report['artifact_kind']==a.artifact
         assert report['tier']==3 and report['binary_sha256']==sha(fixed)==manifest['binary_sha256']
         core=json.loads((a.results/'collision/results.json').read_text())
         assert core['acceptance']=='PASS' and core['full'] and core['patched']['sha256']==sha(fixed)
@@ -56,11 +59,11 @@ def main():
         return
     assert not a.results.exists(),'Use a new results directory'
     a.results.mkdir(parents=True)
-    m=json.loads((a.work/'patched-manifest.json').read_text());binary=Path(m['binary']);stock=a.work/'pristine-build/qbsp/qbsp'
+    m=load_artifact(a.work,a.artifact);binary=Path(m['binary']);stock=a.work/'pristine-build/qbsp/qbsp'
     assert sha(binary)==m['binary_sha256']
     lock=json.loads((HERE/'baseline.json').read_text())
     for name,want in lock['fixtures'].items():assert sha(HERE/'fixtures'/name)==want,name
-    report={'tier':a.tier,'binary_sha256':sha(binary),'source':m['downstream'],'acceptance':'INCOMPLETE'}
+    report={'tier':a.tier,'artifact_kind':a.artifact,'binary_sha256':sha(binary),'source':m['downstream'],'acceptance':'INCOMPLETE'}
     receipt=a.results/'tier-results.json'
     receipt.write_text(json.dumps(report,indent=2)+'\n')
     identity=subprocess.run([str(binary),'-help'],capture_output=True,text=True)

@@ -80,6 +80,49 @@ or a bit-for-bit reproducibility claim. No two-clean-build binary comparison has
 been performed. Corresponding source and dependency license obligations must be
 handled before redistribution; retain upstream COPYING and notices.
 
+## Development and deployment artifacts
+
+Keep the development executable with all RelWithDebInfo DWARF at
+WORK/patched-build/qbsp/qqbsp. Its build record is patched-manifest.json.
+After a downstream build, build.py automatically prepares WORK/deployment/qqbsp
+with GNU `strip --strip-debug` on a copy, and writes deployment-artifact.json with
+its own hash, source development hash, tool version and ELF preservation evidence.
+Preparing an artifact never installs or authorizes it. No optimizer/linker/source
+baseline settings change. --strip-all/--strip-unneeded are deliberately not used:
+ordinary diagnostic symbols, dynamic symbols, build ID and unwind data are retained.
+
+```sh
+# Prepare an existing development build without rebuilding or installing:
+python3 qartographer/artifacts.py prepare --work /tmp/qqbsp-work
+python3 qartographer/test_artifacts.py
+```
+
+The packaging step checks byte-identical allocated ELF sections and program headers,
+unchanged defined-symbol names/addresses and version identity, no remaining DWARF,
+and an unchanged development hash. TBB copies in the local artifact directory are
+unchanged byte copies; installed runtime libraries are never touched.
+
+For promotion, both artifacts independently pass Tier 3 using the same fixtures,
+flags, stock VIS/LIGHT and Qrusty `exitstyle 2` native replay. The comparison gate
+requires identical MAP/BSP bytes, native states and identity. Separate receipts bind
+each test run to its actual executable hash. The upstream QBSP library tests are
+shared; all executable compilation/oracle/native checks use the selected artifact.
+
+```sh
+python3 qartographer/tiers.py --tier 3 --artifact development --work /tmp/qqbsp-work --results /tmp/qqbsp-release-new/development
+python3 qartographer/tiers.py --tier 3 --artifact deployment --work /tmp/qqbsp-work --results /tmp/qqbsp-release-new/deployment
+python3 qartographer/artifacts.py compare --work /tmp/qqbsp-work --results /tmp/qqbsp-release-new
+```
+
+Before deployment, the full corresponding development binary and manifest are saved
+under ignored build-symbols/DEVELOPMENT_SHA256/ in the source repository. That copy
+survives later rebuilds and disposable workdir cleanup. Keep it for diagnostics of
+the installed build; load that unstripped executable in GDB when examining a core
+or attaching to the matching process. Build IDs/load addresses remain matched.
+There is no duplicate .debug archive or gnu_debuglink requirement. Deployment.json
+records actual stripped hash, development hash, source artifact and debug archive.
+These are local Linux x86_64 packaging steps, not portable/distribution certification.
+
 ## Regression contract
 
 The default regression run compiles the four-brush reduced failure and the
@@ -126,8 +169,8 @@ Push/publish or install only when explicitly requested.
 
 ## Local validated deployment
 
-The normal local command builds, runs the full regression gate, deploys, and
-verifies startup/hash/identity. A failed command exits nonzero and is not an
+The normal local command builds both artifacts, independently runs Tier 3 on each,
+compares them, deploys the stripped copy, and verifies startup/hash/identity. A failed command exits nonzero and is not an
 accepted deployment. The build-only command above never deploys experiments.
 
 ```sh
@@ -142,8 +185,9 @@ Default destination:
 `/mnt/fb91e326-b6dc-4352-b43c-7517fcce8b77/Dropbox/Quake/Utils/linux/qqbsp`.
 Override with --destination /another/directory/qqbsp or QQBSP_DEPLOY_PATH. The
 parent must exist. Only a destination named qqbsp is accepted. The deploy command
-requires a clean committed build manifest, a full PASS receipt and matching
-compiler hash, stages the file in that directory, preserves its executable mode,
+requires the deployment-artifact manifest, two hash-bound Tier 3 PASS receipts and
+artifact-comparison.json in the results root. It stages the stripped artifact in
+that directory, preserves its executable mode,
 checks its hash and executes its help/version path there before atomic rename.
 It verifies the final path again and writes deployment.json in the work directory.
 
@@ -176,10 +220,12 @@ Performance observations are recorded; an increase above 25% requests a review
 note without labelling geometry incorrect. This is a review trigger, not a
 statistical performance certification or permission to hide unexplained slowdowns.
 
-`deploy.py` now requires results/tier-results.json with a Tier 3 PASS bound to the
-binary, in addition to the collision suite receipt. The earlier regress.py-only
-commands remain useful for focused investigation but do not authorize deployment.
-Use tiers.py --tier 3 followed by deploy.py, or validated_build.py, for promotion.
+`deploy.py` requires results/{development,deployment}/tier-results.json, the stripped
+collision receipt and artifact-comparison.json. Earlier single-artifact or regress.py
+receipts remain useful evidence but do not authorize deployment of a different file.
+Use the two-artifact commands above, or validated_build.py, for promotion. Development
+remains the default artifact for ordinary focused tiers; standalone native.py also
+accepts --artifact deployment to check the exact smaller binary.
 
 QrustyQuake remains the preferred native engine. The old apparent shutdown stall
 was interactive quit UI, resolved by `exitstyle 2` in the generated script. Normal
