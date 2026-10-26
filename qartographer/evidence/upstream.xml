@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="13" failures="0" disabled="0" errors="0" time="0.141" timestamp="2026-10-26T09:00:11.320" name="AllTests">
+  <testsuite name="qbsp" tests="2" failures="0" disabled="0" skipped="0" errors="0" time="0." timestamp="2026-10-26T09:00:11.320">
+    <testcase name="duplicatePlanes" file="/home/warrenmarshall/dev/ericw-tools/tests/test_qbsp.cc" line="339" status="run" result="completed" time="0." timestamp="2026-10-26T09:00:11.320" classname="qbsp" />
+    <testcase name="emptyBrush" file="/home/warrenmarshall/dev/ericw-tools/tests/test_qbsp.cc" line="368" status="run" result="completed" time="0." timestamp="2026-10-26T09:00:11.321" classname="qbsp" />
+  </testsuite>
+  <testsuite name="testmapsQ1" tests="11" failures="0" disabled="0" skipped="0" errors="0" time="0.14" timestamp="2026-10-26T09:00:11.321">
+    <testcase name="chopNoChange" file="/home/warrenmarshall/dev/ericw-tools/tests/test_qbsp.cc" line="542" status="run" result="completed" time="0.009" timestamp="2026-10-26T09:00:11.321" classname="testmapsQ1" />
+    <testcase name="simpleSealed" file="/home/warrenmarshall/dev/ericw-tools/tests/test_qbsp.cc" line="549" status="run" result="completed" time="0.02" timestamp="2026-10-26T09:00:11.330" classname="testmapsQ1" />
+    <testcase name="sealingContents" file="/home/warrenmarshall/dev/ericw-tools/tests/test_qbsp.cc" line="1021" status="run" result="completed" time="0.017" timestamp="2026-10-26T09:00:11.350" classname="testmapsQ1" />
+    <testcase name="detailTouchingWater" file="/home/warrenmarshall/dev/ericw-tools/tests/test_qbsp.cc" line="1028" status="run" result="completed" time="0.019" timestamp="2026-10-26T09:00:11.368" classname="testmapsQ1" />
+    <testcase name="brushClippingOrder" file="/home/warrenmarshall/dev/ericw-tools/tests/test_qbsp.cc" line="1196" status="run" result="completed" time="0.015" timestamp="2026-10-26T09:00:11.388" classname="testmapsQ1" />
+    <testcase name="cube" file="/home/warrenmarshall/dev/ericw-tools/tests/test_qbsp.cc" line="1268" status="run" result="completed" time="0.004" timestamp="2026-10-26T09:00:11.403" classname="testmapsQ1" />
+    <testcase name="cubes" file="/home/warrenmarshall/dev/ericw-tools/tests/test_qbsp.cc" line="1327" status="run" result="completed" time="0.005" timestamp="2026-10-26T09:00:11.408" classname="testmapsQ1" />
+    <testcase name="angledBrush" file="/home/warrenmarshall/dev/ericw-tools/tests/test_qbsp.cc" line="1531" status="run" result="completed" time="0.017" timestamp="2026-10-26T09:00:11.413" classname="testmapsQ1" />
+    <testcase name="sealingHull1Onnode" file="/home/warrenmarshall/dev/ericw-tools/tests/test_qbsp.cc" line="1550" status="run" result="completed" time="0.007" timestamp="2026-10-26T09:00:11.430" classname="testmapsQ1" />
+    <testcase name="csg" file="/home/warrenmarshall/dev/ericw-tools/tests/test_qbsp.cc" line="1666" status="run" result="completed" time="0." timestamp="2026-10-26T09:00:11.438" classname="testmapsQ1" />
+    <testcase name="hull1ContentTypes" file="/home/warrenmarshall/dev/ericw-tools/tests/test_qbsp.cc" line="2001" status="run" result="completed" time="0.023" timestamp="2026-10-26T09:00:11.438" classname="testmapsQ1" />
+  </testsuite>
+</testsuites>

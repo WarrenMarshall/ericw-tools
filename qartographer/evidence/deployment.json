@@ -1,0 +1,6 @@
+{
+  "destination": "/mnt/fb91e326-b6dc-4352-b43c-7517fcce8b77/Dropbox/Quake/Utils/linux/qqbsp",
+  "sha256": "9a36f9b449da4484e7c13f87d4f72698a9b998fc42e3a9e21bd5e8624e068d1a",
+  "identity": "Qartographer qqbsp, upstream=ccaeb8457a1267860ebe99ed1df7394ebdd6b435, downstream=72ea770193cef098c3b427648e6ee28ea130d737, patches=P1",
+  "results": "/tmp/qqbsp-bootstrap/tier3"
+}

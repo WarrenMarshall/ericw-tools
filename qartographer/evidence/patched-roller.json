@@ -1,0 +1,44 @@
+{
+  "default": {
+    "hulls": {
+      "0": {
+        "samples": 1008,
+        "failures": []
+      },
+      "1": {
+        "samples": 584,
+        "failures": []
+      },
+      "2": {
+        "samples": 584,
+        "failures": []
+      }
+    },
+    "seconds": 0.02,
+    "peak_rss_kib": 11756,
+    "map_bytes": 41460,
+    "bsp_bytes": 53092,
+    "clipnodes": 1969
+  },
+  "chopfragment": {
+    "hulls": {
+      "0": {
+        "samples": 1008,
+        "failures": []
+      },
+      "1": {
+        "samples": 584,
+        "failures": []
+      },
+      "2": {
+        "samples": 584,
+        "failures": []
+      }
+    },
+    "seconds": 0.02,
+    "peak_rss_kib": 9728,
+    "map_bytes": 41460,
+    "bsp_bytes": 42684,
+    "clipnodes": 1225
+  }
+}

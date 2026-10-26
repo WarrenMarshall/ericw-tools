@@ -1,0 +1,111 @@
+{
+  "tier": 3,
+  "binary_sha256": "9a36f9b449da4484e7c13f87d4f72698a9b998fc42e3a9e21bd5e8624e068d1a",
+  "source": "72ea770193cef098c3b427648e6ee28ea130d737",
+  "acceptance": "PASS",
+  "upstream_tests": 13,
+  "thin": {
+    "essential-floor": {
+      "actor_samples": {
+        "1": 513,
+        "2": 512
+      },
+      "compile_seconds": 0.006919780978932977,
+      "source_cells": 3
+    },
+    "essential-wedge": {
+      "actor_samples": {
+        "1": 509,
+        "2": 507
+      },
+      "compile_seconds": 0.0044042449444532394,
+      "source_cells": 1
+    },
+    "passage-32": {
+      "actor_samples": {
+        "1": 514,
+        "2": 515
+      },
+      "compile_seconds": 0.006996262003667653,
+      "source_cells": 4
+    },
+    "passage-64": {
+      "actor_samples": {
+        "1": 515,
+        "2": 513
+      },
+      "compile_seconds": 0.007042772020213306,
+      "source_cells": 4
+    }
+  },
+  "full_compile_seconds": {
+    "pristine": 13.056,
+    "patched": 13.215,
+    "ratio": 1.0121783088235294
+  },
+  "performance_note": "",
+  "compatibility": {
+    "format": "BSP29",
+    "consumers": {
+      "vis": {
+        "path": "/mnt/fb91e326-b6dc-4352-b43c-7517fcce8b77/Dropbox/Quake/Utils/linux/vis",
+        "sha256": "9068c8293a5ca4d10bd073fb43d51875c895a8e27e938268d2412ad2f528d0bb"
+      },
+      "light": {
+        "path": "/mnt/fb91e326-b6dc-4352-b43c-7517fcce8b77/Dropbox/Quake/Utils/linux/light",
+        "sha256": "6e72e261d38cd53089657926d879238feeea15e1fff87085ac67a83b67e53f43"
+      }
+    },
+    "visibility_bytes": 1,
+    "light_bytes": 904
+  },
+  "resume_note": "Recovered completed compatibility checkpoint from original run, which reached native.py after all compatibility assertions passed. Retained logs; no compiler/consumer tests rerun.",
+  "native": {
+    "compiler_sha256": {
+      "pristine": "b80a35bc57eee9906c259abf2aa30a475c6a3f0864b6e4f9c16f233f9658d880",
+      "qqbsp": "9a36f9b449da4484e7c13f87d4f72698a9b998fc42e3a9e21bd5e8624e068d1a"
+    },
+    "shutdown": "Resumed completed saves after engine shutdown timeout; test processes forcibly cleaned up",
+    "engine": "/tmp/appimage_extracted_740db85dc4875cfdb26a910527520a99/usr/bin/qrustyquake",
+    "engine_sha256": "a367fc302ace3e808b7db73b461830ba375747d72039b596e745f39baa464e02",
+    "command": null,
+    "pak_sha256": {
+      "pak0.pak": "35a9c55e5e5a284a159ad2a62e0e8def23d829561fe2f54eb402dbc0a9a946af",
+      "pak1.pak": "94e355836ec42bc464e4cbe794cfb7b5163c6efa1bcc575622bb36475bf1cf30"
+    },
+    "stock": {
+      "start": {
+        "origin": "-1400.000000 -1664.000000 180.000000",
+        "velocity": "0",
+        "movetype": "3.000000",
+        "flags": "4104.000000"
+      },
+      "end": {
+        "origin": "-1400.000000 -1664.000000 180.000000",
+        "velocity": "0",
+        "movetype": "3.000000",
+        "flags": "4104.000000"
+      }
+    },
+    "fixed": {
+      "start": {
+        "origin": "-1400.000000 -1664.000000 180.000000",
+        "velocity": "0",
+        "movetype": "3.000000",
+        "flags": "4104.000000"
+      },
+      "end": {
+        "origin": "-1400.000000 -1502.543823 168.025421",
+        "velocity": "0.000000 100.000000 0.000000",
+        "movetype": "3.000000",
+        "flags": "4616.000000"
+      }
+    },
+    "ordinary": {
+      "origin": "-56.000000 -96.000000 88.031250",
+      "movetype": "3.000000",
+      "flags": "4616.000000"
+    },
+    "acceptance": "PASS"
+  }
+}

@@ -30,7 +30,7 @@ investigation is ../qartographer/docs/qbsp_fork_feasibility.md. P1 is accepted;
 P2-unapplied.patch is a separate candidate and must stay unapplied. Each compiler
 correction needs an isolated commit, explanation and failing-before/passing-after
 regression. Separate build/workflow changes. Preserve upstream licenses/notices.
-Use Item for editor construction objects. Do not spawn agents by default.
+Do not spawn agents by default.
 
 Follow README.md's upstream merge/retirement procedure: inspect and pin the
 candidate upstream SHA; do not reset downstream history, reapply existing patches,
@@ -121,3 +121,16 @@ then atomically replace only qqbsp and verify again. Preserve the previous execu
 on failure. Report unavailable destinations/failures explicitly. Never overwrite
 qbsp, vis, light, other utilities or their libraries. This validated local deployment
 is authorized; publication, packaging and production editor integration are not.
+
+If an engine stalls only during shutdown after writing all complete native states,
+the runner forcibly cleans up its process group and records that limitation; all
+state assertions still apply. Incomplete/missing states fail. To inspect completed
+states after a shutdown failure without rerunning passing compiler checks:
+
+```sh
+python3 qartographer/tiers.py --tier 3 --work /tmp/qqbsp-work --results /tmp/qqbsp-tier3-new --resume-native /tmp/qqbsp-tier3-new/native --engine /path/to/extracted/AppRun
+```
+
+The resume command requires the earlier successful compatibility checkpoint and
+matching binary/input identities. Prefer --engine /path/to/extracted/AppRun for
+AppImage/FUSE problems; validated_build.py also accepts --engine and --id1.

@@ -1,0 +1,51 @@
+{
+  "all_original_files_unchanged": true,
+  "before_sha256": {
+    "LICENSE-embree.txt": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+    "nano.22238.save": "264a5b9f934a3c31aba4c61a05b7e2b147b3d2486d526ed7338f3f0ac6222d9f",
+    "bspc.log": "241ff65f9adf308a5f264f7e9aae32ba54b3d9d7ae88cc149030a39b652fcb22",
+    "libtbbmalloc.so.2": "a2ec28e8fba46ee142c322355a53ff5ae1b1964324a856010daf04370b466bbe",
+    "maputil": "6a11d80ee304fa7770f187b4bc59e1c5dc991ab8685644f20956c758024f0400",
+    "gpl_v3.txt": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903",
+    "lightpreview": "df6af1aaf02052c93f6ca877363909c5e84200deeb42adcb67b68572c4fb04f2",
+    "bsputil": "5ad000aa3ac07fd03bda64454fc227ea3297d2a68247a7e29626ab6207b5cba5",
+    "vis": "9068c8293a5ca4d10bd073fb43d51875c895a8e27e938268d2412ad2f528d0bb",
+    ".swp": "77c4725264c8a2f059b359c979f1b3aaf8978aca478770bd494ae13ccb48c7b0",
+    "bspinfo": "379f9013762eb55a1ad8e812d25e0416b0f847efbce548590be027b376265a02",
+    "libtbb.so.12": "ba4fac0469d777368af41678e17acb7f2b35f56042e5f44a55cb84f111d01f73",
+    "qbsp": "6f44175d75bab8a0fdb930b3bb4571a869bd1cdc57a92864c2f991c4452a8e62",
+    "bspc": "b7cfbd6ad79c43a55a5151d6a6b5dcefd525b15c7307bad1602cc0ab43dcd54e",
+    "libembree4.so.4": "4aef3270c10dde8d2971c3ec8a48643706eccc3090c4e94207594592af9c6d5c",
+    "README.md": "86e52505428d6cd6aba4e04423b0b758797fad12d9afa64639d37fc9472c891e",
+    "nano.22233.save": "264a5b9f934a3c31aba4c61a05b7e2b147b3d2486d526ed7338f3f0ac6222d9f",
+    "q3map2": "684922b369b63750afaced114ec89bc2c527dd78f2d19b027a7e00344f60f97f",
+    "light": "6e72e261d38cd53089657926d879238feeea15e1fff87085ac67a83b67e53f43"
+  },
+  "after_sha256": {
+    "LICENSE-embree.txt": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+    "nano.22238.save": "264a5b9f934a3c31aba4c61a05b7e2b147b3d2486d526ed7338f3f0ac6222d9f",
+    "bspc.log": "241ff65f9adf308a5f264f7e9aae32ba54b3d9d7ae88cc149030a39b652fcb22",
+    "libtbbmalloc.so.2": "a2ec28e8fba46ee142c322355a53ff5ae1b1964324a856010daf04370b466bbe",
+    "maputil": "6a11d80ee304fa7770f187b4bc59e1c5dc991ab8685644f20956c758024f0400",
+    "gpl_v3.txt": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903",
+    "lightpreview": "df6af1aaf02052c93f6ca877363909c5e84200deeb42adcb67b68572c4fb04f2",
+    "bsputil": "5ad000aa3ac07fd03bda64454fc227ea3297d2a68247a7e29626ab6207b5cba5",
+    "vis": "9068c8293a5ca4d10bd073fb43d51875c895a8e27e938268d2412ad2f528d0bb",
+    ".swp": "77c4725264c8a2f059b359c979f1b3aaf8978aca478770bd494ae13ccb48c7b0",
+    "bspinfo": "379f9013762eb55a1ad8e812d25e0416b0f847efbce548590be027b376265a02",
+    "libtbb.so.12": "ba4fac0469d777368af41678e17acb7f2b35f56042e5f44a55cb84f111d01f73",
+    "qbsp": "6f44175d75bab8a0fdb930b3bb4571a869bd1cdc57a92864c2f991c4452a8e62",
+    "bspc": "b7cfbd6ad79c43a55a5151d6a6b5dcefd525b15c7307bad1602cc0ab43dcd54e",
+    "libembree4.so.4": "4aef3270c10dde8d2971c3ec8a48643706eccc3090c4e94207594592af9c6d5c",
+    "README.md": "86e52505428d6cd6aba4e04423b0b758797fad12d9afa64639d37fc9472c891e",
+    "nano.22233.save": "264a5b9f934a3c31aba4c61a05b7e2b147b3d2486d526ed7338f3f0ac6222d9f",
+    "q3map2": "684922b369b63750afaced114ec89bc2c527dd78f2d19b027a7e00344f60f97f",
+    "light": "6e72e261d38cd53089657926d879238feeea15e1fff87085ac67a83b67e53f43"
+  },
+  "new_qqbsp_sha256": "9a36f9b449da4484e7c13f87d4f72698a9b998fc42e3a9e21bd5e8624e068d1a",
+  "mode": "0o775",
+  "ldd": "\tlinux-vdso.so.1 (0x00007cecf83af000)\n\tlibtbb.so.12 => /mnt/fb91e326-b6dc-4352-b43c-7517fcce8b77/Dropbox/Quake/Utils/linux/libtbb.so.12 (0x00007cecf7e00000)\n\tlibtbbmalloc.so.2 => /mnt/fb91e326-b6dc-4352-b43c-7517fcce8b77/Dropbox/Quake/Utils/linux/libtbbmalloc.so.2 (0x00007cecf7a00000)\n\tlibstdc++.so.6 => /lib/x86_64-linux-gnu/libstdc++.so.6 (0x00007cecf7600000)\n\tlibm.so.6 => /lib/x86_64-linux-gnu/libm.so.6 (0x00007cecf80e8000)\n\tlibgcc_s.so.1 => /lib/x86_64-linux-gnu/libgcc_s.so.1 (0x00007cecf80ba000)\n\tlibc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x00007cecf7200000)\n\tlibdl.so.2 => /lib/x86_64-linux-gnu/libdl.so.2 (0x00007cecf80b3000)\n\tlibpthread.so.0 => /lib/x86_64-linux-gnu/libpthread.so.0 (0x00007cecf80ae000)\n\t/lib64/ld-linux-x86-64.so.2 (0x00007cecf83b1000)\n",
+  "new_directory_entries": [
+    "qqbsp"
+  ]
+}

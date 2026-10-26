@@ -1,0 +1,24 @@
+Traceback (most recent call last):
+  File "/home/warrenmarshall/dev/ericw-tools/qartographer/native.py", line 32, in run_native
+    try:assert proc.wait(timeout=55)==0,'Engine failed'
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/subprocess.py", line 1264, in wait
+    return self._wait(timeout=timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/subprocess.py", line 2045, in _wait
+    raise TimeoutExpired(self.args, timeout)
+subprocess.TimeoutExpired: Command '['/tmp/appimage_extracted_740db85dc4875cfdb26a910527520a99/usr/bin/qrustyquake', '-basedir', '/tmp/qqbsp-bootstrap/tier3/native-retry', '-window', '-width', '960', '-height', '640', '-nosound', '+exec', 'acceptance.cfg']' timed out after 55 seconds
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "<stdin>", line 5, in <module>
+  File "/home/warrenmarshall/dev/ericw-tools/qartographer/native.py", line 34, in run_native
+    proc.terminate();proc.wait(timeout=5);raise RuntimeError('Native engine timed out (infrastructure failure)')
+                     ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/subprocess.py", line 1264, in wait
+    return self._wait(timeout=timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/subprocess.py", line 2045, in _wait
+    raise TimeoutExpired(self.args, timeout)
+subprocess.TimeoutExpired: Command '['/tmp/appimage_extracted_740db85dc4875cfdb26a910527520a99/usr/bin/qrustyquake', '-basedir', '/tmp/qqbsp-bootstrap/tier3/native-retry', '-window', '-width', '960', '-height', '640', '-nosound', '+exec', 'acceptance.cfg']' timed out after 5 seconds

@@ -1,0 +1,28 @@
+{
+  "pristine": {
+    "models": 94,
+    "faces": 16424,
+    "clipnodes": 27275,
+    "geometry_matches_prior": {
+      "1": true,
+      "5": true,
+      "7": true,
+      "9": true,
+      "10": true,
+      "14": true
+    }
+  },
+  "patched": {
+    "models": 94,
+    "faces": 16424,
+    "clipnodes": 26296,
+    "geometry_matches_prior": {
+      "1": true,
+      "5": true,
+      "7": true,
+      "9": true,
+      "10": true,
+      "14": true
+    }
+  }
+}

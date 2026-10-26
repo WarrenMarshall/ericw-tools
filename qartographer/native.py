@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Fresh matched RollerSpline native movement in a private game directory."""
-import hashlib,json,re,subprocess
+import hashlib,json,os,re,signal,subprocess
 from pathlib import Path
 HERE=Path(__file__).resolve().parent
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
@@ -29,13 +29,13 @@ def run_native(stock,fixed,engine,id1,out,ordinary):
     cmd=[str(engine),'-basedir',str(out),'-window','-width','960','-height','640','-nosound','+exec','acceptance.cfg']
     shutdown='normal'
     with (out/'engine.log').open('w') as log:
-        proc=subprocess.Popen(cmd,stdout=log,stderr=subprocess.STDOUT)
+        proc=subprocess.Popen(cmd,stdout=log,stderr=subprocess.STDOUT,start_new_session=True)
         try:assert proc.wait(timeout=55)==0,'Engine failed'
         except subprocess.TimeoutExpired:
             # Some local engine builds hang in shutdown after saving all states.
             # Missing/incomplete states still fail below; completed movement does
             # not become a collision failure because teardown stalls.
-            proc.kill();proc.wait(timeout=5)
+            os.killpg(proc.pid,signal.SIGKILL);proc.wait(timeout=5)
             shutdown='forced cleanup after timeout; all state assertions still required'
     return validate_saved(stock,fixed,engine,id1,out,cmd,shutdown)
 

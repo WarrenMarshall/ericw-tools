@@ -1,0 +1,76 @@
+{
+  "label": "pristine",
+  "upstream": "ccaeb8457a1267860ebe99ed1df7394ebdd6b435",
+  "downstream": "974940f84f2c27b94b9a77eaf9e8763e0ee74981",
+  "tracked_changes": "",
+  "toolchain": {
+    "c++": "13.3.0",
+    "cmake": "cmake version 3.28.3",
+    "ninja": "1.11.1",
+    "ld": "GNU ld (GNU Binutils for Ubuntu) 2.42"
+  },
+  "platform": "Linux pop-os 7.2.6-76070206-generic #202609141300~1792006165~24.04~cb46eb8 SMP PREEMPT_DYNAMIC Wed O x86_64 x86_64 x86_64 GNU/Linux",
+  "libc": "ldd (Ubuntu GLIBC 2.39-0ubuntu8.9) 2.39",
+  "lock": {
+    "upstream": "ccaeb8457a1267860ebe99ed1df7394ebdd6b435",
+    "inspected_main": "36eec1da2a194467e6baac2f444c2dd04b57d266",
+    "p1_commit": "7f2ef6f32ce16ffc5b9167a57f5c7adad0ccdf58",
+    "googletest": "f8d7d77c06936315286eb55f8de22cd23c188571",
+    "submodules": {
+      "fmt": "f5e54359df4c26b6230fc61d38aa294581393084",
+      "nanobench": "26a9c089ca54927c1658c046749ca1b8fd60422c",
+      "pareto": "47f491eeaead1b5a95e27ee3d6bc4c591b0e4462"
+    },
+    "archives": {
+      "tbb": {
+        "url": "https://github.com/uxlfoundation/oneTBB/releases/download/v2021.11.0/oneapi-tbb-2021.11.0-lin.tgz",
+        "sha256": "95659f4d7b1711c41ffa190561d4e5b6841efc8091549661c7a2e6207e0fa79b"
+      },
+      "embree": {
+        "url": "https://github.com/RenderKit/embree/releases/download/v4.4.0/embree-4.4.0.x86_64.linux.tar.gz",
+        "sha256": "cb3d4402537fc9165c76c3316b8953dcfea523cd1eaf588e2de7639864ee3c57"
+      },
+      "json": {
+        "url": "https://github.com/nlohmann/json/releases/download/v3.12.0/json.tar.xz",
+        "sha256": "42f6e95cad6ec532fd372391373363b62a14af6d771056dbfc86160e6dfff7aa"
+      }
+    },
+    "fixtures": {
+      "full-geometry.json": "5f70b1f1c63f47b474a7ac770d8ab36c0a30fbc141247b63141fdac41b4fb134",
+      "full-off.map": "d5f2ab2a0c5a22d2f0ecaecf77a1bbd72a3c2ce2e3c444fe0b4c517092e5986c",
+      "full-on.map": "16250e50546f9d1c4654d75e0a6683f70f7eff332ec730793c5f836d39716318",
+      "reduced.map": "5f4c588e6f4482f933138def59a2cd64660491b146cbcf0683f32266bcd24d93",
+      "roller-direct.map": "a281bdf08b070bfc7a728acf8212f5e401b04b572a706a353716fc898d861300"
+    },
+    "editor_revision": "12eb800110fade17798777e1b097b0bfc0a165a4",
+    "p1_patch_sha256": "eac568b773767b7b8afa8a1db98f256ed31368aff2067f77c2066fb877ea1bdb"
+  },
+  "configure": [
+    "cmake",
+    "-S",
+    "/tmp/qqbsp-bootstrap/pinned/pristine-source",
+    "-B",
+    "/tmp/qqbsp-bootstrap/pinned/pristine-build",
+    "-G",
+    "Ninja",
+    "-DCMAKE_BUILD_TYPE=RelWithDebInfo",
+    "-DCMAKE_C_COMPILER=/usr/bin/cc",
+    "-DCMAKE_CXX_COMPILER=/usr/bin/c++",
+    "-DDISABLE_TESTS=ON",
+    "-DDISABLE_DOCS=ON",
+    "-DENABLE_LIGHTPREVIEW=OFF",
+    "-DCMAKE_PREFIX_PATH=/tmp/qqbsp-bootstrap/pinned/deps/tbb/oneapi-tbb-2021.11.0/lib/cmake/tbb;/tmp/qqbsp-bootstrap/pinned/deps/embree/lib/cmake/embree-4.4.0",
+    "-DFETCHCONTENT_SOURCE_DIR_GOOGLETEST=/tmp/qqbsp-bootstrap/pinned/deps/googletest",
+    "-DFETCHCONTENT_SOURCE_DIR_JSON=/tmp/qqbsp-bootstrap/pinned/deps/json/json",
+    "-DFETCHCONTENT_FULLY_DISCONNECTED=ON"
+  ],
+  "binary": "/tmp/qqbsp-bootstrap/pinned/pristine-build/qbsp/qbsp",
+  "binary_sha256": "b80a35bc57eee9906c259abf2aa30a475c6a3f0864b6e4f9c16f233f9658d880",
+  "runtime_sha256": {
+    "libtbbmalloc.so.2": "a2ec28e8fba46ee142c322355a53ff5ae1b1964324a856010daf04370b466bbe",
+    "libtbb.so.12": "ba4fac0469d777368af41678e17acb7f2b35f56042e5f44a55cb84f111d01f73"
+  },
+  "ldd": "linux-vdso.so.1 (0x0000738c7c806000)\n\tlibtbb.so.12 => /tmp/qqbsp-bootstrap/pinned/pristine-build/qbsp/libtbb.so.12 (0x0000738c7c200000)\n\tlibtbbmalloc.so.2 => /tmp/qqbsp-bootstrap/pinned/pristine-build/qbsp/libtbbmalloc.so.2 (0x0000738c7be00000)\n\tlibstdc++.so.6 => /lib/x86_64-linux-gnu/libstdc++.so.6 (0x0000738c7ba00000)\n\tlibm.so.6 => /lib/x86_64-linux-gnu/libm.so.6 (0x0000738c7c540000)\n\tlibgcc_s.so.1 => /lib/x86_64-linux-gnu/libgcc_s.so.1 (0x0000738c7c512000)\n\tlibc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x0000738c7b600000)\n\tlibdl.so.2 => /lib/x86_64-linux-gnu/libdl.so.2 (0x0000738c7c50b000)\n\tlibpthread.so.0 => /lib/x86_64-linux-gnu/libpthread.so.0 (0x0000738c7c506000)\n\t/lib64/ld-linux-x86-64.so.2 (0x0000738c7c808000)",
+  "identity": "---- qbsp / ericw-tools 2.0.0-alpha10 ----\nqbsp performs geometric level processing of Quake .MAP files to create\nQuake .BSP files.\n\nusage: qbsp [-help/-h/-?] [-options] sourcefile.map [destfile.bsp]\n\nGame/BSP Target:\n  -hexen2                       target Hexen II's BSP format\n  -hlbsp                        target Half Life's BSP format\n  -q2bsp                        target Quake II's BSP format\n  -qbism                        target Qbism's extended Quake II BSP format\n  -bsp2                         target Quake's extended BSP2 format\n  -2psb                         target Quake's extended 2PSB format (RMQ compatible)\n\nMap development:\n  -onlyents                     only updates .MAP entities\n  -leaktest                     make compilation fail if the map leaks\n  -omitdetail                   omit *all* detail brushes from the compile\n  -omitdetailwall               func_detail_wall brushes are omitted from the compile\n  -omitdetailillusionary        func_detail_illusionary brushes are omitted from the compile\n  -omitdetailfence              func_detail_fence brushes are omitted from the compile\n  -wadpath path/to/wads         add a path to the wad search paths; wads found in xwadpath's will not be embedded, otherwise they will be embedded (if not -notex)\n   \\xwadpath\n  -aliasdef \"path/to/file.def\" <multiple allowed>    path to an alias definition file, which can transform entities in the .map into other entities.\n  -texturedefs \"path/to/file.def\" <multiple allowed>    path to a texture definition file, which can transform textures in the .map into other textures.\n  -maxedges n                   the max number of edges/vertices on a single face before it is split into another face\n  -scale n                      scales the map brushes and point entity origins by a give factor\n\nCommon format options:\n  -nosubdivide                  disable subdivision\n  -software [0]                 change settings to allow for (or make adjustments to optimize for the lack of) software support\n   \\nosoftware\n  -subdivide n                  change the subdivide threshold, in luxels. 0 will disable subdivision entirely\n  -nomergeacrossliquids         deprecated, no effect\n  -noclip                       don't write clip nodes (Q1-like BSP formats)\n  -litwater [0]                 doesn't combine water faces into one large face\n   \\splitturb\n  -transwater [0]               compute portal information for transparent water\n   \\notranswater\n  -notex                        write only placeholder textures to depend upon replacements, keep file sizes down, or to skirt copyrights\n  -missing_textures_as_zero_size     write missing textures as 0x0\n  -convert bp | quake | quake2 | valve    convert a .MAP to a different .MAP format\n  -includeskip                  don't cull skip faces from the list of renderable surfaces (Q2RTX)\n  -wrbrushes                    includes a list of brushes for brush-based collision\n   \\bspx\n  -wrbrushesonly                includes BSPX brushes and does not output clipping hulls (wrbrushes + noclip)\n   \\bspxonly\n  -bmodelcontents               allow control over brush contents in bmodels, don't force CONTENTS_SOLID\n  -notriggermodels              for supported game code only: triggers will not write a model\nout, and will instead just write out their mins/maxs.\n  -lmscale n                    change global lmscale (force _lmscale key on all entities). outputs the LMSCALE BSPX lump.\n  -filltype auto | inside | outside    whether to fill the map from the outside in (lenient), from the inside out (aggressive), or to automatically decide based on the hull being used.\n  -filldetail [0]               whether to fill in empty spaces which are fully enclosed by detail solid\n  -allowupgrade [0]             allow formats to \"upgrade\" to compatible extended formats when a limit is exceeded (ie Quake BSP to BSP2)\n   \\noallowupgrade\n  -midsplitbrushfraction n      switch to cheaper partitioning if a node contains this % of brushes in the map\n  -add                          the given map file will be appended to the base map\n\nLogging:\n  -log [0]                      whether log files are written or not\n   \\nolog\n  -verbose                      verbose output\n   \\v\n  -nopercent                    don't output percentage messages\n  -nostat                       don't output statistic messages\n  -noprogress                   don't output progress messages\n  -nocolor                      don't output color codes (for TB, etc)\n  -quiet                        suppress non-important messages (equivalent to -nopercent -nostat -noprogress)\n   \\noverbose\n  -logfile \"path\"               File to output logging data to. If unchanged, it is set by the tool.\n  -logappend                    Whether to append to log file or replace\n  -loghulls                     print log output for collision hulls\n  -logbmodels                   print log output for bmodels\n  -debug_missing_portal_sides     output debug .prt files for missing portal sides\n\nPerformance:\n  -threads n                    number of threads to use, maximum; leave 0 for automatic\n  -lowpriority [0]              run in a lower priority, to free up headroom for other processes\n\nGame:\n  -gamedir \"relative/path\" or \"C:/absolute/path\"    override the default mod base directory. if this is not set, or if it is relative, it will be derived from the input file or the basedir if specified.\n  -basedir \"relative/path\" or \"C:/absolute/path\"    override the default game base directory. if this is not set, or if it is relative, it will be derived from the input file or the gamedir if specified.\n  -filepriority archive | loose    which types of archives (folders/loose files or packed archives) are higher priority and chosen first for path searching\n  -path \"/path/to/folder\" <multiple allowed>    additional paths or archives to add to the search path, mostly for loose files\n  -q2rtx                        adjust settings to best support Q2RTX\n  -defaultpaths [0]             whether the compiler should attempt to automatically derive game/base paths for games that support it\n   \\nodefaultpaths\n  -tex_saturation_boost n       increase texture saturation to match original Q2 tools\n\nAdvanced/tool debugging:\n  -nofill                       don't perform outside filling\n  -nomerge                      don't perform face merging\n  -noedgereuse                  don't reuse edges (for debugging software rendering)\n  -noskip                       don't remove faces with the 'skip' texture\n  -nodetail                     treat all detail brushes to structural\n  -chop                         adjust brushes to remove intersections if possible\n   \\nochop\n  -chopfragment                 always do full fragmentation for chop\n  -splitsky                     doesn't combine sky faces into one large face\n  -splitspecial                 doesn't combine sky and water faces into one large face (splitturb + splitsky)\n  -oldaxis [0]                  uses alternate texture alignment which was default in tyrutils-ericw v0.15.1 and older\n   \\nooldaxis\n  -forcegoodtree                force use of expensive processing for BrushBSP stage\n  -midsplitsurffraction n       if 0 (default), use `maxnodesize` for deciding when to switch to midsplit bsp heuristic.\nif 0 < midsplitSurfFraction <= 1, switch to midsplit if the node contains more than this fraction of the model's\ntotal surfaces. Try 0.15 to 0.5. Works better than maxNodeSize for maps with a 3D skybox (e.g. +-128K unit maps)\n  -maxnodesize n                triggers simpler BSP Splitting when node exceeds size (default 1024, 0 to disable)\n  -oldrottex                    use old rotate_ brush texturing aligned at (0 0 0)\n  -epsilon n                    customize epsilon value for point-on-plane checks\n  -microvolume n                microbrush volume\n  -outsidedebug                 write a .map after outside filling showing non-visible brush sides\n  -debugchop                    write a .map after ChopBrushes\n  -debugleak                    write more diagnostic files for debugging leaks\n  -debugbspbrushes              save bsp brushes after BrushBSP to a .map, for visualizing BSP splits\n  -debugleafvolumes             save bsp leaf volumes after BrushBSP to a .map, for visualizing BSP splits\n  -debugexpand [single hull index] or [mins_x mins_y mins_z maxs_x maxs_y maxs_z]    write expanded hull .map for debugging/inspecting hulls/brush bevelling\n  -keepprt                      avoid deleting the .prt file on leaking maps\n  -worldextent n                explicitly provide world extents; 0 will auto-detect\n  -leakdist n                   space between leakfile points (default 0: no inbetween points)\n  -forceprt1                    force a PRT1 output file even if PRT2 is required for vis\n  -tjunc mwt | none | retopologize | rotate    T-junction fix level\n   \\notjunc\n  -objexport                    export the map file as .OBJ models during various CSG phases\n  -noextendedsurfflags          suppress writing a .texinfo file\n  -noextendedcontentflags       suppress writing a .content.json file\n  -fixupdetailfence [0]         fixup detail fence\n\n",
+  "cache_sha256": "b6bb17c65c2bc99fd67956203f6f105eaefb6a29e8bcf93e0ce9f8c1d0bb179f"
+}

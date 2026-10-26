@@ -3,7 +3,7 @@
 This is an independent development compiler, not a production replacement.
 `qqbsp` is the primary downstream executable; upstream's `qbsp` target remains.
 Both link the same corrected `libqbsp`. A downstream-built `qbsp` is therefore
-**not** the pristine comparison compiler. No compiler is installed by these steps.
+**not** the pristine comparison compiler. The build-only recipe never installs a compiler; validated_build.py performs the authorized local deployment.
 MAP syntax, hull dimensions, tolerances and BSP serialization are unchanged.
 
 ## Source and patch ownership
@@ -15,7 +15,7 @@ had only main at `36eec1da2a194467e6baac2f444c2dd04b57d266`, also the inspected
 upstream main. We deliberately start at the experimentally tested alpha10;
 main includes later behavioral changes, notably INSIDE -> AUTO default fill.
 `origin` is WarrenMarshall/ericw-tools; `upstream` is ericwa/ericw-tools.
-Neither remote has been pushed by this bootstrap.
+No commits have been pushed to either remote by this bootstrap.
 
 `baseline.json` pins three gitlinks, configure-time inputs and fixture hashes.
 P1 commit `7f2ef6f3` changes only CreateBrushWindings' clip_front keepon argument
@@ -180,3 +180,11 @@ statistical performance certification or permission to hide unexplained slowdown
 binary, in addition to the collision suite receipt. The earlier regress.py-only
 commands remain useful for focused investigation but do not authorize deployment.
 Use tiers.py --tier 3 followed by deploy.py, or validated_build.py, for promotion.
+
+Native engine teardown is distinct from movement correctness: this host can stall
+in shutdown after writing every required save. The runner cleans up the test process
+group and validates all saved endpoints; missing states still fail. The bootstrap
+preserved two completed replays and used --resume-native after that observed stall,
+without repeating the successful compiler/consumer checks. See BOOTSTRAP.md for
+the explicit limitation. --engine and --id1 also pass through validated_build.py;
+an already extracted AppRun avoids AppImage/FUSE launcher dependencies.

@@ -1,0 +1,48 @@
+{
+  "compiler_sha256": {
+    "pristine": "b80a35bc57eee9906c259abf2aa30a475c6a3f0864b6e4f9c16f233f9658d880",
+    "qqbsp": "9a36f9b449da4484e7c13f87d4f72698a9b998fc42e3a9e21bd5e8624e068d1a"
+  },
+  "shutdown": "Resumed completed saves after engine shutdown timeout; test processes forcibly cleaned up",
+  "engine": "/tmp/appimage_extracted_740db85dc4875cfdb26a910527520a99/usr/bin/qrustyquake",
+  "engine_sha256": "a367fc302ace3e808b7db73b461830ba375747d72039b596e745f39baa464e02",
+  "command": null,
+  "pak_sha256": {
+    "pak0.pak": "35a9c55e5e5a284a159ad2a62e0e8def23d829561fe2f54eb402dbc0a9a946af",
+    "pak1.pak": "94e355836ec42bc464e4cbe794cfb7b5163c6efa1bcc575622bb36475bf1cf30"
+  },
+  "stock": {
+    "start": {
+      "origin": "-1400.000000 -1664.000000 180.000000",
+      "velocity": "0",
+      "movetype": "3.000000",
+      "flags": "4104.000000"
+    },
+    "end": {
+      "origin": "-1400.000000 -1664.000000 180.000000",
+      "velocity": "0",
+      "movetype": "3.000000",
+      "flags": "4104.000000"
+    }
+  },
+  "fixed": {
+    "start": {
+      "origin": "-1400.000000 -1664.000000 180.000000",
+      "velocity": "0",
+      "movetype": "3.000000",
+      "flags": "4104.000000"
+    },
+    "end": {
+      "origin": "-1400.000000 -1502.543823 168.025421",
+      "velocity": "0.000000 100.000000 0.000000",
+      "movetype": "3.000000",
+      "flags": "4616.000000"
+    }
+  },
+  "ordinary": {
+    "origin": "-56.000000 -96.000000 88.031250",
+    "movetype": "3.000000",
+    "flags": "4616.000000"
+  },
+  "acceptance": "PASS"
+}

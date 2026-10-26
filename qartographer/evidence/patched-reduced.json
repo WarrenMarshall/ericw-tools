@@ -1,0 +1,17 @@
+{
+  "hulls": {
+    "0": {
+      "checked": 421,
+      "original_contents": -1
+    },
+    "1": {
+      "checked": 420,
+      "original_contents": -1
+    },
+    "2": {
+      "checked": 421,
+      "original_contents": -2
+    }
+  },
+  "failures": []
+}

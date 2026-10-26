@@ -1,0 +1,118 @@
+HEAD is now at f8d7d77c Bump version to v1.14 in preparation for release
+-- git describe returned "2.0.0-alpha10-8-g72ea7701"
+-- Version: 10.1.0
+-- Build type: RelWithDebInfo
+-- Using the multi-header code from /tmp/qqbsp-bootstrap/pinned/deps/json/json/include/
+-- Embree library found: /tmp/qqbsp-bootstrap/pinned/deps/embree/lib/libembree4.so.4
+-- Found embree license: /tmp/qqbsp-bootstrap/pinned/deps/embree/doc/LICENSE.txt
+-- TBB .so symlink: /tmp/qqbsp-bootstrap/pinned/deps/tbb/oneapi-tbb-2021.11.0/lib/intel64/gcc4.8/libtbb.so.12
+-- TBB .so symlink name: libtbb.so.12
+-- TBB .so file: /tmp/qqbsp-bootstrap/pinned/deps/tbb/oneapi-tbb-2021.11.0/lib/intel64/gcc4.8/libtbb.so.12.11
+-- TBBMALLOC .so symlink: /tmp/qqbsp-bootstrap/pinned/deps/tbb/oneapi-tbb-2021.11.0/lib/intel64/gcc4.8/libtbbmalloc.so.2
+-- TBBMALLOC .so symlink name: libtbbmalloc.so.2
+-- TBBMALLOC .so file: /tmp/qqbsp-bootstrap/pinned/deps/tbb/oneapi-tbb-2021.11.0/lib/intel64/gcc4.8/libtbbmalloc.so.2.11
+-- Could NOT find Lua (missing: LUA_LIBRARIES LUA_INCLUDE_DIR) 
+-- Configuring done (0.2s)
+-- Generating done (0.0s)
+-- Build files have been written to: /tmp/qqbsp-bootstrap/pinned/patched-build
+[1/53] Building CXX object 3rdparty/fmt/CMakeFiles/fmt.dir/src/os.cc.o
+[2/53] Building CXX object 3rdparty/fmt/CMakeFiles/fmt.dir/src/format.cc.o
+[3/53] Building CXX object _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o
+[4/53] Linking CXX static library 3rdparty/fmt/libfmt.a
+[5/53] Building CXX object common/CMakeFiles/common.dir/bspfile_generic.cc.o
+[6/53] Building CXX object common/CMakeFiles/common.dir/bspfile_q1.cc.o
+[7/53] Building CXX object common/CMakeFiles/common.dir/bspfile_common.cc.o
+[8/53] Building CXX object common/CMakeFiles/common.dir/bspinfo.cc.o
+/home/warrenmarshall/dev/ericw-tools/common/bspinfo.cc: In function ‘void serialize_bsp(const bspdata_t&, const mbsp_t&, const std::filesystem::__cxx11::path&)’:
+/home/warrenmarshall/dev/ericw-tools/common/bspinfo.cc:730:88: warning: enumerated mismatch in conditional expression: ‘q2_surf_flags_t’ vs ‘q1_surf_flags_t’ [-Wenum-compare]
+  730 |             texinfo.push_back({"flags", bspdata.loadversion->game->id == GAME_QUAKE_II ? src_texinfo.flags.native_q2
+      |                                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  731 |                                                                                        : src_texinfo.flags.native_q1});
+      |                                                                                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[9/53] Building CXX object common/CMakeFiles/common.dir/bspfile_q2.cc.o
+[10/53] Building CXX object _deps/googletest-build/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o
+[11/53] Linking CXX static library lib/libgtest.a
+[12/53] Linking CXX static library lib/libgmock.a
+[13/53] Building CXX object common/CMakeFiles/common.dir/bspxfile.cc.o
+[14/53] Building CXX object common/CMakeFiles/common.dir/cmdlib.cc.o
+[15/53] Building CXX object common/CMakeFiles/common.dir/bsputils.cc.o
+[16/53] Building CXX object common/CMakeFiles/common.dir/bspfile.cc.o
+[17/53] Building CXX object common/CMakeFiles/common.dir/litfile.cc.o
+[18/53] Building CXX object common/CMakeFiles/common.dir/qvec.cc.o
+[19/53] Building CXX object common/CMakeFiles/common.dir/entdata.cc.o
+[20/53] Building CXX object common/CMakeFiles/common.dir/log.cc.o
+[21/53] Building CXX object common/CMakeFiles/common.dir/mathlib.cc.o
+[22/53] Building CXX object common/CMakeFiles/common.dir/threads.cc.o
+[23/53] Building CXX object common/CMakeFiles/common.dir/parser.cc.o
+[24/53] Building CXX object common/CMakeFiles/common.dir/fs.cc.o
+[25/53] Building CXX object common/CMakeFiles/common.dir/decompile.cc.o
+[26/53] Building CXX object common/CMakeFiles/common.dir/prtfile.cc.o
+[27/53] Building CXX object common/CMakeFiles/common.dir/settings.cc.o
+[28/53] Building CXX object common/CMakeFiles/common.dir/mapfile.cc.o
+[29/53] Building CXX object qbsp/CMakeFiles/libqbsp.dir/cmake_pch.hxx.gch
+[30/53] Building CXX object qbsp/CMakeFiles/qqbsp.dir/cmake_pch.hxx.gch
+[31/53] Building CXX object qartographer/CMakeFiles/qqbsp_tests.dir/cmake_pch.hxx.gch
+[32/53] Building CXX object qbsp/CMakeFiles/libqbsp.dir/csg.cc.o
+[33/53] Building CXX object common/CMakeFiles/common.dir/imglib.cc.o
+[34/53] Building CXX object qbsp/CMakeFiles/libqbsp.dir/merge.cc.o
+[35/53] Building CXX object qbsp/CMakeFiles/libqbsp.dir/brush.cc.o
+[36/53] Linking CXX static library common/libcommon.a
+[37/53] Building CXX object qbsp/CMakeFiles/libqbsp.dir/outside.cc.o
+[38/53] Building CXX object qbsp/CMakeFiles/libqbsp.dir/prtfile.cc.o
+[39/53] Building CXX object qbsp/CMakeFiles/libqbsp.dir/portals.cc.o
+[40/53] Building CXX object qbsp/CMakeFiles/libqbsp.dir/brushbsp.cc.o
+[41/53] Building CXX object qbsp/CMakeFiles/libqbsp.dir/faces.cc.o
+[42/53] Building CXX object qbsp/CMakeFiles/libqbsp.dir/tjunc.cc.o
+[43/53] Building CXX object qbsp/CMakeFiles/libqbsp.dir/tree.cc.o
+[44/53] Building CXX object qbsp/CMakeFiles/libqbsp.dir/exportobj.cc.o
+[45/53] Building CXX object qbsp/CMakeFiles/qqbsp.dir/main.cc.o
+[46/53] Building CXX object qbsp/CMakeFiles/libqbsp.dir/qbsp.cc.o
+[47/53] Building CXX object qbsp/CMakeFiles/libqbsp.dir/map.cc.o
+[48/53] Building CXX object qartographer/CMakeFiles/qqbsp_tests.dir/__/tests/test_main.cc.o
+[49/53] Building CXX object qbsp/CMakeFiles/libqbsp.dir/writebsp.cc.o
+[50/53] Linking CXX static library qbsp/liblibqbsp.a
+[51/53] Linking CXX executable qbsp/qqbsp
+[52/53] Building CXX object qartographer/CMakeFiles/qqbsp_tests.dir/__/tests/test_qbsp.cc.o
+[53/53] Linking CXX executable qartographer/qqbsp_tests
+/tmp/qqbsp-bootstrap/pinned/patched-build/qbsp/qqbsp
+Traceback (most recent call last):
+  File "/home/warrenmarshall/dev/ericw-tools/qartographer/native.py", line 32, in run_native
+    try:assert proc.wait(timeout=55)==0,'Engine failed'
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/subprocess.py", line 1264, in wait
+    return self._wait(timeout=timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/subprocess.py", line 2045, in _wait
+    raise TimeoutExpired(self.args, timeout)
+subprocess.TimeoutExpired: Command '['/home/warrenmarshall/.local/share/Steam/steamapps/common/Quake/qrustyquake', '-basedir', '/tmp/qqbsp-bootstrap/tier3/native', '-window', '-width', '960', '-height', '640', '-nosound', '+exec', 'acceptance.cfg']' timed out after 55 seconds
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/warrenmarshall/dev/ericw-tools/qartographer/tiers.py", line 85, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/home/warrenmarshall/dev/ericw-tools/qartographer/tiers.py", line 81, in main
+    report['native']=run_native(stock,binary,a.engine.resolve(),a.id1.resolve(),a.results/'native',bsp)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/warrenmarshall/dev/ericw-tools/qartographer/native.py", line 34, in run_native
+    proc.terminate();proc.wait(timeout=5);raise RuntimeError('Native engine timed out (infrastructure failure)')
+                     ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/subprocess.py", line 1264, in wait
+    return self._wait(timeout=timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/subprocess.py", line 2045, in _wait
+    raise TimeoutExpired(self.args, timeout)
+subprocess.TimeoutExpired: Command '['/home/warrenmarshall/.local/share/Steam/steamapps/common/Quake/qrustyquake', '-basedir', '/tmp/qqbsp-bootstrap/tier3/native', '-window', '-width', '960', '-height', '640', '-nosound', '+exec', 'acceptance.cfg']' timed out after 5 seconds
+Traceback (most recent call last):
+  File "/home/warrenmarshall/dev/ericw-tools/qartographer/validated_build.py", line 29, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/home/warrenmarshall/dev/ericw-tools/qartographer/validated_build.py", line 25, in main
+    run(HERE/'tiers.py','--tier',3,'--work',work,'--results',a.results)
+  File "/home/warrenmarshall/dev/ericw-tools/qartographer/validated_build.py", line 13, in run
+    def run(*args):subprocess.run([sys.executable,*map(str,args)],check=True)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/usr/bin/python3', '/home/warrenmarshall/dev/ericw-tools/qartographer/tiers.py', '--tier', '3', '--work', '/tmp/qqbsp-bootstrap/pinned', '--results', '/tmp/qqbsp-bootstrap/tier3']' returned non-zero exit status 1.
