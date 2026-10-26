@@ -63,3 +63,27 @@ then atomically replaces only qqbsp and verifies hash/build identity. Report
 failures explicitly and preserve the previous working executable. See README.md
 for dependency provisioning and limitations. This local deployment is authorized;
 publication, packaging and production editor integration remain separately scoped.
+
+## Strict project scope — QQBSP only
+
+This fork exists exclusively to develop and maintain QQBSP, Qartographer's
+customized EricW QBSP. In scope are QBSP geometry/collision correctness, shared
+code directly required by QBSP, minimal CMake changes for qqbsp, QBSP-specific
+regressions/benchmarks/diagnostics, identity, provenance and deployment.
+
+VIS and LIGHT functionality, algorithms, performance, source, tests and build
+behavior are out of scope. Do not modify them. Light preview, texture utilities,
+other EricW applications, repository modernization, unrelated upstream bugs,
+speculative optimization and distribution of a customized complete toolchain are
+also out of scope. Existing stock utilities remain authoritative for those stages.
+
+Build only targets required to produce and validate qqbsp: qqbsp and its shared
+dependencies, plus pristine qbsp for comparison. Do not run whole-toolchain builds
+or package targets. CMake may require configure-time dependencies for other tools;
+that does not authorize compiling or changing those tools. Shared-source changes
+require a demonstrated QBSP defect, narrow scope and independent testing. Do not
+rewrite shared libraries merely to simplify this fork.
+
+Success means an independently identifiable, validated qqbsp accepting standard
+Quake MAP and emitting standard Quake BSP, correcting demonstrated defects with
+a small maintainable patch set. Upstream source remains intact outside this scope.
