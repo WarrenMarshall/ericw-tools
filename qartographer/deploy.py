@@ -42,6 +42,8 @@ def deploy(work,results,destination):
         os.replace(temp,destination);temp=None;replaced=True
         assert sha(destination)==expected,'Deployed hash mismatch'
         assert identity(destination)==want,'Deployed identity mismatch'
+        receipt={'destination':str(destination),'sha256':expected,'identity':want,'results':str(results)}
+        (work/'deployment.json').write_text(json.dumps(receipt,indent=2)+'\n')
     except Exception:
         if replaced:
             if backup is not None:
@@ -51,8 +53,6 @@ def deploy(work,results,destination):
     finally:
         if backup is not None:backup.unlink(missing_ok=True)
         if temp is not None:temp.unlink(missing_ok=True)
-    receipt={'destination':str(destination),'sha256':expected,'identity':want,'results':str(results)}
-    (work/'deployment.json').write_text(json.dumps(receipt,indent=2)+'\n')
     print(json.dumps(receipt,indent=2))
 def main():
     p=argparse.ArgumentParser(description=__doc__)
