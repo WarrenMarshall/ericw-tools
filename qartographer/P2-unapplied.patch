@@ -1,0 +1,18 @@
+--- a/qbsp/brush.cc
++++ b/qbsp/brush.cc
+@@ -681,6 +681,15 @@
+ static void Brush_LoadEntity(mapentity_t &dst, mapentity_t &src, hull_index_t hullnum, content_stats_t &stats,
+     bspbrush_t::container &brushes, logging::percent_clock &clock, size_t &num_clipped)
+ {
++    // Route merged Quake detail/group sources before world brush loading.
++    // Leave non-hull targets and ordinary bmodel semantics unchanged.
++    if (hullnum.has_value() && !map.is_world_entity(src) && IsWorldBrushEntity(src) &&
++        src.epairs.has("_hulls")) {
++        const int mask = src.epairs.get_int("_hulls");
++        if (mask != 0 && !(mask & (1 << hullnum.value())))
++            return;
++    }
++
+     clock.max += src.mapbrushes.size();
+ 
+     bool all_detail = false;

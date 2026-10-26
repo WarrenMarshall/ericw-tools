@@ -1,0 +1,15 @@
+diff --git a/qbsp/brush.cc b/qbsp/brush.cc
+--- a/qbsp/brush.cc
++++ b/qbsp/brush.cc
+@@ -280,7 +280,10 @@ bool CreateBrushWindings(bspbrush_t &brush)
+                 continue;
+             }
+             const qplane3d &plane = map.planes[brush.sides[j].planenum ^ 1];
+-            w = w->clip_front(plane, qbsp_options.epsilon.value(), false);
++            // Near-coincident supporting planes can classify an entire valid
++            // face as ON. Retain that winding: discarding both faces loses the
++            // brush boundary when the BSP chooses its splitting planes.
++            w = w->clip_front(plane, qbsp_options.epsilon.value(), true);
+         }
+ 
+         if (w) {

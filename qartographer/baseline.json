@@ -1,0 +1,34 @@
+{
+  "upstream": "ccaeb8457a1267860ebe99ed1df7394ebdd6b435",
+  "inspected_main": "36eec1da2a194467e6baac2f444c2dd04b57d266",
+  "p1_commit": "7f2ef6f32ce16ffc5b9167a57f5c7adad0ccdf58",
+  "googletest": "f8d7d77c06936315286eb55f8de22cd23c188571",
+  "submodules": {
+    "fmt": "f5e54359df4c26b6230fc61d38aa294581393084",
+    "nanobench": "26a9c089ca54927c1658c046749ca1b8fd60422c",
+    "pareto": "47f491eeaead1b5a95e27ee3d6bc4c591b0e4462"
+  },
+  "archives": {
+    "tbb": {
+      "url": "https://github.com/uxlfoundation/oneTBB/releases/download/v2021.11.0/oneapi-tbb-2021.11.0-lin.tgz",
+      "sha256": "95659f4d7b1711c41ffa190561d4e5b6841efc8091549661c7a2e6207e0fa79b"
+    },
+    "embree": {
+      "url": "https://github.com/RenderKit/embree/releases/download/v4.4.0/embree-4.4.0.x86_64.linux.tar.gz",
+      "sha256": "cb3d4402537fc9165c76c3316b8953dcfea523cd1eaf588e2de7639864ee3c57"
+    },
+    "json": {
+      "url": "https://github.com/nlohmann/json/releases/download/v3.12.0/json.tar.xz",
+      "sha256": "42f6e95cad6ec532fd372391373363b62a14af6d771056dbfc86160e6dfff7aa"
+    }
+  },
+  "fixtures": {
+    "full-geometry.json": "5f70b1f1c63f47b474a7ac770d8ab36c0a30fbc141247b63141fdac41b4fb134",
+    "full-off.map": "d5f2ab2a0c5a22d2f0ecaecf77a1bbd72a3c2ce2e3c444fe0b4c517092e5986c",
+    "full-on.map": "16250e50546f9d1c4654d75e0a6683f70f7eff332ec730793c5f836d39716318",
+    "reduced.map": "5f4c588e6f4482f933138def59a2cd64660491b146cbcf0683f32266bcd24d93",
+    "roller-direct.map": "a281bdf08b070bfc7a728acf8212f5e401b04b572a706a353716fc898d861300"
+  },
+  "editor_revision": "12eb800110fade17798777e1b097b0bfc0a165a4",
+  "p1_patch_sha256": "eac568b773767b7b8afa8a1db98f256ed31368aff2067f77c2066fb877ea1bdb"
+}
