@@ -49,7 +49,7 @@ if(NOT QQBSP_REVISION)
 endif()
 add_executable(qqbsp main.cc)
 target_compile_definitions(qqbsp PRIVATE
-    QQBSP_BUILD_ID="Qartographer qqbsp; upstream=ccaeb8457a1267860ebe99ed1df7394ebdd6b435; downstream=${QQBSP_REVISION}; patches=P1")
+    QQBSP_BUILD_ID="Qartographer qqbsp, upstream=ccaeb8457a1267860ebe99ed1df7394ebdd6b435, downstream=${QQBSP_REVISION}, patches=P1")
 add_executable(qbsp main.cc)
 foreach(compiler IN ITEMS qqbsp qbsp)
     target_link_libraries(${compiler} libqbsp)
