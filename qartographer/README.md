@@ -30,8 +30,11 @@ at the editor revision recorded in baseline.json. Copied independent Python
 halfspace/BSP oracles and frozen MAP fixtures originate there. full_oracle.py
 retains the existing source-support, source-clearance and hull-0 comparison
 checks; only failure/count serialization was added. No authored MAP was edited.
-The Halloween full-on MAP hash must remain
-`91593e01dd8a5d523c675e8e403080a8bb40a8cbb07325794a39ed5f0063f948`.
+The Halloween full-on MAP hash is
+`16250e50546f9d1c4654d75e0a6683f70f7eff332ec730793c5f836d39716318`.
+This agrees with the preserved file, full-map.json, textured-compiles.json and
+export-equivalence.json. The older provenance.json instead records `91593e…`;
+that inconsistent field is not treated as fixture authority or silently copied.
 The fixtures include generated Halloween geometry and texture names, no WADs or
 mod assets; do not treat them as a distributable gameplay package.
 
