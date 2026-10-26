@@ -21,7 +21,27 @@ def main():
     ap.add_argument('--id1',type=Path,default=Path.home()/'.local/share/Steam/steamapps/common/Quake/id1')
     ap.add_argument('--utilities',type=Path,default=DEFAULT.parent)
     ap.add_argument('--performance-note',default='')
+    ap.add_argument('--resume-native',type=Path,help='Validate completed native saves after a shutdown failure; reuse earlier passing checks')
     a=ap.parse_args();a.results=a.results.resolve();a.work=a.work.resolve()
+    if a.resume_native:
+        report=json.loads((a.results/'tier-results.json').read_text())
+        manifest=json.loads((a.work/'patched-manifest.json').read_text())
+        fixed=Path(manifest['binary']);stock=a.work/'pristine-build/qbsp/qbsp'
+        assert report['tier']==3 and report['binary_sha256']==sha(fixed)==manifest['binary_sha256']
+        core=json.loads((a.results/'collision/results.json').read_text())
+        assert core['acceptance']=='PASS' and core['full'] and core['patched']['sha256']==sha(fixed)
+        assert report['upstream_tests']==13 and len(report['thin'])==4 and report['compatibility']
+        native=a.resume_native.resolve()
+        expected=(HERE/'fixtures/roller-direct.map').read_text()+'\n{\n"classname" "info_player_start"\n"origin" "-1400 -1664 180"\n"angle" "90"\n}\n'
+        for label in ['stock','fixed']:assert (native/'id1/maps'/(label+'.map')).read_text()==expected
+        banner=next(line for line in manifest['identity'].splitlines() if line.startswith('Qartographer qqbsp,'))
+        assert banner in (native/'fixed-compile.log').read_text()
+        assert sha(native/'id1/maps/ordinary.bsp')==sha(a.results/'compatibility/ordinary.bsp')
+        from native import validate_saved
+        report['native']=validate_saved(stock,fixed,a.engine.resolve(),a.id1.resolve(),native,shutdown='Resumed completed saves after engine shutdown timeout; test processes forcibly cleaned up')
+        report['acceptance']='PASS'
+        (a.results/'tier-results.json').write_text(json.dumps(report,indent=2)+'\n')
+        print(json.dumps(report,indent=2));return
     assert not a.results.exists(),'Use a new results directory'
     a.results.mkdir(parents=True)
     m=json.loads((a.work/'patched-manifest.json').read_text());binary=Path(m['binary']);stock=a.work/'pristine-build/qbsp/qbsp'
@@ -77,6 +97,7 @@ def main():
         assert after[4] and after[8],'Missing visibility/light data'
         for i in [1,5,9,14]:assert before[i]==after[i],('consumer changed collision/model lump',i)
         report['compatibility']={'format':'BSP29','consumers':consumers,'visibility_bytes':len(after[4]),'light_bytes':len(after[8])}
+        receipt.write_text(json.dumps(report,indent=2)+'\n')
         from native import run_native
         report['native']=run_native(stock,binary,a.engine.resolve(),a.id1.resolve(),a.results/'native',bsp)
     report['acceptance']='PASS'

@@ -9,6 +9,8 @@ def main():
     p=argparse.ArgumentParser(description=__doc__)
     p.add_argument('--work',type=Path,required=True);p.add_argument('--results',type=Path,required=True)
     p.add_argument('--destination',type=Path)
+    p.add_argument('--engine',type=Path)
+    p.add_argument('--id1',type=Path)
     a=p.parse_args();work=a.work.resolve()
     def run(*args):subprocess.run([sys.executable,*map(str,args)],check=True)
     # The pristine snapshot is immutable; reuse only if its manifest and binary
@@ -22,7 +24,10 @@ def main():
         assert hashlib.sha256(Path(m['binary']).read_bytes()).hexdigest()==m['binary_sha256']
     else:run(HERE/'build.py','--work',work,'--pristine')
     run(HERE/'build.py','--work',work)
-    run(HERE/'tiers.py','--tier',3,'--work',work,'--results',a.results)
+    test_args=[HERE/'tiers.py','--tier',3,'--work',work,'--results',a.results]
+    if a.engine:test_args+=['--engine',a.engine]
+    if a.id1:test_args+=['--id1',a.id1]
+    run(*test_args)
     args=[HERE/'deploy.py','--work',work,'--results',a.results]
     if a.destination:args+=['--destination',a.destination]
     run(*args)

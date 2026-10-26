@@ -27,12 +27,21 @@ def run_native(stock,fixed,engine,id1,out,ordinary):
     lines+=['map ordinary']+['wait']*72+['save ordinary_start','quit']
     (game/'acceptance.cfg').write_text('\n'.join(lines)+'\n')
     cmd=[str(engine),'-basedir',str(out),'-window','-width','960','-height','640','-nosound','+exec','acceptance.cfg']
+    shutdown='normal'
     with (out/'engine.log').open('w') as log:
         proc=subprocess.Popen(cmd,stdout=log,stderr=subprocess.STDOUT)
         try:assert proc.wait(timeout=55)==0,'Engine failed'
         except subprocess.TimeoutExpired:
-            proc.terminate();proc.wait(timeout=5);raise RuntimeError('Native engine timed out (infrastructure failure)')
-    result={'engine':str(engine),'engine_sha256':sha(engine),'command':cmd,'pak_sha256':{n:sha(id1/n) for n in ['pak0.pak','pak1.pak']}}
+            # Some local engine builds hang in shutdown after saving all states.
+            # Missing/incomplete states still fail below; completed movement does
+            # not become a collision failure because teardown stalls.
+            proc.kill();proc.wait(timeout=5)
+            shutdown='forced cleanup after timeout; all state assertions still required'
+    return validate_saved(stock,fixed,engine,id1,out,cmd,shutdown)
+
+def validate_saved(stock,fixed,engine,id1,out,cmd=None,shutdown=None):
+    game=out/'id1'
+    result={'compiler_sha256':{'pristine':sha(stock),'qqbsp':sha(fixed)},'shutdown':shutdown,'engine':str(engine),'engine_sha256':sha(engine),'command':cmd,'pak_sha256':{n:sha(id1/n) for n in ['pak0.pak','pak1.pak']}}
     for label in ['stock','fixed']:
         states={}
         for stage in ['start','end']:
