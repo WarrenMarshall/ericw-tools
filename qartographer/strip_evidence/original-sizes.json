@@ -1,0 +1,18 @@
+{
+  "/tmp/qqbsp-strip/original/qqbsp": {
+    "bytes": 47766536,
+    "sha256": "9a36f9b449da4484e7c13f87d4f72698a9b998fc42e3a9e21bd5e8624e068d1a"
+  },
+  "/tmp/qqbsp-strip/prototype-qqbsp": {
+    "bytes": 2177344,
+    "sha256": "400fd058ee3d56bd25c0632013bcc5ffade17c3131595c7e2ec9ab95867d7420"
+  },
+  "/mnt/fb91e326-b6dc-4352-b43c-7517fcce8b77/Dropbox/Quake/Utils/linux/qbsp": {
+    "bytes": 1881624,
+    "sha256": "6f44175d75bab8a0fdb930b3bb4571a869bd1cdc57a92864c2f991c4452a8e62"
+  },
+  "/mnt/fb91e326-b6dc-4352-b43c-7517fcce8b77/Dropbox/Quake/Utils/linux/qqbsp": {
+    "bytes": 47766536,
+    "sha256": "9a36f9b449da4484e7c13f87d4f72698a9b998fc42e3a9e21bd5e8624e068d1a"
+  }
+}

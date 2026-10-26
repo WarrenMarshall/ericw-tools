@@ -1,0 +1,77 @@
+{
+  "collision/patched/full/full-off.bsp": {
+    "bytes": [
+      2879012,
+      2879012
+    ],
+    "changed_lumps": [
+      [
+        11,
+        84292,
+        84292
+      ]
+    ]
+  },
+  "collision/patched/full/full-on.bsp": {
+    "bytes": [
+      2976400,
+      2976400
+    ],
+    "changed_lumps": [
+      [
+        11,
+        82772,
+        82772
+      ]
+    ]
+  },
+  "collision/pristine/full/full-on.bsp": {
+    "bytes": [
+      2993988,
+      2993988
+    ],
+    "changed_lumps": [
+      [
+        11,
+        82772,
+        82772
+      ]
+    ]
+  },
+  "compatibility/ordinary.bsp": {
+    "bytes": [
+      2648,
+      2648
+    ],
+    "changed_lumps": [
+      [
+        7,
+        120,
+        120
+      ],
+      [
+        8,
+        904,
+        904
+      ]
+    ]
+  },
+  "native/id1/maps/ordinary.bsp": {
+    "bytes": [
+      2648,
+      2648
+    ],
+    "changed_lumps": [
+      [
+        7,
+        120,
+        120
+      ],
+      [
+        8,
+        904,
+        904
+      ]
+    ]
+  }
+}

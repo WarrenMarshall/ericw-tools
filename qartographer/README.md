@@ -80,6 +80,9 @@ or a bit-for-bit reproducibility claim. No two-clean-build binary comparison has
 been performed. Corresponding source and dependency license obligations must be
 handled before redistribution; retain upstream COPYING and notices.
 
+Measured sizes, hashes, release results and local portability limits are in
+[STRIPPING.md](STRIPPING.md).
+
 ## Development and deployment artifacts
 
 Keep the development executable with all RelWithDebInfo DWARF at

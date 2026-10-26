@@ -1,0 +1,11 @@
+{
+  "destination": "/mnt/fb91e326-b6dc-4352-b43c-7517fcce8b77/Dropbox/Quake/Utils/linux/qqbsp",
+  "artifact_kind": "deployment",
+  "source_artifact": "/tmp/qqbsp-bootstrap/pinned/deployment/qqbsp",
+  "sha256": "49d766579a03701d6a5bb3560112bc756afdb8cf4488242e0b8db72668d8c8c0",
+  "development_sha256": "a097cb6a6288b930eb018797464ef6a2a7e64d173fd113bdd1659167a1be30ff",
+  "debug_archive": "/home/warrenmarshall/dev/ericw-tools/build-symbols/a097cb6a6288b930eb018797464ef6a2a7e64d173fd113bdd1659167a1be30ff/qqbsp",
+  "deployment_artifact_manifest_sha256": "6b94370b57c760a5489aed0d930bb73f7a6fbc97b25c58bb0350631369af5174",
+  "identity": "Qartographer qqbsp, upstream=ccaeb8457a1267860ebe99ed1df7394ebdd6b435, downstream=a39a599d08967998d01e85d10ac356f823e27a35, patches=P1",
+  "results": "/tmp/qqbsp-strip/release"
+}

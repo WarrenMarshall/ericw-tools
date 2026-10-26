@@ -1,0 +1,25 @@
+{
+  "command": [
+    "/home/warrenmarshall/.local/share/Steam/steamapps/common/Quake/qrustyquake",
+    "-basedir",
+    "/tmp/qqbsp-strip/release/deployment/native",
+    "-window",
+    "-width",
+    "960",
+    "-height",
+    "640",
+    "-nosound",
+    "+exec",
+    "acceptance.cfg"
+  ],
+  "timeout_seconds": 55,
+  "environment": {
+    "SDL_VIDEODRIVER": "dummy",
+    "DISPLAY": ":0",
+    "WAYLAND_DISPLAY": null
+  },
+  "acceptance": "PASS",
+  "exit": 0,
+  "elapsed_seconds": 5.271648623980582,
+  "timeout": false
+}

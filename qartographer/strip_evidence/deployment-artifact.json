@@ -1,0 +1,1056 @@
+{
+  "label": "deployment",
+  "upstream": "ccaeb8457a1267860ebe99ed1df7394ebdd6b435",
+  "downstream": "a39a599d08967998d01e85d10ac356f823e27a35",
+  "tracked_changes": "",
+  "toolchain": {
+    "c++": "13.3.0",
+    "cmake": "cmake version 3.28.3",
+    "ninja": "1.11.1",
+    "ld": "GNU ld (GNU Binutils for Ubuntu) 2.42"
+  },
+  "platform": "Linux pop-os 7.2.6-76070206-generic #202609141300~1792006165~24.04~cb46eb8 SMP PREEMPT_DYNAMIC Wed O x86_64 x86_64 x86_64 GNU/Linux",
+  "libc": "ldd (Ubuntu GLIBC 2.39-0ubuntu8.9) 2.39",
+  "lock": {
+    "upstream": "ccaeb8457a1267860ebe99ed1df7394ebdd6b435",
+    "inspected_main": "36eec1da2a194467e6baac2f444c2dd04b57d266",
+    "p1_commit": "7f2ef6f32ce16ffc5b9167a57f5c7adad0ccdf58",
+    "googletest": "f8d7d77c06936315286eb55f8de22cd23c188571",
+    "submodules": {
+      "fmt": "f5e54359df4c26b6230fc61d38aa294581393084",
+      "nanobench": "26a9c089ca54927c1658c046749ca1b8fd60422c",
+      "pareto": "47f491eeaead1b5a95e27ee3d6bc4c591b0e4462"
+    },
+    "archives": {
+      "tbb": {
+        "url": "https://github.com/uxlfoundation/oneTBB/releases/download/v2021.11.0/oneapi-tbb-2021.11.0-lin.tgz",
+        "sha256": "95659f4d7b1711c41ffa190561d4e5b6841efc8091549661c7a2e6207e0fa79b"
+      },
+      "embree": {
+        "url": "https://github.com/RenderKit/embree/releases/download/v4.4.0/embree-4.4.0.x86_64.linux.tar.gz",
+        "sha256": "cb3d4402537fc9165c76c3316b8953dcfea523cd1eaf588e2de7639864ee3c57"
+      },
+      "json": {
+        "url": "https://github.com/nlohmann/json/releases/download/v3.12.0/json.tar.xz",
+        "sha256": "42f6e95cad6ec532fd372391373363b62a14af6d771056dbfc86160e6dfff7aa"
+      }
+    },
+    "fixtures": {
+      "full-geometry.json": "5f70b1f1c63f47b474a7ac770d8ab36c0a30fbc141247b63141fdac41b4fb134",
+      "full-off.map": "d5f2ab2a0c5a22d2f0ecaecf77a1bbd72a3c2ce2e3c444fe0b4c517092e5986c",
+      "full-on.map": "16250e50546f9d1c4654d75e0a6683f70f7eff332ec730793c5f836d39716318",
+      "reduced.map": "5f4c588e6f4482f933138def59a2cd64660491b146cbcf0683f32266bcd24d93",
+      "roller-direct.map": "a281bdf08b070bfc7a728acf8212f5e401b04b572a706a353716fc898d861300",
+      "roller-seed.sav": "55d9b6186fc57fb51c18ba990c241ec23da3a5a62f1414dabbcfddfb0825c339",
+      "thin/essential-floor.map": "2b98b34d9b1813f93df03da6ff522d7721c63bacc8c3a7c66d9802a4da007196",
+      "thin/essential-wedge.map": "0fb6c7f16bb90ea201d075dbdf1c4c2452a481e8152403e4a22e4bdeaf9d4f87",
+      "thin/geometry.json": "db36e2c534711f979b291049959ee2e8dee5c597683d2cc34484c6e8a9836f9e",
+      "thin/passage-32.map": "831ddd99cd88688404accd99989a36aec4ebc6bd6343565630c2013f2302a17b",
+      "thin/passage-64.map": "8fe46e874b73c80887ba6d5d7ea1af27c105050ac5f8dc55a0bdf87c4bfc9d70"
+    },
+    "editor_revision": "12eb800110fade17798777e1b097b0bfc0a165a4",
+    "p1_patch_sha256": "eac568b773767b7b8afa8a1db98f256ed31368aff2067f77c2066fb877ea1bdb"
+  },
+  "configure": [
+    "cmake",
+    "-S",
+    "/home/warrenmarshall/dev/ericw-tools",
+    "-B",
+    "/tmp/qqbsp-bootstrap/pinned/patched-build",
+    "-G",
+    "Ninja",
+    "-DCMAKE_BUILD_TYPE=RelWithDebInfo",
+    "-DCMAKE_C_COMPILER=/usr/bin/cc",
+    "-DCMAKE_CXX_COMPILER=/usr/bin/c++",
+    "-DQQBSP_BUILD_TESTS=ON",
+    "-DDISABLE_TESTS=ON",
+    "-DDISABLE_DOCS=ON",
+    "-DENABLE_LIGHTPREVIEW=OFF",
+    "-DCMAKE_PREFIX_PATH=/tmp/qqbsp-bootstrap/pinned/deps/tbb/oneapi-tbb-2021.11.0/lib/cmake/tbb;/tmp/qqbsp-bootstrap/pinned/deps/embree/lib/cmake/embree-4.4.0",
+    "-DFETCHCONTENT_SOURCE_DIR_GOOGLETEST=/tmp/qqbsp-bootstrap/pinned/deps/googletest",
+    "-DFETCHCONTENT_SOURCE_DIR_JSON=/tmp/qqbsp-bootstrap/pinned/deps/json/json",
+    "-DFETCHCONTENT_FULLY_DISCONNECTED=ON"
+  ],
+  "binary": "/tmp/qqbsp-bootstrap/pinned/deployment/qqbsp",
+  "binary_sha256": "49d766579a03701d6a5bb3560112bc756afdb8cf4488242e0b8db72668d8c8c0",
+  "runtime_sha256": {
+    "libtbbmalloc.so.2": "a2ec28e8fba46ee142c322355a53ff5ae1b1964324a856010daf04370b466bbe",
+    "libtbb.so.12": "ba4fac0469d777368af41678e17acb7f2b35f56042e5f44a55cb84f111d01f73"
+  },
+  "ldd": "linux-vdso.so.1 (0x0000753623787000)\n\tlibtbb.so.12 => /tmp/qqbsp-bootstrap/pinned/deployment/libtbb.so.12 (0x0000753623200000)\n\tlibtbbmalloc.so.2 => /tmp/qqbsp-bootstrap/pinned/deployment/libtbbmalloc.so.2 (0x0000753622e00000)\n\tlibstdc++.so.6 => /lib/x86_64-linux-gnu/libstdc++.so.6 (0x0000753622a00000)\n\tlibm.so.6 => /lib/x86_64-linux-gnu/libm.so.6 (0x00007536234c0000)\n\tlibgcc_s.so.1 => /lib/x86_64-linux-gnu/libgcc_s.so.1 (0x0000753623492000)\n\tlibc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x0000753622600000)\n\tlibdl.so.2 => /lib/x86_64-linux-gnu/libdl.so.2 (0x000075362348b000)\n\tlibpthread.so.0 => /lib/x86_64-linux-gnu/libpthread.so.0 (0x00007536231fb000)\n\t/lib64/ld-linux-x86-64.so.2 (0x0000753623789000)",
+  "identity": "Qartographer qqbsp, upstream=ccaeb8457a1267860ebe99ed1df7394ebdd6b435, downstream=a39a599d08967998d01e85d10ac356f823e27a35, patches=P1\n---- qqbsp / ericw-tools 2.0.0-alpha10-13-ga39a599d ----\nqbsp performs geometric level processing of Quake .MAP files to create\nQuake .BSP files.\n\nusage: qqbsp [-help/-h/-?] [-options] sourcefile.map [destfile.bsp]\n\nGame/BSP Target:\n  -hexen2                       target Hexen II's BSP format\n  -hlbsp                        target Half Life's BSP format\n  -q2bsp                        target Quake II's BSP format\n  -qbism                        target Qbism's extended Quake II BSP format\n  -bsp2                         target Quake's extended BSP2 format\n  -2psb                         target Quake's extended 2PSB format (RMQ compatible)\n\nMap development:\n  -onlyents                     only updates .MAP entities\n  -leaktest                     make compilation fail if the map leaks\n  -omitdetail                   omit *all* detail brushes from the compile\n  -omitdetailwall               func_detail_wall brushes are omitted from the compile\n  -omitdetailillusionary        func_detail_illusionary brushes are omitted from the compile\n  -omitdetailfence              func_detail_fence brushes are omitted from the compile\n  -wadpath path/to/wads         add a path to the wad search paths; wads found in xwadpath's will not be embedded, otherwise they will be embedded (if not -notex)\n   \\xwadpath\n  -aliasdef \"path/to/file.def\" <multiple allowed>    path to an alias definition file, which can transform entities in the .map into other entities.\n  -texturedefs \"path/to/file.def\" <multiple allowed>    path to a texture definition file, which can transform textures in the .map into other textures.\n  -maxedges n                   the max number of edges/vertices on a single face before it is split into another face\n  -scale n                      scales the map brushes and point entity origins by a give factor\n\nCommon format options:\n  -nosubdivide                  disable subdivision\n  -software [0]                 change settings to allow for (or make adjustments to optimize for the lack of) software support\n   \\nosoftware\n  -subdivide n                  change the subdivide threshold, in luxels. 0 will disable subdivision entirely\n  -nomergeacrossliquids         deprecated, no effect\n  -noclip                       don't write clip nodes (Q1-like BSP formats)\n  -litwater [0]                 doesn't combine water faces into one large face\n   \\splitturb\n  -transwater [0]               compute portal information for transparent water\n   \\notranswater\n  -notex                        write only placeholder textures to depend upon replacements, keep file sizes down, or to skirt copyrights\n  -missing_textures_as_zero_size     write missing textures as 0x0\n  -convert bp | quake | quake2 | valve    convert a .MAP to a different .MAP format\n  -includeskip                  don't cull skip faces from the list of renderable surfaces (Q2RTX)\n  -wrbrushes                    includes a list of brushes for brush-based collision\n   \\bspx\n  -wrbrushesonly                includes BSPX brushes and does not output clipping hulls (wrbrushes + noclip)\n   \\bspxonly\n  -bmodelcontents               allow control over brush contents in bmodels, don't force CONTENTS_SOLID\n  -notriggermodels              for supported game code only: triggers will not write a model\nout, and will instead just write out their mins/maxs.\n  -lmscale n                    change global lmscale (force _lmscale key on all entities). outputs the LMSCALE BSPX lump.\n  -filltype auto | inside | outside    whether to fill the map from the outside in (lenient), from the inside out (aggressive), or to automatically decide based on the hull being used.\n  -filldetail [0]               whether to fill in empty spaces which are fully enclosed by detail solid\n  -allowupgrade [0]             allow formats to \"upgrade\" to compatible extended formats when a limit is exceeded (ie Quake BSP to BSP2)\n   \\noallowupgrade\n  -midsplitbrushfraction n      switch to cheaper partitioning if a node contains this % of brushes in the map\n  -add                          the given map file will be appended to the base map\n\nLogging:\n  -log [0]                      whether log files are written or not\n   \\nolog\n  -verbose                      verbose output\n   \\v\n  -nopercent                    don't output percentage messages\n  -nostat                       don't output statistic messages\n  -noprogress                   don't output progress messages\n  -nocolor                      don't output color codes (for TB, etc)\n  -quiet                        suppress non-important messages (equivalent to -nopercent -nostat -noprogress)\n   \\noverbose\n  -logfile \"path\"               File to output logging data to. If unchanged, it is set by the tool.\n  -logappend                    Whether to append to log file or replace\n  -loghulls                     print log output for collision hulls\n  -logbmodels                   print log output for bmodels\n  -debug_missing_portal_sides     output debug .prt files for missing portal sides\n\nPerformance:\n  -threads n                    number of threads to use, maximum; leave 0 for automatic\n  -lowpriority [0]              run in a lower priority, to free up headroom for other processes\n\nGame:\n  -gamedir \"relative/path\" or \"C:/absolute/path\"    override the default mod base directory. if this is not set, or if it is relative, it will be derived from the input file or the basedir if specified.\n  -basedir \"relative/path\" or \"C:/absolute/path\"    override the default game base directory. if this is not set, or if it is relative, it will be derived from the input file or the gamedir if specified.\n  -filepriority archive | loose    which types of archives (folders/loose files or packed archives) are higher priority and chosen first for path searching\n  -path \"/path/to/folder\" <multiple allowed>    additional paths or archives to add to the search path, mostly for loose files\n  -q2rtx                        adjust settings to best support Q2RTX\n  -defaultpaths [0]             whether the compiler should attempt to automatically derive game/base paths for games that support it\n   \\nodefaultpaths\n  -tex_saturation_boost n       increase texture saturation to match original Q2 tools\n\nAdvanced/tool debugging:\n  -nofill                       don't perform outside filling\n  -nomerge                      don't perform face merging\n  -noedgereuse                  don't reuse edges (for debugging software rendering)\n  -noskip                       don't remove faces with the 'skip' texture\n  -nodetail                     treat all detail brushes to structural\n  -chop                         adjust brushes to remove intersections if possible\n   \\nochop\n  -chopfragment                 always do full fragmentation for chop\n  -splitsky                     doesn't combine sky faces into one large face\n  -splitspecial                 doesn't combine sky and water faces into one large face (splitturb + splitsky)\n  -oldaxis [0]                  uses alternate texture alignment which was default in tyrutils-ericw v0.15.1 and older\n   \\nooldaxis\n  -forcegoodtree                force use of expensive processing for BrushBSP stage\n  -midsplitsurffraction n       if 0 (default), use `maxnodesize` for deciding when to switch to midsplit bsp heuristic.\nif 0 < midsplitSurfFraction <= 1, switch to midsplit if the node contains more than this fraction of the model's\ntotal surfaces. Try 0.15 to 0.5. Works better than maxNodeSize for maps with a 3D skybox (e.g. +-128K unit maps)\n  -maxnodesize n                triggers simpler BSP Splitting when node exceeds size (default 1024, 0 to disable)\n  -oldrottex                    use old rotate_ brush texturing aligned at (0 0 0)\n  -epsilon n                    customize epsilon value for point-on-plane checks\n  -microvolume n                microbrush volume\n  -outsidedebug                 write a .map after outside filling showing non-visible brush sides\n  -debugchop                    write a .map after ChopBrushes\n  -debugleak                    write more diagnostic files for debugging leaks\n  -debugbspbrushes              save bsp brushes after BrushBSP to a .map, for visualizing BSP splits\n  -debugleafvolumes             save bsp leaf volumes after BrushBSP to a .map, for visualizing BSP splits\n  -debugexpand [single hull index] or [mins_x mins_y mins_z maxs_x maxs_y maxs_z]    write expanded hull .map for debugging/inspecting hulls/brush bevelling\n  -keepprt                      avoid deleting the .prt file on leaking maps\n  -worldextent n                explicitly provide world extents; 0 will auto-detect\n  -leakdist n                   space between leakfile points (default 0: no inbetween points)\n  -forceprt1                    force a PRT1 output file even if PRT2 is required for vis\n  -tjunc mwt | none | retopologize | rotate    T-junction fix level\n   \\notjunc\n  -objexport                    export the map file as .OBJ models during various CSG phases\n  -noextendedsurfflags          suppress writing a .texinfo file\n  -noextendedcontentflags       suppress writing a .content.json file\n  -fixupdetailfence [0]         fixup detail fence\n\n",
+  "cache_sha256": "1a7c122d3ed316b358936761c11680c4486fbcb0e1e084fd36961589be86bf79",
+  "artifact_kind": "deployment",
+  "development_binary": "/tmp/qqbsp-bootstrap/pinned/patched-build/qbsp/qqbsp",
+  "development_sha256": "a097cb6a6288b930eb018797464ef6a2a7e64d173fd113bdd1659167a1be30ff",
+  "development_manifest_sha256": "f65d0d3672633e086b5f03d9b70dc4fef928f982fe2c8be2619e7af7c9d4bf09",
+  "development_bytes": 47766272,
+  "deployment_bytes": 2177344,
+  "strip": {
+    "flags": [
+      "--strip-debug"
+    ],
+    "version": "GNU strip (GNU Binutils for Ubuntu) 2.42",
+    "executable_sha256": "0d980587ada7ab12193f39271f060d5663aa2f289b0e80d2a0274ce7306e4e42"
+  },
+  "elf": {
+    "before": {
+      "sections": {
+        "": {
+          "type": 0,
+          "flags": 0,
+          "address": 0,
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        ".interp": {
+          "type": 1,
+          "flags": 2,
+          "address": 848,
+          "bytes": 28,
+          "sha256": "9097c98ea70f6f3b01d50145eb72bf55ad1f4e9713bccf27bd6405d6254eed00"
+        },
+        ".note.gnu.property": {
+          "type": 7,
+          "flags": 2,
+          "address": 880,
+          "bytes": 48,
+          "sha256": "67098b0bd64a1f8fdb6594ba06e1fb1fd39e5d20334df6e6957967935b509beb"
+        },
+        ".note.gnu.build-id": {
+          "type": 7,
+          "flags": 2,
+          "address": 928,
+          "bytes": 36,
+          "sha256": "dfdb43218d8afd6dd292ef0508e7e6411ccb5f51252355bc88325de047ec8bcf"
+        },
+        ".note.ABI-tag": {
+          "type": 7,
+          "flags": 2,
+          "address": 964,
+          "bytes": 32,
+          "sha256": "6e48317ad93a8ac2dc04321465ede06d1274543fc8ab172e68171a9d684bb313"
+        },
+        ".gnu.hash": {
+          "type": 1879048182,
+          "flags": 2,
+          "address": 1000,
+          "bytes": 488,
+          "sha256": "7d410801bdc2940e194e10fb077c5aff633288e4dc135d96a0f4ef2c04f87a4c"
+        },
+        ".dynsym": {
+          "type": 11,
+          "flags": 2,
+          "address": 1488,
+          "bytes": 7272,
+          "sha256": "c4296a2ec82440aa479447ae693d000d6e6501c845fd8a11d019e81146048d81"
+        },
+        ".dynstr": {
+          "type": 3,
+          "flags": 2,
+          "address": 8760,
+          "bytes": 10413,
+          "sha256": "d047246c52fcf44c1070f92469a3c1f45eeafb2f591ca02858e2d2f60aaaed39"
+        },
+        ".gnu.version": {
+          "type": 1879048191,
+          "flags": 2,
+          "address": 19174,
+          "bytes": 606,
+          "sha256": "cc42c0536c61b915115ea8ba5ff49a54bf8c7f0b7b250b74918f1ec69e30e07e"
+        },
+        ".gnu.version_r": {
+          "type": 1879048190,
+          "flags": 2,
+          "address": 19784,
+          "bytes": 560,
+          "sha256": "bf0a851d2589fa202d48550995e581170da67d17f27c2d49e08ff3de1ecc8d50"
+        },
+        ".rela.dyn": {
+          "type": 4,
+          "flags": 2,
+          "address": 20344,
+          "bytes": 40248,
+          "sha256": "b4802a9881aa290f9831800b4a17c8fa841de4f35cae4c278c600718f70e5ddb"
+        },
+        ".rela.plt": {
+          "type": 4,
+          "flags": 66,
+          "address": 60592,
+          "bytes": 4992,
+          "sha256": "89c15856dc5347696efcb453f7d91376ede03b27cf98216a0be080bfddb05d99"
+        },
+        ".init": {
+          "type": 1,
+          "flags": 6,
+          "address": 69632,
+          "bytes": 27,
+          "sha256": "10eddd425fd961c5dbf1aaecad9c4c5364f57f6ddca0758aa758bacbc0db7991"
+        },
+        ".plt": {
+          "type": 1,
+          "flags": 6,
+          "address": 69664,
+          "bytes": 3344,
+          "sha256": "c26ec17c115057798420699457223d03688d1ba7f0a0c3bf10e6f9fa5d68b16a"
+        },
+        ".plt.got": {
+          "type": 1,
+          "flags": 6,
+          "address": 73008,
+          "bytes": 144,
+          "sha256": "b3b06e057fd4a9ad544c59d9ae00a923c37ef89caed7ac3dec8b766225695dda"
+        },
+        ".plt.sec": {
+          "type": 1,
+          "flags": 6,
+          "address": 73152,
+          "bytes": 3328,
+          "sha256": "884a252e7b36aca666a5cd79c7690815855c3de53b3b8d8d0978985b07153de9"
+        },
+        ".text": {
+          "type": 1,
+          "flags": 6,
+          "address": 76480,
+          "bytes": 1438786,
+          "sha256": "b24fbacd7b3a7b94c3df5c47bf73f0d47441d42c0232890f58d67f27860c5ea9"
+        },
+        ".fini": {
+          "type": 1,
+          "flags": 6,
+          "address": 1515268,
+          "bytes": 13,
+          "sha256": "6a4f3e5efc7c1f7ee7d6f21afd9ed040ba1d7f0b97bb12b016f5b176cc558bd8"
+        },
+        ".rodata": {
+          "type": 1,
+          "flags": 2,
+          "address": 1515520,
+          "bytes": 66096,
+          "sha256": "86a962892b35a425d9d7ad821f51ca54a0cdb526728f486e8ad8e1958a960a2c"
+        },
+        ".eh_frame_hdr": {
+          "type": 1,
+          "flags": 2,
+          "address": 1581616,
+          "bytes": 20524,
+          "sha256": "0a2304c5073fe6aa317409a0e00fe5106b79569e10a4ea6d136883b827e1773d"
+        },
+        ".eh_frame": {
+          "type": 1,
+          "flags": 2,
+          "address": 1602144,
+          "bytes": 138520,
+          "sha256": "64f9b5e35146309e0ebe8f5af0d81c9211136c667f2ada486faead82da8ef2e6"
+        },
+        ".gcc_except_table": {
+          "type": 1,
+          "flags": 2,
+          "address": 1740664,
+          "bytes": 34928,
+          "sha256": "0d625708dc103a5fe55f36bb34bb66ea92218375752dd7dd2c9ab25529c6cc74"
+        },
+        ".tbss": {
+          "type": 8,
+          "flags": 1027,
+          "address": 1781584,
+          "bytes": 32,
+          "sha256": null
+        },
+        ".init_array": {
+          "type": 14,
+          "flags": 3,
+          "address": 1781584,
+          "bytes": 72,
+          "sha256": "12fd84c570eeb538297a6e0f9db3cbb3ce0c482425562b798d7ffc58a87e044f"
+        },
+        ".fini_array": {
+          "type": 15,
+          "flags": 3,
+          "address": 1781656,
+          "bytes": 8,
+          "sha256": "8a6cffc2f58d06bcab76ca96a80e7d8e608bee2b3f8883a1765f54b75feffb42"
+        },
+        ".data.rel.ro": {
+          "type": 1,
+          "flags": 3,
+          "address": 1781664,
+          "bytes": 18144,
+          "sha256": "15edaee3ee4f29d87a9f77e1ed1c9a15f57075e44160dac51e64b4036a68d6e4"
+        },
+        ".dynamic": {
+          "type": 6,
+          "flags": 3,
+          "address": 1799808,
+          "bytes": 592,
+          "sha256": "f51eae6bdda7997dc3c937daaa3fb99f21dac0ca4ba2e53910abd5ddaa56c90b"
+        },
+        ".got": {
+          "type": 1,
+          "flags": 3,
+          "address": 1800400,
+          "bytes": 1824,
+          "sha256": "7383e645663fab8d3ece508e0e45c4da4b42016747c56a3e40b25d09ffdc9cf4"
+        },
+        ".data": {
+          "type": 1,
+          "flags": 3,
+          "address": 1802240,
+          "bytes": 336,
+          "sha256": "1c4cf6f26b4062ad7dd0d43e932f764a42df2687e33e709414beb6e508de65df"
+        },
+        ".bss": {
+          "type": 8,
+          "flags": 3,
+          "address": 1802624,
+          "bytes": 11072,
+          "sha256": null
+        },
+        ".comment": {
+          "type": 1,
+          "flags": 48,
+          "address": 0,
+          "bytes": 45,
+          "sha256": "509378ae5eca3c5167dea643f1b2a9031fc12d01dc4706f57320a9e3763d7cc0"
+        },
+        ".debug_aranges": {
+          "type": 1,
+          "flags": 0,
+          "address": 0,
+          "bytes": 29008,
+          "sha256": "4c00f98c3cf9ac874b0fa2b5ec5a8b0309b1e75c1c72be037f37c50aa916aef8"
+        },
+        ".debug_info": {
+          "type": 1,
+          "flags": 0,
+          "address": 0,
+          "bytes": 25773006,
+          "sha256": "989156cdb259a938dd1f74b916200ea8442728d19f9d63253e94579dedd33569"
+        },
+        ".debug_abbrev": {
+          "type": 1,
+          "flags": 0,
+          "address": 0,
+          "bytes": 265321,
+          "sha256": "730e3b207b633f7d684728a05099e4ff4c486e69f031b03feb83e5779e23ad4f"
+        },
+        ".debug_line": {
+          "type": 1,
+          "flags": 0,
+          "address": 0,
+          "bytes": 2698351,
+          "sha256": "f609ad7408955d9214b6d86d2775a5cfb7f3247aa22a6960befa74c4bcba3d8a"
+        },
+        ".debug_str": {
+          "type": 1,
+          "flags": 48,
+          "address": 0,
+          "bytes": 8594891,
+          "sha256": "769167efb6c7011a9c53bba661350cc6c436a07fc71bef32dc3a762ebd23e9e4"
+        },
+        ".debug_line_str": {
+          "type": 1,
+          "flags": 48,
+          "address": 0,
+          "bytes": 7321,
+          "sha256": "0aa56795160ba0a7efd6d6e2e678e56504ab5e189bc9b8e72facc405de5af027"
+        },
+        ".debug_loclists": {
+          "type": 1,
+          "flags": 0,
+          "address": 0,
+          "bytes": 7027255,
+          "sha256": "7b39a548fcfbd70b4924547fdbf2452d726ea81e19a675309d8912b4f73cc27a"
+        },
+        ".debug_rnglists": {
+          "type": 1,
+          "flags": 0,
+          "address": 0,
+          "bytes": 1191869,
+          "sha256": "04b098f008e47fdeabc0dd87a580d14a05fcb1ec04d47ad5759b5cc59b5dec46"
+        },
+        ".symtab": {
+          "type": 2,
+          "flags": 0,
+          "address": 0,
+          "bytes": 91008,
+          "sha256": "daa0a58645bd9f7acb7999cf6211417ba99c73a3e91512cd0dc5ec6678d7af4b"
+        },
+        ".strtab": {
+          "type": 3,
+          "flags": 0,
+          "address": 0,
+          "bytes": 286587,
+          "sha256": "ff78b4b8dc858a344e150ca405a4f560e73f6fe626a53dbbb718c0b712368b01"
+        },
+        ".shstrtab": {
+          "type": 3,
+          "flags": 0,
+          "address": 0,
+          "bytes": 431,
+          "sha256": "1048ea36facc6c397dfc48f77fc51aace8fc35e922ff642a0bbb3087c38d33d1"
+        }
+      },
+      "entry": 133792,
+      "program_headers_sha256": "870f0a025d409909b5ab10f8d7a2fd43b972bef81fbccfe469979bf74c5b8531",
+      "debug_bytes": 45587022,
+      "alloc": {
+        ".interp": {
+          "type": 1,
+          "flags": 2,
+          "address": 848,
+          "bytes": 28,
+          "sha256": "9097c98ea70f6f3b01d50145eb72bf55ad1f4e9713bccf27bd6405d6254eed00"
+        },
+        ".note.gnu.property": {
+          "type": 7,
+          "flags": 2,
+          "address": 880,
+          "bytes": 48,
+          "sha256": "67098b0bd64a1f8fdb6594ba06e1fb1fd39e5d20334df6e6957967935b509beb"
+        },
+        ".note.gnu.build-id": {
+          "type": 7,
+          "flags": 2,
+          "address": 928,
+          "bytes": 36,
+          "sha256": "dfdb43218d8afd6dd292ef0508e7e6411ccb5f51252355bc88325de047ec8bcf"
+        },
+        ".note.ABI-tag": {
+          "type": 7,
+          "flags": 2,
+          "address": 964,
+          "bytes": 32,
+          "sha256": "6e48317ad93a8ac2dc04321465ede06d1274543fc8ab172e68171a9d684bb313"
+        },
+        ".gnu.hash": {
+          "type": 1879048182,
+          "flags": 2,
+          "address": 1000,
+          "bytes": 488,
+          "sha256": "7d410801bdc2940e194e10fb077c5aff633288e4dc135d96a0f4ef2c04f87a4c"
+        },
+        ".dynsym": {
+          "type": 11,
+          "flags": 2,
+          "address": 1488,
+          "bytes": 7272,
+          "sha256": "c4296a2ec82440aa479447ae693d000d6e6501c845fd8a11d019e81146048d81"
+        },
+        ".dynstr": {
+          "type": 3,
+          "flags": 2,
+          "address": 8760,
+          "bytes": 10413,
+          "sha256": "d047246c52fcf44c1070f92469a3c1f45eeafb2f591ca02858e2d2f60aaaed39"
+        },
+        ".gnu.version": {
+          "type": 1879048191,
+          "flags": 2,
+          "address": 19174,
+          "bytes": 606,
+          "sha256": "cc42c0536c61b915115ea8ba5ff49a54bf8c7f0b7b250b74918f1ec69e30e07e"
+        },
+        ".gnu.version_r": {
+          "type": 1879048190,
+          "flags": 2,
+          "address": 19784,
+          "bytes": 560,
+          "sha256": "bf0a851d2589fa202d48550995e581170da67d17f27c2d49e08ff3de1ecc8d50"
+        },
+        ".rela.dyn": {
+          "type": 4,
+          "flags": 2,
+          "address": 20344,
+          "bytes": 40248,
+          "sha256": "b4802a9881aa290f9831800b4a17c8fa841de4f35cae4c278c600718f70e5ddb"
+        },
+        ".rela.plt": {
+          "type": 4,
+          "flags": 66,
+          "address": 60592,
+          "bytes": 4992,
+          "sha256": "89c15856dc5347696efcb453f7d91376ede03b27cf98216a0be080bfddb05d99"
+        },
+        ".init": {
+          "type": 1,
+          "flags": 6,
+          "address": 69632,
+          "bytes": 27,
+          "sha256": "10eddd425fd961c5dbf1aaecad9c4c5364f57f6ddca0758aa758bacbc0db7991"
+        },
+        ".plt": {
+          "type": 1,
+          "flags": 6,
+          "address": 69664,
+          "bytes": 3344,
+          "sha256": "c26ec17c115057798420699457223d03688d1ba7f0a0c3bf10e6f9fa5d68b16a"
+        },
+        ".plt.got": {
+          "type": 1,
+          "flags": 6,
+          "address": 73008,
+          "bytes": 144,
+          "sha256": "b3b06e057fd4a9ad544c59d9ae00a923c37ef89caed7ac3dec8b766225695dda"
+        },
+        ".plt.sec": {
+          "type": 1,
+          "flags": 6,
+          "address": 73152,
+          "bytes": 3328,
+          "sha256": "884a252e7b36aca666a5cd79c7690815855c3de53b3b8d8d0978985b07153de9"
+        },
+        ".text": {
+          "type": 1,
+          "flags": 6,
+          "address": 76480,
+          "bytes": 1438786,
+          "sha256": "b24fbacd7b3a7b94c3df5c47bf73f0d47441d42c0232890f58d67f27860c5ea9"
+        },
+        ".fini": {
+          "type": 1,
+          "flags": 6,
+          "address": 1515268,
+          "bytes": 13,
+          "sha256": "6a4f3e5efc7c1f7ee7d6f21afd9ed040ba1d7f0b97bb12b016f5b176cc558bd8"
+        },
+        ".rodata": {
+          "type": 1,
+          "flags": 2,
+          "address": 1515520,
+          "bytes": 66096,
+          "sha256": "86a962892b35a425d9d7ad821f51ca54a0cdb526728f486e8ad8e1958a960a2c"
+        },
+        ".eh_frame_hdr": {
+          "type": 1,
+          "flags": 2,
+          "address": 1581616,
+          "bytes": 20524,
+          "sha256": "0a2304c5073fe6aa317409a0e00fe5106b79569e10a4ea6d136883b827e1773d"
+        },
+        ".eh_frame": {
+          "type": 1,
+          "flags": 2,
+          "address": 1602144,
+          "bytes": 138520,
+          "sha256": "64f9b5e35146309e0ebe8f5af0d81c9211136c667f2ada486faead82da8ef2e6"
+        },
+        ".gcc_except_table": {
+          "type": 1,
+          "flags": 2,
+          "address": 1740664,
+          "bytes": 34928,
+          "sha256": "0d625708dc103a5fe55f36bb34bb66ea92218375752dd7dd2c9ab25529c6cc74"
+        },
+        ".tbss": {
+          "type": 8,
+          "flags": 1027,
+          "address": 1781584,
+          "bytes": 32,
+          "sha256": null
+        },
+        ".init_array": {
+          "type": 14,
+          "flags": 3,
+          "address": 1781584,
+          "bytes": 72,
+          "sha256": "12fd84c570eeb538297a6e0f9db3cbb3ce0c482425562b798d7ffc58a87e044f"
+        },
+        ".fini_array": {
+          "type": 15,
+          "flags": 3,
+          "address": 1781656,
+          "bytes": 8,
+          "sha256": "8a6cffc2f58d06bcab76ca96a80e7d8e608bee2b3f8883a1765f54b75feffb42"
+        },
+        ".data.rel.ro": {
+          "type": 1,
+          "flags": 3,
+          "address": 1781664,
+          "bytes": 18144,
+          "sha256": "15edaee3ee4f29d87a9f77e1ed1c9a15f57075e44160dac51e64b4036a68d6e4"
+        },
+        ".dynamic": {
+          "type": 6,
+          "flags": 3,
+          "address": 1799808,
+          "bytes": 592,
+          "sha256": "f51eae6bdda7997dc3c937daaa3fb99f21dac0ca4ba2e53910abd5ddaa56c90b"
+        },
+        ".got": {
+          "type": 1,
+          "flags": 3,
+          "address": 1800400,
+          "bytes": 1824,
+          "sha256": "7383e645663fab8d3ece508e0e45c4da4b42016747c56a3e40b25d09ffdc9cf4"
+        },
+        ".data": {
+          "type": 1,
+          "flags": 3,
+          "address": 1802240,
+          "bytes": 336,
+          "sha256": "1c4cf6f26b4062ad7dd0d43e932f764a42df2687e33e709414beb6e508de65df"
+        },
+        ".bss": {
+          "type": 8,
+          "flags": 3,
+          "address": 1802624,
+          "bytes": 11072,
+          "sha256": null
+        }
+      }
+    },
+    "after": {
+      "sections": {
+        "": {
+          "type": 0,
+          "flags": 0,
+          "address": 0,
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        ".interp": {
+          "type": 1,
+          "flags": 2,
+          "address": 848,
+          "bytes": 28,
+          "sha256": "9097c98ea70f6f3b01d50145eb72bf55ad1f4e9713bccf27bd6405d6254eed00"
+        },
+        ".note.gnu.property": {
+          "type": 7,
+          "flags": 2,
+          "address": 880,
+          "bytes": 48,
+          "sha256": "67098b0bd64a1f8fdb6594ba06e1fb1fd39e5d20334df6e6957967935b509beb"
+        },
+        ".note.gnu.build-id": {
+          "type": 7,
+          "flags": 2,
+          "address": 928,
+          "bytes": 36,
+          "sha256": "dfdb43218d8afd6dd292ef0508e7e6411ccb5f51252355bc88325de047ec8bcf"
+        },
+        ".note.ABI-tag": {
+          "type": 7,
+          "flags": 2,
+          "address": 964,
+          "bytes": 32,
+          "sha256": "6e48317ad93a8ac2dc04321465ede06d1274543fc8ab172e68171a9d684bb313"
+        },
+        ".gnu.hash": {
+          "type": 1879048182,
+          "flags": 2,
+          "address": 1000,
+          "bytes": 488,
+          "sha256": "7d410801bdc2940e194e10fb077c5aff633288e4dc135d96a0f4ef2c04f87a4c"
+        },
+        ".dynsym": {
+          "type": 11,
+          "flags": 2,
+          "address": 1488,
+          "bytes": 7272,
+          "sha256": "c4296a2ec82440aa479447ae693d000d6e6501c845fd8a11d019e81146048d81"
+        },
+        ".dynstr": {
+          "type": 3,
+          "flags": 2,
+          "address": 8760,
+          "bytes": 10413,
+          "sha256": "d047246c52fcf44c1070f92469a3c1f45eeafb2f591ca02858e2d2f60aaaed39"
+        },
+        ".gnu.version": {
+          "type": 1879048191,
+          "flags": 2,
+          "address": 19174,
+          "bytes": 606,
+          "sha256": "cc42c0536c61b915115ea8ba5ff49a54bf8c7f0b7b250b74918f1ec69e30e07e"
+        },
+        ".gnu.version_r": {
+          "type": 1879048190,
+          "flags": 2,
+          "address": 19784,
+          "bytes": 560,
+          "sha256": "bf0a851d2589fa202d48550995e581170da67d17f27c2d49e08ff3de1ecc8d50"
+        },
+        ".rela.dyn": {
+          "type": 4,
+          "flags": 2,
+          "address": 20344,
+          "bytes": 40248,
+          "sha256": "b4802a9881aa290f9831800b4a17c8fa841de4f35cae4c278c600718f70e5ddb"
+        },
+        ".rela.plt": {
+          "type": 4,
+          "flags": 66,
+          "address": 60592,
+          "bytes": 4992,
+          "sha256": "89c15856dc5347696efcb453f7d91376ede03b27cf98216a0be080bfddb05d99"
+        },
+        ".init": {
+          "type": 1,
+          "flags": 6,
+          "address": 69632,
+          "bytes": 27,
+          "sha256": "10eddd425fd961c5dbf1aaecad9c4c5364f57f6ddca0758aa758bacbc0db7991"
+        },
+        ".plt": {
+          "type": 1,
+          "flags": 6,
+          "address": 69664,
+          "bytes": 3344,
+          "sha256": "c26ec17c115057798420699457223d03688d1ba7f0a0c3bf10e6f9fa5d68b16a"
+        },
+        ".plt.got": {
+          "type": 1,
+          "flags": 6,
+          "address": 73008,
+          "bytes": 144,
+          "sha256": "b3b06e057fd4a9ad544c59d9ae00a923c37ef89caed7ac3dec8b766225695dda"
+        },
+        ".plt.sec": {
+          "type": 1,
+          "flags": 6,
+          "address": 73152,
+          "bytes": 3328,
+          "sha256": "884a252e7b36aca666a5cd79c7690815855c3de53b3b8d8d0978985b07153de9"
+        },
+        ".text": {
+          "type": 1,
+          "flags": 6,
+          "address": 76480,
+          "bytes": 1438786,
+          "sha256": "b24fbacd7b3a7b94c3df5c47bf73f0d47441d42c0232890f58d67f27860c5ea9"
+        },
+        ".fini": {
+          "type": 1,
+          "flags": 6,
+          "address": 1515268,
+          "bytes": 13,
+          "sha256": "6a4f3e5efc7c1f7ee7d6f21afd9ed040ba1d7f0b97bb12b016f5b176cc558bd8"
+        },
+        ".rodata": {
+          "type": 1,
+          "flags": 2,
+          "address": 1515520,
+          "bytes": 66096,
+          "sha256": "86a962892b35a425d9d7ad821f51ca54a0cdb526728f486e8ad8e1958a960a2c"
+        },
+        ".eh_frame_hdr": {
+          "type": 1,
+          "flags": 2,
+          "address": 1581616,
+          "bytes": 20524,
+          "sha256": "0a2304c5073fe6aa317409a0e00fe5106b79569e10a4ea6d136883b827e1773d"
+        },
+        ".eh_frame": {
+          "type": 1,
+          "flags": 2,
+          "address": 1602144,
+          "bytes": 138520,
+          "sha256": "64f9b5e35146309e0ebe8f5af0d81c9211136c667f2ada486faead82da8ef2e6"
+        },
+        ".gcc_except_table": {
+          "type": 1,
+          "flags": 2,
+          "address": 1740664,
+          "bytes": 34928,
+          "sha256": "0d625708dc103a5fe55f36bb34bb66ea92218375752dd7dd2c9ab25529c6cc74"
+        },
+        ".tbss": {
+          "type": 8,
+          "flags": 1027,
+          "address": 1781584,
+          "bytes": 32,
+          "sha256": null
+        },
+        ".init_array": {
+          "type": 14,
+          "flags": 3,
+          "address": 1781584,
+          "bytes": 72,
+          "sha256": "12fd84c570eeb538297a6e0f9db3cbb3ce0c482425562b798d7ffc58a87e044f"
+        },
+        ".fini_array": {
+          "type": 15,
+          "flags": 3,
+          "address": 1781656,
+          "bytes": 8,
+          "sha256": "8a6cffc2f58d06bcab76ca96a80e7d8e608bee2b3f8883a1765f54b75feffb42"
+        },
+        ".data.rel.ro": {
+          "type": 1,
+          "flags": 3,
+          "address": 1781664,
+          "bytes": 18144,
+          "sha256": "15edaee3ee4f29d87a9f77e1ed1c9a15f57075e44160dac51e64b4036a68d6e4"
+        },
+        ".dynamic": {
+          "type": 6,
+          "flags": 3,
+          "address": 1799808,
+          "bytes": 592,
+          "sha256": "f51eae6bdda7997dc3c937daaa3fb99f21dac0ca4ba2e53910abd5ddaa56c90b"
+        },
+        ".got": {
+          "type": 1,
+          "flags": 3,
+          "address": 1800400,
+          "bytes": 1824,
+          "sha256": "7383e645663fab8d3ece508e0e45c4da4b42016747c56a3e40b25d09ffdc9cf4"
+        },
+        ".data": {
+          "type": 1,
+          "flags": 3,
+          "address": 1802240,
+          "bytes": 336,
+          "sha256": "1c4cf6f26b4062ad7dd0d43e932f764a42df2687e33e709414beb6e508de65df"
+        },
+        ".bss": {
+          "type": 8,
+          "flags": 3,
+          "address": 1802624,
+          "bytes": 11072,
+          "sha256": null
+        },
+        ".comment": {
+          "type": 1,
+          "flags": 48,
+          "address": 0,
+          "bytes": 45,
+          "sha256": "509378ae5eca3c5167dea643f1b2a9031fc12d01dc4706f57320a9e3763d7cc0"
+        },
+        ".symtab": {
+          "type": 2,
+          "flags": 0,
+          "address": 0,
+          "bytes": 90096,
+          "sha256": "b2ba622f3488c4d6a211cf1aac3dedd8bae5cd9ea57a6758e7d33ce7c49fed8e"
+        },
+        ".strtab": {
+          "type": 3,
+          "flags": 0,
+          "address": 0,
+          "bytes": 286219,
+          "sha256": "d0f795eeb99bb2aace5aa1ebd8f2af8de16139280bdc914f6b00eb7027d113ae"
+        },
+        ".shstrtab": {
+          "type": 3,
+          "flags": 0,
+          "address": 0,
+          "bytes": 319,
+          "sha256": "5794a3ef96840de9374b65d914f2fef3b147571802020db554658d2e579c0723"
+        }
+      },
+      "entry": 133792,
+      "program_headers_sha256": "870f0a025d409909b5ab10f8d7a2fd43b972bef81fbccfe469979bf74c5b8531",
+      "debug_bytes": 0,
+      "alloc": {
+        ".interp": {
+          "type": 1,
+          "flags": 2,
+          "address": 848,
+          "bytes": 28,
+          "sha256": "9097c98ea70f6f3b01d50145eb72bf55ad1f4e9713bccf27bd6405d6254eed00"
+        },
+        ".note.gnu.property": {
+          "type": 7,
+          "flags": 2,
+          "address": 880,
+          "bytes": 48,
+          "sha256": "67098b0bd64a1f8fdb6594ba06e1fb1fd39e5d20334df6e6957967935b509beb"
+        },
+        ".note.gnu.build-id": {
+          "type": 7,
+          "flags": 2,
+          "address": 928,
+          "bytes": 36,
+          "sha256": "dfdb43218d8afd6dd292ef0508e7e6411ccb5f51252355bc88325de047ec8bcf"
+        },
+        ".note.ABI-tag": {
+          "type": 7,
+          "flags": 2,
+          "address": 964,
+          "bytes": 32,
+          "sha256": "6e48317ad93a8ac2dc04321465ede06d1274543fc8ab172e68171a9d684bb313"
+        },
+        ".gnu.hash": {
+          "type": 1879048182,
+          "flags": 2,
+          "address": 1000,
+          "bytes": 488,
+          "sha256": "7d410801bdc2940e194e10fb077c5aff633288e4dc135d96a0f4ef2c04f87a4c"
+        },
+        ".dynsym": {
+          "type": 11,
+          "flags": 2,
+          "address": 1488,
+          "bytes": 7272,
+          "sha256": "c4296a2ec82440aa479447ae693d000d6e6501c845fd8a11d019e81146048d81"
+        },
+        ".dynstr": {
+          "type": 3,
+          "flags": 2,
+          "address": 8760,
+          "bytes": 10413,
+          "sha256": "d047246c52fcf44c1070f92469a3c1f45eeafb2f591ca02858e2d2f60aaaed39"
+        },
+        ".gnu.version": {
+          "type": 1879048191,
+          "flags": 2,
+          "address": 19174,
+          "bytes": 606,
+          "sha256": "cc42c0536c61b915115ea8ba5ff49a54bf8c7f0b7b250b74918f1ec69e30e07e"
+        },
+        ".gnu.version_r": {
+          "type": 1879048190,
+          "flags": 2,
+          "address": 19784,
+          "bytes": 560,
+          "sha256": "bf0a851d2589fa202d48550995e581170da67d17f27c2d49e08ff3de1ecc8d50"
+        },
+        ".rela.dyn": {
+          "type": 4,
+          "flags": 2,
+          "address": 20344,
+          "bytes": 40248,
+          "sha256": "b4802a9881aa290f9831800b4a17c8fa841de4f35cae4c278c600718f70e5ddb"
+        },
+        ".rela.plt": {
+          "type": 4,
+          "flags": 66,
+          "address": 60592,
+          "bytes": 4992,
+          "sha256": "89c15856dc5347696efcb453f7d91376ede03b27cf98216a0be080bfddb05d99"
+        },
+        ".init": {
+          "type": 1,
+          "flags": 6,
+          "address": 69632,
+          "bytes": 27,
+          "sha256": "10eddd425fd961c5dbf1aaecad9c4c5364f57f6ddca0758aa758bacbc0db7991"
+        },
+        ".plt": {
+          "type": 1,
+          "flags": 6,
+          "address": 69664,
+          "bytes": 3344,
+          "sha256": "c26ec17c115057798420699457223d03688d1ba7f0a0c3bf10e6f9fa5d68b16a"
+        },
+        ".plt.got": {
+          "type": 1,
+          "flags": 6,
+          "address": 73008,
+          "bytes": 144,
+          "sha256": "b3b06e057fd4a9ad544c59d9ae00a923c37ef89caed7ac3dec8b766225695dda"
+        },
+        ".plt.sec": {
+          "type": 1,
+          "flags": 6,
+          "address": 73152,
+          "bytes": 3328,
+          "sha256": "884a252e7b36aca666a5cd79c7690815855c3de53b3b8d8d0978985b07153de9"
+        },
+        ".text": {
+          "type": 1,
+          "flags": 6,
+          "address": 76480,
+          "bytes": 1438786,
+          "sha256": "b24fbacd7b3a7b94c3df5c47bf73f0d47441d42c0232890f58d67f27860c5ea9"
+        },
+        ".fini": {
+          "type": 1,
+          "flags": 6,
+          "address": 1515268,
+          "bytes": 13,
+          "sha256": "6a4f3e5efc7c1f7ee7d6f21afd9ed040ba1d7f0b97bb12b016f5b176cc558bd8"
+        },
+        ".rodata": {
+          "type": 1,
+          "flags": 2,
+          "address": 1515520,
+          "bytes": 66096,
+          "sha256": "86a962892b35a425d9d7ad821f51ca54a0cdb526728f486e8ad8e1958a960a2c"
+        },
+        ".eh_frame_hdr": {
+          "type": 1,
+          "flags": 2,
+          "address": 1581616,
+          "bytes": 20524,
+          "sha256": "0a2304c5073fe6aa317409a0e00fe5106b79569e10a4ea6d136883b827e1773d"
+        },
+        ".eh_frame": {
+          "type": 1,
+          "flags": 2,
+          "address": 1602144,
+          "bytes": 138520,
+          "sha256": "64f9b5e35146309e0ebe8f5af0d81c9211136c667f2ada486faead82da8ef2e6"
+        },
+        ".gcc_except_table": {
+          "type": 1,
+          "flags": 2,
+          "address": 1740664,
+          "bytes": 34928,
+          "sha256": "0d625708dc103a5fe55f36bb34bb66ea92218375752dd7dd2c9ab25529c6cc74"
+        },
+        ".tbss": {
+          "type": 8,
+          "flags": 1027,
+          "address": 1781584,
+          "bytes": 32,
+          "sha256": null
+        },
+        ".init_array": {
+          "type": 14,
+          "flags": 3,
+          "address": 1781584,
+          "bytes": 72,
+          "sha256": "12fd84c570eeb538297a6e0f9db3cbb3ce0c482425562b798d7ffc58a87e044f"
+        },
+        ".fini_array": {
+          "type": 15,
+          "flags": 3,
+          "address": 1781656,
+          "bytes": 8,
+          "sha256": "8a6cffc2f58d06bcab76ca96a80e7d8e608bee2b3f8883a1765f54b75feffb42"
+        },
+        ".data.rel.ro": {
+          "type": 1,
+          "flags": 3,
+          "address": 1781664,
+          "bytes": 18144,
+          "sha256": "15edaee3ee4f29d87a9f77e1ed1c9a15f57075e44160dac51e64b4036a68d6e4"
+        },
+        ".dynamic": {
+          "type": 6,
+          "flags": 3,
+          "address": 1799808,
+          "bytes": 592,
+          "sha256": "f51eae6bdda7997dc3c937daaa3fb99f21dac0ca4ba2e53910abd5ddaa56c90b"
+        },
+        ".got": {
+          "type": 1,
+          "flags": 3,
+          "address": 1800400,
+          "bytes": 1824,
+          "sha256": "7383e645663fab8d3ece508e0e45c4da4b42016747c56a3e40b25d09ffdc9cf4"
+        },
+        ".data": {
+          "type": 1,
+          "flags": 3,
+          "address": 1802240,
+          "bytes": 336,
+          "sha256": "1c4cf6f26b4062ad7dd0d43e932f764a42df2687e33e709414beb6e508de65df"
+        },
+        ".bss": {
+          "type": 8,
+          "flags": 3,
+          "address": 1802624,
+          "bytes": 11072,
+          "sha256": null
+        }
+      }
+    },
+    "defined_symbols": 3507,
+    "defined_symbols_sha256": "4ddef82c8ff70443b675c697530b1c4edb01a303d363183fab98fd2a27d1be5d"
+  }
+}

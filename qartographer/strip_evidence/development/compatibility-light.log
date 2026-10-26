@@ -1,0 +1,49 @@
+---- ClearLightmapSurfaces ----
+---- light / ericw-tools 2.0.0-alpha10 ----
+low priority not compiled into this version
+logging to /tmp/qqbsp-strip/release/development/compatibility/ordinary-light.log (truncate)
+LoadBSPFile: '/tmp/qqbsp-strip/release/development/compatibility/ordinary.bsp'
+BSP is version Quake BSP bsp29
+INFO: using built-in palette.
+---- load_textures ----
+[38;2;255;000;000mload: WARNING: filesystem error: cannot get file size: Is a directory [/tmp/qqbsp-strip/release/development/compatibility/]
+[0m[33mConvertTextures: WARNING: invalid size data for 
+[0m[33mConvertTextures: WARNING: Texture  duplicated
+[0mLoading extended texinfo flags from /tmp/qqbsp-strip/release/development/compatibility/ordinary.texinfo.json...
+Loading extended content flags from /tmp/qqbsp-strip/release/development/compatibility/ordinary.content.json...
+---- LoadEntities ----
+3 entities read, 1 are lights.
+
+--- Options Summary ---
+    "nopercent" was set to "1" (from command line)
+
+Embree_TraceInit: Embree version: 4.4.0
+Embree_TraceInit: 
+	0 sky faces
+	6 solid faces
+	0 filtered faces
+	0 shadow-casting skip faces
+SetupLights: 1 initial lights
+---- MakeSurfaceLights ----
+SetupLights: 1 after surface lights
+SetupLights: 1 after jittering
+Final count: 1 lights, 0 suns in use.
+---- LightWorld ----
+---- ClearLightmapSurfaces ----
+---- CalculateVertexNormals ----
+---- MakeFaceCache ----
+---- CreateLightmapSurfaces ----
+---- MakeRadiositySurfaceLights ----
+0 surface light points in use.
+---- Direct Lighting ----
+---- Post-Processing ----
+---- SaveLightmapSurfaces ----
+[36mmap uses color: false
+[0m[36mlightmap size (total): 904
+[0mLighting Completed.
+
+---- ClearLightmapSurfaces ----
+0 switchable light styles (32 max)
+Writing /tmp/qqbsp-strip/release/development/compatibility/ordinary.bsp as Quake BSP bsp29
+0.001s seconds elapsed
+0 empty lightmaps

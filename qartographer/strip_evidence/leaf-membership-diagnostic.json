@@ -1,0 +1,17 @@
+{
+  "collision/patched/full/full-off.bsp": {
+    "leaf_face_membership_identical": true,
+    "leaves": 6475,
+    "memberships": 21073
+  },
+  "collision/patched/full/full-on.bsp": {
+    "leaf_face_membership_identical": true,
+    "leaves": 7631,
+    "memberships": 20693
+  },
+  "collision/pristine/full/full-on.bsp": {
+    "leaf_face_membership_identical": true,
+    "leaves": 7631,
+    "memberships": 20693
+  }
+}

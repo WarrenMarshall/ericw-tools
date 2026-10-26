@@ -1,0 +1,122 @@
+{
+  "pristine": {
+    "binary": "/tmp/qqbsp-bootstrap/pinned/pristine-build/qbsp/qbsp",
+    "sha256": "b80a35bc57eee9906c259abf2aa30a475c6a3f0864b6e4f9c16f233f9658d880",
+    "reduced_failures": 104,
+    "reduced_hulls": {
+      "0": {
+        "checked": 421,
+        "original_contents": -1
+      },
+      "1": {
+        "checked": 420,
+        "original_contents": -2
+      },
+      "2": {
+        "checked": 421,
+        "original_contents": -2
+      }
+    },
+    "roller_failures": {
+      "default": {
+        "0": 0,
+        "1": 82,
+        "2": 35
+      },
+      "chopfragment": {
+        "0": 0,
+        "1": 84,
+        "2": 42
+      }
+    },
+    "full_failures": 25,
+    "full_counts": {
+      "actor_tracks": {
+        "1": {
+          "support": 1897,
+          "accessible_above_floor": 973,
+          "source_obstructed_above_floor": 1041
+        },
+        "2": {
+          "support": 2128,
+          "accessible_above_floor": 764,
+          "source_obstructed_above_floor": 1439
+        }
+      },
+      "equal_projectile_samples": 10070
+    },
+    "artifacts": {
+      "full/full-off.bsp": "0d453ae01072cd54b63bddc5e447edc6d5c1c71f2da2970e8fed8e56bb60aedb",
+      "full/full-off.map": "d5f2ab2a0c5a22d2f0ecaecf77a1bbd72a3c2ce2e3c444fe0b4c517092e5986c",
+      "full/full-on.bsp": "34262b872c09a298dbbeae931af5047f4eec1b293d813e468dc2303c6a5d50b3",
+      "full/full-on.map": "16250e50546f9d1c4654d75e0a6683f70f7eff332ec730793c5f836d39716318",
+      "reduced/wildspline.bsp": "648a31400a21df815721fb6612509522f3cc82064ac51019bd469d1f3f0a927b",
+      "reduced/wildspline.map": "5f4c588e6f4482f933138def59a2cd64660491b146cbcf0683f32266bcd24d93",
+      "roller/chopfragment.bsp": "d98a0f98d53eb48ae4413b5b53d3c3df057ca827ffc400414f7b3b0ca2585d49",
+      "roller/chopfragment.map": "a281bdf08b070bfc7a728acf8212f5e401b04b572a706a353716fc898d861300",
+      "roller/default.bsp": "967dbfa988e9286c3ddc7114d237ac520a37cfa8b3fccf128d58a8ef4ee3b932",
+      "roller/default.map": "a281bdf08b070bfc7a728acf8212f5e401b04b572a706a353716fc898d861300"
+    }
+  },
+  "patched": {
+    "binary": "/tmp/qqbsp-bootstrap/pinned/deployment/qqbsp",
+    "sha256": "49d766579a03701d6a5bb3560112bc756afdb8cf4488242e0b8db72668d8c8c0",
+    "reduced_failures": 0,
+    "reduced_hulls": {
+      "0": {
+        "checked": 421,
+        "original_contents": -1
+      },
+      "1": {
+        "checked": 420,
+        "original_contents": -1
+      },
+      "2": {
+        "checked": 421,
+        "original_contents": -2
+      }
+    },
+    "roller_failures": {
+      "default": {
+        "0": 0,
+        "1": 0,
+        "2": 0
+      },
+      "chopfragment": {
+        "0": 0,
+        "1": 0,
+        "2": 0
+      }
+    },
+    "full_failures": 0,
+    "full_counts": {
+      "actor_tracks": {
+        "1": {
+          "support": 1897,
+          "accessible_above_floor": 973,
+          "source_obstructed_above_floor": 1041
+        },
+        "2": {
+          "support": 2128,
+          "accessible_above_floor": 764,
+          "source_obstructed_above_floor": 1439
+        }
+      },
+      "equal_projectile_samples": 10070
+    },
+    "artifacts": {
+      "full/full-off.bsp": "cb1b24df60b38135d16e9a28e9bdf22409661f7d9a7b2ccfd61ae945c1c419bd",
+      "full/full-off.map": "d5f2ab2a0c5a22d2f0ecaecf77a1bbd72a3c2ce2e3c444fe0b4c517092e5986c",
+      "full/full-on.bsp": "403410e6ce14ea387fa168001b5c2e6e4a73e74715d27330531220b898a6c010",
+      "full/full-on.map": "16250e50546f9d1c4654d75e0a6683f70f7eff332ec730793c5f836d39716318",
+      "reduced/wildspline.bsp": "930b8151f6ffde6e48cb9eab79ef16ab2fef29a31718a9e638a7836c399bb07b",
+      "reduced/wildspline.map": "5f4c588e6f4482f933138def59a2cd64660491b146cbcf0683f32266bcd24d93",
+      "roller/chopfragment.bsp": "cc36937ddfab64f3f747901850251120522a81f83c2d714170ad1464f7802ca9",
+      "roller/chopfragment.map": "a281bdf08b070bfc7a728acf8212f5e401b04b572a706a353716fc898d861300",
+      "roller/default.bsp": "e6dc2030336dc15a32b3a7958c4d877e3ade938a2eee930ede42251531f4a71c",
+      "roller/default.map": "a281bdf08b070bfc7a728acf8212f5e401b04b572a706a353716fc898d861300"
+    }
+  },
+  "acceptance": "PASS",
+  "full": true
+}

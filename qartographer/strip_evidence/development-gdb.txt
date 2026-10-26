@@ -1,0 +1,2 @@
+Line 270 of "/home/warrenmarshall/dev/ericw-tools/qbsp/brush.cc" starts at address 0x7a130 <_Z19CreateBrushWindingsR10bspbrush_t> and ends at 0x7a148 <_Z19CreateBrushWindingsR10bspbrush_t+24>.
+No line number information available for address 0x17527 <_Z19CreateBrushWindingsR10bspbrush_t.cold>
