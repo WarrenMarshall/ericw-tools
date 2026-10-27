@@ -1,0 +1,27 @@
+{
+  "head": "4b505ae25e508a8910b031e94d6f1ea60ac06a95",
+  "branch": "qartographer/qqbsp-alpha10",
+  "tracked_diff": "",
+  "prepublication_status": "?? qartographer/THIN_BRUSH.md\n?? qartographer/THIN_BRUSH_PHASE2.md\n?? qartographer/THIN_BRUSH_PHASE3.md\n?? qartographer/fixtures/thin-direct/\n?? qartographer/thin_brush_evidence/\n?? qartographer/thin_brush_phase2_evidence/\n?? qartographer/thin_brush_phase3_evidence/\n?? qartographer/thin_brush_probe.py\n",
+  "identities": {
+    "qbsp/brush.cc": "e1b6fe03e95687af61377a4fc32be4663935d9241ac10a81d2abbdb8ffeeb6fe",
+    "qbsp/brushbsp.cc": "6baec9ac3fb33508c5c089a9934699e5837223641805c1367905949a192e571a",
+    "qbsp/portals.cc": "bf551e8ffd22ec0f39a924c1e06f2cf68586de288989eff4257de33b78ac3df9",
+    "qbsp/outside.cc": "262f888f790eb2da8f43c408fa5f59f4febe0de6992fa9946abf365d0ed6a4ab",
+    "qartographer/regress.py": "5dec54ed82d4f716a5647df66a8698b21a60c772796afb48d1730bae72ae7cbe",
+    "qartographer/tiers.py": "d10a3491a673e9470aed0294b692abe3a534dd0b39831e9c7701b864f3a3ec12",
+    "qartographer/P2-unapplied.patch": "5c8e66e1c6bef8b8777750edb91a5bbea7b0ca47b1106f614489a6813964c73b",
+    "qartographer/fixtures/full-on.map": "16250e50546f9d1c4654d75e0a6683f70f7eff332ec730793c5f836d39716318",
+    "qartographer/fixtures/full-off.map": "d5f2ab2a0c5a22d2f0ecaecf77a1bbd72a3c2ce2e3c444fe0b4c517092e5986c",
+    "/tmp/qqbsp-phase4/build/qbsp/qqbsp": "e2d97785ccf2b50b455624fb2430d626896667fe96385996ee89483cf95d06a3",
+    "/mnt/fb91e326-b6dc-4352-b43c-7517fcce8b77/Dropbox/Quake/Utils/linux/qqbsp": "49d766579a03701d6a5bb3560112bc756afdb8cf4488242e0b8db72668d8c8c0"
+  },
+  "production_changes": false,
+  "candidate_implemented": false,
+  "p2_applied": false,
+  "deployment": false,
+  "commit": false,
+  "push": false,
+  "gate_changed": false,
+  "final_status": "?? qartographer/THIN_BRUSH.md\n?? qartographer/THIN_BRUSH_PHASE2.md\n?? qartographer/THIN_BRUSH_PHASE3.md\n?? qartographer/THIN_BRUSH_PHASE4.md\n?? qartographer/fixtures/thin-direct/\n?? qartographer/thin_brush_evidence/\n?? qartographer/thin_brush_phase2_evidence/\n?? qartographer/thin_brush_phase3_evidence/\n?? qartographer/thin_brush_phase4_evidence/\n?? qartographer/thin_brush_probe.py\n"
+}

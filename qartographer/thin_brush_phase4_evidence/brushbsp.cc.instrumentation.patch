@@ -1,0 +1,158 @@
+--- phase3/brushbsp.cc
++++ phase4/brushbsp.cc
+@@ -361,6 +361,10 @@
+ }
+ void p3snap(const char *stage,const bspbrush_t::container &bs){
+  if(!p3world)return;
++ static int hull=-1;if(std::string(stage)=="source")hull++;
++ if(std::string(stage)=="source" || std::string(stage)=="post-csg"){
++ std::ofstream f(qbsp_options.bsp_path.string()+".p4-"+stage+std::to_string(hull)+".tsv");f.precision(17);int idx=0;
++ for(auto &b:bs){for(auto &s:b->sides){const qplane3d &p=s.get_plane();f<<idx<<"\t"<<b->mapbrush->line.line_number.value_or(0)<<"\t"<<s.planenum<<"\t"<<p.normal[0]<<" "<<p.normal[1]<<" "<<p.normal[2]<<" "<<p.dist<<"\n";}idx++;}}
+  logging::print("P3 SNAP {} count={} hash={}\n",stage,bs.size(),p3hash(bs));
+ }
+ std::string p3nodepath(const node_t *node){std::string s;while(node->parent){auto *p=node->parent;s+=p->get_nodedata()->children[0]==node?'0':'1';node=p;}std::reverse(s.begin(),s.end());return s;}
+@@ -369,6 +373,19 @@
+  std::ofstream f(fmt::format("{}.{}.tsv",qbsp_options.bsp_path.string(),tag));f.precision(17);
+  for(auto &b:bs){for(auto &s:b->sides){const qplane3d &p=s.get_plane();f<<b->mapbrush->line.line_number.value_or(0)<<"\t"<<s.planenum<<"\t"<<p.normal[0]<<" "<<p.normal[1]<<" "<<p.normal[2]<<" "<<p.dist<<"\t";for(auto &v:s.w)f<<v[0]<<" "<<v[1]<<" "<<v[2]<<";";f<<"\n";}}
+ }
++
++static qvec3d p4pts[]={{-1388,-233,8.778914155553586},{-1376,-257,-12.914510661888684},{-1364,-269,11.605075569064333},{-1280.0001220705,-1440,236.73692674130805}};
++static int p4mask(const node_t *n){int mask=0;for(int i=(p3pass>=4?3:0);i<(p3pass>=4?4:3);i++){auto *c=n;bool ok=true;while(c->parent){auto *p=c->parent;auto *d=p->get_nodedata();bool front=d->get_plane().distance_to(p4pts[i])>=0;if(d->children[front?0:1]!=c){ok=false;break;}c=p;}if(ok)mask|=1<<i;}return mask;}
++static void p4dump(node_t *n,const bspbrush_t::container &bs,const char *stage){
++ if(!p3world)return;int mask=p4mask(n);if(!mask)return;
++ std::ofstream f(qbsp_options.bsp_path.string()+".p4.tsv",std::ios::app);f.precision(17);
++ auto path=p3nodepath(n);f<<"NODE\t"<<p3pass<<"\t"<<path<<"\t"<<mask<<"\t"<<stage<<"\t"<<bs.size()<<"\n";
++ auto dump=[&](const bspbrush_t &b,long line){
++ for(auto &s:b.sides){const qplane3d &p=s.get_plane();f<<"SIDE\t"<<p3pass<<"\t"<<path<<"\t"<<line<<"\t"<<s.planenum<<"\t"<<s.onnode<<"\t"<<s.bevel<<"\t"<<s.is_visible()<<"\t"<<p.normal[0]<<" "<<p.normal[1]<<" "<<p.normal[2]<<" "<<p.dist<<"\t";for(auto &v:s.w)f<<v[0]<<" "<<v[1]<<" "<<v[2]<<";";f<<"\n";}
++ };
++ if(n->volume)dump(*n->volume,-1);
++ for(auto &b:bs)dump(*b,b->mapbrush->line.line_number.value_or(0));
++}
+ static void LeafNode(node_t *leafnode, bspbrush_t::container brushes, bspstats_t &stats)
+ {
+     leafnode->make_leaf();
+@@ -384,6 +401,8 @@
+     }
+ 
+     if(p3world && p3pass==1){std::ifstream inp("/tmp/qqbsp-phase3/route-leaves.txt");std::string line;while(std::getline(inp,line))if(line==p3nodepath(leafnode)){logging::print("P3 ROUTELEAF path={} contents={} sealing={} brushes={}\n",line,leafdata->contents.is_sky(),leafdata->contents.seals_map(),brushes.size());for(auto &b:brushes)logging::print("P3 LEAFBRUSH path={} line={} contents={}\n",line,b->mapbrush->line.line_number.value_or(0),b->contents.is_sky());}}
++    p4dump(leafnode,brushes,"leaf");
++    if(p3world){std::ofstream f(qbsp_options.bsp_path.string()+".p4-contents.tsv",std::ios::app);f<<p3pass<<"\t"<<p3nodepath(leafnode)<<"\t"<<leafdata->contents.is_any_solid()<<"\t"<<leafdata->contents.is_sky()<<"\n";}
+     stats.leafstats.count_contents_in_stats(leafdata->contents);
+ 
+     if (qbsp_options.debugleak.value() || qbsp_options.debugbspbrushes.value()) {
+@@ -674,6 +693,7 @@
+ static bool CheckSplitBrush(const bspbrush_t::ptr &brush, size_t planenum)
+ {
+     const qplane3d &split = map.planes[planenum];
++    bool trace=p3world && p3pass==1 && p3path=="11100001101010100010110001000";
+ 
+     // check all points
+     double d_front = 0;
+@@ -691,11 +711,11 @@
+ 
+     if (d_front < DIST_EPSILON) // PLANESIDE_EPSILON)
+     {
+-        return false;
++        if(trace)logging::print("P4 CHECK rejection line={}\n",__LINE__);return false;
+     }
+     if (d_back > -DIST_EPSILON) // PLANESIDE_EPSILON)
+     { // only on front
+-        return false;
++        if(trace)logging::print("P4 CHECK rejection line={}\n",__LINE__);return false;
+     }
+ 
+     // create a new winding from the split plane
+@@ -703,13 +723,15 @@
+ 
+     for (auto &face : brush->sides) {
+         if (!w) {
+-            return false;
+-        }
++            if(trace)logging::print("P4 CHECK rejection line={}\n",__LINE__);return false;
++        }
++        if(trace)logging::print("P4 CLIP plane={} before={}\n",face.planenum,w->size());
+         w = w->clip_back(face.get_plane(), DIST_EPSILON);
++        if(trace)logging::print("P4 CLIPPED after={} area={}\n",w?w->size():0,w?w->area():0);
+     }
+ 
+     if (!w || WindingIsTiny(*w, DIST_EPSILON)) { // the brush isn't really split
+-        return false;
++        if(trace)logging::print("P4 CHECK rejection line={}\n",__LINE__);return false;
+     }
+ 
+     stack_winding_t &midwinding = *w;
+@@ -746,17 +768,17 @@
+ 
+     for (int i = 0; i < 2; i++) {
+         if (temporary_brushes[i].num_sides < 3) {
+-            return false;
++            if(trace)logging::print("P4 CHECK rejection line={}\n",__LINE__);return false;
+         }
+ 
+         if (!temporary_brushes[i].update_bounds()) {
+-            return false;
++            if(trace)logging::print("P4 CHECK rejection line={}\n",__LINE__);return false;
+         }
+ 
+         for (int j = 0; j < 3; j++) {
+             if (temporary_brushes[i].bounds.mins()[j] < -qbsp_options.worldextent.value() ||
+                 temporary_brushes[i].bounds.maxs()[j] > qbsp_options.worldextent.value()) {
+-                return false;
++                if(trace)logging::print("P4 CHECK rejection line={}\n",__LINE__);return false;
+             }
+         }
+     }
+@@ -783,19 +805,21 @@
+         double v1 =
+             BrushVolume(temporary_brushes[i].sides, temporary_brushes[i].sides + temporary_brushes[i].num_sides);
+         if (v1 < qbsp_options.microvolume.value()) {
+-            return false;
++            if(trace)logging::print("P4 CHECK rejection line={}\n",__LINE__);return false;
+         }
+     }
+ 
+     return true;
+ }
+ 
++static int p4mask(const node_t *);
+ inline bool CheckPlaneAgainstVolume(size_t planenum, const node_t *node)
+ {
+     if (!node->volume)
+         return false;
+ 
+     bool valid = CheckSplitBrush(node->volume, planenum);
++    if(p3world && p4mask(node)){logging::print("P4 ADMIT pass={} path={} plane={} valid={}\n",p3pass,p3nodepath(node),planenum,valid);}
+     if(p3world && std::getenv("P3_PATH") && std::string(std::getenv("P3_PATH")).find(p3path)!=std::string::npos){
+       const qplane3d &p=map.planes[planenum];double f=0,b=0;
+       for(auto &s:node->volume->sides)for(auto &v:s.w){double d=qv::dot(v,p.normal)-p.dist;f=std::max(f,d);b=std::min(b,d);}
+@@ -1210,10 +1234,11 @@
+ {
+     if(p3world)p3path=p3nodepath(node);
+     auto inputhash=p3world?p3hash(brushes):0;
++    p4dump(node,brushes,"before");
+     // find the best plane to use as a splitter
+     auto *bestside = SelectSplitPlane(brushes, node, split_type, stats);
+ 
+-    if(p3world && p3pass<=2){p3nodes<<p3nodepath(node)<<"\t"<<brushes.size()<<"\t"<<inputhash<<"\t";
++    if(p3world && p3pass<=9){p3nodes<<p3nodepath(node)<<"\t"<<brushes.size()<<"\t"<<inputhash<<"\t";
+       if(bestside){const qplane3d &p=map.planes[bestside->planenum & ~1];p3nodes<<(bestside->planenum & ~1)<<"\t"<<p.normal[0]<<" "<<p.normal[1]<<" "<<p.normal[2]<<" "<<p.dist<<"\t";
+       for(auto &b:brushes)for(auto &side:b->sides)if(&side==bestside)p3nodes<<b->mapbrush->line.line_number.value_or(0);}
+       else p3nodes<<"L\t-\t-";
+@@ -1246,6 +1271,8 @@
+ 
+     if(p3world && p3pass==1 && level==0)p3dump("root-input",brushes);
+     if(p3world && p3pass==1 && p3nodepath(node)=="0101010")p3dump("choice-input",brushes);
++
++    if(p3world && p3pass==5 && p4mask(node))for(auto &b:brushes){logging::print("P4 ROUTE path={} best={} line={} side={} xmin={} xmax={} ymin={} ymax={} zmin={} zmax={}\n",p3nodepath(node),bestplane,b->mapbrush->line.line_number.value_or(0),b->side,b->bounds.mins()[0],b->bounds.maxs()[0],b->bounds.mins()[1],b->bounds.maxs()[1],b->bounds.mins()[2],b->bounds.maxs()[2]);}
+     auto children = SplitBrushList(std::move(brushes), bestplane, stats);
+     if(p3world && p3pass==1 && level==0){p3dump("root-front",children[0]);p3dump("root-back",children[1]);}
+ 
+@@ -1300,7 +1327,7 @@
+ void BrushBSP(tree_t &tree, mapentity_t &entity, const bspbrush_t::container &brushlist, tree_split_t split_type)
+ {
+     p3world=map.is_world_entity(entity);
+-    if(p3world){++p3pass;p3nodes.close();if(p3pass<=2)p3nodes.open(fmt::format("{}.tree{}.tsv",qbsp_options.bsp_path.string(),p3pass));p3nodes.precision(17);}
++    if(p3world){++p3pass;p3nodes.close();if(p3pass<=9)p3nodes.open(fmt::format("{}.tree{}.tsv",qbsp_options.bsp_path.string(),p3pass));p3nodes.precision(17);}
+     logging::header(__func__);
+     p3snap("bsp-input",brushlist);
+ 

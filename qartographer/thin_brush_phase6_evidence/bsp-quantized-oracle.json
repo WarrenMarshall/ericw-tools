@@ -1,0 +1,101 @@
+[
+  {
+    "name": "A-hull2-front-binary32-planes",
+    "oracle": {
+      "dimension": 3,
+      "front_dimension": 3,
+      "back_dimension": 3,
+      "section_dimension": 2,
+      "strict_front": 1,
+      "strict_back": 1,
+      "point_consistent": true,
+      "point_query_sign": 1
+    }
+  },
+  {
+    "name": "A-actual-post-csg-route-binary32-planes",
+    "oracle": {
+      "dimension": 3,
+      "front_dimension": 3,
+      "back_dimension": 3,
+      "section_dimension": 2,
+      "strict_front": 1,
+      "strict_back": 1,
+      "point_consistent": true,
+      "point_query_sign": 1
+    }
+  },
+  {
+    "name": "B-narrow-quadrilateral-binary32-planes",
+    "oracle": {
+      "dimension": 3,
+      "front_dimension": 3,
+      "back_dimension": 3,
+      "section_dimension": 2,
+      "strict_front": 1,
+      "strict_back": 1
+    }
+  },
+  {
+    "name": "C-sky-roof-gap-binary32-planes",
+    "oracle": {
+      "dimension": 3,
+      "front_dimension": 3,
+      "back_dimension": 2,
+      "section_dimension": 2,
+      "strict_front": 1,
+      "strict_back": 0,
+      "point_consistent": true,
+      "point_query_sign": 1
+    }
+  },
+  {
+    "name": "D-halloween-rounded-extent-binary32-planes",
+    "oracle": {
+      "dimension": 3,
+      "front_dimension": -1,
+      "back_dimension": 3,
+      "section_dimension": -1,
+      "strict_front": 0,
+      "strict_back": 1,
+      "point_consistent": false,
+      "point_query_sign": -1
+    },
+    "extent": {
+      "minimum": "-3014655/32768",
+      "maximum": "-4801437/200788066304",
+      "minimum_float": -91.99996948242188,
+      "maximum_float": -2.3912960009936347e-05
+    }
+  },
+  {
+    "name": "E-p1-rounded-extent-binary32-planes",
+    "oracle": {
+      "dimension": 3,
+      "front_dimension": -1,
+      "back_dimension": 3,
+      "section_dimension": -1,
+      "strict_front": 0,
+      "strict_back": 1,
+      "point_consistent": false,
+      "point_query_sign": 1
+    },
+    "extent": {
+      "minimum": "-200433333652255512795979705489/4871251323443331885315588096",
+      "maximum": "-6206478687039665279187/12071580299903841561739264",
+      "minimum_float": -41.14616970954715,
+      "maximum_float": -0.0005141397010869492
+    }
+  },
+  {
+    "name": "F-rotated-portal-binary32-planes",
+    "oracle": {
+      "dimension": 1,
+      "front_dimension": 1,
+      "back_dimension": 1,
+      "section_dimension": 1,
+      "strict_front": 0,
+      "strict_back": 0
+    }
+  }
+]

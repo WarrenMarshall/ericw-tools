@@ -1,0 +1,88 @@
+---- final-qqbsp / ericw-tools  ----
+
+--- Options Summary ---
+    "nopercent" was set to "1" (from command line)
+    "bsp2" was set to "1" (from command line)
+    "notex" was set to "1" (from command line)
+
+Input file: /tmp/qqbsp-phase8/evidence/accepted-experiment-matrix/near-coplanar-default/input.map
+Output file: /tmp/qqbsp-phase8/evidence/accepted-experiment-matrix/near-coplanar-default/input.bsp
+
+INFO: using built-in palette.
+WARNING: No wad or _wad key exists in the worldmodel
+     1 entities
+     2 unique textures
+     7 texinfos
+    16 unique planes
+
+INFO: world extents calculated to 328 units
+     2 brushes
+    12 sides
+
+            0 texture frames added
+WARNING: unable to find texture skip
+WARNING: unable to find texture NO_TEXTURE
+Processing hull 0...
+    2 SOLID brushes
+    2 brushes total
+    12 visible sides
+INFO: calculating BSP for 2 brushes with 12 sides
+     2 brushes
+    12 visible faces
+    8 nodes
+    8 expensive split nodes
+    9 leaves
+    2 SOLID leafs
+    7 EMPTY leafs
+    9 leafs total
+    8 max tree height
+    5 avg tree height
+    16 tiny portals
+    46 tree portals
+WARNING: No entities in empty space -- no filling performed (hull 0)
+    16 tiny portals
+    46 tree portals
+    24 sides visible
+    12 makefaces
+    5 tiny portals
+     7 player-occupiable leaves
+     7 clusters of leaves
+    16 vis portals
+    2 SOLID leafs
+    7 EMPTY leafs
+    9 leafs total
+    8 max tree height
+    5 avg tree height
+    16 edges degenerated
+     8 faces degenerated
+     4 faces optimized through MWT
+     8 triangles computed from MWT
+    12 edges
+     4 faces
+Processing hull 1...
+WARNING: No entities in empty space -- no filling performed (hull 1)
+Processing hull 2...
+WARNING: No entities in empty space -- no filling performed (hull 2)
+Writing /tmp/qqbsp-phase8/evidence/accepted-experiment-matrix/near-coplanar-default/input.bsp as Quake BSP2 bsp2
+Wrote /tmp/qqbsp-phase8/evidence/accepted-experiment-matrix/near-coplanar-default/input.bsp
+
+count   lump name    byte size 
+      1 models               64
+     21 planes              420
+      4 vertexes             48
+      8 nodes               352
+      2 texinfos             80
+      4 faces               112
+     22 clipnodes           264
+      8 leafs               352
+      4 marksurfaces         16
+     13 edges               104
+     16 surfedges            64
+      2 textures             12
+        lightdata             0
+        visdata               0
+        entdata              30
+
+0.034s seconds elapsed
+
+

@@ -1,0 +1,470 @@
+[
+  {
+    "point": [
+      -1388,
+      -233,
+      8.778914155553586
+    ],
+    "leaf": 0,
+    "contents": -2,
+    "path": [
+      {
+        "node": 0,
+        "plane": 0,
+        "branch": 1
+      },
+      {
+        "node": 8433,
+        "plane": 3983,
+        "branch": 1
+      },
+      {
+        "node": 24697,
+        "plane": 3638,
+        "branch": 1
+      },
+      {
+        "node": 32730,
+        "plane": 2745,
+        "branch": 0
+      },
+      {
+        "node": 32731,
+        "plane": 634,
+        "branch": 0
+      },
+      {
+        "node": 32732,
+        "plane": 2747,
+        "branch": 0
+      },
+      {
+        "node": 32733,
+        "plane": 3716,
+        "branch": 0
+      },
+      {
+        "node": 32734,
+        "plane": 441,
+        "branch": 1
+      },
+      {
+        "node": 32845,
+        "plane": 438,
+        "branch": 1
+      },
+      {
+        "node": 32846,
+        "plane": 2748,
+        "branch": 0
+      },
+      {
+        "node": 32847,
+        "plane": 187,
+        "branch": 1
+      },
+      {
+        "node": 32848,
+        "plane": 2779,
+        "branch": 0
+      },
+      {
+        "node": 32849,
+        "plane": 2766,
+        "branch": 1
+      },
+      {
+        "node": 33128,
+        "plane": 4490,
+        "branch": 0
+      },
+      {
+        "node": 33129,
+        "plane": 2763,
+        "branch": 1
+      },
+      {
+        "node": 33130,
+        "plane": 773,
+        "branch": 0
+      },
+      {
+        "node": 33131,
+        "plane": 2847,
+        "branch": 0
+      },
+      {
+        "node": 33132,
+        "plane": 2850,
+        "branch": 0
+      },
+      {
+        "node": 33133,
+        "plane": 3743,
+        "branch": 1
+      },
+      {
+        "node": 33140,
+        "plane": 2853,
+        "branch": 0
+      },
+      {
+        "node": 33141,
+        "plane": 2810,
+        "branch": 1
+      },
+      {
+        "node": 33142,
+        "plane": 2811,
+        "branch": 1
+      },
+      {
+        "node": 33143,
+        "plane": 2868,
+        "branch": 0
+      },
+      {
+        "node": 33144,
+        "plane": 2854,
+        "branch": 0
+      },
+      {
+        "node": 33145,
+        "plane": 2827,
+        "branch": 0
+      },
+      {
+        "node": 33146,
+        "plane": 4482,
+        "branch": 1
+      },
+      {
+        "node": 33147,
+        "plane": 2836,
+        "branch": 0
+      },
+      {
+        "node": 33148,
+        "plane": 2815,
+        "branch": 0
+      },
+      {
+        "node": 33149,
+        "plane": 2855,
+        "branch": 0
+      }
+    ]
+  },
+  {
+    "point": [
+      -1376,
+      -257,
+      -12.914510661888684
+    ],
+    "leaf": 0,
+    "contents": -2,
+    "path": [
+      {
+        "node": 0,
+        "plane": 0,
+        "branch": 1
+      },
+      {
+        "node": 8433,
+        "plane": 3983,
+        "branch": 1
+      },
+      {
+        "node": 24697,
+        "plane": 3638,
+        "branch": 1
+      },
+      {
+        "node": 32730,
+        "plane": 2745,
+        "branch": 0
+      },
+      {
+        "node": 32731,
+        "plane": 634,
+        "branch": 0
+      },
+      {
+        "node": 32732,
+        "plane": 2747,
+        "branch": 0
+      },
+      {
+        "node": 32733,
+        "plane": 3716,
+        "branch": 0
+      },
+      {
+        "node": 32734,
+        "plane": 441,
+        "branch": 1
+      },
+      {
+        "node": 32845,
+        "plane": 438,
+        "branch": 1
+      },
+      {
+        "node": 32846,
+        "plane": 2748,
+        "branch": 0
+      },
+      {
+        "node": 32847,
+        "plane": 187,
+        "branch": 1
+      },
+      {
+        "node": 32848,
+        "plane": 2779,
+        "branch": 0
+      },
+      {
+        "node": 32849,
+        "plane": 2766,
+        "branch": 1
+      },
+      {
+        "node": 33128,
+        "plane": 4490,
+        "branch": 0
+      },
+      {
+        "node": 33129,
+        "plane": 2763,
+        "branch": 1
+      },
+      {
+        "node": 33130,
+        "plane": 773,
+        "branch": 0
+      },
+      {
+        "node": 33131,
+        "plane": 2847,
+        "branch": 0
+      },
+      {
+        "node": 33132,
+        "plane": 2850,
+        "branch": 0
+      },
+      {
+        "node": 33133,
+        "plane": 3743,
+        "branch": 1
+      },
+      {
+        "node": 33140,
+        "plane": 2853,
+        "branch": 0
+      },
+      {
+        "node": 33141,
+        "plane": 2810,
+        "branch": 1
+      },
+      {
+        "node": 33142,
+        "plane": 2811,
+        "branch": 1
+      },
+      {
+        "node": 33143,
+        "plane": 2868,
+        "branch": 0
+      },
+      {
+        "node": 33144,
+        "plane": 2854,
+        "branch": 0
+      },
+      {
+        "node": 33145,
+        "plane": 2827,
+        "branch": 0
+      },
+      {
+        "node": 33146,
+        "plane": 4482,
+        "branch": 1
+      },
+      {
+        "node": 33147,
+        "plane": 2836,
+        "branch": 0
+      },
+      {
+        "node": 33148,
+        "plane": 2815,
+        "branch": 0
+      },
+      {
+        "node": 33149,
+        "plane": 2855,
+        "branch": 0
+      }
+    ]
+  },
+  {
+    "point": [
+      -1364,
+      -269,
+      11.605075569064333
+    ],
+    "leaf": 0,
+    "contents": -2,
+    "path": [
+      {
+        "node": 0,
+        "plane": 0,
+        "branch": 1
+      },
+      {
+        "node": 8433,
+        "plane": 3983,
+        "branch": 1
+      },
+      {
+        "node": 24697,
+        "plane": 3638,
+        "branch": 1
+      },
+      {
+        "node": 32730,
+        "plane": 2745,
+        "branch": 0
+      },
+      {
+        "node": 32731,
+        "plane": 634,
+        "branch": 0
+      },
+      {
+        "node": 32732,
+        "plane": 2747,
+        "branch": 0
+      },
+      {
+        "node": 32733,
+        "plane": 3716,
+        "branch": 0
+      },
+      {
+        "node": 32734,
+        "plane": 441,
+        "branch": 1
+      },
+      {
+        "node": 32845,
+        "plane": 438,
+        "branch": 1
+      },
+      {
+        "node": 32846,
+        "plane": 2748,
+        "branch": 0
+      },
+      {
+        "node": 32847,
+        "plane": 187,
+        "branch": 1
+      },
+      {
+        "node": 32848,
+        "plane": 2779,
+        "branch": 0
+      },
+      {
+        "node": 32849,
+        "plane": 2766,
+        "branch": 1
+      },
+      {
+        "node": 33128,
+        "plane": 4490,
+        "branch": 0
+      },
+      {
+        "node": 33129,
+        "plane": 2763,
+        "branch": 1
+      },
+      {
+        "node": 33130,
+        "plane": 773,
+        "branch": 0
+      },
+      {
+        "node": 33131,
+        "plane": 2847,
+        "branch": 0
+      },
+      {
+        "node": 33132,
+        "plane": 2850,
+        "branch": 0
+      },
+      {
+        "node": 33133,
+        "plane": 3743,
+        "branch": 1
+      },
+      {
+        "node": 33140,
+        "plane": 2853,
+        "branch": 0
+      },
+      {
+        "node": 33141,
+        "plane": 2810,
+        "branch": 1
+      },
+      {
+        "node": 33142,
+        "plane": 2811,
+        "branch": 1
+      },
+      {
+        "node": 33143,
+        "plane": 2868,
+        "branch": 0
+      },
+      {
+        "node": 33144,
+        "plane": 2854,
+        "branch": 0
+      },
+      {
+        "node": 33145,
+        "plane": 2827,
+        "branch": 0
+      },
+      {
+        "node": 33146,
+        "plane": 4482,
+        "branch": 1
+      },
+      {
+        "node": 33147,
+        "plane": 2836,
+        "branch": 0
+      },
+      {
+        "node": 33148,
+        "plane": 2815,
+        "branch": 0
+      },
+      {
+        "node": 33149,
+        "plane": 2855,
+        "branch": 0
+      }
+    ]
+  }
+]

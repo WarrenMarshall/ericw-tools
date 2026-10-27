@@ -1,0 +1,23 @@
+Note: Google Test filter = phase7.CompleteRegionCoverage:qbsp.duplicatePlanes:qbsp.emptyBrush
+[==========] Running 3 tests from 2 test suites.
+[----------] Global test environment set-up.
+[----------] 2 tests from qbsp
+[ RUN      ] qbsp.duplicatePlanes
+duplicatePlanes[line 11]: Brush with duplicate plane
+WARNING: No wad or _wad key exists in the worldmodel
+INFO: world extents calculated to 2568 units
+[       OK ] qbsp.duplicatePlanes (0 ms)
+[ RUN      ] qbsp.emptyBrush
+WARNING: No wad or _wad key exists in the worldmodel
+INFO: world extents calculated to 616 units
+[       OK ] qbsp.emptyBrush (0 ms)
+[----------] 2 tests from qbsp (0 ms total)
+
+[----------] 1 test from phase7
+[ RUN      ] phase7.CompleteRegionCoverage
+[       OK ] phase7.CompleteRegionCoverage (0 ms)
+[----------] 1 test from phase7 (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 3 tests from 2 test suites ran. (1 ms total)
+[  PASSED  ] 3 tests.

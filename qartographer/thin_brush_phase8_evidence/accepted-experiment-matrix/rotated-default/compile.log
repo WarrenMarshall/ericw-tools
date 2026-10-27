@@ -1,0 +1,118 @@
+Qartographer qqbsp, upstream=ccaeb8457a1267860ebe99ed1df7394ebdd6b435, downstream=4b505ae25e508a8910b031e94d6f1ea60ac06a95-phase7-experimental, patches=P1, experiment=phase8-unaccepted
+---- final-qqbsp / ericw-tools  ----
+low priority not compiled into this version
+logging to /tmp/qqbsp-phase8/evidence/accepted-experiment-matrix/rotated-default/input.log (truncate)
+
+--- Options Summary ---
+    "nopercent" was set to "1" (from command line)
+    "bsp2" was set to "1" (from command line)
+    "notex" was set to "1" (from command line)
+
+Input file: /tmp/qqbsp-phase8/evidence/accepted-experiment-matrix/rotated-default/input.map
+Output file: /tmp/qqbsp-phase8/evidence/accepted-experiment-matrix/rotated-default/input.bsp
+
+INFO: using built-in palette.
+---- LoadMapFile ----
+[33mWARNING: No wad or _wad key exists in the worldmodel
+[0m[36m     1 entities
+[0m[36m     2 unique textures
+[0m[36m     4 texinfos
+[0m[36m    12 unique planes
+[0m[36m
+[0m---- ProcessMapBrushes ----
+INFO: world extents calculated to 343 units
+[36m     1 brushes
+[0m[36m     6 sides
+[0m[36m    14 side bevels
+[0m[36m
+[0m[36m            0 texture frames added
+[0m[33mWARNING: unable to find texture skip
+[0m[33mWARNING: unable to find texture NO_TEXTURE
+[0mProcessing hull 0...
+---- Brush_LoadEntity ----
+---- CountBrushes ----
+[36m    1 SOLID brushes
+[0m[36m    1 brushes total
+[0m[36m    6 visible sides
+[0m[36mINFO: calculating BSP for 1 brushes with 6 sides
+[0m---- BrushBSP ----
+[36m    1 brushes
+[0m[36m    6 visible faces
+[0m[36m    6 nodes
+[0m[36m    6 expensive split nodes
+[0m[36m    7 leaves
+[0m---- CountLeafs ----
+[36m    1 SOLID leafs
+[0m[36m    6 EMPTY leafs
+[0m[36m    7 leafs total
+[0m[36m    7 max tree height
+[0m[36m    4 avg tree height
+[0m---- MakeTreePortals ----
+[36m    12 tiny portals
+[0m---- CalcTreeBounds ----
+[36m    36 tree portals
+[0m---- FillOutside ----
+[33mWARNING: No entities in empty space -- no filling performed (hull 0)
+[0m---- MakeTreePortals ----
+[36m    12 tiny portals
+[0m---- CalcTreeBounds ----
+[36m    36 tree portals
+[0m---- MarkVisibleSides ----
+[36m    12 sides visible
+[0m---- MakeFaces ----
+[36m    6 makefaces
+[0m---- PruneNodes ----
+---- WritePortalFile ----
+[36m    3 tiny portals
+[0m[36m     6 player-occupiable leaves
+[0m[36m     6 clusters of leaves
+[0m[36m    12 vis portals
+[0m---- CountLeafs ----
+[36m    1 SOLID leafs
+[0m[36m    6 EMPTY leafs
+[0m[36m    7 leafs total
+[0m[36m    7 max tree height
+[0m[36m    4 avg tree height
+[0m---- TJunc ----
+[36m    8 edges degenerated
+[0m[36m    3 faces degenerated
+[0m[36m    3 edges added by tjunctions
+[0m[36m    3 faces optimized through MWT
+[0m[36m    8 triangles computed from MWT
+[0m---- EmitFaces ----
+[36m    7 edges
+[0m[36m    3 faces
+[0mProcessing hull 1...
+PHASE8 CERTIFIED_REDUNDANT_COLLISION_PORTAL plane={normal: 0.935511814799356 0.3532954066653224 -0, dist: 51.885514642389396} alternative_edges=2
+PHASE8 CERTIFIED_REDUNDANT_COLLISION_PORTAL plane={normal: -0.3700714681925303 0.9290032876313329 0, dist: 84.55735221721442} alternative_edges=2
+PHASE8 CERTIFIED_REDUNDANT_COLLISION_PORTAL plane={normal: 0.9355118147993555 0.35329540666532355 0, dist: -51.88551464238943} alternative_edges=2
+PHASE8 CERTIFIED_REDUNDANT_COLLISION_PORTAL plane={normal: -0.3700714681926348 0.9290032876312914 -0, dist: -20.785533565093743} alternative_edges=2
+[33mWARNING: No entities in empty space -- no filling performed (hull 1)
+[0mProcessing hull 2...
+PHASE8 CERTIFIED_REDUNDANT_COLLISION_PORTAL plane={normal: 0.935511814799356 0.3532954066653224 -0, dist: 72.50643018582424} alternative_edges=2
+PHASE8 CERTIFIED_REDUNDANT_COLLISION_PORTAL plane={normal: -0.3700714681925303 0.9290032876313329 0, dist: 105.34254831039623} alternative_edges=2
+PHASE8 CERTIFIED_REDUNDANT_COLLISION_PORTAL plane={normal: 0.9355118147993555 0.35329540666532355 0, dist: -72.5064301858243} alternative_edges=2
+PHASE8 CERTIFIED_REDUNDANT_COLLISION_PORTAL plane={normal: -0.3700714681926348 0.9290032876312914 -0, dist: -41.57072965827656} alternative_edges=2
+[33mWARNING: No entities in empty space -- no filling performed (hull 2)
+[0m---- FinishBSPFile ----
+Writing /tmp/qqbsp-phase8/evidence/accepted-experiment-matrix/rotated-default/input.bsp as Quake BSP2 bsp2
+Wrote /tmp/qqbsp-phase8/evidence/accepted-experiment-matrix/rotated-default/input.bsp
+
+count   lump name    byte size 
+      1 models               64
+     45 planes              900
+      5 vertexes             60
+      6 nodes               264
+      2 texinfos             80
+      3 faces                84
+     40 clipnodes           480
+      7 leafs               308
+      3 marksurfaces         12
+      8 edges                64
+     14 surfedges            56
+      2 textures             12
+        lightdata             0
+        visdata               0
+        entdata              30
+
+1.284s seconds elapsed

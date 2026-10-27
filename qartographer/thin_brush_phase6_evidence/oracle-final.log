@@ -1,0 +1,88 @@
+A-hull2-front {'dimension': 3, 'front_dimension': 3, 'back_dimension': 3, 'section_dimension': 2, 'strict_front': 1, 'strict_back': 1, 'point_consistent': True, 'point_query_sign': 1} {} {}
+A-actual-post-csg-route {'dimension': 3, 'front_dimension': 3, 'back_dimension': 3, 'section_dimension': 2, 'strict_front': 1, 'strict_back': 1, 'point_consistent': True, 'point_query_sign': 1} {} {}
+B-narrow-quadrilateral {'dimension': 3, 'front_dimension': 3, 'back_dimension': 3, 'section_dimension': 2, 'strict_front': 1, 'strict_back': 1} {} {}
+C-sky-roof-gap {'dimension': 3, 'front_dimension': 3, 'back_dimension': 3, 'section_dimension': 2, 'strict_front': 1, 'strict_back': 1, 'point_consistent': True, 'point_query_sign': 0} {} {}
+D-halloween-rounded-extent {'dimension': 3, 'front_dimension': 3, 'back_dimension': 3, 'section_dimension': 2, 'strict_front': 1, 'strict_back': 1, 'point_consistent': False, 'point_query_sign': 1} {} {}
+E-p1-rounded-extent {'dimension': 3, 'front_dimension': -1, 'back_dimension': 3, 'section_dimension': -1, 'strict_front': 0, 'strict_back': 1, 'point_consistent': False, 'point_query_sign': 1} {} {}
+F-rotated-portal {'dimension': 1, 'front_dimension': 1, 'back_dimension': 1, 'section_dimension': 1, 'strict_front': 0, 'strict_back': 0} {} {}
+F-base-winding {'dimension': 3, 'front_dimension': 3, 'back_dimension': 3, 'section_dimension': 2, 'strict_front': 1, 'strict_back': 1} {} {}
+F-make-portal {'dimension': 3, 'front_dimension': 3, 'back_dimension': 3, 'section_dimension': 2, 'strict_front': 1, 'strict_back': 1} {} {}
+ordinary-box {'dimension': 3, 'front_dimension': 3, 'back_dimension': 3, 'section_dimension': 2, 'strict_front': 1, 'strict_back': 1, 'point_consistent': True, 'point_query_sign': 0} {} {}
+face-contact {'dimension': 2, 'front_dimension': -1, 'back_dimension': 2, 'section_dimension': -1, 'strict_front': 0, 'strict_back': 1} {} {}
+edge-contact {'dimension': 1, 'front_dimension': -1, 'back_dimension': 1, 'section_dimension': -1, 'strict_front': 0, 'strict_back': 1} {} {}
+point-contact {'dimension': 0, 'front_dimension': -1, 'back_dimension': 0, 'section_dimension': -1, 'strict_front': 0, 'strict_back': 1} {} {}
+empty {'dimension': -1, 'front_dimension': -1, 'back_dimension': -1, 'section_dimension': -1, 'strict_front': 0, 'strict_back': 0} {} {}
+binary-2^-45 {'dimension': 3, 'front_dimension': 3, 'back_dimension': 2, 'section_dimension': 2, 'strict_front': 1, 'strict_back': 0} {} {}
+binary-2^-500 {'dimension': 3, 'front_dimension': 3, 'back_dimension': 2, 'section_dimension': 2, 'strict_front': 1, 'strict_back': 0} {} {}
+min-subnormal {'dimension': 3, 'front_dimension': 3, 'back_dimension': 2, 'section_dimension': 2, 'strict_front': 1, 'strict_back': 0} {} {}
+large-coordinate-ulp {'dimension': 3, 'front_dimension': 3, 'back_dimension': 2, 'section_dimension': 2, 'strict_front': 1, 'strict_back': 0} {} {}
+nearly-parallel {'dimension': 3, 'front_dimension': 3, 'back_dimension': 3, 'section_dimension': 2, 'strict_front': 1, 'strict_back': 1} {} {}
+transformed-box {'dimension': 3, 'front_dimension': 3, 'back_dimension': 3, 'section_dimension': 2, 'strict_front': 1, 'strict_back': 1} {} {}
+rotated-translated {'dimension': 3, 'front_dimension': 3, 'back_dimension': 3, 'section_dimension': 2, 'strict_front': 1, 'strict_back': 1} {} {}
+coincident {'dimension': 3, 'front_dimension': 3, 'back_dimension': 3, 'section_dimension': 2, 'strict_front': 1, 'strict_back': 1, 'relation': 'Equivalent'} {} {}
+opposing {'dimension': 2, 'front_dimension': 2, 'back_dimension': 2, 'section_dimension': 2, 'strict_front': 0, 'strict_back': 0, 'relation': 'Opposing'} {} {}
+not-approximately-equivalent {'dimension': 3, 'front_dimension': 3, 'back_dimension': 3, 'section_dimension': 2, 'strict_front': 1, 'strict_back': 1, 'relation': 'Distinct'} {} {}
+zero-redundant {'dimension': 3, 'front_dimension': 3, 'back_dimension': 3, 'section_dimension': 2, 'strict_front': 1, 'strict_back': 1} {} {}
+zero-inconsistent {'dimension': -1, 'front_dimension': -1, 'back_dimension': -1, 'section_dimension': -1, 'strict_front': 0, 'strict_back': 0} {} {}
+unbounded-explicit-limit {'dimension': 3} {} {}
+overflow-filter {'dimension': 3, 'front_dimension': 3, 'back_dimension': 3, 'section_dimension': 2, 'strict_front': 1, 'strict_back': 1} {} {}
+A-hull2-front-reverse {'dimension': 3, 'front_dimension': 3, 'back_dimension': 3, 'section_dimension': 2, 'strict_front': 1, 'strict_back': 1, 'point_consistent': True, 'point_query_sign': 1} {} {}
+A-hull2-front-shuffle-duplicates {'dimension': 3, 'front_dimension': 3, 'back_dimension': 3, 'section_dimension': 2, 'strict_front': 1, 'strict_back': 1, 'point_consistent': True, 'point_query_sign': 1} {} {}
+A-actual-post-csg-route-reverse {'dimension': 3, 'front_dimension': 3, 'back_dimension': 3, 'section_dimension': 2, 'strict_front': 1, 'strict_back': 1, 'point_consistent': True, 'point_query_sign': 1} {} {}
+A-actual-post-csg-route-shuffle-duplicates {'dimension': 3, 'front_dimension': 3, 'back_dimension': 3, 'section_dimension': 2, 'strict_front': 1, 'strict_back': 1, 'point_consistent': True, 'point_query_sign': 1} {} {}
+B-narrow-quadrilateral-reverse {'dimension': 3, 'front_dimension': 3, 'back_dimension': 3, 'section_dimension': 2, 'strict_front': 1, 'strict_back': 1} {} {}
+B-narrow-quadrilateral-shuffle-duplicates {'dimension': 3, 'front_dimension': 3, 'back_dimension': 3, 'section_dimension': 2, 'strict_front': 1, 'strict_back': 1} {} {}
+C-sky-roof-gap-reverse {'dimension': 3, 'front_dimension': 3, 'back_dimension': 3, 'section_dimension': 2, 'strict_front': 1, 'strict_back': 1, 'point_consistent': True, 'point_query_sign': 0} {} {}
+C-sky-roof-gap-shuffle-duplicates {'dimension': 3, 'front_dimension': 3, 'back_dimension': 3, 'section_dimension': 2, 'strict_front': 1, 'strict_back': 1, 'point_consistent': True, 'point_query_sign': 0} {} {}
+D-halloween-rounded-extent-reverse {'dimension': 3, 'front_dimension': 3, 'back_dimension': 3, 'section_dimension': 2, 'strict_front': 1, 'strict_back': 1, 'point_consistent': False, 'point_query_sign': 1} {} {}
+D-halloween-rounded-extent-shuffle-duplicates {'dimension': 3, 'front_dimension': 3, 'back_dimension': 3, 'section_dimension': 2, 'strict_front': 1, 'strict_back': 1, 'point_consistent': False, 'point_query_sign': 1} {} {}
+E-p1-rounded-extent-reverse {'dimension': 3, 'front_dimension': -1, 'back_dimension': 3, 'section_dimension': -1, 'strict_front': 0, 'strict_back': 1, 'point_consistent': False, 'point_query_sign': 1} {} {}
+E-p1-rounded-extent-shuffle-duplicates {'dimension': 3, 'front_dimension': -1, 'back_dimension': 3, 'section_dimension': -1, 'strict_front': 0, 'strict_back': 1, 'point_consistent': False, 'point_query_sign': 1} {} {}
+F-rotated-portal-reverse {'dimension': 1, 'front_dimension': 1, 'back_dimension': 1, 'section_dimension': 1, 'strict_front': 0, 'strict_back': 0} {} {}
+F-rotated-portal-shuffle-duplicates {'dimension': 1, 'front_dimension': 1, 'back_dimension': 1, 'section_dimension': 1, 'strict_front': 0, 'strict_back': 0} {} {}
+F-base-winding-reverse {'dimension': 3, 'front_dimension': 3, 'back_dimension': 3, 'section_dimension': 2, 'strict_front': 1, 'strict_back': 1} {} {}
+F-base-winding-shuffle-duplicates {'dimension': 3, 'front_dimension': 3, 'back_dimension': 3, 'section_dimension': 2, 'strict_front': 1, 'strict_back': 1} {} {}
+F-make-portal-reverse {'dimension': 3, 'front_dimension': 3, 'back_dimension': 3, 'section_dimension': 2, 'strict_front': 1, 'strict_back': 1} {} {}
+F-make-portal-shuffle-duplicates {'dimension': 3, 'front_dimension': 3, 'back_dimension': 3, 'section_dimension': 2, 'strict_front': 1, 'strict_back': 1} {} {}
+ordinary-box-reverse {'dimension': 3, 'front_dimension': 3, 'back_dimension': 3, 'section_dimension': 2, 'strict_front': 1, 'strict_back': 1, 'point_consistent': True, 'point_query_sign': 0} {} {}
+ordinary-box-shuffle-duplicates {'dimension': 3, 'front_dimension': 3, 'back_dimension': 3, 'section_dimension': 2, 'strict_front': 1, 'strict_back': 1, 'point_consistent': True, 'point_query_sign': 0} {} {}
+face-contact-reverse {'dimension': 2, 'front_dimension': -1, 'back_dimension': 2, 'section_dimension': -1, 'strict_front': 0, 'strict_back': 1} {} {}
+face-contact-shuffle-duplicates {'dimension': 2, 'front_dimension': -1, 'back_dimension': 2, 'section_dimension': -1, 'strict_front': 0, 'strict_back': 1} {} {}
+edge-contact-reverse {'dimension': 1, 'front_dimension': -1, 'back_dimension': 1, 'section_dimension': -1, 'strict_front': 0, 'strict_back': 1} {} {}
+edge-contact-shuffle-duplicates {'dimension': 1, 'front_dimension': -1, 'back_dimension': 1, 'section_dimension': -1, 'strict_front': 0, 'strict_back': 1} {} {}
+point-contact-reverse {'dimension': 0, 'front_dimension': -1, 'back_dimension': 0, 'section_dimension': -1, 'strict_front': 0, 'strict_back': 1} {} {}
+point-contact-shuffle-duplicates {'dimension': 0, 'front_dimension': -1, 'back_dimension': 0, 'section_dimension': -1, 'strict_front': 0, 'strict_back': 1} {} {}
+empty-reverse {'dimension': -1, 'front_dimension': -1, 'back_dimension': -1, 'section_dimension': -1, 'strict_front': 0, 'strict_back': 0} {} {}
+empty-shuffle-duplicates {'dimension': -1, 'front_dimension': -1, 'back_dimension': -1, 'section_dimension': -1, 'strict_front': 0, 'strict_back': 0} {} {}
+binary-2^-45-reverse {'dimension': 3, 'front_dimension': 3, 'back_dimension': 2, 'section_dimension': 2, 'strict_front': 1, 'strict_back': 0} {} {}
+binary-2^-45-shuffle-duplicates {'dimension': 3, 'front_dimension': 3, 'back_dimension': 2, 'section_dimension': 2, 'strict_front': 1, 'strict_back': 0} {} {}
+binary-2^-500-reverse {'dimension': 3, 'front_dimension': 3, 'back_dimension': 2, 'section_dimension': 2, 'strict_front': 1, 'strict_back': 0} {} {}
+binary-2^-500-shuffle-duplicates {'dimension': 3, 'front_dimension': 3, 'back_dimension': 2, 'section_dimension': 2, 'strict_front': 1, 'strict_back': 0} {} {}
+min-subnormal-reverse {'dimension': 3, 'front_dimension': 3, 'back_dimension': 2, 'section_dimension': 2, 'strict_front': 1, 'strict_back': 0} {} {}
+min-subnormal-shuffle-duplicates {'dimension': 3, 'front_dimension': 3, 'back_dimension': 2, 'section_dimension': 2, 'strict_front': 1, 'strict_back': 0} {} {}
+large-coordinate-ulp-reverse {'dimension': 3, 'front_dimension': 3, 'back_dimension': 2, 'section_dimension': 2, 'strict_front': 1, 'strict_back': 0} {} {}
+large-coordinate-ulp-shuffle-duplicates {'dimension': 3, 'front_dimension': 3, 'back_dimension': 2, 'section_dimension': 2, 'strict_front': 1, 'strict_back': 0} {} {}
+nearly-parallel-reverse {'dimension': 3, 'front_dimension': 3, 'back_dimension': 3, 'section_dimension': 2, 'strict_front': 1, 'strict_back': 1} {} {}
+nearly-parallel-shuffle-duplicates {'dimension': 3, 'front_dimension': 3, 'back_dimension': 3, 'section_dimension': 2, 'strict_front': 1, 'strict_back': 1} {} {}
+transformed-box-reverse {'dimension': 3, 'front_dimension': 3, 'back_dimension': 3, 'section_dimension': 2, 'strict_front': 1, 'strict_back': 1} {} {}
+transformed-box-shuffle-duplicates {'dimension': 3, 'front_dimension': 3, 'back_dimension': 3, 'section_dimension': 2, 'strict_front': 1, 'strict_back': 1} {} {}
+rotated-translated-reverse {'dimension': 3, 'front_dimension': 3, 'back_dimension': 3, 'section_dimension': 2, 'strict_front': 1, 'strict_back': 1} {} {}
+rotated-translated-shuffle-duplicates {'dimension': 3, 'front_dimension': 3, 'back_dimension': 3, 'section_dimension': 2, 'strict_front': 1, 'strict_back': 1} {} {}
+coincident-reverse {'dimension': 3, 'front_dimension': 3, 'back_dimension': 3, 'section_dimension': 2, 'strict_front': 1, 'strict_back': 1, 'relation': 'Equivalent'} {} {}
+coincident-shuffle-duplicates {'dimension': 3, 'front_dimension': 3, 'back_dimension': 3, 'section_dimension': 2, 'strict_front': 1, 'strict_back': 1, 'relation': 'Equivalent'} {} {}
+opposing-reverse {'dimension': 2, 'front_dimension': 2, 'back_dimension': 2, 'section_dimension': 2, 'strict_front': 0, 'strict_back': 0, 'relation': 'Opposing'} {} {}
+opposing-shuffle-duplicates {'dimension': 2, 'front_dimension': 2, 'back_dimension': 2, 'section_dimension': 2, 'strict_front': 0, 'strict_back': 0, 'relation': 'Opposing'} {} {}
+not-approximately-equivalent-reverse {'dimension': 3, 'front_dimension': 3, 'back_dimension': 3, 'section_dimension': 2, 'strict_front': 1, 'strict_back': 1, 'relation': 'Distinct'} {} {}
+not-approximately-equivalent-shuffle-duplicates {'dimension': 3, 'front_dimension': 3, 'back_dimension': 3, 'section_dimension': 2, 'strict_front': 1, 'strict_back': 1, 'relation': 'Distinct'} {} {}
+zero-redundant-reverse {'dimension': 3, 'front_dimension': 3, 'back_dimension': 3, 'section_dimension': 2, 'strict_front': 1, 'strict_back': 1} {} {}
+zero-redundant-shuffle-duplicates {'dimension': 3, 'front_dimension': 3, 'back_dimension': 3, 'section_dimension': 2, 'strict_front': 1, 'strict_back': 1} {} {}
+zero-inconsistent-reverse {'dimension': -1, 'front_dimension': -1, 'back_dimension': -1, 'section_dimension': -1, 'strict_front': 0, 'strict_back': 0} {} {}
+zero-inconsistent-shuffle-duplicates {'dimension': -1, 'front_dimension': -1, 'back_dimension': -1, 'section_dimension': -1, 'strict_front': 0, 'strict_back': 0} {} {}
+overflow-filter-reverse {'dimension': 3, 'front_dimension': 3, 'back_dimension': 3, 'section_dimension': 2, 'strict_front': 1, 'strict_back': 1} {} {}
+overflow-filter-shuffle-duplicates {'dimension': 3, 'front_dimension': 3, 'back_dimension': 3, 'section_dimension': 2, 'strict_front': 1, 'strict_back': 1} {} {}
+depth-0 {'dimension': 3, 'front_dimension': 3, 'back_dimension': 3, 'section_dimension': 2, 'strict_front': 1, 'strict_back': 1} {} {}
+depth-8 {'dimension': 3, 'front_dimension': 3, 'back_dimension': 3, 'section_dimension': 2, 'strict_front': 1, 'strict_back': 1} {} {}
+depth-16 {'dimension': 3, 'front_dimension': 3, 'back_dimension': 3, 'section_dimension': 2, 'strict_front': 1, 'strict_back': 1} {} {}
+depth-32 {'dimension': 3, 'front_dimension': 3, 'back_dimension': 3, 'section_dimension': 2, 'strict_front': 1, 'strict_back': 1} {} {}
+depth-64 {'dimension': 3, 'front_dimension': 3, 'back_dimension': 3, 'section_dimension': 2, 'strict_front': 1, 'strict_back': 1} {} {}
+PASS

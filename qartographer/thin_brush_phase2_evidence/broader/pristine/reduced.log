@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "/home/warrenmarshall/dev/ericw-tools/qartographer/wildspline_bsp_collision_compile.py", line 124, in <module>
+    main()
+  File "/home/warrenmarshall/dev/ericw-tools/qartographer/wildspline_bsp_collision_compile.py", line 118, in main
+    assert not failures, failures[:10]
+           ^^^^^^^^^^^^
+AssertionError: [{'hull': 1, 'point': (-1844, -185, 54.750525691416364), 'map_margin': 0.2495097182147994, 'contents': -2}, {'hull': 1, 'point': (-1844, -173, 52.68060776696018), 'map_margin': 0.2509285910185035, 'contents': -2}, {'hull': 1, 'point': (-1832, -197, 56.820443615872556), 'map_margin': 0.24809084541110948, 'contents': -2}, {'hull': 1, 'point': (-1844, -185, 54.750525691416364), 'map_margin': 0.2495097182147994, 'contents': -2}, {'hull': 1, 'point': (-1844, -185, 55.05052569141636), 'map_margin': 0.5451378795252744, 'contents': -2}, {'hull': 1, 'point': (-1844, -185, 55.350525691416365), 'map_margin': 0.8407660408357494, 'contents': -2}, {'hull': 1, 'point': (-1844, -185, 55.750525691416364), 'map_margin': 1.2349369225830493, 'contents': -2}, {'hull': 1, 'point': (-1844, -185, 58.750525691416364), 'map_margin': 4.191218535687792, 'contents': -2}, {'hull': 1, 'point': (-1854, -185, 54.750525691416364), 'map_margin': 0.2495097182147994, 'contents': -2}, {'hull': 1, 'point': (-1854, -185, 55.750525691416364), 'map_margin': 1.2349369225830493, 'contents': -2}]

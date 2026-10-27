@@ -1,0 +1,141 @@
+Qartographer qqbsp, upstream=ccaeb8457a1267860ebe99ed1df7394ebdd6b435, downstream=4b505ae25e508a8910b031e94d6f1ea60ac06a95-phase7-experimental, patches=P1, experiment=phase7-unaccepted
+---- qqbsp / ericw-tools  ----
+running with 1 thread(s)
+low priority not compiled into this version
+logging to /tmp/qqbsp-phase7/evidence/campaign/ordinary-rotated-hull0/input.log (truncate)
+
+--- Options Summary ---
+    "threads" was set to "1" (from command line)
+    "nopercent" was set to "1" (from command line)
+    "noclip" was set to "1" (from command line)
+    "chopfragment" was set to "1" (from command line)
+    "notex" was set to "1" (from command line)
+
+Input file: /tmp/qqbsp-phase7/evidence/campaign/ordinary-rotated-hull0/input.map
+Output file: /tmp/qqbsp-phase7/evidence/campaign/ordinary-rotated-hull0/input.bsp
+
+INFO: using built-in palette.
+---- LoadMapFile ----
+[33maddArchive: WARNING: archive '/tmp/qqbsp-phase7/evidence/campaign/ordinary-rotated-hull0/deprecated/free_wad.wad' not found
+[0m[33maddArchive: WARNING: archive 'deprecated/free_wad.wad' not found
+[0m[33maddArchive: WARNING: archive '/tmp/qqbsp-phase7/evidence/campaign/ordinary-rotated-hull0/deprecated/fence.wad' not found
+[0m[33maddArchive: WARNING: archive 'deprecated/fence.wad' not found
+[0m[33maddArchive: WARNING: archive '/tmp/qqbsp-phase7/evidence/campaign/ordinary-rotated-hull0/deprecated/origin.wad' not found
+[0m[33maddArchive: WARNING: archive 'deprecated/origin.wad' not found
+[0m[33maddArchive: WARNING: archive '/tmp/qqbsp-phase7/evidence/campaign/ordinary-rotated-hull0/deprecated/hintskip.wad' not found
+[0m[33maddArchive: WARNING: archive 'deprecated/hintskip.wad' not found
+[0m[33mWARNING: No valid WAD filenames in worldmodel
+[0m[36m     2 entities
+[0m[36m     3 unique textures
+[0m[36m    16 texinfos
+[0m[36m    24 unique planes
+[0m[36m
+[0m---- ProcessMapBrushes ----
+INFO: world extents calculated to 648 units
+[36m     6 brushes
+[0m[36m    36 sides
+[0m[36m    24 side bevels
+[0m[36m
+[0m[36m            0 texture frames added
+[0m[33mWARNING: unable to find texture skip
+[0m[33mWARNING: unable to find texture orangestuff8
+[0m[33mWARNING: unable to find texture bolt16
+[0mProcessing hull 0...
+---- Brush_LoadEntity ----
+---- CountBrushes ----
+[36m    6 SOLID brushes
+[0m[36m    6 brushes total
+[0m[36m    36 visible sides
+[0m[36mINFO: calculating BSP for 6 brushes with 36 sides
+[0m---- BrushBSP ----
+[36m     6 brushes
+[0m[36m    36 visible faces
+[0m[36m    24 nodes
+[0m[36m    24 expensive split nodes
+[0m[36m    25 leaves
+[0m---- CountLeafs ----
+[36m     6 SOLID leafs
+[0m[36m    19 EMPTY leafs
+[0m[36m    25 leafs total
+[0m[36m    8 max tree height
+[0m[36m    6 avg tree height
+[0m---- MakeTreePortals ----
+[36m    130 tiny portals
+[0m---- CalcTreeBounds ----
+[36m    114 tree portals
+[0m---- FillOutside ----
+[36m    18 outside leaves
+[0m---- FillDetail ----
+[36m    0 detail filled leafs
+[0m---- BrushBSP ----
+[36m     6 brushes
+[0m[36m     6 visible faces
+[0m[36m    30 non-visible faces
+[0m[36m    24 nodes
+[0m[36m    18 non-visible nodes
+[0m[36m    24 expensive split nodes
+[0m[36m    25 leaves
+[0m---- CountLeafs ----
+[36m     6 SOLID leafs
+[0m[36m    19 EMPTY leafs
+[0m[36m    25 leafs total
+[0m[36m    8 max tree height
+[0m[36m    6 avg tree height
+[0m---- MakeTreePortals ----
+[36m    132 tiny portals
+[0m---- CalcTreeBounds ----
+[36m    114 tree portals
+[0m---- FillOutside ----
+[36m    18 outside leaves
+[0m---- FillDetail ----
+[36m    0 detail filled leafs
+[0m---- MakeTreePortals ----
+[36m    132 tiny portals
+[0m---- CalcTreeBounds ----
+[36m    114 tree portals
+[0m---- MarkVisibleSides ----
+[36m    12 sides visible
+[0m---- MakeFaces ----
+[36m    6 makefaces
+[0m---- PruneNodes ----
+[36m    18 nodes pruned
+[0m---- WritePortalFile ----
+[36m    3 tiny portals
+[0m[36m    1 player-occupiable leaves
+[0m[36m    1 clusters of leaves
+[0m---- CountLeafs ----
+[36m    1 EMPTY leafs
+[0m[36m    6 SOLID leafs
+[0m[36m    7 leafs total
+[0m[36m    7 max tree height
+[0m[36m    4 avg tree height
+[0m---- TJunc ----
+[36m     3 edges added by tjunctions
+[0m[36m     6 faces optimized through MWT
+[0m[36m    18 triangles computed from MWT
+[0m[36m     1 faces created via optimization of MWT triangles
+[0m---- EmitFaces ----
+[36m    16 edges
+[0m[36m     7 faces
+[0m---- FinishBSPFile ----
+Writing /tmp/qqbsp-phase7/evidence/campaign/ordinary-rotated-hull0/input.bsp as Quake BSP bsp29
+Wrote /tmp/qqbsp-phase7/evidence/campaign/ordinary-rotated-hull0/input.bsp
+
+count   lump name    byte size 
+      1 models               64
+      6 planes              120
+     11 vertexes            132
+      6 nodes               144
+      6 texinfos            240
+      7 faces               140
+      0 clipnodes             0
+      2 leafs                56
+      7 marksurfaces         14
+     17 edges                68
+     32 surfedges           128
+      3 textures             16
+        lightdata             0
+        visdata               0
+        entdata             251
+
+0.284s seconds elapsed

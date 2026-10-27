@@ -1,0 +1,227 @@
+[
+  {
+    "file": "/tmp/qqbsp-phase8/evidence/accepted-experiment-matrix/adjacent-chopfragment/input.bsp",
+    "sha256": "78939ce84bb2664402cb3c166da6f7ae3ac84c600fa54d8ae3cf0f5ae46a460d",
+    "header_lump_bounds_and_existing_leaf_face_checks": true
+  },
+  {
+    "file": "/tmp/qqbsp-phase8/evidence/accepted-experiment-matrix/adjacent-default/input.bsp",
+    "sha256": "78939ce84bb2664402cb3c166da6f7ae3ac84c600fa54d8ae3cf0f5ae46a460d",
+    "header_lump_bounds_and_existing_leaf_face_checks": true
+  },
+  {
+    "file": "/tmp/qqbsp-phase8/evidence/accepted-experiment-matrix/axis-0-chopfragment/input.bsp",
+    "sha256": "5ce383c3090f1ea6a67fc300639083f7bce20ca929f29b07d1fc9dd94291e3b6",
+    "header_lump_bounds_and_existing_leaf_face_checks": true
+  },
+  {
+    "file": "/tmp/qqbsp-phase8/evidence/accepted-experiment-matrix/axis-0-default/input.bsp",
+    "sha256": "5ce383c3090f1ea6a67fc300639083f7bce20ca929f29b07d1fc9dd94291e3b6",
+    "header_lump_bounds_and_existing_leaf_face_checks": true
+  },
+  {
+    "file": "/tmp/qqbsp-phase8/evidence/accepted-experiment-matrix/axis-1-chopfragment/input.bsp",
+    "sha256": "ef4be9a333b5078735e33661efce8064ef9623aae7c57308b8ffd741d8c677ee",
+    "header_lump_bounds_and_existing_leaf_face_checks": true
+  },
+  {
+    "file": "/tmp/qqbsp-phase8/evidence/accepted-experiment-matrix/axis-1-default/input.bsp",
+    "sha256": "ef4be9a333b5078735e33661efce8064ef9623aae7c57308b8ffd741d8c677ee",
+    "header_lump_bounds_and_existing_leaf_face_checks": true
+  },
+  {
+    "file": "/tmp/qqbsp-phase8/evidence/accepted-experiment-matrix/control-chopfragment/input.bsp",
+    "sha256": "170cd6e08c690fcdbffec44ea33862e1170f2b8035763722c74575a03d44064e",
+    "header_lump_bounds_and_existing_leaf_face_checks": true
+  },
+  {
+    "file": "/tmp/qqbsp-phase8/evidence/accepted-experiment-matrix/control-default/input.bsp",
+    "sha256": "170cd6e08c690fcdbffec44ea33862e1170f2b8035763722c74575a03d44064e",
+    "header_lump_bounds_and_existing_leaf_face_checks": true
+  },
+  {
+    "file": "/tmp/qqbsp-phase8/evidence/accepted-experiment-matrix/near-coplanar-chopfragment/input.bsp",
+    "sha256": "469bb325524e040cbaacb8e74951420b16b2be31f1e69443fe7afb9d770b9177",
+    "header_lump_bounds_and_existing_leaf_face_checks": true
+  },
+  {
+    "file": "/tmp/qqbsp-phase8/evidence/accepted-experiment-matrix/near-coplanar-default/input.bsp",
+    "sha256": "469bb325524e040cbaacb8e74951420b16b2be31f1e69443fe7afb9d770b9177",
+    "header_lump_bounds_and_existing_leaf_face_checks": true
+  },
+  {
+    "file": "/tmp/qqbsp-phase8/evidence/accepted-experiment-matrix/original-chopfragment/input.bsp",
+    "sha256": "dd5bab48582c56ed8e37c866e264e00a999a488559fc4fe0ebed4749bfe7d064",
+    "header_lump_bounds_and_existing_leaf_face_checks": true
+  },
+  {
+    "file": "/tmp/qqbsp-phase8/evidence/accepted-experiment-matrix/original-default/input.bsp",
+    "sha256": "dd5bab48582c56ed8e37c866e264e00a999a488559fc4fe0ebed4749bfe7d064",
+    "header_lump_bounds_and_existing_leaf_face_checks": true
+  },
+  {
+    "file": "/tmp/qqbsp-phase8/evidence/accepted-experiment-matrix/overlap-chopfragment/input.bsp",
+    "sha256": "aeb2cc5d3d31d7954f17383dcf24144e447a3e1b151eb23274d9ec7ecaa5495c",
+    "header_lump_bounds_and_existing_leaf_face_checks": true
+  },
+  {
+    "file": "/tmp/qqbsp-phase8/evidence/accepted-experiment-matrix/overlap-default/input.bsp",
+    "sha256": "c30952541ac80308f15628332e97e76f9bc26bad9743ed23b9db7202d032bca3",
+    "header_lump_bounds_and_existing_leaf_face_checks": true
+  },
+  {
+    "file": "/tmp/qqbsp-phase8/evidence/accepted-experiment-matrix/rotated-chopfragment/input.bsp",
+    "sha256": "916c2aa5e584d118c1ed7628baa08da97ea2ab7054dd2f94f582186807b27d66",
+    "header_lump_bounds_and_existing_leaf_face_checks": true
+  },
+  {
+    "file": "/tmp/qqbsp-phase8/evidence/accepted-experiment-matrix/rotated-default/input.bsp",
+    "sha256": "916c2aa5e584d118c1ed7628baa08da97ea2ab7054dd2f94f582186807b27d66",
+    "header_lump_bounds_and_existing_leaf_face_checks": true
+  },
+  {
+    "file": "/tmp/qqbsp-phase8/evidence/accepted-experiment-matrix/thickness-0.0005-chopfragment/input.bsp",
+    "sha256": "984fa1798f70a12a09a557c0d415c4d3f6974953710df95aa684cbfae271e023",
+    "header_lump_bounds_and_existing_leaf_face_checks": true
+  },
+  {
+    "file": "/tmp/qqbsp-phase8/evidence/accepted-experiment-matrix/thickness-0.0005-default/input.bsp",
+    "sha256": "984fa1798f70a12a09a557c0d415c4d3f6974953710df95aa684cbfae271e023",
+    "header_lump_bounds_and_existing_leaf_face_checks": true
+  },
+  {
+    "file": "/tmp/qqbsp-phase8/evidence/accepted-experiment-matrix/thickness-0.002-chopfragment/input.bsp",
+    "sha256": "0921b241bfaf19efde0d3d4c6f5434a68ca61d1ebeb37cb6c97eb413cb0233c0",
+    "header_lump_bounds_and_existing_leaf_face_checks": true
+  },
+  {
+    "file": "/tmp/qqbsp-phase8/evidence/accepted-experiment-matrix/thickness-0.002-default/input.bsp",
+    "sha256": "0921b241bfaf19efde0d3d4c6f5434a68ca61d1ebeb37cb6c97eb413cb0233c0",
+    "header_lump_bounds_and_existing_leaf_face_checks": true
+  },
+  {
+    "file": "/tmp/qqbsp-phase8/evidence/accepted-experiment-matrix/thickness-0.008-chopfragment/input.bsp",
+    "sha256": "fff9aba6727e515b18c87e9188ee63c47fe0183364ae67e2dabc68a6e470b473",
+    "header_lump_bounds_and_existing_leaf_face_checks": true
+  },
+  {
+    "file": "/tmp/qqbsp-phase8/evidence/accepted-experiment-matrix/thickness-0.008-default/input.bsp",
+    "sha256": "fff9aba6727e515b18c87e9188ee63c47fe0183364ae67e2dabc68a6e470b473",
+    "header_lump_bounds_and_existing_leaf_face_checks": true
+  },
+  {
+    "file": "/tmp/qqbsp-phase8/evidence/accepted-experiment-matrix/thickness-0.015625-chopfragment/input.bsp",
+    "sha256": "f54ddfebc388751f8ae3e5d3ac8d22e83f0e416cd68600fed984ddb11782641a",
+    "header_lump_bounds_and_existing_leaf_face_checks": true
+  },
+  {
+    "file": "/tmp/qqbsp-phase8/evidence/accepted-experiment-matrix/thickness-0.015625-default/input.bsp",
+    "sha256": "f54ddfebc388751f8ae3e5d3ac8d22e83f0e416cd68600fed984ddb11782641a",
+    "header_lump_bounds_and_existing_leaf_face_checks": true
+  },
+  {
+    "file": "/tmp/qqbsp-phase8/evidence/accepted-experiment-matrix/thickness-0.02-chopfragment/input.bsp",
+    "sha256": "0782cf935ac21a2be547a83a27aeeed1303ea1def03f3812d54d50f58f4846ac",
+    "header_lump_bounds_and_existing_leaf_face_checks": true
+  },
+  {
+    "file": "/tmp/qqbsp-phase8/evidence/accepted-experiment-matrix/thickness-0.02-default/input.bsp",
+    "sha256": "0782cf935ac21a2be547a83a27aeeed1303ea1def03f3812d54d50f58f4846ac",
+    "header_lump_bounds_and_existing_leaf_face_checks": true
+  },
+  {
+    "file": "/tmp/qqbsp-phase8/evidence/accepted-experiment-matrix/thickness-0.05-chopfragment/input.bsp",
+    "sha256": "5379b1d6eabbad16c44ed74e5641cfa9a465e8c3475c6802f201eb0788dfd539",
+    "header_lump_bounds_and_existing_leaf_face_checks": true
+  },
+  {
+    "file": "/tmp/qqbsp-phase8/evidence/accepted-experiment-matrix/thickness-0.05-default/input.bsp",
+    "sha256": "5379b1d6eabbad16c44ed74e5641cfa9a465e8c3475c6802f201eb0788dfd539",
+    "header_lump_bounds_and_existing_leaf_face_checks": true
+  },
+  {
+    "file": "/tmp/qqbsp-phase8/evidence/accepted-experiment-matrix/thickness-0.099-chopfragment/input.bsp",
+    "sha256": "3ec802b77f2d4afa4bcf49f9752d060be54884911fd25614168ae9a1b4726f2a",
+    "header_lump_bounds_and_existing_leaf_face_checks": true
+  },
+  {
+    "file": "/tmp/qqbsp-phase8/evidence/accepted-experiment-matrix/thickness-0.099-default/input.bsp",
+    "sha256": "3ec802b77f2d4afa4bcf49f9752d060be54884911fd25614168ae9a1b4726f2a",
+    "header_lump_bounds_and_existing_leaf_face_checks": true
+  },
+  {
+    "file": "/tmp/qqbsp-phase8/evidence/accepted-experiment-matrix/thickness-0.1-chopfragment/input.bsp",
+    "sha256": "d6e2cb930b0e2dfe5c3370ff07a36f3e52c7d49b36619ff7ca32c4f3572900b2",
+    "header_lump_bounds_and_existing_leaf_face_checks": true
+  },
+  {
+    "file": "/tmp/qqbsp-phase8/evidence/accepted-experiment-matrix/thickness-0.1-default/input.bsp",
+    "sha256": "d6e2cb930b0e2dfe5c3370ff07a36f3e52c7d49b36619ff7ca32c4f3572900b2",
+    "header_lump_bounds_and_existing_leaf_face_checks": true
+  },
+  {
+    "file": "/tmp/qqbsp-phase8/evidence/accepted-experiment-matrix/thickness-0.101-chopfragment/input.bsp",
+    "sha256": "ff10f307097f282b5dfc5f7c1a5071b5015e5f68a8b8cc3677072fa152958b72",
+    "header_lump_bounds_and_existing_leaf_face_checks": true
+  },
+  {
+    "file": "/tmp/qqbsp-phase8/evidence/accepted-experiment-matrix/thickness-0.101-default/input.bsp",
+    "sha256": "ff10f307097f282b5dfc5f7c1a5071b5015e5f68a8b8cc3677072fa152958b72",
+    "header_lump_bounds_and_existing_leaf_face_checks": true
+  },
+  {
+    "file": "/tmp/qqbsp-phase8/evidence/accepted-experiment-matrix/thickness-0.25-chopfragment/input.bsp",
+    "sha256": "67316d535c55ba16c6d379fd67425f15f6cbbb06b96969b508534d996b0dbd31",
+    "header_lump_bounds_and_existing_leaf_face_checks": true
+  },
+  {
+    "file": "/tmp/qqbsp-phase8/evidence/accepted-experiment-matrix/thickness-0.25-default/input.bsp",
+    "sha256": "67316d535c55ba16c6d379fd67425f15f6cbbb06b96969b508534d996b0dbd31",
+    "header_lump_bounds_and_existing_leaf_face_checks": true
+  },
+  {
+    "file": "/tmp/qqbsp-phase8/evidence/accepted-experiment-matrix/thickness-1-chopfragment/input.bsp",
+    "sha256": "ff1db3fcdbc188755520fb7f90f2548c8a8e8aac8252a2dd1f3240e339d2d503",
+    "header_lump_bounds_and_existing_leaf_face_checks": true
+  },
+  {
+    "file": "/tmp/qqbsp-phase8/evidence/accepted-experiment-matrix/thickness-1-default/input.bsp",
+    "sha256": "ff1db3fcdbc188755520fb7f90f2548c8a8e8aac8252a2dd1f3240e339d2d503",
+    "header_lump_bounds_and_existing_leaf_face_checks": true
+  },
+  {
+    "file": "/tmp/qqbsp-phase8/evidence/accepted-experiment-matrix/thickness-16-chopfragment/input.bsp",
+    "sha256": "6abedabcb18aff5dcf8dd77a563b6182f7bebd8c71529bcfa02cc205403c411b",
+    "header_lump_bounds_and_existing_leaf_face_checks": true
+  },
+  {
+    "file": "/tmp/qqbsp-phase8/evidence/accepted-experiment-matrix/thickness-16-default/input.bsp",
+    "sha256": "6abedabcb18aff5dcf8dd77a563b6182f7bebd8c71529bcfa02cc205403c411b",
+    "header_lump_bounds_and_existing_leaf_face_checks": true
+  },
+  {
+    "file": "/tmp/qqbsp-phase8/evidence/accepted-experiment-matrix/translated-chopfragment/input.bsp",
+    "sha256": "c5f29849b1e32b69a38bced1b45f04beefacd660ebc5fea75f13b9f93c01b1d0",
+    "header_lump_bounds_and_existing_leaf_face_checks": true
+  },
+  {
+    "file": "/tmp/qqbsp-phase8/evidence/accepted-experiment-matrix/translated-default/input.bsp",
+    "sha256": "c5f29849b1e32b69a38bced1b45f04beefacd660ebc5fea75f13b9f93c01b1d0",
+    "header_lump_bounds_and_existing_leaf_face_checks": true
+  },
+  {
+    "file": "/tmp/qqbsp-phase8/evidence/accepted-experiment-campaign/ordinary/input.bsp",
+    "sha256": "157ea29bccafb860b9e7d9c47dec688e1351d66bfc524deb7df54e9e37511118",
+    "header_lump_bounds_and_existing_leaf_face_checks": true
+  },
+  {
+    "file": "/tmp/qqbsp-phase8/evidence/accepted-experiment-campaign/ordinary-L-room/input.bsp",
+    "sha256": "5b9eca26c5af4f33c3b6f30a06d968605cff8ef64a708000d25fbfaa33305665",
+    "header_lump_bounds_and_existing_leaf_face_checks": true
+  },
+  {
+    "file": "/tmp/qqbsp-phase8/evidence/accepted-experiment-campaign/ordinary-rotated-hull0/input.bsp",
+    "sha256": "5d71b873685de5ee38c063b510da458b402e8da56800bb02fb906ed3bd13b971",
+    "header_lump_bounds_and_existing_leaf_face_checks": true
+  }
+]

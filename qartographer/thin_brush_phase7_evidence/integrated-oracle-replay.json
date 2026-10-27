@@ -1,0 +1,132 @@
+{
+  "rows": [
+    {
+      "name": "A-hull2-front",
+      "oracle": {
+        "dimension": 3,
+        "front_dimension": 3,
+        "back_dimension": 3,
+        "section_dimension": 2,
+        "strict_front": 1,
+        "strict_back": 1,
+        "point_consistent": true,
+        "point_query_sign": 1
+      },
+      "seconds": 0.0020107709569856524,
+      "errors": {}
+    },
+    {
+      "name": "A-actual-post-csg-route",
+      "oracle": {
+        "dimension": 3,
+        "front_dimension": 3,
+        "back_dimension": 3,
+        "section_dimension": 2,
+        "strict_front": 1,
+        "strict_back": 1,
+        "point_consistent": true,
+        "point_query_sign": 1
+      },
+      "seconds": 0.007197184022516012,
+      "errors": {}
+    },
+    {
+      "name": "B-narrow-quadrilateral",
+      "oracle": {
+        "dimension": 3,
+        "front_dimension": 3,
+        "back_dimension": 3,
+        "section_dimension": 2,
+        "strict_front": 1,
+        "strict_back": 1
+      },
+      "seconds": 0.9477977689821273,
+      "errors": {}
+    },
+    {
+      "name": "C-sky-roof-gap",
+      "oracle": {
+        "dimension": 3,
+        "front_dimension": 3,
+        "back_dimension": 3,
+        "section_dimension": 2,
+        "strict_front": 1,
+        "strict_back": 1,
+        "point_consistent": true,
+        "point_query_sign": 0
+      },
+      "seconds": 0.0018767089350149035,
+      "errors": {}
+    },
+    {
+      "name": "D-halloween-rounded-extent",
+      "oracle": {
+        "dimension": 3,
+        "front_dimension": 3,
+        "back_dimension": 3,
+        "section_dimension": 2,
+        "strict_front": 1,
+        "strict_back": 1,
+        "point_consistent": false,
+        "point_query_sign": 1
+      },
+      "seconds": 0.0020537510281428695,
+      "errors": {}
+    },
+    {
+      "name": "E-p1-rounded-extent",
+      "oracle": {
+        "dimension": 3,
+        "front_dimension": -1,
+        "back_dimension": 3,
+        "section_dimension": -1,
+        "strict_front": 0,
+        "strict_back": 1,
+        "point_consistent": false,
+        "point_query_sign": 1
+      },
+      "seconds": 0.022224279935471714,
+      "errors": {}
+    },
+    {
+      "name": "F-rotated-portal",
+      "oracle": {
+        "dimension": 1,
+        "front_dimension": 1,
+        "back_dimension": 1,
+        "section_dimension": 1,
+        "strict_front": 0,
+        "strict_back": 0
+      },
+      "seconds": 0.043034433969296515,
+      "errors": {}
+    },
+    {
+      "name": "F-base-winding",
+      "oracle": {
+        "dimension": 3,
+        "front_dimension": 3,
+        "back_dimension": 3,
+        "section_dimension": 2,
+        "strict_front": 1,
+        "strict_back": 1
+      },
+      "seconds": 0.0031400820007547736,
+      "errors": {}
+    },
+    {
+      "name": "F-make-portal",
+      "oracle": {
+        "dimension": 3,
+        "front_dimension": 3,
+        "back_dimension": 3,
+        "section_dimension": 2,
+        "strict_front": 1,
+        "strict_back": 1
+      },
+      "seconds": 0.004549475968815386,
+      "errors": {}
+    }
+  ],
+  "pass_": true
+}

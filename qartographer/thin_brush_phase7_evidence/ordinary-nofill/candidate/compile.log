@@ -1,0 +1,115 @@
+Qartographer qqbsp, upstream=ccaeb8457a1267860ebe99ed1df7394ebdd6b435, downstream=4b505ae25e508a8910b031e94d6f1ea60ac06a95-phase7-experimental, patches=P1, experiment=phase7-unaccepted
+---- qqbsp / ericw-tools  ----
+running with 1 thread(s)
+low priority not compiled into this version
+logging to /tmp/qqbsp-phase7/evidence/ordinary-nofill/candidate/input.log (truncate)
+
+--- Options Summary ---
+    "threads" was set to "1" (from command line)
+    "nopercent" was set to "1" (from command line)
+    "nofill" was set to "1" (from command line)
+    "notex" was set to "1" (from command line)
+
+Input file: /tmp/qqbsp-phase7/evidence/ordinary-nofill/candidate/input.map
+Output file: /tmp/qqbsp-phase7/evidence/ordinary-nofill/candidate/input.bsp
+
+INFO: using built-in palette.
+---- LoadMapFile ----
+[33maddArchive: WARNING: archive '/tmp/qqbsp-phase7/evidence/ordinary-nofill/candidate/deprecated/free_wad.wad' not found
+[0m[33maddArchive: WARNING: archive 'deprecated/free_wad.wad' not found
+[0m[33maddArchive: WARNING: archive '/tmp/qqbsp-phase7/evidence/ordinary-nofill/candidate/deprecated/fence.wad' not found
+[0m[33maddArchive: WARNING: archive 'deprecated/fence.wad' not found
+[0m[33maddArchive: WARNING: archive '/tmp/qqbsp-phase7/evidence/ordinary-nofill/candidate/deprecated/origin.wad' not found
+[0m[33maddArchive: WARNING: archive 'deprecated/origin.wad' not found
+[0m[33maddArchive: WARNING: archive '/tmp/qqbsp-phase7/evidence/ordinary-nofill/candidate/deprecated/hintskip.wad' not found
+[0m[33maddArchive: WARNING: archive 'deprecated/hintskip.wad' not found
+[0m[33mWARNING: No valid WAD filenames in worldmodel
+[0m[36m     2 entities
+[0m[36m     2 unique textures
+[0m[36m     7 texinfos
+[0m[36m    56 unique planes
+[0m[36m
+[0m---- ProcessMapBrushes ----
+INFO: world extents calculated to 1000 units
+[36m    14 brushes
+[0m[36m    84 sides
+[0m[36m
+[0m[36m            0 texture frames added
+[0m[33mWARNING: unable to find texture skip
+[0m[33mWARNING: unable to find texture orangestuff8
+[0mProcessing hull 0...
+---- Brush_LoadEntity ----
+---- CountBrushes ----
+[36m    14 SOLID brushes
+[0m[36m    14 brushes total
+[0m[36m    84 visible sides
+[0m[36mINFO: calculating BSP for 14 brushes with 84 sides
+[0m---- BrushBSP ----
+[36m    14 brushes
+[0m[36m    84 visible faces
+[0m[36m    35 nodes
+[0m[36m    35 expensive split nodes
+[0m[36m    36 leaves
+[0m---- CountLeafs ----
+[36m    14 SOLID leafs
+[0m[36m    22 EMPTY leafs
+[0m[36m    36 leafs total
+[0m[36m    13 max tree height
+[0m[36m     8 avg tree height
+[0m---- MakeTreePortals ----
+[36m    155 tiny portals
+[0m---- CalcTreeBounds ----
+[36m    179 tree portals
+[0m---- MakeTreePortals ----
+[36m    155 tiny portals
+[0m---- CalcTreeBounds ----
+[36m    179 tree portals
+[0m---- MarkVisibleSides ----
+[36m    138 sides visible
+[0m---- MakeFaces ----
+[36m    69 makefaces
+[0m[36m     7 merged
+[0m---- PruneNodes ----
+---- WritePortalFile ----
+[36m    129 tiny portals
+[0m[36m    22 player-occupiable leaves
+[0m[36m    22 clusters of leaves
+[0m[36m    62 vis portals
+[0m---- CountLeafs ----
+[36m    14 SOLID leafs
+[0m[36m    22 EMPTY leafs
+[0m[36m    36 leafs total
+[0m[36m    13 max tree height
+[0m[36m     8 avg tree height
+[0m---- TJunc ----
+[36m     24 edges added by tjunctions
+[0m[36m     62 faces optimized through MWT
+[0m[36m    148 triangles computed from MWT
+[0m[36m      4 faces created via optimization of MWT triangles
+[0m---- EmitFaces ----
+[36m    141 edges
+[0m[36m     66 faces
+[0mProcessing hull 1...
+Processing hull 2...
+---- FinishBSPFile ----
+Writing /tmp/qqbsp-phase7/evidence/ordinary-nofill/candidate/input.bsp as Quake BSP bsp29
+Wrote /tmp/qqbsp-phase7/evidence/ordinary-nofill/candidate/input.bsp
+
+count   lump name    byte size 
+      1 models               64
+     64 planes             1280
+     84 vertexes           1008
+     35 nodes               840
+      6 texinfos            240
+     66 faces              1320
+    669 clipnodes          5352
+     23 leafs               644
+     70 marksurfaces        140
+    142 edges               568
+    280 surfedges          1120
+      2 textures             12
+        lightdata             0
+        visdata               0
+        entdata             227
+
+0.703s seconds elapsed

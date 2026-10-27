@@ -1,0 +1,89 @@
+---- final-qqbsp / ericw-tools  ----
+
+--- Options Summary ---
+    "nopercent" was set to "1" (from command line)
+    "bsp2" was set to "1" (from command line)
+    "chopfragment" was set to "1" (from command line)
+    "notex" was set to "1" (from command line)
+
+Input file: /tmp/qqbsp-phase8/evidence/accepted-experiment-matrix/adjacent-chopfragment/input.map
+Output file: /tmp/qqbsp-phase8/evidence/accepted-experiment-matrix/adjacent-chopfragment/input.bsp
+
+INFO: using built-in palette.
+WARNING: No wad or _wad key exists in the worldmodel
+     1 entities
+     2 unique textures
+     7 texinfos
+    14 unique planes
+
+INFO: world extents calculated to 456 units
+     2 brushes
+    12 sides
+
+            0 texture frames added
+WARNING: unable to find texture skip
+WARNING: unable to find texture NO_TEXTURE
+Processing hull 0...
+    2 SOLID brushes
+    2 brushes total
+    12 visible sides
+INFO: calculating BSP for 2 brushes with 12 sides
+     2 brushes
+    12 visible faces
+    11 nodes
+    11 expensive split nodes
+    12 leaves
+     2 SOLID leafs
+    10 EMPTY leafs
+    12 leafs total
+    7 max tree height
+    5 avg tree height
+    38 tiny portals
+    56 tree portals
+WARNING: No entities in empty space -- no filling performed (hull 0)
+    38 tiny portals
+    56 tree portals
+    20 sides visible
+    10 makefaces
+    22 tiny portals
+    10 player-occupiable leaves
+    10 clusters of leaves
+    20 vis portals
+     2 SOLID leafs
+    10 EMPTY leafs
+    12 leafs total
+    7 max tree height
+    5 avg tree height
+    12 edges degenerated
+     6 faces degenerated
+     4 faces optimized through MWT
+     8 triangles computed from MWT
+    8 edges
+    4 faces
+Processing hull 1...
+WARNING: No entities in empty space -- no filling performed (hull 1)
+Processing hull 2...
+WARNING: No entities in empty space -- no filling performed (hull 2)
+Writing /tmp/qqbsp-phase8/evidence/accepted-experiment-matrix/adjacent-chopfragment/input.bsp as Quake BSP2 bsp2
+Wrote /tmp/qqbsp-phase8/evidence/accepted-experiment-matrix/adjacent-chopfragment/input.bsp
+
+count   lump name    byte size 
+      1 models               64
+     20 planes              400
+      6 vertexes             72
+     11 nodes               484
+      2 texinfos             80
+      4 faces               112
+     22 clipnodes           264
+     11 leafs               484
+      4 marksurfaces         16
+      9 edges                72
+     16 surfedges            64
+      2 textures             12
+        lightdata             0
+        visdata               0
+        entdata              30
+
+0.031s seconds elapsed
+
+

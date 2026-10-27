@@ -1,0 +1,3167 @@
+--- /dev/null
++++ b/include/qbsp/halfspace.hh
+@@ -0,0 +1,222 @@
++// Standalone QQBSP Phase 6 experiment. No compiler linkage or geometry mutation.
++#pragma once
++#include <gmpxx.h>
++#include <array>
++#include <vector>
++#include <optional>
++#include <cmath>
++#include <limits>
++#include <algorithm>
++#include <stdexcept>
++#include <chrono>
++#include <cfenv>
++#include <bit>
++#include <string>
++#include <type_traits>
++#if defined(__SSE__)
++#include <xmmintrin.h>
++#endif
++
++#ifdef __FAST_MATH__
++#error "Certified interval filters require strict floating-point semantics"
++#endif
++static_assert(std::numeric_limits<double>::is_iec559 && std::numeric_limits<double>::digits==53);
++namespace p6 {
++inline bool environment_ok(){
++ if(std::fegetround()!=FE_TONEAREST)return false;
++#if defined(__SSE__)
++ if(_mm_getcsr() & ((1<<15)|(1<<6)))return false;
++#endif
++ return true;
++}
++using Q=mpq_class;
++using Plane=std::array<double,4>; // n.x <= d; coefficients are exact binary64 values
++struct Stats { size_t fast=0, adaptive=0, exact=0, triples=0, exact_homogeneous_builds=0, exact_rank_constraints=0; bool profile=false; long long worst_sign_ns=0; };
++struct SignTimer {
++ Stats&s;std::chrono::steady_clock::time_point start;
++ explicit SignTimer(Stats&stats):s(stats){if(s.profile)start=std::chrono::steady_clock::now();}
++ ~SignTimer(){if(s.profile)s.worst_sign_ns=std::max(s.worst_sign_ns,static_cast<long long>(std::chrono::duration_cast<std::chrono::nanoseconds>(std::chrono::steady_clock::now()-start).count()));}
++};
++enum class Mode { filtered, double_exact, exact_only };
++template<class T> struct I {
++ T lo=0,hi=0;
++ I()=default;
++ explicit I(double v):lo(static_cast<T>(v)),hi(static_cast<T>(v)){}
++ I(T a,T b):lo(a),hi(b){}
++ static I entire(){return {-std::numeric_limits<T>::infinity(),std::numeric_limits<T>::infinity()};}
++ friend I operator-(I a){return {-a.hi,-a.lo};}
++ friend I operator+(I a,I b){
++  if(a.lo==0 && a.hi==0)return b;
++  if(b.lo==0 && b.hi==0)return a;
++  if(a.lo==a.hi && b.lo==b.hi && a.lo==-b.lo)return I{};
++  // Exact small-integer arithmetic is a structural filter, not a geometry
++  // threshold: p-bit binary floats represent every integer through 2^p.
++  const T add_limit=std::ldexp(T(1),std::numeric_limits<T>::digits-2);
++  if(a.lo==a.hi && b.lo==b.hi && std::abs(a.lo)<=add_limit && std::abs(b.lo)<=add_limit && std::trunc(a.lo)==a.lo && std::trunc(b.lo)==b.lo){T sum=a.lo+b.lo;return {sum,sum};}
++  T l=a.lo+b.lo,h=a.hi+b.hi;
++  if(!std::isfinite(l)||!std::isfinite(h))return entire();
++  return {std::nextafter(l,-std::numeric_limits<T>::infinity()),std::nextafter(h,std::numeric_limits<T>::infinity())};
++ }
++ friend I operator-(I a,I b){return a+-b;}
++ friend I operator*(I a,I b){
++  if((a.lo==0&&a.hi==0)||(b.lo==0&&b.hi==0))return I{};
++  if(a.lo==1&&a.hi==1)return b;
++  if(b.lo==1&&b.hi==1)return a;
++  if(a.lo==-1&&a.hi==-1)return -b;
++  if(b.lo==-1&&b.hi==-1)return -a;
++  const T mul_limit=std::ldexp(T(1),std::numeric_limits<T>::digits/2-1);
++  if(a.lo==a.hi && b.lo==b.hi && std::abs(a.lo)<=mul_limit && std::abs(b.lo)<=mul_limit && std::trunc(a.lo)==a.lo && std::trunc(b.lo)==b.lo){T product=a.lo*b.lo;return {product,product};}
++  T v[]={a.lo*b.lo,a.lo*b.hi,a.hi*b.lo,a.hi*b.hi};
++  for(T x:v)if(!std::isfinite(x))return entire();
++  auto mm=std::minmax_element(v,v+4);
++  return {std::nextafter(*mm.first,-std::numeric_limits<T>::infinity()),std::nextafter(*mm.second,std::numeric_limits<T>::infinity())};
++ }
++ std::optional<int> sign()const{
++  if(lo>0)return 1;if(hi<0)return -1;if(lo==0&&hi==0)return 0;return {};
++ }
++};
++template<class T> T det(std::array<std::array<T,3>,3> a){
++ return a[0][0]*(a[1][1]*a[2][2]-a[1][2]*a[2][1])
++       -a[0][1]*(a[1][0]*a[2][2]-a[1][2]*a[2][0])
++       +a[0][2]*(a[1][0]*a[2][1]-a[1][1]*a[2][0]);
++}
++template<class T> std::array<T,4> homogeneous(const std::array<Plane,3>& ps){
++ std::array<std::array<T,3>,3>a;
++ for(int i=0;i<3;++i)for(int j=0;j<3;++j)a[i][j]=T(ps[i][j]);
++ std::array<T,4>h;h[3]=det(a);
++ for(int k=0;k<3;++k){auto b=a;for(int i=0;i<3;++i)b[i][k]=T(ps[i][3]);h[k]=det(b);}
++ return h;
++}
++template<class T>T residual(const Plane&p,const std::array<T,4>&h){
++ return T(p[0])*h[0]+T(p[1])*h[1]+T(p[2])*h[2]-T(p[3])*h[3];
++}
++inline int qsign(const Q&x){return x>0?1:x<0?-1:0;}
++struct Candidate {
++ std::array<Plane,3>planes;
++ std::optional<std::array<I<double>,4>>d;
++ std::optional<std::array<I<long double>,4>>l;
++ std::optional<std::array<Q,4>>q;
++ std::vector<size_t> incidence;
++ Stats&stats;Mode mode;
++ Candidate(std::array<Plane,3>p,Stats&s,Mode m):planes(p),stats(s),mode(m){}
++ const auto& rational(){if(!q){q=homogeneous<Q>(planes);++stats.exact_homogeneous_builds;}return *q;}
++ template<class F,class G>int sign(F interval,G exact){
++  SignTimer timer(stats);
++  if(mode!=Mode::exact_only){
++   if(!d)d=homogeneous<I<double>>(planes);
++   if(auto s=interval(*d).sign()){++stats.fast;return *s;}
++   if(mode==Mode::filtered){
++    if(!l)l=homogeneous<I<long double>>(planes);
++    if(auto s=interval(*l).sign()){++stats.adaptive;return *s;}
++   }
++  }
++  ++stats.exact;return qsign(exact(rational()));
++ }
++ int denominator(){return sign([](auto&h){return h[3];},[](auto&h){return h[3];});}
++ int side(const Plane&p,int ds){
++  for(auto&support:planes)if(support==p)return 0; // defining incidence, no rounded construction
++  return ds*sign([&](auto&h){return residual(p,h);},[&](auto&h)->Q{return residual(p,h);});
++ }
++};
++template<class T>T minor_det(const std::vector<std::array<T,4>>&rows,const std::vector<int>&columns,size_t row=0){
++ if(columns.size()==1)return rows[row][columns[0]];
++ T sum=T(0.);for(size_t i=0;i<columns.size();++i){auto rest=columns;rest.erase(rest.begin()+i);T term=rows[row][columns[i]]*minor_det(rows,rest,row+1);if(i%2)sum=sum-term;else sum=sum+term;}return sum;
++}
++struct ProjectiveRank {
++ std::vector<Candidate> selected;std::vector<std::vector<size_t>> seen;
++ Stats&stats;Mode mode;
++ ProjectiveRank(Stats&s,Mode m):stats(s),mode(m){}
++ int rank()const{return int(selected.size())-1;}
++ bool add(Candidate&v){
++  if(std::find(seen.begin(),seen.end(),v.incidence)!=seen.end())return false;
++  seen.push_back(v.incidence);
++  if(selected.empty()){selected.push_back(v);return true;}
++  std::vector<Candidate*>rows;for(auto&r:selected)rows.push_back(&r);rows.push_back(&v);
++  auto evaluate=[&]<class T>() -> std::vector<std::array<T,4>>{
++   std::vector<std::array<T,4>> hs;
++   for(auto*r:rows){if constexpr(std::is_same_v<T,I<double>>){if(!r->d)r->d=homogeneous<I<double>>(r->planes);hs.push_back(*r->d);}
++    else if constexpr(std::is_same_v<T,I<long double>>){if(!r->l)r->l=homogeneous<I<long double>>(r->planes);hs.push_back(*r->l);}
++    else hs.push_back(r->rational());}return hs;};
++  for(int mask=1;mask<16;++mask){if(static_cast<size_t>(std::popcount(static_cast<unsigned>(mask)))!=rows.size())continue;
++   std::vector<int>cols;for(int i=0;i<4;++i)if(mask&(1<<i))cols.push_back(i);
++   SignTimer timer(stats);
++   int sign=0;bool resolved=false;
++   if(mode!=Mode::exact_only){if(auto z=minor_det(evaluate.template operator()<I<double>>(),cols).sign()){sign=*z;resolved=true;++stats.fast;}
++    if(!resolved&&mode==Mode::filtered)if(auto z=minor_det(evaluate.template operator()<I<long double>>(),cols).sign()){sign=*z;resolved=true;++stats.adaptive;}}
++   if(!resolved){++stats.exact;sign=qsign(minor_det(evaluate.template operator()<Q>(),cols));}
++   if(sign){selected.push_back(v);return true;}
++  }return false;
++ }
++};
++
++struct Basis {
++ std::array<std::array<Q,3>,3>rows{}; std::array<bool,3>used{};int rank=0;
++ void add(std::array<Q,3>v){
++  for(int i=0;i<3;++i){if(v[i]==0)continue;if(used[i]){Q s=v[i];for(int j=i;j<3;++j)v[j]-=s*rows[i][j];}
++   else{Q s=v[i];for(int j=i;j<3;++j)rows[i][j]=v[j]/s;used[i]=true;++rank;return;}}
++ }
++};
++inline Plane opposite(Plane p){for(auto&v:p)v=-v;return p;}
++inline bool finite(const std::vector<Plane>&ps){for(auto&p:ps)for(double v:p)if(!std::isfinite(v))return false;return true;}
++inline bool axial_enclosure(const std::vector<Plane>&ps){
++ bool seen[3][2]={};
++ for(auto&p:ps)for(int k=0;k<3;++k)if(p[k]!=0 && p[(k+1)%3]==0 && p[(k+2)%3]==0)seen[k][p[k]>0]=true;
++ for(auto&s:seen)if(!s[0]||!s[1])return false;return true;
++}
++template<class F>bool vertices(const std::vector<Plane>&ps,Stats&stats,Mode mode,F accept){
++ for(size_t a=0;a<ps.size();++a)for(size_t b=a+1;b<ps.size();++b)for(size_t c=b+1;c<ps.size();++c){
++  ++stats.triples;Candidate v({ps[a],ps[b],ps[c]},stats,mode);int ds=v.denominator();if(!ds)continue;
++  bool feasible=true;for(size_t i=0;i<ps.size();++i){int side=v.side(ps[i],ds);if(side>0){feasible=false;break;}if(side==0)v.incidence.push_back(i);}
++  if(feasible && accept(v))return true;
++ }return false;
++}
++// A nonzero recession ray can be rescaled into [-1,1]^3. Its intersection
++// with that cube is a bounded polytope; a nonzero point implies a nonzero vertex.
++inline bool bounded(const std::vector<Plane>&ps,Stats&s,Mode mode){
++ if(axial_enclosure(ps))return true;
++ std::vector<Plane>cone;for(auto p:ps){p[3]=0;cone.push_back(p);}
++ for(int k=0;k<3;++k)for(double sign:{-1.,1.}){Plane p{};p[k]=sign;p[3]=1;cone.push_back(p);}
++ bool nonzero=vertices(cone,s,mode,[&](Candidate&v){
++  for(int k=0;k<3;++k)if(v.sign([&](auto&h){return h[k];},[&](auto&h){return h[k];}))return true;
++  return false;
++ });
++ return !nonzero;
++}
++struct Result { int dimension=-2; std::string reason; // -2 Unresolved, -1 Empty, 0..2 LowerDimensional, 3 PositiveVolume
++ std::string kind()const{return dimension==-2?"Unresolved":dimension==-1?"Empty":dimension==3?"PositiveVolume":"LowerDimensional";}
++};
++inline Result analyze(std::vector<Plane>ps,Stats&s,Mode mode=Mode::filtered){
++ if(!environment_ok())return {-2,"unsupported arithmetic environment (rounding/FTZ/DAZ)"};
++ if(!finite(ps))return {-2,"nonfinite coefficient"};
++ if(ps.size()>96)return {-2,"96-constraint experimental resource limit"};
++ std::sort(ps.begin(),ps.end());ps.erase(std::unique(ps.begin(),ps.end()),ps.end());
++ for(auto&p:ps)if(p[0]==0&&p[1]==0&&p[2]==0&&p[3]<0)return {-1,{}};
++ if(!bounded(ps,s,mode))return {-2,"unbounded feasible-set/recession support not in this API"};
++ // Exact opposite constraints bound affine dimension before enumerating.
++ Basis equalities;for(auto&p:ps)if(std::binary_search(ps.begin(),ps.end(),opposite(p))){++s.exact_rank_constraints;equalities.add({Q(p[0]),Q(p[1]),Q(p[2])});}
++ int goal=3-equalities.rank;ProjectiveRank rank(s,mode);
++ vertices(ps,s,mode,[&](Candidate&v){rank.add(v);return rank.rank()==goal;});
++ if(rank.selected.empty())return {-1,{}};
++ return {rank.rank(),{}};
++}
++// Scalar predicates also support exact plane identity and proposed binary vertices.
++inline std::optional<int> point_side(const Plane&p,const std::array<double,3>&x,Stats&s,Mode mode){
++ if(!environment_ok() || !finite({p}))return {};
++ for(double v:x)if(!std::isfinite(v))return {};
++ SignTimer timer(s);
++ auto eval=[&]<class T>() ->T{T r=T(0.);for(int i=0;i<3;++i)r=r+T(p[i])*T(x[i]);return r-T(p[3]);};
++ if(mode!=Mode::exact_only){if(auto z=eval.template operator()<I<double>>().sign()){++s.fast;return *z;}
++  if(mode==Mode::filtered)if(auto z=eval.template operator()<I<long double>>().sign()){++s.adaptive;return *z;}}
++ ++s.exact;return qsign(eval.template operator()<Q>());
++}
++// Scaled equality uses all four exact coefficients. Positive scaling preserves
++// a halfspace; negative scaling is the opposing halfspace on the same boundary.
++inline std::string relation(const Plane&a,const Plane&b){
++ if(!environment_ok() || !finite({a,b}))return "Unresolved";
++ int k=-1;for(int i=0;i<3;++i)if(a[i]!=0){k=i;break;}
++ if(k<0)return "Degenerate";
++ if(b[k]==0)return "Distinct";
++ Q scale=Q(b[k])/Q(a[k]);for(int i=0;i<4;++i)if(Q(b[i])!=scale*Q(a[i]))return "Distinct";
++ return scale>0?"Equivalent":"Opposing";
++}
++} // namespace p6
+--- /dev/null
++++ b/include/qbsp/supported_geometry.hh
+@@ -0,0 +1,100 @@
++// Experimental Phase 7: decisions use retained binary64 halfspaces.
++// Winding/residual helpers below validate approximate construction only.
++#pragma once
++#include <qbsp/winding.hh>
++#include <qbsp/halfspace.hh>
++#include <common/aabb.hh>
++#include <limits>
++#include <cmath>
++
++namespace supported_geometry {
++inline p6::Plane coefficients(const qplane3d &p) { return {p.normal[0],p.normal[1],p.normal[2],p.dist}; }
++// No caller may replace an unresolved result with SOLID/EMPTY or deletion.
++inline p6::Result region(const std::vector<p6::Plane> &supports) {
++    p6::Stats stats;
++    return p6::analyze(supports, stats);
++}
++inline int dimension(const std::vector<p6::Plane> &supports) {
++    auto r = region(supports);
++    if (r.dimension == -2) throw std::runtime_error("PHASE7 NUMERICAL_UNCERTAINTY: " + r.reason);
++    return r.dimension;
++}
++
++inline bool portal_has_area(const std::vector<qplane3d> &supports, const qplane3d &plane) {
++    std::vector<p6::Plane> region;
++    for (auto &p : supports) region.push_back(coefficients(p));
++    auto q = coefficients(plane);
++    region.push_back(q); region.push_back(p6::opposite(q));
++    return dimension(region) == 2;
++}
++struct distance_t { long double value, error; };
++inline distance_t distance(const qvec3d &p, const qplane3d &plane)
++{
++    long double value = -static_cast<long double>(plane.dist);
++    long double magnitude = std::abs(value);
++    for (int i = 0; i < 3; ++i) {
++        long double product = static_cast<long double>(p[i]) * plane.normal[i];
++        value += product;
++        magnitude += std::abs(product);
++    }
++    // Three products, three additions, and an enclosing rounded magnitude sum.
++    const long double u = std::numeric_limits<long double>::epsilon();
++    return {value, (8 * u / (1 - 8 * u)) * magnitude};
++}
++
++// Exclusive broad-phase answers require separation of the complete box.
++// Uncertainty includes contact and deliberately returns BOTH.
++inline int box_side(const aabb3d &bounds, const qplane3d &plane)
++{
++    std::array<double,3> lo, hi;
++    for (int i = 0; i < 3; ++i) {
++        lo[i] = plane.normal[i] < 0 ? bounds.maxs()[i] : bounds.mins()[i];
++        hi[i] = plane.normal[i] < 0 ? bounds.mins()[i] : bounds.maxs()[i];
++    }
++    p6::Stats stats;
++    p6::Plane q{plane.normal[0],plane.normal[1],plane.normal[2],plane.dist};
++    auto minimum = p6::point_side(q,lo,stats,p6::Mode::filtered);
++    auto maximum = p6::point_side(q,hi,stats,p6::Mode::filtered);
++    if (minimum && *minimum > 0) return 1;
++    if (maximum && *maximum < 0) return 2;
++    return 3;
++}
++
++enum class rank_t { area, lower_dimensional, uncertain };
++inline rank_t winding_rank(const winding_t &w, const qplane3d &plane)
++{
++    if (w.size() < 3) return rank_t::lower_dimensional;
++    long double area = 0, scale = 0;
++    for (size_t i = 2; i < w.size(); ++i) {
++        long double a[3], b[3], sa[3], sb[3];
++        for (int k = 0; k < 3; ++k) {
++            a[k] = static_cast<long double>(w[i-1][k]) - w[0][k];
++            b[k] = static_cast<long double>(w[i][k]) - w[0][k];
++            sa[k] = std::abs(static_cast<long double>(w[i-1][k])) + std::abs(static_cast<long double>(w[0][k]));
++            sb[k] = std::abs(static_cast<long double>(w[i][k])) + std::abs(static_cast<long double>(w[0][k]));
++        }
++        for (int k = 0; k < 3; ++k) {
++            int j = (k+1)%3, l = (k+2)%3;
++            area += (a[j]*b[l] - a[l]*b[j]) * plane.normal[k];
++            scale += (sa[j]*sb[l] + sa[l]*sb[j]) * std::abs(static_cast<long double>(plane.normal[k]));
++        }
++    }
++    const long double u = std::numeric_limits<long double>::epsilon();
++    const long double operations = 32 * static_cast<long double>(w.size());
++    long double error = operations*u/(1-operations*u)*scale;
++    if (!std::isfinite(area) || !std::isfinite(error)) return rank_t::uncertain;
++    if (std::abs(area) > error) return rank_t::area;
++    return rank_t::uncertain; // small is not proof of degeneracy
++}
++
++// A backward-residual check, not a forward bound on an ill-conditioned solve.
++inline bool boundary_residual_ok(const qvec3d &p, const qplane3d &plane, bool on_plane)
++{
++    auto d = distance(p, plane);
++    long double scale = std::abs(static_cast<long double>(plane.dist));
++    for (int i=0; i<3; ++i) scale += std::abs(static_cast<long double>(p[i])*plane.normal[i]);
++    const long double u = std::numeric_limits<double>::epsilon();
++    long double bound = 32*u/(1-32*u)*scale;
++    return on_plane ? std::abs(d.value) <= bound : d.value <= bound;
++}
++} // namespace supported_geometry
+--- a/include/qbsp/brushbsp.hh
++++ b/include/qbsp/brushbsp.hh
+@@ -100,4 +100,11 @@
+ double BrushVolume(const bspbrush_t &brush);
+ bspbrush_t::ptr BrushFromBounds(const aabb3d &bounds);
+ void BrushBSP(tree_t &tree, mapentity_t &entity, const bspbrush_t::container &brushes, tree_split_t split_type);
+-void ChopBrushes(bspbrush_t::container &brushes, bool allow_fragmentation);
+\ No newline at end of file
++void ChopBrushes(bspbrush_t::container &brushes, bool allow_fragmentation);
++// Experimental shared admission/realization. Unresolved geometry is a fatal
++// source-identifiable diagnostic; no mostly-side or tiny-fragment fallback.
++twosided<bspbrush_t::ptr> SupportedSplit(bspbrush_t::ptr brush, size_t planenum);
++
++// Phase 7 shared support classifier; returns PSIDE_FRONT/BACK/BOTH bit mask.
++int SupportedBrushSide(const bspbrush_t &brush, const qplane3d &plane);
++bool SupportedCoversRegion(const bspbrush_t &source, const bspbrush_t &region, bool serialized = false);
+--- a/include/qbsp/portals.hh
++++ b/include/qbsp/portals.hh
+@@ -59,6 +59,8 @@
+     // .front/.back side of planenum
+     twosided<node_t *> nodes = {nullptr, nullptr};
+     winding_t winding;
++    // Defining supports survive disappearance/rounding of winding vertices.
++    std::vector<qplane3d> supports;
+ };
+ 
+ struct portalstats_t : logging::stat_tracker_t
+@@ -76,7 +78,7 @@
+     VIS
+ };
+ std::list<buildportal_t> MakeTreePortals_r(node_t *node, portaltype_t type, std::list<buildportal_t> boundary_portals,
+-    portalstats_t &stats, logging::percent_clock &clock);
++    portalstats_t &stats, logging::percent_clock &clock, const std::vector<qplane3d> &root_supports);
+ void MakeTreePortals(tree_t &tree);
+ std::list<buildportal_t> MakeHeadnodePortals(tree_t &tree);
+ void MakePortalsFromBuildportals(tree_t &tree, std::list<buildportal_t> &buildportals);
+--- a/qbsp/brushbsp.cc
++++ b/qbsp/brushbsp.cc
+@@ -20,8 +20,11 @@
+ */
+ 
+ #include <qbsp/brushbsp.hh>
++#include <qbsp/supported_geometry.hh>
+ 
+ #include <climits>
++#include <nlohmann/json.hpp>
++#include <fstream>
+ 
+ #include <common/log.hh>
+ #include <qbsp/brush.hh>
+@@ -34,11 +37,6 @@
+ #include <atomic>
+ 
+ #include "tbb/task_group.h"
+-
+-// if a brush just barely pokes onto the other side,
+-// let it slide by without chopping
+-constexpr double PLANESIDE_EPSILON = 0.001;
+-// 0.1
+ 
+ constexpr int PSIDE_FRONT = 1;
+ constexpr int PSIDE_BACK = 2;
+@@ -169,37 +167,7 @@
+ */
+ static int BoxOnPlaneSide(const aabb3d &bounds, const qbsp_plane_t &plane)
+ {
+-    // axial planes are easy
+-    if (plane.get_type() < plane_type_t::PLANE_ANYX) {
+-        int side = 0;
+-        if (bounds.maxs()[static_cast<int>(plane.get_type())] > plane.get_dist() + PLANESIDE_EPSILON)
+-            side |= PSIDE_FRONT;
+-        if (bounds.mins()[static_cast<int>(plane.get_type())] < plane.get_dist() - PLANESIDE_EPSILON)
+-            side |= PSIDE_BACK;
+-        return side;
+-    }
+-
+-    // create the proper leading and trailing verts for the box
+-    std::array<qvec3d, 2> corners;
+-    for (int i = 0; i < 3; i++) {
+-        if (plane.get_normal()[i] < 0) {
+-            corners[0][i] = bounds.mins()[i];
+-            corners[1][i] = bounds.maxs()[i];
+-        } else {
+-            corners[1][i] = bounds.mins()[i];
+-            corners[0][i] = bounds.maxs()[i];
+-        }
+-    }
+-
+-    double dist1 = qv::dot(plane.get_normal(), corners[0]) - plane.get_dist();
+-    double dist2 = qv::dot(plane.get_normal(), corners[1]) - plane.get_dist();
+-    int side = 0;
+-    if (dist1 >= PLANESIDE_EPSILON)
+-        side = PSIDE_FRONT;
+-    if (dist2 < PLANESIDE_EPSILON)
+-        side |= PSIDE_BACK;
+-
+-    return side;
++    return supported_geometry::box_side(bounds, plane.get_plane());
+ }
+ 
+ #if 0
+@@ -260,6 +228,27 @@
+ 
+ ============
+ */
++static std::vector<p6::Plane> BrushSupports(const bspbrush_t &brush)
++{
++    std::vector<p6::Plane> supports;
++    for (const auto &side : brush.sides) supports.push_back(supported_geometry::coefficients(side.get_plane()));
++    return supports;
++}
++
++// Classify closed children from supports, never from rounded boundary vertices.
++// A full-dimensional parent has interior on a side iff that child has dimension 3.
++int SupportedBrushSide(const bspbrush_t &brush, const qplane3d &plane)
++{
++    auto supports = BrushSupports(brush);
++    auto q = supported_geometry::coefficients(plane);
++    supports.push_back(p6::opposite(q));
++    bool front = supported_geometry::dimension(supports) == 3;
++    supports.back() = q;
++    bool back = supported_geometry::dimension(supports) == 3;
++    if (!front && !back) Error("PHASE7 INVALID_REGION: no positive-volume child");
++    return (front ? PSIDE_FRONT : 0) | (back ? PSIDE_BACK : 0);
++}
++
+ static int TestBrushToPlanenum(
+     const bspbrush_t &brush, size_t planenum, int *numsplits, bool *hintsplit, int *epsilonbrush)
+ {
+@@ -283,7 +272,7 @@
+     // box on plane side
+     // int s = SphereOnPlaneSide(brush.sphere_origin, brush.sphere_radius, plane);
+     const qbsp_plane_t &plane = map.get_plane(planenum);
+-    int s = BoxOnPlaneSide(brush.bounds, plane);
++    int s = SupportedBrushSide(brush, plane);
+     if (s != PSIDE_BOTH)
+         return s;
+ 
+@@ -345,8 +334,60 @@
+ Called in parallel.
+ ==================
+ */
++// Sufficient exact coverage certificate. Strict outside exists precisely when
++// a full-dimensional node intersected with the opposite support is volumetric.
++bool SupportedCoversRegion(const bspbrush_t &source, const bspbrush_t &region, bool serialized)
++{
++    auto convert = [serialized](p6::Plane p) {
++        if (serialized) for (double &v : p) v = static_cast<float>(v);
++        return p;
++    };
++    auto region_supports = BrushSupports(region);
++    for (auto &p : region_supports) p = convert(p);
++    if (supported_geometry::dimension(region_supports) != 3) return false;
++    for (auto &side : source.sides) {
++        bool implied = false;
++        for (auto &bound : region.sides) implied |= side.planenum == bound.planenum;
++        if (implied) continue;
++        auto outside = region_supports;
++        outside.push_back(p6::opposite(convert(supported_geometry::coefficients(side.get_plane()))));
++        if (supported_geometry::dimension(outside) == 3) return false;
++    }
++    return true;
++}
++
++static void CaptureResolution(const node_t *node, size_t partition,
++    const bspbrush_t::container &sources, const std::string &failure)
++{
++    const char *path = std::getenv("QQBSP_PHASE7_CAPTURE");
++    if (!path) return;
++    nlohmann::json capture;
++    capture["failure"] = failure;
++    capture["partition_id"] = partition;
++    capture["query"] = supported_geometry::coefficients(map.get_plane(partition));
++    capture["node"] = BrushSupports(*node->volume);
++    capture["sources"] = nlohmann::json::array();
++    std::vector<const bspbrush_t *> seen;
++    for (auto &b : sources) {
++        auto *source = b->original_brush();
++        if (std::find(seen.begin(),seen.end(),source) != seen.end()) continue;
++        seen.push_back(source);
++        capture["sources"].push_back({{"planes",BrushSupports(*source)},
++            {"contents",source->contents.to_string()},
++            {"solid",source->contents.is_solid()},
++            {"source",source->mapbrush ? fmt::format("{}",source->mapbrush->line) : "synthetic"}});
++    }
++    std::ofstream(path) << capture.dump(2) << '\n';
++}
++
+ static void LeafNode(node_t *leafnode, bspbrush_t::container brushes, bspstats_t &stats)
+ {
++    for (auto &brush : brushes) {
++        if (!leafnode->volume) Error("PHASE7 UNCERTIFIED_OCCUPANCY: missing node region");
++        if (!SupportedCoversRegion(*brush,*leafnode->volume))
++            Error("PHASE7 UNCERTIFIED_OCCUPANCY: contributor does not cover complete node");
++    }
++
+     leafnode->make_leaf();
+ 
+     auto *leafdata = leafnode->get_leafdata();
+@@ -370,70 +411,93 @@
+ 
+ //============================================================
+ 
+-/*
+-==================
+-BrushMostlyOnSide
+-
+-==================
+-*/
+-planeside_t BrushMostlyOnSide(const bspbrush_t &brush, const qplane3d &plane)
+-{
+-    double max = 0;
+-    planeside_t side = SIDE_FRONT;
++static void SplitUncertain(const bspbrush_t &brush, size_t planenum, const char *reason)
++{
++    if (const char *path = std::getenv("QQBSP_PHASE7_CAPTURE")) {
++        nlohmann::json capture;
++        capture["planes"] = BrushSupports(brush);
++        capture["query"] = supported_geometry::coefficients(map.get_plane(planenum));
++        capture["partition_id"] = planenum;
++        capture["reason"] = reason;
++        capture["source"] = brush.mapbrush ? fmt::format("{}",brush.mapbrush->line) : "node-volume";
++        std::ofstream(std::string(path)+".fragment.json") << capture.dump(2) << '\n';
++    }
++    logging::print("PHASE7_REJECT partition={} plane={} reason={}\n", planenum, map.get_plane(planenum).get_plane(), reason);
++    for (auto &side : brush.sides)
++        logging::print("PHASE7_SUPPORT id={} plane={} onnode={} bevel={} winding={}\n",
++            side.planenum, side.get_plane().get_plane(), side.onnode, side.bevel, side.w);
++    if (std::string_view(reason).starts_with("UNREPRESENTABLE_BOUNDARY"))
++        Error("PHASE7 CONSTRUCTION_UNSUPPORTED source={} partition={}: {}",
++            brush.mapbrush ? fmt::format("{}",brush.mapbrush->line) : "node-volume",planenum,reason);
++    if (brush.mapbrush)
++        Error("PHASE7 NUMERICAL_UNCERTAINTY source={} partition={}: {}",
++            fmt::format("{}", brush.mapbrush->line).c_str(), planenum, reason);
++    Error("PHASE7 NUMERICAL_UNCERTAINTY source=node-volume partition={}: {}", planenum, reason);
++}
++
++static bool BoundaryConsistent(const bspbrush_t &brush)
++{
+     for (auto &face : brush.sides) {
+-        for (size_t j = 0; j < face.w.size(); j++) {
+-            double d = qv::dot(face.w[j], plane.normal) - plane.dist;
+-            if (d > max) {
+-                max = d;
+-                side = SIDE_FRONT;
+-            }
+-            if (-d > max) {
+-                max = -d;
+-                side = SIDE_BACK;
+-            }
+-        }
+-    }
+-    return side;
+-}
+-
+-/*
+-================
+-SplitBrush
+-
+-Note, it's useful to take/return std::unique_ptr so it can quickly return the
+-input.
+-
+-https://github.com/id-Software/Quake-2-Tools/blob/master/bsp/qbsp3/brushbsp.c#L935
+-================
+-*/
+-static twosided<bspbrush_t::ptr> SplitBrush(
+-    bspbrush_t::ptr brush, size_t planenum, std::optional<std::reference_wrapper<bspstats_t>> stats)
++        for (auto &point : face.w) {
++            if (!supported_geometry::boundary_residual_ok(point, face.get_plane(), true)) return false;
++            for (auto &support : brush.sides) {
++                if (!supported_geometry::boundary_residual_ok(point, support.get_plane(), false)) return false;
++            }
++        }
++    }
++    return true;
++}
++
++// Stronger local arithmetic reuses polylib's existing templated clipping.
++// No plane merging or replacement halfspaces are introduced.
++static std::optional<winding_t> ReconstructFace(const qplane3d &plane, const bspbrush_t &brush)
++{
++    using precise_winding_t = polylib::winding_base_t<polylib::winding_storage_heap_t<long double>>;
++    std::optional<precise_winding_t> w = precise_winding_t::from_plane(
++        qplane3<long double>(plane), static_cast<long double>(qbsp_options.worldextent.value()));
++    for (auto &support : brush.sides) {
++        const qplane3d &p = support.get_plane();
++        if (p.normal == plane.normal && p.dist == plane.dist) continue;
++        if (!w) return std::nullopt;
++        // clip_front's keepon=true retains ON, unlike clip_back's flag.
++        w = w->clip_front(-qplane3<long double>(p), 0, true);
++    }
++    if (!w) return std::nullopt;
++    winding_t result;
++    for (auto &point : *w) result.push_back(qvec3d(point));
++    return result;
++}
++
++// Adapt a private representation using retained halfspaces, never a hull/weld.
++// Existing clipping is reused; failure is explicit, not a one-sided fallback.
++static bspbrush_t::ptr SupportedBoundary(bspbrush_t::ptr brush, size_t partition)
++{
++    if (BoundaryConsistent(*brush)) return brush;
++    auto repaired = brush->copy_unique();
++    repaired->original_ptr = brush->original_ptr ? brush->original_ptr : brush;
++    for (auto &face : repaired->sides) {
++        auto w = ReconstructFace(face.get_plane(), *repaired);
++        face.w = w ? std::move(*w) : winding_t{};
++    }
++    if (!BoundaryConsistent(*repaired) || !repaired->update_bounds(false))
++        SplitUncertain(*brush, partition, "retained halfspaces cannot be reconstructed with consistent boundaries");
++    return repaired;
++}
++
++twosided<bspbrush_t::ptr> SupportedSplit(bspbrush_t::ptr brush, size_t planenum)
+ {
+     const qplane3d &split = map.planes[planenum];
+     twosided<bspbrush_t::ptr> result;
+ 
+-    // check all points
+-    double d_front = 0; // for points above plane, greatest distance from plane (positive)
+-    double d_back = 0; // for points below plane, greatest distance from plane (negative)
++    // Retained support identities decide exact facing before vertex arithmetic.
+     for (auto &face : brush->sides) {
+-        for (const qvec3d &p : face.w) {
+-            double d = split.distance_to(p);
+-            if (d > 0 && d > d_front)
+-                d_front = d;
+-            if (d < 0 && d < d_back)
+-                d_back = d;
+-        }
+-    }
+-    if (d_front < 0.1) // PLANESIDE_EPSILON)
+-    { // only on back
+-        result.back = std::move(brush);
+-        return result;
+-    }
+-    if (d_back > -0.1) // PLANESIDE_EPSILON)
+-    { // only on front
+-        result.front = std::move(brush);
+-        return result;
+-    }
++        if (face.planenum == planenum) { result.back = std::move(brush); return result; }
++        if (face.planenum == (planenum ^ 1)) { result.front = std::move(brush); return result; }
++    }
++    int side = SupportedBrushSide(*brush, split);
++    if (side == PSIDE_BACK) { result.back = std::move(brush); return result; }
++    if (side == PSIDE_FRONT) { result.front = std::move(brush); return result; }
++    brush = SupportedBoundary(std::move(brush), planenum);
+ 
+     // create a new winding from the split plane
+     std::optional<winding_t> w = BaseWindingForPlane<winding_t>(split);
+@@ -442,16 +506,24 @@
+         if (!w) {
+             break;
+         }
+-        w = w->clip_back(face.get_plane());
+-    }
+-
+-    if (!w || WindingIsTiny(*w, 0.02)) { // the brush isn't really split
+-        planeside_t side = BrushMostlyOnSide(*brush, split);
+-        if (side == SIDE_FRONT)
+-            result.front = std::move(brush);
+-        else
+-            result.back = std::move(brush);
+-        return result;
++        w = w->clip_back(face.get_plane(), 0, false);
++    }
++
++    bool consistent_cap = w && supported_geometry::winding_rank(*w, split) == supported_geometry::rank_t::area;
++    if (w) for (auto &point : *w) {
++        consistent_cap &= supported_geometry::boundary_residual_ok(point, split, true);
++        for (auto &support : brush->sides)
++            consistent_cap &= supported_geometry::boundary_residual_ok(point, support.get_plane(), false);
++    }
++    if (!consistent_cap) w = ReconstructFace(split, *brush);
++    if (!w || supported_geometry::winding_rank(*w, split) != supported_geometry::rank_t::area)
++        SplitUncertain(*brush, planenum, "UNREPRESENTABLE_BOUNDARY: support-certified positive children, approximate cap unavailable; semantic simplification not certified");
++    for (auto &point : *w) {
++        if (!supported_geometry::boundary_residual_ok(point, split, true))
++            SplitUncertain(*brush, planenum, "cut is inconsistent with partition");
++        for (auto &support : brush->sides)
++            if (!supported_geometry::boundary_residual_ok(point, support.get_plane(), false))
++                SplitUncertain(*brush, planenum, "cut violates parent support");
+     }
+ 
+     if (WindingIsHuge(*w)) {
+@@ -478,13 +550,11 @@
+     for (const auto &face : brush->sides) {
+         auto cw = face.w.clip(split, 0 /*PLANESIDE_EPSILON*/);
+         for (size_t j = 0; j < 2; j++) {
+-            if (!cw[j]) {
+-                continue;
+-            }
+-
++            // Retain every parent halfspace, including inactive/redundant ones.
++            // Boundary geometry is not the authoritative support set.
+             // add the clipped face to result[j]
+             side_t &faceCopy = result[j]->sides.emplace_back(face.clone_non_winding_data());
+-            faceCopy.w = std::move(*cw[j]);
++            faceCopy.w = cw[j] ? std::move(*cw[j]) : winding_t{};
+             faceCopy.tested = false;
+             // fixme-brushbsp: configure any settings on the faceCopy?
+         }
+@@ -498,17 +568,11 @@
+         if (result[i]->sides.size() < 3) {
+             bogus = true;
+         } else if (!result[i]->update_bounds(false)) {
+-            if (stats) {
+-                stats->get().c_bogus++;
+-            }
+             bogus = true;
+         } else {
+             for (int j = 0; j < 3; j++) {
+                 if (result[i]->bounds.mins()[j] < -qbsp_options.worldextent.value() ||
+                     result[i]->bounds.maxs()[j] > qbsp_options.worldextent.value()) {
+-                    if (stats) {
+-                        stats->get().c_bogus++;
+-                    }
+                     bogus = true;
+                     break;
+                 }
+@@ -520,25 +584,8 @@
+         }
+     }
+ 
+-    if (!result[0] && !result[1]) {
+-        if (stats) {
+-            stats->get().c_brushesremoved++;
+-        }
+-
+-        return result;
+-    } else if (!result[0] || !result[1]) {
+-        if (stats) {
+-            stats->get().c_brushesonesided++;
+-        }
+-
+-        if (result[0]) {
+-            result.front = std::move(brush);
+-        } else {
+-            result.back = std::move(brush);
+-        }
+-
+-        return result;
+-    }
++    if (!result[0] || !result[1])
++        SplitUncertain(*brush, planenum, "resolved split lost a child boundary");
+ 
+     // add the midwinding to both sides
+     for (int i = 0; i < 2; i++) {
+@@ -562,13 +609,12 @@
+     }
+ 
+     for (int i = 0; i < 2; i++) {
+-        double v1 = BrushVolume(*result[i]);
+-        if (v1 < qbsp_options.microvolume.value()) {
+-            result[i] = nullptr;
+-            if (stats) {
+-                stats->get().c_tinyvolumes++;
+-            }
+-        }
++        result[i] = SupportedBoundary(std::move(result[i]), planenum);
++        if (!BoundaryConsistent(*result[i]))
++            SplitUncertain(*brush, planenum, "child boundary violates retained supports");
++        double volume = BrushVolume(*result[i]);
++        if (!std::isfinite(volume) || volume <= 0 || volume < qbsp_options.microvolume.value())
++            SplitUncertain(*brush, planenum, "resolved child volume cannot be retained (including microvolume policy)");
+     }
+ 
+     return result;
+@@ -583,183 +629,11 @@
+     }
+ }
+ 
+-using stack_winding_storage_t = polylib::winding_storage_hybrid_t<double, polylib::STACK_POINTS_ON_WINDING>;
+-using stack_winding_t = polylib::winding_base_t<stack_winding_storage_t>;
+-
+-struct stack_side_t
+-{
+-    stack_winding_t w;
+-    size_t planenum;
+-
+-    inline const qbsp_plane_t &get_plane() const { return map.planes[planenum]; }
+-};
+-
+-struct stack_brush_t
+-{
+-    aabb3d bounds;
+-    size_t num_sides;
+-
+-    // stack allocated
+-    stack_side_t *sides;
+-
+-    ~stack_brush_t()
+-    {
+-        for (size_t i = 0; i < num_sides; i++) {
+-            sides[i].~stack_side_t();
+-        }
+-    }
+-
+-    inline bool update_bounds()
+-    {
+-        this->bounds = {};
+-
+-        for (size_t i = 0; i < num_sides; i++) {
+-            if (sides[i].w) {
+-                this->bounds.unionWith_in_place(sides[i].w.bounds());
+-            }
+-        }
+-
+-        for (size_t i = 0; i < 3; i++) {
+-            // todo: map_source_location in bspbrush_t
+-            if (this->bounds.mins()[0] <= -qbsp_options.worldextent.value() ||
+-                this->bounds.maxs()[0] >= qbsp_options.worldextent.value()) {
+-                return false;
+-            }
+-            if (this->bounds.mins()[0] >= qbsp_options.worldextent.value() ||
+-                this->bounds.maxs()[0] <= -qbsp_options.worldextent.value()) {
+-                return false;
+-            }
+-        }
+-
+-        return true;
+-    }
+-};
+-
+-/*
+-================
+-CheckSplitBrush
+-
+-A special, low-allocation version of SplitBrush. Checks if a brush split
+-by the specified plane would result in two valid brushes.
+-================
+-*/
++// Admission classifies support-defined children; realization consumes the same
++// decision but may separately reject an unsupported boundary construction.
+ static bool CheckSplitBrush(const bspbrush_t::ptr &brush, size_t planenum)
+ {
+-    const qplane3d &split = map.planes[planenum];
+-
+-    // check all points
+-    double d_front = 0;
+-    double d_back = 0;
+-
+-    for (auto &face : brush->sides) {
+-        for (int j = 0; j < face.w.size(); j++) {
+-            double d = qv::dot(face.w[j], split.normal) - split.dist;
+-            if (d > 0 && d > d_front)
+-                d_front = d;
+-            if (d < 0 && d < d_back)
+-                d_back = d;
+-        }
+-    }
+-
+-    if (d_front < 0.1) // PLANESIDE_EPSILON)
+-    {
+-        return false;
+-    }
+-    if (d_back > -0.1) // PLANESIDE_EPSILON)
+-    { // only on front
+-        return false;
+-    }
+-
+-    // create a new winding from the split plane
+-    std::optional<stack_winding_t> w = BaseWindingForPlane<stack_winding_t>(split);
+-
+-    for (auto &face : brush->sides) {
+-        if (!w) {
+-            return false;
+-        }
+-        w = w->clip_back(face.get_plane());
+-    }
+-
+-    if (!w || WindingIsTiny(*w, 0.02)) { // the brush isn't really split
+-        return false;
+-    }
+-
+-    stack_winding_t &midwinding = *w;
+-
+-    // split it for real
+-
+-    // start with 2 empty brushes
+-    twosided<stack_brush_t> temporary_brushes;
+-
+-    for (int i = 0; i < 2; i++) {
+-        temporary_brushes[i].sides = (stack_side_t *)alloca(sizeof(stack_side_t) * (brush->sides.size() + 1));
+-        temporary_brushes[i].num_sides = 0;
+-    }
+-
+-    // split all the current windings
+-
+-    for (const auto &face : brush->sides) {
+-        auto cw = face.w.clip<stack_winding_storage_t>(split, 0 /*PLANESIDE_EPSILON*/);
+-
+-        for (size_t j = 0; j < 2; j++) {
+-            if (!cw[j]) {
+-                continue;
+-            }
+-
+-            // add the clipped face to result[j]
+-            stack_side_t &faceCopy = temporary_brushes[j].sides[temporary_brushes[j].num_sides++];
+-            new (&faceCopy) stack_side_t;
+-            faceCopy.planenum = face.planenum;
+-            faceCopy.w = std::move(*cw[j]);
+-        }
+-    }
+-
+-    // see if we have valid polygons on both sides
+-
+-    for (int i = 0; i < 2; i++) {
+-        if (temporary_brushes[i].num_sides < 3) {
+-            return false;
+-        }
+-
+-        if (!temporary_brushes[i].update_bounds()) {
+-            return false;
+-        }
+-
+-        for (int j = 0; j < 3; j++) {
+-            if (temporary_brushes[i].bounds.mins()[j] < -qbsp_options.worldextent.value() ||
+-                temporary_brushes[i].bounds.maxs()[j] > qbsp_options.worldextent.value()) {
+-                return false;
+-            }
+-        }
+-    }
+-
+-    // add the midwinding to both sides
+-    // FIXME: check if we can remove this/if BrushVolume below
+-    // will have the same result either way
+-    for (int i = 0; i < 2; i++) {
+-        stack_side_t &cs = temporary_brushes[i].sides[temporary_brushes[i].num_sides++];
+-        new (&cs) stack_side_t;
+-
+-        const bool brushOnFront = (i == 0);
+-
+-        cs.planenum = planenum ^ i ^ 1;
+-
+-        if (brushOnFront) {
+-            cs.w = midwinding.flip();
+-        } else {
+-            cs.w = std::move(midwinding);
+-        }
+-    }
+-
+-    for (int i = 0; i < 2; i++) {
+-        double v1 =
+-            BrushVolume(temporary_brushes[i].sides, temporary_brushes[i].sides + temporary_brushes[i].num_sides);
+-        if (v1 < qbsp_options.microvolume.value()) {
+-            return false;
+-        }
+-    }
+-
+-    return true;
++    return SupportedBrushSide(*brush, map.get_plane(planenum)) == PSIDE_BOTH;
+ }
+ 
+ inline bool CheckPlaneAgainstVolume(size_t planenum, const node_t *node)
+@@ -767,12 +641,7 @@
+     if (!node->volume)
+         return false;
+ 
+-    bool valid = CheckSplitBrush(node->volume, planenum);
+-#ifdef PARANOID
+-    auto [front, back] = SplitBrush(node->volume, planenum, std::nullopt);
+-    Q_assert(valid == (front && back));
+-#endif
+-    return valid;
++    return CheckSplitBrush(node->volume, planenum);
+ }
+ 
+ /*
+@@ -1129,7 +998,7 @@
+ 
+         if (sides == PSIDE_BOTH) {
+             // split into two brushes (destructively)
+-            auto [front, back] = SplitBrush(std::move(brush), planenum, stats);
++            auto [front, back] = SupportedSplit(std::move(brush), planenum);
+ 
+             if (front) {
+                 result[0].push_back(std::move(front));
+@@ -1173,7 +1042,7 @@
+ ==================
+ */
+ static void BuildTree_r(tree_t &tree, int level, node_t *node, bspbrush_t::container brushes, tree_split_t split_type,
+-    bspstats_t &stats, logging::percent_clock &clock)
++    bspstats_t &stats, logging::percent_clock &clock, const bspbrush_t::container &sources)
+ {
+     // find the best plane to use as a splitter
+     auto *bestside = SelectSplitPlane(brushes, node, split_type, stats);
+@@ -1190,20 +1059,41 @@
+         return;
+     }
+ 
++    // Prepare both geometry and routing before publishing the node. If a
++    // representation fails, only a complete-region coverage proof may remove it.
++    size_t bestplane = bestside->planenum & ~1;
++    std::array<bspbrush_t::container, 2> children;
++    twosided<bspbrush_t::ptr> children_volumes;
++    try {
++        children_volumes = SupportedSplit(node->volume, bestplane);
++        children = SplitBrushList(brushes, bestplane, stats);
++    } catch (const std::runtime_error &failure) {
++        CaptureResolution(node,bestplane,sources,failure.what());
++        for (auto &candidate : sources) {
++            auto source = candidate->original_ptr ? candidate->original_ptr : candidate;
++            if (!source->contents.is_solid() || !SupportedCoversRegion(*source,*node->volume) ||
++                !SupportedCoversRegion(*source,*node->volume,true)) continue;
++            // The whole node is SOLID: no traversable external connection or
++            // separating empty interior exists. Ancestor/root boundaries stay.
++            logging::print("PHASE7 CERTIFIED_CONSTANT_SOLID partition={} source={}\n",
++                bestplane, source->mapbrush ? fmt::format("{}",source->mapbrush->line) : "synthetic");
++            stats.c_leafs++;
++            LeafNode(node,{source},stats);
++            auto &owners = node->get_leafdata()->original_brushes;
++            for (auto &b : brushes)
++                if (std::find(owners.begin(),owners.end(),b->original_brush()) == owners.end())
++                    owners.push_back(b->original_brush());
++            clock();
++            return;
++        }
++        throw;
++    }
++
+     clock();
+-
+-    // this is a splitplane node
+     stats.c_nodes++;
+-
+-    // make sure this was a positive-facing split
+-    size_t bestplane = bestside->planenum & ~1;
+-    Q_assert(!(bestplane & 1));
+-
+     nodedata_t *nodedata = node->get_nodedata();
+     nodedata->planenum = bestplane;
+-
+     auto &plane = map.get_plane(bestplane);
+-    auto children = SplitBrushList(std::move(brushes), bestplane, stats);
+ 
+     // allocate children before recursing
+     for (int i = 0; i < 2; i++) {
+@@ -1222,7 +1112,6 @@
+ 
+     // to save time/memory we can destroy node's volume at this point
+     if (node->volume) {
+-        auto children_volumes = SplitBrush(std::move(node->volume), bestplane, stats);
+         node->volume = nullptr;
+         nodedata->children[0]->volume = std::move(children_volumes[0]);
+         nodedata->children[1]->volume = std::move(children_volumes[1]);
+@@ -1231,10 +1120,10 @@
+     // recursively process children
+     tbb::task_group g;
+     g.run([&]() {
+-        BuildTree_r(tree, level + 1, nodedata->children[0], std::move(children[0]), split_type, stats, clock);
++        BuildTree_r(tree, level + 1, nodedata->children[0], std::move(children[0]), split_type, stats, clock, sources);
+     });
+     g.run([&]() {
+-        BuildTree_r(tree, level + 1, nodedata->children[1], std::move(children[1]), split_type, stats, clock);
++        BuildTree_r(tree, level + 1, nodedata->children[1], std::move(children[1]), split_type, stats, clock, sources);
+     });
+     g.wait();
+ }
+@@ -1339,7 +1228,7 @@
+ 
+     {
+         logging::percent_clock clock;
+-        BuildTree_r(tree, 0, tree.headnode, brushlist, split_type, stats, clock);
++        BuildTree_r(tree, 0, tree.headnode, brushlist, split_type, stats, clock, brushlist);
+     }
+ 
+     stats.print_stats();
+@@ -1410,7 +1299,7 @@
+     bspbrush_t::ptr in = a;
+ 
+     for (auto &side : b->sides) {
+-        auto [front, back] = SplitBrush(in, side.planenum, std::nullopt);
++        auto [front, back] = SupportedSplit(in, side.planenum);
+ 
+         if (front) {
+             // add to list
+--- a/qbsp/portals.cc
++++ b/qbsp/portals.cc
+@@ -22,6 +22,7 @@
+ 
+ #include <qbsp/brush.hh>
+ #include <qbsp/portals.hh>
++#include <qbsp/supported_geometry.hh>
+ 
+ #include <qbsp/map.hh>
+ #include <qbsp/brushbsp.hh>
+@@ -174,6 +175,10 @@
+         }
+     }
+ 
++    for (auto &p : portals) for (auto &bound : bplanes) {
++        p.supports.push_back(-bound);
++    }
++
+     // move into std::list
+     return {std::make_move_iterator(portals.begin()), std::make_move_iterator(portals.end())};
+ }
+@@ -187,8 +192,29 @@
+ Creates a winding from the given node plane, clipped by all parent nodes.
+ ================
+ */
+-constexpr double BASE_WINDING_EPSILON = 0.001;
+-constexpr double SPLIT_WINDING_EPSILON = 0.001;
++static std::vector<qplane3d> NodeSupports(const node_t *node, std::vector<qplane3d> supports)
++{
++    for (auto *parent = node->parent; parent; node = parent, parent = parent->parent) {
++        auto *data = parent->get_nodedata();
++        qplane3d p = data->get_plane();
++        supports.push_back(data->children[0] == node ? -p : p);
++    }
++    return supports;
++}
++
++static bool PortalHasArea(const std::vector<qplane3d> &supports, const qplane3d &plane)
++{
++    return supported_geometry::portal_has_area(supports, plane);
++}
++
++static void RequirePortalWinding(const std::optional<winding_t> &w, const qplane3d &plane)
++{
++    if (!w || supported_geometry::winding_rank(*w, plane) != supported_geometry::rank_t::area)
++        Error("PHASE7 UNREPRESENTABLE_PORTAL: certified area section has no usable winding");
++}
++
++constexpr double BASE_WINDING_EPSILON = 0;
++constexpr double SPLIT_WINDING_EPSILON = 0;
+ 
+ static std::optional<winding_t> BaseWindingForNode(const node_t *node)
+ {
+@@ -220,8 +246,13 @@
+ ==================
+ */
+ static std::optional<buildportal_t> MakeNodePortal(
+-    node_t *node, const std::list<buildportal_t> &boundary_portals, portalstats_t &stats)
+-{
++    node_t *node, const std::list<buildportal_t> &boundary_portals, portalstats_t &stats, const std::vector<qplane3d> &root_supports)
++{
++    auto supports = NodeSupports(node, root_supports);
++    if (!PortalHasArea(supports, node->get_nodedata()->get_plane())) {
++        stats.c_tinyportals++;
++        return std::nullopt;
++    }
+     auto w = BaseWindingForNode(node);
+ 
+     // clip the portal by all the other portals in the node
+@@ -240,21 +271,15 @@
+         }
+ 
+         // fixme-brushbsp: magic number
+-        w = w->clip_front(plane, 0.1, false);
+-    }
+-
+-    if (!w) {
+-        return std::nullopt;
+-    }
+-
+-    if (WindingIsTiny(*w)) {
+-        stats.c_tinyportals++;
+-        return std::nullopt;
+-    }
++        w = w->clip_front(plane, 0, false);
++    }
++
++    RequirePortalWinding(w, node->get_nodedata()->get_plane());
+ 
+     auto *nodedata = node->get_nodedata();
+ 
+     buildportal_t new_portal{};
++    new_portal.supports = std::move(supports);
+     new_portal.plane = nodedata->get_plane();
+     new_portal.onnode = node;
+     new_portal.winding = std::move(*w);
+@@ -299,21 +324,23 @@
+         //
+         auto [frontwinding, backwinding] = p.winding.clip(plane, SPLIT_WINDING_EPSILON, true);
+ 
+-        if (frontwinding && WindingIsTiny(*frontwinding)) {
+-            frontwinding = {};
+-            stats.c_tinyportals++;
+-        }
+-
+-        if (backwinding && WindingIsTiny(*backwinding)) {
+-            backwinding = {};
+-            stats.c_tinyportals++;
+-        }
++        auto front_supports = p.supports, back_supports = p.supports;
++        front_supports.push_back(-plane.get_plane());
++        back_supports.push_back(plane.get_plane());
++        if (!PortalHasArea(front_supports, p.plane)) {
++            frontwinding = {}; stats.c_tinyportals++;
++        } else RequirePortalWinding(frontwinding, p.plane);
++        if (!PortalHasArea(back_supports, p.plane)) {
++            backwinding = {}; stats.c_tinyportals++;
++        } else RequirePortalWinding(backwinding, p.plane);
+ 
+         if (!frontwinding && !backwinding) { // tiny windings on both sides
+             continue;
+         }
+ 
+         if (!frontwinding) {
++            p.supports = std::move(back_supports);
++            p.winding = std::move(*backwinding);
+             if (side == SIDE_FRONT)
+                 p.nodes = {b, other_node};
+             else
+@@ -323,6 +350,8 @@
+             continue;
+         }
+         if (!backwinding) {
++            p.supports = std::move(front_supports);
++            p.winding = std::move(*frontwinding);
+             if (side == SIDE_FRONT)
+                 p.nodes = {f, other_node};
+             else
+@@ -334,6 +363,8 @@
+ 
+         // the winding is split
+         buildportal_t new_portal{};
++        new_portal.supports = std::move(back_supports);
++        p.supports = std::move(front_supports);
+         new_portal.plane = p.plane;
+         new_portal.onnode = p.onnode;
+         new_portal.nodes[0] = p.nodes[0];
+@@ -361,11 +392,26 @@
+ MakePortalsFromBuildportals
+ ================
+ */
++static void CheckPortalRegion(const buildportal_t &portal, const node_t *node)
++{
++    for (auto *parent = node->parent; parent; node = parent, parent = parent->parent) {
++        const auto *data = parent->get_nodedata();
++        qplane3d support = data->get_plane();
++        if (data->children[0] == node) support = -support;
++        for (auto &point : portal.winding) {
++            if (!supported_geometry::boundary_residual_ok(point, support, false))
++                Error("PHASE7 UNCERTIFIED_PORTAL support={}: winding outside incident region", data->planenum);
++        }
++    }
++}
++
+ void MakePortalsFromBuildportals(tree_t &tree, std::list<buildportal_t> &buildportals)
+ {
+     tree.portals.reserve(buildportals.size());
+ 
+     for (auto &buildportal : buildportals) {
++        CheckPortalRegion(buildportal, buildportal.nodes[0]);
++        CheckPortalRegion(buildportal, buildportal.nodes[1]);
+         portal_t *new_portal = tree.create_portal();
+         new_portal->plane = buildportal.plane;
+         new_portal->onnode = buildportal.onnode;
+@@ -466,7 +512,7 @@
+ ==================
+ */
+ std::list<buildportal_t> MakeTreePortals_r(node_t *node, portaltype_t type, std::list<buildportal_t> boundary_portals,
+-    portalstats_t &stats, logging::percent_clock &clock)
++    portalstats_t &stats, logging::percent_clock &clock, const std::vector<qplane3d> &root_supports)
+ {
+     clock();
+ 
+@@ -475,7 +521,7 @@
+     }
+ 
+     // make the node portal before we move out the boundary_portals
+-    std::optional<buildportal_t> nodeportal = MakeNodePortal(node, boundary_portals, stats);
++    std::optional<buildportal_t> nodeportal = MakeNodePortal(node, boundary_portals, stats, root_supports);
+ 
+     // parallel part: split boundary_portals between the front and back, and obtain the fully
+     // portalized front/back sides in parallel
+@@ -489,11 +535,11 @@
+     tbb::task_group g;
+     g.run([&]() {
+         result_portals_front =
+-            MakeTreePortals_r(nodedata->children[0], type, std::move(boundary_portals_split.front), stats, clock);
++            MakeTreePortals_r(nodedata->children[0], type, std::move(boundary_portals_split.front), stats, clock, root_supports);
+     });
+     g.run([&]() {
+         result_portals_back =
+-            MakeTreePortals_r(nodedata->children[1], type, std::move(boundary_portals_split.back), stats, clock);
++            MakeTreePortals_r(nodedata->children[1], type, std::move(boundary_portals_split.back), stats, clock, root_supports);
+     });
+     g.wait();
+ 
+@@ -531,6 +577,7 @@
+     FreeTreePortals(tree);
+ 
+     auto headnodeportals = MakeHeadnodePortals(tree);
++    auto root_supports = headnodeportals.front().supports;
+ 
+     {
+         logging::percent_clock clock(tree.nodes.size());
+@@ -538,7 +585,7 @@
+         portalstats_t stats{};
+ 
+         auto buildportals =
+-            MakeTreePortals_r(tree.headnode, portaltype_t::TREE, std::move(headnodeportals), stats, clock);
++            MakeTreePortals_r(tree.headnode, portaltype_t::TREE, std::move(headnodeportals), stats, clock, root_supports);
+ 
+         MakePortalsFromBuildportals(tree, buildportals);
+     }
+--- a/qbsp/prtfile.cc
++++ b/qbsp/prtfile.cc
+@@ -227,14 +227,15 @@
+ 
+     FreeTreePortals(tree);
+ 
+-    MakeHeadnodePortals(tree);
++    auto headnodeportals = MakeHeadnodePortals(tree);
++    auto root_supports = headnodeportals.front().supports;
+ 
+     {
+         logging::percent_clock clock;
+ 
+         // vis portal generation doesn't use headnode portals
+         portalstats_t stats{};
+-        auto buildportals = MakeTreePortals_r(tree.headnode, portaltype_t::VIS, {}, stats, clock);
++        auto buildportals = MakeTreePortals_r(tree.headnode, portaltype_t::VIS, {}, stats, clock, root_supports);
+ 
+         MakePortalsFromBuildportals(tree, buildportals);
+ 
+--- a/qbsp/CMakeLists.txt
++++ b/qbsp/CMakeLists.txt
+@@ -33,23 +33,18 @@
+ 	${QBSP_INCLUDES})
+ 
+ add_library(libqbsp STATIC ${QBSP_SOURCES})
++find_library(QQBSP_GMP gmp REQUIRED)
++find_library(QQBSP_GMPXX gmpxx REQUIRED)
++target_compile_options(libqbsp PRIVATE -fno-fast-math -ffp-contract=off)
++target_link_libraries(libqbsp ${QQBSP_GMPXX} ${QQBSP_GMP})
+ target_link_libraries(libqbsp common ${CMAKE_THREAD_LIBS_INIT} TBB::tbb TBB::tbbmalloc fmt::fmt nlohmann_json::nlohmann_json pareto)
+ 
+ # Both frontends share one compiler implementation. The qbsp target is retained
+ # for upstream tooling; it also contains downstream corrections on this branch.
+-execute_process(COMMAND git rev-parse HEAD WORKING_DIRECTORY ${PROJECT_SOURCE_DIR}
+-    OUTPUT_VARIABLE QQBSP_REVISION OUTPUT_STRIP_TRAILING_WHITESPACE)
+-execute_process(COMMAND git status --porcelain --untracked-files=no WORKING_DIRECTORY ${PROJECT_SOURCE_DIR}
+-    OUTPUT_VARIABLE QQBSP_DIRTY OUTPUT_STRIP_TRAILING_WHITESPACE)
+-if(QQBSP_DIRTY)
+-    string(APPEND QQBSP_REVISION "-dirty")
+-endif()
+-if(NOT QQBSP_REVISION)
+-    message(FATAL_ERROR "qqbsp identity requires a Git checkout")
+-endif()
++set(QQBSP_REVISION "4b505ae25e508a8910b031e94d6f1ea60ac06a95-phase7-experimental")
+ add_executable(qqbsp main.cc)
+ target_compile_definitions(qqbsp PRIVATE
+-    QQBSP_BUILD_ID="Qartographer qqbsp, upstream=ccaeb8457a1267860ebe99ed1df7394ebdd6b435, downstream=${QQBSP_REVISION}, patches=P1")
++    QQBSP_BUILD_ID="Qartographer qqbsp, upstream=ccaeb8457a1267860ebe99ed1df7394ebdd6b435, downstream=${QQBSP_REVISION}, patches=P1, experiment=phase7-unaccepted")
+ add_executable(qbsp main.cc)
+ foreach(compiler IN ITEMS qqbsp qbsp)
+     target_link_libraries(${compiler} libqbsp)
+--- a/qartographer/CMakeLists.txt
++++ b/qartographer/CMakeLists.txt
+@@ -10,3 +10,5 @@
+     COMMAND ${CMAKE_COMMAND} -E copy_if_different "$<TARGET_FILE:TBB::tbbmalloc>" "$<TARGET_FILE_DIR:qqbsp_tests>")
+ copy_mingw_dlls(qqbsp_tests)
+ add_loader_path_to_rpath(qqbsp_tests)
++
++target_compile_options(qqbsp_tests PRIVATE -fno-fast-math -ffp-contract=off)
+--- a/tests/test_qbsp.cc
++++ b/tests/test_qbsp.cc
+@@ -2697,3 +2697,155 @@
+         EXPECT_EQ(prt->portalleafs_real, 4);
+     }
+ }
++
++#include <qbsp/supported_geometry.hh>
++#include <nlohmann/json.hpp>
++
++static size_t Phase5Plane(qplane3d p)
++{
++    size_t id = map.planes.size();
++    map.planes.emplace_back(qbsp_plane_t(p));
++    map.planes.emplace_back(qbsp_plane_t(-p));
++    return id;
++}
++static void Phase5Reset()
++{
++    map.reset(); qbsp_options.reset();
++    map.mtexinfos.emplace_back();
++    map.skip_texinfo = 0;
++    qbsp_options.target_version = &bspver_q1;
++    qbsp_options.target_game = bspver_q1.game;
++    qbsp_options.worldextent.set_value(65536, settings::source::COMMANDLINE);
++}
++TEST(phase5, Hull2ResolvedFrontFragment)
++{
++    Phase5Reset();
++    auto brush = BrushFromBounds({{-1360.000488281,-1488,172.03125}, {-1280,-1392,322.5093526806837}});
++    mapbrush_t source; source.line = parser_source_location("full-off.map", 13365);
++    brush->mapbrush = &source;
++    qplane3d plane{{1,0,0}, -1280.000244141};
++    EXPECT_EQ(supported_geometry::box_side(brush->bounds, plane), 3);
++    size_t id = Phase5Plane(plane);
++    const double parent_volume = BrushVolume(*brush);
++    auto children = SupportedSplit(brush, id);
++    ASSERT_TRUE(children.front); ASSERT_TRUE(children.back);
++    EXPECT_EQ(children.front->mapbrush, &source);
++    EXPECT_EQ(children.back->mapbrush, &source);
++    EXPECT_EQ(children.front->original_brush(), brush.get());
++    EXPECT_EQ(children.back->original_brush(), brush.get());
++    qvec3d witness{-1280.0001220705,-1440,236.73692674130805};
++    EXPECT_TRUE(children.front->contains_point(witness));
++    EXPECT_FALSE(children.back->contains_point(witness));
++    EXPECT_DOUBLE_EQ(children.front->bounds.mins()[0], plane.dist);
++    EXPECT_DOUBLE_EQ(children.front->bounds.maxs()[0], -1280);
++    EXPECT_NEAR(BrushVolume(*children.front)+BrushVolume(*children.back), parent_volume, parent_volume*1e-12);
++    EXPECT_EQ(brush->sides.size(), 6); // private preparation did not mutate parent
++    RecordProperty("front_width", children.front->bounds.maxs()[0]-children.front->bounds.mins()[0]);
++    RecordProperty("parent_volume", parent_volume);
++    RecordProperty("children_volume", BrushVolume(*children.front)+BrushVolume(*children.back));
++}
++TEST(phase5, NarrowQuadrilateralRankAndRealization)
++{
++    Phase5Reset();
++    std::ifstream file("/tmp/qqbsp-phase7/source/qartographer/phase5-witness.json");
++    nlohmann::json data; file >> data;
++    auto toplane = [](auto p) { return qplane3d{{p[0].template get<double>(),p[1].template get<double>(),p[2].template get<double>()},p[3].template get<double>()}; };
++    qplane3d partition = toplane(data["partition"]);
++    winding_t cap;
++    for (auto v : data["cap"]["vertices"]) cap.push_back({v[0],v[1],v[2]});
++    EXPECT_TRUE(WindingIsTiny(cap, 0.0001)); // former policy rejects this valid cut
++    EXPECT_EQ(supported_geometry::winding_rank(cap, partition), supported_geometry::rank_t::area);
++    auto brush = bspbrush_t::make_ptr();
++    for (auto f : data["region"]) {
++        auto &side = brush->sides.emplace_back();
++        side.planenum = Phase5Plane(toplane(f["p"]));
++        for (auto v : f["w"]) side.w.push_back({v[0],v[1],v[2]});
++    }
++    for (auto constraint : data["cap"]["ancestor_constraints"]) {
++        auto plane = toplane(constraint["p"]);
++        bool present = false;
++        for (auto &side : brush->sides)
++            present |= side.get_plane().get_normal() == plane.normal && side.get_plane().get_dist() == plane.dist;
++        if (present) continue; // same original ancestor support, not a second boundary face
++        auto &side = brush->sides.emplace_back();
++        side.planenum = Phase5Plane(plane);
++        side.onnode = true;
++    }
++    ASSERT_TRUE(brush->update_bounds(false));
++    auto children = SupportedSplit(brush, Phase5Plane(partition));
++    ASSERT_TRUE(children.front); ASSERT_TRUE(children.back);
++    auto &actual = children.back->sides.back().w;
++    RecordProperty("actual_cut_area", actual.area());
++    RecordProperty("expected_cut_area", data["cap"]["area"].get<double>());
++    RecordProperty("parent_volume", BrushVolume(*brush));
++    RecordProperty("children_volume", BrushVolume(*children.front)+BrushVolume(*children.back));
++    EXPECT_NEAR(actual.area(), data["cap"]["area"].get<double>(), 1e-7);
++    EXPECT_NEAR(BrushVolume(*children.front)+BrushVolume(*children.back), BrushVolume(*brush), 1e-4);
++}
++
++TEST(phase7, FailureSiteSupportDecisions)
++{
++    std::ifstream file("/tmp/qqbsp-phase7/source/qartographer/phase7-cases.json");
++    nlohmann::json cases; file >> cases;
++    auto plane = [](auto p) { return qplane3d{{p[0].template get<double>(),p[1].template get<double>(),p[2].template get<double>()},p[3].template get<double>()}; };
++    for (const auto &c : cases) {
++        SCOPED_TRACE(c["name"].get<std::string>());
++        Phase5Reset();
++        auto brush = bspbrush_t::make_ptr();
++        std::vector<qplane3d> supports;
++        std::vector<p6::Plane> coefficients;
++        for (auto p : c["planes"]) {
++            supports.push_back(plane(p));
++            coefficients.push_back(supported_geometry::coefficients(plane(p)));
++            brush->sides.emplace_back().planenum = Phase5Plane(plane(p));
++        }
++        auto expected = c["established"];
++        EXPECT_EQ(supported_geometry::dimension(coefficients), expected["dimension"].get<int>());
++        if (!c.contains("query")) continue;
++        auto q = plane(c["query"]);
++        auto front = coefficients; front.push_back(p6::opposite(supported_geometry::coefficients(q)));
++        auto back = coefficients; back.push_back(supported_geometry::coefficients(q));
++        if (expected.contains("front_dimension"))
++            EXPECT_EQ(supported_geometry::dimension(front), expected["front_dimension"].get<int>());
++        if (expected.contains("section_dimension"))
++            EXPECT_EQ(supported_geometry::portal_has_area(supports,q),expected["section_dimension"].get<int>()==2);
++        if (expected["dimension"].get<int>() != 3) continue;
++        int side = SupportedBrushSide(*brush,q);
++        EXPECT_EQ(side, (supported_geometry::dimension(front)==3 ? 1:0) | (supported_geometry::dimension(back)==3 ? 2:0));
++        if (c["name"].get<std::string>() == "E-p1-rounded-extent") {
++            // No windings at all: exact empty-child routing must precede construction.
++            auto result = SupportedSplit(brush,Phase5Plane(q));
++            EXPECT_FALSE(result.front); EXPECT_EQ(result.back,brush);
++        }
++    }
++}
++
++TEST(phase7, CompleteRegionCoverage)
++{
++    Phase5Reset();
++    auto box = [](qvec3d lo, qvec3d hi) {
++        auto region = bspbrush_t::make_ptr();
++        for (int k=0;k<3;++k) for (double sign : {-1.,1.}) {
++            qplane3d p{};p.normal[k]=sign;p.dist=sign<0 ? -lo[k]:hi[k];
++            region->sides.emplace_back().planenum=Phase5Plane(p);
++        }
++        return region;
++    };
++    auto node = box({-1,-1,-1},{1,1,1});
++    auto enclosing = box({-2,-2,-2},{2,2,2});
++    EXPECT_TRUE(SupportedCoversRegion(*enclosing,*node));
++    auto wall = box({0,-2,-2},{std::ldexp(1.,-45),2,2});
++    EXPECT_FALSE(SupportedCoversRegion(*wall,*node));
++    EXPECT_FALSE(SupportedCoversRegion(*node,*wall));
++    auto fragment = box({0,-.5,-.5},{std::ldexp(1.,-45),.5,.5});
++    EXPECT_TRUE(SupportedCoversRegion(*node,*fragment));
++    EXPECT_FALSE(SupportedCoversRegion(*fragment,*node));
++    EXPECT_TRUE(SupportedCoversRegion(*enclosing,*node,true));
++    auto microscopic = box({208,0,0},{std::nextafter(208.,209.),1,1});
++    auto containing = box({207,-1,-1},{209,2,2});
++    EXPECT_TRUE(SupportedCoversRegion(*containing,*microscopic));
++    EXPECT_FALSE(SupportedCoversRegion(*containing,*microscopic,true)); // target has no volume
++    auto contact = box({0,0,0},{0,1,1});
++    EXPECT_FALSE(SupportedCoversRegion(*node,*contact)); // not a volumetric coverage proof
++
++}
+--- /dev/null
++++ b/qartographer/phase5-witness.json
+@@ -0,0 +1,557 @@
++{
++  "region": [
++    {
++      "plane": 6970,
++      "onnode": 1,
++      "bevel": 0,
++      "visible": 0,
++      "p": [
++        0.0,
++        0.024992324175355175,
++        0.9996876430827351,
++        133.33697143172796
++      ],
++      "w": [
++        [
++          -1352.4344115644085,
++          -240.27955116338404,
++          139.3856539402878
++        ],
++        [
++          -1343.449953108376,
++          -261.20842565436465,
++          139.90887858903002
++        ],
++        [
++          -1380.082196689361,
++          -204.9803429042694,
++          138.50316903407779
++        ]
++      ]
++    },
++    {
++      "plane": 7502,
++      "onnode": 1,
++      "bevel": 0,
++      "visible": 0,
++      "p": [
++        0.910521712194374,
++        0.38725193008921116,
++        -0.14486598725997082,
++        -1344.661856365142
++      ],
++      "w": [
++        [
++          -1343.4499531083766,
++          -261.2084256543634,
++          139.90887858903002
++        ],
++        [
++          -1352.4344115644087,
++          -240.2795511633833,
++          139.3856539402878
++        ],
++        [
++          -1367.02815925148,
++          -268.4305276889056,
++          -27.592424090961202
++        ],
++        [
++          -1356.2280223872442,
++          -293.3856903732527,
++          -26.42013929474324
++        ],
++        [
++          -1343.746562242406,
++          -261.9553446795864,
++          136.04796616033542
++        ]
++      ]
++    },
++    {
++      "plane": 7536,
++      "onnode": 1,
++      "bevel": 0,
++      "visible": 0,
++      "p": [
++        0.7778647425211378,
++        0.6050059108244474,
++        -0.16998320567045644,
++        -1221.0748143136104
++      ],
++      "w": [
++        [
++          -1367.0281592514787,
++          -268.4305276889081,
++          -27.592424090961117
++        ],
++        [
++          -1352.4344115644076,
++          -240.27955116338603,
++          139.3856539402874
++        ],
++        [
++          -1380.0821966893564,
++          -204.98034290427603,
++          138.5031690340775
++        ],
++        [
++          -1400.0077737143954,
++          -226.02819176271402,
++          -27.592514950125206
++        ]
++      ]
++    },
++    {
++      "plane": 7511,
++      "onnode": 1,
++      "bevel": 0,
++      "visible": 0,
++      "p": [
++        0.4828851877764859,
++        -0.8659172692479431,
++        0.1304192403146608,
++        -404.300381909595
++      ],
++      "w": [
++        [
++          -1343.7465624984325,
++          -261.95534532429946,
++          136.04796282771687
++        ],
++        [
++          -1356.2280223872451,
++          -293.3856903732524,
++          -26.420139294743166
++        ],
++        [
++          -1356.2280517033107,
++          -293.38570587315985,
++          -26.420133661706917
++        ]
++      ]
++    },
++    {
++      "plane": 7515,
++      "onnode": 1,
++      "bevel": 0,
++      "visible": 0,
++      "p": [
++        -0.8279887863318917,
++        -0.535250563138992,
++        0.16715682566988688,
++        1275.5601771279648
++      ],
++      "w": [
++        [
++          -1400.0080255121457,
++          -226.02780435800378,
++          -27.592521693040823
++        ],
++        [
++          -1380.0824560881767,
++          -204.97994474416043,
++          138.50315908002187
++        ],
++        [
++          -1343.4499531083757,
++          -261.2084256543649,
++          139.90887858902983
++        ],
++        [
++          -1356.2280517033141,
++          -293.3857058731551,
++          -26.420133661706956
++        ]
++      ]
++    },
++    {
++      "plane": 7531,
++      "onnode": 1,
++      "bevel": 0,
++      "visible": 0,
++      "p": [
++        -0.1341749490061653,
++        -0.10436046809794988,
++        -0.9854470943473168,
++        238.62534322538986
++      ],
++      "w": [
++        [
++          -1356.2280223872442,
++          -293.38569037325277,
++          -26.42013929474327
++        ],
++        [
++          -1367.0281592514798,
++          -268.4305276889063,
++          -27.592424090961174
++        ],
++        [
++          -1400.007773714394,
++          -226.02819176271618,
++          -27.592514950125288
++        ]
++      ]
++    }
++  ],
++  "cap": {
++    "ancestor_constraints": [
++      {
++        "p": [
++          0.0,
++          0.0,
++          1.0,
++          220.0
++        ],
++        "plane": 2040,
++        "path": "",
++        "branch": "1"
++      },
++      {
++        "p": [
++          1.0,
++          0.0,
++          0.0,
++          208.000061035
++        ],
++        "plane": 2768,
++        "path": "1",
++        "branch": "1"
++      },
++      {
++        "p": [
++          1.0,
++          0.0,
++          0.0,
++          -1160.0
++        ],
++        "plane": 6326,
++        "path": "11",
++        "branch": "1"
++      },
++      {
++        "p": [
++          -1.0,
++          -0.0,
++          -0.0,
++          1848.0
++        ],
++        "plane": 4590,
++        "path": "111",
++        "branch": "0"
++      },
++      {
++        "p": [
++          -1.0,
++          -0.0,
++          -0.0,
++          1504.0
++        ],
++        "plane": 1048,
++        "path": "1110",
++        "branch": "0"
++      },
++      {
++        "p": [
++          -0.0,
++          -0.0,
++          -1.0,
++          200.0
++        ],
++        "plane": 9262,
++        "path": "11100",
++        "branch": "0"
++      },
++      {
++        "p": [
++          -0.0,
++          -1.0,
++          -0.0,
++          905.0
++        ],
++        "plane": 6694,
++        "path": "111000",
++        "branch": "0"
++      },
++      {
++        "p": [
++          1.0,
++          0.0,
++          0.0,
++          -1328.0
++        ],
++        "plane": 1128,
++        "path": "1110000",
++        "branch": "1"
++      },
++      {
++        "p": [
++          0.0,
++          1.0,
++          0.0,
++          78.0
++        ],
++        "plane": 9274,
++        "path": "11100001",
++        "branch": "1"
++      },
++      {
++        "p": [
++          -0.0,
++          -0.0,
++          -1.0,
++          184.0
++        ],
++        "plane": 9264,
++        "path": "111000011",
++        "branch": "0"
++      },
++      {
++        "p": [
++          0.0,
++          1.0,
++          0.0,
++          62.0
++        ],
++        "plane": 9276,
++        "path": "1110000110",
++        "branch": "1"
++      },
++      {
++        "p": [
++          0.0,
++          -0.4698086933244058,
++          -0.8827682547967017,
++          289.37412301299
++        ],
++        "plane": 6742,
++        "path": "11100001101",
++        "branch": "0"
++      },
++      {
++        "p": [
++          0.0,
++          0.024992324175355175,
++          0.9996876430827351,
++          133.33697143172796
++        ],
++        "plane": 6970,
++        "path": "111000011010",
++        "branch": "1"
++      },
++      {
++        "p": [
++          0.40991407019166615,
++          -0.8912867330648142,
++          0.19385152700340663,
++          -252.45128403903504
++        ],
++        "plane": 7508,
++        "path": "1110000110101",
++        "branch": "0"
++      },
++      {
++        "p": [
++          0.910521712194374,
++          0.38725193008921116,
++          -0.14486598725997082,
++          -1344.661856365142
++        ],
++        "plane": 7502,
++        "path": "11100001101010",
++        "branch": "1"
++      },
++      {
++        "p": [
++          -0.8309746371534503,
++          0.5563103022661406,
++          4.969805226097235e-07,
++          1180.130690740239
++        ],
++        "plane": 7584,
++        "path": "111000011010101",
++        "branch": "0"
++      },
++      {
++        "p": [
++          -0.05404780729661618,
++          -0.23588878542515881,
++          -0.9702758965557535,
++          259.97691367917844
++        ],
++        "plane": 6782,
++        "path": "1110000110101010",
++        "branch": "0"
++      },
++      {
++        "p": [
++          -0.9105210393138062,
++          -0.3872531684619058,
++          0.14486690610046543,
++          1376.6613540742844
++        ],
++        "plane": 7260,
++        "path": "11100001101010100",
++        "branch": "0"
++      },
++      {
++        "p": [
++          -0.6348985079917848,
++          0.7725955504336052,
++          1.4330554020066281e-08,
++          730.337660627779
++        ],
++        "plane": 7542,
++        "path": "111000011010101000",
++        "branch": "1"
++      },
++      {
++        "p": [
++          -0.13417668765856497,
++          -0.1043589737105833,
++          -0.9854470158740396,
++          334.62744740725435
++        ],
++        "plane": 6814,
++        "path": "1110000110101010001",
++        "branch": "0"
++      },
++      {
++        "p": [
++          0.7778586334554817,
++          0.6050137652574441,
++          -0.16998320566391595,
++          -1221.0679524955628
++        ],
++        "plane": 7526,
++        "path": "11100001101010100010",
++        "branch": "1"
++      },
++      {
++        "p": [
++          0.7778647425211378,
++          0.6050059108244474,
++          -0.16998320567045644,
++          -1221.0748143136104
++        ],
++        "plane": 7536,
++        "path": "111000011010101000101",
++        "branch": "1"
++      },
++      {
++        "p": [
++          -0.8279882194820163,
++          -0.5352496902313142,
++          0.16716242851275748,
++          1307.5591987684634
++        ],
++        "plane": 7268,
++        "path": "1110000110101010001011",
++        "branch": "0"
++      },
++      {
++        "p": [
++          -0.13417679674517152,
++          -0.10435852162662487,
++          -0.9854470488966468,
++          238.6275115175369
++        ],
++        "plane": 7540,
++        "path": "11100001101010100010110",
++        "branch": "0"
++      },
++      {
++        "p": [
++          -0.8279896082512673,
++          -0.5352492537995361,
++          0.16715694701373493,
++          1291.560947205243
++        ],
++        "plane": 7512,
++        "path": "111000011010101000101100",
++        "branch": "0"
++      },
++      {
++        "p": [
++          -0.6139448031676016,
++          0.7893489587393996,
++          7.215403322317644e-07,
++          689.5945419008174
++        ],
++        "plane": 7532,
++        "path": "1110000110101010001011000",
++        "branch": "1"
++      },
++      {
++        "p": [
++          0.4828851877764859,
++          -0.8659172692479431,
++          0.1304192403146608,
++          -404.300381909595
++        ],
++        "plane": 7510,
++        "path": "11100001101010100010110001",
++        "branch": "0"
++      },
++      {
++        "p": [
++          -0.8279887863318917,
++          -0.535250563138992,
++          0.16715682566988688,
++          1275.5601771279648
++        ],
++        "plane": 7514,
++        "path": "111000011010101000101100010",
++        "branch": "0"
++      },
++      {
++        "p": [
++          -0.1341749490061653,
++          -0.10436046809794988,
++          -0.9854470943473168,
++          238.62534322538986
++        ],
++        "plane": 7530,
++        "path": "1110000110101010001011000100",
++        "branch": "0"
++      }
++    ],
++    "vertices": [
++      [
++        -1380.0817737135324,
++        -204.9809921443257,
++        138.50318526516568
++      ],
++      [
++        -1380.081718961731,
++        -204.9809528412686,
++        138.50318428258404
++      ],
++      [
++        -1400.0076194112946,
++        -226.02839015229472,
++        -27.59251494970024
++      ],
++      [
++        -1400.007636762062,
++        -226.02840247142353,
++        -27.592511282665857
++      ]
++    ],
++    "area": 0.007434625516377664,
++    "edges": [
++      6.740515944089137e-05,
++      168.60550830132726,
++      2.159298972018327e-05,
++      168.6054978682941
++    ],
++    "max_halfspace_residual": 2.842170943040401e-14
++  },
++  "partition": [
++    -0.5832227470883194,
++    0.8116464073772524,
++    -0.03288368395349463,
++    633.9685024463479
++  ]
++}
+--- /dev/null
++++ b/qartographer/phase7-cases.json
+@@ -0,0 +1,1057 @@
++[
++  {
++    "name": "A-hull2-front",
++    "planes": [
++      [
++        -1,
++        0.0,
++        0.0,
++        1360.000488281
++      ],
++      [
++        1,
++        0.0,
++        0.0,
++        -1280.0
++      ],
++      [
++        0.0,
++        -1,
++        0.0,
++        1488.0
++      ],
++      [
++        0.0,
++        1,
++        0.0,
++        -1392.0
++      ],
++      [
++        0.0,
++        0.0,
++        -1,
++        -172.03125
++      ],
++      [
++        0.0,
++        0.0,
++        1,
++        322.5093526806837
++      ]
++    ],
++    "query": [
++      1.0,
++      0.0,
++      0.0,
++      -1280.000244141
++    ],
++    "point": [
++      -1280.0001220705,
++      -1440,
++      236.73692674130805
++    ],
++    "established": {
++      "dimension": 3,
++      "front_dimension": 3,
++      "back_dimension": 3,
++      "section_dimension": 2,
++      "strict_front": 1,
++      "strict_back": 1,
++      "point_consistent": true,
++      "point_query_sign": 1
++    }
++  },
++  {
++    "name": "A-actual-post-csg-route",
++    "planes": [
++      [
++        -1.0,
++        0.0,
++        0.0,
++        1584.000488281
++      ],
++      [
++        1.0,
++        0.0,
++        0.0,
++        -1232.0
++      ],
++      [
++        0.0,
++        -1.0,
++        0.0,
++        1488.0
++      ],
++      [
++        0.0,
++        1.0,
++        0.0,
++        -1392.0
++      ],
++      [
++        0.0,
++        0.0,
++        1.0,
++        391.999969482
++      ],
++      [
++        0.0,
++        0.0,
++        -1.0,
++        -168.0
++      ],
++      [
++        1.0,
++        0.0,
++        0.0,
++        -1184.0
++      ],
++      [
++        0.0,
++        1.0,
++        0.0,
++        -1135.99987793
++      ],
++      [
++        -0.0,
++        -1.0,
++        -0.0,
++        1759.588134766
++      ],
++      [
++        -0.0,
++        -1.0,
++        -0.0,
++        1552.0
++      ],
++      [
++        -1.0,
++        -0.0,
++        -0.0,
++        1552.0
++      ],
++      [
++        1.0,
++        0.0,
++        0.0,
++        -1280.0
++      ],
++      [
++        -0.0,
++        -1.0,
++        -0.0,
++        1520.0
++      ],
++      [
++        -0.0,
++        -1.0,
++        -0.0,
++        1508.0
++      ],
++      [
++        -0.7071054229747931,
++        -0.0,
++        0.7071081393956933,
++        1133.1439297194825
++      ],
++      [
++        -0.5000020135223187,
++        -0.0,
++        -0.866024241273665,
++        558.0134650742398
++      ],
++      [
++        -1.0,
++        -0.0,
++        -0.0,
++        1360.000488281
++      ],
++      [
++        -0.0,
++        -0.0,
++        -1.0,
++        -172.03125
++      ]
++    ],
++    "query": [
++      1.0,
++      0.0,
++      0.0,
++      -1280.000244141
++    ],
++    "point": [
++      -1280.0001220705,
++      -1440.0,
++      236.73692674130805
++    ],
++    "source_line": 13366,
++    "post_csg_id": 4712,
++    "ancestor_ids": [
++      "6044",
++      "87420",
++      "75150",
++      "44052",
++      "5518",
++      "9124",
++      "44034",
++      "89006",
++      "89148",
++      "89092",
++      "75140",
++      "45938"
++    ],
++    "established": {
++      "dimension": 3,
++      "front_dimension": 3,
++      "back_dimension": 3,
++      "section_dimension": 2,
++      "strict_front": 1,
++      "strict_back": 1,
++      "point_consistent": true,
++      "point_query_sign": 1
++    }
++  },
++  {
++    "name": "B-narrow-quadrilateral",
++    "planes": [
++      [
++        0.0,
++        0.024992324175355175,
++        0.9996876430827351,
++        133.33697143172796
++      ],
++      [
++        0.910521712194374,
++        0.38725193008921116,
++        -0.14486598725997082,
++        -1344.661856365142
++      ],
++      [
++        0.7778647425211378,
++        0.6050059108244474,
++        -0.16998320567045644,
++        -1221.0748143136104
++      ],
++      [
++        0.4828851877764859,
++        -0.8659172692479431,
++        0.1304192403146608,
++        -404.300381909595
++      ],
++      [
++        -0.8279887863318917,
++        -0.535250563138992,
++        0.16715682566988688,
++        1275.5601771279648
++      ],
++      [
++        -0.1341749490061653,
++        -0.10436046809794988,
++        -0.9854470943473168,
++        238.62534322538986
++      ],
++      [
++        0.0,
++        0.0,
++        1.0,
++        220.0
++      ],
++      [
++        1.0,
++        0.0,
++        0.0,
++        208.000061035
++      ],
++      [
++        1.0,
++        0.0,
++        0.0,
++        -1160.0
++      ],
++      [
++        -1.0,
++        -0.0,
++        -0.0,
++        1848.0
++      ],
++      [
++        -1.0,
++        -0.0,
++        -0.0,
++        1504.0
++      ],
++      [
++        -0.0,
++        -0.0,
++        -1.0,
++        200.0
++      ],
++      [
++        -0.0,
++        -1.0,
++        -0.0,
++        905.0
++      ],
++      [
++        1.0,
++        0.0,
++        0.0,
++        -1328.0
++      ],
++      [
++        0.0,
++        1.0,
++        0.0,
++        78.0
++      ],
++      [
++        -0.0,
++        -0.0,
++        -1.0,
++        184.0
++      ],
++      [
++        0.0,
++        1.0,
++        0.0,
++        62.0
++      ],
++      [
++        0.0,
++        -0.4698086933244058,
++        -0.8827682547967017,
++        289.37412301299
++      ],
++      [
++        0.0,
++        0.024992324175355175,
++        0.9996876430827351,
++        133.33697143172796
++      ],
++      [
++        0.40991407019166615,
++        -0.8912867330648142,
++        0.19385152700340663,
++        -252.45128403903504
++      ],
++      [
++        0.910521712194374,
++        0.38725193008921116,
++        -0.14486598725997082,
++        -1344.661856365142
++      ],
++      [
++        -0.8309746371534503,
++        0.5563103022661406,
++        4.969805226097235e-07,
++        1180.130690740239
++      ],
++      [
++        -0.05404780729661618,
++        -0.23588878542515881,
++        -0.9702758965557535,
++        259.97691367917844
++      ],
++      [
++        -0.9105210393138062,
++        -0.3872531684619058,
++        0.14486690610046543,
++        1376.6613540742844
++      ],
++      [
++        -0.6348985079917848,
++        0.7725955504336052,
++        1.4330554020066281e-08,
++        730.337660627779
++      ],
++      [
++        -0.13417668765856497,
++        -0.1043589737105833,
++        -0.9854470158740396,
++        334.62744740725435
++      ],
++      [
++        0.7778586334554817,
++        0.6050137652574441,
++        -0.16998320566391595,
++        -1221.0679524955628
++      ],
++      [
++        0.7778647425211378,
++        0.6050059108244474,
++        -0.16998320567045644,
++        -1221.0748143136104
++      ],
++      [
++        -0.8279882194820163,
++        -0.5352496902313142,
++        0.16716242851275748,
++        1307.5591987684634
++      ],
++      [
++        -0.13417679674517152,
++        -0.10435852162662487,
++        -0.9854470488966468,
++        238.6275115175369
++      ],
++      [
++        -0.8279896082512673,
++        -0.5352492537995361,
++        0.16715694701373493,
++        1291.560947205243
++      ],
++      [
++        -0.6139448031676016,
++        0.7893489587393996,
++        7.215403322317644e-07,
++        689.5945419008174
++      ],
++      [
++        0.4828851877764859,
++        -0.8659172692479431,
++        0.1304192403146608,
++        -404.300381909595
++      ],
++      [
++        -0.8279887863318917,
++        -0.535250563138992,
++        0.16715682566988688,
++        1275.5601771279648
++      ],
++      [
++        -0.1341749490061653,
++        -0.10436046809794988,
++        -0.9854470943473168,
++        238.62534322538986
++      ]
++    ],
++    "query": [
++      -0.5832227470883194,
++      0.8116464073772524,
++      -0.03288368395349463,
++      633.9685024463479
++    ],
++    "established": {
++      "dimension": 3,
++      "front_dimension": 3,
++      "back_dimension": 3,
++      "section_dimension": 2,
++      "strict_front": 1,
++      "strict_back": 1
++    }
++  },
++  {
++    "name": "C-sky-roof-gap",
++    "planes": [
++      [
++        -1,
++        0.0,
++        0.0,
++        1728.0
++      ],
++      [
++        1,
++        0.0,
++        0.0,
++        -1727.99987793
++      ],
++      [
++        0.0,
++        -1,
++        0.0,
++        1583.0
++      ],
++      [
++        0.0,
++        1,
++        0.0,
++        -1581.0
++      ],
++      [
++        0.0,
++        0.0,
++        -1,
++        -509.0
++      ],
++      [
++        0.0,
++        0.0,
++        1,
++        511.0
++      ]
++    ],
++    "source_boundaries": [
++      -1728,
++      -1727.99987793
++    ],
++    "query": [
++      1.0,
++      0.0,
++      0.0,
++      -1727.999938965
++    ],
++    "point": [
++      -1727.999938965,
++      -1582,
++      510
++    ],
++    "established": {
++      "dimension": 3,
++      "front_dimension": 3,
++      "back_dimension": 3,
++      "section_dimension": 2,
++      "strict_front": 1,
++      "strict_back": 1,
++      "point_consistent": true,
++      "point_query_sign": 0
++    }
++  },
++  {
++    "name": "D-halloween-rounded-extent",
++    "planes": [
++      [
++        -1.0,
++        0.0,
++        0.0,
++        -116.000091553
++      ],
++      [
++        0.0,
++        -1.0,
++        0.0,
++        -789.599975586
++      ],
++      [
++        0.0,
++        0.0,
++        -1.0,
++        48.999938965
++      ],
++      [
++        0.730462728846962,
++        0.6829525618704786,
++        -0.0,
++        691.1956183632868
++      ],
++      [
++        -0.043437238657536584,
++        0.0,
++        0.9990561577297885,
++        -48.997133623801865
++      ]
++    ],
++    "identity": {
++      "path": "qartographer/thin_brush_phase5_evidence/candidate-halloween-off/stdout.log",
++      "sha256": "7d2c758de6a8d6b2a2ac359b2bac917901f388ace169cbe3275382a095eaed37"
++    },
++    "query": [
++      1.0,
++      0.0,
++      0.0,
++      208.000061035
++    ],
++    "point": [
++      208.00006103500016,
++      789.599975586,
++      -48.999938965
++    ],
++    "established": {
++      "dimension": 3,
++      "front_dimension": 3,
++      "back_dimension": 3,
++      "section_dimension": 2,
++      "strict_front": 1,
++      "strict_back": 1,
++      "point_consistent": false,
++      "point_query_sign": 1
++    }
++  },
++  {
++    "name": "E-p1-rounded-extent",
++    "planes": [
++      [
++        -1.0,
++        0.0,
++        0.0,
++        1936.03125
++      ],
++      [
++        1.0,
++        0.0,
++        0.0,
++        -1776.40625
++      ],
++      [
++        0.0,
++        -1.0,
++        0.0,
++        290.09375
++      ],
++      [
++        0.0,
++        1.0,
++        0.0,
++        -47.0625
++      ],
++      [
++        0.0,
++        0.0,
++        -1.0,
++        151.5
++      ],
++      [
++        0.0,
++        0.0,
++        1.0,
++        63.34375
++      ],
++      [
++        0.0,
++        -0.1699123666066197,
++        -0.9854591760565922,
++        166.43697515401647
++      ],
++      [
++        0.0,
++        0.9854544762611134,
++        -0.1699396222690126,
++        -42.06573337396245
++      ],
++      [
++        0.999986463778244,
++        0.0,
++        -0.005203101025605333,
++        -1776.2501754825464
++      ],
++      [
++        0.9995675165479618,
++        -0.029406853319090008,
++        -0.00012976906279002807,
++        -1773.3078735339366
++      ],
++      [
++        0.999546426698612,
++        -0.030115459054047135,
++        0.0,
++        -1773.0801424436531
++      ],
++      [
++        0.98580124166541,
++        -0.0,
++        0.16791638374779233,
++        -1746.0305529259344
++      ],
++      [
++        0.9995680398255388,
++        -0.029389347718689448,
++        0.0,
++        -1773.3134811080947
++      ],
++      [
++        0.0,
++        0.17009769219769055,
++        0.9854272043682475,
++        22.235074694996783
++      ],
++      [
++        0.0,
++        -0.9854206277153194,
++        0.1701357883372746,
++        275.17771101635583
++      ],
++      [
++        0.999567414326611,
++        -0.029410361607495075,
++        -0.00012184633649610198,
++        -1773.3076153931497
++      ],
++      [
++        -1.0,
++        0.0,
++        0.0,
++        1814.65625
++      ],
++      [
++        0.0,
++        1.0,
++        0.0,
++        -203.625
++      ],
++      [
++        0.0,
++        0.0,
++        -1.0,
++        24.28125
++      ],
++      [
++        -0.0,
++        -0.17010333730952978,
++        -0.9854262299310691,
++        71.01942643379891
++      ],
++      [
++        -0.9995592833630517,
++        0.02968566056131813,
++        -2.449042505883687e-05,
++        1806.2138989574262
++      ],
++      [
++        -0.9999870143059859,
++        0.0,
++        0.005096196562148286,
++        1814.8085042105909
++      ],
++      [
++        -0.009971674905035382,
++        -0.1695184733856015,
++        -0.9854765613045312,
++        88.4253960399445
++      ],
++      [
++        0.9854601157443479,
++        -0.0,
++        0.1699069165076462,
++        -1791.9349760484006
++      ]
++    ],
++    "identity": {
++      "path": "qartographer/thin_brush_phase5_evidence/candidate-p1-reduced/stdout.log",
++      "sha256": "0bb51c1a8ad136de0202d03efeee0b5e57b7e75aa698c52a455886c0f48d609c"
++    },
++    "query": [
++      0.0,
++      0.9854585047956871,
++      -0.1699162597453492,
++      -234.04722319586585
++    ],
++    "point": [
++      -1814.1875000000002,
++      -241.68749999999227,
++      -24.28125
++    ],
++    "established": {
++      "dimension": 3,
++      "front_dimension": -1,
++      "back_dimension": 3,
++      "section_dimension": -1,
++      "strict_front": 0,
++      "strict_back": 1,
++      "point_consistent": false,
++      "point_query_sign": 1
++    }
++  },
++  {
++    "name": "F-rotated-portal",
++    "planes": [
++      [
++        -0.2588190451025225,
++        -0.9659258262890678,
++        -0.0,
++        -14.584829175234235
++      ],
++      [
++        -0.25881904510252174,
++        -0.9659258262890681,
++        0.0,
++        177.41517082476588
++      ],
++      [
++        -0.9659258262890678,
++        0.2588190451025224,
++        0.0,
++        122.74928961242331
++      ],
++      [
++        0.9659258262890679,
++        -0.25881904510252246,
++        0.0,
++        -106.74928961242328
++      ],
++      [
++        0.9659258262890679,
++        -0.2588190451025224,
++        -0.0,
++        117.25071038757672
++      ],
++      [
++        0.0,
++        0.0,
++        1.0,
++        208.0
++      ],
++      [
++        -0.0,
++        -0.0,
++        -1.0,
++        -48.0
++      ],
++      [
++        -0.25881904510252174,
++        -0.9659258262890681,
++        0.0,
++        177.41517082476588
++      ],
++      [
++        -0.25881904510252235,
++        -0.9659258262890679,
++        0.0,
++        193.4151708247658
++      ],
++      [
++        0.2588190451025225,
++        0.9659258262890678,
++        0.0,
++        14.584829175234235
++      ],
++      [
++        -0.9659258262890679,
++        0.25881904510252246,
++        -0.0,
++        106.74928961242328
++      ],
++      [
++        0.9659258262890679,
++        -0.2588190451025224,
++        -0.0,
++        117.25071038757672
++      ],
++      [
++        0.0,
++        0.0,
++        1.0,
++        208.0
++      ],
++      [
++        -0.0,
++        -0.0,
++        -1.0,
++        -48.0
++      ],
++      [
++        -1.0,
++        0.0,
++        0.0,
++        188.48513409484295
++      ],
++      [
++        1.0,
++        0.0,
++        0.0,
++        156.48513409484286
++      ],
++      [
++        0.0,
++        -1.0,
++        0.0,
++        241.1714255958583
++      ],
++      [
++        0.0,
++        1.0,
++        0.0,
++        81.17142559585811
++      ],
++      [
++        0.0,
++        0.0,
++        -1.0,
++        -8.0
++      ],
++      [
++        0.0,
++        0.0,
++        1.0,
++        248.0
++      ]
++    ],
++    "winding": [
++      [
++        -99.33706421453343,
++        41.71661237523307,
++        208.0
++      ],
++      [
++        -99.33706421453343,
++        41.71661237523307,
++        208.0
++      ],
++      [
++        -99.33706421453343,
++        41.716612375233055,
++        128.0
++      ]
++    ],
++    "query": [
++      0.9659258262890679,
++      -0.25881904510252246,
++      0.0,
++      -106.74928961242328
++    ],
++    "established": {
++      "dimension": 1,
++      "front_dimension": 1,
++      "back_dimension": 1,
++      "section_dimension": 1,
++      "strict_front": 0,
++      "strict_back": 0
++    }
++  },
++  {
++    "name": "F-base-winding",
++    "planes": [
++      [
++        -0.0,
++        -0.0,
++        -1.0,
++        -32.0
++      ],
++      [
++        0.0,
++        0.0,
++        1.0,
++        48.0
++      ],
++      [
++        -1.0,
++        0.0,
++        0.0,
++        188.48513409484295
++      ],
++      [
++        1.0,
++        0.0,
++        0.0,
++        156.48513409484286
++      ],
++      [
++        0.0,
++        -1.0,
++        0.0,
++        241.1714255958583
++      ],
++      [
++        0.0,
++        1.0,
++        0.0,
++        81.17142559585811
++      ],
++      [
++        0.0,
++        0.0,
++        -1.0,
++        -8.0
++      ],
++      [
++        0.0,
++        0.0,
++        1.0,
++        248.0
++      ]
++    ],
++    "query": [
++      0.9659258262890679,
++      -0.25881904510252246,
++      0.0,
++      -106.74928961242328
++    ],
++    "established": {
++      "dimension": 3,
++      "front_dimension": 3,
++      "back_dimension": 3,
++      "section_dimension": 2,
++      "strict_front": 1,
++      "strict_back": 1
++    }
++  },
++  {
++    "name": "F-make-portal",
++    "planes": [
++      [
++        -0.0,
++        -0.0,
++        -1.0,
++        -32.0
++      ],
++      [
++        0.0,
++        0.0,
++        1.0,
++        48.0
++      ],
++      [
++        -1.0,
++        0.0,
++        0.0,
++        188.48513409484295
++      ],
++      [
++        1.0,
++        0.0,
++        0.0,
++        156.48513409484286
++      ],
++      [
++        0.0,
++        -1.0,
++        0.0,
++        241.1714255958583
++      ],
++      [
++        0.0,
++        1.0,
++        0.0,
++        81.17142559585811
++      ],
++      [
++        0.0,
++        0.0,
++        -1.0,
++        -8.0
++      ],
++      [
++        0.0,
++        0.0,
++        1.0,
++        248.0
++      ],
++      [
++        -1.0,
++        -0.0,
++        -0.0,
++        188.48513409484295
++      ],
++      [
++        -0.0,
++        -1.0,
++        -0.0,
++        241.1714255958583
++      ],
++      [
++        1.0,
++        0.0,
++        0.0,
++        156.48513409484286
++      ],
++      [
++        0.0,
++        1.0,
++        0.0,
++        81.17142559585811
++      ]
++    ],
++    "query": [
++      0.9659258262890679,
++      -0.25881904510252246,
++      0.0,
++      -106.74928961242328
++    ],
++    "established": {
++      "dimension": 3,
++      "front_dimension": 3,
++      "back_dimension": 3,
++      "section_dimension": 2,
++      "strict_front": 1,
++      "strict_back": 1
++    }
++  }
++]

@@ -1,0 +1,35 @@
+Command line: /tmp/appimage_extracted_740db85dc4875cfdb26a910527520a99/usr/bin/qrustyquake -basedir /tmp/qqbsp-phase7/evidence/native-ordinary-final/game -window -width 960 -height 640 -nosound +exec acceptance.cfg
+Playing registered version.
+Console initialized.
+UDP_OpenSocket: Operation not permitted
+UDP_Init: Unable to open control socket, UDP disabled
+Server using protocol 666(FitzQuake)
+Exe: 09:05:20 Jun 21 2026
+384.0 megabyte heap
+Invalid joysticknum value
+No joysticks found
+VID_GetConfigCvar: Failed to open /tmp/qqbsp-phase7/evidence/native-ordinary-final/game/id1/config.cfg
+VID_GetConfigCvar: Failed to open /tmp/qqbsp-phase7/evidence/native-ordinary-final/game/id1/config.cfg
+VID_GetConfigCvar: Failed to open /tmp/qqbsp-phase7/evidence/native-ordinary-final/game/id1/config.cfg
+VID_GetConfigCvar: Failed to open /tmp/qqbsp-phase7/evidence/native-ordinary-final/game/id1/config.cfg
+WARNING: non-standard video mode
+Couldn't load 'localization/loc_english.txt'
+========Quake Initialized=========
+execing quake.rc
+execing default.cfg
+couldn't exec config.cfg
+couldn't exec autoexec.cfg
+execing acceptance.cfg
+Unknown command "joystick"
+
+FITZQUAKE 0.85 SERVER(24778 CRC)
+
+Using protocol 666
+player entered the game
+Saving game to /tmp/qqbsp-phase7/evidence/native-ordinary-final/game/id1/start.sav...
+done.
+Saving game to /tmp/qqbsp-phase7/evidence/native-ordinary-final/game/id1/end.sav...
+done.
+QQBSP_PHASE7_NATIVE_DONE 
+Client player removed
+Wrote /tmp/qqbsp-phase7/evidence/native-ordinary-final/game/id1/config.cfg

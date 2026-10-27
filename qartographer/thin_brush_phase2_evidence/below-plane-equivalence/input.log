@@ -1,0 +1,59 @@
+---- qqbsp / ericw-tools  ----
+
+--- Options Summary ---
+    "nopercent" was set to "1" (from command line)
+    "bsp2" was set to "1" (from command line)
+    "notex" was set to "1" (from command line)
+
+Input file: /tmp/qqbsp-phase2/extended-matrix/distinct-plane-0.000075-default/input.map
+Output file: /tmp/qqbsp-phase2/extended-matrix/distinct-plane-0.000075-default/input.bsp
+
+INFO: using built-in palette.
+/tmp/qqbsp-phase2/extended-matrix/distinct-plane-0.000075-default/input.map[line 5]: Brush with duplicate plane
+WARNING: No wad or _wad key exists in the worldmodel
+     1 entities
+     2 unique textures
+     4 texinfos
+    10 unique planes
+
+INFO: world extents calculated to 328 units
+WARNING: /tmp/qqbsp-phase2/extended-matrix/distinct-plane-0.000075-default/input.map[line 4]: brush bounds out of range
+    1 brushes
+    5 sides
+    1 side bevels
+
+            0 texture frames added
+WARNING: unable to find texture skip
+WARNING: unable to find texture NO_TEXTURE
+Processing hull 0...
+WARNING: /tmp/qqbsp-phase2/extended-matrix/distinct-plane-0.000075-default/input.map[line 4]: brush bounds out of range
+INFO: calculating BSP for 0 brushes with 0 sides
+Processing hull 1...
+WARNING: /tmp/qqbsp-phase2/extended-matrix/distinct-plane-0.000075-default/input.map[line 4]: invalid winding point
+WARNING: /tmp/qqbsp-phase2/extended-matrix/distinct-plane-0.000075-default/input.map[line 4]: brush bounds out of range
+Processing hull 2...
+WARNING: /tmp/qqbsp-phase2/extended-matrix/distinct-plane-0.000075-default/input.map[line 4]: invalid winding point
+WARNING: /tmp/qqbsp-phase2/extended-matrix/distinct-plane-0.000075-default/input.map[line 4]: brush bounds out of range
+Writing /tmp/qqbsp-phase2/extended-matrix/distinct-plane-0.000075-default/input.bsp as Quake BSP2 bsp2
+Wrote /tmp/qqbsp-phase2/extended-matrix/distinct-plane-0.000075-default/input.bsp
+
+count   lump name    byte size 
+      1 models               64
+      0 planes                0
+      1 vertexes             12
+      0 nodes                 0
+      0 texinfos              0
+      0 faces                 0
+      0 clipnodes             0
+      1 leafs                44
+      0 marksurfaces          0
+      1 edges                 8
+      0 surfedges             0
+      2 textures             12
+        lightdata             0
+        visdata               0
+        entdata              30
+
+0.001s seconds elapsed
+
+

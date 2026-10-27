@@ -1,0 +1,34 @@
+{
+  "essential-floor": {
+    "actor_samples": {
+      "1": 513,
+      "2": 512
+    },
+    "compile_seconds": 0.005960733047686517,
+    "source_cells": 3
+  },
+  "essential-wedge": {
+    "actor_samples": {
+      "1": 509,
+      "2": 507
+    },
+    "compile_seconds": 0.00441041705198586,
+    "source_cells": 1
+  },
+  "passage-32": {
+    "actor_samples": {
+      "1": 514,
+      "2": 515
+    },
+    "compile_seconds": 0.007844093954190612,
+    "source_cells": 4
+  },
+  "passage-64": {
+    "actor_samples": {
+      "1": 515,
+      "2": 513
+    },
+    "compile_seconds": 0.007025524973869324,
+    "source_cells": 4
+  }
+}

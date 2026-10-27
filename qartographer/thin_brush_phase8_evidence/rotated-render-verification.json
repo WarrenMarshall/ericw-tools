@@ -1,0 +1,78 @@
+{
+  "groups": [
+    {
+      "plane": [
+        0.0,
+        0.0,
+        1.0,
+        208.0
+      ],
+      "old_faces": 1,
+      "new_faces": 1,
+      "identical_texture_vectors_and_flags": true,
+      "exact_projected_boundary_edge_cancellation": true
+    },
+    {
+      "plane": [
+        0.0,
+        0.0,
+        1.0,
+        48.0
+      ],
+      "old_faces": 1,
+      "new_faces": 1,
+      "identical_texture_vectors_and_flags": true,
+      "exact_projected_boundary_edge_cancellation": false
+    },
+    {
+      "plane": [
+        0.9659258127212524,
+        -0.258819043636322,
+        -0.0,
+        117.2507095336914
+      ],
+      "old_faces": 1,
+      "new_faces": 1,
+      "identical_texture_vectors_and_flags": true,
+      "exact_projected_boundary_edge_cancellation": true
+    },
+    {
+      "plane": [
+        0.9659258127212524,
+        -0.258819043636322,
+        0.0,
+        -106.7492904663086
+      ],
+      "old_faces": 1,
+      "new_faces": 1,
+      "identical_texture_vectors_and_flags": true,
+      "exact_projected_boundary_edge_cancellation": true
+    },
+    {
+      "plane": [
+        0.258819043636322,
+        0.9659258127212524,
+        0.0,
+        14.584829330444336
+      ],
+      "old_faces": 1,
+      "new_faces": 2,
+      "identical_texture_vectors_and_flags": true,
+      "exact_projected_boundary_edge_cancellation": true
+    },
+    {
+      "plane": [
+        0.258819043636322,
+        0.9659258127212524,
+        -0.0,
+        -177.41517639160156
+      ],
+      "old_faces": 1,
+      "new_faces": 1,
+      "identical_texture_vectors_and_flags": true,
+      "exact_projected_boundary_edge_cancellation": true
+    }
+  ],
+  "extra_face_has_identical_projected_union_and_texture_mapping": true,
+  "limitation": "One other floor boundary gains a float32-rounded T-junction vertex; no textured/native rendering acceptance is claimed."
+}

@@ -1,0 +1,1 @@
+REJECTED diagnostic experiment. No P3 or release acceptance. See ../THIN_BRUSH_PHASE2.md.

@@ -1,0 +1,121 @@
+[
+  {
+    "name": "thin-original",
+    "command": [
+      "/usr/bin/time",
+      "-v",
+      "-o",
+      "/tmp/qqbsp-phase5/evidence/candidate-thin-original/time.txt",
+      "/tmp/qqbsp-phase5/build/qbsp/qqbsp",
+      "-bsp2",
+      "-notex",
+      "-nopercent",
+      "-chopfragment",
+      "-threads",
+      "1",
+      "/tmp/qqbsp-phase5/evidence/candidate-thin-original/input.map"
+    ],
+    "exit": 0,
+    "map_sha256": "dc3bd5aecde1e9bd502decc72b33f28f4ecff2c0712e1b4c5184f2b5ae3fad42",
+    "binary_sha256": "6124279cd12d8a9c6bfb549f11a4e6f522df9cc419aef8329aa3cb18c0602793",
+    "bsp": {
+      "bytes": 1512,
+      "sha256": "dd5bab48582c56ed8e37c866e264e00a999a488559fc4fe0ebed4749bfe7d064",
+      "version": "42535032",
+      "lump_bytes": [
+        30,
+        340,
+        12,
+        48,
+        0,
+        264,
+        40,
+        56,
+        0,
+        144,
+        308,
+        8,
+        40,
+        32,
+        64
+      ]
+    },
+    "errors": [],
+    "time_receipt": "\tCommand being timed: \"/tmp/qqbsp-phase5/build/qbsp/qqbsp -bsp2 -notex -nopercent -chopfragment -threads 1 /tmp/qqbsp-phase5/evidence/candidate-thin-original/input.map\"\n\tUser time (seconds): 0.00\n\tSystem time (seconds): 0.00\n\tPercent of CPU this job got: 75%\n\tElapsed (wall clock) time (h:mm:ss or m:ss): 0:00.00\n\tAverage shared text size (kbytes): 0\n\tAverage unshared data size (kbytes): 0\n\tAverage stack size (kbytes): 0\n\tAverage total size (kbytes): 0\n\tMaximum resident set size (kbytes): 7164\n\tAverage resident set size (kbytes): 0\n\tMajor (requiring I/O) page faults: 0\n\tMinor (reclaiming a frame) page faults: 401\n\tVoluntary context switches: 2\n\tInvoluntary context switches: 0\n\tSwaps: 0\n\tFile system inputs: 0\n\tFile system outputs: 48\n\tSocket messages sent: 0\n\tSocket messages received: 0\n\tSignals delivered: 0\n\tPage size (bytes): 4096\n\tExit status: 0\n"
+  },
+  {
+    "name": "p1-reduced",
+    "command": [
+      "/usr/bin/time",
+      "-v",
+      "-o",
+      "/tmp/qqbsp-phase5/evidence/candidate-p1-reduced/time.txt",
+      "/tmp/qqbsp-phase5/build/qbsp/qqbsp",
+      "-bsp2",
+      "-notex",
+      "-nopercent",
+      "-chopfragment",
+      "-threads",
+      "1",
+      "/tmp/qqbsp-phase5/evidence/candidate-p1-reduced/input.map"
+    ],
+    "exit": 1,
+    "map_sha256": "5f4c588e6f4482f933138def59a2cd64660491b146cbcf0683f32266bcd24d93",
+    "binary_sha256": "6124279cd12d8a9c6bfb549f11a4e6f522df9cc419aef8329aa3cb18c0602793",
+    "bsp": null,
+    "errors": [
+      "PHASE5 NUMERICAL_UNCERTAINTY source=/tmp/qqbsp-phase5/evidence/candidate-p1-reduced/input.map[line 4] partition=272: two resolved extents but cut has no resolved rank-2 winding"
+    ],
+    "time_receipt": "Command exited with non-zero status 1\n\tCommand being timed: \"/tmp/qqbsp-phase5/build/qbsp/qqbsp -bsp2 -notex -nopercent -chopfragment -threads 1 /tmp/qqbsp-phase5/evidence/candidate-p1-reduced/input.map\"\n\tUser time (seconds): 0.01\n\tSystem time (seconds): 0.00\n\tPercent of CPU this job got: 100%\n\tElapsed (wall clock) time (h:mm:ss or m:ss): 0:00.01\n\tAverage shared text size (kbytes): 0\n\tAverage unshared data size (kbytes): 0\n\tAverage stack size (kbytes): 0\n\tAverage total size (kbytes): 0\n\tMaximum resident set size (kbytes): 7760\n\tAverage resident set size (kbytes): 0\n\tMajor (requiring I/O) page faults: 0\n\tMinor (reclaiming a frame) page faults: 531\n\tVoluntary context switches: 9\n\tInvoluntary context switches: 4\n\tSwaps: 0\n\tFile system inputs: 0\n\tFile system outputs: 40\n\tSocket messages sent: 0\n\tSocket messages received: 0\n\tSignals delivered: 0\n\tPage size (bytes): 4096\n\tExit status: 1\n"
+  },
+  {
+    "name": "halloween-off",
+    "command": [
+      "/usr/bin/time",
+      "-v",
+      "-o",
+      "/tmp/qqbsp-phase5/evidence/candidate-halloween-off/time.txt",
+      "/tmp/qqbsp-phase5/build/qbsp/qqbsp",
+      "-bsp2",
+      "-notex",
+      "-nopercent",
+      "-chopfragment",
+      "-threads",
+      "1",
+      "/tmp/qqbsp-phase5/evidence/candidate-halloween-off/input.map"
+    ],
+    "exit": 1,
+    "map_sha256": "d5f2ab2a0c5a22d2f0ecaecf77a1bbd72a3c2ce2e3c444fe0b4c517092e5986c",
+    "binary_sha256": "6124279cd12d8a9c6bfb549f11a4e6f522df9cc419aef8329aa3cb18c0602793",
+    "bsp": null,
+    "errors": [
+      "PHASE5 NUMERICAL_UNCERTAINTY source=/tmp/qqbsp-phase5/evidence/candidate-halloween-off/input.map[line 6336] partition=2768: two resolved extents but cut has no resolved rank-2 winding"
+    ],
+    "time_receipt": "Command exited with non-zero status 1\n\tCommand being timed: \"/tmp/qqbsp-phase5/build/qbsp/qqbsp -bsp2 -notex -nopercent -chopfragment -threads 1 /tmp/qqbsp-phase5/evidence/candidate-halloween-off/input.map\"\n\tUser time (seconds): 0.30\n\tSystem time (seconds): 0.01\n\tPercent of CPU this job got: 100%\n\tElapsed (wall clock) time (h:mm:ss or m:ss): 0:00.31\n\tAverage shared text size (kbytes): 0\n\tAverage unshared data size (kbytes): 0\n\tAverage stack size (kbytes): 0\n\tAverage total size (kbytes): 0\n\tMaximum resident set size (kbytes): 41800\n\tAverage resident set size (kbytes): 0\n\tMajor (requiring I/O) page faults: 0\n\tMinor (reclaiming a frame) page faults: 10610\n\tVoluntary context switches: 62\n\tInvoluntary context switches: 9\n\tSwaps: 0\n\tFile system inputs: 0\n\tFile system outputs: 64\n\tSocket messages sent: 0\n\tSocket messages received: 0\n\tSignals delivered: 0\n\tPage size (bytes): 4096\n\tExit status: 1\n"
+  },
+  {
+    "name": "halloween-on",
+    "command": [
+      "/usr/bin/time",
+      "-v",
+      "-o",
+      "/tmp/qqbsp-phase5/evidence/candidate-halloween-on/time.txt",
+      "/tmp/qqbsp-phase5/build/qbsp/qqbsp",
+      "-bsp2",
+      "-notex",
+      "-nopercent",
+      "-chopfragment",
+      "-threads",
+      "1",
+      "/tmp/qqbsp-phase5/evidence/candidate-halloween-on/input.map"
+    ],
+    "exit": 1,
+    "map_sha256": "16250e50546f9d1c4654d75e0a6683f70f7eff332ec730793c5f836d39716318",
+    "binary_sha256": "6124279cd12d8a9c6bfb549f11a4e6f522df9cc419aef8329aa3cb18c0602793",
+    "bsp": null,
+    "errors": [
+      "PHASE5 NUMERICAL_UNCERTAINTY source=/tmp/qqbsp-phase5/evidence/candidate-halloween-on/input.map[line 6336] partition=2768: two resolved extents but cut has no resolved rank-2 winding"
+    ],
+    "time_receipt": "Command exited with non-zero status 1\n\tCommand being timed: \"/tmp/qqbsp-phase5/build/qbsp/qqbsp -bsp2 -notex -nopercent -chopfragment -threads 1 /tmp/qqbsp-phase5/evidence/candidate-halloween-on/input.map\"\n\tUser time (seconds): 0.32\n\tSystem time (seconds): 0.03\n\tPercent of CPU this job got: 100%\n\tElapsed (wall clock) time (h:mm:ss or m:ss): 0:00.35\n\tAverage shared text size (kbytes): 0\n\tAverage unshared data size (kbytes): 0\n\tAverage stack size (kbytes): 0\n\tAverage total size (kbytes): 0\n\tMaximum resident set size (kbytes): 44384\n\tAverage resident set size (kbytes): 0\n\tMajor (requiring I/O) page faults: 0\n\tMinor (reclaiming a frame) page faults: 12093\n\tVoluntary context switches: 53\n\tInvoluntary context switches: 20\n\tSwaps: 0\n\tFile system inputs: 0\n\tFile system outputs: 64\n\tSocket messages sent: 0\n\tSocket messages received: 0\n\tSignals delivered: 0\n\tPage size (bytes): 4096\n\tExit status: 1\n"
+  }
+]

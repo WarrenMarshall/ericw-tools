@@ -1,0 +1,15 @@
+{
+  "actor_tracks": {
+    "1": {
+      "support": 1897,
+      "accessible_above_floor": 973,
+      "source_obstructed_above_floor": 1041
+    },
+    "2": {
+      "support": 2128,
+      "accessible_above_floor": 764,
+      "source_obstructed_above_floor": 1439
+    }
+  },
+  "equal_projectile_samples": 10070
+}

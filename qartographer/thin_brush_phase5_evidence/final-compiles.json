@@ -1,0 +1,89 @@
+[
+  {
+    "name": "thin-original-final",
+    "command": [
+      "/usr/bin/time",
+      "-v",
+      "-o",
+      "/tmp/qqbsp-phase5/evidence/thin-original-final/time.txt",
+      "/tmp/qqbsp-phase5/build/qbsp/qqbsp",
+      "-bsp2",
+      "-notex",
+      "-nopercent",
+      "-chopfragment",
+      "-threads",
+      "1",
+      "/tmp/qqbsp-phase5/evidence/thin-original-final/input.map"
+    ],
+    "exit": 0,
+    "map_sha256": "dc3bd5aecde1e9bd502decc72b33f28f4ecff2c0712e1b4c5184f2b5ae3fad42",
+    "binary_sha256": "ff422a949e21c8903948a0bb61bcd038e8f6705e84a40eb55568e6b9b2080071",
+    "bsp": {
+      "bytes": 1512,
+      "sha256": "dd5bab48582c56ed8e37c866e264e00a999a488559fc4fe0ebed4749bfe7d064"
+    }
+  },
+  {
+    "name": "p1-reduced-final",
+    "command": [
+      "/usr/bin/time",
+      "-v",
+      "-o",
+      "/tmp/qqbsp-phase5/evidence/p1-reduced-final/time.txt",
+      "/tmp/qqbsp-phase5/build/qbsp/qqbsp",
+      "-bsp2",
+      "-notex",
+      "-nopercent",
+      "-chopfragment",
+      "-threads",
+      "1",
+      "/tmp/qqbsp-phase5/evidence/p1-reduced-final/input.map"
+    ],
+    "exit": 1,
+    "map_sha256": "5f4c588e6f4482f933138def59a2cd64660491b146cbcf0683f32266bcd24d93",
+    "binary_sha256": "ff422a949e21c8903948a0bb61bcd038e8f6705e84a40eb55568e6b9b2080071",
+    "bsp": null
+  },
+  {
+    "name": "halloween-off-final",
+    "command": [
+      "/usr/bin/time",
+      "-v",
+      "-o",
+      "/tmp/qqbsp-phase5/evidence/halloween-off-final/time.txt",
+      "/tmp/qqbsp-phase5/build/qbsp/qqbsp",
+      "-bsp2",
+      "-notex",
+      "-nopercent",
+      "-chopfragment",
+      "-threads",
+      "1",
+      "/tmp/qqbsp-phase5/evidence/halloween-off-final/input.map"
+    ],
+    "exit": 1,
+    "map_sha256": "d5f2ab2a0c5a22d2f0ecaecf77a1bbd72a3c2ce2e3c444fe0b4c517092e5986c",
+    "binary_sha256": "ff422a949e21c8903948a0bb61bcd038e8f6705e84a40eb55568e6b9b2080071",
+    "bsp": null
+  },
+  {
+    "name": "halloween-on-final",
+    "command": [
+      "/usr/bin/time",
+      "-v",
+      "-o",
+      "/tmp/qqbsp-phase5/evidence/halloween-on-final/time.txt",
+      "/tmp/qqbsp-phase5/build/qbsp/qqbsp",
+      "-bsp2",
+      "-notex",
+      "-nopercent",
+      "-chopfragment",
+      "-threads",
+      "1",
+      "/tmp/qqbsp-phase5/evidence/halloween-on-final/input.map"
+    ],
+    "exit": 1,
+    "map_sha256": "16250e50546f9d1c4654d75e0a6683f70f7eff332ec730793c5f836d39716318",
+    "binary_sha256": "ff422a949e21c8903948a0bb61bcd038e8f6705e84a40eb55568e6b9b2080071",
+    "bsp": null
+  }
+]

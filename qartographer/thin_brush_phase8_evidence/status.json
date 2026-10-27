@@ -1,0 +1,40 @@
+{
+  "baseline": "4b505ae25e508a8910b031e94d6f1ea60ac06a95 + phase7-unaccepted.patch",
+  "changes": [
+    "include/qbsp/portals.hh",
+    "include/qbsp/supported_geometry.hh",
+    "qartographer/phase8-unrepresentable-portal.json",
+    "qbsp/CMakeLists.txt",
+    "qbsp/brushbsp.cc",
+    "qbsp/portals.cc",
+    "qbsp/qbsp.cc",
+    "tests/test_qbsp.cc"
+  ],
+  "source": {
+    "include/qbsp/portals.hh": "909e494c8f555a17021da877f96d705f5dc2b59e994f089d93755c1b1a0199c3",
+    "include/qbsp/supported_geometry.hh": "803b2125443a7577d136e15e70a17bb0ac8a31ab68d7e7949ccc554bf3079685",
+    "qartographer/phase8-unrepresentable-portal.json": "8f6acf5af482044fe79d1db95562b3620b93c9b7f3ef2c4a631538c9a005824a",
+    "qbsp/CMakeLists.txt": "60e45693c4bd85e3ee51b132ee37b7f0cc232008c7a5617220c60ce934a611b1",
+    "qbsp/brushbsp.cc": "f7aae03b2b0fd9e0c70ecba1afb29afc61066a876312227cf0c985cdbd173690",
+    "qbsp/portals.cc": "99b3598a951cea461296c286f94d87622686e422d76b76d9c02895f764b33c2b",
+    "qbsp/qbsp.cc": "11db365eb750e5c15e4613839418ce6a20b704dad74bc8d5eab392570e156068",
+    "tests/test_qbsp.cc": "a59cae2731e2cd1886a265bce164c4bcc5d3f15d86194dde32ca99d5ef19db03"
+  },
+  "binary": "/tmp/qqbsp-phase8/final-qqbsp",
+  "binary_sha256": "032778d488750be24079bd278e20acfa0d594a5e835d10d29c48cff0f7654e48",
+  "rebuilt_binary_sha256": "032778d488750be24079bd278e20acfa0d594a5e835d10d29c48cff0f7654e48",
+  "predicate_sha256": "2fe4ea9a683c13b2b530294f0c9f2faa5e923024e812382403931af9438891dd",
+  "phase7_predicate_sha256": "2fe4ea9a683c13b2b530294f0c9f2faa5e923024e812382403931af9438891dd",
+  "precise_binary_sha256": "a20d6b2b6edd3eccdfda6c6e90dbdc0b058847c2754951e24b8f38cec712703a",
+  "rejected_reconstruction_binary_sha256": "111451b707e0060ea2590c5bac2274754d97c76c66e2e542680b833ec6949c2d",
+  "installed_sha256": "49d766579a03701d6a5bb3560112bc756afdb8cf4488242e0b8db72668d8c8c0",
+  "status": "PARTIAL, UNACCEPTED, NO PROMOTION",
+  "matrix_probe_source_sha256": "5a2c2fb31b609f4e7d918d42d4bb2459bb084feea86d198ff560026a04607741",
+  "phase7_matrix_probe_source_sha256": "5a2c2fb31b609f4e7d918d42d4bb2459bb084feea86d198ff560026a04607741",
+  "fixtures": {
+    "full-off.map": "d5f2ab2a0c5a22d2f0ecaecf77a1bbd72a3c2ce2e3c444fe0b4c517092e5986c",
+    "full-on.map": "16250e50546f9d1c4654d75e0a6683f70f7eff332ec730793c5f836d39716318",
+    "reduced.map": "5f4c588e6f4482f933138def59a2cd64660491b146cbcf0683f32266bcd24d93",
+    "roller-direct.map": "a281bdf08b070bfc7a728acf8212f5e401b04b572a706a353716fc898d861300"
+  }
+}

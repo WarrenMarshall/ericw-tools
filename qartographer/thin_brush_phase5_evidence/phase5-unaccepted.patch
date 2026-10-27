@@ -1,0 +1,890 @@
+--- /dev/null
++++ b/include/qbsp/supported_geometry.hh
+@@ -0,0 +1,76 @@
++// Experimental Phase 5 predicates. This is not a production certificate.
++#pragma once
++#include <qbsp/winding.hh>
++#include <common/aabb.hh>
++#include <limits>
++#include <cmath>
++
++namespace supported_geometry {
++struct distance_t { long double value, error; };
++inline distance_t distance(const qvec3d &p, const qplane3d &plane)
++{
++    long double value = -static_cast<long double>(plane.dist);
++    long double magnitude = std::abs(value);
++    for (int i = 0; i < 3; ++i) {
++        long double product = static_cast<long double>(p[i]) * plane.normal[i];
++        value += product;
++        magnitude += std::abs(product);
++    }
++    // Three products, three additions, and an enclosing rounded magnitude sum.
++    const long double u = std::numeric_limits<long double>::epsilon();
++    return {value, (8 * u / (1 - 8 * u)) * magnitude};
++}
++
++// Exclusive broad-phase answers require separation of the complete box.
++// Uncertainty includes contact and deliberately returns BOTH.
++inline int box_side(const aabb3d &bounds, const qplane3d &plane)
++{
++    qvec3d lo, hi;
++    for (int i = 0; i < 3; ++i) {
++        lo[i] = plane.normal[i] < 0 ? bounds.maxs()[i] : bounds.mins()[i];
++        hi[i] = plane.normal[i] < 0 ? bounds.mins()[i] : bounds.maxs()[i];
++    }
++    auto minimum = distance(lo, plane), maximum = distance(hi, plane);
++    if (minimum.value > minimum.error) return 1;
++    if (maximum.value < -maximum.error) return 2;
++    return 3;
++}
++
++enum class rank_t { area, lower_dimensional, uncertain };
++inline rank_t winding_rank(const winding_t &w, const qplane3d &plane)
++{
++    if (w.size() < 3) return rank_t::lower_dimensional;
++    long double area = 0, scale = 0;
++    for (size_t i = 2; i < w.size(); ++i) {
++        long double a[3], b[3], sa[3], sb[3];
++        for (int k = 0; k < 3; ++k) {
++            a[k] = static_cast<long double>(w[i-1][k]) - w[0][k];
++            b[k] = static_cast<long double>(w[i][k]) - w[0][k];
++            sa[k] = std::abs(static_cast<long double>(w[i-1][k])) + std::abs(static_cast<long double>(w[0][k]));
++            sb[k] = std::abs(static_cast<long double>(w[i][k])) + std::abs(static_cast<long double>(w[0][k]));
++        }
++        for (int k = 0; k < 3; ++k) {
++            int j = (k+1)%3, l = (k+2)%3;
++            area += (a[j]*b[l] - a[l]*b[j]) * plane.normal[k];
++            scale += (sa[j]*sb[l] + sa[l]*sb[j]) * std::abs(static_cast<long double>(plane.normal[k]));
++        }
++    }
++    const long double u = std::numeric_limits<long double>::epsilon();
++    const long double operations = 32 * static_cast<long double>(w.size());
++    long double error = operations*u/(1-operations*u)*scale;
++    if (!std::isfinite(area) || !std::isfinite(error)) return rank_t::uncertain;
++    if (std::abs(area) > error) return rank_t::area;
++    return rank_t::uncertain; // small is not proof of degeneracy
++}
++
++// A backward-residual check, not a forward bound on an ill-conditioned solve.
++inline bool boundary_residual_ok(const qvec3d &p, const qplane3d &plane, bool on_plane)
++{
++    auto d = distance(p, plane);
++    long double scale = std::abs(static_cast<long double>(plane.dist));
++    for (int i=0; i<3; ++i) scale += std::abs(static_cast<long double>(p[i])*plane.normal[i]);
++    const long double u = std::numeric_limits<double>::epsilon();
++    long double bound = 32*u/(1-32*u)*scale;
++    return on_plane ? std::abs(d.value) <= bound : d.value <= bound;
++}
++} // namespace supported_geometry
+--- a/include/qbsp/brushbsp.hh
++++ b/include/qbsp/brushbsp.hh
+@@ -100,4 +100,7 @@
+ double BrushVolume(const bspbrush_t &brush);
+ bspbrush_t::ptr BrushFromBounds(const aabb3d &bounds);
+ void BrushBSP(tree_t &tree, mapentity_t &entity, const bspbrush_t::container &brushes, tree_split_t split_type);
+-void ChopBrushes(bspbrush_t::container &brushes, bool allow_fragmentation);+void ChopBrushes(bspbrush_t::container &brushes, bool allow_fragmentation);
++// Experimental shared admission/realization. Unresolved geometry is a fatal
++// source-identifiable diagnostic; no mostly-side or tiny-fragment fallback.
++twosided<bspbrush_t::ptr> SupportedSplit(bspbrush_t::ptr brush, size_t planenum);
+--- a/qbsp/brushbsp.cc
++++ b/qbsp/brushbsp.cc
+@@ -20,6 +20,7 @@
+ */
+ 
+ #include <qbsp/brushbsp.hh>
++#include <qbsp/supported_geometry.hh>
+ 
+ #include <climits>
+ 
+@@ -34,11 +35,6 @@
+ #include <atomic>
+ 
+ #include "tbb/task_group.h"
+-
+-// if a brush just barely pokes onto the other side,
+-// let it slide by without chopping
+-constexpr double PLANESIDE_EPSILON = 0.001;
+-// 0.1
+ 
+ constexpr int PSIDE_FRONT = 1;
+ constexpr int PSIDE_BACK = 2;
+@@ -169,37 +165,7 @@
+ */
+ static int BoxOnPlaneSide(const aabb3d &bounds, const qbsp_plane_t &plane)
+ {
+-    // axial planes are easy
+-    if (plane.get_type() < plane_type_t::PLANE_ANYX) {
+-        int side = 0;
+-        if (bounds.maxs()[static_cast<int>(plane.get_type())] > plane.get_dist() + PLANESIDE_EPSILON)
+-            side |= PSIDE_FRONT;
+-        if (bounds.mins()[static_cast<int>(plane.get_type())] < plane.get_dist() - PLANESIDE_EPSILON)
+-            side |= PSIDE_BACK;
+-        return side;
+-    }
+-
+-    // create the proper leading and trailing verts for the box
+-    std::array<qvec3d, 2> corners;
+-    for (int i = 0; i < 3; i++) {
+-        if (plane.get_normal()[i] < 0) {
+-            corners[0][i] = bounds.mins()[i];
+-            corners[1][i] = bounds.maxs()[i];
+-        } else {
+-            corners[1][i] = bounds.mins()[i];
+-            corners[0][i] = bounds.maxs()[i];
+-        }
+-    }
+-
+-    double dist1 = qv::dot(plane.get_normal(), corners[0]) - plane.get_dist();
+-    double dist2 = qv::dot(plane.get_normal(), corners[1]) - plane.get_dist();
+-    int side = 0;
+-    if (dist1 >= PLANESIDE_EPSILON)
+-        side = PSIDE_FRONT;
+-    if (dist2 < PLANESIDE_EPSILON)
+-        side |= PSIDE_BACK;
+-
+-    return side;
++    return supported_geometry::box_side(bounds, plane.get_plane());
+ }
+ 
+ #if 0
+@@ -347,6 +313,28 @@
+ */
+ static void LeafNode(node_t *leafnode, bspbrush_t::container brushes, bspstats_t &stats)
+ {
++    // Sufficient constancy proof: every contributing convex fragment covers
++    // the node region. More general union coverage needs further partitioning.
++    for (auto &brush : brushes) {
++        if (!leafnode->volume)
++            Error("PHASE5 UNCERTIFIED_OCCUPANCY: missing node volume");
++        for (auto &support : brush->sides) {
++            bool implied = false;
++            for (auto &bound : leafnode->volume->sides)
++                implied |= bound.planenum == support.planenum;
++            if (implied) continue;
++            for (auto &bound : leafnode->volume->sides) for (auto &point : bound.w) {
++                auto d = supported_geometry::distance(point, support.get_plane());
++                if (d.value > -d.error && d.value != 0) {
++                    if (brush->mapbrush)
++                        Error("PHASE5 UNCERTIFIED_OCCUPANCY source={} support={} residual={:.17g}: region coverage unproved",
++                            fmt::format("{}", brush->mapbrush->line).c_str(), support.planenum, static_cast<double>(d.value));
++                    Error("PHASE5 UNCERTIFIED_OCCUPANCY support={}: region coverage unproved", support.planenum);
++                }
++            }
++        }
++    }
++
+     leafnode->make_leaf();
+ 
+     auto *leafdata = leafnode->get_leafdata();
+@@ -370,70 +358,91 @@
+ 
+ //============================================================
+ 
+-/*
+-==================
+-BrushMostlyOnSide
+-
+-==================
+-*/
+-planeside_t BrushMostlyOnSide(const bspbrush_t &brush, const qplane3d &plane)
+-{
+-    double max = 0;
+-    planeside_t side = SIDE_FRONT;
++static void SplitUncertain(const bspbrush_t &brush, size_t planenum, const char *reason)
++{
++    logging::print("PHASE5_REJECT partition={} plane={} reason={}\n", planenum, map.get_plane(planenum).get_plane(), reason);
++    for (auto &side : brush.sides)
++        logging::print("PHASE5_SUPPORT id={} plane={} onnode={} bevel={} winding={}\n",
++            side.planenum, side.get_plane().get_plane(), side.onnode, side.bevel, side.w);
++    if (brush.mapbrush)
++        Error("PHASE5 NUMERICAL_UNCERTAINTY source={} partition={}: {}",
++            fmt::format("{}", brush.mapbrush->line).c_str(), planenum, reason);
++    Error("PHASE5 NUMERICAL_UNCERTAINTY source=node-volume partition={}: {}", planenum, reason);
++}
++
++static bool BoundaryConsistent(const bspbrush_t &brush)
++{
+     for (auto &face : brush.sides) {
+-        for (size_t j = 0; j < face.w.size(); j++) {
+-            double d = qv::dot(face.w[j], plane.normal) - plane.dist;
+-            if (d > max) {
+-                max = d;
+-                side = SIDE_FRONT;
+-            }
+-            if (-d > max) {
+-                max = -d;
+-                side = SIDE_BACK;
+-            }
+-        }
+-    }
+-    return side;
+-}
+-
+-/*
+-================
+-SplitBrush
+-
+-Note, it's useful to take/return std::unique_ptr so it can quickly return the
+-input.
+-
+-https://github.com/id-Software/Quake-2-Tools/blob/master/bsp/qbsp3/brushbsp.c#L935
+-================
+-*/
+-static twosided<bspbrush_t::ptr> SplitBrush(
+-    bspbrush_t::ptr brush, size_t planenum, std::optional<std::reference_wrapper<bspstats_t>> stats)
++        for (auto &point : face.w) {
++            if (!supported_geometry::boundary_residual_ok(point, face.get_plane(), true)) return false;
++            for (auto &support : brush.sides) {
++                if (!supported_geometry::boundary_residual_ok(point, support.get_plane(), false)) return false;
++            }
++        }
++    }
++    return true;
++}
++
++// Stronger local arithmetic reuses polylib's existing templated clipping.
++// No plane merging or replacement halfspaces are introduced.
++static std::optional<winding_t> ReconstructFace(const qplane3d &plane, const bspbrush_t &brush)
++{
++    using precise_winding_t = polylib::winding_base_t<polylib::winding_storage_heap_t<long double>>;
++    std::optional<precise_winding_t> w = precise_winding_t::from_plane(
++        qplane3<long double>(plane), static_cast<long double>(qbsp_options.worldextent.value()));
++    for (auto &support : brush.sides) {
++        const qplane3d &p = support.get_plane();
++        if (p.normal == plane.normal && p.dist == plane.dist) continue;
++        if (!w) return std::nullopt;
++        // clip_front's keepon=true retains ON, unlike clip_back's flag.
++        w = w->clip_front(-qplane3<long double>(p), 0, true);
++    }
++    if (!w) return std::nullopt;
++    winding_t result;
++    for (auto &point : *w) result.push_back(qvec3d(point));
++    return result;
++}
++
++// Adapt a private representation using retained halfspaces, never a hull/weld.
++// Existing clipping is reused; failure is explicit, not a one-sided fallback.
++static bspbrush_t::ptr SupportedBoundary(bspbrush_t::ptr brush, size_t partition)
++{
++    if (BoundaryConsistent(*brush)) return brush;
++    auto repaired = brush->copy_unique();
++    repaired->original_ptr = brush->original_ptr ? brush->original_ptr : brush;
++    for (auto &face : repaired->sides) {
++        auto w = ReconstructFace(face.get_plane(), *repaired);
++        face.w = w ? std::move(*w) : winding_t{};
++    }
++    if (!BoundaryConsistent(*repaired) || !repaired->update_bounds(false))
++        SplitUncertain(*brush, partition, "retained halfspaces cannot be reconstructed with consistent boundaries");
++    return repaired;
++}
++
++twosided<bspbrush_t::ptr> SupportedSplit(bspbrush_t::ptr brush, size_t planenum)
+ {
+     const qplane3d &split = map.planes[planenum];
+     twosided<bspbrush_t::ptr> result;
+ 
+-    // check all points
+-    double d_front = 0; // for points above plane, greatest distance from plane (positive)
+-    double d_back = 0; // for points below plane, greatest distance from plane (negative)
++    // Retained support identities decide exact facing before vertex arithmetic.
+     for (auto &face : brush->sides) {
+-        for (const qvec3d &p : face.w) {
+-            double d = split.distance_to(p);
+-            if (d > 0 && d > d_front)
+-                d_front = d;
+-            if (d < 0 && d < d_back)
+-                d_back = d;
+-        }
+-    }
+-    if (d_front < 0.1) // PLANESIDE_EPSILON)
+-    { // only on back
+-        result.back = std::move(brush);
+-        return result;
+-    }
+-    if (d_back > -0.1) // PLANESIDE_EPSILON)
+-    { // only on front
+-        result.front = std::move(brush);
+-        return result;
+-    }
++        if (face.planenum == planenum) { result.back = std::move(brush); return result; }
++        if (face.planenum == (planenum ^ 1)) { result.front = std::move(brush); return result; }
++    }
++    brush = SupportedBoundary(std::move(brush), planenum);
++    bool front = false, back = false, uncertain = false;
++    for (auto &face : brush->sides) for (auto &point : face.w) {
++        auto d = supported_geometry::distance(point, split);
++        front |= d.value > d.error;
++        back |= d.value < -d.error;
++        uncertain |= std::abs(d.value) <= d.error && d.value != 0;
++    }
++    if ((!front || !back) && uncertain)
++        SplitUncertain(*brush, planenum, "one-sided extent sign cannot be resolved");
++    if (!front && !back)
++        SplitUncertain(*brush, planenum, "parent has no resolved extent");
++    if (!front) { result.back = std::move(brush); return result; }
++    if (!back) { result.front = std::move(brush); return result; }
+ 
+     // create a new winding from the split plane
+     std::optional<winding_t> w = BaseWindingForPlane<winding_t>(split);
+@@ -442,16 +451,24 @@
+         if (!w) {
+             break;
+         }
+-        w = w->clip_back(face.get_plane());
+-    }
+-
+-    if (!w || WindingIsTiny(*w, 0.02)) { // the brush isn't really split
+-        planeside_t side = BrushMostlyOnSide(*brush, split);
+-        if (side == SIDE_FRONT)
+-            result.front = std::move(brush);
+-        else
+-            result.back = std::move(brush);
+-        return result;
++        w = w->clip_back(face.get_plane(), 0, false);
++    }
++
++    bool consistent_cap = w && supported_geometry::winding_rank(*w, split) == supported_geometry::rank_t::area;
++    if (w) for (auto &point : *w) {
++        consistent_cap &= supported_geometry::boundary_residual_ok(point, split, true);
++        for (auto &support : brush->sides)
++            consistent_cap &= supported_geometry::boundary_residual_ok(point, support.get_plane(), false);
++    }
++    if (!consistent_cap) w = ReconstructFace(split, *brush);
++    if (!w || supported_geometry::winding_rank(*w, split) != supported_geometry::rank_t::area)
++        SplitUncertain(*brush, planenum, "two resolved extents but cut has no resolved rank-2 winding");
++    for (auto &point : *w) {
++        if (!supported_geometry::boundary_residual_ok(point, split, true))
++            SplitUncertain(*brush, planenum, "cut is inconsistent with partition");
++        for (auto &support : brush->sides)
++            if (!supported_geometry::boundary_residual_ok(point, support.get_plane(), false))
++                SplitUncertain(*brush, planenum, "cut violates parent support");
+     }
+ 
+     if (WindingIsHuge(*w)) {
+@@ -478,13 +495,11 @@
+     for (const auto &face : brush->sides) {
+         auto cw = face.w.clip(split, 0 /*PLANESIDE_EPSILON*/);
+         for (size_t j = 0; j < 2; j++) {
+-            if (!cw[j]) {
+-                continue;
+-            }
+-
++            // Retain every parent halfspace, including inactive/redundant ones.
++            // Boundary geometry is not the authoritative support set.
+             // add the clipped face to result[j]
+             side_t &faceCopy = result[j]->sides.emplace_back(face.clone_non_winding_data());
+-            faceCopy.w = std::move(*cw[j]);
++            faceCopy.w = cw[j] ? std::move(*cw[j]) : winding_t{};
+             faceCopy.tested = false;
+             // fixme-brushbsp: configure any settings on the faceCopy?
+         }
+@@ -498,17 +513,11 @@
+         if (result[i]->sides.size() < 3) {
+             bogus = true;
+         } else if (!result[i]->update_bounds(false)) {
+-            if (stats) {
+-                stats->get().c_bogus++;
+-            }
+             bogus = true;
+         } else {
+             for (int j = 0; j < 3; j++) {
+                 if (result[i]->bounds.mins()[j] < -qbsp_options.worldextent.value() ||
+                     result[i]->bounds.maxs()[j] > qbsp_options.worldextent.value()) {
+-                    if (stats) {
+-                        stats->get().c_bogus++;
+-                    }
+                     bogus = true;
+                     break;
+                 }
+@@ -520,25 +529,8 @@
+         }
+     }
+ 
+-    if (!result[0] && !result[1]) {
+-        if (stats) {
+-            stats->get().c_brushesremoved++;
+-        }
+-
+-        return result;
+-    } else if (!result[0] || !result[1]) {
+-        if (stats) {
+-            stats->get().c_brushesonesided++;
+-        }
+-
+-        if (result[0]) {
+-            result.front = std::move(brush);
+-        } else {
+-            result.back = std::move(brush);
+-        }
+-
+-        return result;
+-    }
++    if (!result[0] || !result[1])
++        SplitUncertain(*brush, planenum, "resolved split lost a child boundary");
+ 
+     // add the midwinding to both sides
+     for (int i = 0; i < 2; i++) {
+@@ -562,13 +554,12 @@
+     }
+ 
+     for (int i = 0; i < 2; i++) {
+-        double v1 = BrushVolume(*result[i]);
+-        if (v1 < qbsp_options.microvolume.value()) {
+-            result[i] = nullptr;
+-            if (stats) {
+-                stats->get().c_tinyvolumes++;
+-            }
+-        }
++        result[i] = SupportedBoundary(std::move(result[i]), planenum);
++        if (!BoundaryConsistent(*result[i]))
++            SplitUncertain(*brush, planenum, "child boundary violates retained supports");
++        double volume = BrushVolume(*result[i]);
++        if (!std::isfinite(volume) || volume <= 0 || volume < qbsp_options.microvolume.value())
++            SplitUncertain(*brush, planenum, "resolved child volume cannot be retained (including microvolume policy)");
+     }
+ 
+     return result;
+@@ -583,183 +574,12 @@
+     }
+ }
+ 
+-using stack_winding_storage_t = polylib::winding_storage_hybrid_t<double, polylib::STACK_POINTS_ON_WINDING>;
+-using stack_winding_t = polylib::winding_base_t<stack_winding_storage_t>;
+-
+-struct stack_side_t
+-{
+-    stack_winding_t w;
+-    size_t planenum;
+-
+-    inline const qbsp_plane_t &get_plane() const { return map.planes[planenum]; }
+-};
+-
+-struct stack_brush_t
+-{
+-    aabb3d bounds;
+-    size_t num_sides;
+-
+-    // stack allocated
+-    stack_side_t *sides;
+-
+-    ~stack_brush_t()
+-    {
+-        for (size_t i = 0; i < num_sides; i++) {
+-            sides[i].~stack_side_t();
+-        }
+-    }
+-
+-    inline bool update_bounds()
+-    {
+-        this->bounds = {};
+-
+-        for (size_t i = 0; i < num_sides; i++) {
+-            if (sides[i].w) {
+-                this->bounds.unionWith_in_place(sides[i].w.bounds());
+-            }
+-        }
+-
+-        for (size_t i = 0; i < 3; i++) {
+-            // todo: map_source_location in bspbrush_t
+-            if (this->bounds.mins()[0] <= -qbsp_options.worldextent.value() ||
+-                this->bounds.maxs()[0] >= qbsp_options.worldextent.value()) {
+-                return false;
+-            }
+-            if (this->bounds.mins()[0] >= qbsp_options.worldextent.value() ||
+-                this->bounds.maxs()[0] <= -qbsp_options.worldextent.value()) {
+-                return false;
+-            }
+-        }
+-
+-        return true;
+-    }
+-};
+-
+-/*
+-================
+-CheckSplitBrush
+-
+-A special, low-allocation version of SplitBrush. Checks if a brush split
+-by the specified plane would result in two valid brushes.
+-================
+-*/
++// Admission and realization deliberately execute the same implementation.
++// Allocation cost is measured before any attempt to recover a cheaper path.
+ static bool CheckSplitBrush(const bspbrush_t::ptr &brush, size_t planenum)
+ {
+-    const qplane3d &split = map.planes[planenum];
+-
+-    // check all points
+-    double d_front = 0;
+-    double d_back = 0;
+-
+-    for (auto &face : brush->sides) {
+-        for (int j = 0; j < face.w.size(); j++) {
+-            double d = qv::dot(face.w[j], split.normal) - split.dist;
+-            if (d > 0 && d > d_front)
+-                d_front = d;
+-            if (d < 0 && d < d_back)
+-                d_back = d;
+-        }
+-    }
+-
+-    if (d_front < 0.1) // PLANESIDE_EPSILON)
+-    {
+-        return false;
+-    }
+-    if (d_back > -0.1) // PLANESIDE_EPSILON)
+-    { // only on front
+-        return false;
+-    }
+-
+-    // create a new winding from the split plane
+-    std::optional<stack_winding_t> w = BaseWindingForPlane<stack_winding_t>(split);
+-
+-    for (auto &face : brush->sides) {
+-        if (!w) {
+-            return false;
+-        }
+-        w = w->clip_back(face.get_plane());
+-    }
+-
+-    if (!w || WindingIsTiny(*w, 0.02)) { // the brush isn't really split
+-        return false;
+-    }
+-
+-    stack_winding_t &midwinding = *w;
+-
+-    // split it for real
+-
+-    // start with 2 empty brushes
+-    twosided<stack_brush_t> temporary_brushes;
+-
+-    for (int i = 0; i < 2; i++) {
+-        temporary_brushes[i].sides = (stack_side_t *)alloca(sizeof(stack_side_t) * (brush->sides.size() + 1));
+-        temporary_brushes[i].num_sides = 0;
+-    }
+-
+-    // split all the current windings
+-
+-    for (const auto &face : brush->sides) {
+-        auto cw = face.w.clip<stack_winding_storage_t>(split, 0 /*PLANESIDE_EPSILON*/);
+-
+-        for (size_t j = 0; j < 2; j++) {
+-            if (!cw[j]) {
+-                continue;
+-            }
+-
+-            // add the clipped face to result[j]
+-            stack_side_t &faceCopy = temporary_brushes[j].sides[temporary_brushes[j].num_sides++];
+-            new (&faceCopy) stack_side_t;
+-            faceCopy.planenum = face.planenum;
+-            faceCopy.w = std::move(*cw[j]);
+-        }
+-    }
+-
+-    // see if we have valid polygons on both sides
+-
+-    for (int i = 0; i < 2; i++) {
+-        if (temporary_brushes[i].num_sides < 3) {
+-            return false;
+-        }
+-
+-        if (!temporary_brushes[i].update_bounds()) {
+-            return false;
+-        }
+-
+-        for (int j = 0; j < 3; j++) {
+-            if (temporary_brushes[i].bounds.mins()[j] < -qbsp_options.worldextent.value() ||
+-                temporary_brushes[i].bounds.maxs()[j] > qbsp_options.worldextent.value()) {
+-                return false;
+-            }
+-        }
+-    }
+-
+-    // add the midwinding to both sides
+-    // FIXME: check if we can remove this/if BrushVolume below
+-    // will have the same result either way
+-    for (int i = 0; i < 2; i++) {
+-        stack_side_t &cs = temporary_brushes[i].sides[temporary_brushes[i].num_sides++];
+-        new (&cs) stack_side_t;
+-
+-        const bool brushOnFront = (i == 0);
+-
+-        cs.planenum = planenum ^ i ^ 1;
+-
+-        if (brushOnFront) {
+-            cs.w = midwinding.flip();
+-        } else {
+-            cs.w = std::move(midwinding);
+-        }
+-    }
+-
+-    for (int i = 0; i < 2; i++) {
+-        double v1 =
+-            BrushVolume(temporary_brushes[i].sides, temporary_brushes[i].sides + temporary_brushes[i].num_sides);
+-        if (v1 < qbsp_options.microvolume.value()) {
+-            return false;
+-        }
+-    }
+-
+-    return true;
++    auto children = SupportedSplit(brush, planenum);
++    return children.front && children.back;
+ }
+ 
+ inline bool CheckPlaneAgainstVolume(size_t planenum, const node_t *node)
+@@ -769,7 +589,7 @@
+ 
+     bool valid = CheckSplitBrush(node->volume, planenum);
+ #ifdef PARANOID
+-    auto [front, back] = SplitBrush(node->volume, planenum, std::nullopt);
++    auto [front, back] = SupportedSplit(node->volume, planenum);
+     Q_assert(valid == (front && back));
+ #endif
+     return valid;
+@@ -1129,7 +949,7 @@
+ 
+         if (sides == PSIDE_BOTH) {
+             // split into two brushes (destructively)
+-            auto [front, back] = SplitBrush(std::move(brush), planenum, stats);
++            auto [front, back] = SupportedSplit(std::move(brush), planenum);
+ 
+             if (front) {
+                 result[0].push_back(std::move(front));
+@@ -1222,7 +1042,7 @@
+ 
+     // to save time/memory we can destroy node's volume at this point
+     if (node->volume) {
+-        auto children_volumes = SplitBrush(std::move(node->volume), bestplane, stats);
++        auto children_volumes = SupportedSplit(std::move(node->volume), bestplane);
+         node->volume = nullptr;
+         nodedata->children[0]->volume = std::move(children_volumes[0]);
+         nodedata->children[1]->volume = std::move(children_volumes[1]);
+@@ -1410,7 +1230,7 @@
+     bspbrush_t::ptr in = a;
+ 
+     for (auto &side : b->sides) {
+-        auto [front, back] = SplitBrush(in, side.planenum, std::nullopt);
++        auto [front, back] = SupportedSplit(in, side.planenum);
+ 
+         if (front) {
+             // add to list
+--- a/qbsp/portals.cc
++++ b/qbsp/portals.cc
+@@ -22,6 +22,7 @@
+ 
+ #include <qbsp/brush.hh>
+ #include <qbsp/portals.hh>
++#include <qbsp/supported_geometry.hh>
+ 
+ #include <qbsp/map.hh>
+ #include <qbsp/brushbsp.hh>
+@@ -187,8 +188,16 @@
+ Creates a winding from the given node plane, clipped by all parent nodes.
+ ================
+ */
+-constexpr double BASE_WINDING_EPSILON = 0.001;
+-constexpr double SPLIT_WINDING_EPSILON = 0.001;
++static bool PortalHasArea(const winding_t &w, const qplane3d &plane)
++{
++    auto rank = supported_geometry::winding_rank(w, plane);
++    if (rank == supported_geometry::rank_t::uncertain)
++        Error("PHASE5 NUMERICAL_UNCERTAINTY: portal area/rank unresolved");
++    return rank == supported_geometry::rank_t::area;
++}
++
++constexpr double BASE_WINDING_EPSILON = 0;
++constexpr double SPLIT_WINDING_EPSILON = 0;
+ 
+ static std::optional<winding_t> BaseWindingForNode(const node_t *node)
+ {
+@@ -240,14 +249,14 @@
+         }
+ 
+         // fixme-brushbsp: magic number
+-        w = w->clip_front(plane, 0.1, false);
++        w = w->clip_front(plane, 0, false);
+     }
+ 
+     if (!w) {
+         return std::nullopt;
+     }
+ 
+-    if (WindingIsTiny(*w)) {
++    if (!PortalHasArea(*w, node->get_nodedata()->get_plane())) {
+         stats.c_tinyportals++;
+         return std::nullopt;
+     }
+@@ -299,12 +308,12 @@
+         //
+         auto [frontwinding, backwinding] = p.winding.clip(plane, SPLIT_WINDING_EPSILON, true);
+ 
+-        if (frontwinding && WindingIsTiny(*frontwinding)) {
++        if (frontwinding && !PortalHasArea(*frontwinding, p.plane)) {
+             frontwinding = {};
+             stats.c_tinyportals++;
+         }
+ 
+-        if (backwinding && WindingIsTiny(*backwinding)) {
++        if (backwinding && !PortalHasArea(*backwinding, p.plane)) {
+             backwinding = {};
+             stats.c_tinyportals++;
+         }
+@@ -314,6 +323,7 @@
+         }
+ 
+         if (!frontwinding) {
++            p.winding = std::move(*backwinding);
+             if (side == SIDE_FRONT)
+                 p.nodes = {b, other_node};
+             else
+@@ -323,6 +333,7 @@
+             continue;
+         }
+         if (!backwinding) {
++            p.winding = std::move(*frontwinding);
+             if (side == SIDE_FRONT)
+                 p.nodes = {f, other_node};
+             else
+@@ -361,11 +372,26 @@
+ MakePortalsFromBuildportals
+ ================
+ */
++static void CheckPortalRegion(const buildportal_t &portal, const node_t *node)
++{
++    for (auto *parent = node->parent; parent; node = parent, parent = parent->parent) {
++        const auto *data = parent->get_nodedata();
++        qplane3d support = data->get_plane();
++        if (data->children[0] == node) support = -support;
++        for (auto &point : portal.winding) {
++            if (!supported_geometry::boundary_residual_ok(point, support, false))
++                Error("PHASE5 UNCERTIFIED_PORTAL support={}: winding outside incident region", data->planenum);
++        }
++    }
++}
++
+ void MakePortalsFromBuildportals(tree_t &tree, std::list<buildportal_t> &buildportals)
+ {
+     tree.portals.reserve(buildportals.size());
+ 
+     for (auto &buildportal : buildportals) {
++        CheckPortalRegion(buildportal, buildportal.nodes[0]);
++        CheckPortalRegion(buildportal, buildportal.nodes[1]);
+         portal_t *new_portal = tree.create_portal();
+         new_portal->plane = buildportal.plane;
+         new_portal->onnode = buildportal.onnode;
+--- a/qbsp/CMakeLists.txt
++++ b/qbsp/CMakeLists.txt
+@@ -37,19 +37,10 @@
+ 
+ # Both frontends share one compiler implementation. The qbsp target is retained
+ # for upstream tooling; it also contains downstream corrections on this branch.
+-execute_process(COMMAND git rev-parse HEAD WORKING_DIRECTORY ${PROJECT_SOURCE_DIR}
+-    OUTPUT_VARIABLE QQBSP_REVISION OUTPUT_STRIP_TRAILING_WHITESPACE)
+-execute_process(COMMAND git status --porcelain --untracked-files=no WORKING_DIRECTORY ${PROJECT_SOURCE_DIR}
+-    OUTPUT_VARIABLE QQBSP_DIRTY OUTPUT_STRIP_TRAILING_WHITESPACE)
+-if(QQBSP_DIRTY)
+-    string(APPEND QQBSP_REVISION "-dirty")
+-endif()
+-if(NOT QQBSP_REVISION)
+-    message(FATAL_ERROR "qqbsp identity requires a Git checkout")
+-endif()
++set(QQBSP_REVISION "4b505ae25e508a8910b031e94d6f1ea60ac06a95-phase5-experimental")
+ add_executable(qqbsp main.cc)
+ target_compile_definitions(qqbsp PRIVATE
+-    QQBSP_BUILD_ID="Qartographer qqbsp, upstream=ccaeb8457a1267860ebe99ed1df7394ebdd6b435, downstream=${QQBSP_REVISION}, patches=P1")
++    QQBSP_BUILD_ID="Qartographer qqbsp, upstream=ccaeb8457a1267860ebe99ed1df7394ebdd6b435, downstream=${QQBSP_REVISION}, patches=P1, experiment=phase5-unaccepted")
+ add_executable(qbsp main.cc)
+ foreach(compiler IN ITEMS qqbsp qbsp)
+     target_link_libraries(${compiler} libqbsp)
+--- a/tests/test_qbsp.cc
++++ b/tests/test_qbsp.cc
+@@ -2697,3 +2697,88 @@
+         EXPECT_EQ(prt->portalleafs_real, 4);
+     }
+ }
++
++#include <qbsp/supported_geometry.hh>
++#include <nlohmann/json.hpp>
++
++static size_t Phase5Plane(qplane3d p)
++{
++    size_t id = map.planes.size();
++    map.planes.emplace_back(qbsp_plane_t(p));
++    map.planes.emplace_back(qbsp_plane_t(-p));
++    return id;
++}
++static void Phase5Reset()
++{
++    map.reset(); qbsp_options.reset();
++    map.mtexinfos.emplace_back();
++    map.skip_texinfo = 0;
++    qbsp_options.target_version = &bspver_q1;
++    qbsp_options.target_game = bspver_q1.game;
++    qbsp_options.worldextent.set_value(65536, settings::source::COMMANDLINE);
++}
++TEST(phase5, Hull2ResolvedFrontFragment)
++{
++    Phase5Reset();
++    auto brush = BrushFromBounds({{-1360.000488281,-1488,172.03125}, {-1280,-1392,322.5093526806837}});
++    mapbrush_t source; source.line = parser_source_location("full-off.map", 13365);
++    brush->mapbrush = &source;
++    qplane3d plane{{1,0,0}, -1280.000244141};
++    EXPECT_EQ(supported_geometry::box_side(brush->bounds, plane), 3);
++    size_t id = Phase5Plane(plane);
++    const double parent_volume = BrushVolume(*brush);
++    auto children = SupportedSplit(brush, id);
++    ASSERT_TRUE(children.front); ASSERT_TRUE(children.back);
++    EXPECT_EQ(children.front->mapbrush, &source);
++    EXPECT_EQ(children.back->mapbrush, &source);
++    EXPECT_EQ(children.front->original_brush(), brush.get());
++    EXPECT_EQ(children.back->original_brush(), brush.get());
++    qvec3d witness{-1280.0001220705,-1440,236.73692674130805};
++    EXPECT_TRUE(children.front->contains_point(witness));
++    EXPECT_FALSE(children.back->contains_point(witness));
++    EXPECT_DOUBLE_EQ(children.front->bounds.mins()[0], plane.dist);
++    EXPECT_DOUBLE_EQ(children.front->bounds.maxs()[0], -1280);
++    EXPECT_NEAR(BrushVolume(*children.front)+BrushVolume(*children.back), parent_volume, parent_volume*1e-12);
++    EXPECT_EQ(brush->sides.size(), 6); // private preparation did not mutate parent
++    RecordProperty("front_width", children.front->bounds.maxs()[0]-children.front->bounds.mins()[0]);
++    RecordProperty("parent_volume", parent_volume);
++    RecordProperty("children_volume", BrushVolume(*children.front)+BrushVolume(*children.back));
++}
++TEST(phase5, NarrowQuadrilateralRankAndRealization)
++{
++    Phase5Reset();
++    std::ifstream file("/tmp/qqbsp-phase5/source/qartographer/phase5-witness.json");
++    nlohmann::json data; file >> data;
++    auto toplane = [](auto p) { return qplane3d{{p[0].template get<double>(),p[1].template get<double>(),p[2].template get<double>()},p[3].template get<double>()}; };
++    qplane3d partition = toplane(data["partition"]);
++    winding_t cap;
++    for (auto v : data["cap"]["vertices"]) cap.push_back({v[0],v[1],v[2]});
++    EXPECT_TRUE(WindingIsTiny(cap, 0.0001)); // former policy rejects this valid cut
++    EXPECT_EQ(supported_geometry::winding_rank(cap, partition), supported_geometry::rank_t::area);
++    auto brush = bspbrush_t::make_ptr();
++    for (auto f : data["region"]) {
++        auto &side = brush->sides.emplace_back();
++        side.planenum = Phase5Plane(toplane(f["p"]));
++        for (auto v : f["w"]) side.w.push_back({v[0],v[1],v[2]});
++    }
++    for (auto constraint : data["cap"]["ancestor_constraints"]) {
++        auto plane = toplane(constraint["p"]);
++        bool present = false;
++        for (auto &side : brush->sides)
++            present |= side.get_plane().get_normal() == plane.normal && side.get_plane().get_dist() == plane.dist;
++        if (present) continue; // same original ancestor support, not a second boundary face
++        auto &side = brush->sides.emplace_back();
++        side.planenum = Phase5Plane(plane);
++        side.onnode = true;
++    }
++    ASSERT_TRUE(brush->update_bounds(false));
++    auto children = SupportedSplit(brush, Phase5Plane(partition));
++    ASSERT_TRUE(children.front); ASSERT_TRUE(children.back);
++    auto &actual = children.back->sides.back().w;
++    RecordProperty("actual_cut_area", actual.area());
++    RecordProperty("expected_cut_area", data["cap"]["area"].get<double>());
++    RecordProperty("parent_volume", BrushVolume(*brush));
++    RecordProperty("children_volume", BrushVolume(*children.front)+BrushVolume(*children.back));
++    EXPECT_NEAR(actual.area(), data["cap"]["area"].get<double>(), 1e-7);
++    EXPECT_NEAR(BrushVolume(*children.front)+BrushVolume(*children.back), BrushVolume(*brush), 1e-4);
++}

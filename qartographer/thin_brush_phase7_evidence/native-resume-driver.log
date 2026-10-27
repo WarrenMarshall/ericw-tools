@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "/tmp/qqbsp-phase7/native_resume.py", line 33, in <module>
+    assert b[0]-a[0]>15 and -33<b[0]<-31,(a,b)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ([-56.0, -96.0, 88.03125], [79.96875, -96.0, 88.03125])

@@ -1,0 +1,101 @@
+---- qqbsp / ericw-tools  ----
+
+--- Options Summary ---
+    "threads" was set to "1" (from command line)
+    "nopercent" was set to "1" (from command line)
+    "bsp2" was set to "1" (from command line)
+    "chopfragment" was set to "1" (from command line)
+    "notex" was set to "1" (from command line)
+
+Input file: /tmp/qqbsp-phase5/evidence/halloween-off/input.map
+Output file: /tmp/qqbsp-phase5/evidence/halloween-off/input.bsp
+
+INFO: using built-in palette.
+/tmp/qqbsp-phase5/evidence/halloween-off/input.map[line 8114]: Brush with duplicate plane
+/tmp/qqbsp-phase5/evidence/halloween-off/input.map[line 8125]: Brush with duplicate plane
+WARNING: /tmp/qqbsp-phase5/evidence/halloween-off/input.map[line 3470]: brush has multiple face contents (SKY vs SOLID), the former will be used.
+WARNING: /tmp/qqbsp-phase5/evidence/halloween-off/input.map[line 3479]: brush has multiple face contents (SKY vs SOLID), the former will be used.
+WARNING: /tmp/qqbsp-phase5/evidence/halloween-off/input.map[line 14287]: brush has multiple face contents (SKY vs SOLID), the former will be used.
+WARNING: /tmp/qqbsp-phase5/evidence/halloween-off/input.map[line 21954]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+WARNING: /tmp/qqbsp-phase5/evidence/halloween-off/input.map[line 21961]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+WARNING: /tmp/qqbsp-phase5/evidence/halloween-off/input.map[line 21968]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+WARNING: /tmp/qqbsp-phase5/evidence/halloween-off/input.map[line 21975]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+WARNING: /tmp/qqbsp-phase5/evidence/halloween-off/input.map[line 21982]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+WARNING: /tmp/qqbsp-phase5/evidence/halloween-off/input.map[line 21989]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+WARNING: /tmp/qqbsp-phase5/evidence/halloween-off/input.map[line 21996]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+WARNING: /tmp/qqbsp-phase5/evidence/halloween-off/input.map[line 22003]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+WARNING: /tmp/qqbsp-phase5/evidence/halloween-off/input.map[line 22010]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+WARNING: /tmp/qqbsp-phase5/evidence/halloween-off/input.map[line 22017]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+WARNING: /tmp/qqbsp-phase5/evidence/halloween-off/input.map[line 22024]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+WARNING: /tmp/qqbsp-phase5/evidence/halloween-off/input.map[line 22031]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+WARNING: /tmp/qqbsp-phase5/evidence/halloween-off/input.map[line 22038]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+WARNING: /tmp/qqbsp-phase5/evidence/halloween-off/input.map[line 22045]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+WARNING: /tmp/qqbsp-phase5/evidence/halloween-off/input.map[line 22052]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+WARNING: /tmp/qqbsp-phase5/evidence/halloween-off/input.map[line 22059]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+WARNING: /tmp/qqbsp-phase5/evidence/halloween-off/input.map[line 22066]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+WARNING: /tmp/qqbsp-phase5/evidence/halloween-off/input.map[line 22073]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+WARNING: /tmp/qqbsp-phase5/evidence/halloween-off/input.map[line 22080]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+WARNING: /tmp/qqbsp-phase5/evidence/halloween-off/input.map[line 22087]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+WARNING: /tmp/qqbsp-phase5/evidence/halloween-off/input.map[line 22094]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+WARNING: /tmp/qqbsp-phase5/evidence/halloween-off/input.map[line 22101]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+WARNING: /tmp/qqbsp-phase5/evidence/halloween-off/input.map[line 22108]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+WARNING: /tmp/qqbsp-phase5/evidence/halloween-off/input.map[line 22115]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+WARNING: /tmp/qqbsp-phase5/evidence/halloween-off/input.map[line 22122]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+WARNING: /tmp/qqbsp-phase5/evidence/halloween-off/input.map[line 23089]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+WARNING: /tmp/qqbsp-phase5/evidence/halloween-off/input.map[line 23096]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+WARNING: /tmp/qqbsp-phase5/evidence/halloween-off/input.map[line 23103]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+WARNING: /tmp/qqbsp-phase5/evidence/halloween-off/input.map[line 23110]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+WARNING: /tmp/qqbsp-phase5/evidence/halloween-off/input.map[line 23117]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+WARNING: /tmp/qqbsp-phase5/evidence/halloween-off/input.map[line 23124]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+WARNING: /tmp/qqbsp-phase5/evidence/halloween-off/input.map[line 23131]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+WARNING: /tmp/qqbsp-phase5/evidence/halloween-off/input.map[line 23138]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+WARNING: /tmp/qqbsp-phase5/evidence/halloween-off/input.map[line 23145]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+WARNING: /tmp/qqbsp-phase5/evidence/halloween-off/input.map[line 23152]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+WARNING: /tmp/qqbsp-phase5/evidence/halloween-off/input.map[line 23159]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+WARNING: /tmp/qqbsp-phase5/evidence/halloween-off/input.map[line 23166]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+WARNING: /tmp/qqbsp-phase5/evidence/halloween-off/input.map[line 23173]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+WARNING: /tmp/qqbsp-phase5/evidence/halloween-off/input.map[line 23180]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+WARNING: /tmp/qqbsp-phase5/evidence/halloween-off/input.map[line 23187]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+WARNING: /tmp/qqbsp-phase5/evidence/halloween-off/input.map[line 23194]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+WARNING: /tmp/qqbsp-phase5/evidence/halloween-off/input.map[line 23201]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+WARNING: /tmp/qqbsp-phase5/evidence/halloween-off/input.map[line 23208]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+WARNING: /tmp/qqbsp-phase5/evidence/halloween-off/input.map[line 23215]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+WARNING: /tmp/qqbsp-phase5/evidence/halloween-off/input.map[line 23222]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+WARNING: /tmp/qqbsp-phase5/evidence/halloween-off/input.map[line 23229]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+WARNING: /tmp/qqbsp-phase5/evidence/halloween-off/input.map[line 23236]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+WARNING: /tmp/qqbsp-phase5/evidence/halloween-off/input.map[line 23243]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+WARNING: /tmp/qqbsp-phase5/evidence/halloween-off/input.map[line 23250]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+WARNING: /tmp/qqbsp-phase5/evidence/halloween-off/input.map[line 23257]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+       605 entities
+        89 unique textures
+     7,371 texinfos
+    12,684 unique planes
+
+INFO: world extents calculated to 6104 units
+     2,648 brushes
+    15,911 sides
+    13,954 side bevels
+
+            3 texture frames added
+Processing hull 0...
+WARNING: /tmp/qqbsp-phase5/evidence/halloween-off/input.map[line 8085]: Healing degenerate edge (4.623417738843956e-07) at (415.969 694 -36.3)
+WARNING: /tmp/qqbsp-phase5/evidence/halloween-off/input.map[line 8121]: Healing degenerate edge (2.204564220233973e-06) at (432.031 694 -36.3)
+WARNING: /tmp/qqbsp-phase5/evidence/halloween-off/input.map[line 8205]: Healing degenerate edge (6.883439665746502e-05) at (353.469 730 -36.4)
+       79 MIST | MIRROR_INSIDE_SET | TRANSLUCENT | DETAIL brushes
+      198 SOLID | DETAIL brushes
+        1 MIST | MIRROR_INSIDE | MIRROR_INSIDE_SET | TRANSLUCENT | DETAIL brushes
+        1 WINDOW | MIRROR_INSIDE_SET | TRANSLUCENT | DETAIL brushes
+       53 WATER | TRANSLUCENT | DETAIL brushes
+       16 SKY brushes
+    2,049 SOLID brushes
+    2,397 brushes total
+    14,174 visible sides
+WARNING: 10 faces were crunched away by being too small. Use -verbose to see which faces were affected.
+INFO: calculating BSP for 2397 brushes with 14174 sides
+     2,397 brushes
+    14,048 visible faces
+       126 non-visible faces
+************ ERROR ************
+PHASE5 NUMERICAL_UNCERTAINTY source=node-volume partition=1832: child boundary violates retained supports
+
+

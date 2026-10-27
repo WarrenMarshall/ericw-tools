@@ -1,0 +1,8 @@
+[1/8] Building CXX object _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o
+[2/8] Building CXX object qartographer/CMakeFiles/qqbsp_tests.dir/cmake_pch.hxx.gch
+[3/8] Building CXX object qartographer/CMakeFiles/qqbsp_tests.dir/__/tests/test_main.cc.o
+[4/8] Building CXX object _deps/googletest-build/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o
+[5/8] Linking CXX static library lib/libgtest.a
+[6/8] Linking CXX static library lib/libgmock.a
+[7/8] Building CXX object qartographer/CMakeFiles/qqbsp_tests.dir/__/tests/test_qbsp.cc.o
+[8/8] Linking CXX executable qartographer/qqbsp_tests

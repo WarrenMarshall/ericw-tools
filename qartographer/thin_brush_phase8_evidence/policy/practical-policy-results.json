@@ -1,0 +1,74 @@
+{
+  "records": [
+    {
+      "name": "microscopic-empty-internal-divider",
+      "result": {
+        "action": "RemoveInternalSeparator",
+        "contents": "EMPTY"
+      }
+    },
+    {
+      "name": "microscopic-solid-internal-divider",
+      "result": {
+        "action": "RemoveInternalSeparator",
+        "contents": "SOLID"
+      }
+    },
+    {
+      "name": "solid-union-redundant-divider",
+      "result": {
+        "action": "RemoveInternalSeparator",
+        "contents": "SOLID"
+      }
+    },
+    {
+      "name": "same-contents-with-unproved-ports",
+      "result": {
+        "action": "RetainOrUnresolved",
+        "contents": "EMPTY",
+        "reason": "external occupancy/connectivity transport unproved"
+      }
+    },
+    {
+      "name": "float32-collapsed-wall-still-blocks",
+      "result": {
+        "action": "RetainOrUnresolved",
+        "contents": "Mixed"
+      }
+    },
+    {
+      "name": "hull2-blocker",
+      "result": {
+        "action": "RetainOrUnresolved",
+        "contents": "Mixed"
+      }
+    },
+    {
+      "name": "source-sky-roof-opening",
+      "result": {
+        "action": "RetainOrUnresolved",
+        "contents": "Mixed"
+      }
+    },
+    {
+      "name": "D-needs-semantic-context-not-more-digits",
+      "result": {
+        "action": "RetainOrUnresolved",
+        "contents": "Unresolved: incomplete source/ownership scope"
+      }
+    },
+    {
+      "name": "E-empty-child-no-loss-route-back",
+      "action": "CertifiedEmptyChild"
+    },
+    {
+      "name": "F-omit-edge-only-area-portal",
+      "action": "CertifiedNoAreaPortal"
+    }
+  ],
+  "internal_divider_width": 2.842170943040401e-14,
+  "wall_boundary_float32_equal": true,
+  "empty_parent_port_reachability_preserved": true,
+  "removing_wall_changes_port_reachability": true,
+  "policy": "No minimum thickness. Only prove redundancy/coverage and unchanged external boundary/ports, or retain/diagnose. Unproved input is not approval to collapse."
+}

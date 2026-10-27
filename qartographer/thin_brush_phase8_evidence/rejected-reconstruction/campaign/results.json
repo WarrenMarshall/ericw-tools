@@ -1,0 +1,46 @@
+[
+  {
+    "name": "p1-reduced",
+    "command": [
+      "/usr/bin/time",
+      "-v",
+      "-o",
+      "/tmp/qqbsp-phase8/evidence/reconstruction/p1-reduced/time.txt",
+      "/tmp/qqbsp-phase8/reconstruction-qqbsp",
+      "-notex",
+      "-nopercent",
+      "-chopfragment",
+      "-threads",
+      "1",
+      "/tmp/qqbsp-phase8/evidence/reconstruction/p1-reduced/input.map"
+    ],
+    "exit": 1,
+    "seconds": 12.334320252062753,
+    "input_sha256": "5f4c588e6f4482f933138def59a2cd64660491b146cbcf0683f32266bcd24d93",
+    "source_sha256": "5f4c588e6f4482f933138def59a2cd64660491b146cbcf0683f32266bcd24d93",
+    "binary_sha256": "111451b707e0060ea2590c5bac2274754d97c76c66e2e542680b833ec6949c2d",
+    "bsp_sha256": null
+  },
+  {
+    "name": "rotated-actors",
+    "command": [
+      "/usr/bin/time",
+      "-v",
+      "-o",
+      "/tmp/qqbsp-phase8/evidence/reconstruction/rotated-actors/time.txt",
+      "/tmp/qqbsp-phase8/reconstruction-qqbsp",
+      "-notex",
+      "-nopercent",
+      "-chopfragment",
+      "-threads",
+      "1",
+      "/tmp/qqbsp-phase8/evidence/reconstruction/rotated-actors/input.map"
+    ],
+    "exit": 1,
+    "seconds": 1.1656324790092185,
+    "input_sha256": "345366ef6646c035f9581965548a404f2a15533be95f9af7ff3a4a59f5adee32",
+    "source_sha256": "345366ef6646c035f9581965548a404f2a15533be95f9af7ff3a4a59f5adee32",
+    "binary_sha256": "111451b707e0060ea2590c5bac2274754d97c76c66e2e542680b833ec6949c2d",
+    "bsp_sha256": null
+  }
+]

@@ -1,0 +1,109 @@
+Qartographer qqbsp, upstream=ccaeb8457a1267860ebe99ed1df7394ebdd6b435, downstream=4b505ae25e508a8910b031e94d6f1ea60ac06a95-phase7-experimental, patches=P1, experiment=phase7-unaccepted
+---- qqbsp / ericw-tools  ----
+low priority not compiled into this version
+logging to /tmp/qqbsp-phase7/evidence/thin-matrix/thickness-0.002-chopfragment/input.log (truncate)
+
+--- Options Summary ---
+    "nopercent" was set to "1" (from command line)
+    "bsp2" was set to "1" (from command line)
+    "chopfragment" was set to "1" (from command line)
+    "notex" was set to "1" (from command line)
+
+Input file: /tmp/qqbsp-phase7/evidence/thin-matrix/thickness-0.002-chopfragment/input.map
+Output file: /tmp/qqbsp-phase7/evidence/thin-matrix/thickness-0.002-chopfragment/input.bsp
+
+INFO: using built-in palette.
+---- LoadMapFile ----
+[33mWARNING: No wad or _wad key exists in the worldmodel
+[0m[36m     1 entities
+[0m[36m     2 unique textures
+[0m[36m     4 texinfos
+[0m[36m    12 unique planes
+[0m[36m
+[0m---- ProcessMapBrushes ----
+INFO: world extents calculated to 328 units
+[36m    1 brushes
+[0m[36m    6 sides
+[0m[36m
+[0m[36m            0 texture frames added
+[0m[33mWARNING: unable to find texture skip
+[0m[33mWARNING: unable to find texture NO_TEXTURE
+[0mProcessing hull 0...
+---- Brush_LoadEntity ----
+---- CountBrushes ----
+[36m    1 SOLID brushes
+[0m[36m    1 brushes total
+[0m[36m    6 visible sides
+[0m[36mINFO: calculating BSP for 1 brushes with 6 sides
+[0m---- BrushBSP ----
+[36m    1 brushes
+[0m[36m    6 visible faces
+[0m[36m    6 nodes
+[0m[36m    6 expensive split nodes
+[0m[36m    7 leaves
+[0m---- CountLeafs ----
+[36m    1 SOLID leafs
+[0m[36m    6 EMPTY leafs
+[0m[36m    7 leafs total
+[0m[36m    7 max tree height
+[0m[36m    4 avg tree height
+[0m---- MakeTreePortals ----
+[36m    12 tiny portals
+[0m---- CalcTreeBounds ----
+[36m    36 tree portals
+[0m---- FillOutside ----
+[33mWARNING: No entities in empty space -- no filling performed (hull 0)
+[0m---- MakeTreePortals ----
+[36m    12 tiny portals
+[0m---- CalcTreeBounds ----
+[36m    36 tree portals
+[0m---- MarkVisibleSides ----
+[36m    12 sides visible
+[0m---- MakeFaces ----
+[36m    6 makefaces
+[0m---- PruneNodes ----
+---- WritePortalFile ----
+[36m    3 tiny portals
+[0m[36m     6 player-occupiable leaves
+[0m[36m     6 clusters of leaves
+[0m[36m    12 vis portals
+[0m---- CountLeafs ----
+[36m    1 SOLID leafs
+[0m[36m    6 EMPTY leafs
+[0m[36m    7 leafs total
+[0m[36m    7 max tree height
+[0m[36m    4 avg tree height
+[0m---- TJunc ----
+[36m    8 edges degenerated
+[0m[36m    4 faces degenerated
+[0m[36m    2 faces optimized through MWT
+[0m[36m    4 triangles computed from MWT
+[0m---- EmitFaces ----
+[36m    4 edges
+[0m[36m    2 faces
+[0mProcessing hull 1...
+[33mWARNING: No entities in empty space -- no filling performed (hull 1)
+[0mProcessing hull 2...
+[33mWARNING: No entities in empty space -- no filling performed (hull 2)
+[0m---- FinishBSPFile ----
+Writing /tmp/qqbsp-phase7/evidence/thin-matrix/thickness-0.002-chopfragment/input.bsp as Quake BSP2 bsp2
+Wrote /tmp/qqbsp-phase7/evidence/thin-matrix/thickness-0.002-chopfragment/input.bsp
+
+count   lump name    byte size 
+      1 models               64
+     17 planes              340
+      4 vertexes             48
+      6 nodes               264
+      1 texinfos             40
+      2 faces                56
+     12 clipnodes           144
+      7 leafs               308
+      2 marksurfaces          8
+      5 edges                40
+      8 surfedges            32
+      2 textures             12
+        lightdata             0
+        visdata               0
+        entdata              30
+
+0.020s seconds elapsed

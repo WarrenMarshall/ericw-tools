@@ -1,0 +1,13 @@
+P4 ROUTE path= best=6044 line=13366 side=2 xmin=-1584.000488281 xmax=-1232 ymin=-1488 ymax=-1392 zmin=168 zmax=391.999969482
+P4 ROUTE path=1 best=87420 line=13366 side=2 xmin=-1584.000488281 xmax=-1232 ymin=-1488 ymax=-1392 zmin=168 zmax=391.999969482
+P4 ROUTE path=11 best=75150 line=13366 side=1 xmin=-1584.000488281 xmax=-1232 ymin=-1488 ymax=-1392 zmin=168 zmax=391.999969482
+P4 ROUTE path=110 best=44052 line=13366 side=1 xmin=-1584.000488281 xmax=-1232 ymin=-1488 ymax=-1392 zmin=168 zmax=391.999969482
+P4 ROUTE path=1100 best=5518 line=13366 side=3 xmin=-1584.000488281 xmax=-1232 ymin=-1488 ymax=-1392 zmin=168 zmax=391.999969482
+P4 ROUTE path=11000 best=9124 line=13366 side=3 xmin=-1552 xmax=-1232 ymin=-1488 ymax=-1392 zmin=168 zmax=391.999969482
+P4 ROUTE path=110001 best=44034 line=13366 side=1 xmin=-1552 xmax=-1280 ymin=-1488 ymax=-1392 zmin=168 zmax=391.999969482
+P4 ROUTE path=1100010 best=89006 line=13366 side=1 xmin=-1552 xmax=-1280 ymin=-1488 ymax=-1392 zmin=168 zmax=391.999969482
+P4 ROUTE path=11000100 best=89148 line=13366 side=3 xmin=-1552 xmax=-1280 ymin=-1488 ymax=-1392 zmin=168 zmax=391.999969482
+P4 ROUTE path=110001001 best=89092 line=13366 side=3 xmin=-1434.5099462448409 xmax=-1280 ymin=-1488 ymax=-1392 zmin=168 zmax=322.50935268068315
+P4 ROUTE path=1100010010 best=75140 line=13366 side=3 xmin=-1424.442528157432 xmax=-1280 ymin=-1488 ymax=-1392 zmin=168 zmax=322.5093526806837
+P4 ROUTE path=11000100100 best=45938 line=13366 side=3 xmin=-1360.000488281 xmax=-1280 ymin=-1488 ymax=-1392 zmin=168 zmax=322.5093526806837
+P4 ROUTE path=110001001000 best=88776 line=13366 side=2 xmin=-1360.000488281 xmax=-1280 ymin=-1488 ymax=-1392 zmin=172.03125 zmax=322.5093526806837

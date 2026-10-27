@@ -1,0 +1,293 @@
+Qartographer qqbsp, upstream=ccaeb8457a1267860ebe99ed1df7394ebdd6b435, downstream=2f6fc5b79734f56348766cbec83533f1d50b3642, patches=P1
+---- uniform-epsilon-qqbsp / ericw-tools  ----
+running with 1 thread(s)
+low priority not compiled into this version
+logging to /tmp/qqbsp-phase3/uniform/full-off/full-off.log (truncate)
+
+--- Options Summary ---
+    "threads" was set to "1" (from command line)
+    "nopercent" was set to "1" (from command line)
+    "bsp2" was set to "1" (from command line)
+    "chopfragment" was set to "1" (from command line)
+    "notex" was set to "1" (from command line)
+
+Input file: /tmp/qqbsp-phase3/uniform/full-off/full-off.map
+Output file: /tmp/qqbsp-phase3/uniform/full-off/full-off.bsp
+
+INFO: using built-in palette.
+---- LoadMapFile ----
+/tmp/qqbsp-phase3/uniform/full-off/full-off.map[line 8114]: Brush with duplicate plane
+/tmp/qqbsp-phase3/uniform/full-off/full-off.map[line 8125]: Brush with duplicate plane
+[33mWARNING: /tmp/qqbsp-phase3/uniform/full-off/full-off.map[line 3470]: brush has multiple face contents (SKY vs SOLID), the former will be used.
+[0m[33mWARNING: /tmp/qqbsp-phase3/uniform/full-off/full-off.map[line 3479]: brush has multiple face contents (SKY vs SOLID), the former will be used.
+[0m[33mWARNING: /tmp/qqbsp-phase3/uniform/full-off/full-off.map[line 14287]: brush has multiple face contents (SKY vs SOLID), the former will be used.
+[0m[33mWARNING: /tmp/qqbsp-phase3/uniform/full-off/full-off.map[line 21954]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+[0m[33mWARNING: /tmp/qqbsp-phase3/uniform/full-off/full-off.map[line 21961]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+[0m[33mWARNING: /tmp/qqbsp-phase3/uniform/full-off/full-off.map[line 21968]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+[0m[33mWARNING: /tmp/qqbsp-phase3/uniform/full-off/full-off.map[line 21975]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+[0m[33mWARNING: /tmp/qqbsp-phase3/uniform/full-off/full-off.map[line 21982]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+[0m[33mWARNING: /tmp/qqbsp-phase3/uniform/full-off/full-off.map[line 21989]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+[0m[33mWARNING: /tmp/qqbsp-phase3/uniform/full-off/full-off.map[line 21996]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+[0m[33mWARNING: /tmp/qqbsp-phase3/uniform/full-off/full-off.map[line 22003]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+[0m[33mWARNING: /tmp/qqbsp-phase3/uniform/full-off/full-off.map[line 22010]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+[0m[33mWARNING: /tmp/qqbsp-phase3/uniform/full-off/full-off.map[line 22017]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+[0m[33mWARNING: /tmp/qqbsp-phase3/uniform/full-off/full-off.map[line 22024]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+[0m[33mWARNING: /tmp/qqbsp-phase3/uniform/full-off/full-off.map[line 22031]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+[0m[33mWARNING: /tmp/qqbsp-phase3/uniform/full-off/full-off.map[line 22038]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+[0m[33mWARNING: /tmp/qqbsp-phase3/uniform/full-off/full-off.map[line 22045]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+[0m[33mWARNING: /tmp/qqbsp-phase3/uniform/full-off/full-off.map[line 22052]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+[0m[33mWARNING: /tmp/qqbsp-phase3/uniform/full-off/full-off.map[line 22059]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+[0m[33mWARNING: /tmp/qqbsp-phase3/uniform/full-off/full-off.map[line 22066]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+[0m[33mWARNING: /tmp/qqbsp-phase3/uniform/full-off/full-off.map[line 22073]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+[0m[33mWARNING: /tmp/qqbsp-phase3/uniform/full-off/full-off.map[line 22080]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+[0m[33mWARNING: /tmp/qqbsp-phase3/uniform/full-off/full-off.map[line 22087]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+[0m[33mWARNING: /tmp/qqbsp-phase3/uniform/full-off/full-off.map[line 22094]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+[0m[33mWARNING: /tmp/qqbsp-phase3/uniform/full-off/full-off.map[line 22101]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+[0m[33mWARNING: /tmp/qqbsp-phase3/uniform/full-off/full-off.map[line 22108]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+[0m[33mWARNING: /tmp/qqbsp-phase3/uniform/full-off/full-off.map[line 22115]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+[0m[33mWARNING: /tmp/qqbsp-phase3/uniform/full-off/full-off.map[line 22122]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+[0m[33mWARNING: /tmp/qqbsp-phase3/uniform/full-off/full-off.map[line 23089]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+[0m[33mWARNING: /tmp/qqbsp-phase3/uniform/full-off/full-off.map[line 23096]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+[0m[33mWARNING: /tmp/qqbsp-phase3/uniform/full-off/full-off.map[line 23103]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+[0m[33mWARNING: /tmp/qqbsp-phase3/uniform/full-off/full-off.map[line 23110]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+[0m[33mWARNING: /tmp/qqbsp-phase3/uniform/full-off/full-off.map[line 23117]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+[0m[33mWARNING: /tmp/qqbsp-phase3/uniform/full-off/full-off.map[line 23124]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+[0m[33mWARNING: /tmp/qqbsp-phase3/uniform/full-off/full-off.map[line 23131]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+[0m[33mWARNING: /tmp/qqbsp-phase3/uniform/full-off/full-off.map[line 23138]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+[0m[33mWARNING: /tmp/qqbsp-phase3/uniform/full-off/full-off.map[line 23145]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+[0m[33mWARNING: /tmp/qqbsp-phase3/uniform/full-off/full-off.map[line 23152]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+[0m[33mWARNING: /tmp/qqbsp-phase3/uniform/full-off/full-off.map[line 23159]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+[0m[33mWARNING: /tmp/qqbsp-phase3/uniform/full-off/full-off.map[line 23166]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+[0m[33mWARNING: /tmp/qqbsp-phase3/uniform/full-off/full-off.map[line 23173]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+[0m[33mWARNING: /tmp/qqbsp-phase3/uniform/full-off/full-off.map[line 23180]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+[0m[33mWARNING: /tmp/qqbsp-phase3/uniform/full-off/full-off.map[line 23187]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+[0m[33mWARNING: /tmp/qqbsp-phase3/uniform/full-off/full-off.map[line 23194]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+[0m[33mWARNING: /tmp/qqbsp-phase3/uniform/full-off/full-off.map[line 23201]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+[0m[33mWARNING: /tmp/qqbsp-phase3/uniform/full-off/full-off.map[line 23208]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+[0m[33mWARNING: /tmp/qqbsp-phase3/uniform/full-off/full-off.map[line 23215]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+[0m[33mWARNING: /tmp/qqbsp-phase3/uniform/full-off/full-off.map[line 23222]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+[0m[33mWARNING: /tmp/qqbsp-phase3/uniform/full-off/full-off.map[line 23229]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+[0m[33mWARNING: /tmp/qqbsp-phase3/uniform/full-off/full-off.map[line 23236]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+[0m[33mWARNING: /tmp/qqbsp-phase3/uniform/full-off/full-off.map[line 23243]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+[0m[33mWARNING: /tmp/qqbsp-phase3/uniform/full-off/full-off.map[line 23250]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+[0m[33mWARNING: /tmp/qqbsp-phase3/uniform/full-off/full-off.map[line 23257]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+[0m[36m       605 entities
+[0m[36m        89 unique textures
+[0m[36m     7,371 texinfos
+[0m[36m    12,684 unique planes
+[0m[36m
+[0m---- ProcessMapBrushes ----
+INFO: world extents calculated to 6104 units
+[36m     2,648 brushes
+[0m[36m    15,911 sides
+[0m[36m    13,954 side bevels
+[0m[36m
+[0m[36m            3 texture frames added
+[0mProcessing hull 0...
+---- Brush_LoadEntity ----
+[33mWARNING: /tmp/qqbsp-phase3/uniform/full-off/full-off.map[line 8085]: Healing degenerate edge (4.623417738843956e-07) at (415.969 694 -36.3)
+[0m[33mWARNING: /tmp/qqbsp-phase3/uniform/full-off/full-off.map[line 8121]: Healing degenerate edge (2.204564220233973e-06) at (432.031 694 -36.3)
+[0m[33mWARNING: /tmp/qqbsp-phase3/uniform/full-off/full-off.map[line 8205]: Healing degenerate edge (6.883439665746502e-05) at (353.469 730 -36.4)
+[0m---- CountBrushes ----
+[36m       79 MIST | MIRROR_INSIDE_SET | TRANSLUCENT | DETAIL brushes
+[0m[36m      198 SOLID | DETAIL brushes
+[0m[36m        1 MIST | MIRROR_INSIDE | MIRROR_INSIDE_SET | TRANSLUCENT | DETAIL brushes
+[0m[36m        1 WINDOW | MIRROR_INSIDE_SET | TRANSLUCENT | DETAIL brushes
+[0m[36m       53 WATER | TRANSLUCENT | DETAIL brushes
+[0m[36m       16 SKY brushes
+[0m[36m    2,049 SOLID brushes
+[0m[36m    2,397 brushes total
+[0m[36m    14,174 visible sides
+[0m[33mWARNING: 10 faces were crunched away by being too small. Use -verbose to see which faces were affected.
+[0m[36mINFO: calculating BSP for 2397 brushes with 14174 sides
+[0m---- BrushBSP ----
+[36m     2,397 brushes
+[0m[36m    14,048 visible faces
+[0m[36m       126 non-visible faces
+[0m[36m    61,510 nodes
+[0m[36m       263 non-visible nodes
+[0m[36m    49,589 expensive split nodes
+[0m[36m    11,921 mid-split nodes
+[0m[36m    61,511 leaves
+[0m---- CountLeafs ----
+[36m         7 MIST | MIRROR_INSIDE | MIRROR_INSIDE_SET | TRANSLUCENT | DETAIL leafs
+[0m[36m        14 SOLID | WATER | MIST | MIRROR_INSIDE_SET leafs
+[0m[36m    16,919 EMPTY leafs
+[0m[36m     2,045 SKY leafs
+[0m[36m    36,196 SOLID leafs
+[0m[36m        93 SOLID | WINDOW | MIRROR_INSIDE_SET leafs
+[0m[36m        16 WATER | MIST | MIRROR_INSIDE_SET | TRANSLUCENT | DETAIL leafs
+[0m[36m     2,236 SOLID | SKY leafs
+[0m[36m       975 SOLID | DETAIL leafs
+[0m[36m        12 SOLID | MIST | MIRROR_INSIDE | MIRROR_INSIDE_SET leafs
+[0m[36m       742 WATER | TRANSLUCENT | DETAIL leafs
+[0m[36m       380 SOLID | WATER | TRANSLUCENT | DETAIL leafs
+[0m[36m     1,614 SOLID | WATER leafs
+[0m[36m        99 SOLID | MIST | MIRROR_INSIDE_SET leafs
+[0m[36m       152 MIST | MIRROR_INSIDE_SET | TRANSLUCENT | DETAIL leafs
+[0m[36m        11 WINDOW | MIRROR_INSIDE_SET | TRANSLUCENT | DETAIL leafs
+[0m[36m    61,511 leafs total
+[0m[36m    58 max tree height
+[0m[36m    23 avg tree height
+[0m---- MakeTreePortals ----
+[36m    8,894 tiny portals
+[0m---- CalcTreeBounds ----
+[36m    218,129 tree portals
+[0m---- FillOutside ----
+[33mWARNING: Reached occupant "ambient_swamp1" at (-1408 -1810 194), no filling performed.
+[0mLeak file written to /tmp/qqbsp-phase3/uniform/full-off/full-off.pts
+---- WriteDebugPortals ----
+[36m           15 portals written to /tmp/qqbsp-phase3/uniform/full-off/full-off.leak.prt
+[0m---- MakeTreePortals ----
+[36m    8,894 tiny portals
+[0m---- CalcTreeBounds ----
+[36m    218,129 tree portals
+[0m---- MarkVisibleSides ----
+[33mWARNING: 332 sides not found (use -verbose to display)
+[0m[36m    87,657 sides visible
+[0m---- MakeFaces ----
+[36m    46,631 makefaces
+[0m[36m     9,101 merged
+[0m[36m     1,551 subdivided
+[0m---- PruneNodes ----
+[36m    22,472 nodes pruned
+[0m---- CountLeafs ----
+[36m         7 MIST | MIRROR_INSIDE | MIRROR_INSIDE_SET | TRANSLUCENT | DETAIL leafs
+[0m[36m         2 SOLID | SKY | MIST | MIRROR_INSIDE_SET leafs
+[0m[36m        17 SOLID | WATER | MIST | MIRROR_INSIDE_SET leafs
+[0m[36m    16,919 EMPTY leafs
+[0m[36m     2,045 SKY leafs
+[0m[36m    16,242 SOLID leafs
+[0m[36m        30 SOLID | WINDOW | MIRROR_INSIDE_SET leafs
+[0m[36m        16 WATER | MIST | MIRROR_INSIDE_SET | TRANSLUCENT | DETAIL leafs
+[0m[36m     1,550 SOLID | SKY leafs
+[0m[36m       690 SOLID | DETAIL leafs
+[0m[36m         9 SOLID | MIST | MIRROR_INSIDE | MIRROR_INSIDE_SET leafs
+[0m[36m       742 WATER | TRANSLUCENT | DETAIL leafs
+[0m[36m       229 SOLID | WATER | TRANSLUCENT | DETAIL leafs
+[0m[36m       302 SOLID | WATER leafs
+[0m[36m        76 SOLID | MIST | MIRROR_INSIDE_SET leafs
+[0m[36m       152 MIST | MIRROR_INSIDE_SET | TRANSLUCENT | DETAIL leafs
+[0m[36m        11 WINDOW | MIRROR_INSIDE_SET | TRANSLUCENT | DETAIL leafs
+[0m[36m    39,039 leafs total
+[0m[36m    55 max tree height
+[0m[36m    21 avg tree height
+[0m---- TJunc ----
+[36m        46 edges degenerated
+[0m[36m         1 faces degenerated
+[0m[36m    16,753 edges added by tjunctions
+[0m[36m    33,094 faces optimized through MWT
+[0m[36m    84,831 triangles computed from MWT
+[0m[36m     4,027 faces created via optimization of MWT triangles
+[0m---- EmitFaces ----
+[36m    85,718 edges
+[0m[36m    39,745 faces
+[0mProcessing hull 1...
+[33mWARNING: unknown/unset location: Healing degenerate edge (8.652370470292034e-05) at (999.822 -155 -48)
+[0m[33mWARNING: /tmp/qqbsp-phase3/uniform/full-off/full-off.map[line 8121]: Healing degenerate edge (2.2045641800697253e-06) at (448.031 710 -12.3)
+[0m[33mWARNING: unknown/unset location: Healing degenerate edge (4.008165825759368e-05) at (499.889 317 -36)
+[0m[33mWARNING: unknown/unset location: Healing degenerate edge (5.2973400813826664e-05) at (-1744.000 -2.05e+03 183)
+[0m[33mWARNING: unknown/unset location: Healing degenerate edge (9.406164545653558e-05) at (-1505.285 -2.05e+03 183)
+[0m[33mWARNING: /tmp/qqbsp-phase3/uniform/full-off/full-off.map[line 13063]: Healing degenerate edge (5.823161271056717e-05) at (-1744.000 -2.04e+03 193)
+[0m[33mWARNING: unknown/unset location: Healing degenerate edge (4.132093911491016e-05) at (-1683.471 -78.4 -151)
+[0m[33mWARNING: unknown/unset location: Healing degenerate edge (5.437178809067337e-05) at (-1751.477 -72.2 -151)
+[0m[33mWARNING: unknown/unset location: Healing degenerate edge (6.380749706507465e-05) at (-1809.083 -68.8 -151)
+[0m[33mWARNING: unknown/unset location: Healing degenerate edge (4.6205388393016264e-05) at (-1729.310 -271 63.3)
+[0m[33mWARNING: unknown/unset location: Healing degenerate edge (6.739444705448151e-05) at (-1636.972 -286 71.2)
+[0m[33mWARNING: unknown/unset location: Healing degenerate edge (6.824777582612337e-05) at (-1572.781 -125 41.3)
+[0m[33mWARNING: unknown/unset location: Healing degenerate edge (1.8687848052920385e-05) at (-1719.045 -96.9 41.3)
+[0m[33mWARNING: unknown/unset location: Healing degenerate edge (4.8803018540487796e-05) at (-1505.110 -363 255)
+[0m[33mWARNING: unknown/unset location: Healing degenerate edge (6.340225629220186e-05) at (-1676.376 -259 255)
+[0m[33mWARNING: unknown/unset location: Healing degenerate edge (8.537965016068877e-05) at (-1721.949 -48.1 234)
+[0m[33mWARNING: unknown/unset location: Healing degenerate edge (4.630969235167613e-05) at (-1698.689 -182 356)
+[0m[33mWARNING: unknown/unset location: Healing degenerate edge (3.266241368871777e-05) at (-1718.969 -181 356)
+[0m[33mWARNING: unknown/unset location: Healing degenerate edge (9.08476714145171e-05) at (-1634.664 -236 197)
+[0m[33mWARNING: unknown/unset location: Healing degenerate edge (4.78618457672574e-05) at (-1523.070 -401 266)
+[0m[33mWARNING: unknown/unset location: Healing degenerate edge (5.470309499714094e-05) at (-1538.315 -334 183)
+[0m[33mWARNING: unknown/unset location: Healing degenerate edge (9.799525677173511e-05) at (-1554.888 -303 253)
+[0m[33mWARNING: unknown/unset location: Healing degenerate edge (7.917335361747953e-05) at (-1605.893 -238 178)
+[0m[33mWARNING: unknown/unset location: Healing degenerate edge (5.8895778151993204e-05) at (-1625.396 -257 253)
+[0m[33mWARNING: unknown/unset location: Healing degenerate edge (4.956102025539867e-05) at (-1649.160 -249 253)
+[0m[33mWARNING: unknown/unset location: Healing degenerate edge (7.831162512495213e-05) at (-1954.842 -160 184)
+[0m[33mWARNING: unknown/unset location: Healing degenerate edge (9.320952507767137e-05) at (-1952.478 -195 33.3)
+[0m[33mWARNING: huge winding
+[0m[33mWARNING: huge winding
+[0m[33mWARNING: huge winding
+[0m[33mWARNING: huge winding
+[0m[33mWARNING: huge winding
+[0m[33mWARNING: huge winding
+[0m[33mWARNING: unknown/unset location: Healing degenerate edge (7.051548919108255e-05) at (182.144 7.95 184)
+[0m[33mWARNING: unknown/unset location: Healing degenerate edge (8.518128343022097e-05) at (462.525 -34.8 141)
+[0m[33mWARNING: unknown/unset location: Healing degenerate edge (8.686921570767144e-05) at (492.914 -44.2 146)
+[0m[33mWARNING: unknown/unset location: Healing degenerate edge (8.452378446736805e-05) at (430.002 -68.7 84)
+[0m[33mWARNING: unknown/unset location: Healing degenerate edge (5.127142509209647e-05) at (520.238 -62.5 160)
+[0m[33mWARNING: unknown/unset location: Healing degenerate edge (4.790669752272907e-05) at (432.126 617 -280)
+[0m[33mWARNING: unknown/unset location: Healing degenerate edge (4.790669591587157e-05) at (337.560 753 -352)
+[0m[33mWARNING: unknown/unset location: Healing degenerate edge (4.5999039133827267e-05) at (-1851.746 -67.2 149)
+[0m[33mWARNING: unknown/unset location: Healing degenerate edge (4.527703467687127e-05) at (-1889.080 -232 -13.4)
+[0m[33mWARNING: unknown/unset location: Healing degenerate edge (5.618334257826675e-05) at (369.188 713 -176)
+[0mProcessing hull 2...
+[33mWARNING: unknown/unset location: Healing degenerate edge (8.65237047229603e-05) at (983.822 -171 -80)
+[0m[33mWARNING: /tmp/qqbsp-phase3/uniform/full-off/full-off.map[line 8121]: Healing degenerate edge (2.2045641800727314e-06) at (464.031 726 -12.3)
+[0m[33mWARNING: unknown/unset location: Healing degenerate edge (4.008165707840956e-05) at (515.889 301 -36)
+[0m[33mWARNING: unknown/unset location: Healing degenerate edge (6.268065295462642e-05) at (-1760.000 -2.07e+03 151)
+[0m[33mWARNING: /tmp/qqbsp-phase3/uniform/full-off/full-off.map[line 13063]: Healing degenerate edge (5.823161249019985e-05) at (-1760.000 -2.06e+03 161)
+[0m[33mWARNING: unknown/unset location: Healing degenerate edge (7.567655343324468e-05) at (-1699.471 -62.4 -183)
+[0m[33mWARNING: unknown/unset location: Healing degenerate edge (8.544138159071277e-05) at (-1767.477 -56.2 -183)
+[0m[33mWARNING: unknown/unset location: Healing degenerate edge (9.420866598708998e-05) at (-1825.083 -52.8 -183)
+[0m[33mWARNING: unknown/unset location: Healing degenerate edge (7.727498129466668e-05) at (-1713.310 -287 63.3)
+[0m[33mWARNING: unknown/unset location: Healing degenerate edge (7.632762414589816e-05) at (-1485.964 -178 41.3)
+[0m[33mWARNING: unknown/unset location: Healing degenerate edge (1.8687846663450963e-05) at (-1703.045 -113 41.3)
+[0m[33mWARNING: unknown/unset location: Healing degenerate edge (3.090887802715323e-05) at (-1626.474 -72.7 220)
+[0m[33mWARNING: unknown/unset location: Healing degenerate edge (4.880301910824105e-05) at (-1489.110 -379 255)
+[0m[33mWARNING: unknown/unset location: Healing degenerate edge (6.623065201371507e-05) at (-1559.412 -232 356)
+[0m[33mWARNING: unknown/unset location: Healing degenerate edge (4.630969183620171e-05) at (-1682.689 -198 356)
+[0m[33mWARNING: unknown/unset location: Healing degenerate edge (3.2662411611152484e-05) at (-1702.969 -197 356)
+[0m[33mWARNING: unknown/unset location: Healing degenerate edge (6.820226104454261e-05) at (-1743.086 -91.9 365)
+[0m[33mWARNING: unknown/unset location: Healing degenerate edge (9.084767194839477e-05) at (-1650.664 -220 165)
+[0m[33mWARNING: unknown/unset location: Healing degenerate edge (4.786184419983999e-05) at (-1539.070 -417 266)
+[0m[33mWARNING: unknown/unset location: Healing degenerate edge (5.4703094995209806e-05) at (-1554.315 -318 151)
+[0m[33mWARNING: unknown/unset location: Healing degenerate edge (7.917335313307628e-05) at (-1621.893 -222 146)
+[0m[33mWARNING: unknown/unset location: Healing degenerate edge (8.644192542588984e-05) at (-1565.161 -296 253)
+[0m[33mWARNING: unknown/unset location: Healing degenerate edge (8.764890197903971e-05) at (-1609.396 -273 253)
+[0m[33mWARNING: unknown/unset location: Healing degenerate edge (7.918441520110591e-05) at (-1633.160 -265 253)
+[0m[33mWARNING: unknown/unset location: Healing degenerate edge (3.280850961226317e-05) at (-1719.610 -183 146)
+[0m[33mWARNING: unknown/unset location: Healing degenerate edge (7.831162630239172e-05) at (-1970.842 -176 184)
+[0m[33mWARNING: huge winding
+[0m[33mWARNING: huge winding
+[0m[33mWARNING: huge winding
+[0m[33mWARNING: huge winding
+[0m[33mWARNING: huge winding
+[0m[33mWARNING: huge winding
+[0m[33mWARNING: huge winding
+[0m[33mWARNING: huge winding
+[0m[33mWARNING: Reached occupant "light" at (-1232 -1520 232), no filling performed.
+[0m[33mWARNING: unknown/unset location: Healing degenerate edge (5.1271425410509415e-05) at (504.238 -46.5 160)
+[0m[33mWARNING: unknown/unset location: Healing degenerate edge (7.528195015941068e-05) at (448.126 601 -280)
+[0m[33mWARNING: unknown/unset location: Healing degenerate edge (7.528194849658465e-05) at (321.560 769 -384)
+[0m[33mWARNING: unknown/unset location: Healing degenerate edge (9.199807509030917e-05) at (-1835.746 -51.2 149)
+[0m[33mWARNING: unknown/unset location: Healing degenerate edge (9.055406771982286e-05) at (-1905.080 -248 -45.4)
+[0m[33mWARNING: unknown/unset location: Healing degenerate edge (5.6183342578315434e-05) at (385.188 697 -208)
+[0m[33mWARNING: worldspawn at 0 0 0 has long value for key wad (length 921 >= 127)
+[0m---- FinishBSPFile ----
+Writing /tmp/qqbsp-phase3/uniform/full-off/full-off.bsp as Quake BSP2 bsp2
+Wrote /tmp/qqbsp-phase3/uniform/full-off/full-off.bsp
+
+count   lump name    byte size 
+     93 models             5952
+  13156 planes           263120
+  42987 vertexes         515844
+  40067 nodes           1762948
+   4949 texinfos         197960
+  40609 faces           1137052
+  47121 clipnodes        565452
+  21014 leafs            924616
+  47747 marksurfaces     190988
+  87607 edges            700856
+ 170497 surfedges        681988
+     92 textures           4052
+        lightdata             0
+        visdata               0
+        entdata           45733
+
+48.230s seconds elapsed

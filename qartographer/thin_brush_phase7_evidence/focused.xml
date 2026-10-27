@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="4" failures="1" disabled="0" errors="0" time="0.047" timestamp="2026-10-26T14:27:37.048" name="AllTests">
+  <testsuite name="testmapsQ1" tests="1" failures="1" disabled="0" skipped="0" errors="0" time="0.009" timestamp="2026-10-26T14:27:37.048">
+    <testcase name="simpleSealed" file="/tmp/qqbsp-phase7/source/tests/test_qbsp.cc" line="549" status="run" result="completed" time="0.009" timestamp="2026-10-26T14:27:37.048" classname="testmapsQ1">
+      <failure message="unknown file&#x0A;C++ exception with description &quot;PHASE7 UNCERTIFIED_PORTAL: missing root boundary&quot; thrown in the test body.&#x0A;" type=""><![CDATA[unknown file
+C++ exception with description "PHASE7 UNCERTIFIED_PORTAL: missing root boundary" thrown in the test body.
+]]></failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="phase5" tests="2" failures="0" disabled="0" skipped="0" errors="0" time="0.005" timestamp="2026-10-26T14:27:37.057">
+    <testcase name="Hull2ResolvedFrontFragment" file="/tmp/qqbsp-phase7/source/tests/test_qbsp.cc" line="2720" status="run" result="completed" time="0." timestamp="2026-10-26T14:27:37.057" classname="phase5">
+      <properties>
+        <property name="front_width" value="0.00024414099993919081"/>
+        <property name="parent_volume" value="1155678.882245101"/>
+        <property name="children_volume" value="1155678.882245101"/>
+      </properties>
+    </testcase>
+    <testcase name="NarrowQuadrilateralRankAndRealization" file="/tmp/qqbsp-phase7/source/tests/test_qbsp.cc" line="2747" status="run" result="completed" time="0.005" timestamp="2026-10-26T14:27:37.057" classname="phase5">
+      <properties>
+        <property name="actual_cut_area" value="0.0074346256473068455"/>
+        <property name="expected_cut_area" value="0.007434625516377664"/>
+        <property name="parent_volume" value="26436.66707115664"/>
+        <property name="children_volume" value="26436.667070281077"/>
+      </properties>
+    </testcase>
+  </testsuite>
+  <testsuite name="phase7" tests="1" failures="0" disabled="0" skipped="0" errors="0" time="0.032" timestamp="2026-10-26T14:27:37.063">
+    <testcase name="FailureSiteSupportDecisions" file="/tmp/qqbsp-phase7/source/tests/test_qbsp.cc" line="2786" status="run" result="completed" time="0.032" timestamp="2026-10-26T14:27:37.063" classname="phase7" />
+  </testsuite>
+</testsuites>

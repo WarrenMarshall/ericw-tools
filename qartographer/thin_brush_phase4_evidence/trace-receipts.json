@@ -1,0 +1,152 @@
+[
+  {
+    "directory": "/tmp/qqbsp-phase4/off",
+    "map_sha256": "d5f2ab2a0c5a22d2f0ecaecf77a1bbd72a3c2ce2e3c444fe0b4c517092e5986c",
+    "bsp_sha256": "3e4f4119daecb56c37514ddb07196a975a5c33d7a9983bf0e2203c906982851f",
+    "bytes": 6996688,
+    "lump_bytes": [
+      45733,
+      263120,
+      4052,
+      515844,
+      0,
+      1762948,
+      197960,
+      1137052,
+      0,
+      565452,
+      924616,
+      190988,
+      700856,
+      681988,
+      5952
+    ],
+    "nodes": 40067,
+    "leaves": 21014,
+    "faces": 40609,
+    "clipnodes": 47121,
+    "tree_counts": {
+      "1": {
+        "nodes": 61510,
+        "leaves": 61511
+      },
+      "2": {
+        "nodes": 611232,
+        "leaves": 611233
+      },
+      "3": {
+        "nodes": 260621,
+        "leaves": 260622
+      },
+      "4": {
+        "nodes": 709968,
+        "leaves": 709969
+      },
+      "5": {
+        "nodes": 371217,
+        "leaves": 371218
+      }
+    },
+    "time_receipt": "off-time.txt"
+  },
+  {
+    "directory": "/tmp/qqbsp-phase4/off-extended",
+    "map_sha256": "d5f2ab2a0c5a22d2f0ecaecf77a1bbd72a3c2ce2e3c444fe0b4c517092e5986c",
+    "bsp_sha256": "3e4f4119daecb56c37514ddb07196a975a5c33d7a9983bf0e2203c906982851f",
+    "bytes": 6996688,
+    "lump_bytes": [
+      45733,
+      263120,
+      4052,
+      515844,
+      0,
+      1762948,
+      197960,
+      1137052,
+      0,
+      565452,
+      924616,
+      190988,
+      700856,
+      681988,
+      5952
+    ],
+    "nodes": 40067,
+    "leaves": 21014,
+    "faces": 40609,
+    "clipnodes": 47121,
+    "tree_counts": {
+      "1": {
+        "nodes": 61510,
+        "leaves": 61511
+      },
+      "2": {
+        "nodes": 611232,
+        "leaves": 611233
+      },
+      "3": {
+        "nodes": 260621,
+        "leaves": 260622
+      },
+      "4": {
+        "nodes": 709968,
+        "leaves": 709969
+      },
+      "5": {
+        "nodes": 371217,
+        "leaves": 371218
+      }
+    },
+    "time_receipt": "off-extended-time.txt"
+  },
+  {
+    "directory": "/tmp/qqbsp-phase4/off-target",
+    "map_sha256": "d5f2ab2a0c5a22d2f0ecaecf77a1bbd72a3c2ce2e3c444fe0b4c517092e5986c",
+    "bsp_sha256": "3e4f4119daecb56c37514ddb07196a975a5c33d7a9983bf0e2203c906982851f",
+    "bytes": 6996688,
+    "lump_bytes": [
+      45733,
+      263120,
+      4052,
+      515844,
+      0,
+      1762948,
+      197960,
+      1137052,
+      0,
+      565452,
+      924616,
+      190988,
+      700856,
+      681988,
+      5952
+    ],
+    "nodes": 40067,
+    "leaves": 21014,
+    "faces": 40609,
+    "clipnodes": 47121,
+    "tree_counts": {
+      "1": {
+        "nodes": 61510,
+        "leaves": 61511
+      },
+      "2": {
+        "nodes": 611232,
+        "leaves": 611233
+      },
+      "3": {
+        "nodes": 260621,
+        "leaves": 260622
+      },
+      "4": {
+        "nodes": 709968,
+        "leaves": 709969
+      },
+      "5": {
+        "nodes": 371217,
+        "leaves": 371218
+      }
+    },
+    "time_receipt": "off-target-time.txt"
+  }
+]

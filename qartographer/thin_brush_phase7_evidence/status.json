@@ -1,0 +1,32 @@
+{
+  "base_head": "4b505ae25e508a8910b031e94d6f1ea60ac06a95",
+  "final_executable": "/tmp/qqbsp-phase7/phase7-unaccepted-qqbsp",
+  "final_sha256": "64d718230afa0b7b636968ea3fc32e250e503b0f6f6c2aaebd81ca8169c933c6",
+  "campaign_executable": "/tmp/qqbsp-phase7/campaign-qqbsp",
+  "campaign_sha256": "bf26e8178aaf7c0618f6b5f5e247698849d438e7bf4c8efad19c515b431298ca",
+  "tests_sha256": "129febde3e59aabf3988af483f65434b90109f172cbd9ead72fe075408f9b196",
+  "installed_sha256": "49d766579a03701d6a5bb3560112bc756afdb8cf4488242e0b8db72668d8c8c0",
+  "source_files": {
+    "include/qbsp/halfspace.hh": "2fe4ea9a683c13b2b530294f0c9f2faa5e923024e812382403931af9438891dd",
+    "include/qbsp/supported_geometry.hh": "0bf46306fb5326b99e1f593a2e5995c3fce76f8ab6ba4087c763daa1d965d0bc",
+    "include/qbsp/brushbsp.hh": "dd6e9829e7442f99cd6462a01a9e75ba1f36960168f98ad5f7933c4e15990a5b",
+    "include/qbsp/portals.hh": "747a25ef6e17557944e1d6277769f3750c3efa9c313e7b6e82ca51091c6c2cc6",
+    "qbsp/brushbsp.cc": "91610b3bd946c5e7afef16ebcf57cf21bc94672883e833da5685ef65bd9ecd91",
+    "qbsp/portals.cc": "79944d9a76c53384ed39ca2928fe6b8340e2b26cc7463d2a73fd413b41535ec2",
+    "qbsp/prtfile.cc": "6970686ced1f46d78a16f585809b872a51036e88c53ecdeae67bb5efe9cb2255",
+    "qbsp/CMakeLists.txt": "d6533b49cc6e6ffab6e59be206b2817f77c3b0534127d1e68e2a02d8067eeff8",
+    "qartographer/CMakeLists.txt": "c7bdbe61eebfcc17dcc8fa5d8827407cb741ca6c02067913b6cfb707734d7820",
+    "tests/test_qbsp.cc": "e173640b95e74801a2fca63ad40b223cad15cbeb0c562837bbdf38acf7849b04",
+    "qartographer/phase5-witness.json": "4158d1382135df6026f008274167f26d280117067d8c8962aba06e0501084482",
+    "qartographer/phase7-cases.json": "cd93de38b86768283b6a12ec8fe1ef58aba1c03889e5b1cdd21d2ce7f86f2b84"
+  },
+  "phase6_header_original_sha256": "2fe4ea9a683c13b2b530294f0c9f2faa5e923024e812382403931af9438891dd",
+  "source_brush_cc_unchanged": true,
+  "active_compiler_diff": "",
+  "p1_sha256": "eac568b773767b7b8afa8a1db98f256ed31368aff2067f77c2066fb877ea1bdb",
+  "p2_sha256": "5c8e66e1c6bef8b8777750edb91a5bbea7b0ca47b1106f614489a6813964c73b",
+  "commit": false,
+  "push": false,
+  "deployment": false,
+  "accepted": false
+}

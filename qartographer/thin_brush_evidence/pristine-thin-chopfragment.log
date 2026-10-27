@@ -1,0 +1,104 @@
+---- qbsp / ericw-tools 2.0.0-alpha10 ----
+low priority not compiled into this version
+logging to /tmp/qqbsp-p3/boundary/pristine/thin-chopfragment/thin.log (truncate)
+
+--- Options Summary ---
+    "nopercent" was set to "1" (from command line)
+    "bsp2" was set to "1" (from command line)
+    "chopfragment" was set to "1" (from command line)
+    "notex" was set to "1" (from command line)
+
+Input file: /tmp/qqbsp-p3/boundary/pristine/thin-chopfragment/thin.map
+Output file: /tmp/qqbsp-p3/boundary/pristine/thin-chopfragment/thin.bsp
+
+INFO: using built-in palette.
+---- LoadMapFile ----
+[33mWARNING: No wad or _wad key exists in the worldmodel
+[0m[36m     1 entities
+[0m[36m     2 unique textures
+[0m[36m     4 texinfos
+[0m[36m    12 unique planes
+[0m[36m
+[0m---- ProcessMapBrushes ----
+INFO: world extents calculated to 328 units
+[36m    1 brushes
+[0m[36m    6 sides
+[0m[36m
+[0m[36m            0 texture frames added
+[0m[33mWARNING: unable to find texture skip
+[0m[33mWARNING: unable to find texture NO_TEXTURE
+[0mProcessing hull 0...
+---- Brush_LoadEntity ----
+---- CountBrushes ----
+[36m    1 SOLID brushes
+[0m[36m    1 brushes total
+[0m[36m    6 visible sides
+[0m[36mINFO: calculating BSP for 1 brushes with 6 sides
+[0m---- BrushBSP ----
+[36m    1 brushes
+[0m[36m    6 visible faces
+[0m[36m    5 nodes
+[0m[36m    5 expensive split nodes
+[0m[36m    6 leaves
+[0m---- CountLeafs ----
+[36m    1 SOLID leafs
+[0m[36m    5 EMPTY leafs
+[0m[36m    6 leafs total
+[0m[36m    6 max tree height
+[0m[36m    4 avg tree height
+[0m---- MakeTreePortals ----
+---- CalcTreeBounds ----
+[36m    31 tree portals
+[0m---- FillOutside ----
+[33mWARNING: No entities in empty space -- no filling performed (hull 0)
+[0m---- MakeTreePortals ----
+---- CalcTreeBounds ----
+[36m    31 tree portals
+[0m---- MarkVisibleSides ----
+[36m    10 sides visible
+[0m---- MakeFaces ----
+[36m     5 makefaces
+[0m[36m    52 subdivided
+[0m---- PruneNodes ----
+---- WritePortalFile ----
+[36m    5 player-occupiable leaves
+[0m[36m    5 clusters of leaves
+[0m[36m    8 vis portals
+[0m---- CountLeafs ----
+[36m    1 SOLID leafs
+[0m[36m    5 EMPTY leafs
+[0m[36m    6 leafs total
+[0m[36m    6 max tree height
+[0m[36m    4 avg tree height
+[0m---- TJunc ----
+[36m     57 faces optimized through MWT
+[0m[36m    114 triangles computed from MWT
+[0m---- EmitFaces ----
+[36m    116 edges
+[0m[36m     57 faces
+[0mProcessing hull 1...
+[33mWARNING: No entities in empty space -- no filling performed (hull 1)
+[0mProcessing hull 2...
+[33mWARNING: No entities in empty space -- no filling performed (hull 2)
+[0m---- FinishBSPFile ----
+Writing /tmp/qqbsp-p3/boundary/pristine/thin-chopfragment/thin.bsp as Quake BSP2 bsp2
+Wrote /tmp/qqbsp-p3/boundary/pristine/thin-chopfragment/thin.bsp
+
+count   lump name    byte size 
+      1 models               64
+     16 planes              320
+     60 vertexes            720
+      5 nodes               220
+      3 texinfos            120
+     57 faces              1596
+     12 clipnodes           144
+      6 leafs               264
+     57 marksurfaces        228
+    117 edges               936
+    228 surfedges           912
+      2 textures             12
+        lightdata             0
+        visdata               0
+        entdata              30
+
+0.002s seconds elapsed

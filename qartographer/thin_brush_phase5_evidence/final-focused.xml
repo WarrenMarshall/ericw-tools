@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="5" failures="2" disabled="0" errors="0" time="0.019" timestamp="2026-10-26T13:20:37.100" name="AllTests">
+  <testsuite name="qbsp" tests="2" failures="0" disabled="0" skipped="0" errors="0" time="0." timestamp="2026-10-26T13:20:37.100">
+    <testcase name="duplicatePlanes" file="/tmp/qqbsp-phase5/source/tests/test_qbsp.cc" line="339" status="run" result="completed" time="0." timestamp="2026-10-26T13:20:37.100" classname="qbsp" />
+    <testcase name="emptyBrush" file="/tmp/qqbsp-phase5/source/tests/test_qbsp.cc" line="368" status="run" result="completed" time="0." timestamp="2026-10-26T13:20:37.100" classname="qbsp" />
+  </testsuite>
+  <testsuite name="testmapsQ1" tests="1" failures="1" disabled="0" skipped="0" errors="0" time="0.018" timestamp="2026-10-26T13:20:37.100">
+    <testcase name="simpleSealed" file="/tmp/qqbsp-phase5/source/tests/test_qbsp.cc" line="549" status="run" result="completed" time="0.018" timestamp="2026-10-26T13:20:37.100" classname="testmapsQ1">
+      <failure message="unknown file&#x0A;C++ exception with description &quot;PHASE5 NUMERICAL_UNCERTAINTY: front portal has unresolved area&quot; thrown in the test body.&#x0A;" type=""><![CDATA[unknown file
+C++ exception with description "PHASE5 NUMERICAL_UNCERTAINTY: front portal has unresolved area" thrown in the test body.
+]]></failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="phase5" tests="2" failures="1" disabled="0" skipped="0" errors="0" time="0." timestamp="2026-10-26T13:20:37.119">
+    <testcase name="Hull2ResolvedFrontFragment" file="/tmp/qqbsp-phase5/source/tests/test_qbsp.cc" line="2720" status="run" result="completed" time="0." timestamp="2026-10-26T13:20:37.119" classname="phase5">
+      <properties>
+        <property name="front_width" value="0.00024414099993919081"/>
+        <property name="parent_volume" value="1155678.882245101"/>
+        <property name="children_volume" value="1155678.882245101"/>
+      </properties>
+    </testcase>
+    <testcase name="NarrowQuadrilateralRankAndRealization" file="/tmp/qqbsp-phase5/source/tests/test_qbsp.cc" line="2747" status="run" result="completed" time="0." timestamp="2026-10-26T13:20:37.119" classname="phase5">
+      <failure message="/tmp/qqbsp-phase5/source/tests/test_qbsp.cc:2778&#x0A;The difference between BrushVolume(*children.front)+BrushVolume(*children.back) and BrushVolume(*brush) is 26436.667069405434, which exceeds 1e-4, where&#x0A;BrushVolume(*children.front)+BrushVolume(*children.back) evaluates to 52873.334140562074,&#x0A;BrushVolume(*brush) evaluates to 26436.66707115664, and&#x0A;1e-4 evaluates to 0.0001.&#x0A;" type=""><![CDATA[/tmp/qqbsp-phase5/source/tests/test_qbsp.cc:2778
+The difference between BrushVolume(*children.front)+BrushVolume(*children.back) and BrushVolume(*brush) is 26436.667069405434, which exceeds 1e-4, where
+BrushVolume(*children.front)+BrushVolume(*children.back) evaluates to 52873.334140562074,
+BrushVolume(*brush) evaluates to 26436.66707115664, and
+1e-4 evaluates to 0.0001.
+]]></failure>
+      <properties>
+        <property name="actual_cut_area" value="0.0074346255820883691"/>
+        <property name="expected_cut_area" value="0.007434625516377664"/>
+        <property name="parent_volume" value="26436.66707115664"/>
+        <property name="children_volume" value="52873.334140562074"/>
+      </properties>
+    </testcase>
+  </testsuite>
+</testsuites>

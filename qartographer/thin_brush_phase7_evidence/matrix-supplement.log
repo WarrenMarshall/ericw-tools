@@ -1,0 +1,8 @@
+rotated-chopfragment COMPILE FAIL
+adjacent-default 0 []
+adjacent-chopfragment 0 []
+overlap-default 0 []
+overlap-chopfragment 0 []
+near-coplanar-default 0 []
+near-coplanar-chopfragment 0 []
+FAIL

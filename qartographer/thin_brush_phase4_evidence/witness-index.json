@@ -1,0 +1,298 @@
+{
+  "first-cap": [
+    {
+      "path": "../thin_brush_phase3_evidence/cap-oracle.json",
+      "sha256": "b0ea5a195d45da74f92fa40f6f46359556cf12e267a918a4d8e5c6e82766bfee"
+    },
+    {
+      "path": "../thin_brush_phase3_evidence/root-diff.json",
+      "sha256": "febbcb109e176b87a35b7eda382b06a74a1532aa65b83571394927411f617203"
+    }
+  ],
+  "sky-gap": [
+    {
+      "path": "../thin_brush_phase3_evidence/sky-ancestors.json",
+      "sha256": "9aa8a16a9c357d0fedbc79a972af1d5a9847213076f267603d69f52126d30e9f"
+    },
+    {
+      "path": "../thin_brush_phase3_evidence/leak-detour.json",
+      "sha256": "cc2b054a55af454629c1108a1561d73ffab9cfa8bd4311d15cef65cf7ac0bc28"
+    },
+    {
+      "path": "../thin_brush_phase3_evidence/leak-bsp.json",
+      "sha256": "4a68b163a93b441bf84f6bbe09239f6862c997bae6c6d9f535ac2f57e1867da3"
+    }
+  ],
+  "false-solids": [
+    {
+      "path": "../thin_brush_phase3_evidence/witness-gate.json",
+      "sha256": "e9d5f2eb54d8289f33a63d7d6b9d0769dc32ea5c8b829d024bad2f347ceaf0b3"
+    },
+    {
+      "path": "../thin_brush_phase2_evidence/map-witnesses.json",
+      "sha256": "1733f676062976466074939d9d28ee31f9d965d302874a46ce9492f2aefc7a8d"
+    }
+  ],
+  "portal-containment": [
+    {
+      "path": "../thin_brush_phase3_evidence/leak-oracle.json",
+      "sha256": "2175117491532c64f4f2e7b6b8f3509be650eadf0af65affcb842283d89e83cb"
+    },
+    {
+      "path": "../thin_brush_phase3_evidence/instrumented-logs/trace-uniform/stdout.log",
+      "sha256": "ca1414d18911a02e92ef6a73457fa00b12fdc53019428eb4358d8874dd49c88e"
+    }
+  ],
+  "thin-csg": [
+    {
+      "path": "../thin_brush_evidence/trace.log",
+      "sha256": "1bcc455852f449d1ce5c5eaa41a975a4278d6e6627d7242e9ce140fc06b48e9a"
+    },
+    {
+      "path": "../thin_brush_phase2_evidence/actor-witnesses.json",
+      "sha256": "97d5730c03308d3339a2cfaa0bf0f15046a48233dd51ad47cd04cd25bce14217"
+    },
+    {
+      "path": "../thin_brush_phase2_evidence/matrix-comparison.json",
+      "sha256": "9fb7b627f0f768ae49995fca376ef536917853194e55f42fdea8f0d2b34a12a4"
+    },
+    {
+      "path": "../thin_brush_phase2_evidence/uniform-epsilon-matrix.json",
+      "sha256": "69941855a966053ef8c7c3d10ff848205f2436c97d543feec53fc67d819a9408"
+    },
+    {
+      "path": "../thin_brush_phase2_evidence/traces/adjacent-default/input.bsp",
+      "sha256": "f1d1b7dca896817b8f12e0cd2d1b02c4aef38f9f541db791122430728c1153a0"
+    },
+    {
+      "path": "../thin_brush_phase2_evidence/traces/adjacent-default/input.content.json",
+      "sha256": "7cff4cd85f37ff154e7af5099e48fd9cf03162a55c62547b647ad123ba187176"
+    },
+    {
+      "path": "../thin_brush_phase2_evidence/traces/adjacent-default/input.log",
+      "sha256": "83896bcecadad6bf282b409fe4917a66175ec5db994c1ed4f2255c21d8aafa19"
+    },
+    {
+      "path": "../thin_brush_phase2_evidence/traces/adjacent-default/input.map",
+      "sha256": "675ca0c5d94907e3e22a8686ae61b4b1c4e5bd30e2eb7c112b29e20fa8c350b3"
+    },
+    {
+      "path": "../thin_brush_phase2_evidence/traces/adjacent-default/input.prt",
+      "sha256": "7e4085a62b8c8a62f590a63c404e97b672291f0a43c12eddd84c220e968d4cb8"
+    },
+    {
+      "path": "../thin_brush_phase2_evidence/traces/adjacent-default/input.texinfo.json",
+      "sha256": "2c47c5fd0721df0a879be3a55898e689314bd9406503dc24ff2c8b2629917120"
+    },
+    {
+      "path": "../thin_brush_phase2_evidence/traces/adjacent-default/trace.log",
+      "sha256": "6042f71f9041409bd44761323608ce55b3757371c256f53b527c3528a83aaa7a"
+    },
+    {
+      "path": "../thin_brush_phase2_evidence/traces/axis-0-default/input.bsp",
+      "sha256": "399a3ad833c57e63141161d4480956a22afc964db8149fcd7453f4975fc5f2c6"
+    },
+    {
+      "path": "../thin_brush_phase2_evidence/traces/axis-0-default/input.content.json",
+      "sha256": "1351f7a4abcd4fee32c8ceaf2bb766c3d821a420b547a35e1392b4129db49120"
+    },
+    {
+      "path": "../thin_brush_phase2_evidence/traces/axis-0-default/input.log",
+      "sha256": "7d8c8b9af778df4cc3d700c876554dea5ce1ef7dd8bc4f02e1f40222615823af"
+    },
+    {
+      "path": "../thin_brush_phase2_evidence/traces/axis-0-default/input.map",
+      "sha256": "2cb223c4214478876116fd2bf555c9c559477a4bc81b9fe6f85cd85c0f9e0627"
+    },
+    {
+      "path": "../thin_brush_phase2_evidence/traces/axis-0-default/input.prt",
+      "sha256": "6e6414dd2e8e4656882d2c421e44b7ca257580f0365098c023fb9a1204fc0b0a"
+    },
+    {
+      "path": "../thin_brush_phase2_evidence/traces/axis-0-default/input.texinfo.json",
+      "sha256": "a2569df3cd3c77f5d1307252ed3fa9d777725552e0549893c2edace186856645"
+    },
+    {
+      "path": "../thin_brush_phase2_evidence/traces/axis-0-default/trace.log",
+      "sha256": "1d45a68485654f5ba222cf5ca39200d01d4df3f17cd6a89cd3f53b3570909483"
+    },
+    {
+      "path": "../thin_brush_phase2_evidence/traces/axis-1-default/input.bsp",
+      "sha256": "9c9edb0dcdb55abf81452213a4961b38c7ca630e984b832a510edaebe7275bf6"
+    },
+    {
+      "path": "../thin_brush_phase2_evidence/traces/axis-1-default/input.content.json",
+      "sha256": "b26c8088b1ecbd9d8a315941f17e05d039a57c3f9f308a9eb59f59e42645780f"
+    },
+    {
+      "path": "../thin_brush_phase2_evidence/traces/axis-1-default/input.log",
+      "sha256": "1bdbe9eb2839ffd4a6f5504e29c55db8ecc11e4cd5acaf0c6c310f5e3feb0121"
+    },
+    {
+      "path": "../thin_brush_phase2_evidence/traces/axis-1-default/input.map",
+      "sha256": "25f3a93a10937a5dccfe378e400ad6ffd98f73ee8ef042b9caa6b6adae8088e8"
+    },
+    {
+      "path": "../thin_brush_phase2_evidence/traces/axis-1-default/input.prt",
+      "sha256": "30c1cd8130451d262b3abba23a9bad7b8088cc9831e3ea5cbb80550c6c3e97c6"
+    },
+    {
+      "path": "../thin_brush_phase2_evidence/traces/axis-1-default/input.texinfo.json",
+      "sha256": "a2569df3cd3c77f5d1307252ed3fa9d777725552e0549893c2edace186856645"
+    },
+    {
+      "path": "../thin_brush_phase2_evidence/traces/axis-1-default/trace.log",
+      "sha256": "7c21458b01639e88d8c61412892fc97e2b3b1474a0a2970b8f31163a03ee9877"
+    },
+    {
+      "path": "../thin_brush_phase2_evidence/traces/near-coplanar-chopfragment/input.bsp",
+      "sha256": "7d0764158cdac7678608e85368ca1be83efbcf86cfa141e8e983abd09c790c7d"
+    },
+    {
+      "path": "../thin_brush_phase2_evidence/traces/near-coplanar-chopfragment/input.content.json",
+      "sha256": "2fe09c48fd9f4040ecf5b4537b437a1e226e97fa80258fc0e23aba1e01b2d788"
+    },
+    {
+      "path": "../thin_brush_phase2_evidence/traces/near-coplanar-chopfragment/input.log",
+      "sha256": "fe88522c9f67db208b0d28288c4c81c00c79a32eec82c0b84f589bc9abacc0bf"
+    },
+    {
+      "path": "../thin_brush_phase2_evidence/traces/near-coplanar-chopfragment/input.map",
+      "sha256": "acb20f5374601518281fc7d98ce2c4efe17cae966dff29f6103774961b29fa6b"
+    },
+    {
+      "path": "../thin_brush_phase2_evidence/traces/near-coplanar-chopfragment/input.prt",
+      "sha256": "bed52d0edada30bd85a731856bf710ac23acce41c15c85fc6f4015e20318fd7a"
+    },
+    {
+      "path": "../thin_brush_phase2_evidence/traces/near-coplanar-chopfragment/input.texinfo.json",
+      "sha256": "2c47c5fd0721df0a879be3a55898e689314bd9406503dc24ff2c8b2629917120"
+    },
+    {
+      "path": "../thin_brush_phase2_evidence/traces/near-coplanar-chopfragment/trace.log",
+      "sha256": "7bdad119cfbf3b98966fff93a1789248433530b5e58c55e3efc0a31708603efc"
+    },
+    {
+      "path": "../thin_brush_phase2_evidence/traces/near-coplanar-default/input.bsp",
+      "sha256": "7d0764158cdac7678608e85368ca1be83efbcf86cfa141e8e983abd09c790c7d"
+    },
+    {
+      "path": "../thin_brush_phase2_evidence/traces/near-coplanar-default/input.content.json",
+      "sha256": "2fe09c48fd9f4040ecf5b4537b437a1e226e97fa80258fc0e23aba1e01b2d788"
+    },
+    {
+      "path": "../thin_brush_phase2_evidence/traces/near-coplanar-default/input.log",
+      "sha256": "44a50ce46d2fe591ac6d6736e3feab3035a389a0031e737c2852e5a9c236c229"
+    },
+    {
+      "path": "../thin_brush_phase2_evidence/traces/near-coplanar-default/input.map",
+      "sha256": "acb20f5374601518281fc7d98ce2c4efe17cae966dff29f6103774961b29fa6b"
+    },
+    {
+      "path": "../thin_brush_phase2_evidence/traces/near-coplanar-default/input.prt",
+      "sha256": "bed52d0edada30bd85a731856bf710ac23acce41c15c85fc6f4015e20318fd7a"
+    },
+    {
+      "path": "../thin_brush_phase2_evidence/traces/near-coplanar-default/input.texinfo.json",
+      "sha256": "2c47c5fd0721df0a879be3a55898e689314bd9406503dc24ff2c8b2629917120"
+    },
+    {
+      "path": "../thin_brush_phase2_evidence/traces/near-coplanar-default/trace.log",
+      "sha256": "45f4dcbcfe60e2d66c01ac7142a944c8c4fb248092d721c06a877064cedd9e0c"
+    },
+    {
+      "path": "../thin_brush_phase2_evidence/traces/overlap-chopfragment/input.bsp",
+      "sha256": "cd188cb553ab411c567960f744f1662b1a44120eaf406b80936b594196e07763"
+    },
+    {
+      "path": "../thin_brush_phase2_evidence/traces/overlap-chopfragment/input.content.json",
+      "sha256": "2fe09c48fd9f4040ecf5b4537b437a1e226e97fa80258fc0e23aba1e01b2d788"
+    },
+    {
+      "path": "../thin_brush_phase2_evidence/traces/overlap-chopfragment/input.log",
+      "sha256": "4a753e386db4ab30f1eb09ebe7c704e4b29cce81fd35329a98122d491ceee926"
+    },
+    {
+      "path": "../thin_brush_phase2_evidence/traces/overlap-chopfragment/input.map",
+      "sha256": "f9e0eaefb43dca84c363bc486e8fcf37f772872a1fda582c805f224cbb14e912"
+    },
+    {
+      "path": "../thin_brush_phase2_evidence/traces/overlap-chopfragment/input.prt",
+      "sha256": "2c749c506099dfb50da1badd7c4cfbb8a0d293f230aee13170a40a27d34afdbe"
+    },
+    {
+      "path": "../thin_brush_phase2_evidence/traces/overlap-chopfragment/input.texinfo.json",
+      "sha256": "2c47c5fd0721df0a879be3a55898e689314bd9406503dc24ff2c8b2629917120"
+    },
+    {
+      "path": "../thin_brush_phase2_evidence/traces/overlap-chopfragment/trace.log",
+      "sha256": "e247d458b4626b4a165f712f4eeb2d7c899ab9766bd1734ea3c6cce885aa96a1"
+    },
+    {
+      "path": "../thin_brush_phase2_evidence/traces/overlap-default/input.bsp",
+      "sha256": "f5c5d4e531d9d25019569401ef02e3bc19e1df9890c55aedf1bfadd5887a610a"
+    },
+    {
+      "path": "../thin_brush_phase2_evidence/traces/overlap-default/input.content.json",
+      "sha256": "2fe09c48fd9f4040ecf5b4537b437a1e226e97fa80258fc0e23aba1e01b2d788"
+    },
+    {
+      "path": "../thin_brush_phase2_evidence/traces/overlap-default/input.log",
+      "sha256": "9e28d600ba7f2ecb64d030c8afd40d39f1908cbe395aedacc286b252051926fb"
+    },
+    {
+      "path": "../thin_brush_phase2_evidence/traces/overlap-default/input.map",
+      "sha256": "f9e0eaefb43dca84c363bc486e8fcf37f772872a1fda582c805f224cbb14e912"
+    },
+    {
+      "path": "../thin_brush_phase2_evidence/traces/overlap-default/input.prt",
+      "sha256": "2c749c506099dfb50da1badd7c4cfbb8a0d293f230aee13170a40a27d34afdbe"
+    },
+    {
+      "path": "../thin_brush_phase2_evidence/traces/overlap-default/input.texinfo.json",
+      "sha256": "2c47c5fd0721df0a879be3a55898e689314bd9406503dc24ff2c8b2629917120"
+    },
+    {
+      "path": "../thin_brush_phase2_evidence/traces/overlap-default/trace.log",
+      "sha256": "621547fcffe3e7777be13afe471fdf4fd95a41a7a2980dff07a27e072c14a860"
+    },
+    {
+      "path": "../thin_brush_phase2_evidence/traces/rotated-default/input.bsp",
+      "sha256": "7f3abc2746ab80b3906bfa2cd93ee39a82a4ddaa4d470cb175ebc73f0088701d"
+    },
+    {
+      "path": "../thin_brush_phase2_evidence/traces/rotated-default/input.content.json",
+      "sha256": "b26c8088b1ecbd9d8a315941f17e05d039a57c3f9f308a9eb59f59e42645780f"
+    },
+    {
+      "path": "../thin_brush_phase2_evidence/traces/rotated-default/input.log",
+      "sha256": "7828005b3d8616c21726f10e8e5ccb56d2a363f370a4d5982e4472e92a1f8746"
+    },
+    {
+      "path": "../thin_brush_phase2_evidence/traces/rotated-default/input.map",
+      "sha256": "fe6c20500f91fd53fcd75b00e6295f93700ae30aca45cd01a3a5a34eac3bbbd0"
+    },
+    {
+      "path": "../thin_brush_phase2_evidence/traces/rotated-default/input.prt",
+      "sha256": "30c1cd8130451d262b3abba23a9bad7b8088cc9831e3ea5cbb80550c6c3e97c6"
+    },
+    {
+      "path": "../thin_brush_phase2_evidence/traces/rotated-default/input.texinfo.json",
+      "sha256": "a2569df3cd3c77f5d1307252ed3fa9d777725552e0549893c2edace186856645"
+    },
+    {
+      "path": "../thin_brush_phase2_evidence/traces/rotated-default/trace.log",
+      "sha256": "4b996e1ca64006b0f1b02de41de463d4240c3b8953e0f6b1e210c858ad700f0e"
+    }
+  ],
+  "frozen_maps": [
+    {
+      "path": "../fixtures/full-on.map",
+      "sha256": "16250e50546f9d1c4654d75e0a6683f70f7eff332ec730793c5f836d39716318"
+    },
+    {
+      "path": "../fixtures/full-off.map",
+      "sha256": "d5f2ab2a0c5a22d2f0ecaecf77a1bbd72a3c2ce2e3c444fe0b4c517092e5986c"
+    }
+  ]
+}

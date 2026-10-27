@@ -1,0 +1,40 @@
+[1/5] Building CXX object qbsp/CMakeFiles/libqbsp.dir/brushbsp.cc.o
+FAILED: qbsp/CMakeFiles/libqbsp.dir/brushbsp.cc.o 
+/usr/bin/c++ -DERICWTOOLS_VERSION=\"\" -DLINUX -DUSE_PTHREADS -I/tmp/qqbsp-phase5/source/include -I/tmp/qqbsp-phase5/source/3rdparty/fmt/include -I/tmp/qqbsp-bootstrap/pinned/deps/json/json/include -I/tmp/qqbsp-phase5/source/3rdparty/pareto/source -isystem /tmp/qqbsp-bootstrap/pinned/deps/tbb/oneapi-tbb-2021.11.0/include -O2 -g -DNDEBUG -std=gnu++20 -Winvalid-pch -include /tmp/qqbsp-phase5/build/qbsp/CMakeFiles/libqbsp.dir/cmake_pch.hxx -MD -MT qbsp/CMakeFiles/libqbsp.dir/brushbsp.cc.o -MF qbsp/CMakeFiles/libqbsp.dir/brushbsp.cc.o.d -o qbsp/CMakeFiles/libqbsp.dir/brushbsp.cc.o -c /tmp/qqbsp-phase5/source/qbsp/brushbsp.cc
+In file included from /tmp/qqbsp-phase5/source/include/common/bspfile.hh:22,
+                 from /tmp/qqbsp-phase5/source/include/common/polylib.hh:8,
+                 from /tmp/qqbsp-phase5/source/include/qbsp/winding.hh:24,
+                 from /tmp/qqbsp-phase5/source/include/qbsp/brushbsp.hh:24,
+                 from /tmp/qqbsp-phase5/source/qbsp/brushbsp.cc:22:
+/tmp/qqbsp-phase5/source/include/common/bspfile_generic.hh: In instantiation of ‘auto fmt::v10::formatter<plane_type_t>::format(plane_type_t, FormatContext&) [with FormatContext = fmt::v10::basic_format_context<fmt::v10::appender, char>]’:
+/tmp/qqbsp-phase5/source/3rdparty/fmt/include/fmt/core.h:1097:70:   required by substitution of ‘template<class Context, class T> constexpr decltype ((typename Context::formatter_type<T>().format(declval<const T&>(), declval<Context&>()), true)) fmt::v10::detail::has_const_formatter_impl(T*) [with Context = fmt::v10::basic_format_context<fmt::v10::appender, char>; T = plane_type_t]’
+/tmp/qqbsp-phase5/source/3rdparty/fmt/include/fmt/core.h:1108:43:   required from ‘constexpr bool fmt::v10::detail::has_const_formatter() [with T = plane_type_t; Context = fmt::v10::basic_format_context<fmt::v10::appender, char>]’
+/tmp/qqbsp-phase5/source/3rdparty/fmt/include/fmt/core.h:1443:69:   required from ‘struct fmt::v10::detail::arg_mapper<fmt::v10::basic_format_context<fmt::v10::appender, char> >::formattable<const plane_type_t, plane_type_t>’
+/tmp/qqbsp-phase5/source/3rdparty/fmt/include/fmt/core.h:1451:25:   required by substitution of ‘template<class T, typename std::enable_if<(! fmt::v10::detail::arg_mapper<fmt::v10::basic_format_context<fmt::v10::appender, char> >::formattable<T, typename std::remove_const<_Tp>::type>::value), int>::type <anonymous> > constexpr fmt::v10::detail::unformattable fmt::v10::detail::arg_mapper<fmt::v10::basic_format_context<fmt::v10::appender, char> >::do_map(T&) [with T = const plane_type_t; typename std::enable_if<(! fmt::v10::detail::arg_mapper<fmt::v10::basic_format_context<fmt::v10::appender, char> >::formattable<T, typename std::remove_const<_Tp>::type>::value), int>::type <anonymous> = <missing>]’
+/tmp/qqbsp-phase5/source/3rdparty/fmt/include/fmt/core.h:1462:69:   required by substitution of ‘template<class T, class U, typename std::enable_if<((((((std::is_class<U>::value || std::is_enum<_Tp2>::value) || std::is_union<U>::value) && (! fmt::v10::detail::is_string<U>::value)) && (! fmt::v10::is_char<U>::value)) && (! fmt::v10::detail::is_named_arg<T>::value)) && (! std::is_arithmetic<typename fmt::v10::detail::format_as_result<U>::type>::value)), int>::type <anonymous> > constexpr decltype (((fmt::v10::detail::arg_mapper<fmt::v10::basic_format_context<fmt::v10::appender, char> >*)this)->fmt::v10::detail::arg_mapper<fmt::v10::basic_format_context<fmt::v10::appender, char> >::do_map(val)) fmt::v10::detail::arg_mapper<fmt::v10::basic_format_context<fmt::v10::appender, char> >::map(T&) [with T = const plane_type_t; U = plane_type_t; typename std::enable_if<((((((std::is_class<U>::value || std::is_enum<_Tp2>::value) || std::is_union<U>::value) && (! fmt::v10::detail::is_string<U>::value)) && (! fmt::v10::is_char<U>::value)) && (! fmt::v10::detail::is_named_arg<T>::value)) && (! std::is_arithmetic<typename fmt::v10::detail::format_as_result<U>::type>::value)), int>::type <anonymous> = 0]’
+/tmp/qqbsp-phase5/source/3rdparty/fmt/include/fmt/core.h:1478:53:   [ skipping 4 instantiation contexts, use -ftemplate-backtrace-limit=0 to disable ]
+/tmp/qqbsp-phase5/source/3rdparty/fmt/include/fmt/core.h:1291:19:   required from ‘constexpr fmt::v10::detail::value<Context>::value(T&) [with T = const qbsp_plane_t; Context = fmt::v10::basic_format_context<fmt::v10::appender, char>]’
+/tmp/qqbsp-phase5/source/3rdparty/fmt/include/fmt/core.h:1583:41:   required from ‘constexpr fmt::v10::detail::value<Context> fmt::v10::detail::make_arg(T&) [with bool PACKED = true; Context = fmt::v10::basic_format_context<fmt::v10::appender, char>; T = const qbsp_plane_t; typename std::enable_if<PACKED, int>::type <anonymous> = 0]’
+/tmp/qqbsp-phase5/source/3rdparty/fmt/include/fmt/core.h:1808:51:   required from ‘constexpr fmt::v10::format_arg_store<Context, Args>::format_arg_store(T& ...) [with T = {long unsigned int, const qbsp_plane_t, const char*}; Context = fmt::v10::basic_format_context<fmt::v10::appender, char>; Args = {long unsigned int, qbsp_plane_t, const char*}]’
+/tmp/qqbsp-phase5/source/3rdparty/fmt/include/fmt/core.h:1826:18:   required from ‘constexpr fmt::v10::format_arg_store<Context, typename std::remove_cv<typename std::remove_reference<T>::type>::type ...> fmt::v10::make_format_args(T& ...) [with Context = basic_format_context<appender, char>; T = {long unsigned int, const qbsp_plane_t, const char*}]’
+/tmp/qqbsp-phase5/source/include/common/log.hh:99:56:   required from ‘void logging::print(fmt::v10::format_string<T ...>, T&& ...) [with T = {long unsigned int&, const qbsp_plane_t&, const char*&}; fmt::v10::format_string<T ...> = fmt::v10::basic_format_string<char, long unsigned int&, const qbsp_plane_t&, const char*&>]’
+/tmp/qqbsp-phase5/source/qbsp/brushbsp.cc:363:19:   required from here
+/tmp/qqbsp-phase5/source/include/qbsp/qbsp.hh:370:23:   in ‘constexpr’ expansion of ‘fmt::v10::basic_format_string<char, const plane_type_t&>(", type: {}>")’
+/tmp/qqbsp-phase5/source/include/common/bspfile_generic.hh:187:25: error: call of overloaded ‘format_to(fmt::v10::basic_format_context<fmt::v10::appender, char>::iterator, const char [3], fmt::v10::string_view&)’ is ambiguous
+  187 |         return format_to(ctx.out(), "{}", name);
+      |                ~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~
+In file included from /tmp/qqbsp-phase5/build/qbsp/CMakeFiles/libqbsp.dir/cmake_pch.hxx:29,
+                 from <command-line>:
+/tmp/qqbsp-phase5/source/3rdparty/fmt/include/fmt/core.h:2814:17: note: candidate: ‘OutputIt fmt::v10::format_to(OutputIt, format_string<T ...>, T&& ...) [with OutputIt = appender; T = {basic_string_view<char>&}; typename std::enable_if<detail::is_output_iterator<OutputIt, char>::value, int>::type <anonymous> = 0; format_string<T ...> = basic_format_string<char, basic_string_view<char>&>]’
+ 2814 | FMT_INLINE auto format_to(OutputIt out, format_string<T...> fmt, T&&... args)
+      |                 ^~~~~~~~~
+In file included from /usr/include/c++/13/bits/chrono_io.h:39,
+                 from /usr/include/c++/13/chrono:3370,
+                 from /tmp/qqbsp-phase5/source/include/common/cmdlib.hh:102,
+                 from /tmp/qqbsp-phase5/source/include/common/log.hh:39,
+                 from /tmp/qqbsp-phase5/source/include/common/polylib.hh:7:
+/usr/include/c++/13/format:3853:5: note: candidate: ‘_Out std::format_to(_Out, format_string<_Args ...>, _Args&& ...) [with _Out = fmt::v10::appender; _Args = {fmt::v10::basic_string_view<char>&}; format_string<_Args ...> = basic_format_string<char, fmt::v10::basic_string_view<char>&>]’
+ 3853 |     format_to(_Out __out, format_string<_Args...> __fmt, _Args&&... __args)
+      |     ^~~~~~~~~
+[2/5] Building CXX object qartographer/CMakeFiles/qqbsp_tests.dir/__/tests/test_qbsp.cc.o
+ninja: build stopped: subcommand failed.

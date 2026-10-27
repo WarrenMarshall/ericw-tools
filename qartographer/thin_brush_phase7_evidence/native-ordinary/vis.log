@@ -1,0 +1,15 @@
+---- vis / ericw-tools 2.0.0-alpha10 ----
+low priority not compiled into this version
+logging to /tmp/qqbsp-phase7/evidence/native-ordinary/ordinary-vis.log (truncate)
+
+--- Options Summary ---
+    "nopercent" was set to "1" (from command line)
+    "fast" was set to "1" (from command line)
+
+LoadBSPFile: '/tmp/qqbsp-phase7/evidence/native-ordinary/ordinary.bsp'
+BSP is version Quake BSP bsp29
+INFO: using built-in palette.
+[38;2;255;000;000m************ ERROR ************
+LoadPrtFile: unknown header/empty portal file /tmp/qqbsp-phase7/evidence/native-ordinary/ordinary.prt
+
+[0m

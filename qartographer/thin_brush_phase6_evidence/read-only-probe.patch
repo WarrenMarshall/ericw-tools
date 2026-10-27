@@ -1,0 +1,132 @@
+--- a/qbsp/portals.cc
++++ b/qbsp/portals.cc
+@@ -22,6 +22,8 @@
+ 
+ #include <qbsp/brush.hh>
+ #include <qbsp/portals.hh>
++#include <nlohmann/json.hpp>
++#include <fstream>
+ #include <qbsp/supported_geometry.hh>
+ 
+ #include <qbsp/map.hh>
+@@ -119,6 +121,7 @@
+ The created portals will face the global outside_node
+ ================
+ */
++static aabb3d phase6_root_bounds;
+ std::list<buildportal_t> MakeHeadnodePortals(tree_t &tree)
+ {
+     int i, j, n;
+@@ -127,6 +130,7 @@
+ 
+     // pad with some space so there will never be null volume leafs
+     aabb3d bounds = tree.bounds.grow(SIDESPACE);
++    phase6_root_bounds = bounds;
+ 
+     tree.outside_node.make_leaf();
+     tree.outside_node.get_leafdata()->contents = contentflags_t::make(EWT_VISCONTENTS_SOLID);
+@@ -188,11 +192,44 @@
+ Creates a winding from the given node plane, clipped by all parent nodes.
+ ================
+ */
+-static bool PortalHasArea(const winding_t &w, const qplane3d &plane)
++static nlohmann::json Phase6Region(const node_t *node)
++{
++    nlohmann::json ps=nlohmann::json::array();
++    for(auto *parent=node->parent;parent;node=parent,parent=parent->parent){
++        qplane3d p=parent->get_nodedata()->get_plane();
++        if(parent->get_nodedata()->children[0]==node)p=-p;
++        ps.push_back({p.normal[0],p.normal[1],p.normal[2],p.dist});
++    }
++    for(int axis=0;axis<3;++axis)for(int side=0;side<2;++side){double n[3]={};double sign=side?1:-1;n[axis]=sign;
++        ps.push_back({n[0],n[1],n[2],sign*phase6_root_bounds[side][axis]});}
++    return ps;
++}
++static bool Phase6Oblique(const qplane3d &p){int count=0;for(double v:p.normal)count+=v!=0;return count>1;}
++
++static bool PortalHasArea(const winding_t &w, const qplane3d &plane, const node_t *region, const node_t *other, const char *site)
+ {
+     auto rank = supported_geometry::winding_rank(w, plane);
+-    if (rank == supported_geometry::rank_t::uncertain)
++    if (rank == supported_geometry::rank_t::uncertain) {
++        nlohmann::json j;
++        j["site"]=site;
++        j["query"] = {plane.normal[0],plane.normal[1],plane.normal[2],plane.dist};
++        j["planes"] = nlohmann::json::array(); j["winding"] = nlohmann::json::array();
++        for (auto &p : w) j["winding"].push_back({p[0],p[1],p[2]});
++        for (auto *node : {region, other}) {
++            if (!node) continue;
++            for (auto *parent=node->parent; parent; node=parent,parent=parent->parent) {
++                qplane3d p=parent->get_nodedata()->get_plane();
++                if (parent->get_nodedata()->children[0]==node) p=-p;
++                j["planes"].push_back({p.normal[0],p.normal[1],p.normal[2],p.dist});
++            }
++        }
++        for (int axis=0;axis<3;++axis) for (int side=0;side<2;++side) {
++            double sign=side ? 1 : -1; double n[3]={}; n[axis]=sign;
++            j["planes"].push_back({n[0],n[1],n[2],sign*phase6_root_bounds[side][axis]});
++        }
++        std::ofstream("/tmp/qqbsp-phase6/evidence/portal-site.json") << j.dump(2);
+         Error("PHASE5 NUMERICAL_UNCERTAINTY: portal area/rank unresolved");
++    }
+     return rank == supported_geometry::rank_t::area;
+ }
+ 
+@@ -201,6 +238,10 @@
+ 
+ static std::optional<winding_t> BaseWindingForNode(const node_t *node)
+ {
++    static bool captured=false;
++    const qplane3d &q=node->get_nodedata()->get_plane();
++    if(!captured && Phase6Oblique(q)){captured=true;nlohmann::json j;j["planes"]=Phase6Region(node);j["query"]={q.normal[0],q.normal[1],q.normal[2],q.dist};
++        std::ofstream("/tmp/qqbsp-phase6/evidence/base-winding-site.json")<<j.dump(2);}
+     std::optional<winding_t> w = BaseWindingForPlane<winding_t>(node->get_nodedata()->get_plane());
+ 
+     // clip by all the parents
+@@ -231,6 +272,11 @@
+ static std::optional<buildportal_t> MakeNodePortal(
+     node_t *node, const std::list<buildportal_t> &boundary_portals, portalstats_t &stats)
+ {
++    static bool captured=false;
++    const qplane3d &q=node->get_nodedata()->get_plane();
++    if(!captured && Phase6Oblique(q)){captured=true;nlohmann::json j;j["planes"]=Phase6Region(node);j["query"]={q.normal[0],q.normal[1],q.normal[2],q.dist};
++        for(auto &p:boundary_portals){qplane3d s=p.plane;if(p.nodes[0]==node)s=-s;j["planes"].push_back({s.normal[0],s.normal[1],s.normal[2],s.dist});}
++        std::ofstream("/tmp/qqbsp-phase6/evidence/make-portal-site.json")<<j.dump(2);}
+     auto w = BaseWindingForNode(node);
+ 
+     // clip the portal by all the other portals in the node
+@@ -256,7 +302,7 @@
+         return std::nullopt;
+     }
+ 
+-    if (!PortalHasArea(*w, node->get_nodedata()->get_plane())) {
++    if (!PortalHasArea(*w, node->get_nodedata()->get_plane(), node->get_nodedata()->children[0], node->get_nodedata()->children[1], "MakeNodePortal")) {
+         stats.c_tinyportals++;
+         return std::nullopt;
+     }
+@@ -308,12 +354,12 @@
+         //
+         auto [frontwinding, backwinding] = p.winding.clip(plane, SPLIT_WINDING_EPSILON, true);
+ 
+-        if (frontwinding && !PortalHasArea(*frontwinding, p.plane)) {
++        if (frontwinding && !PortalHasArea(*frontwinding, p.plane, f, other_node, "SplitNodePortals.front")) {
+             frontwinding = {};
+             stats.c_tinyportals++;
+         }
+ 
+-        if (backwinding && !PortalHasArea(*backwinding, p.plane)) {
++        if (backwinding && !PortalHasArea(*backwinding, p.plane, b, other_node, "SplitNodePortals.back")) {
+             backwinding = {};
+             stats.c_tinyportals++;
+         }
+--- a/tests/test_qbsp.cc
++++ b/tests/test_qbsp.cc
+@@ -101,7 +101,7 @@
+ 
+     auto wal_metadata_path = std::filesystem::path(testmaps_dir) / "q2_wal_metadata";
+ 
+-    std::vector<std::string> args{""}; // the exe path, which we're ignoring in this case
++    std::vector<std::string> args{"", "-threads", "1"}; // the exe path, which we're ignoring in this case
+     if (std::ranges::find(extra_args, "-path") == extra_args.end()) {
+         extra_args.push_back("-path");
+         extra_args.push_back(wal_metadata_path.string());

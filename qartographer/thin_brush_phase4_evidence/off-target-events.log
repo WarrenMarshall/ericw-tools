@@ -1,0 +1,289 @@
+[0mProcessing hull 0...
+[0mP3 SNAP source count=2397 hash=4350272302868243771
+P3 SNAP post-csg count=2397 hash=4350272302868243771
+P3 SNAP bsp-input count=2397 hash=4350272302868243771
+P4 CLIP plane=6970 before=4
+P4 CLIPPED after=4 area=76243158.40389782
+P4 CLIP plane=7502 before=4
+P4 CLIPPED after=4 area=27622708.03144864
+P4 CLIP plane=7536 before=4
+P4 CLIPPED after=4 area=27276008.692399137
+P4 CLIP plane=7511 before=4
+P4 CLIPPED after=5 area=16548964.400022546
+P4 CLIP plane=7515 before=5
+P4 CLIPPED after=0 area=0
+P4 CHECK rejection line=726
+[38;2;255;000;000mP3 PORTALS count=218129 points=864695 area_min=0.0035554582198758407 area_max=3345601.0227485015 area_lt_001=3 ancestor_bad=12938 max_error=765.9324987243348
+[38;2;255;000;000mP3 LEAKPORTAL index=0 area=48792 ancestor_error=0
+[0m[38;2;255;000;000mP3 LEAKPORTAL index=1 area=99847.93620387441 ancestor_error=2.2737367544323206e-13
+[0m[38;2;255;000;000mP3 LEAKPORTAL index=2 area=139343.6766548795 ancestor_error=2.2737367544323206e-13
+[0m[38;2;255;000;000mP3 LEAKPORTAL index=3 area=4351.903120253666 ancestor_error=0
+[0m[38;2;255;000;000mP3 LEAKPORTAL index=4 area=191.3807254874764 ancestor_error=0
+[0m[38;2;255;000;000mP3 LEAKPORTAL index=5 area=1429.5437359030195 ancestor_error=2.2737367544323206e-13
+[0m[38;2;255;000;000mP3 LEAKPORTAL index=6 area=8.744571662119998 ancestor_error=2.2737367544323206e-13
+[0m[38;2;255;000;000mP3 LEAKPORTAL index=7 area=121.86704698615019 ancestor_error=2.2737367544323206e-13
+[0m[38;2;255;000;000mP3 LEAKPORTAL index=8 area=1010.6630859360102 ancestor_error=0.00012207000008856994
+[0m[38;2;255;000;000mP3 LEAKPORTAL index=9 area=387.1923449684891 ancestor_error=0
+[0m[38;2;255;000;000mP3 LEAKPORTAL index=10 area=1155.1963622212074 ancestor_error=0
+[0m[38;2;255;000;000mP3 LEAKPORTAL index=11 area=2596.7914905520743 ancestor_error=0
+[0m[38;2;255;000;000mP3 LEAKPORTAL index=12 area=66240.00000000006 ancestor_error=0
+[0m[38;2;255;000;000mP3 LEAKPORTAL index=13 area=582912.0673826406 ancestor_error=0
+[0m[38;2;255;000;000mP3 LEAKPORTAL index=14 area=582912.0673826406 ancestor_error=0
+[0m[33mWARNING: Reached occupant "ambient_swamp1" at (-1408 -1810 194), no filling performed.
+[38;2;255;000;000mP3 PORTALS count=218129 points=864695 area_min=0.0035554582198758407 area_max=3345601.0227485015 area_lt_001=3 ancestor_bad=12938 max_error=765.9324987243348
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=768 area_max=9216 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=768 area_max=7680 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=57.754057104394946 area_max=28924.415231280178 area_lt_001=0 ancestor_bad=0 max_error=5.755396159656812e-13
+[0m[38;2;255;000;000mP3 PORTALS count=38 points=154 area_min=1.2383738807558609 area_max=28924.415231280178 area_lt_001=0 ancestor_bad=0 max_error=1.0729195309977513e-12
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=384 area_max=29536 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=1504 area_max=15040 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=2136 area_max=35551.998657296004 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=2136 area_max=35551.998657296004 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=192 area_max=9216 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=192 area_max=5376 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=576 area_max=15232 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=576 area_max=15232 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=576 area_max=26048 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=1728 area_max=12800 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=70 points=280 area_min=63.99902344 area_max=11264.01562502401 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=46 points=184 area_min=63.99902344 area_max=11264.013671913113 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=46 points=184 area_min=127.99975585600009 area_max=12799.99609376 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=46 points=184 area_min=127.99975585600009 area_max=12799.989990161866 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=96 points=384 area_min=8.000000000000057 area_max=19199.994140640003 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=98 points=392 area_min=8.000000000000057 area_max=28799.99121096 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=269 points=1064 area_min=31.99999999999963 area_max=15360 area_lt_001=0 ancestor_bad=0 max_error=9.094947017729282e-13
+[0m[38;2;255;000;000mP3 PORTALS count=129 points=505 area_min=31.99999999999818 area_max=34816.00000000006 area_lt_001=0 ancestor_bad=0 max_error=4.547473508864641e-13
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=1536 area_max=22799.993042010003 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=1536 area_max=22799.993042010003 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=100 points=403 area_min=10.620728395358517 area_max=26854.673999889983 area_lt_001=0 ancestor_bad=1 max_error=0.1777521807198923
+[0m[38;2;255;000;000mP3 PORTALS count=103 points=417 area_min=131.74640584173252 area_max=25824.611086800018 area_lt_001=0 ancestor_bad=1 max_error=0.1777521807198923
+[0m[38;2;255;000;000mP3 PORTALS count=94 points=376 area_min=18.825158152534545 area_max=9856 area_lt_001=0 ancestor_bad=0 max_error=1.3642420526593924e-12
+[0m[38;2;255;000;000mP3 PORTALS count=92 points=368 area_min=57.938314322252154 area_max=19350.187500000102 area_lt_001=0 ancestor_bad=0 max_error=9.094947017729282e-13
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=1008 area_max=20516 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=1008 area_max=20516 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=336 area_max=8280 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=192 area_max=5152 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=552 area_max=7360 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=552 area_max=6532 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=336 area_max=12656 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=896 area_max=6944 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=1440 area_max=63232 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=1440 area_max=53248 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=65.67293718710292 area_max=11753.39214056605 area_lt_001=0 ancestor_bad=0 max_error=6.572520305780927e-13
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=65.67293718710326 area_max=11753.39214056605 area_lt_001=0 ancestor_bad=0 max_error=2.8421709430404007e-13
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=86.8690765205533 area_max=11698.28022736616 area_lt_001=0 ancestor_bad=0 max_error=5.542233338928781e-13
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=84.67304541631233 area_max=11698.28022736616 area_lt_001=0 ancestor_bad=0 max_error=1.0800249583553523e-12
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=76.13320154897725 area_max=12955.236896771268 area_lt_001=0 ancestor_bad=0 max_error=2.7355895326763857e-13
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=67.31496753054266 area_max=12955.236896771268 area_lt_001=0 ancestor_bad=0 max_error=3.481659405224491e-13
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=584.2383595277631 area_max=14080.000335720099 area_lt_001=0 ancestor_bad=0 max_error=1.1368683772161603e-13
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=1802.1386718720232 area_max=12014.258098945198 area_lt_001=0 ancestor_bad=0 max_error=4.618527782440651e-13
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=168 area_max=8640 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=96 area_max=8640 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=168 area_max=8640 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=96 area_max=4992 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=256 area_max=12544 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=96 area_max=7168 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=64 area_max=4352 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=64 area_max=3536 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=174 points=684 area_min=31.999877936000303 area_max=28160.00000000054 area_lt_001=0 ancestor_bad=0 max_error=4.547473508864641e-13
+[0m[38;2;255;000;000mP3 PORTALS count=113 points=442 area_min=31.999877936000303 area_max=28160.00000000054 area_lt_001=0 ancestor_bad=0 max_error=9.094947017729282e-13
+[0m[38;2;255;000;000mP3 PORTALS count=97 points=388 area_min=384 area_max=7743.999328648 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=77 points=308 area_min=384 area_max=25344 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=1536 area_max=39424 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=1536 area_max=39424 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=720 area_max=29568 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=720 area_max=29568 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=384 area_max=8960 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=384 area_max=8960 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=557 points=2195 area_min=0.083253538976536 area_max=36019394.52208192 area_lt_001=0 ancestor_bad=245 max_error=0.4353217516090808
+[0m[38;2;255;000;000mP3 PORTALS count=594 points=2318 area_min=0.2490706970617539 area_max=45540.28345648977 area_lt_001=0 ancestor_bad=43 max_error=0.002835333557001718
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=378.53188871878615 area_max=17343.32657675301 area_lt_001=0 ancestor_bad=0 max_error=5.684341886080801e-13
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=378.53188871878615 area_max=17343.32657675301 area_lt_001=0 ancestor_bad=0 max_error=5.684341886080801e-13
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=2592 area_max=77520 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=2592 area_max=61200 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=768 area_max=14400 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=768 area_max=14400 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=49 points=196 area_min=256 area_max=41216 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=57 points=228 area_min=256 area_max=23040 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=768 area_max=42240 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=768 area_max=30720 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=214 points=856 area_min=192 area_max=36864 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=130 points=520 area_min=256 area_max=38912 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=384 area_max=19584 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=384 area_max=12672 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=384 area_max=27968 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=384 area_max=19136 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=768 area_max=42432 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=1344 area_max=28800 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=116 points=448 area_min=8 area_max=14336.0000000002 area_lt_001=0 ancestor_bad=0 max_error=2.2737367544323206e-13
+[0m[38;2;255;000;000mP3 PORTALS count=96 points=372 area_min=7.9999999999990905 area_max=14336.0000000002 area_lt_001=0 ancestor_bad=0 max_error=4.547473508864641e-13
+[0m[38;2;255;000;000mP3 PORTALS count=108 points=418 area_min=7.999999999998636 area_max=14336.000000000135 area_lt_001=0 ancestor_bad=0 max_error=4.547473508864641e-13
+[0m[38;2;255;000;000mP3 PORTALS count=96 points=372 area_min=7.9999999999990905 area_max=14336.000000000135 area_lt_001=0 ancestor_bad=0 max_error=4.547473508864641e-13
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=192 area_max=28160 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=192 area_max=19712 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=130.60092547410022 area_max=34960.27244871908 area_lt_001=0 ancestor_bad=0 max_error=1.3642420526593924e-12
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=194.96329394725308 area_max=23471.049154787437 area_lt_001=0 ancestor_bad=0 max_error=1.1368683772161603e-12
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=96 area_max=20736 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=96 area_max=20736 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=53 points=212 area_min=32 area_max=12320 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=53 points=212 area_min=24 area_max=12320 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=54 points=216 area_min=31.579452515 area_max=19712 area_lt_001=0 ancestor_bad=4 max_error=0.06623649600000192
+[0m[38;2;255;000;000mP3 PORTALS count=42 points=168 area_min=24 area_max=19712 area_lt_001=0 ancestor_bad=4 max_error=0.06623649600000192
+[0m[38;2;255;000;000mP3 PORTALS count=53 points=212 area_min=20 area_max=18352 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=53 points=212 area_min=20 area_max=18352 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=20.92423483352718 area_max=34845.2780539796 area_lt_001=0 ancestor_bad=0 max_error=6.821210263296962e-13
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=20.92423483352718 area_max=34845.2780539796 area_lt_001=0 ancestor_bad=0 max_error=4.547473508864641e-13
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=64 area_max=19712 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=64 area_max=19712 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=24.000000000000007 area_max=12543.999359136 area_lt_001=0 ancestor_bad=0 max_error=7.105427357601002e-15
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=24.000000000000007 area_max=12543.999359136 area_lt_001=0 ancestor_bad=0 max_error=7.105427357601002e-15
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=63.999994278 area_max=12543.999359136 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=63.999994278 area_max=12543.999359136 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=64 area_max=12544 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=64 area_max=12544 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=64 area_max=19712 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=64 area_max=19712 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=64 area_max=19712 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=64 area_max=19712 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=64 area_max=12544 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=64 area_max=12544 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=64 area_max=12544 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=64 area_max=12544 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=64 area_max=12544 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=64 area_max=12544 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=64 area_max=12544 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=64 area_max=12544 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=64 area_max=12544 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=64 area_max=12544 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=64 area_max=12544 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=64 area_max=12544 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=64 area_max=12544 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=64 area_max=12544 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=64 area_max=19712 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=64 area_max=19712 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=41 points=164 area_min=5.999931334999985 area_max=4662 area_lt_001=0 ancestor_bad=0 max_error=4.263256414560601e-14
+[0m[38;2;255;000;000mP3 PORTALS count=41 points=164 area_min=5.999931334999985 area_max=4662 area_lt_001=0 ancestor_bad=0 max_error=4.263256414560601e-14
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=24 area_max=30352.3027326041 area_lt_001=0 ancestor_bad=0 max_error=1.4210854715202004e-14
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=23.999999999999993 area_max=30352.3027326041 area_lt_001=0 ancestor_bad=0 max_error=1.4210854715202004e-14
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=21 area_max=5215.215299601 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=21 area_max=5215.215299601 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=21.636850263580783 area_max=9797.806566117644 area_lt_001=0 ancestor_bad=0 max_error=4.547473508864641e-13
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=21.410542750825456 area_max=9797.806566117644 area_lt_001=0 ancestor_bad=0 max_error=4.547473508864641e-13
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=17.808651150230645 area_max=14933.258702461259 area_lt_001=0 ancestor_bad=0 max_error=9.094947017729282e-13
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=17.798923642350875 area_max=14933.258702461259 area_lt_001=0 ancestor_bad=0 max_error=9.094947017729282e-13
+[0m[38;2;255;000;000mP3 PORTALS count=53 points=212 area_min=15.999938964999998 area_max=19965.01670077449 area_lt_001=0 ancestor_bad=0 max_error=6.103499998744155e-05
+[0m[38;2;255;000;000mP3 PORTALS count=53 points=212 area_min=15.999938964999998 area_max=19965.01670077449 area_lt_001=0 ancestor_bad=0 max_error=6.103499998744155e-05
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=15.999969483000001 area_max=4480.000000000008 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=15.999969483000001 area_max=4480.000000000008 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=64 area_max=12544 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=64 area_max=12544 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=64 area_max=12544 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=64 area_max=12544 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=64 area_max=12544 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=64 area_max=12544 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=62.625976562000005 area_max=12390.109374944 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=62.625976562000005 area_max=12390.109374944 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=70 points=280 area_min=0.958256586096752 area_max=51839.75893051812 area_lt_001=0 ancestor_bad=0 max_error=6.916280176483269e-05
+[0m[38;2;255;000;000mP3 PORTALS count=62 points=248 area_min=0.958357009339494 area_max=51839.75893051812 area_lt_001=0 ancestor_bad=0 max_error=6.916280176483269e-05
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=16 area_max=4736 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=16 area_max=4736 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=76.35168456999997 area_max=16744.3064951761 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=76.35168456999997 area_max=16744.3064951761 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=17.8085226010312 area_max=14918.459008527292 area_lt_001=0 ancestor_bad=0 max_error=1.1368683772161603e-12
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=17.8085226010312 area_max=14918.459008527292 area_lt_001=0 ancestor_bad=0 max_error=1.1368683772161603e-12
+[0m[38;2;255;000;000mP3 PORTALS count=46 points=184 area_min=2.9926798196420545 area_max=11989.643955005882 area_lt_001=0 ancestor_bad=0 max_error=9.094947017729282e-13
+[0m[38;2;255;000;000mP3 PORTALS count=46 points=184 area_min=2.9926798196420545 area_max=11989.643955005882 area_lt_001=0 ancestor_bad=0 max_error=9.094947017729282e-13
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=42 area_max=10080 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=42 area_max=10080 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=64 area_max=12544 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=24 area_max=12544 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=36 area_max=9408 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=36 area_max=9408 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=23.99998474099999 area_max=5183.998901351999 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=23.99998474099999 area_max=5183.998901351999 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=15 area_max=4472.999879859 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=15 area_max=4472.999879859 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=80 area_max=16896 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=80 area_max=16896 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=63.768554687999995 area_max=12518.078338310403 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=63.768554687999995 area_max=12518.078338310403 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=76 area_max=17856 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=24 area_max=17856 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=149 points=600 area_min=0.13479904202994142 area_max=17431.444542878216 area_lt_001=0 ancestor_bad=43 max_error=0.1740881894611448
+[0m[38;2;255;000;000mP3 PORTALS count=148 points=598 area_min=0.13479904203011275 area_max=17431.444542878216 area_lt_001=0 ancestor_bad=40 max_error=0.3348500693641654
+[0m[38;2;255;000;000mP3 PORTALS count=312 points=1229 area_min=1.9893151790611023 area_max=17266.69087412271 area_lt_001=0 ancestor_bad=26 max_error=0.14122093267312152
+[0m[38;2;255;000;000mP3 PORTALS count=196 points=773 area_min=1.355225753352347 area_max=26689.6732066757 area_lt_001=0 ancestor_bad=34 max_error=0.4499624204114525
+[0m[38;2;255;000;000mP3 PORTALS count=769 points=3048 area_min=0.21225323582605982 area_max=78208.091797416 area_lt_001=0 ancestor_bad=149 max_error=0.9511676022227675
+[0m[38;2;255;000;000mP3 PORTALS count=422 points=1668 area_min=0.07160726891125715 area_max=83968 area_lt_001=0 ancestor_bad=81 max_error=0.19215154370090204
+[0mProcessing hull 1...
+[0mP3 SNAP source count=2306 hash=1093318343101101696
+[0mP3 SNAP post-csg count=8214 hash=2064280083209446827
+P3 SNAP bsp-input count=8214 hash=2064280083209446827
+[38;2;255;000;000mP3 PORTALS count=1971974 points=7847241 area_min=0.00026049514487787637 area_max=3569217.1454366078 area_lt_001=45 ancestor_bad=119445 max_error=907.7224126446433
+P3 SNAP bsp-input count=8214 hash=2064280083209446827
+[38;2;255;000;000mP3 PORTALS count=861839 points=3420505 area_min=0.0003676331326743113 area_max=2705718.4911416965 area_lt_001=33 ancestor_bad=66508 max_error=241.2590439045737
+[0mProcessing hull 2...
+[0mP3 SNAP source count=2306 hash=16083709081223970917
+[0mP3 SNAP post-csg count=8223 hash=6181754968638279498
+P3 SNAP bsp-input count=8223 hash=6181754968638279498
+[38;2;255;000;000mP3 PORTALS count=2258213 points=8989227 area_min=0.001553590398806039 area_max=3580417.212129957 area_lt_001=39 ancestor_bad=153449 max_error=138.48094020015537
+P3 SNAP bsp-input count=8223 hash=6181754968638279498
+P4 ROUTE path=110001001000 best=88776 line=2011 side=2 xmin=-1298.5094237863357 xmax=-1288 ymin=-1508 ymax=-1429.4242038277696 zmin=304 zmax=314.50938341341833
+P4 ROUTE path=110001001000 best=88776 line=2019 side=2 xmin=-1288 xmax=-1280 ymin=-1508 ymax=-1451.9999999999995 zmin=304 zmax=322.50935268068326
+P4 ROUTE path=110001001000 best=88776 line=2019 side=2 xmin=-1288 xmax=-1280 ymin=-1451.9999999999995 ymax=-1428.6197509769995 zmin=304 zmax=322.50935268068315
+P4 ROUTE path=110001001000 best=88776 line=2035 side=2 xmin=-1293.6384944292133 xmax=-1280 ymin=-1501.387355678031 ymax=-1418.0920410159988 zmin=308.8709106449996 zmax=322.5093526806832
+P4 ROUTE path=110001001000 best=88776 line=13174 side=2 xmin=-1297.8477783199999 xmax=-1280 ymin=-1489.6782496281764 ymax=-1407.9597167969987 zmin=172.03125 zmax=322.50935268068395
+P4 ROUTE path=110001001000 best=88776 line=13366 side=2 xmin=-1360.000488281 xmax=-1280 ymin=-1488 ymax=-1392 zmin=172.03125 zmax=322.5093526806837
+P4 ROUTE path=110001001000 best=88776 line=13406 side=2 xmin=-1346.5096081834552 xmax=-1280 ymin=-1508 ymax=-1392 zmin=256 zmax=322.5093526806832
+P4 ROUTE path=110001001000 best=88776 line=16818 side=2 xmin=-1360.000488281 xmax=-1280 ymin=-1215.99987793 ymax=-1135.99987793 zmin=172.03125 zmax=322.5093526806837
+P4 ROUTE path=110001001000 best=88776 line=21561 side=6 xmin=-1296.0002441410063 xmax=-1280.000244141 ymin=-1508 ymax=-1392 zmin=211.361358643 zmax=213.46780395500082
+P4 ROUTE path=110001001000 best=88776 line=21561 side=6 xmin=-1360.000244141 xmax=-1280.000244141 ymin=-1508 ymax=-1392 zmin=213.46780395500082 zmax=236.638641357
+P4 ROUTE path=110001001000 best=88776 line=21569 side=2 xmin=-1301.4521484380004 xmax=-1286.5424804689992 ymin=-1508 ymax=-1392 zmin=186.9453887939995 zmax=193.1211547850001
+P4 ROUTE path=110001001000 best=88776 line=21569 side=2 xmin=-1360.000488281 xmax=-1286.5424804689992 ymin=-1508 ymax=-1392 zmin=193.1211547850001 zmax=213.46780395500082
+P4 ROUTE path=110001001000 best=88776 line=21569 side=6 xmin=-1286.5424804689992 xmax=-1280.000244141 ymin=-1508 ymax=-1392 zmin=172.03125 zmax=212.2226625831944
+P4 ROUTE path=110001001000 best=88776 line=21577 side=2 xmin=-1311.9843750000005 xmax=-1299.1811523439997 ymin=-1508 ymax=-1392 zmin=172.03125 zmax=174.87884521500018
+P4 ROUTE path=110001001000 best=88776 line=21577 side=2 xmin=-1360.000488281 xmax=-1299.1811523439997 ymin=-1508 ymax=-1392 zmin=174.87884521500018 zmax=193.1211547850001
+P4 ROUTE path=110001001000 best=88776 line=21577 side=2 xmin=-1299.1811523439997 xmax=-1286.5424804689992 ymin=-1508 ymax=-1392 zmin=172.03125 zmax=192.18048055454886
+P4 ROUTE path=110001001000 best=88776 line=21585 side=2 xmin=-1360.000488281 xmax=-1317.0548095700003 ymin=-1508 ymax=-1392 zmin=172.03125 zmax=174.87884521500018
+P4 ROUTE path=110001001000 best=88776 line=21585 side=2 xmin=-1317.0548095700003 xmax=-1308.2733017330486 ymin=-1508 ymax=-1392 zmin=172.03125 zmax=174.87884521500018
+P4 ROUTE path=110001001000 best=88776 line=21729 side=2 xmin=-1319.5641311349282 xmax=-1299.1811523439997 ymin=-1508 ymax=-1392 zmin=282.9453735350007 zmax=293.1368694560695
+P4 ROUTE path=110001001000 best=88776 line=21737 side=2 xmin=-1341.454977559627 xmax=-1286.5424804689992 ymin=-1508 ymax=-1392 zmin=261.05461120600023 zmax=282.9453735350007
+P4 ROUTE path=110001001000 best=88776 line=21745 side=2 xmin=-1360.000488281 xmax=-1296.000244141 ymin=-1508 ymax=-1392 zmin=224 zmax=261.05461120600023
+P4 ROUTE path=110001001000 best=88776 line=21745 side=6 xmin=-1296.000244141 xmax=-1280.000244141 ymin=-1508 ymax=-1392 zmin=172.03125 zmax=261.05461120600023
+P4 ROUTE path=110001001000 best=88776 line=21761 side=2 xmin=-1312.0002441412669 xmax=-1296.000244141 ymin=-1508 ymax=-1380 zmin=213.467803955 zmax=215.57424926703516
+P4 ROUTE path=110001001000 best=88776 line=21761 side=2 xmin=-1360.000488281 xmax=-1296.000244141 ymin=-1508 ymax=-1380 zmin=215.57424926703516 zmax=234.53219604500006
+P4 ROUTE path=110001001000 best=88776 line=21769 side=2 xmin=-1316.3616943360037 xmax=-1301.4521484380002 ymin=-1508 ymax=-1380 zmin=193.12115478500016 zmax=199.29692077600157
+P4 ROUTE path=110001001000 best=88776 line=21769 side=2 xmin=-1360.000488281 xmax=-1301.4521484380002 ymin=-1508 ymax=-1380 zmin=199.29692077600157 zmax=215.57424926703516
+P4 ROUTE path=110001001000 best=88776 line=21769 side=2 xmin=-1301.4521484380002 xmax=-1296.000244141 ymin=-1508 ymax=-1380 zmin=172.03125 zmax=214.18556259549308
+P4 ROUTE path=110001001000 best=88776 line=21777 side=2 xmin=-1324.7874755860005 xmax=-1311.9842529299992 ymin=-1508 ymax=-1380 zmin=174.87886047399945 zmax=184.70309448200038
+P4 ROUTE path=110001001000 best=88776 line=21777 side=2 xmin=-1360.000488281 xmax=-1311.9842529299992 ymin=-1508 ymax=-1380 zmin=184.70309448200038 zmax=199.29692077600157
+P4 ROUTE path=110001001000 best=88776 line=21777 side=2 xmin=-1311.9842529299992 xmax=-1301.4521484380002 ymin=-1508 ymax=-1380 zmin=172.03125 zmax=197.48371640695214
+P4 ROUTE path=110001001000 best=88776 line=21785 side=2 xmin=-1336.7033691410006 xmax=-1326.8791503910006 ymin=-1508 ymax=-1380 zmin=172.03125 zmax=172.7872467040006
+P4 ROUTE path=110001001000 best=88776 line=21785 side=2 xmin=-1360.000488281 xmax=-1326.8791503910006 ymin=-1508 ymax=-1380 zmin=172.7872467040006 zmax=184.70309448200038
+P4 ROUTE path=110001001000 best=88776 line=21785 side=2 xmin=-1326.8791503910006 xmax=-1311.9842529299992 ymin=-1508 ymax=-1380 zmin=172.03125 zmax=184.70309448200038
+P4 ROUTE path=110001001000 best=88776 line=21793 side=2 xmin=-1360.000488281 xmax=-1345.1213378909997 ymin=-1508 ymax=-1380 zmin=172.03125 zmax=172.7872467040006
+P4 ROUTE path=110001001000 best=88776 line=21793 side=2 xmin=-1345.1213378909997 xmax=-1336.1232727271185 ymin=-1508 ymax=-1380 zmin=172.03125 zmax=172.7872467040006
+P4 ROUTE path=110001001000 best=88776 line=21929 side=2 xmin=-1329.3883876257137 xmax=-1311.9842529299992 ymin=-1508 ymax=-1380 zmin=273.12115478499936 zmax=281.823166587252
+P4 ROUTE path=110001001000 best=88776 line=21937 side=2 xmin=-1347.6307672754913 xmax=-1301.4521484380002 ymin=-1508 ymax=-1380 zmin=254.87884521499976 zmax=273.12115478499936
+P4 ROUTE path=110001001000 best=88776 line=21945 side=2 xmin=-1360.000488281 xmax=-1296.000244141 ymin=-1508 ymax=-1380 zmin=172.03125 zmax=254.87884521499976
+[38;2;255;000;000mP3 PORTALS count=1189457 points=4728124 area_min=0.0019935829283142725 area_max=2712000.793266516 area_lt_001=25 ancestor_bad=93604 max_error=664.000152588
+[38;2;255;000;000mP3 LEAKPORTAL index=0 area=1538.4544765340972 ancestor_error=0
+[0m[38;2;255;000;000mP3 LEAKPORTAL index=1 area=11705.654190596922 ancestor_error=0
+[0m[38;2;255;000;000mP3 LEAKPORTAL index=2 area=833.887401615802 ancestor_error=0
+[0m[38;2;255;000;000mP3 LEAKPORTAL index=3 area=960.0007324320004 ancestor_error=0
+[0m[38;2;255;000;000mP3 LEAKPORTAL index=4 area=24640.017089800014 ancestor_error=0
+[0m[38;2;255;000;000mP3 LEAKPORTAL index=5 area=62207.75034026074 ancestor_error=0
+[0m[38;2;255;000;000mP3 LEAKPORTAL index=6 area=403526.4577576904 ancestor_error=0
+[0m[38;2;255;000;000mP3 LEAKPORTAL index=7 area=354877.61740294035 ancestor_error=2.2737367544323206e-13
+[0m[38;2;255;000;000mP3 LEAKPORTAL index=8 area=426239.9352017793 ancestor_error=0
+[0m[38;2;255;000;000mP3 LEAKPORTAL index=9 area=426239.9352017793 ancestor_error=0
+[0m[38;2;255;000;000mP3 LEAKPORTAL index=10 area=334080.1696513936 ancestor_error=0
+[0m[38;2;255;000;000mP3 LEAKPORTAL index=11 area=501120.1696513936 ancestor_error=0
+[0m[38;2;255;000;000mP3 LEAKPORTAL index=12 area=552160.1696513937 ancestor_error=0
+[0m[38;2;255;000;000mP3 LEAKPORTAL index=13 area=536928.1649713551 ancestor_error=0
+[0m[38;2;255;000;000mP3 LEAKPORTAL index=14 area=9024 ancestor_error=0
+[0m[38;2;255;000;000mP3 LEAKPORTAL index=15 area=9024 ancestor_error=0
+[0m[38;2;255;000;000mP3 LEAKPORTAL index=16 area=412848 ancestor_error=0
+[0m[38;2;255;000;000mP3 LEAKPORTAL index=17 area=412848 ancestor_error=0
+[0m[33mWARNING: Reached occupant "light" at (-1232 -1520 232), no filling performed.
+80.509s seconds elapsed

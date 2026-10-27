@@ -1,0 +1,14 @@
+---- vis / ericw-tools 2.0.0-alpha10 ----
+
+--- Options Summary ---
+    "nopercent" was set to "1" (from command line)
+    "fast" was set to "1" (from command line)
+
+LoadBSPFile: '/tmp/qqbsp-phase7/evidence/native-ordinary/ordinary.bsp'
+BSP is version Quake BSP bsp29
+INFO: using built-in palette.
+************ ERROR ************
+LoadPrtFile: unknown header/empty portal file /tmp/qqbsp-phase7/evidence/native-ordinary/ordinary.prt
+
+
+

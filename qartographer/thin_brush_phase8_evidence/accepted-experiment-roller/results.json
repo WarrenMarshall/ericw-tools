@@ -1,0 +1,23 @@
+{
+  "default": {
+    "compile_exit": 1,
+    "command": [
+      "/tmp/qqbsp-phase8/final-qqbsp",
+      "-bsp2",
+      "-notex",
+      "-nopercent",
+      "/tmp/qqbsp-phase8/evidence/accepted-experiment-roller/default.map"
+    ]
+  },
+  "chopfragment": {
+    "compile_exit": 1,
+    "command": [
+      "/tmp/qqbsp-phase8/final-qqbsp",
+      "-chopfragment",
+      "-bsp2",
+      "-notex",
+      "-nopercent",
+      "/tmp/qqbsp-phase8/evidence/accepted-experiment-roller/chopfragment.map"
+    ]
+  }
+}

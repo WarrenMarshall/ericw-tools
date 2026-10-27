@@ -1,0 +1,87 @@
+---- qqbsp / ericw-tools  ----
+
+--- Options Summary ---
+    "threads" was set to "1" (from command line)
+    "nopercent" was set to "1" (from command line)
+    "bsp2" was set to "1" (from command line)
+    "notex" was set to "1" (from command line)
+
+Input file: /tmp/qqbsp-phase2/traces/axis-0-default/input.map
+Output file: /tmp/qqbsp-phase2/traces/axis-0-default/input.bsp
+
+INFO: using built-in palette.
+WARNING: No wad or _wad key exists in the worldmodel
+     1 entities
+     2 unique textures
+     4 texinfos
+    12 unique planes
+
+INFO: world extents calculated to 328 units
+    1 brushes
+    6 sides
+
+            0 texture frames added
+WARNING: unable to find texture skip
+WARNING: unable to find texture NO_TEXTURE
+Processing hull 0...
+    1 SOLID brushes
+    1 brushes total
+    6 visible sides
+INFO: calculating BSP for 1 brushes with 6 sides
+    1 brushes
+    6 visible faces
+    4 nodes
+    4 expensive split nodes
+    5 leaves
+    1 SOLID leafs
+    4 EMPTY leafs
+    5 leafs total
+    5 max tree height
+    3 avg tree height
+    4 tiny portals
+    22 tree portals
+WARNING: No entities in empty space -- no filling performed (hull 0)
+    4 tiny portals
+    22 tree portals
+    4 sides visible
+    2 makefaces
+    2 tiny portals
+    4 player-occupiable leaves
+    4 clusters of leaves
+    4 vis portals
+    1 SOLID leafs
+    4 EMPTY leafs
+    5 leafs total
+    5 max tree height
+    3 avg tree height
+    2 faces optimized through MWT
+    4 triangles computed from MWT
+    4 edges
+    2 faces
+Processing hull 1...
+WARNING: No entities in empty space -- no filling performed (hull 1)
+Processing hull 2...
+WARNING: No entities in empty space -- no filling performed (hull 2)
+Writing /tmp/qqbsp-phase2/traces/axis-0-default/input.bsp as Quake BSP2 bsp2
+Wrote /tmp/qqbsp-phase2/traces/axis-0-default/input.bsp
+
+count   lump name    byte size 
+      1 models               64
+     15 planes              300
+      4 vertexes             48
+      4 nodes               176
+      1 texinfos             40
+      2 faces                56
+     12 clipnodes           144
+      5 leafs               220
+      2 marksurfaces          8
+      5 edges                40
+      8 surfedges            32
+      2 textures             12
+        lightdata             0
+        visdata               0
+        entdata              30
+
+0.002s seconds elapsed
+
+

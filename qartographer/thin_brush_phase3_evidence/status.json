@@ -1,0 +1,24 @@
+{
+  "head": "4b505ae25e508a8910b031e94d6f1ea60ac06a95",
+  "initial_and_prepublication_status": "?? qartographer/THIN_BRUSH.md\n?? qartographer/THIN_BRUSH_PHASE2.md\n?? qartographer/fixtures/thin-direct/\n?? qartographer/thin_brush_evidence/\n?? qartographer/thin_brush_phase2_evidence/\n?? qartographer/thin_brush_probe.py\n",
+  "tracked_diff": "",
+  "identities": {
+    "/home/warrenmarshall/dev/ericw-tools/qbsp/brush.cc": "e1b6fe03e95687af61377a4fc32be4663935d9241ac10a81d2abbdb8ffeeb6fe",
+    "/home/warrenmarshall/dev/ericw-tools/qbsp/brushbsp.cc": "6baec9ac3fb33508c5c089a9934699e5837223641805c1367905949a192e571a",
+    "/home/warrenmarshall/dev/ericw-tools/qartographer/P2-unapplied.patch": "5c8e66e1c6bef8b8777750edb91a5bbea7b0ca47b1106f614489a6813964c73b",
+    "/home/warrenmarshall/dev/ericw-tools/qartographer/fixtures/full-on.map": "16250e50546f9d1c4654d75e0a6683f70f7eff332ec730793c5f836d39716318",
+    "/home/warrenmarshall/dev/ericw-tools/qartographer/fixtures/full-off.map": "d5f2ab2a0c5a22d2f0ecaecf77a1bbd72a3c2ce2e3c444fe0b4c517092e5986c",
+    "/mnt/fb91e326-b6dc-4352-b43c-7517fcce8b77/Dropbox/Quake/Utils/linux/qqbsp": "49d766579a03701d6a5bb3560112bc756afdb8cf4488242e0b8db72668d8c8c0",
+    "/tmp/qqbsp-phase3/p1-trace-qqbsp": "231b36f20aa8b215d66ea26ceb0f6d633f91754e807bf554b8f1328b1bd5f645",
+    "/tmp/qqbsp-phase3/uniform-target-qqbsp": "3f49476c0a7435b533cda5cb285c21aaa4ed34337843ba25827256a9b9a928be",
+    "/tmp/qqbsp-phase3/uniform-final-trace-qqbsp": "77fae5bc98c490b89aab5221fd0e905f5c2d78e3609765dec51df4563a08492c",
+    "/tmp/qqbsp-phase3/uniform-trace-qqbsp": "cc365c89ad968e0d8f8e53037fae4ec2da466e276d3badc63be3cad55359f58d",
+    "/tmp/qqbsp-phase3/p1-target-qqbsp": "7bd8dfe99993c40abf05379db9f0416da0821e48cfbf01088f86ba2f54d81716",
+    "/tmp/qqbsp-phase3/p1-final-trace-qqbsp": "3b1bebba1faf65e63fd87d4f062eec8334b18f914761f19af043705e0ac1c790"
+  },
+  "production_changes": false,
+  "deployment": false,
+  "commit": false,
+  "push": false,
+  "p2_applied": false
+}

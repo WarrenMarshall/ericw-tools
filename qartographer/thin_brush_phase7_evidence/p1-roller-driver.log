@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/tmp/qqbsp-phase7/source/qartographer/direct_probe.py", line 61, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/tmp/qqbsp-phase7/source/qartographer/direct_probe.py", line 35, in main
+    (out/(label+'.log')).write_text(run.stdout+run.stderr);assert run.returncode==0
+                                                                  ^^^^^^^^^^^^^^^^^
+AssertionError

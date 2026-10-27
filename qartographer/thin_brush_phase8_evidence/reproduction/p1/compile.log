@@ -1,0 +1,112 @@
+Qartographer qqbsp, upstream=ccaeb8457a1267860ebe99ed1df7394ebdd6b435, downstream=4b505ae25e508a8910b031e94d6f1ea60ac06a95-phase7-experimental, patches=P1, experiment=phase7-unaccepted
+---- phase7-unaccepted-qqbsp / ericw-tools  ----
+running with 1 thread(s)
+low priority not compiled into this version
+logging to /tmp/qqbsp-phase8/evidence/reproduction/p1/input.log (truncate)
+
+--- Options Summary ---
+    "threads" was set to "1" (from command line)
+    "nopercent" was set to "1" (from command line)
+    "chopfragment" was set to "1" (from command line)
+    "notex" was set to "1" (from command line)
+
+Input file: /tmp/qqbsp-phase8/evidence/reproduction/p1/input.map
+Output file: /tmp/qqbsp-phase8/evidence/reproduction/p1/input.bsp
+
+INFO: using built-in palette.
+---- LoadMapFile ----
+[33mWARNING: No wad or _wad key exists in the worldmodel
+[0m[36m      2 entities
+[0m[36m      3 unique textures
+[0m[36m     17 texinfos
+[0m[36m    120 unique planes
+[0m[36m
+[0m---- ProcessMapBrushes ----
+INFO: world extents calculated to 4072 units
+[36m     4 brushes
+[0m[36m    60 sides
+[0m[36m    36 side bevels
+[0m[36m
+[0m[36m            0 texture frames added
+[0m[33mWARNING: unable to find texture skip
+[0m[33mWARNING: unable to find texture CLIP
+[0m[33mWARNING: unable to find texture TF_Panels02
+[0mProcessing hull 0...
+---- Brush_LoadEntity ----
+---- CountBrushes ----
+[36m    2 SOLID | DETAIL brushes
+[0m[36m    2 brushes total
+[0m[36m    12 visible sides
+[0m[33mWARNING: 7 faces were crunched away by being too small. Use -verbose to see which faces were affected.
+[0m[36mINFO: calculating BSP for 2 brushes with 12 sides
+[0m---- BrushBSP ----
+[36m     2 brushes
+[0m[36m    12 visible faces
+[0m[36m    12 nodes
+[0m[36m    12 expensive split nodes
+[0m[36m    13 leaves
+[0m---- CountLeafs ----
+[36m     2 SOLID | DETAIL leafs
+[0m[36m    11 EMPTY leafs
+[0m[36m    13 leafs total
+[0m[36m    8 max tree height
+[0m[36m    5 avg tree height
+[0m---- MakeTreePortals ----
+[36m    39 tiny portals
+[0m---- CalcTreeBounds ----
+[36m    70 tree portals
+[0m---- FillOutside ----
+[33mWARNING: No entities in empty space -- no filling performed (hull 0)
+[0m---- MakeTreePortals ----
+[36m    39 tiny portals
+[0m---- CalcTreeBounds ----
+[36m    70 tree portals
+[0m---- MarkVisibleSides ----
+[36m    24 sides visible
+[0m---- MakeFaces ----
+[36m    12 makefaces
+[0m---- PruneNodes ----
+---- WritePortalFile ----
+[36m    11 player-occupiable leaves
+[0m[36m     1 clusters of leaves
+[0m---- CountLeafs ----
+[36m     2 SOLID | DETAIL leafs
+[0m[36m    11 EMPTY leafs
+[0m[36m    13 leafs total
+[0m[36m    8 max tree height
+[0m[36m    5 avg tree height
+[0m---- TJunc ----
+[36m    12 faces optimized through MWT
+[0m[36m    24 triangles computed from MWT
+[0m---- EmitFaces ----
+[36m    24 edges
+[0m[36m    12 faces
+[0mProcessing hull 1...
+PHASE7_REJECT partition=278 plane={normal: 0.9995634881933837 -0.029543748419508877 -0, dist: -1806.2575391460393} reason=UNREPRESENTABLE_BOUNDARY: support-certified positive children, approximate cap unavailable; semantic simplification not certified
+PHASE7_SUPPORT id=205 plane={normal: -1 0 0, dist: 1936.03125} onnode=false bevel=false winding={}
+PHASE7_SUPPORT id=206 plane={normal: 1 0 0, dist: -1776.40625} onnode=false bevel=false winding={}
+PHASE7_SUPPORT id=209 plane={normal: 0 -1 0, dist: 290.09375} onnode=false bevel=false winding={}
+PHASE7_SUPPORT id=210 plane={normal: 0 1 0, dist: -47.0625} onnode=false bevel=false winding={}
+PHASE7_SUPPORT id=213 plane={normal: 0 0 -1, dist: 151.5} onnode=false bevel=false winding={}
+PHASE7_SUPPORT id=214 plane={normal: 0 0 1, dist: 63.34375} onnode=false bevel=false winding={}
+PHASE7_SUPPORT id=217 plane={normal: 0 -0.1699123666066197 -0.9854591760565922, dist: 166.43697515401647} onnode=false bevel=false winding={}
+PHASE7_SUPPORT id=218 plane={normal: 0 0.9854544762611134 -0.1699396222690126, dist: -42.06573337396245} onnode=false bevel=false winding={}
+PHASE7_SUPPORT id=220 plane={normal: 0.999986463778244 0 -0.005203101025605333, dist: -1776.2501754825464} onnode=false bevel=false winding={}
+PHASE7_SUPPORT id=222 plane={normal: 0.9995675165479618 -0.029406853319090008 -0.00012976906279002807, dist: -1773.3078735339366} onnode=false bevel=false winding={}
+PHASE7_SUPPORT id=224 plane={normal: 0.999546426698612 -0.030115459054047135 0, dist: -1773.0801424436531} onnode=true bevel=false winding={}
+PHASE7_SUPPORT id=226 plane={normal: 0.98580124166541 -0 0.16791638374779233, dist: -1746.0305529259344} onnode=false bevel=false winding={}
+PHASE7_SUPPORT id=228 plane={normal: 0.9995680398255388 -0.029389347718689448 0, dist: -1773.3134811080947} onnode=false bevel=false winding={}
+PHASE7_SUPPORT id=230 plane={normal: 0 0.17009769219769055 0.9854272043682475, dist: 22.235074694996783} onnode=false bevel=false winding={}
+PHASE7_SUPPORT id=233 plane={normal: 0 -0.9854206277153194 0.1701357883372746, dist: 275.17771101635583} onnode=true bevel=false winding={(-1814.65625 -283.16100653457715 -22.658288565405975), (-1814.65625 -282.97181539509563 -21.562500000001673), (-1814.467000296297 -283.161327620062 -22.66014828147832)}
+PHASE7_SUPPORT id=234 plane={normal: 0.999567414326611 -0.029410361607495075 -0.00012184633649610198, dist: -1773.3076153931497} onnode=false bevel=false winding={}
+PHASE7_SUPPORT id=237 plane={normal: -1 0 0, dist: 1814.65625} onnode=true bevel=false winding={(-1814.65625 -282.97181539509563 -21.56250000000167), (-1814.65625 -283.16100653457715 -22.658288565405975), (-1814.65625 -273.72610294117646 -24.28125), (-1814.65625 -257.4709929463213 -24.28125), (-1814.65625 -257.4687500000006 -21.56250000000069)}
+PHASE7_SUPPORT id=242 plane={normal: 0 1 0, dist: -203.625} onnode=false bevel=false winding={}
+PHASE7_SUPPORT id=245 plane={normal: 0 0 -1, dist: 24.28125} onnode=true bevel=false winding={(-1814.1875000000002 -241.68750000000452 -24.28125), (-1814.65625 -257.4709929463213 -24.28125), (-1814.65625 -273.72610294117646 -24.28125), (-1814.1875 -273.75367647058823 -24.28125)}
+PHASE7_SUPPORT id=249 plane={normal: -0 -0.17010333730952978 -0.9854262299310691, dist: 71.01942643379891} onnode=false bevel=false winding={}
+PHASE7_SUPPORT id=253 plane={normal: -0.9995592833630517 0.02968566056131813 -2.449042505883687e-05, dist: 1806.2138989574262} onnode=true bevel=false winding={(-1814.65625 -257.46874999998994 -21.56250000000069), (-1814.65625 -257.47099294631045 -24.28125), (-1814.1875000000002 -241.68749999999227 -24.28125)}
+PHASE7_SUPPORT id=265 plane={normal: -0.9999870143059859 0 0.005096196562148286, dist: 1814.8085042105909} onnode=false bevel=false winding={}
+PHASE7_SUPPORT id=267 plane={normal: -0.009971674905035382 -0.1695184733856015 -0.9854765613045312, dist: 88.4253960399445} onnode=false bevel=false winding={(-1814.65625 -283.1610065345771 -22.658288565406018), (-1814.467000296297 -283.16132762006197 -22.660148281478364), (-1814.1875 -273.7536764705886 -24.28125), (-1814.65625 -273.7261029411768 -24.28125)}
+PHASE7_SUPPORT id=270 plane={normal: 0.9854601157443479 -0 0.1699069165076462, dist: -1791.9349760484006} onnode=false bevel=false winding={(-1814.1874999999998 -241.6874999999979 -24.28125), (-1814.1874999999998 -273.7536764705882 -24.28125), (-1814.4670002962966 -283.16132762006197 -22.660148281478318), (-1814.65625 -282.9718153950952 -21.562499999999176), (-1814.65625 -257.4687500000011 -21.56249999999922)}
+[38;2;255;000;000m************ ERROR ************
+PHASE7 CONSTRUCTION_UNSUPPORTED source=/tmp/qqbsp-phase8/evidence/reproduction/p1/input.map[line 4] partition=278: UNREPRESENTABLE_BOUNDARY: support-certified positive children, approximate cap unavailable; semantic simplification not certified
+[0m

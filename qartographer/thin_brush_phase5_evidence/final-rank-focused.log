@@ -1,0 +1,95 @@
+Note: Google Test filter = phase5.*:qbsp.duplicatePlanes:qbsp.emptyBrush:testmapsQ1.simpleSealed
+[==========] Running 5 tests from 3 test suites.
+[----------] Global test environment set-up.
+[----------] 2 tests from qbsp
+[ RUN      ] qbsp.duplicatePlanes
+duplicatePlanes[line 11]: Brush with duplicate plane
+WARNING: No wad or _wad key exists in the worldmodel
+INFO: world extents calculated to 2568 units
+[       OK ] qbsp.duplicatePlanes (0 ms)
+[ RUN      ] qbsp.emptyBrush
+WARNING: No wad or _wad key exists in the worldmodel
+INFO: world extents calculated to 616 units
+[       OK ] qbsp.emptyBrush (0 ms)
+[----------] 2 tests from qbsp (0 ms total)
+
+[----------] 1 test from testmapsQ1
+[ RUN      ] testmapsQ1.simpleSealed
+----  / ericw-tools  ----
+low priority not compiled into this version
+
+--- Options Summary ---
+    "nopercent" was set to "1" (from command line)
+    "nostat" was set to "1" (from command line)
+    "noprogress" was set to "1" (from command line)
+    "path" was set to ""/tmp/qqbsp-phase5/build/qartographer/upstream-testmaps/q2_wal_metadata"" (from command line)
+
+Input file: /tmp/qqbsp-phase5/build/qartographer/upstream-testmaps/qbsp_simple_sealed.map
+Output file: /tmp/qqbsp-phase5/build/qartographer/upstream-testmaps/qbsp_simple_sealed.bsp
+
+INFO: using built-in palette.
+WARNING: texture name openquartzmirror (/tmp/qqbsp-phase5/build/qartographer/upstream-testmaps/deprecated/free_wad.wad) is not null-terminated
+INFO: world extents calculated to 616 units
+Processing hull 0...
+Processing hull 1...
+Processing hull 2...
+Writing /tmp/qqbsp-phase5/build/qartographer/upstream-testmaps/qbsp_simple_sealed.bsp as Quake BSP bsp29
+Wrote /tmp/qqbsp-phase5/build/qartographer/upstream-testmaps/qbsp_simple_sealed.bsp
+
+count   lump name    byte size 
+      1 models               64
+     17 planes              340
+      8 vertexes             96
+      6 nodes               144
+      6 texinfos            240
+      6 faces               120
+     12 clipnodes            96
+      2 leafs                56
+      6 marksurfaces         12
+     13 edges                52
+     24 surfedges            96
+      2 textures          10972
+        lightdata             0
+        visdata               0
+        entdata             227
+LoadBSPFile: '/tmp/qqbsp-phase5/build/qartographer/upstream-testmaps/qbsp_simple_sealed.bsp'
+BSP is version Quake BSP bsp29
+INFO: using built-in palette.
+wrote /tmp/qqbsp-phase5/build/qartographer/upstream-testmaps/qbsp_simple_sealed.bsp.geometry.obj
+wrote /tmp/qqbsp-phase5/build/qartographer/upstream-testmaps/qbsp_simple_sealed.bsp.json
+----  / ericw-tools  ----
+low priority not compiled into this version
+
+--- Options Summary ---
+    "nopercent" was set to "1" (from command line)
+    "nostat" was set to "1" (from command line)
+    "noprogress" was set to "1" (from command line)
+    "path" was set to ""/tmp/qqbsp-phase5/build/qartographer/upstream-testmaps/q2_wal_metadata"" (from command line)
+
+Input file: /tmp/qqbsp-phase5/build/qartographer/upstream-testmaps/qbsp_simple_sealed_rotated.map
+Output file: /tmp/qqbsp-phase5/build/qartographer/upstream-testmaps/qbsp_simple_sealed_rotated.bsp
+
+INFO: using built-in palette.
+WARNING: texture name openquartzmirror (/tmp/qqbsp-phase5/build/qartographer/upstream-testmaps/deprecated/free_wad.wad) is not null-terminated
+INFO: world extents calculated to 648 units
+Processing hull 0...
+unknown file: Failure
+C++ exception with description "PHASE5 NUMERICAL_UNCERTAINTY: portal area/rank unresolved" thrown in the test body.
+
+[  FAILED  ] testmapsQ1.simpleSealed (19 ms)
+[----------] 1 test from testmapsQ1 (19 ms total)
+
+[----------] 2 tests from phase5
+[ RUN      ] phase5.Hull2ResolvedFrontFragment
+[       OK ] phase5.Hull2ResolvedFrontFragment (0 ms)
+[ RUN      ] phase5.NarrowQuadrilateralRankAndRealization
+[       OK ] phase5.NarrowQuadrilateralRankAndRealization (0 ms)
+[----------] 2 tests from phase5 (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 5 tests from 3 test suites ran. (20 ms total)
+[  PASSED  ] 4 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] testmapsQ1.simpleSealed
+
+ 1 FAILED TEST

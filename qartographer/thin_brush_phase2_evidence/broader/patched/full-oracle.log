@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "/home/warrenmarshall/dev/ericw-tools/qartographer/full_oracle.py", line 148, in <module>
+    assert not failures, failures[:20]
+           ^^^^^^^^^^^^
+AssertionError: [('hull0_changed', (-1388, -233, 8.778914155553586)), ('hull0_changed', (-1376, -257, -12.914510661888684)), ('hull0_changed', (-1364, -269, 11.605075569064333))]

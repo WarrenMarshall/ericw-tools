@@ -1,0 +1,181 @@
+[
+  {
+    "name": "p1-reduced",
+    "command": [
+      "/usr/bin/time",
+      "-v",
+      "-o",
+      "/tmp/qqbsp-phase7/evidence/campaign/p1-reduced/time.txt",
+      "/tmp/qqbsp-phase7/build/qbsp/qqbsp",
+      "-notex",
+      "-nopercent",
+      "-chopfragment",
+      "-threads",
+      "1",
+      "/tmp/qqbsp-phase7/evidence/campaign/p1-reduced/input.map"
+    ],
+    "exit": 1,
+    "seconds": 0.8651869400637224,
+    "input_sha256": "5f4c588e6f4482f933138def59a2cd64660491b146cbcf0683f32266bcd24d93",
+    "source_sha256": "5f4c588e6f4482f933138def59a2cd64660491b146cbcf0683f32266bcd24d93",
+    "binary_sha256": "bf26e8178aaf7c0618f6b5f5e247698849d438e7bf4c8efad19c515b431298ca",
+    "bsp_sha256": null
+  },
+  {
+    "name": "ordinary",
+    "command": [
+      "/usr/bin/time",
+      "-v",
+      "-o",
+      "/tmp/qqbsp-phase7/evidence/campaign/ordinary/time.txt",
+      "/tmp/qqbsp-phase7/build/qbsp/qqbsp",
+      "-notex",
+      "-nopercent",
+      "-chopfragment",
+      "-threads",
+      "1",
+      "/tmp/qqbsp-phase7/evidence/campaign/ordinary/input.map"
+    ],
+    "exit": 0,
+    "seconds": 0.5646856289822608,
+    "input_sha256": "6f5b00bd3ce1808ffc9f921d31cb969f74f03b6bbd44691f1d6c3a82d3695b83",
+    "source_sha256": "6f5b00bd3ce1808ffc9f921d31cb969f74f03b6bbd44691f1d6c3a82d3695b83",
+    "binary_sha256": "bf26e8178aaf7c0618f6b5f5e247698849d438e7bf4c8efad19c515b431298ca",
+    "bsp_sha256": "90879d6a8a931b2156b9deb17985565ce59834f9acea30f9e8b45c80320bb7ee"
+  },
+  {
+    "name": "ordinary-rotated-hull0",
+    "command": [
+      "/usr/bin/time",
+      "-v",
+      "-o",
+      "/tmp/qqbsp-phase7/evidence/campaign/ordinary-rotated-hull0/time.txt",
+      "/tmp/qqbsp-phase7/build/qbsp/qqbsp",
+      "-notex",
+      "-nopercent",
+      "-chopfragment",
+      "-threads",
+      "1",
+      "-noclip",
+      "/tmp/qqbsp-phase7/evidence/campaign/ordinary-rotated-hull0/input.map"
+    ],
+    "exit": 0,
+    "seconds": 0.3142159669660032,
+    "input_sha256": "345366ef6646c035f9581965548a404f2a15533be95f9af7ff3a4a59f5adee32",
+    "source_sha256": "345366ef6646c035f9581965548a404f2a15533be95f9af7ff3a4a59f5adee32",
+    "binary_sha256": "bf26e8178aaf7c0618f6b5f5e247698849d438e7bf4c8efad19c515b431298ca",
+    "bsp_sha256": "e8e2575d14812572092a4e264fc52acdb140e8cc416428930536a2bd6d889a93"
+  },
+  {
+    "name": "ordinary-L-room",
+    "command": [
+      "/usr/bin/time",
+      "-v",
+      "-o",
+      "/tmp/qqbsp-phase7/evidence/campaign/ordinary-L-room/time.txt",
+      "/tmp/qqbsp-phase7/build/qbsp/qqbsp",
+      "-notex",
+      "-nopercent",
+      "-chopfragment",
+      "-threads",
+      "1",
+      "/tmp/qqbsp-phase7/evidence/campaign/ordinary-L-room/input.map"
+    ],
+    "exit": 0,
+    "seconds": 2.517875858931802,
+    "input_sha256": "853473f20086124c62dc7c99c4aa49f974ab6a690d756d79d50565aacb4a3564",
+    "source_sha256": "853473f20086124c62dc7c99c4aa49f974ab6a690d756d79d50565aacb4a3564",
+    "binary_sha256": "bf26e8178aaf7c0618f6b5f5e247698849d438e7bf4c8efad19c515b431298ca",
+    "bsp_sha256": "e71bfe52224b7a88efeb34cffed0c7315a104162426a6d1d865d49f29907d0c4"
+  },
+  {
+    "name": "halloween-off-auto",
+    "command": [
+      "/usr/bin/time",
+      "-v",
+      "-o",
+      "/tmp/qqbsp-phase7/evidence/campaign/halloween-off-auto/time.txt",
+      "/tmp/qqbsp-phase7/build/qbsp/qqbsp",
+      "-notex",
+      "-nopercent",
+      "-chopfragment",
+      "-threads",
+      "1",
+      "/tmp/qqbsp-phase7/evidence/campaign/halloween-off-auto/input.map"
+    ],
+    "exit": 1,
+    "seconds": 3.4695745850913227,
+    "input_sha256": "d5f2ab2a0c5a22d2f0ecaecf77a1bbd72a3c2ce2e3c444fe0b4c517092e5986c",
+    "source_sha256": "d5f2ab2a0c5a22d2f0ecaecf77a1bbd72a3c2ce2e3c444fe0b4c517092e5986c",
+    "binary_sha256": "bf26e8178aaf7c0618f6b5f5e247698849d438e7bf4c8efad19c515b431298ca",
+    "bsp_sha256": null
+  },
+  {
+    "name": "halloween-on-auto",
+    "command": [
+      "/usr/bin/time",
+      "-v",
+      "-o",
+      "/tmp/qqbsp-phase7/evidence/campaign/halloween-on-auto/time.txt",
+      "/tmp/qqbsp-phase7/build/qbsp/qqbsp",
+      "-notex",
+      "-nopercent",
+      "-chopfragment",
+      "-threads",
+      "1",
+      "/tmp/qqbsp-phase7/evidence/campaign/halloween-on-auto/input.map"
+    ],
+    "exit": 1,
+    "seconds": 3.3194977269740775,
+    "input_sha256": "16250e50546f9d1c4654d75e0a6683f70f7eff332ec730793c5f836d39716318",
+    "source_sha256": "16250e50546f9d1c4654d75e0a6683f70f7eff332ec730793c5f836d39716318",
+    "binary_sha256": "bf26e8178aaf7c0618f6b5f5e247698849d438e7bf4c8efad19c515b431298ca",
+    "bsp_sha256": null
+  },
+  {
+    "name": "halloween-off-precise",
+    "command": [
+      "/usr/bin/time",
+      "-v",
+      "-o",
+      "/tmp/qqbsp-phase7/evidence/campaign/halloween-off-precise/time.txt",
+      "/tmp/qqbsp-phase7/build/qbsp/qqbsp",
+      "-notex",
+      "-nopercent",
+      "-chopfragment",
+      "-threads",
+      "1",
+      "-forcegoodtree",
+      "/tmp/qqbsp-phase7/evidence/campaign/halloween-off-precise/input.map"
+    ],
+    "exit": "timeout",
+    "seconds": 180.00073789409362,
+    "input_sha256": "d5f2ab2a0c5a22d2f0ecaecf77a1bbd72a3c2ce2e3c444fe0b4c517092e5986c",
+    "source_sha256": "d5f2ab2a0c5a22d2f0ecaecf77a1bbd72a3c2ce2e3c444fe0b4c517092e5986c",
+    "binary_sha256": "70513aac60c7620166812d72c4a2bba8f33563e91d428ce3d6f0bffd795df1dc",
+    "bsp_sha256": null
+  },
+  {
+    "name": "halloween-on-precise",
+    "command": [
+      "/usr/bin/time",
+      "-v",
+      "-o",
+      "/tmp/qqbsp-phase7/evidence/campaign/halloween-on-precise/time.txt",
+      "/tmp/qqbsp-phase7/build/qbsp/qqbsp",
+      "-notex",
+      "-nopercent",
+      "-chopfragment",
+      "-threads",
+      "1",
+      "-forcegoodtree",
+      "/tmp/qqbsp-phase7/evidence/campaign/halloween-on-precise/input.map"
+    ],
+    "exit": "timeout",
+    "seconds": 180.00076575693674,
+    "input_sha256": "16250e50546f9d1c4654d75e0a6683f70f7eff332ec730793c5f836d39716318",
+    "source_sha256": "16250e50546f9d1c4654d75e0a6683f70f7eff332ec730793c5f836d39716318",
+    "binary_sha256": "591828004fd774d3920ab4f58ffcc270334d6c7fcc768089c77a4e409cfd9f04",
+    "bsp_sha256": null
+  }
+]

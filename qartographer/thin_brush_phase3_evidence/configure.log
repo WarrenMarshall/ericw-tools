@@ -1,0 +1,40 @@
+-- The C compiler identification is GNU 13.3.0
+-- The CXX compiler identification is GNU 13.3.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+fatal: No names found, cannot describe anything.
+-- git describe returned ""
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE  
+-- Version: 10.1.0
+-- Build type: RelWithDebInfo
+-- Looking for min
+-- Looking for min - not found
+-- Looking for C++ include memory_resource
+-- Looking for C++ include memory_resource - found
+-- Performing Test CXX_PMR_RUN_SUCCESSFULLY
+-- Performing Test CXX_PMR_RUN_SUCCESSFULLY - Success
+-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+-- Using the multi-header code from /tmp/qqbsp-bootstrap/pinned/deps/json/json/include/
+-- Embree library found: /tmp/qqbsp-bootstrap/pinned/deps/embree/lib/libembree4.so.4
+-- Found embree license: /tmp/qqbsp-bootstrap/pinned/deps/embree/doc/LICENSE.txt
+-- TBB .so symlink: /tmp/qqbsp-bootstrap/pinned/deps/tbb/oneapi-tbb-2021.11.0/lib/intel64/gcc4.8/libtbb.so.12
+-- TBB .so symlink name: libtbb.so.12
+-- TBB .so file: /tmp/qqbsp-bootstrap/pinned/deps/tbb/oneapi-tbb-2021.11.0/lib/intel64/gcc4.8/libtbb.so.12.11
+-- TBBMALLOC .so symlink: /tmp/qqbsp-bootstrap/pinned/deps/tbb/oneapi-tbb-2021.11.0/lib/intel64/gcc4.8/libtbbmalloc.so.2
+-- TBBMALLOC .so symlink name: libtbbmalloc.so.2
+-- TBBMALLOC .so file: /tmp/qqbsp-bootstrap/pinned/deps/tbb/oneapi-tbb-2021.11.0/lib/intel64/gcc4.8/libtbbmalloc.so.2.11
+-- Could NOT find Lua (missing: LUA_LIBRARIES LUA_INCLUDE_DIR) 
+-- Failed to find sphinx-build executable (missing: SPHINX_EXECUTABLE) 
+-- Configuring done (1.0s)
+-- Generating done (0.0s)
+-- Build files have been written to: /tmp/qqbsp-phase3/build

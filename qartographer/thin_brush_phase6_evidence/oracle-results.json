@@ -1,0 +1,1999 @@
+{
+  "rows": [
+    {
+      "name": "A-hull2-front",
+      "oracle": {
+        "dimension": 3,
+        "front_dimension": 3,
+        "back_dimension": 3,
+        "section_dimension": 2,
+        "strict_front": 1,
+        "strict_back": 1,
+        "point_consistent": true,
+        "point_query_sign": 1
+      },
+      "component": {
+        "dimension": 3,
+        "front_dimension": 3,
+        "back_dimension": 3,
+        "section_dimension": 2,
+        "strict_front": 1,
+        "strict_back": 1,
+        "point_consistent": true,
+        "point_query_sign": 1
+      },
+      "seconds": 0.0019075509626418352,
+      "errors": {},
+      "established_errors": {}
+    },
+    {
+      "name": "A-actual-post-csg-route",
+      "oracle": {
+        "dimension": 3,
+        "front_dimension": 3,
+        "back_dimension": 3,
+        "section_dimension": 2,
+        "strict_front": 1,
+        "strict_back": 1,
+        "point_consistent": true,
+        "point_query_sign": 1
+      },
+      "component": {
+        "dimension": 3,
+        "front_dimension": 3,
+        "back_dimension": 3,
+        "section_dimension": 2,
+        "strict_front": 1,
+        "strict_back": 1,
+        "point_consistent": true,
+        "point_query_sign": 1
+      },
+      "seconds": 0.006584650953300297,
+      "errors": {},
+      "established_errors": {}
+    },
+    {
+      "name": "B-narrow-quadrilateral",
+      "oracle": {
+        "dimension": 3,
+        "front_dimension": 3,
+        "back_dimension": 3,
+        "section_dimension": 2,
+        "strict_front": 1,
+        "strict_back": 1
+      },
+      "component": {
+        "dimension": 3,
+        "front_dimension": 3,
+        "back_dimension": 3,
+        "section_dimension": 2,
+        "strict_front": 1,
+        "strict_back": 1
+      },
+      "seconds": 0.8926288489019498,
+      "errors": {},
+      "established_errors": {}
+    },
+    {
+      "name": "C-sky-roof-gap",
+      "oracle": {
+        "dimension": 3,
+        "front_dimension": 3,
+        "back_dimension": 3,
+        "section_dimension": 2,
+        "strict_front": 1,
+        "strict_back": 1,
+        "point_consistent": true,
+        "point_query_sign": 0
+      },
+      "component": {
+        "dimension": 3,
+        "front_dimension": 3,
+        "back_dimension": 3,
+        "section_dimension": 2,
+        "strict_front": 1,
+        "strict_back": 1,
+        "point_consistent": true,
+        "point_query_sign": 0
+      },
+      "seconds": 0.001833299989812076,
+      "errors": {},
+      "established_errors": {}
+    },
+    {
+      "name": "D-halloween-rounded-extent",
+      "oracle": {
+        "dimension": 3,
+        "front_dimension": 3,
+        "back_dimension": 3,
+        "section_dimension": 2,
+        "strict_front": 1,
+        "strict_back": 1,
+        "point_consistent": false,
+        "point_query_sign": 1
+      },
+      "component": {
+        "dimension": 3,
+        "front_dimension": 3,
+        "back_dimension": 3,
+        "section_dimension": 2,
+        "strict_front": 1,
+        "strict_back": 1,
+        "point_consistent": false,
+        "point_query_sign": 1
+      },
+      "seconds": 0.0022062640637159348,
+      "errors": {},
+      "established_errors": {}
+    },
+    {
+      "name": "E-p1-rounded-extent",
+      "oracle": {
+        "dimension": 3,
+        "front_dimension": -1,
+        "back_dimension": 3,
+        "section_dimension": -1,
+        "strict_front": 0,
+        "strict_back": 1,
+        "point_consistent": false,
+        "point_query_sign": 1
+      },
+      "component": {
+        "dimension": 3,
+        "front_dimension": -1,
+        "back_dimension": 3,
+        "section_dimension": -1,
+        "strict_front": 0,
+        "strict_back": 1,
+        "point_consistent": false,
+        "point_query_sign": 1
+      },
+      "seconds": 0.02216088806744665,
+      "errors": {},
+      "established_errors": {}
+    },
+    {
+      "name": "F-rotated-portal",
+      "oracle": {
+        "dimension": 1,
+        "front_dimension": 1,
+        "back_dimension": 1,
+        "section_dimension": 1,
+        "strict_front": 0,
+        "strict_back": 0
+      },
+      "component": {
+        "dimension": 1,
+        "front_dimension": 1,
+        "back_dimension": 1,
+        "section_dimension": 1,
+        "strict_front": 0,
+        "strict_back": 0
+      },
+      "seconds": 0.04263011796865612,
+      "errors": {},
+      "established_errors": {}
+    },
+    {
+      "name": "F-base-winding",
+      "oracle": {
+        "dimension": 3,
+        "front_dimension": 3,
+        "back_dimension": 3,
+        "section_dimension": 2,
+        "strict_front": 1,
+        "strict_back": 1
+      },
+      "component": {
+        "dimension": 3,
+        "front_dimension": 3,
+        "back_dimension": 3,
+        "section_dimension": 2,
+        "strict_front": 1,
+        "strict_back": 1
+      },
+      "seconds": 0.003779429942369461,
+      "errors": {},
+      "established_errors": {}
+    },
+    {
+      "name": "F-make-portal",
+      "oracle": {
+        "dimension": 3,
+        "front_dimension": 3,
+        "back_dimension": 3,
+        "section_dimension": 2,
+        "strict_front": 1,
+        "strict_back": 1
+      },
+      "component": {
+        "dimension": 3,
+        "front_dimension": 3,
+        "back_dimension": 3,
+        "section_dimension": 2,
+        "strict_front": 1,
+        "strict_back": 1
+      },
+      "seconds": 3.590015694499016e-06,
+      "errors": {},
+      "established_errors": {}
+    },
+    {
+      "name": "ordinary-box",
+      "oracle": {
+        "dimension": 3,
+        "front_dimension": 3,
+        "back_dimension": 3,
+        "section_dimension": 2,
+        "strict_front": 1,
+        "strict_back": 1,
+        "point_consistent": true,
+        "point_query_sign": 0
+      },
+      "component": {
+        "dimension": 3,
+        "front_dimension": 3,
+        "back_dimension": 3,
+        "section_dimension": 2,
+        "strict_front": 1,
+        "strict_back": 1,
+        "point_consistent": true,
+        "point_query_sign": 0
+      },
+      "seconds": 0.002235034015029669,
+      "errors": {},
+      "established_errors": {}
+    },
+    {
+      "name": "face-contact",
+      "oracle": {
+        "dimension": 2,
+        "front_dimension": -1,
+        "back_dimension": 2,
+        "section_dimension": -1,
+        "strict_front": 0,
+        "strict_back": 1
+      },
+      "component": {
+        "dimension": 2,
+        "front_dimension": -1,
+        "back_dimension": 2,
+        "section_dimension": -1,
+        "strict_front": 0,
+        "strict_back": 1
+      },
+      "seconds": 0.002541986992582679,
+      "errors": {},
+      "established_errors": {}
+    },
+    {
+      "name": "edge-contact",
+      "oracle": {
+        "dimension": 1,
+        "front_dimension": -1,
+        "back_dimension": 1,
+        "section_dimension": -1,
+        "strict_front": 0,
+        "strict_back": 1
+      },
+      "component": {
+        "dimension": 1,
+        "front_dimension": -1,
+        "back_dimension": 1,
+        "section_dimension": -1,
+        "strict_front": 0,
+        "strict_back": 1
+      },
+      "seconds": 0.002616749028675258,
+      "errors": {},
+      "established_errors": {}
+    },
+    {
+      "name": "point-contact",
+      "oracle": {
+        "dimension": 0,
+        "front_dimension": -1,
+        "back_dimension": 0,
+        "section_dimension": -1,
+        "strict_front": 0,
+        "strict_back": 1
+      },
+      "component": {
+        "dimension": 0,
+        "front_dimension": -1,
+        "back_dimension": 0,
+        "section_dimension": -1,
+        "strict_front": 0,
+        "strict_back": 1
+      },
+      "seconds": 0.00274234008975327,
+      "errors": {},
+      "established_errors": {}
+    },
+    {
+      "name": "empty",
+      "oracle": {
+        "dimension": -1,
+        "front_dimension": -1,
+        "back_dimension": -1,
+        "section_dimension": -1,
+        "strict_front": 0,
+        "strict_back": 0
+      },
+      "component": {
+        "dimension": -1,
+        "front_dimension": -1,
+        "back_dimension": -1,
+        "section_dimension": -1,
+        "strict_front": 0,
+        "strict_back": 0
+      },
+      "seconds": 0.00044681504368782043,
+      "errors": {},
+      "established_errors": {}
+    },
+    {
+      "name": "binary-2^-45",
+      "oracle": {
+        "dimension": 3,
+        "front_dimension": 3,
+        "back_dimension": 2,
+        "section_dimension": 2,
+        "strict_front": 1,
+        "strict_back": 0
+      },
+      "component": {
+        "dimension": 3,
+        "front_dimension": 3,
+        "back_dimension": 2,
+        "section_dimension": 2,
+        "strict_front": 1,
+        "strict_back": 0
+      },
+      "seconds": 0.0022538339253515005,
+      "errors": {},
+      "established_errors": {}
+    },
+    {
+      "name": "binary-2^-500",
+      "oracle": {
+        "dimension": 3,
+        "front_dimension": 3,
+        "back_dimension": 2,
+        "section_dimension": 2,
+        "strict_front": 1,
+        "strict_back": 0
+      },
+      "component": {
+        "dimension": 3,
+        "front_dimension": 3,
+        "back_dimension": 2,
+        "section_dimension": 2,
+        "strict_front": 1,
+        "strict_back": 0
+      },
+      "seconds": 0.002663519000634551,
+      "errors": {},
+      "established_errors": {}
+    },
+    {
+      "name": "min-subnormal",
+      "oracle": {
+        "dimension": 3,
+        "front_dimension": 3,
+        "back_dimension": 2,
+        "section_dimension": 2,
+        "strict_front": 1,
+        "strict_back": 0
+      },
+      "component": {
+        "dimension": 3,
+        "front_dimension": 3,
+        "back_dimension": 2,
+        "section_dimension": 2,
+        "strict_front": 1,
+        "strict_back": 0
+      },
+      "seconds": 0.002803139970637858,
+      "errors": {},
+      "established_errors": {}
+    },
+    {
+      "name": "large-coordinate-ulp",
+      "oracle": {
+        "dimension": 3,
+        "front_dimension": 3,
+        "back_dimension": 2,
+        "section_dimension": 2,
+        "strict_front": 1,
+        "strict_back": 0
+      },
+      "component": {
+        "dimension": 3,
+        "front_dimension": 3,
+        "back_dimension": 2,
+        "section_dimension": 2,
+        "strict_front": 1,
+        "strict_back": 0
+      },
+      "seconds": 0.002456016023643315,
+      "errors": {},
+      "established_errors": {}
+    },
+    {
+      "name": "nearly-parallel",
+      "oracle": {
+        "dimension": 3,
+        "front_dimension": 3,
+        "back_dimension": 3,
+        "section_dimension": 2,
+        "strict_front": 1,
+        "strict_back": 1
+      },
+      "component": {
+        "dimension": 3,
+        "front_dimension": 3,
+        "back_dimension": 3,
+        "section_dimension": 2,
+        "strict_front": 1,
+        "strict_back": 1
+      },
+      "seconds": 0.002922412008047104,
+      "errors": {},
+      "established_errors": {}
+    },
+    {
+      "name": "transformed-box",
+      "oracle": {
+        "dimension": 3,
+        "front_dimension": 3,
+        "back_dimension": 3,
+        "section_dimension": 2,
+        "strict_front": 1,
+        "strict_back": 1
+      },
+      "component": {
+        "dimension": 3,
+        "front_dimension": 3,
+        "back_dimension": 3,
+        "section_dimension": 2,
+        "strict_front": 1,
+        "strict_back": 1
+      },
+      "seconds": 0.002175812958739698,
+      "errors": {},
+      "established_errors": {}
+    },
+    {
+      "name": "rotated-translated",
+      "oracle": {
+        "dimension": 3,
+        "front_dimension": 3,
+        "back_dimension": 3,
+        "section_dimension": 2,
+        "strict_front": 1,
+        "strict_back": 1
+      },
+      "component": {
+        "dimension": 3,
+        "front_dimension": 3,
+        "back_dimension": 3,
+        "section_dimension": 2,
+        "strict_front": 1,
+        "strict_back": 1
+      },
+      "seconds": 0.0029718319419771433,
+      "errors": {},
+      "established_errors": {}
+    },
+    {
+      "name": "coincident",
+      "oracle": {
+        "dimension": 3,
+        "front_dimension": 3,
+        "back_dimension": 3,
+        "section_dimension": 2,
+        "strict_front": 1,
+        "strict_back": 1,
+        "relation": "Equivalent"
+      },
+      "component": {
+        "dimension": 3,
+        "front_dimension": 3,
+        "back_dimension": 3,
+        "section_dimension": 2,
+        "strict_front": 1,
+        "strict_back": 1,
+        "relation": "Equivalent"
+      },
+      "seconds": 0.002446545986458659,
+      "errors": {},
+      "established_errors": {}
+    },
+    {
+      "name": "opposing",
+      "oracle": {
+        "dimension": 2,
+        "front_dimension": 2,
+        "back_dimension": 2,
+        "section_dimension": 2,
+        "strict_front": 0,
+        "strict_back": 0,
+        "relation": "Opposing"
+      },
+      "component": {
+        "dimension": 2,
+        "front_dimension": 2,
+        "back_dimension": 2,
+        "section_dimension": 2,
+        "strict_front": 0,
+        "strict_back": 0,
+        "relation": "Opposing"
+      },
+      "seconds": 0.004571878933347762,
+      "errors": {},
+      "established_errors": {}
+    },
+    {
+      "name": "not-approximately-equivalent",
+      "oracle": {
+        "dimension": 3,
+        "front_dimension": 3,
+        "back_dimension": 3,
+        "section_dimension": 2,
+        "strict_front": 1,
+        "strict_back": 1,
+        "relation": "Distinct"
+      },
+      "component": {
+        "dimension": 3,
+        "front_dimension": 3,
+        "back_dimension": 3,
+        "section_dimension": 2,
+        "strict_front": 1,
+        "strict_back": 1,
+        "relation": "Distinct"
+      },
+      "seconds": 0.0016671780031174421,
+      "errors": {},
+      "established_errors": {}
+    },
+    {
+      "name": "zero-redundant",
+      "oracle": {
+        "dimension": 3,
+        "front_dimension": 3,
+        "back_dimension": 3,
+        "section_dimension": 2,
+        "strict_front": 1,
+        "strict_back": 1
+      },
+      "component": {
+        "dimension": 3,
+        "front_dimension": 3,
+        "back_dimension": 3,
+        "section_dimension": 2,
+        "strict_front": 1,
+        "strict_back": 1
+      },
+      "seconds": 0.0017576890531927347,
+      "errors": {},
+      "established_errors": {}
+    },
+    {
+      "name": "zero-inconsistent",
+      "oracle": {
+        "dimension": -1,
+        "front_dimension": -1,
+        "back_dimension": -1,
+        "section_dimension": -1,
+        "strict_front": 0,
+        "strict_back": 0
+      },
+      "component": {
+        "dimension": -1,
+        "front_dimension": -1,
+        "back_dimension": -1,
+        "section_dimension": -1,
+        "strict_front": 0,
+        "strict_back": 0
+      },
+      "seconds": 0.00015905196778476238,
+      "errors": {},
+      "established_errors": {}
+    },
+    {
+      "name": "unbounded-explicit-limit",
+      "oracle": {
+        "dimension": 3
+      },
+      "component": {
+        "dimension": -2
+      },
+      "seconds": 3.570003900676966e-05,
+      "errors": {},
+      "established_errors": {}
+    },
+    {
+      "name": "overflow-filter",
+      "oracle": {
+        "dimension": 3,
+        "front_dimension": 3,
+        "back_dimension": 3,
+        "section_dimension": 2,
+        "strict_front": 1,
+        "strict_back": 1
+      },
+      "component": {
+        "dimension": 3,
+        "front_dimension": 3,
+        "back_dimension": 3,
+        "section_dimension": 2,
+        "strict_front": 1,
+        "strict_back": 1
+      },
+      "seconds": 0.0018042189767584205,
+      "errors": {},
+      "established_errors": {}
+    },
+    {
+      "name": "A-hull2-front-reverse",
+      "oracle": {
+        "dimension": 3,
+        "front_dimension": 3,
+        "back_dimension": 3,
+        "section_dimension": 2,
+        "strict_front": 1,
+        "strict_back": 1,
+        "point_consistent": true,
+        "point_query_sign": 1
+      },
+      "component": {
+        "dimension": 3,
+        "front_dimension": 3,
+        "back_dimension": 3,
+        "section_dimension": 2,
+        "strict_front": 1,
+        "strict_back": 1,
+        "point_consistent": true,
+        "point_query_sign": 1
+      },
+      "seconds": 2.8999056667089462e-06,
+      "errors": {},
+      "established_errors": {}
+    },
+    {
+      "name": "A-hull2-front-shuffle-duplicates",
+      "oracle": {
+        "dimension": 3,
+        "front_dimension": 3,
+        "back_dimension": 3,
+        "section_dimension": 2,
+        "strict_front": 1,
+        "strict_back": 1,
+        "point_consistent": true,
+        "point_query_sign": 1
+      },
+      "component": {
+        "dimension": 3,
+        "front_dimension": 3,
+        "back_dimension": 3,
+        "section_dimension": 2,
+        "strict_front": 1,
+        "strict_back": 1,
+        "point_consistent": true,
+        "point_query_sign": 1
+      },
+      "seconds": 2.5400659069418907e-06,
+      "errors": {},
+      "established_errors": {}
+    },
+    {
+      "name": "A-actual-post-csg-route-reverse",
+      "oracle": {
+        "dimension": 3,
+        "front_dimension": 3,
+        "back_dimension": 3,
+        "section_dimension": 2,
+        "strict_front": 1,
+        "strict_back": 1,
+        "point_consistent": true,
+        "point_query_sign": 1
+      },
+      "component": {
+        "dimension": 3,
+        "front_dimension": 3,
+        "back_dimension": 3,
+        "section_dimension": 2,
+        "strict_front": 1,
+        "strict_back": 1,
+        "point_consistent": true,
+        "point_query_sign": 1
+      },
+      "seconds": 2.88989394903183e-06,
+      "errors": {},
+      "established_errors": {}
+    },
+    {
+      "name": "A-actual-post-csg-route-shuffle-duplicates",
+      "oracle": {
+        "dimension": 3,
+        "front_dimension": 3,
+        "back_dimension": 3,
+        "section_dimension": 2,
+        "strict_front": 1,
+        "strict_back": 1,
+        "point_consistent": true,
+        "point_query_sign": 1
+      },
+      "component": {
+        "dimension": 3,
+        "front_dimension": 3,
+        "back_dimension": 3,
+        "section_dimension": 2,
+        "strict_front": 1,
+        "strict_back": 1,
+        "point_consistent": true,
+        "point_query_sign": 1
+      },
+      "seconds": 2.7799978852272034e-06,
+      "errors": {},
+      "established_errors": {}
+    },
+    {
+      "name": "B-narrow-quadrilateral-reverse",
+      "oracle": {
+        "dimension": 3,
+        "front_dimension": 3,
+        "back_dimension": 3,
+        "section_dimension": 2,
+        "strict_front": 1,
+        "strict_back": 1
+      },
+      "component": {
+        "dimension": 3,
+        "front_dimension": 3,
+        "back_dimension": 3,
+        "section_dimension": 2,
+        "strict_front": 1,
+        "strict_back": 1
+      },
+      "seconds": 2.9099173843860626e-06,
+      "errors": {},
+      "established_errors": {}
+    },
+    {
+      "name": "B-narrow-quadrilateral-shuffle-duplicates",
+      "oracle": {
+        "dimension": 3,
+        "front_dimension": 3,
+        "back_dimension": 3,
+        "section_dimension": 2,
+        "strict_front": 1,
+        "strict_back": 1
+      },
+      "component": {
+        "dimension": 3,
+        "front_dimension": 3,
+        "back_dimension": 3,
+        "section_dimension": 2,
+        "strict_front": 1,
+        "strict_back": 1
+      },
+      "seconds": 2.719927579164505e-06,
+      "errors": {},
+      "established_errors": {}
+    },
+    {
+      "name": "C-sky-roof-gap-reverse",
+      "oracle": {
+        "dimension": 3,
+        "front_dimension": 3,
+        "back_dimension": 3,
+        "section_dimension": 2,
+        "strict_front": 1,
+        "strict_back": 1,
+        "point_consistent": true,
+        "point_query_sign": 0
+      },
+      "component": {
+        "dimension": 3,
+        "front_dimension": 3,
+        "back_dimension": 3,
+        "section_dimension": 2,
+        "strict_front": 1,
+        "strict_back": 1,
+        "point_consistent": true,
+        "point_query_sign": 0
+      },
+      "seconds": 2.3400643840432167e-06,
+      "errors": {},
+      "established_errors": {}
+    },
+    {
+      "name": "C-sky-roof-gap-shuffle-duplicates",
+      "oracle": {
+        "dimension": 3,
+        "front_dimension": 3,
+        "back_dimension": 3,
+        "section_dimension": 2,
+        "strict_front": 1,
+        "strict_back": 1,
+        "point_consistent": true,
+        "point_query_sign": 0
+      },
+      "component": {
+        "dimension": 3,
+        "front_dimension": 3,
+        "back_dimension": 3,
+        "section_dimension": 2,
+        "strict_front": 1,
+        "strict_back": 1,
+        "point_consistent": true,
+        "point_query_sign": 0
+      },
+      "seconds": 2.620043233036995e-06,
+      "errors": {},
+      "established_errors": {}
+    },
+    {
+      "name": "D-halloween-rounded-extent-reverse",
+      "oracle": {
+        "dimension": 3,
+        "front_dimension": 3,
+        "back_dimension": 3,
+        "section_dimension": 2,
+        "strict_front": 1,
+        "strict_back": 1,
+        "point_consistent": false,
+        "point_query_sign": 1
+      },
+      "component": {
+        "dimension": 3,
+        "front_dimension": 3,
+        "back_dimension": 3,
+        "section_dimension": 2,
+        "strict_front": 1,
+        "strict_back": 1,
+        "point_consistent": false,
+        "point_query_sign": 1
+      },
+      "seconds": 2.400018274784088e-06,
+      "errors": {},
+      "established_errors": {}
+    },
+    {
+      "name": "D-halloween-rounded-extent-shuffle-duplicates",
+      "oracle": {
+        "dimension": 3,
+        "front_dimension": 3,
+        "back_dimension": 3,
+        "section_dimension": 2,
+        "strict_front": 1,
+        "strict_back": 1,
+        "point_consistent": false,
+        "point_query_sign": 1
+      },
+      "component": {
+        "dimension": 3,
+        "front_dimension": 3,
+        "back_dimension": 3,
+        "section_dimension": 2,
+        "strict_front": 1,
+        "strict_back": 1,
+        "point_consistent": false,
+        "point_query_sign": 1
+      },
+      "seconds": 2.400018274784088e-06,
+      "errors": {},
+      "established_errors": {}
+    },
+    {
+      "name": "E-p1-rounded-extent-reverse",
+      "oracle": {
+        "dimension": 3,
+        "front_dimension": -1,
+        "back_dimension": 3,
+        "section_dimension": -1,
+        "strict_front": 0,
+        "strict_back": 1,
+        "point_consistent": false,
+        "point_query_sign": 1
+      },
+      "component": {
+        "dimension": 3,
+        "front_dimension": -1,
+        "back_dimension": 3,
+        "section_dimension": -1,
+        "strict_front": 0,
+        "strict_back": 1,
+        "point_consistent": false,
+        "point_query_sign": 1
+      },
+      "seconds": 2.969987690448761e-06,
+      "errors": {},
+      "established_errors": {}
+    },
+    {
+      "name": "E-p1-rounded-extent-shuffle-duplicates",
+      "oracle": {
+        "dimension": 3,
+        "front_dimension": -1,
+        "back_dimension": 3,
+        "section_dimension": -1,
+        "strict_front": 0,
+        "strict_back": 1,
+        "point_consistent": false,
+        "point_query_sign": 1
+      },
+      "component": {
+        "dimension": 3,
+        "front_dimension": -1,
+        "back_dimension": 3,
+        "section_dimension": -1,
+        "strict_front": 0,
+        "strict_back": 1,
+        "point_consistent": false,
+        "point_query_sign": 1
+      },
+      "seconds": 9.490060620009899e-06,
+      "errors": {},
+      "established_errors": {}
+    },
+    {
+      "name": "F-rotated-portal-reverse",
+      "oracle": {
+        "dimension": 1,
+        "front_dimension": 1,
+        "back_dimension": 1,
+        "section_dimension": 1,
+        "strict_front": 0,
+        "strict_back": 0
+      },
+      "component": {
+        "dimension": 1,
+        "front_dimension": 1,
+        "back_dimension": 1,
+        "section_dimension": 1,
+        "strict_front": 0,
+        "strict_back": 0
+      },
+      "seconds": 2.599903382360935e-06,
+      "errors": {},
+      "established_errors": {}
+    },
+    {
+      "name": "F-rotated-portal-shuffle-duplicates",
+      "oracle": {
+        "dimension": 1,
+        "front_dimension": 1,
+        "back_dimension": 1,
+        "section_dimension": 1,
+        "strict_front": 0,
+        "strict_back": 0
+      },
+      "component": {
+        "dimension": 1,
+        "front_dimension": 1,
+        "back_dimension": 1,
+        "section_dimension": 1,
+        "strict_front": 0,
+        "strict_back": 0
+      },
+      "seconds": 2.9900111258029938e-06,
+      "errors": {},
+      "established_errors": {}
+    },
+    {
+      "name": "F-base-winding-reverse",
+      "oracle": {
+        "dimension": 3,
+        "front_dimension": 3,
+        "back_dimension": 3,
+        "section_dimension": 2,
+        "strict_front": 1,
+        "strict_back": 1
+      },
+      "component": {
+        "dimension": 3,
+        "front_dimension": 3,
+        "back_dimension": 3,
+        "section_dimension": 2,
+        "strict_front": 1,
+        "strict_back": 1
+      },
+      "seconds": 2.4799956008791924e-06,
+      "errors": {},
+      "established_errors": {}
+    },
+    {
+      "name": "F-base-winding-shuffle-duplicates",
+      "oracle": {
+        "dimension": 3,
+        "front_dimension": 3,
+        "back_dimension": 3,
+        "section_dimension": 2,
+        "strict_front": 1,
+        "strict_back": 1
+      },
+      "component": {
+        "dimension": 3,
+        "front_dimension": 3,
+        "back_dimension": 3,
+        "section_dimension": 2,
+        "strict_front": 1,
+        "strict_back": 1
+      },
+      "seconds": 2.1599698811769485e-06,
+      "errors": {},
+      "established_errors": {}
+    },
+    {
+      "name": "F-make-portal-reverse",
+      "oracle": {
+        "dimension": 3,
+        "front_dimension": 3,
+        "back_dimension": 3,
+        "section_dimension": 2,
+        "strict_front": 1,
+        "strict_back": 1
+      },
+      "component": {
+        "dimension": 3,
+        "front_dimension": 3,
+        "back_dimension": 3,
+        "section_dimension": 2,
+        "strict_front": 1,
+        "strict_back": 1
+      },
+      "seconds": 0.004457048024050891,
+      "errors": {},
+      "established_errors": {}
+    },
+    {
+      "name": "F-make-portal-shuffle-duplicates",
+      "oracle": {
+        "dimension": 3,
+        "front_dimension": 3,
+        "back_dimension": 3,
+        "section_dimension": 2,
+        "strict_front": 1,
+        "strict_back": 1
+      },
+      "component": {
+        "dimension": 3,
+        "front_dimension": 3,
+        "back_dimension": 3,
+        "section_dimension": 2,
+        "strict_front": 1,
+        "strict_back": 1
+      },
+      "seconds": 0.0060982160503044724,
+      "errors": {},
+      "established_errors": {}
+    },
+    {
+      "name": "ordinary-box-reverse",
+      "oracle": {
+        "dimension": 3,
+        "front_dimension": 3,
+        "back_dimension": 3,
+        "section_dimension": 2,
+        "strict_front": 1,
+        "strict_back": 1,
+        "point_consistent": true,
+        "point_query_sign": 0
+      },
+      "component": {
+        "dimension": 3,
+        "front_dimension": 3,
+        "back_dimension": 3,
+        "section_dimension": 2,
+        "strict_front": 1,
+        "strict_back": 1,
+        "point_consistent": true,
+        "point_query_sign": 0
+      },
+      "seconds": 2.820044755935669e-06,
+      "errors": {},
+      "established_errors": {}
+    },
+    {
+      "name": "ordinary-box-shuffle-duplicates",
+      "oracle": {
+        "dimension": 3,
+        "front_dimension": 3,
+        "back_dimension": 3,
+        "section_dimension": 2,
+        "strict_front": 1,
+        "strict_back": 1,
+        "point_consistent": true,
+        "point_query_sign": 0
+      },
+      "component": {
+        "dimension": 3,
+        "front_dimension": 3,
+        "back_dimension": 3,
+        "section_dimension": 2,
+        "strict_front": 1,
+        "strict_back": 1,
+        "point_consistent": true,
+        "point_query_sign": 0
+      },
+      "seconds": 2.6100315153598785e-06,
+      "errors": {},
+      "established_errors": {}
+    },
+    {
+      "name": "face-contact-reverse",
+      "oracle": {
+        "dimension": 2,
+        "front_dimension": -1,
+        "back_dimension": 2,
+        "section_dimension": -1,
+        "strict_front": 0,
+        "strict_back": 1
+      },
+      "component": {
+        "dimension": 2,
+        "front_dimension": -1,
+        "back_dimension": 2,
+        "section_dimension": -1,
+        "strict_front": 0,
+        "strict_back": 1
+      },
+      "seconds": 2.3400643840432167e-06,
+      "errors": {},
+      "established_errors": {}
+    },
+    {
+      "name": "face-contact-shuffle-duplicates",
+      "oracle": {
+        "dimension": 2,
+        "front_dimension": -1,
+        "back_dimension": 2,
+        "section_dimension": -1,
+        "strict_front": 0,
+        "strict_back": 1
+      },
+      "component": {
+        "dimension": 2,
+        "front_dimension": -1,
+        "back_dimension": 2,
+        "section_dimension": -1,
+        "strict_front": 0,
+        "strict_back": 1
+      },
+      "seconds": 2.320040948688984e-06,
+      "errors": {},
+      "established_errors": {}
+    },
+    {
+      "name": "edge-contact-reverse",
+      "oracle": {
+        "dimension": 1,
+        "front_dimension": -1,
+        "back_dimension": 1,
+        "section_dimension": -1,
+        "strict_front": 0,
+        "strict_back": 1
+      },
+      "component": {
+        "dimension": 1,
+        "front_dimension": -1,
+        "back_dimension": 1,
+        "section_dimension": -1,
+        "strict_front": 0,
+        "strict_back": 1
+      },
+      "seconds": 2.3900065571069717e-06,
+      "errors": {},
+      "established_errors": {}
+    },
+    {
+      "name": "edge-contact-shuffle-duplicates",
+      "oracle": {
+        "dimension": 1,
+        "front_dimension": -1,
+        "back_dimension": 1,
+        "section_dimension": -1,
+        "strict_front": 0,
+        "strict_back": 1
+      },
+      "component": {
+        "dimension": 1,
+        "front_dimension": -1,
+        "back_dimension": 1,
+        "section_dimension": -1,
+        "strict_front": 0,
+        "strict_back": 1
+      },
+      "seconds": 2.220040187239647e-06,
+      "errors": {},
+      "established_errors": {}
+    },
+    {
+      "name": "point-contact-reverse",
+      "oracle": {
+        "dimension": 0,
+        "front_dimension": -1,
+        "back_dimension": 0,
+        "section_dimension": -1,
+        "strict_front": 0,
+        "strict_back": 1
+      },
+      "component": {
+        "dimension": 0,
+        "front_dimension": -1,
+        "back_dimension": 0,
+        "section_dimension": -1,
+        "strict_front": 0,
+        "strict_back": 1
+      },
+      "seconds": 2.1599698811769485e-06,
+      "errors": {},
+      "established_errors": {}
+    },
+    {
+      "name": "point-contact-shuffle-duplicates",
+      "oracle": {
+        "dimension": 0,
+        "front_dimension": -1,
+        "back_dimension": 0,
+        "section_dimension": -1,
+        "strict_front": 0,
+        "strict_back": 1
+      },
+      "component": {
+        "dimension": 0,
+        "front_dimension": -1,
+        "back_dimension": 0,
+        "section_dimension": -1,
+        "strict_front": 0,
+        "strict_back": 1
+      },
+      "seconds": 2.2900057956576347e-06,
+      "errors": {},
+      "established_errors": {}
+    },
+    {
+      "name": "empty-reverse",
+      "oracle": {
+        "dimension": -1,
+        "front_dimension": -1,
+        "back_dimension": -1,
+        "section_dimension": -1,
+        "strict_front": 0,
+        "strict_back": 0
+      },
+      "component": {
+        "dimension": -1,
+        "front_dimension": -1,
+        "back_dimension": -1,
+        "section_dimension": -1,
+        "strict_front": 0,
+        "strict_back": 0
+      },
+      "seconds": 2.4799956008791924e-06,
+      "errors": {},
+      "established_errors": {}
+    },
+    {
+      "name": "empty-shuffle-duplicates",
+      "oracle": {
+        "dimension": -1,
+        "front_dimension": -1,
+        "back_dimension": -1,
+        "section_dimension": -1,
+        "strict_front": 0,
+        "strict_back": 0
+      },
+      "component": {
+        "dimension": -1,
+        "front_dimension": -1,
+        "back_dimension": -1,
+        "section_dimension": -1,
+        "strict_front": 0,
+        "strict_back": 0
+      },
+      "seconds": 2.320040948688984e-06,
+      "errors": {},
+      "established_errors": {}
+    },
+    {
+      "name": "binary-2^-45-reverse",
+      "oracle": {
+        "dimension": 3,
+        "front_dimension": 3,
+        "back_dimension": 2,
+        "section_dimension": 2,
+        "strict_front": 1,
+        "strict_back": 0
+      },
+      "component": {
+        "dimension": 3,
+        "front_dimension": 3,
+        "back_dimension": 2,
+        "section_dimension": 2,
+        "strict_front": 1,
+        "strict_back": 0
+      },
+      "seconds": 2.269982360303402e-06,
+      "errors": {},
+      "established_errors": {}
+    },
+    {
+      "name": "binary-2^-45-shuffle-duplicates",
+      "oracle": {
+        "dimension": 3,
+        "front_dimension": 3,
+        "back_dimension": 2,
+        "section_dimension": 2,
+        "strict_front": 1,
+        "strict_back": 0
+      },
+      "component": {
+        "dimension": 3,
+        "front_dimension": 3,
+        "back_dimension": 2,
+        "section_dimension": 2,
+        "strict_front": 1,
+        "strict_back": 0
+      },
+      "seconds": 2.1300511434674263e-06,
+      "errors": {},
+      "established_errors": {}
+    },
+    {
+      "name": "binary-2^-500-reverse",
+      "oracle": {
+        "dimension": 3,
+        "front_dimension": 3,
+        "back_dimension": 2,
+        "section_dimension": 2,
+        "strict_front": 1,
+        "strict_back": 0
+      },
+      "component": {
+        "dimension": 3,
+        "front_dimension": 3,
+        "back_dimension": 2,
+        "section_dimension": 2,
+        "strict_front": 1,
+        "strict_back": 0
+      },
+      "seconds": 2.369983121752739e-06,
+      "errors": {},
+      "established_errors": {}
+    },
+    {
+      "name": "binary-2^-500-shuffle-duplicates",
+      "oracle": {
+        "dimension": 3,
+        "front_dimension": 3,
+        "back_dimension": 2,
+        "section_dimension": 2,
+        "strict_front": 1,
+        "strict_back": 0
+      },
+      "component": {
+        "dimension": 3,
+        "front_dimension": 3,
+        "back_dimension": 2,
+        "section_dimension": 2,
+        "strict_front": 1,
+        "strict_back": 0
+      },
+      "seconds": 2.3399479687213898e-06,
+      "errors": {},
+      "established_errors": {}
+    },
+    {
+      "name": "min-subnormal-reverse",
+      "oracle": {
+        "dimension": 3,
+        "front_dimension": 3,
+        "back_dimension": 2,
+        "section_dimension": 2,
+        "strict_front": 1,
+        "strict_back": 0
+      },
+      "component": {
+        "dimension": 3,
+        "front_dimension": 3,
+        "back_dimension": 2,
+        "section_dimension": 2,
+        "strict_front": 1,
+        "strict_back": 0
+      },
+      "seconds": 2.4399487301707268e-06,
+      "errors": {},
+      "established_errors": {}
+    },
+    {
+      "name": "min-subnormal-shuffle-duplicates",
+      "oracle": {
+        "dimension": 3,
+        "front_dimension": 3,
+        "back_dimension": 2,
+        "section_dimension": 2,
+        "strict_front": 1,
+        "strict_back": 0
+      },
+      "component": {
+        "dimension": 3,
+        "front_dimension": 3,
+        "back_dimension": 2,
+        "section_dimension": 2,
+        "strict_front": 1,
+        "strict_back": 0
+      },
+      "seconds": 2.249958924949169e-06,
+      "errors": {},
+      "established_errors": {}
+    },
+    {
+      "name": "large-coordinate-ulp-reverse",
+      "oracle": {
+        "dimension": 3,
+        "front_dimension": 3,
+        "back_dimension": 2,
+        "section_dimension": 2,
+        "strict_front": 1,
+        "strict_back": 0
+      },
+      "component": {
+        "dimension": 3,
+        "front_dimension": 3,
+        "back_dimension": 2,
+        "section_dimension": 2,
+        "strict_front": 1,
+        "strict_back": 0
+      },
+      "seconds": 2.3100292310118675e-06,
+      "errors": {},
+      "established_errors": {}
+    },
+    {
+      "name": "large-coordinate-ulp-shuffle-duplicates",
+      "oracle": {
+        "dimension": 3,
+        "front_dimension": 3,
+        "back_dimension": 2,
+        "section_dimension": 2,
+        "strict_front": 1,
+        "strict_back": 0
+      },
+      "component": {
+        "dimension": 3,
+        "front_dimension": 3,
+        "back_dimension": 2,
+        "section_dimension": 2,
+        "strict_front": 1,
+        "strict_back": 0
+      },
+      "seconds": 2.2399472072720528e-06,
+      "errors": {},
+      "established_errors": {}
+    },
+    {
+      "name": "nearly-parallel-reverse",
+      "oracle": {
+        "dimension": 3,
+        "front_dimension": 3,
+        "back_dimension": 3,
+        "section_dimension": 2,
+        "strict_front": 1,
+        "strict_back": 1
+      },
+      "component": {
+        "dimension": 3,
+        "front_dimension": 3,
+        "back_dimension": 3,
+        "section_dimension": 2,
+        "strict_front": 1,
+        "strict_back": 1
+      },
+      "seconds": 2.350076101720333e-06,
+      "errors": {},
+      "established_errors": {}
+    },
+    {
+      "name": "nearly-parallel-shuffle-duplicates",
+      "oracle": {
+        "dimension": 3,
+        "front_dimension": 3,
+        "back_dimension": 3,
+        "section_dimension": 2,
+        "strict_front": 1,
+        "strict_back": 1
+      },
+      "component": {
+        "dimension": 3,
+        "front_dimension": 3,
+        "back_dimension": 3,
+        "section_dimension": 2,
+        "strict_front": 1,
+        "strict_back": 1
+      },
+      "seconds": 2.2299354895949364e-06,
+      "errors": {},
+      "established_errors": {}
+    },
+    {
+      "name": "transformed-box-reverse",
+      "oracle": {
+        "dimension": 3,
+        "front_dimension": 3,
+        "back_dimension": 3,
+        "section_dimension": 2,
+        "strict_front": 1,
+        "strict_back": 1
+      },
+      "component": {
+        "dimension": 3,
+        "front_dimension": 3,
+        "back_dimension": 3,
+        "section_dimension": 2,
+        "strict_front": 1,
+        "strict_back": 1
+      },
+      "seconds": 2.4299370124936104e-06,
+      "errors": {},
+      "established_errors": {}
+    },
+    {
+      "name": "transformed-box-shuffle-duplicates",
+      "oracle": {
+        "dimension": 3,
+        "front_dimension": 3,
+        "back_dimension": 3,
+        "section_dimension": 2,
+        "strict_front": 1,
+        "strict_back": 1
+      },
+      "component": {
+        "dimension": 3,
+        "front_dimension": 3,
+        "back_dimension": 3,
+        "section_dimension": 2,
+        "strict_front": 1,
+        "strict_back": 1
+      },
+      "seconds": 2.2799940779805183e-06,
+      "errors": {},
+      "established_errors": {}
+    },
+    {
+      "name": "rotated-translated-reverse",
+      "oracle": {
+        "dimension": 3,
+        "front_dimension": 3,
+        "back_dimension": 3,
+        "section_dimension": 2,
+        "strict_front": 1,
+        "strict_back": 1
+      },
+      "component": {
+        "dimension": 3,
+        "front_dimension": 3,
+        "back_dimension": 3,
+        "section_dimension": 2,
+        "strict_front": 1,
+        "strict_back": 1
+      },
+      "seconds": 2.6210909709334373e-06,
+      "errors": {},
+      "established_errors": {}
+    },
+    {
+      "name": "rotated-translated-shuffle-duplicates",
+      "oracle": {
+        "dimension": 3,
+        "front_dimension": 3,
+        "back_dimension": 3,
+        "section_dimension": 2,
+        "strict_front": 1,
+        "strict_back": 1
+      },
+      "component": {
+        "dimension": 3,
+        "front_dimension": 3,
+        "back_dimension": 3,
+        "section_dimension": 2,
+        "strict_front": 1,
+        "strict_back": 1
+      },
+      "seconds": 2.2100284695625305e-06,
+      "errors": {},
+      "established_errors": {}
+    },
+    {
+      "name": "coincident-reverse",
+      "oracle": {
+        "dimension": 3,
+        "front_dimension": 3,
+        "back_dimension": 3,
+        "section_dimension": 2,
+        "strict_front": 1,
+        "strict_back": 1,
+        "relation": "Equivalent"
+      },
+      "component": {
+        "dimension": 3,
+        "front_dimension": 3,
+        "back_dimension": 3,
+        "section_dimension": 2,
+        "strict_front": 1,
+        "strict_back": 1,
+        "relation": "Equivalent"
+      },
+      "seconds": 3.100023604929447e-06,
+      "errors": {},
+      "established_errors": {}
+    },
+    {
+      "name": "coincident-shuffle-duplicates",
+      "oracle": {
+        "dimension": 3,
+        "front_dimension": 3,
+        "back_dimension": 3,
+        "section_dimension": 2,
+        "strict_front": 1,
+        "strict_back": 1,
+        "relation": "Equivalent"
+      },
+      "component": {
+        "dimension": 3,
+        "front_dimension": 3,
+        "back_dimension": 3,
+        "section_dimension": 2,
+        "strict_front": 1,
+        "strict_back": 1,
+        "relation": "Equivalent"
+      },
+      "seconds": 2.3799948394298553e-06,
+      "errors": {},
+      "established_errors": {}
+    },
+    {
+      "name": "opposing-reverse",
+      "oracle": {
+        "dimension": 2,
+        "front_dimension": 2,
+        "back_dimension": 2,
+        "section_dimension": 2,
+        "strict_front": 0,
+        "strict_back": 0,
+        "relation": "Opposing"
+      },
+      "component": {
+        "dimension": 2,
+        "front_dimension": 2,
+        "back_dimension": 2,
+        "section_dimension": 2,
+        "strict_front": 0,
+        "strict_back": 0,
+        "relation": "Opposing"
+      },
+      "seconds": 2.6299385353922844e-06,
+      "errors": {},
+      "established_errors": {}
+    },
+    {
+      "name": "opposing-shuffle-duplicates",
+      "oracle": {
+        "dimension": 2,
+        "front_dimension": 2,
+        "back_dimension": 2,
+        "section_dimension": 2,
+        "strict_front": 0,
+        "strict_back": 0,
+        "relation": "Opposing"
+      },
+      "component": {
+        "dimension": 2,
+        "front_dimension": 2,
+        "back_dimension": 2,
+        "section_dimension": 2,
+        "strict_front": 0,
+        "strict_back": 0,
+        "relation": "Opposing"
+      },
+      "seconds": 2.420041710138321e-06,
+      "errors": {},
+      "established_errors": {}
+    },
+    {
+      "name": "not-approximately-equivalent-reverse",
+      "oracle": {
+        "dimension": 3,
+        "front_dimension": 3,
+        "back_dimension": 3,
+        "section_dimension": 2,
+        "strict_front": 1,
+        "strict_back": 1,
+        "relation": "Distinct"
+      },
+      "component": {
+        "dimension": 3,
+        "front_dimension": 3,
+        "back_dimension": 3,
+        "section_dimension": 2,
+        "strict_front": 1,
+        "strict_back": 1,
+        "relation": "Distinct"
+      },
+      "seconds": 2.5799963623285294e-06,
+      "errors": {},
+      "established_errors": {}
+    },
+    {
+      "name": "not-approximately-equivalent-shuffle-duplicates",
+      "oracle": {
+        "dimension": 3,
+        "front_dimension": 3,
+        "back_dimension": 3,
+        "section_dimension": 2,
+        "strict_front": 1,
+        "strict_back": 1,
+        "relation": "Distinct"
+      },
+      "component": {
+        "dimension": 3,
+        "front_dimension": 3,
+        "back_dimension": 3,
+        "section_dimension": 2,
+        "strict_front": 1,
+        "strict_back": 1,
+        "relation": "Distinct"
+      },
+      "seconds": 2.420041710138321e-06,
+      "errors": {},
+      "established_errors": {}
+    },
+    {
+      "name": "zero-redundant-reverse",
+      "oracle": {
+        "dimension": 3,
+        "front_dimension": 3,
+        "back_dimension": 3,
+        "section_dimension": 2,
+        "strict_front": 1,
+        "strict_back": 1
+      },
+      "component": {
+        "dimension": 3,
+        "front_dimension": 3,
+        "back_dimension": 3,
+        "section_dimension": 2,
+        "strict_front": 1,
+        "strict_back": 1
+      },
+      "seconds": 2.400018274784088e-06,
+      "errors": {},
+      "established_errors": {}
+    },
+    {
+      "name": "zero-redundant-shuffle-duplicates",
+      "oracle": {
+        "dimension": 3,
+        "front_dimension": 3,
+        "back_dimension": 3,
+        "section_dimension": 2,
+        "strict_front": 1,
+        "strict_back": 1
+      },
+      "component": {
+        "dimension": 3,
+        "front_dimension": 3,
+        "back_dimension": 3,
+        "section_dimension": 2,
+        "strict_front": 1,
+        "strict_back": 1
+      },
+      "seconds": 2.369983121752739e-06,
+      "errors": {},
+      "established_errors": {}
+    },
+    {
+      "name": "zero-inconsistent-reverse",
+      "oracle": {
+        "dimension": -1,
+        "front_dimension": -1,
+        "back_dimension": -1,
+        "section_dimension": -1,
+        "strict_front": 0,
+        "strict_back": 0
+      },
+      "component": {
+        "dimension": -1,
+        "front_dimension": -1,
+        "back_dimension": -1,
+        "section_dimension": -1,
+        "strict_front": 0,
+        "strict_back": 0
+      },
+      "seconds": 2.1399464458227158e-06,
+      "errors": {},
+      "established_errors": {}
+    },
+    {
+      "name": "zero-inconsistent-shuffle-duplicates",
+      "oracle": {
+        "dimension": -1,
+        "front_dimension": -1,
+        "back_dimension": -1,
+        "section_dimension": -1,
+        "strict_front": 0,
+        "strict_back": 0
+      },
+      "component": {
+        "dimension": -1,
+        "front_dimension": -1,
+        "back_dimension": -1,
+        "section_dimension": -1,
+        "strict_front": 0,
+        "strict_back": 0
+      },
+      "seconds": 2.200016751885414e-06,
+      "errors": {},
+      "established_errors": {}
+    },
+    {
+      "name": "overflow-filter-reverse",
+      "oracle": {
+        "dimension": 3,
+        "front_dimension": 3,
+        "back_dimension": 3,
+        "section_dimension": 2,
+        "strict_front": 1,
+        "strict_back": 1
+      },
+      "component": {
+        "dimension": 3,
+        "front_dimension": 3,
+        "back_dimension": 3,
+        "section_dimension": 2,
+        "strict_front": 1,
+        "strict_back": 1
+      },
+      "seconds": 2.3900065571069717e-06,
+      "errors": {},
+      "established_errors": {}
+    },
+    {
+      "name": "overflow-filter-shuffle-duplicates",
+      "oracle": {
+        "dimension": 3,
+        "front_dimension": 3,
+        "back_dimension": 3,
+        "section_dimension": 2,
+        "strict_front": 1,
+        "strict_back": 1
+      },
+      "component": {
+        "dimension": 3,
+        "front_dimension": 3,
+        "back_dimension": 3,
+        "section_dimension": 2,
+        "strict_front": 1,
+        "strict_back": 1
+      },
+      "seconds": 3.290013410151005e-06,
+      "errors": {},
+      "established_errors": {}
+    },
+    {
+      "name": "depth-0",
+      "oracle": {
+        "dimension": 3,
+        "front_dimension": 3,
+        "back_dimension": 3,
+        "section_dimension": 2,
+        "strict_front": 1,
+        "strict_back": 1
+      },
+      "component": {
+        "dimension": 3,
+        "front_dimension": 3,
+        "back_dimension": 3,
+        "section_dimension": 2,
+        "strict_front": 1,
+        "strict_back": 1
+      },
+      "seconds": 0.0018188799731433392,
+      "errors": {},
+      "established_errors": {}
+    },
+    {
+      "name": "depth-8",
+      "oracle": {
+        "dimension": 3,
+        "front_dimension": 3,
+        "back_dimension": 3,
+        "section_dimension": 2,
+        "strict_front": 1,
+        "strict_back": 1
+      },
+      "component": {
+        "dimension": 3,
+        "front_dimension": 3,
+        "back_dimension": 3,
+        "section_dimension": 2,
+        "strict_front": 1,
+        "strict_back": 1
+      },
+      "seconds": 0.007035195012576878,
+      "errors": {},
+      "established_errors": {}
+    },
+    {
+      "name": "depth-16",
+      "oracle": {
+        "dimension": 3,
+        "front_dimension": 3,
+        "back_dimension": 3,
+        "section_dimension": 2,
+        "strict_front": 1,
+        "strict_back": 1
+      },
+      "component": {
+        "dimension": 3,
+        "front_dimension": 3,
+        "back_dimension": 3,
+        "section_dimension": 2,
+        "strict_front": 1,
+        "strict_back": 1
+      },
+      "seconds": 0.014535555965267122,
+      "errors": {},
+      "established_errors": {}
+    },
+    {
+      "name": "depth-32",
+      "oracle": {
+        "dimension": 3,
+        "front_dimension": 3,
+        "back_dimension": 3,
+        "section_dimension": 2,
+        "strict_front": 1,
+        "strict_back": 1
+      },
+      "component": {
+        "dimension": 3,
+        "front_dimension": 3,
+        "back_dimension": 3,
+        "section_dimension": 2,
+        "strict_front": 1,
+        "strict_back": 1
+      },
+      "seconds": 0.042441645986400545,
+      "errors": {},
+      "established_errors": {}
+    },
+    {
+      "name": "depth-64",
+      "oracle": {
+        "dimension": 3,
+        "front_dimension": 3,
+        "back_dimension": 3,
+        "section_dimension": 2,
+        "strict_front": 1,
+        "strict_back": 1
+      },
+      "component": {
+        "dimension": 3,
+        "front_dimension": 3,
+        "back_dimension": 3,
+        "section_dimension": 2,
+        "strict_front": 1,
+        "strict_back": 1
+      },
+      "seconds": 0.12478931003715843,
+      "errors": {},
+      "established_errors": {}
+    }
+  ],
+  "failures": []
+}

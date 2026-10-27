@@ -1,0 +1,24 @@
+{
+  "source_head": "4b505ae25e508a8910b031e94d6f1ea60ac06a95",
+  "candidate_sha256": "6124279cd12d8a9c6bfb549f11a4e6f522df9cc419aef8329aa3cb18c0602793",
+  "tests_sha256": "ff4558cefdbc2d1db4fc8ff0e4345dfe5517b4b1273b4a31ed4e9a97c308b3fd",
+  "source_files": {
+    "include/qbsp/supported_geometry.hh": "3b44bca444d2f63594d4cb7e3ffc7dab1c26286f41009744f3a008758bb31b8a",
+    "include/qbsp/brushbsp.hh": "f6430d9c1a1d6ddaa01f0ae70d65c1ba64dc8cfd25a05964be58ea3f862cfefd",
+    "qbsp/brushbsp.cc": "6718ef30d7d07bdc7b56d0c6c6f0931a7ffdc1ecf5c777e43dd7d847b65566b2",
+    "qbsp/portals.cc": "8df839a702f643edbd0b0030daac57137d8ad5f8c15c0ee61b6b38bf09e9f5e4",
+    "qbsp/CMakeLists.txt": "3ca3d96ba66201390069f58182182a6e1078da656b7fe85f4c2f0ea109b97b41",
+    "tests/test_qbsp.cc": "52b5a1982f73b3383c0d6efe0981c63bd911b1a19bfa870e44c634e0cd0f3f09"
+  },
+  "installed_sha256": "49d766579a03701d6a5bb3560112bc756afdb8cf4488242e0b8db72668d8c8c0",
+  "active_diff": "",
+  "p1_sha256": "eac568b773767b7b8afa8a1db98f256ed31368aff2067f77c2066fb877ea1bdb",
+  "p2_sha256": "5c8e66e1c6bef8b8777750edb91a5bbea7b0ca47b1106f614489a6813964c73b",
+  "commit": false,
+  "push": false,
+  "deployment": false,
+  "p2_applied": false,
+  "accepted": false,
+  "recommendation": "revise",
+  "remaining": "Halfspace extent certification, boundary closure/conditioning, terminal coverage, portal rank and full regression gates remain incomplete."
+}

@@ -1,0 +1,92 @@
+Note: Google Test filter = testmapsQ1.simpleSealed
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from testmapsQ1
+[ RUN      ] testmapsQ1.simpleSealed
+----  / ericw-tools  ----
+low priority not compiled into this version
+
+--- Options Summary ---
+    "nopercent" was set to "1" (from command line)
+    "nostat" was set to "1" (from command line)
+    "noprogress" was set to "1" (from command line)
+    "path" was set to ""/tmp/qqbsp-phase7/build/qartographer/upstream-testmaps/q2_wal_metadata"" (from command line)
+
+Input file: /tmp/qqbsp-phase7/build/qartographer/upstream-testmaps/qbsp_simple_sealed.map
+Output file: /tmp/qqbsp-phase7/build/qartographer/upstream-testmaps/qbsp_simple_sealed.bsp
+
+INFO: using built-in palette.
+WARNING: texture name openquartzmirror (/tmp/qqbsp-phase7/build/qartographer/upstream-testmaps/deprecated/free_wad.wad) is not null-terminated
+INFO: world extents calculated to 616 units
+Processing hull 0...
+Processing hull 1...
+Processing hull 2...
+Writing /tmp/qqbsp-phase7/build/qartographer/upstream-testmaps/qbsp_simple_sealed.bsp as Quake BSP bsp29
+Wrote /tmp/qqbsp-phase7/build/qartographer/upstream-testmaps/qbsp_simple_sealed.bsp
+
+count   lump name    byte size 
+      1 models               64
+     17 planes              340
+      8 vertexes             96
+      6 nodes               144
+      6 texinfos            240
+      6 faces               120
+     12 clipnodes            96
+      2 leafs                56
+      6 marksurfaces         12
+     13 edges                52
+     24 surfedges            96
+      2 textures          10972
+        lightdata             0
+        visdata               0
+        entdata             227
+LoadBSPFile: '/tmp/qqbsp-phase7/build/qartographer/upstream-testmaps/qbsp_simple_sealed.bsp'
+BSP is version Quake BSP bsp29
+INFO: using built-in palette.
+wrote /tmp/qqbsp-phase7/build/qartographer/upstream-testmaps/qbsp_simple_sealed.bsp.geometry.obj
+wrote /tmp/qqbsp-phase7/build/qartographer/upstream-testmaps/qbsp_simple_sealed.bsp.json
+----  / ericw-tools  ----
+low priority not compiled into this version
+
+--- Options Summary ---
+    "nopercent" was set to "1" (from command line)
+    "nostat" was set to "1" (from command line)
+    "noprogress" was set to "1" (from command line)
+    "path" was set to ""/tmp/qqbsp-phase7/build/qartographer/upstream-testmaps/q2_wal_metadata"" (from command line)
+
+Input file: /tmp/qqbsp-phase7/build/qartographer/upstream-testmaps/qbsp_simple_sealed_rotated.map
+Output file: /tmp/qqbsp-phase7/build/qartographer/upstream-testmaps/qbsp_simple_sealed_rotated.bsp
+
+INFO: using built-in palette.
+WARNING: texture name openquartzmirror (/tmp/qqbsp-phase7/build/qartographer/upstream-testmaps/deprecated/free_wad.wad) is not null-terminated
+INFO: world extents calculated to 648 units
+Processing hull 0...
+Processing hull 1...
+PHASE7_REJECT partition=82 plane={normal: 0.25881904510252174 0.9659258262890681 -0, dist: -197.0110887670313} reason=UNREPRESENTABLE_BOUNDARY: support-certified positive children, approximate cap unavailable; semantic simplification not certified
+PHASE7_SUPPORT id=142 plane={normal: 1 0 0, dist: 172.48513409484292} onnode=false bevel=false winding={}
+PHASE7_SUPPORT id=146 plane={normal: 0 1 0, dist: 97.17142559585811} onnode=false bevel=false winding={}
+PHASE7_SUPPORT id=150 plane={normal: 0 0 1, dist: 272} onnode=false bevel=false winding={}
+PHASE7_SUPPORT id=145 plane={normal: -1 0 0, dist: 204.48513409484295} onnode=false bevel=false winding={}
+PHASE7_SUPPORT id=149 plane={normal: 0 -1 0, dist: 257.1714255958582} onnode=false bevel=false winding={}
+PHASE7_SUPPORT id=153 plane={normal: 0 0 -1, dist: 24} onnode=false bevel=false winding={}
+PHASE7_SUPPORT id=104 plane={normal: 0 1 0, dist: -32.258853727731974} onnode=true bevel=false winding={(133.03032087421775 -32.258853727731974 248), (-139.44591769543695 -32.258853727731974 248), (-139.44591769543695 -32.258853727731974 232), (133.03032087421772 -32.258853727731974 232)}
+PHASE7_SUPPORT id=93 plane={normal: 0 -1 0, dist: 159.74114627226822} onnode=true bevel=false winding={(-165.03032087421778 -159.74114627226822 248), (98.87154353764086 -159.74114627226822 248), (98.87154353764092 -159.74114627226822 232), (-165.03032087421778 -159.74114627226822 232)}
+PHASE7_SUPPORT id=137 plane={normal: 0 0 -1, dist: -176} onnode=true bevel=false winding={}
+PHASE7_SUPPORT id=79 plane={normal: 0 0 -1, dist: -232} onnode=true bevel=false winding={(133.03032087421775 -32.258853727731974 232), (-139.44591769543695 -32.258853727731974 232), (-165.03032087421778 -127.7411462722681 232), (-165.03032087421778 -159.74114627226822 232), (98.87154353764086 -159.74114627226822 232)}
+PHASE7_SUPPORT id=64 plane={normal: 0 0 1, dist: 248} onnode=true bevel=false winding={(-139.44591769543695 -32.258853727731974 248), (133.03032087421772 -32.258853727731974 248), (98.87154353764092 -159.74114627226822 248), (-165.03032087421778 -159.74114627226822 248), (-165.03032087421778 -127.7411462722681 248)}
+PHASE7_SUPPORT id=129 plane={normal: -1 0 0, dist: 165.03032087421778} onnode=true bevel=false winding={(-165.03032087421778 -127.7411462722681 248), (-165.03032087421778 -159.74114627226822 248), (-165.03032087421778 -159.74114627226822 232), (-165.03032087421778 -127.7411462722681 232)}
+PHASE7_SUPPORT id=114 plane={normal: 0.9659258262890679 -0.2588190451025224 -0, dist: 136.84662832984216} onnode=true bevel=false winding={(98.87154353764092 -159.74114627226822 232), (98.87154353764092 -159.74114627226822 248), (133.03032087421775 -32.258853727731974 248), (133.03032087421775 -32.258853727731974 232)}
+PHASE7_SUPPORT id=109 plane={normal: -0.9659258262890679 0.25881904510252246 -0, dist: 126.34520755468873} onnode=true bevel=false winding={(-165.03032087421778 -127.74114627226805 232), (-139.44591769543695 -32.258853727731974 232), (-139.44591769543695 -32.258853727731974 248), (-165.03032087421778 -127.74114627226805 248)}
+unknown file: Failure
+C++ exception with description "PHASE7 CONSTRUCTION_UNSUPPORTED source=node-volume partition=82: UNREPRESENTABLE_BOUNDARY: support-certified positive children, approximate cap unavailable; semantic simplification not certified" thrown in the test body.
+
+[  FAILED  ] testmapsQ1.simpleSealed (668 ms)
+[----------] 1 test from testmapsQ1 (668 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (668 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] testmapsQ1.simpleSealed
+
+ 1 FAILED TEST

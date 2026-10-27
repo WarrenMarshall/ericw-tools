@@ -1,0 +1,59 @@
+[1/53] Building CXX object 3rdparty/fmt/CMakeFiles/fmt.dir/src/os.cc.o
+[2/53] Building CXX object _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o
+[3/53] Building CXX object 3rdparty/fmt/CMakeFiles/fmt.dir/src/format.cc.o
+[4/53] Linking CXX static library 3rdparty/fmt/libfmt.a
+[5/53] Building CXX object common/CMakeFiles/common.dir/bspinfo.cc.o
+/tmp/qqbsp-phase5/source/common/bspinfo.cc: In function ‘void serialize_bsp(const bspdata_t&, const mbsp_t&, const std::filesystem::__cxx11::path&)’:
+/tmp/qqbsp-phase5/source/common/bspinfo.cc:730:88: warning: enumerated mismatch in conditional expression: ‘q2_surf_flags_t’ vs ‘q1_surf_flags_t’ [-Wenum-compare]
+  730 |             texinfo.push_back({"flags", bspdata.loadversion->game->id == GAME_QUAKE_II ? src_texinfo.flags.native_q2
+      |                                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  731 |                                                                                        : src_texinfo.flags.native_q1});
+      |                                                                                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[6/53] Building CXX object _deps/googletest-build/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o
+[7/53] Linking CXX static library lib/libgtest.a
+[8/53] Linking CXX static library lib/libgmock.a
+[9/53] Building CXX object common/CMakeFiles/common.dir/bspfile_common.cc.o
+[10/53] Building CXX object common/CMakeFiles/common.dir/bspfile_generic.cc.o
+[11/53] Building CXX object common/CMakeFiles/common.dir/bspfile_q1.cc.o
+[12/53] Building CXX object common/CMakeFiles/common.dir/bspfile_q2.cc.o
+[13/53] Building CXX object common/CMakeFiles/common.dir/cmdlib.cc.o
+[14/53] Building CXX object common/CMakeFiles/common.dir/bspfile.cc.o
+[15/53] Building CXX object common/CMakeFiles/common.dir/bspxfile.cc.o
+[16/53] Building CXX object common/CMakeFiles/common.dir/bsputils.cc.o
+[17/53] Building CXX object common/CMakeFiles/common.dir/litfile.cc.o
+[18/53] Building CXX object common/CMakeFiles/common.dir/entdata.cc.o
+[19/53] Building CXX object common/CMakeFiles/common.dir/log.cc.o
+[20/53] Building CXX object common/CMakeFiles/common.dir/qvec.cc.o
+[21/53] Building CXX object common/CMakeFiles/common.dir/mathlib.cc.o
+[22/53] Building CXX object common/CMakeFiles/common.dir/decompile.cc.o
+[23/53] Building CXX object common/CMakeFiles/common.dir/parser.cc.o
+[24/53] Building CXX object common/CMakeFiles/common.dir/threads.cc.o
+[25/53] Building CXX object common/CMakeFiles/common.dir/fs.cc.o
+[26/53] Building CXX object common/CMakeFiles/common.dir/settings.cc.o
+[27/53] Building CXX object common/CMakeFiles/common.dir/prtfile.cc.o
+[28/53] Building CXX object common/CMakeFiles/common.dir/mapfile.cc.o
+[29/53] Building CXX object qbsp/CMakeFiles/libqbsp.dir/cmake_pch.hxx.gch
+[30/53] Building CXX object qbsp/CMakeFiles/qqbsp.dir/cmake_pch.hxx.gch
+[31/53] Building CXX object common/CMakeFiles/common.dir/imglib.cc.o
+[32/53] Linking CXX static library common/libcommon.a
+[33/53] Building CXX object qartographer/CMakeFiles/qqbsp_tests.dir/cmake_pch.hxx.gch
+[34/53] Building CXX object qbsp/CMakeFiles/libqbsp.dir/brush.cc.o
+[35/53] Building CXX object qbsp/CMakeFiles/libqbsp.dir/csg.cc.o
+[36/53] Building CXX object qbsp/CMakeFiles/libqbsp.dir/merge.cc.o
+[37/53] Building CXX object qbsp/CMakeFiles/libqbsp.dir/outside.cc.o
+[38/53] Building CXX object qbsp/CMakeFiles/libqbsp.dir/prtfile.cc.o
+[39/53] Building CXX object qbsp/CMakeFiles/libqbsp.dir/portals.cc.o
+[40/53] Building CXX object qbsp/CMakeFiles/libqbsp.dir/faces.cc.o
+[41/53] Building CXX object qbsp/CMakeFiles/libqbsp.dir/brushbsp.cc.o
+[42/53] Building CXX object qbsp/CMakeFiles/libqbsp.dir/map.cc.o
+[43/53] Building CXX object qbsp/CMakeFiles/libqbsp.dir/tree.cc.o
+[44/53] Building CXX object qbsp/CMakeFiles/libqbsp.dir/tjunc.cc.o
+[45/53] Building CXX object qbsp/CMakeFiles/libqbsp.dir/qbsp.cc.o
+[46/53] Building CXX object qbsp/CMakeFiles/qqbsp.dir/main.cc.o
+[47/53] Building CXX object qbsp/CMakeFiles/libqbsp.dir/exportobj.cc.o
+[48/53] Building CXX object qartographer/CMakeFiles/qqbsp_tests.dir/__/tests/test_main.cc.o
+[49/53] Building CXX object qbsp/CMakeFiles/libqbsp.dir/writebsp.cc.o
+[50/53] Linking CXX static library qbsp/liblibqbsp.a
+[51/53] Linking CXX executable qbsp/qqbsp
+[52/53] Building CXX object qartographer/CMakeFiles/qqbsp_tests.dir/__/tests/test_qbsp.cc.o
+[53/53] Linking CXX executable qartographer/qqbsp_tests

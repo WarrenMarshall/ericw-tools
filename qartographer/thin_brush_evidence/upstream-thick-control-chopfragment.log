@@ -1,0 +1,103 @@
+---- qbsp / ericw-tools  ----
+low priority not compiled into this version
+logging to /tmp/qqbsp-p3/upstream-results/upstream-36eec1da/thick-control-chopfragment/thick-control.log (truncate)
+
+--- Options Summary ---
+    "nopercent" was set to "1" (from command line)
+    "bsp2" was set to "1" (from command line)
+    "chopfragment" was set to "1" (from command line)
+    "notex" was set to "1" (from command line)
+
+Input file: /tmp/qqbsp-p3/upstream-results/upstream-36eec1da/thick-control-chopfragment/thick-control.map
+Output file: /tmp/qqbsp-p3/upstream-results/upstream-36eec1da/thick-control-chopfragment/thick-control.bsp
+
+INFO: using built-in palette.
+---- LoadMapFile ----
+WARNING: No wad or _wad key exists in the worldmodel
+     1 entities
+     2 unique textures
+     4 texinfos
+    12 unique planes
+
+---- ProcessMapBrushes ----
+INFO: world extents calculated to 328 units
+    1 brushes
+    6 sides
+
+            0 texture frames added
+WARNING: unable to find texture skip
+WARNING: unable to find texture NO_TEXTURE
+Processing hull 0...
+---- Brush_LoadEntity ----
+---- CountBrushes ----
+    1 SOLID brushes
+    1 brushes total
+    6 visible sides
+INFO: calculating BSP for 1 brushes with 6 sides
+---- BrushBSP ----
+    1 brushes
+    6 visible faces
+    6 nodes
+    6 expensive split nodes
+    7 leaves
+---- CountLeafs ----
+    1 SOLID leafs
+    6 EMPTY leafs
+    7 leafs total
+    7 max tree height
+    4 avg tree height
+---- MakeTreePortals ----
+---- CalcTreeBounds ----
+    36 tree portals
+---- FillOutside ----
+WARNING: No entities in empty space -- no filling performed (hull 0)
+---- MakeTreePortals ----
+---- CalcTreeBounds ----
+    36 tree portals
+---- MarkVisibleSides ----
+    12 sides visible
+---- MakeFaces ----
+    6 makefaces
+---- PruneNodes ----
+---- WritePortalFile ----
+     6 player-occupiable leaves
+     6 clusters of leaves
+    12 vis portals
+---- CountLeafs ----
+    1 SOLID leafs
+    6 EMPTY leafs
+    7 leafs total
+    7 max tree height
+    4 avg tree height
+---- TJunc ----
+     6 faces optimized through MWT
+    12 triangles computed from MWT
+---- EmitFaces ----
+    12 edges
+     6 faces
+Processing hull 1...
+WARNING: No entities in empty space -- no filling performed (hull 1)
+Processing hull 2...
+WARNING: No entities in empty space -- no filling performed (hull 2)
+---- FinishBSPFile ----
+Writing /tmp/qqbsp-p3/upstream-results/upstream-36eec1da/thick-control-chopfragment/thick-control.bsp as Quake BSP2 bsp2
+Wrote /tmp/qqbsp-p3/upstream-results/upstream-36eec1da/thick-control-chopfragment/thick-control.bsp
+
+count   lump name    byte size 
+      1 models               64
+     17 planes              340
+      8 vertexes             96
+      6 nodes               264
+      3 texinfos            120
+      6 faces               168
+     12 clipnodes           144
+      7 leafs               308
+      6 marksurfaces         24
+     13 edges               104
+     24 surfedges            96
+      2 textures             12
+        lightdata             0
+        visdata               0
+        entdata              30
+
+0.002s seconds elapsed

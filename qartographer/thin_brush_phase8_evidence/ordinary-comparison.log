@@ -1,0 +1,1 @@
+PASS [('ordinary', {'0': 512, '1': 512, '2': 512}), ('ordinary-rotated-hull0', {'0': 512}), ('ordinary-L-room', {'0': 512, '1': 512, '2': 512})]

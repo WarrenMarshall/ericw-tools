@@ -1,0 +1,82 @@
+--- a/qbsp/brushbsp.cc
++++ b/qbsp/brushbsp.cc
+@@ -407,10 +407,13 @@
+ ================
+ */
+ static twosided<bspbrush_t::ptr> SplitBrush(
+-    bspbrush_t::ptr brush, size_t planenum, std::optional<std::reference_wrapper<bspstats_t>> stats)
++    bspbrush_t::ptr brush, size_t planenum, std::optional<std::reference_wrapper<bspstats_t>> stats, bool node_volume = false)
+ {
+     const qplane3d &split = map.planes[planenum];
+     twosided<bspbrush_t::ptr> result;
++
++    const double side_epsilon = node_volume ? DIST_EPSILON : 0.1;
++    const double edge_epsilon = node_volume ? DIST_EPSILON : 0.02;
+ 
+     // check all points
+     double d_front = 0; // for points above plane, greatest distance from plane (positive)
+@@ -424,12 +427,12 @@
+                 d_back = d;
+         }
+     }
+-    if (d_front < 0.1) // PLANESIDE_EPSILON)
++    if (d_front < side_epsilon) // PLANESIDE_EPSILON)
+     { // only on back
+         result.back = std::move(brush);
+         return result;
+     }
+-    if (d_back > -0.1) // PLANESIDE_EPSILON)
++    if (d_back > -side_epsilon) // PLANESIDE_EPSILON)
+     { // only on front
+         result.front = std::move(brush);
+         return result;
+@@ -445,7 +448,7 @@
+         w = w->clip_back(face.get_plane());
+     }
+ 
+-    if (!w || WindingIsTiny(*w, 0.02)) { // the brush isn't really split
++    if (!w || WindingIsTiny(*w, edge_epsilon)) { // the brush isn't really split
+         planeside_t side = BrushMostlyOnSide(*brush, split);
+         if (side == SIDE_FRONT)
+             result.front = std::move(brush);
+@@ -661,11 +664,11 @@
+         }
+     }
+ 
+-    if (d_front < 0.1) // PLANESIDE_EPSILON)
++    if (d_front < DIST_EPSILON) // PLANESIDE_EPSILON)
+     {
+         return false;
+     }
+-    if (d_back > -0.1) // PLANESIDE_EPSILON)
++    if (d_back > -DIST_EPSILON) // PLANESIDE_EPSILON)
+     { // only on front
+         return false;
+     }
+@@ -680,7 +683,7 @@
+         w = w->clip_back(face.get_plane());
+     }
+ 
+-    if (!w || WindingIsTiny(*w, 0.02)) { // the brush isn't really split
++    if (!w || WindingIsTiny(*w, DIST_EPSILON)) { // the brush isn't really split
+         return false;
+     }
+ 
+@@ -769,7 +772,7 @@
+ 
+     bool valid = CheckSplitBrush(node->volume, planenum);
+ #ifdef PARANOID
+-    auto [front, back] = SplitBrush(node->volume, planenum, std::nullopt);
++    auto [front, back] = SplitBrush(node->volume, planenum, std::nullopt, true);
+     Q_assert(valid == (front && back));
+ #endif
+     return valid;
+@@ -1222,7 +1225,7 @@
+ 
+     // to save time/memory we can destroy node's volume at this point
+     if (node->volume) {
+-        auto children_volumes = SplitBrush(std::move(node->volume), bestplane, stats);
++        auto children_volumes = SplitBrush(std::move(node->volume), bestplane, stats, true);
+         node->volume = nullptr;
+         nodedata->children[0]->volume = std::move(children_volumes[0]);
+         nodedata->children[1]->volume = std::move(children_volumes[1]);

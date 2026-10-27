@@ -1,0 +1,1069 @@
+--- a/include/qbsp/portals.hh
++++ b/include/qbsp/portals.hh
+@@ -79,8 +79,8 @@
+ };
+ std::list<buildportal_t> MakeTreePortals_r(node_t *node, portaltype_t type, std::list<buildportal_t> boundary_portals,
+     portalstats_t &stats, logging::percent_clock &clock, const std::vector<qplane3d> &root_supports);
+-void MakeTreePortals(tree_t &tree);
++void MakeTreePortals(tree_t &tree, bool collision_connectivity_only = false);
+ std::list<buildportal_t> MakeHeadnodePortals(tree_t &tree);
+-void MakePortalsFromBuildportals(tree_t &tree, std::list<buildportal_t> &buildportals);
++void MakePortalsFromBuildportals(tree_t &tree, std::list<buildportal_t> &buildportals, bool collision_connectivity_only = false);
+ void EmitAreaPortals(tree_t &tree);
+ void MarkVisibleSides(tree_t &tree, bspbrush_t::container &brushes);
+--- a/include/qbsp/supported_geometry.hh
++++ b/include/qbsp/supported_geometry.hh
+@@ -60,6 +60,26 @@
+     return 3;
+ }
+ 
++// Existing polylib constructor, at the precision already used for brush faces.
++// Retained constraints, rather than a clipped/rounded winding, define the face.
++inline std::optional<winding_t> reconstruct_boundary(const qplane3d &plane,
++    const std::vector<qplane3d> &supports, double extent)
++{
++    using precise_winding_t = polylib::winding_base_t<polylib::winding_storage_heap_t<long double>>;
++    std::optional<precise_winding_t> w = precise_winding_t::from_plane(
++        qplane3<long double>(plane), static_cast<long double>(extent));
++    for (auto &p : supports) {
++        if ((p.normal == plane.normal && p.dist == plane.dist) ||
++            (p.normal == -plane.normal && p.dist == -plane.dist)) continue;
++        if (!w) return std::nullopt;
++        w = w->clip_front(-qplane3<long double>(p), 0, true);
++    }
++    if (!w) return std::nullopt;
++    winding_t result;
++    for (auto &point : *w) result.push_back(qvec3d(point));
++    return result;
++}
++
+ enum class rank_t { area, lower_dimensional, uncertain };
+ inline rank_t winding_rank(const winding_t &w, const qplane3d &plane)
+ {
+--- /dev/null
++++ b/qartographer/phase8-unrepresentable-portal.json
+@@ -0,0 +1,372 @@
++{
++  "nodes": [
++    {
++      "ancestors": [
++        [
++          -0.0,
++          -0.6426740375948177,
++          -0.7661397270743601,
++          68.23956071750435
++        ],
++        [
++          -0.01914525880475793,
++          0.6427918723779908,
++          0.7658015851838488,
++          -32.139804156570506
++        ],
++        [
++          0.9996876971088147,
++          -0.0,
++          0.02499016305018725,
++          -1853.6461223668136
++        ],
++        [
++          -0.0,
++          -0.17009769219769055,
++          -0.9854272043682475,
++          -22.235074694996783
++        ],
++        [
++          0.0,
++          0.0,
++          1.0,
++          61.299621582534826
++        ],
++        [
++          -1.0,
++          -0.0,
++          -0.0,
++          1936.03125
++        ],
++        [
++          -0.0,
++          -1.0,
++          -0.0,
++          203.625
++        ],
++        [
++          -0.0,
++          -1.0,
++          -0.0,
++          223.15502929701438
++        ],
++        [
++          0.0,
++          1.0,
++          0.0,
++          -166.34790039058498
++        ],
++        [
++          -0.0,
++          -0.0,
++          -1.0,
++          -47.65625001157818
++        ]
++      ],
++      "contents": "EMPTY",
++      "contributors": []
++    },
++    {
++      "ancestors": [
++        [
++          0.024992477088023216,
++          -0.0,
++          -0.9996876392598864,
++          -108.46021176232331
++        ],
++        [
++          0.0,
++          0.6426740375948177,
++          0.7661397270743601,
++          -68.23956071750435
++        ],
++        [
++          -0.01914525880475793,
++          0.6427918723779908,
++          0.7658015851838488,
++          -32.139804156570506
++        ],
++        [
++          0.9996876971088147,
++          -0.0,
++          0.02499016305018725,
++          -1853.6461223668136
++        ],
++        [
++          -0.0,
++          -0.17009769219769055,
++          -0.9854272043682475,
++          -22.235074694996783
++        ],
++        [
++          0.0,
++          0.0,
++          1.0,
++          61.299621582534826
++        ],
++        [
++          -1.0,
++          -0.0,
++          -0.0,
++          1936.03125
++        ],
++        [
++          -0.0,
++          -1.0,
++          -0.0,
++          203.625
++        ],
++        [
++          -0.0,
++          -1.0,
++          -0.0,
++          223.15502929701438
++        ],
++        [
++          0.0,
++          1.0,
++          0.0,
++          -166.34790039058498
++        ],
++        [
++          -0.0,
++          -0.0,
++          -1.0,
++          -47.65625001157818
++        ]
++      ],
++      "contents": "EMPTY",
++      "contributors": []
++    }
++  ],
++  "planes": [
++    [
++      -1.0,
++      -0.0,
++      -0.0,
++      1975.737548828
++    ],
++    [
++      -0.0,
++      -1.0,
++      -0.0,
++      316.59375
++    ],
++    [
++      -0.0,
++      -0.0,
++      -1.0,
++      175.5
++    ],
++    [
++      1.0,
++      -0.0,
++      -0.0,
++      -1703.375
++    ],
++    [
++      -0.0,
++      1.0,
++      -0.0,
++      -23.0625
++    ],
++    [
++      -0.0,
++      -0.0,
++      1.0,
++      279.25
++    ],
++    [
++      -0.01914525880475793,
++      0.6427918723779908,
++      0.7658015851838488,
++      -32.139804156570506
++    ],
++    [
++      0.9996876971088147,
++      -0.0,
++      0.02499016305018725,
++      -1853.6461223668136
++    ],
++    [
++      -0.0,
++      -0.17009769219769055,
++      -0.9854272043682475,
++      -22.235074694996783
++    ],
++    [
++      0.0,
++      0.0,
++      1.0,
++      61.299621582534826
++    ],
++    [
++      -1.0,
++      -0.0,
++      -0.0,
++      1936.03125
++    ],
++    [
++      -0.0,
++      -1.0,
++      -0.0,
++      203.625
++    ],
++    [
++      -0.0,
++      -1.0,
++      -0.0,
++      223.15502929701438
++    ],
++    [
++      0.0,
++      1.0,
++      0.0,
++      -166.34790039058498
++    ],
++    [
++      -0.0,
++      -0.0,
++      -1.0,
++      -47.65625001157818
++    ],
++    [
++      0.024992477088023216,
++      -0.0,
++      -0.9996876392598864,
++      -108.46021176232331
++    ],
++    [
++      -0.0,
++      -0.6426740375948177,
++      -0.7661397270743601,
++      68.23956071750435
++    ],
++    [
++      -0.01914525880475793,
++      0.6427918723779908,
++      0.7658015851838488,
++      -32.139804156570506
++    ],
++    [
++      0.9996876971088147,
++      -0.0,
++      0.02499016305018725,
++      -1853.6461223668136
++    ],
++    [
++      -0.0,
++      -0.17009769219769055,
++      -0.9854272043682475,
++      -22.235074694996783
++    ],
++    [
++      0.0,
++      0.0,
++      1.0,
++      61.299621582534826
++    ],
++    [
++      -1.0,
++      -0.0,
++      -0.0,
++      1936.03125
++    ],
++    [
++      -0.0,
++      -1.0,
++      -0.0,
++      203.625
++    ],
++    [
++      -0.0,
++      -1.0,
++      -0.0,
++      223.15502929701438
++    ],
++    [
++      0.0,
++      1.0,
++      0.0,
++      -166.34790039058498
++    ],
++    [
++      -0.0,
++      -0.0,
++      -1.0,
++      -47.65625001157818
++    ],
++    [
++      0.024992477088023216,
++      -0.0,
++      -0.9996876392598864,
++      -108.46021176232331
++    ],
++    [
++      0.0,
++      0.6426740375948177,
++      0.7661397270743601,
++      -68.23956071750435
++    ],
++    [
++      -0.01914525880475793,
++      0.6427918723779908,
++      0.7658015851838488,
++      -32.139804156570506
++    ],
++    [
++      0.9996876971088147,
++      -0.0,
++      0.02499016305018725,
++      -1853.6461223668136
++    ],
++    [
++      -0.0,
++      -0.17009769219769055,
++      -0.9854272043682475,
++      -22.235074694996783
++    ],
++    [
++      0.0,
++      0.0,
++      1.0,
++      61.299621582534826
++    ],
++    [
++      -1.0,
++      -0.0,
++      -0.0,
++      1936.03125
++    ],
++    [
++      -0.0,
++      -1.0,
++      -0.0,
++      203.625
++    ],
++    [
++      -0.0,
++      -1.0,
++      -0.0,
++      223.15502929701438
++    ],
++    [
++      0.0,
++      1.0,
++      0.0,
++      -166.34790039058498
++    ],
++    [
++      -0.0,
++      -0.0,
++      -1.0,
++      -47.65625001157818
++    ]
++  ],
++  "query": [
++    0.0,
++    0.6426740375948177,
++    0.7661397270743601,
++    -68.23956071750435
++  ]
++}
+--- a/qbsp/CMakeLists.txt
++++ b/qbsp/CMakeLists.txt
+@@ -44,7 +44,7 @@
+ set(QQBSP_REVISION "4b505ae25e508a8910b031e94d6f1ea60ac06a95-phase7-experimental")
+ add_executable(qqbsp main.cc)
+ target_compile_definitions(qqbsp PRIVATE
+-    QQBSP_BUILD_ID="Qartographer qqbsp, upstream=ccaeb8457a1267860ebe99ed1df7394ebdd6b435, downstream=${QQBSP_REVISION}, patches=P1, experiment=phase7-unaccepted")
++    QQBSP_BUILD_ID="Qartographer qqbsp, upstream=ccaeb8457a1267860ebe99ed1df7394ebdd6b435, downstream=${QQBSP_REVISION}, patches=P1, experiment=phase8-unaccepted")
+ add_executable(qbsp main.cc)
+ foreach(compiler IN ITEMS qqbsp qbsp)
+     target_link_libraries(${compiler} libqbsp)
+--- a/qbsp/brushbsp.cc
++++ b/qbsp/brushbsp.cc
+@@ -357,7 +357,7 @@
+ }
+ 
+ static void CaptureResolution(const node_t *node, size_t partition,
+-    const bspbrush_t::container &sources, const std::string &failure)
++    const bspbrush_t::container &sources, const bspbrush_t::container &fragments, const std::string &failure)
+ {
+     const char *path = std::getenv("QQBSP_PHASE7_CAPTURE");
+     if (!path) return;
+@@ -366,6 +366,11 @@
+     capture["partition_id"] = partition;
+     capture["query"] = supported_geometry::coefficients(map.get_plane(partition));
+     capture["node"] = BrushSupports(*node->volume);
++    capture["fragments"] = nlohmann::json::array();
++    for (auto &b : fragments)
++        capture["fragments"].push_back({{"planes",BrushSupports(*b)},
++            {"contents",b->contents.to_string()},
++            {"source",b->mapbrush ? fmt::format("{}",b->mapbrush->line) : "synthetic"}});
+     capture["sources"] = nlohmann::json::array();
+     std::vector<const bspbrush_t *> seen;
+     for (auto &b : sources) {
+@@ -377,7 +382,7 @@
+             {"solid",source->contents.is_solid()},
+             {"source",source->mapbrush ? fmt::format("{}",source->mapbrush->line) : "synthetic"}});
+     }
+-    std::ofstream(path) << capture.dump(2) << '\n';
++    std::ofstream(std::string(path)+".partition-"+std::to_string(partition)+".json") << capture.dump(2) << '\n';
+ }
+ 
+ static void LeafNode(node_t *leafnode, bspbrush_t::container brushes, bspstats_t &stats)
+@@ -452,20 +457,9 @@
+ // No plane merging or replacement halfspaces are introduced.
+ static std::optional<winding_t> ReconstructFace(const qplane3d &plane, const bspbrush_t &brush)
+ {
+-    using precise_winding_t = polylib::winding_base_t<polylib::winding_storage_heap_t<long double>>;
+-    std::optional<precise_winding_t> w = precise_winding_t::from_plane(
+-        qplane3<long double>(plane), static_cast<long double>(qbsp_options.worldextent.value()));
+-    for (auto &support : brush.sides) {
+-        const qplane3d &p = support.get_plane();
+-        if (p.normal == plane.normal && p.dist == plane.dist) continue;
+-        if (!w) return std::nullopt;
+-        // clip_front's keepon=true retains ON, unlike clip_back's flag.
+-        w = w->clip_front(-qplane3<long double>(p), 0, true);
+-    }
+-    if (!w) return std::nullopt;
+-    winding_t result;
+-    for (auto &point : *w) result.push_back(qvec3d(point));
+-    return result;
++    std::vector<qplane3d> supports;
++    for (auto &side : brush.sides) supports.push_back(side.get_plane());
++    return supported_geometry::reconstruct_boundary(plane, supports, qbsp_options.worldextent.value());
+ }
+ 
+ // Adapt a private representation using retained halfspaces, never a hull/weld.
+@@ -480,7 +474,7 @@
+         face.w = w ? std::move(*w) : winding_t{};
+     }
+     if (!BoundaryConsistent(*repaired) || !repaired->update_bounds(false))
+-        SplitUncertain(*brush, partition, "retained halfspaces cannot be reconstructed with consistent boundaries");
++        SplitUncertain(*brush, partition, "UNREPRESENTABLE_BOUNDARY: retained halfspaces cannot be reconstructed with consistent boundaries");
+     return repaired;
+ }
+ 
+@@ -585,7 +579,7 @@
+     }
+ 
+     if (!result[0] || !result[1])
+-        SplitUncertain(*brush, planenum, "resolved split lost a child boundary");
++        SplitUncertain(*brush, planenum, "UNREPRESENTABLE_BOUNDARY: resolved split lost a child boundary");
+ 
+     // add the midwinding to both sides
+     for (int i = 0; i < 2; i++) {
+@@ -614,7 +608,7 @@
+             SplitUncertain(*brush, planenum, "child boundary violates retained supports");
+         double volume = BrushVolume(*result[i]);
+         if (!std::isfinite(volume) || volume <= 0 || volume < qbsp_options.microvolume.value())
+-            SplitUncertain(*brush, planenum, "resolved child volume cannot be retained (including microvolume policy)");
++            SplitUncertain(*brush, planenum, "UNREPRESENTABLE_BOUNDARY: resolved child volume cannot be retained (including microvolume policy)");
+     }
+ 
+     return result;
+@@ -722,7 +716,7 @@
+ The clipping hull BSP doesn't worry about avoiding splits
+ ==================
+ */
+-static side_t *ChooseMidPlaneFromList(const bspbrush_t::container &brushes, const node_t *node)
++static side_t *ChooseMidPlaneFromList(const bspbrush_t::container &brushes, const node_t *node, const std::vector<size_t> &deferred, bool include_inactive = false)
+ {
+     double bestaxialmetric = VECT_MAX;
+     side_t *bestaxialplane = nullptr;
+@@ -750,8 +744,8 @@
+             for (auto &side : brush->sides) {
+                 if (side.bevel)
+                     continue; // never use a bevel as a spliter
+-                if (!side.w)
+-                    continue; // nothing visible, so it can't split
++                if (!side.w && !include_inactive)
++                    continue; // try retained inactive boundaries only after ordinary candidates
+                 if (side.onnode)
+                     continue; // allready a node splitter
+                 if (side.get_texinfo().flags.is_hintskip())
+@@ -760,6 +754,7 @@
+                     continue; // only check visible faces on pass 0/2
+ 
+                 size_t positive_planenum = side.planenum & ~1;
++                if (std::find(deferred.begin(), deferred.end(), positive_planenum) != deferred.end()) continue;
+                 const qbsp_plane_t &plane = side.get_positive_plane();
+ 
+ #if CHECK_PLANE_AGAINST_VOLUME
+@@ -805,7 +800,8 @@
+ ================
+ */
+ static side_t *SelectSplitPlane(
+-    const bspbrush_t::container &brushes, node_t *node, tree_split_t split_type, bspstats_t &stats)
++    const bspbrush_t::container &brushes, node_t *node, tree_split_t split_type, bspstats_t &stats,
++    const std::vector<size_t> &deferred, bool include_inactive = false)
+ {
+     // no brushes left to split, so we can't use any plane.
+     if (!brushes.size()) {
+@@ -838,7 +834,7 @@
+         }
+ 
+         if (split_type == tree_split_t::FAST) {
+-            if (auto mid_plane = ChooseMidPlaneFromList(brushes, node)) {
++            if (auto mid_plane = ChooseMidPlaneFromList(brushes, node, deferred, include_inactive)) {
+                 stats.c_midsplit++;
+ 
+                 for (auto &b : brushes) {
+@@ -873,8 +869,8 @@
+             for (auto &side : brush->sides) {
+                 if (side.bevel)
+                     continue; // never use a bevel as a spliter
+-                if (!side.w)
+-                    continue; // nothing visible, so it can't split
++                if (!side.w && !include_inactive)
++                    continue; // try retained inactive boundaries only after ordinary candidates
+                 if (side.onnode)
+                     continue; // allready a node splitter
+                 if (side.tested)
+@@ -885,6 +881,7 @@
+                     continue; // only check visible faces on pass 0/2
+ 
+                 size_t positive_planenum = side.planenum & ~1;
++                if (std::find(deferred.begin(), deferred.end(), positive_planenum) != deferred.end()) continue;
+                 const qbsp_plane_t &plane = side.get_positive_plane(); // always use positive facing plane
+ 
+                 CheckPlaneAgainstParents(positive_planenum, node);
+@@ -1014,6 +1011,9 @@
+         // find the plane and flag it as used so it won't be tried
+         // as a splitter again
+         if (sides & PSIDE_FACING) {
++            auto prepared = brush->copy_unique();
++            prepared->original_ptr = brush->original_ptr ? brush->original_ptr : brush;
++            brush = std::move(prepared);
+             for (auto &side : brush->sides) {
+                 if ((side.planenum & ~1) == planenum) {
+                     side.onnode = true;
+@@ -1044,49 +1044,37 @@
+ static void BuildTree_r(tree_t &tree, int level, node_t *node, bspbrush_t::container brushes, tree_split_t split_type,
+     bspstats_t &stats, logging::percent_clock &clock, const bspbrush_t::container &sources)
+ {
+-    // find the best plane to use as a splitter
+-    auto *bestside = SelectSplitPlane(brushes, node, split_type, stats);
+-
+-    if (!bestside) {
+-        // this is a leaf node
+-        clock();
+-
+-        node->make_leaf();
+-
+-        stats.c_leafs++;
+-        LeafNode(node, std::move(brushes), stats);
+-
+-        return;
+-    }
+-
+-    // Prepare both geometry and routing before publishing the node. If a
+-    // representation fails, only a complete-region coverage proof may remove it.
+-    size_t bestplane = bestside->planenum & ~1;
++    // A rejected construction is local to this node. Try each existing source
++    // boundary at most once; no support, source contribution or ancestor changes.
++    std::vector<size_t> deferred;
++    size_t bestplane = 0;
+     std::array<bspbrush_t::container, 2> children;
+     twosided<bspbrush_t::ptr> children_volumes;
+-    try {
+-        children_volumes = SupportedSplit(node->volume, bestplane);
+-        children = SplitBrushList(brushes, bestplane, stats);
+-    } catch (const std::runtime_error &failure) {
+-        CaptureResolution(node,bestplane,sources,failure.what());
+-        for (auto &candidate : sources) {
+-            auto source = candidate->original_ptr ? candidate->original_ptr : candidate;
+-            if (!source->contents.is_solid() || !SupportedCoversRegion(*source,*node->volume) ||
+-                !SupportedCoversRegion(*source,*node->volume,true)) continue;
+-            // The whole node is SOLID: no traversable external connection or
+-            // separating empty interior exists. Ancestor/root boundaries stay.
+-            logging::print("PHASE7 CERTIFIED_CONSTANT_SOLID partition={} source={}\n",
+-                bestplane, source->mapbrush ? fmt::format("{}",source->mapbrush->line) : "synthetic");
++    for (;;) {
++        auto *bestside = SelectSplitPlane(brushes, node, split_type, stats, deferred);
++        if (!bestside)
++            bestside = SelectSplitPlane(brushes, node, split_type, stats, deferred, true);
++        if (!bestside) {
++            if (!deferred.empty())
++                Error("PHASE8 CONSTRUCTION_UNSUPPORTED: exhausted {} local partitions; source union retained", deferred.size());
++            clock();
+             stats.c_leafs++;
+-            LeafNode(node,{source},stats);
+-            auto &owners = node->get_leafdata()->original_brushes;
+-            for (auto &b : brushes)
+-                if (std::find(owners.begin(),owners.end(),b->original_brush()) == owners.end())
+-                    owners.push_back(b->original_brush());
+-            clock();
++            LeafNode(node, std::move(brushes), stats);
+             return;
+         }
+-        throw;
++        bestplane = bestside->planenum & ~1;
++        try {
++            // Preparation is private. No onnode flag or child is published until
++            // both node volume and the complete source list have been built.
++            children_volumes = SupportedSplit(node->volume, bestplane);
++            children = SplitBrushList(brushes, bestplane, stats);
++            break;
++        } catch (const std::runtime_error &failure) {
++            CaptureResolution(node,bestplane,sources,brushes,failure.what());
++            if (std::string_view(failure.what()).find("CONSTRUCTION_UNSUPPORTED") == std::string_view::npos) throw;
++            logging::print("PHASE8 DEFER_PARTITION partition={} reason={}\n", bestplane, failure.what());
++            deferred.push_back(bestplane);
++        }
+     }
+ 
+     clock();
+@@ -1299,7 +1287,33 @@
+     bspbrush_t::ptr in = a;
+ 
+     for (auto &side : b->sides) {
+-        auto [front, back] = SupportedSplit(in, side.planenum);
++        twosided<bspbrush_t::ptr> split;
++        try {
++            split = SupportedSplit(in, side.planenum);
++        } catch (const std::runtime_error &failure) {
++            if (std::string_view(failure.what()).find("CONSTRUCTION_UNSUPPORTED") == std::string_view::npos) throw;
++            // ChopBrushes is a union-preserving optimization. Returning the
++            // original A refuses the entire pair, including any prepared pieces.
++            // Keep A and B, their contents, ownership and supports unchanged.
++            logging::print("PHASE8 RETAIN_CSG_PAIR a={} b={} partition={} reason={}\n",
++                a->mapbrush ? fmt::format("{}",a->mapbrush->line) : "synthetic",
++                b->mapbrush ? fmt::format("{}",b->mapbrush->line) : "synthetic",
++                side.planenum, failure.what());
++            if (const char *path = std::getenv("QQBSP_PHASE7_CAPTURE")) {
++                nlohmann::json capture;
++                capture["partition_id"] = side.planenum;
++                capture["query"] = supported_geometry::coefficients(side.get_plane());
++                capture["intended_operation"] = "A minus B; refused atomically, both originals retained";
++                for (auto pair : {std::pair{"a",a}, std::pair{"b",b}, std::pair{"in",in}}) {
++                    capture[pair.first] = {{"planes",BrushSupports(*pair.second)},
++                        {"contents",pair.second->contents.to_string()},
++                        {"source",pair.second->mapbrush ? fmt::format("{}",pair.second->mapbrush->line) : "synthetic"}};
++                }
++                std::ofstream(std::string(path)+".csg-"+std::to_string(side.planenum)+".json") << capture.dump(2) << '\n';
++            }
++            return {a};
++        }
++        auto &[front, back] = split;
+ 
+         if (front) {
+             // add to list
+--- a/qbsp/portals.cc
++++ b/qbsp/portals.cc
+@@ -31,6 +31,9 @@
+ #include <qbsp/tree.hh>
+ #include <common/log.hh>
+ #include <atomic>
++#include <fstream>
++#include <unordered_map>
++#include <nlohmann/json.hpp>
+ #include <common/prtfile.hh>
+ 
+ #include "tbb/task_group.h"
+@@ -207,10 +210,22 @@
+     return supported_geometry::portal_has_area(supports, plane);
+ }
+ 
+-static void RequirePortalWinding(const std::optional<winding_t> &w, const qplane3d &plane)
+-{
+-    if (!w || supported_geometry::winding_rank(*w, plane) != supported_geometry::rank_t::area)
+-        Error("PHASE7 UNREPRESENTABLE_PORTAL: certified area section has no usable winding");
++static void RequirePortalWinding(std::optional<winding_t> &w, const qplane3d &plane,
++    const std::vector<qplane3d> &supports)
++{
++    auto usable = [&]() {
++        if (!w || supported_geometry::winding_rank(*w, plane) != supported_geometry::rank_t::area) return false;
++        for (auto &point : *w) {
++            if (!supported_geometry::boundary_residual_ok(point, plane, true)) return false;
++            for (auto &bound : supports)
++                if (!supported_geometry::boundary_residual_ok(point, bound, false)) return false;
++        }
++        return true;
++    };
++    if (usable()) return;
++    w = supported_geometry::reconstruct_boundary(plane, supports, qbsp_options.worldextent.value());
++    if (!usable())
++        Error("PHASE8 UNREPRESENTABLE_PORTAL: certified area section cannot be constructed against retained supports");
+ }
+ 
+ constexpr double BASE_WINDING_EPSILON = 0;
+@@ -274,7 +289,7 @@
+         w = w->clip_front(plane, 0, false);
+     }
+ 
+-    RequirePortalWinding(w, node->get_nodedata()->get_plane());
++    // Realization may wait for incident leaf occupancy. Supports remain authoritative.
+ 
+     auto *nodedata = node->get_nodedata();
+ 
+@@ -282,7 +297,7 @@
+     new_portal.supports = std::move(supports);
+     new_portal.plane = nodedata->get_plane();
+     new_portal.onnode = node;
+-    new_portal.winding = std::move(*w);
++    new_portal.winding = w ? std::move(*w) : winding_t{};
+     new_portal.nodes = nodedata->children;
+     return std::move(new_portal);
+ }
+@@ -327,20 +342,18 @@
+         auto front_supports = p.supports, back_supports = p.supports;
+         front_supports.push_back(-plane.get_plane());
+         back_supports.push_back(plane.get_plane());
+-        if (!PortalHasArea(front_supports, p.plane)) {
+-            frontwinding = {}; stats.c_tinyportals++;
+-        } else RequirePortalWinding(frontwinding, p.plane);
+-        if (!PortalHasArea(back_supports, p.plane)) {
+-            backwinding = {}; stats.c_tinyportals++;
+-        } else RequirePortalWinding(backwinding, p.plane);
+-
+-        if (!frontwinding && !backwinding) { // tiny windings on both sides
++        const bool front_area = PortalHasArea(front_supports, p.plane);
++        const bool back_area = PortalHasArea(back_supports, p.plane);
++        if (!front_area) { frontwinding = {}; stats.c_tinyportals++; }
++        if (!back_area) { backwinding = {}; stats.c_tinyportals++; }
++
++        if (!front_area && !back_area) { // tiny windings on both sides
+             continue;
+         }
+ 
+-        if (!frontwinding) {
++        if (!front_area) {
+             p.supports = std::move(back_supports);
+-            p.winding = std::move(*backwinding);
++            p.winding = backwinding ? std::move(*backwinding) : winding_t{};
+             if (side == SIDE_FRONT)
+                 p.nodes = {b, other_node};
+             else
+@@ -349,9 +362,9 @@
+             result.back.push_back(std::move(p));
+             continue;
+         }
+-        if (!backwinding) {
++        if (!back_area) {
+             p.supports = std::move(front_supports);
+-            p.winding = std::move(*frontwinding);
++            p.winding = frontwinding ? std::move(*frontwinding) : winding_t{};
+             if (side == SIDE_FRONT)
+                 p.nodes = {f, other_node};
+             else
+@@ -369,8 +382,8 @@
+         new_portal.onnode = p.onnode;
+         new_portal.nodes[0] = p.nodes[0];
+         new_portal.nodes[1] = p.nodes[1];
+-        new_portal.winding = std::move(*backwinding);
+-        p.winding = std::move(*frontwinding);
++        new_portal.winding = backwinding ? std::move(*backwinding) : winding_t{};
++        p.winding = frontwinding ? std::move(*frontwinding) : winding_t{};
+ 
+         if (side == SIDE_FRONT) {
+             p.nodes = {f, other_node};
+@@ -405,11 +418,57 @@
+     }
+ }
+ 
+-void MakePortalsFromBuildportals(tree_t &tree, std::list<buildportal_t> &buildportals)
++void MakePortalsFromBuildportals(tree_t &tree, std::list<buildportal_t> &buildportals, bool collision_connectivity_only)
+ {
+     tree.portals.reserve(buildportals.size());
++    std::vector<buildportal_t *> accepted, deferred;
++    auto empty = [](const node_t *node) {
++        return node->is_leaf() && node->get_leafdata()->contents.is_empty();
++    };
+ 
+     for (auto &buildportal : buildportals) {
++        // Internal SOLID/SOLID incidence cannot expose a face or carry an EMPTY
++        // connection. Leaf occupancy is certified by the construction pipeline;
++        // retain the leaves and collision BSP, omit only this derived portal.
++        if (buildportal.nodes[0]->is_leaf() && buildportal.nodes[1]->is_leaf() &&
++            buildportal.nodes[0]->get_leafdata()->contents.is_solid() &&
++            buildportal.nodes[1]->get_leafdata()->contents.is_solid()) continue;
++        auto supports = NodeSupports(buildportal.nodes[0], buildportal.supports);
++        supports = NodeSupports(buildportal.nodes[1], std::move(supports));
++        std::optional<winding_t> prepared = std::move(buildportal.winding);
++        try {
++            RequirePortalWinding(prepared, buildportal.plane, supports);
++        } catch (const std::runtime_error &) {
++            if (const char *path = std::getenv("QQBSP_PHASE7_CAPTURE")) {
++                nlohmann::json capture;
++                capture["query"] = supported_geometry::coefficients(buildportal.plane);
++                capture["planes"] = nlohmann::json::array();
++                for (auto &p : supports) capture["planes"].push_back(supported_geometry::coefficients(p));
++                capture["nodes"] = nlohmann::json::array();
++                for (auto *node : buildportal.nodes) {
++                    nlohmann::json record;
++                    record["contents"] = ClusterContents(node).to_string();
++                    record["ancestors"] = nlohmann::json::array();
++                    for (auto &p : NodeSupports(node, {})) record["ancestors"].push_back(supported_geometry::coefficients(p));
++                    record["contributors"] = nlohmann::json::array();
++                    if (auto *leaf = node->get_leafdata()) for (auto *brush : leaf->original_brushes) {
++                        nlohmann::json source;
++                        source["source"] = brush->mapbrush ? fmt::format("{}",brush->mapbrush->line) : "synthetic";
++                        source["contents"] = brush->contents.to_string();
++                        source["planes"] = nlohmann::json::array();
++                        for (auto &side : brush->sides) source["planes"].push_back(supported_geometry::coefficients(side.get_plane()));
++                        record["contributors"].push_back(std::move(source));
++                    }
++                    capture["nodes"].push_back(std::move(record));
++                }
++                std::ofstream(std::string(path)+".portal.json") << capture.dump(2) << '\n';
++            }
++            if (!collision_connectivity_only || !empty(buildportal.nodes[0]) || !empty(buildportal.nodes[1])) throw;
++            deferred.push_back(&buildportal);
++            continue;
++        }
++        accepted.push_back(&buildportal);
++        buildportal.winding = std::move(*prepared);
+         CheckPortalRegion(buildportal, buildportal.nodes[0]);
+         CheckPortalRegion(buildportal, buildportal.nodes[1]);
+         portal_t *new_portal = tree.create_portal();
+@@ -418,6 +477,95 @@
+         new_portal->winding = std::move(buildportal.winding);
+         AddPortalToNodes(new_portal, buildportal.nodes[0], buildportal.nodes[1]);
+     }
++    if (deferred.empty()) return;
++    // This graph is used only for collision-hull outside filling, never VIS or
++    // rendering. An alternative chain of target-representable EMPTY ports proves
++    // that removing an unconstructible redundant edge preserves all reachability.
++    std::unordered_map<const node_t *, std::vector<const node_t *>> graph;
++    std::unordered_map<const node_t *, std::vector<std::pair<const node_t *, buildportal_t *>>> proof_graph;
++
++    auto target_planes = [](const std::vector<qplane3d> &planes) {
++        std::vector<p6::Plane> result;
++        for (auto &p : planes) {
++            auto q = supported_geometry::coefficients(p);
++            for (double &v : q) v = static_cast<float>(v);
++            result.push_back(q);
++        }
++        return result;
++    };
++    for (auto *p : accepted) {
++        if (!empty(p->nodes[0]) || !empty(p->nodes[1])) continue;
++        auto supports = NodeSupports(p->nodes[1], NodeSupports(p->nodes[0], p->supports));
++        auto region = target_planes(supports);
++        auto q = supported_geometry::coefficients(p->plane);
++        for (double &v : q) v = static_cast<float>(v);
++        region.push_back(q); region.push_back(p6::opposite(q));
++        if (supported_geometry::dimension(region) != 2) continue;
++        bool volumetric = p->supports.size() >= 6;
++        for (auto *node : p->nodes) {
++            std::vector<qplane3d> root(p->supports.begin(), p->supports.begin()+std::min(size_t(6),p->supports.size()));
++            volumetric &= supported_geometry::dimension(target_planes(NodeSupports(node, std::move(root)))) == 3;
++        }
++        if (!volumetric) continue;
++        graph[p->nodes[0]].push_back(p->nodes[1]);
++        graph[p->nodes[1]].push_back(p->nodes[0]);
++        proof_graph[p->nodes[0]].push_back({p->nodes[1],p});
++        proof_graph[p->nodes[1]].push_back({p->nodes[0],p});
++    }
++    for (auto *p : deferred) {
++        std::vector<const node_t *> pending{p->nodes[0]};
++        std::unordered_map<const node_t *, const node_t *> predecessor{{p->nodes[0],nullptr}};
++        for (size_t i=0; i<pending.size() && !predecessor.count(p->nodes[1]); ++i)
++            for (auto *next : graph[pending[i]])
++                if (predecessor.emplace(next,pending[i]).second) pending.push_back(next);
++        if (!predecessor.count(p->nodes[1])) {
++            if (const char *path = std::getenv("QQBSP_PHASE7_CAPTURE")) {
++                nlohmann::json failure;
++                failure["query"] = supported_geometry::coefficients(p->plane);
++                failure["planes"] = nlohmann::json::array();
++                for (auto &bound : NodeSupports(p->nodes[1],NodeSupports(p->nodes[0],p->supports)))
++                    failure["planes"].push_back(supported_geometry::coefficients(bound));
++                failure["certified_graph_vertices"] = graph.size();
++                failure["reachable_vertices"] = predecessor.size();
++                std::ofstream(std::string(path)+".no-route.json") << failure.dump(2) << '\n';
++            }
++            Error("PHASE8 CONSTRUCTION_UNSUPPORTED: EMPTY portal has no certified target-representable alternative route");
++        }
++        size_t length = 0;
++        nlohmann::json proof;
++        proof["omitted_plane"] = supported_geometry::coefficients(p->plane);
++        proof["purpose"] = "collision filling only; unchanged EMPTY reachability; never rendering/VIS";
++        proof["omitted_regions"] = nlohmann::json::array();
++        for (auto *node : p->nodes) {
++            nlohmann::json region = nlohmann::json::array();
++            std::vector<qplane3d> root(p->supports.begin(),p->supports.begin()+6);
++            for (auto &bound : NodeSupports(node,std::move(root))) region.push_back(supported_geometry::coefficients(bound));
++            proof["omitted_regions"].push_back(std::move(region));
++        }
++        proof["path"] = nlohmann::json::array();
++        for (const node_t *n=p->nodes[1]; predecessor[n]; n=predecessor[n]) {
++            ++length;
++            auto &edges = proof_graph[n];
++            auto *edge = std::find_if(edges.begin(),edges.end(),[&](auto &e) { return e.first == predecessor[n]; })->second;
++            nlohmann::json record;
++            record["query"] = supported_geometry::coefficients(edge->plane);
++            record["planes"] = nlohmann::json::array();
++            for (auto &bound : NodeSupports(edge->nodes[1],NodeSupports(edge->nodes[0],edge->supports)))
++                record["planes"].push_back(supported_geometry::coefficients(bound));
++            record["incident_regions"] = nlohmann::json::array();
++            for (auto *node : edge->nodes) {
++                nlohmann::json region = nlohmann::json::array();
++                std::vector<qplane3d> root(edge->supports.begin(),edge->supports.begin()+6);
++                for (auto &bound : NodeSupports(node,std::move(root))) region.push_back(supported_geometry::coefficients(bound));
++                record["incident_regions"].push_back(std::move(region));
++            }
++            proof["path"].push_back(std::move(record));
++        }
++        if (const char *path = std::getenv("QQBSP_PHASE7_CAPTURE"))
++            std::ofstream(std::string(path)+".portal-proofs.jsonl",std::ios::app) << proof.dump() << '\n';
++        logging::print("PHASE8 CERTIFIED_REDUNDANT_COLLISION_PORTAL plane={} alternative_edges={}\n",p->plane.get_plane(),length);
++    }
++
+ }
+ 
+ /*
+@@ -570,7 +718,7 @@
+ MakeTreePortals
+ ==================
+ */
+-void MakeTreePortals(tree_t &tree)
++void MakeTreePortals(tree_t &tree, bool collision_connectivity_only)
+ {
+     logging::funcheader();
+ 
+@@ -587,7 +735,7 @@
+         auto buildportals =
+             MakeTreePortals_r(tree.headnode, portaltype_t::TREE, std::move(headnodeportals), stats, clock, root_supports);
+ 
+-        MakePortalsFromBuildportals(tree, buildportals);
++        MakePortalsFromBuildportals(tree, buildportals, collision_connectivity_only);
+     }
+ 
+     logging::header("CalcTreeBounds");
+--- a/qbsp/qbsp.cc
++++ b/qbsp/qbsp.cc
+@@ -1131,7 +1131,7 @@
+         BrushBSP(tree, entity, brushes, tree_split_t::FAST);
+         if (map.is_world_entity(entity) && !qbsp_options.nofill.value()) {
+             // assume non-world bmodels are simple
+-            MakeTreePortals(tree);
++            MakeTreePortals(tree, true);
+             if (FillOutside(tree, hullnum, brushes)) {
+                 if (qbsp_options.filldetail.value())
+                     FillDetail(tree, hullnum, brushes);
+@@ -1141,7 +1141,7 @@
+                 BrushBSP(tree, entity, brushes, tree_split_t::PRECISE);
+ 
+                 // fill again so PruneNodes works
+-                MakeTreePortals(tree);
++                MakeTreePortals(tree, true);
+                 FillOutside(tree, hullnum, brushes);
+                 if (qbsp_options.filldetail.value())
+                     FillDetail(tree, hullnum, brushes);
+--- a/tests/test_qbsp.cc
++++ b/tests/test_qbsp.cc
+@@ -5,6 +5,8 @@
+ #include <qbsp/qbsp.hh>
+ #include <qbsp/map.hh>
+ #include <qbsp/csg.hh>
++#include <qbsp/portals.hh>
++#include <qbsp/tree.hh>
+ #include <common/fs.hh>
+ #include <common/bsputils.hh>
+ #include <common/decompile.hh>
+@@ -2747,7 +2749,7 @@
+ TEST(phase5, NarrowQuadrilateralRankAndRealization)
+ {
+     Phase5Reset();
+-    std::ifstream file("/tmp/qqbsp-phase7/source/qartographer/phase5-witness.json");
++    std::ifstream file(std::filesystem::path(__FILE__).parent_path().parent_path()/"qartographer/phase5-witness.json");
+     nlohmann::json data; file >> data;
+     auto toplane = [](auto p) { return qplane3d{{p[0].template get<double>(),p[1].template get<double>(),p[2].template get<double>()},p[3].template get<double>()}; };
+     qplane3d partition = toplane(data["partition"]);
+@@ -2785,7 +2787,7 @@
+ 
+ TEST(phase7, FailureSiteSupportDecisions)
+ {
+-    std::ifstream file("/tmp/qqbsp-phase7/source/qartographer/phase7-cases.json");
++    std::ifstream file(std::filesystem::path(__FILE__).parent_path().parent_path()/"qartographer/phase7-cases.json");
+     nlohmann::json cases; file >> cases;
+     auto plane = [](auto p) { return qplane3d{{p[0].template get<double>(),p[1].template get<double>(),p[2].template get<double>()},p[3].template get<double>()}; };
+     for (const auto &c : cases) {
+@@ -2849,3 +2851,39 @@
+     EXPECT_FALSE(SupportedCoversRegion(*node,*contact)); // not a volumetric coverage proof
+ 
+ }
++
++// A real failed P1 portal must not disappear merely because both sides are EMPTY.
++// With no alternative edge, collision filling and VIS/rendering both refuse it.
++TEST(phase8, DeferredPortalRequiresOccupancyOrConnectivityProof)
++{
++    Phase5Reset();
++    std::ifstream file(std::filesystem::path(__FILE__).parent_path().parent_path()/"qartographer/phase8-unrepresentable-portal.json");
++    nlohmann::json data; file >> data;
++    auto plane = [](const nlohmann::json &p) {
++        return qplane3d{{p[0].get<double>(),p[1].get<double>(),p[2].get<double>()},p[3].get<double>()};
++    };
++    node_t a{}, b{};
++    a.make_leaf()->contents = contentflags_t::make(EWT_VISCONTENTS_EMPTY);
++    b.make_leaf()->contents = contentflags_t::make(EWT_VISCONTENTS_EMPTY);
++    auto portals = [&]() {
++        buildportal_t portal;
++        portal.plane = map.get_plane(Phase5Plane(plane(data["query"])));
++        portal.nodes = {&a,&b};
++        for (auto &p : data["planes"]) portal.supports.push_back(plane(p));
++        std::list<buildportal_t> result;
++        result.push_back(std::move(portal));
++        return result;
++    };
++    tree_t tree;
++    auto render = portals();
++    EXPECT_THROW(MakePortalsFromBuildportals(tree,render),std::runtime_error);
++    EXPECT_TRUE(tree.portals.empty());
++    auto collision = portals();
++    EXPECT_THROW(MakePortalsFromBuildportals(tree,collision,true),std::runtime_error);
++    EXPECT_TRUE(tree.portals.empty());
++    a.get_leafdata()->contents = contentflags_t::make(EWT_VISCONTENTS_SOLID);
++    b.get_leafdata()->contents = contentflags_t::make(EWT_VISCONTENTS_SOLID);
++    auto internal = portals();
++    EXPECT_NO_THROW(MakePortalsFromBuildportals(tree,internal));
++    EXPECT_TRUE(tree.portals.empty());
++}

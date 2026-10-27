@@ -1,0 +1,76 @@
+// Experimental Phase 5 predicates. This is not a production certificate.
+#pragma once
+#include <qbsp/winding.hh>
+#include <common/aabb.hh>
+#include <limits>
+#include <cmath>
+
+namespace supported_geometry {
+struct distance_t { long double value, error; };
+inline distance_t distance(const qvec3d &p, const qplane3d &plane)
+{
+    long double value = -static_cast<long double>(plane.dist);
+    long double magnitude = std::abs(value);
+    for (int i = 0; i < 3; ++i) {
+        long double product = static_cast<long double>(p[i]) * plane.normal[i];
+        value += product;
+        magnitude += std::abs(product);
+    }
+    // Three products, three additions, and an enclosing rounded magnitude sum.
+    const long double u = std::numeric_limits<long double>::epsilon();
+    return {value, (8 * u / (1 - 8 * u)) * magnitude};
+}
+
+// Exclusive broad-phase answers require separation of the complete box.
+// Uncertainty includes contact and deliberately returns BOTH.
+inline int box_side(const aabb3d &bounds, const qplane3d &plane)
+{
+    qvec3d lo, hi;
+    for (int i = 0; i < 3; ++i) {
+        lo[i] = plane.normal[i] < 0 ? bounds.maxs()[i] : bounds.mins()[i];
+        hi[i] = plane.normal[i] < 0 ? bounds.mins()[i] : bounds.maxs()[i];
+    }
+    auto minimum = distance(lo, plane), maximum = distance(hi, plane);
+    if (minimum.value > minimum.error) return 1;
+    if (maximum.value < -maximum.error) return 2;
+    return 3;
+}
+
+enum class rank_t { area, lower_dimensional, uncertain };
+inline rank_t winding_rank(const winding_t &w, const qplane3d &plane)
+{
+    if (w.size() < 3) return rank_t::lower_dimensional;
+    long double area = 0, scale = 0;
+    for (size_t i = 2; i < w.size(); ++i) {
+        long double a[3], b[3], sa[3], sb[3];
+        for (int k = 0; k < 3; ++k) {
+            a[k] = static_cast<long double>(w[i-1][k]) - w[0][k];
+            b[k] = static_cast<long double>(w[i][k]) - w[0][k];
+            sa[k] = std::abs(static_cast<long double>(w[i-1][k])) + std::abs(static_cast<long double>(w[0][k]));
+            sb[k] = std::abs(static_cast<long double>(w[i][k])) + std::abs(static_cast<long double>(w[0][k]));
+        }
+        for (int k = 0; k < 3; ++k) {
+            int j = (k+1)%3, l = (k+2)%3;
+            area += (a[j]*b[l] - a[l]*b[j]) * plane.normal[k];
+            scale += (sa[j]*sb[l] + sa[l]*sb[j]) * std::abs(static_cast<long double>(plane.normal[k]));
+        }
+    }
+    const long double u = std::numeric_limits<long double>::epsilon();
+    const long double operations = 32 * static_cast<long double>(w.size());
+    long double error = operations*u/(1-operations*u)*scale;
+    if (!std::isfinite(area) || !std::isfinite(error)) return rank_t::uncertain;
+    if (std::abs(area) > error) return rank_t::area;
+    return rank_t::uncertain; // small is not proof of degeneracy
+}
+
+// A backward-residual check, not a forward bound on an ill-conditioned solve.
+inline bool boundary_residual_ok(const qvec3d &p, const qplane3d &plane, bool on_plane)
+{
+    auto d = distance(p, plane);
+    long double scale = std::abs(static_cast<long double>(plane.dist));
+    for (int i=0; i<3; ++i) scale += std::abs(static_cast<long double>(p[i])*plane.normal[i]);
+    const long double u = std::numeric_limits<double>::epsilon();
+    long double bound = 32*u/(1-32*u)*scale;
+    return on_plane ? std::abs(d.value) <= bound : d.value <= bound;
+}
+} // namespace supported_geometry

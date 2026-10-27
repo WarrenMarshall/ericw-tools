@@ -1,0 +1,127 @@
+---- qbsp / ericw-tools  ----
+qbsp performs geometric level processing of Quake .MAP files to create
+Quake .BSP files.
+
+usage: qbsp [-help/-h/-?] [-options] sourcefile.map [destfile.bsp]
+
+Game/BSP Target:
+  -hexen2                       target Hexen II's BSP format
+  -hlbsp                        target Half Life's BSP format
+  -q2bsp                        target Quake II's BSP format
+  -qbism                        target Qbism's extended Quake II BSP format
+  -bsp2                         target Quake's extended BSP2 format
+  -2psb                         target Quake's extended 2PSB format (RMQ compatible)
+
+Map development:
+  -onlyents                     only updates .MAP entities
+  -leaktest                     make compilation fail if the map leaks
+  -omitdetail                   omit *all* detail brushes from the compile
+  -omitdetailwall               func_detail_wall brushes are omitted from the compile
+  -omitdetailillusionary        func_detail_illusionary brushes are omitted from the compile
+  -omitdetailfence              func_detail_fence brushes are omitted from the compile
+  -wadpath path/to/wads         add a path to the wad search paths; wads found in xwadpath's will not be embedded, otherwise they will be embedded (if not -notex)
+   \xwadpath
+  -aliasdef "path/to/file.def" <multiple allowed>    path to an alias definition file, which can transform entities in the .map into other entities.
+  -texturedefs "path/to/file.def" <multiple allowed>    path to a texture definition file, which can transform textures in the .map into other textures.
+  -maxedges n                   the max number of edges/vertices on a single face before it is split into another face
+  -scale n                      scales the map brushes and point entity origins by a give factor
+
+Common format options:
+  -nosubdivide                  disable subdivision
+  -software [0]                 change settings to allow for (or make adjustments to optimize for the lack of) software support
+   \nosoftware
+  -subdivide n                  change the subdivide threshold, in luxels. 0 will disable subdivision entirely
+  -nomergeacrossliquids         deprecated, no effect
+  -noclip                       don't write clip nodes (Q1-like BSP formats)
+  -litwater [0]                 doesn't combine water faces into one large face
+   \splitturb
+  -transwater [0]               compute portal information for transparent water
+   \notranswater
+  -notex                        write only placeholder textures to depend upon replacements, keep file sizes down, or to skirt copyrights
+  -missing_textures_as_zero_size     write missing textures as 0x0
+  -convert bp | quake | quake2 | valve    convert a .MAP to a different .MAP format
+  -includeskip                  don't cull skip faces from the list of renderable surfaces (Q2RTX)
+  -wrbrushes                    includes a list of brushes for brush-based collision
+   \bspx
+  -wrbrushesonly                includes BSPX brushes and does not output clipping hulls (wrbrushes + noclip)
+   \bspxonly
+  -bmodelcontents               allow control over brush contents in bmodels, don't force CONTENTS_SOLID
+  -notriggermodels              for supported game code only: triggers will not write a model
+out, and will instead just write out their mins/maxs.
+  -lmscale n                    change global lmscale (force _lmscale key on all entities). outputs the LMSCALE BSPX lump.
+  -filltype auto | inside | outside    whether to fill the map from the outside in (lenient), from the inside out (aggressive), or to automatically decide based on the hull being used.
+  -filldetail [0]               whether to fill in empty spaces which are fully enclosed by detail solid
+  -allowupgrade [0]             allow formats to "upgrade" to compatible extended formats when a limit is exceeded (ie Quake BSP to BSP2)
+   \noallowupgrade
+  -midsplitbrushfraction n      switch to cheaper partitioning if a node contains this % of brushes in the map
+  -add                          the given map file will be appended to the base map
+
+Logging:
+  -log [0]                      whether log files are written or not
+   \nolog
+  -verbose                      verbose output
+   \v
+  -nopercent                    don't output percentage messages
+  -nostat                       don't output statistic messages
+  -noprogress                   don't output progress messages
+  -nocolor                      don't output color codes (for TB, etc)
+  -quiet                        suppress non-important messages (equivalent to -nopercent -nostat -noprogress)
+   \noverbose
+  -logfile "path"               File to output logging data to. If unchanged, it is set by the tool.
+  -logappend                    Whether to append to log file or replace
+  -loghulls                     print log output for collision hulls
+  -logbmodels                   print log output for bmodels
+  -debug_missing_portal_sides     output debug .prt files for missing portal sides
+
+Performance:
+  -threads n                    number of threads to use, maximum; leave 0 for automatic
+  -lowpriority [0]              run in a lower priority, to free up headroom for other processes
+
+Game:
+  -gamedir "relative/path" or "C:/absolute/path"    override the default mod base directory. if this is not set, or if it is relative, it will be derived from the input file or the basedir if specified.
+  -basedir "relative/path" or "C:/absolute/path"    override the default game base directory. if this is not set, or if it is relative, it will be derived from the input file or the gamedir if specified.
+  -filepriority archive | loose    which types of archives (folders/loose files or packed archives) are higher priority and chosen first for path searching
+  -path "/path/to/folder" <multiple allowed>    additional paths or archives to add to the search path, mostly for loose files
+  -q2rtx                        adjust settings to best support Q2RTX
+  -defaultpaths [0]             whether the compiler should attempt to automatically derive game/base paths for games that support it
+   \nodefaultpaths
+  -tex_saturation_boost n       increase texture saturation to match original Q2 tools
+
+Advanced/tool debugging:
+  -nofill                       don't perform outside filling
+  -nomerge                      don't perform face merging
+  -noedgereuse                  don't reuse edges (for debugging software rendering)
+  -noskip                       don't remove faces with the 'skip' texture
+  -nodetail                     treat all detail brushes to structural
+  -chop                         adjust brushes to remove intersections if possible
+   \nochop
+  -chopfragment                 always do full fragmentation for chop
+  -splitsky                     doesn't combine sky faces into one large face
+  -splitspecial                 doesn't combine sky and water faces into one large face (splitturb + splitsky)
+  -oldaxis [0]                  uses alternate texture alignment which was default in tyrutils-ericw v0.15.1 and older
+   \nooldaxis
+  -forcegoodtree                force use of expensive processing for BrushBSP stage
+  -midsplitsurffraction n       if 0 (default), use `maxnodesize` for deciding when to switch to midsplit bsp heuristic.
+if 0 < midsplitSurfFraction <= 1, switch to midsplit if the node contains more than this fraction of the model's
+total surfaces. Try 0.15 to 0.5. Works better than maxNodeSize for maps with a 3D skybox (e.g. +-128K unit maps)
+  -maxnodesize n                triggers simpler BSP Splitting when node exceeds size (default 1024, 0 to disable)
+  -oldrottex                    use old rotate_ brush texturing aligned at (0 0 0)
+  -epsilon n                    customize epsilon value for point-on-plane checks
+  -microvolume n                microbrush volume
+  -outsidedebug                 write a .map after outside filling showing non-visible brush sides
+  -debugchop                    write a .map after ChopBrushes
+  -debugleak                    write more diagnostic files for debugging leaks
+  -debugbspbrushes              save bsp brushes after BrushBSP to a .map, for visualizing BSP splits
+  -debugleafvolumes             save bsp leaf volumes after BrushBSP to a .map, for visualizing BSP splits
+  -debugexpand [single hull index] or [mins_x mins_y mins_z maxs_x maxs_y maxs_z]    write expanded hull .map for debugging/inspecting hulls/brush bevelling
+  -keepprt                      avoid deleting the .prt file on leaking maps
+  -worldextent n                explicitly provide world extents; 0 will auto-detect
+  -leakdist n                   space between leakfile points (default 0: no inbetween points)
+  -forceprt1                    force a PRT1 output file even if PRT2 is required for vis
+  -tjunc mwt | none | retopologize | rotate    T-junction fix level
+   \notjunc
+  -objexport                    export the map file as .OBJ models during various CSG phases
+  -noextendedsurfflags          suppress writing a .texinfo file
+  -noextendedcontentflags       suppress writing a .content.json file
+  -fixupdetailfence [0]         fixup detail fence
+

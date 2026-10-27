@@ -1,0 +1,23 @@
+{
+  "default": {
+    "compile_exit": 1,
+    "command": [
+      "/tmp/qqbsp-phase8/reconstruction-qqbsp",
+      "-bsp2",
+      "-notex",
+      "-nopercent",
+      "/tmp/qqbsp-phase8/evidence/reconstruction-roller/default.map"
+    ]
+  },
+  "chopfragment": {
+    "compile_exit": 1,
+    "command": [
+      "/tmp/qqbsp-phase8/reconstruction-qqbsp",
+      "-chopfragment",
+      "-bsp2",
+      "-notex",
+      "-nopercent",
+      "/tmp/qqbsp-phase8/evidence/reconstruction-roller/chopfragment.map"
+    ]
+  }
+}

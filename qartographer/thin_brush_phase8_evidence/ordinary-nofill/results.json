@@ -1,0 +1,48 @@
+{
+  "compiles": [
+    {
+      "name": "accepted",
+      "command": [
+        "/mnt/fb91e326-b6dc-4352-b43c-7517fcce8b77/Dropbox/Quake/Utils/linux/qqbsp",
+        "-nofill",
+        "-notex",
+        "-nopercent",
+        "-threads",
+        "1",
+        "/tmp/qqbsp-phase8/evidence/ordinary-nofill/accepted/input.map"
+      ],
+      "binary_sha256": "49d766579a03701d6a5bb3560112bc756afdb8cf4488242e0b8db72668d8c8c0"
+    },
+    {
+      "name": "candidate",
+      "command": [
+        "/tmp/qqbsp-phase8/final-qqbsp",
+        "-nofill",
+        "-notex",
+        "-nopercent",
+        "-threads",
+        "1",
+        "/tmp/qqbsp-phase8/evidence/ordinary-nofill/candidate/input.map"
+      ],
+      "binary_sha256": "032778d488750be24079bd278e20acfa0d594a5e835d10d29c48cff0f7654e48"
+    }
+  ],
+  "hulls": {
+    "0": {
+      "samples": 512,
+      "source_failures": [],
+      "baseline_differences": []
+    },
+    "1": {
+      "samples": 512,
+      "source_failures": [],
+      "baseline_differences": []
+    },
+    "2": {
+      "samples": 512,
+      "source_failures": [],
+      "baseline_differences": []
+    }
+  },
+  "pass_": true
+}

@@ -1,0 +1,3378 @@
+{
+  "original-default": {
+    "failures": [],
+    "counts": {
+      "0": 377,
+      "1": 377,
+      "2": 377
+    },
+    "seconds": 0.005408645956777036,
+    "map_sha256": "dc3bd5aecde1e9bd502decc72b33f28f4ecff2c0712e1b4c5184f2b5ae3fad42",
+    "bsp_sha256": "7754fa6f9a85cb957586abb4b019fcd5eda6fcd6e6b3fdc821f2e504aab47080"
+  },
+  "original-chopfragment": {
+    "failures": [],
+    "counts": {
+      "0": 377,
+      "1": 377,
+      "2": 377
+    },
+    "seconds": 0.005023701931349933,
+    "map_sha256": "dc3bd5aecde1e9bd502decc72b33f28f4ecff2c0712e1b4c5184f2b5ae3fad42",
+    "bsp_sha256": "7754fa6f9a85cb957586abb4b019fcd5eda6fcd6e6b3fdc821f2e504aab47080"
+  },
+  "control-default": {
+    "failures": [],
+    "counts": {
+      "0": 377,
+      "1": 377,
+      "2": 377
+    },
+    "seconds": 0.004589457996189594,
+    "map_sha256": "b9227e6eef074702bfd95edb67d14bed105749b30ea37248bf4e9d009be0c39d",
+    "bsp_sha256": "170cd6e08c690fcdbffec44ea33862e1170f2b8035763722c74575a03d44064e"
+  },
+  "control-chopfragment": {
+    "failures": [],
+    "counts": {
+      "0": 377,
+      "1": 377,
+      "2": 377
+    },
+    "seconds": 0.004120443947613239,
+    "map_sha256": "b9227e6eef074702bfd95edb67d14bed105749b30ea37248bf4e9d009be0c39d",
+    "bsp_sha256": "170cd6e08c690fcdbffec44ea33862e1170f2b8035763722c74575a03d44064e"
+  },
+  "thickness-0.0005-default": {
+    "failures": [],
+    "counts": {
+      "0": 377,
+      "1": 377,
+      "2": 377
+    },
+    "seconds": 0.004457997041754425,
+    "map_sha256": "9d6491db2bc31136dab82741dda209a06ad75a8baa1aca0f4a7ddba46acd8ea2",
+    "bsp_sha256": "fbf46cf7e3cb6fe81df0894783483e4e8aad7d77e82785f7fada0122d1ba9f37"
+  },
+  "thickness-0.0005-chopfragment": {
+    "failures": [],
+    "counts": {
+      "0": 377,
+      "1": 377,
+      "2": 377
+    },
+    "seconds": 0.004318324965424836,
+    "map_sha256": "9d6491db2bc31136dab82741dda209a06ad75a8baa1aca0f4a7ddba46acd8ea2",
+    "bsp_sha256": "fbf46cf7e3cb6fe81df0894783483e4e8aad7d77e82785f7fada0122d1ba9f37"
+  },
+  "thickness-0.002-default": {
+    "failures": [],
+    "counts": {
+      "0": 377,
+      "1": 377,
+      "2": 377
+    },
+    "seconds": 0.004699689103290439,
+    "map_sha256": "7b7304bc395eca303a783389b621c09b03206b982bd7a13516b058f1a2ec1ae3",
+    "bsp_sha256": "819df9dab22cb7e77fe81155344775ecaca122eb8988869568f1a0bb24acba69"
+  },
+  "thickness-0.002-chopfragment": {
+    "failures": [],
+    "counts": {
+      "0": 377,
+      "1": 377,
+      "2": 377
+    },
+    "seconds": 0.003688858007080853,
+    "map_sha256": "7b7304bc395eca303a783389b621c09b03206b982bd7a13516b058f1a2ec1ae3",
+    "bsp_sha256": "819df9dab22cb7e77fe81155344775ecaca122eb8988869568f1a0bb24acba69"
+  },
+  "thickness-0.008-default": {
+    "failures": [],
+    "counts": {
+      "0": 377,
+      "1": 377,
+      "2": 377
+    },
+    "seconds": 0.003936000051908195,
+    "map_sha256": "9de9fbfaedb34e079cb7a395dce59a847ee9f52f427d1b1bcfb1eab4283058aa",
+    "bsp_sha256": "2a42c22bcdac1e6a51d8fc8eec753c357e59f05cbc3519d05f9761fb5a560ace"
+  },
+  "thickness-0.008-chopfragment": {
+    "failures": [],
+    "counts": {
+      "0": 377,
+      "1": 377,
+      "2": 377
+    },
+    "seconds": 0.004331854986958206,
+    "map_sha256": "9de9fbfaedb34e079cb7a395dce59a847ee9f52f427d1b1bcfb1eab4283058aa",
+    "bsp_sha256": "2a42c22bcdac1e6a51d8fc8eec753c357e59f05cbc3519d05f9761fb5a560ace"
+  },
+  "thickness-0.015625-default": {
+    "failures": [],
+    "counts": {
+      "0": 377,
+      "1": 377,
+      "2": 377
+    },
+    "seconds": 0.004777358961291611,
+    "map_sha256": "305ae2ef959d004fa23aff74f5e80c9c2208a5d114c03a1e4091bee082d350fa",
+    "bsp_sha256": "1fdabcc12ae07d6ade4f68428211b276a890a93a286fa85cd8abc82759fa2582"
+  },
+  "thickness-0.015625-chopfragment": {
+    "failures": [],
+    "counts": {
+      "0": 377,
+      "1": 377,
+      "2": 377
+    },
+    "seconds": 0.004494797089137137,
+    "map_sha256": "305ae2ef959d004fa23aff74f5e80c9c2208a5d114c03a1e4091bee082d350fa",
+    "bsp_sha256": "1fdabcc12ae07d6ade4f68428211b276a890a93a286fa85cd8abc82759fa2582"
+  },
+  "thickness-0.02-default": {
+    "failures": [],
+    "counts": {
+      "0": 377,
+      "1": 377,
+      "2": 377
+    },
+    "seconds": 0.004417426069267094,
+    "map_sha256": "52f538c4db8d266600a1cb52f0241ac49b297cfbd59b09defbafea125c89ee6d",
+    "bsp_sha256": "4d3dc013b9f252015c4683e6fc65aaae35f704295266afa24e0ced8512f92822"
+  },
+  "thickness-0.02-chopfragment": {
+    "failures": [],
+    "counts": {
+      "0": 377,
+      "1": 377,
+      "2": 377
+    },
+    "seconds": 0.0043840359430760145,
+    "map_sha256": "52f538c4db8d266600a1cb52f0241ac49b297cfbd59b09defbafea125c89ee6d",
+    "bsp_sha256": "4d3dc013b9f252015c4683e6fc65aaae35f704295266afa24e0ced8512f92822"
+  },
+  "thickness-0.05-default": {
+    "failures": [],
+    "counts": {
+      "0": 377,
+      "1": 377,
+      "2": 377
+    },
+    "seconds": 0.004888431052677333,
+    "map_sha256": "bec4b49d370355de789ae45d40109e6b426f479f0334e6fbab79f10756d2f4ed",
+    "bsp_sha256": "f33257a9393f31e485cc91ba44df989b7617b8c67a31b67332d76a971bc0784d"
+  },
+  "thickness-0.05-chopfragment": {
+    "failures": [],
+    "counts": {
+      "0": 377,
+      "1": 377,
+      "2": 377
+    },
+    "seconds": 0.004162473022006452,
+    "map_sha256": "bec4b49d370355de789ae45d40109e6b426f479f0334e6fbab79f10756d2f4ed",
+    "bsp_sha256": "f33257a9393f31e485cc91ba44df989b7617b8c67a31b67332d76a971bc0784d"
+  },
+  "thickness-0.099-default": {
+    "failures": [],
+    "counts": {
+      "0": 377,
+      "1": 377,
+      "2": 377
+    },
+    "seconds": 0.005055333022028208,
+    "map_sha256": "d556b0652b0b232f81bce8628aa4175dcacb05042b724fba4990c23e55e75381",
+    "bsp_sha256": "8baac2c3b88ce15669dafbea6cc36ead38b9961e16702f1a32d71547072cf865"
+  },
+  "thickness-0.099-chopfragment": {
+    "failures": [],
+    "counts": {
+      "0": 377,
+      "1": 377,
+      "2": 377
+    },
+    "seconds": 0.004080703016370535,
+    "map_sha256": "d556b0652b0b232f81bce8628aa4175dcacb05042b724fba4990c23e55e75381",
+    "bsp_sha256": "8baac2c3b88ce15669dafbea6cc36ead38b9961e16702f1a32d71547072cf865"
+  },
+  "thickness-0.1-default": {
+    "failures": [],
+    "counts": {
+      "0": 377,
+      "1": 377,
+      "2": 377
+    },
+    "seconds": 0.00448891706764698,
+    "map_sha256": "5919c16a78a94cb112e2dc3e587af8b326087a0793fb4aa30b89ca7f30aed510",
+    "bsp_sha256": "1043fd105f8e2707e45cc7d177f6c123e01d62cb48137b91b09ae6ba20e6443d"
+  },
+  "thickness-0.1-chopfragment": {
+    "failures": [],
+    "counts": {
+      "0": 377,
+      "1": 377,
+      "2": 377
+    },
+    "seconds": 0.004210894927382469,
+    "map_sha256": "5919c16a78a94cb112e2dc3e587af8b326087a0793fb4aa30b89ca7f30aed510",
+    "bsp_sha256": "1043fd105f8e2707e45cc7d177f6c123e01d62cb48137b91b09ae6ba20e6443d"
+  },
+  "thickness-0.101-default": {
+    "failures": [],
+    "counts": {
+      "0": 377,
+      "1": 377,
+      "2": 377
+    },
+    "seconds": 0.0053189260652288795,
+    "map_sha256": "7610020e6c680fbc4151ffe4348356a244f5f16ccbf0557b747e4697d0f98710",
+    "bsp_sha256": "daae10a59b17521451279c509534fb5c5afc50abc7ac40de6300a3e214bd8bf3"
+  },
+  "thickness-0.101-chopfragment": {
+    "failures": [],
+    "counts": {
+      "0": 377,
+      "1": 377,
+      "2": 377
+    },
+    "seconds": 0.004314364981837571,
+    "map_sha256": "7610020e6c680fbc4151ffe4348356a244f5f16ccbf0557b747e4697d0f98710",
+    "bsp_sha256": "daae10a59b17521451279c509534fb5c5afc50abc7ac40de6300a3e214bd8bf3"
+  },
+  "thickness-0.25-default": {
+    "failures": [],
+    "counts": {
+      "0": 377,
+      "1": 377,
+      "2": 377
+    },
+    "seconds": 0.00493967195507139,
+    "map_sha256": "468e974abb5d38a9e3d104aeb7dc98f935152a86bc0fbc0cc9ecb903c14de84f",
+    "bsp_sha256": "67316d535c55ba16c6d379fd67425f15f6cbbb06b96969b508534d996b0dbd31"
+  },
+  "thickness-0.25-chopfragment": {
+    "failures": [],
+    "counts": {
+      "0": 377,
+      "1": 377,
+      "2": 377
+    },
+    "seconds": 0.00397952098865062,
+    "map_sha256": "468e974abb5d38a9e3d104aeb7dc98f935152a86bc0fbc0cc9ecb903c14de84f",
+    "bsp_sha256": "67316d535c55ba16c6d379fd67425f15f6cbbb06b96969b508534d996b0dbd31"
+  },
+  "thickness-1-default": {
+    "failures": [],
+    "counts": {
+      "0": 377,
+      "1": 377,
+      "2": 377
+    },
+    "seconds": 0.00426310405600816,
+    "map_sha256": "c1257984981a12ee37a9cead66a786b990206683b66d5d309771e5889dc619ca",
+    "bsp_sha256": "ff1db3fcdbc188755520fb7f90f2548c8a8e8aac8252a2dd1f3240e339d2d503"
+  },
+  "thickness-1-chopfragment": {
+    "failures": [],
+    "counts": {
+      "0": 377,
+      "1": 377,
+      "2": 377
+    },
+    "seconds": 0.004698269069194794,
+    "map_sha256": "c1257984981a12ee37a9cead66a786b990206683b66d5d309771e5889dc619ca",
+    "bsp_sha256": "ff1db3fcdbc188755520fb7f90f2548c8a8e8aac8252a2dd1f3240e339d2d503"
+  },
+  "thickness-16-default": {
+    "failures": [],
+    "counts": {
+      "0": 377,
+      "1": 377,
+      "2": 377
+    },
+    "seconds": 0.004663288011215627,
+    "map_sha256": "304144084e0889f655ae688e70a2b42ce634620a784802a47dfb3fec15167fda",
+    "bsp_sha256": "6abedabcb18aff5dcf8dd77a563b6182f7bebd8c71529bcfa02cc205403c411b"
+  },
+  "thickness-16-chopfragment": {
+    "failures": [],
+    "counts": {
+      "0": 377,
+      "1": 377,
+      "2": 377
+    },
+    "seconds": 0.004287834977731109,
+    "map_sha256": "304144084e0889f655ae688e70a2b42ce634620a784802a47dfb3fec15167fda",
+    "bsp_sha256": "6abedabcb18aff5dcf8dd77a563b6182f7bebd8c71529bcfa02cc205403c411b"
+  },
+  "axis-0-default": {
+    "failures": [
+      {
+        "hull": 0,
+        "point": [
+          32.0,
+          0.0,
+          -32.25
+        ],
+        "margin": 0.25,
+        "want": -1,
+        "actual": -2
+      },
+      {
+        "hull": 0,
+        "point": [
+          32.0,
+          0.0,
+          32.25
+        ],
+        "margin": 0.25,
+        "want": -1,
+        "actual": -2
+      },
+      {
+        "hull": 0,
+        "point": [
+          32.0,
+          0.0,
+          32.25
+        ],
+        "margin": 0.25,
+        "want": -1,
+        "actual": -2
+      },
+      {
+        "hull": 0,
+        "point": [
+          32.0,
+          0.0,
+          -32.25
+        ],
+        "margin": 0.25,
+        "want": -1,
+        "actual": -2
+      },
+      {
+        "hull": 0,
+        "point": [
+          32.0,
+          0.0,
+          -32.25
+        ],
+        "margin": 0.25,
+        "want": -1,
+        "actual": -2
+      },
+      {
+        "hull": 0,
+        "point": [
+          32.0,
+          0.0,
+          -32.25
+        ],
+        "margin": 0.25,
+        "want": -1,
+        "actual": -2
+      },
+      {
+        "hull": 0,
+        "point": [
+          32.0,
+          0.0,
+          -32.25
+        ],
+        "margin": 0.25,
+        "want": -1,
+        "actual": -2
+      },
+      {
+        "hull": 0,
+        "point": [
+          32.0,
+          0.0,
+          -32.25
+        ],
+        "margin": 0.25,
+        "want": -1,
+        "actual": -2
+      },
+      {
+        "hull": 0,
+        "point": [
+          32.0,
+          0.0,
+          32.25
+        ],
+        "margin": 0.25,
+        "want": -1,
+        "actual": -2
+      },
+      {
+        "hull": 0,
+        "point": [
+          32.0,
+          0.0,
+          32.25
+        ],
+        "margin": 0.25,
+        "want": -1,
+        "actual": -2
+      },
+      {
+        "hull": 0,
+        "point": [
+          32.0,
+          0.0,
+          32.25
+        ],
+        "margin": 0.25,
+        "want": -1,
+        "actual": -2
+      },
+      {
+        "hull": 0,
+        "point": [
+          32.0,
+          0.0,
+          32.25
+        ],
+        "margin": 0.25,
+        "want": -1,
+        "actual": -2
+      },
+      {
+        "hull": 0,
+        "point": [
+          32.0,
+          0.0,
+          -32.25
+        ],
+        "margin": 0.25,
+        "want": -1,
+        "actual": -2
+      },
+      {
+        "hull": 0,
+        "point": [
+          32.0,
+          0.0,
+          -32.25
+        ],
+        "margin": 0.25,
+        "want": -1,
+        "actual": -2
+      },
+      {
+        "hull": 0,
+        "point": [
+          32.0,
+          0.0,
+          -32.25
+        ],
+        "margin": 0.25,
+        "want": -1,
+        "actual": -2
+      },
+      {
+        "hull": 0,
+        "point": [
+          32.0,
+          0.0,
+          32.25
+        ],
+        "margin": 0.25,
+        "want": -1,
+        "actual": -2
+      },
+      {
+        "hull": 0,
+        "point": [
+          32.0,
+          0.0,
+          32.25
+        ],
+        "margin": 0.25,
+        "want": -1,
+        "actual": -2
+      },
+      {
+        "hull": 0,
+        "point": [
+          32.0,
+          0.0,
+          32.25
+        ],
+        "margin": 0.25,
+        "want": -1,
+        "actual": -2
+      },
+      {
+        "hull": 0,
+        "point": [
+          32.0,
+          0.0,
+          -32.25
+        ],
+        "margin": 0.25,
+        "want": -1,
+        "actual": -2
+      },
+      {
+        "hull": 0,
+        "point": [
+          32.0,
+          0.0,
+          32.25
+        ],
+        "margin": 0.25,
+        "want": -1,
+        "actual": -2
+      }
+    ],
+    "counts": {
+      "0": 377,
+      "1": 377,
+      "2": 377
+    },
+    "seconds": 0.004512117011472583,
+    "map_sha256": "2cb223c4214478876116fd2bf555c9c559477a4bc81b9fe6f85cd85c0f9e0627",
+    "bsp_sha256": "399a3ad833c57e63141161d4480956a22afc964db8149fcd7453f4975fc5f2c6"
+  },
+  "axis-0-chopfragment": {
+    "failures": [
+      {
+        "hull": 0,
+        "point": [
+          32.0,
+          0.0,
+          -32.25
+        ],
+        "margin": 0.25,
+        "want": -1,
+        "actual": -2
+      },
+      {
+        "hull": 0,
+        "point": [
+          32.0,
+          0.0,
+          32.25
+        ],
+        "margin": 0.25,
+        "want": -1,
+        "actual": -2
+      },
+      {
+        "hull": 0,
+        "point": [
+          32.0,
+          0.0,
+          32.25
+        ],
+        "margin": 0.25,
+        "want": -1,
+        "actual": -2
+      },
+      {
+        "hull": 0,
+        "point": [
+          32.0,
+          0.0,
+          -32.25
+        ],
+        "margin": 0.25,
+        "want": -1,
+        "actual": -2
+      },
+      {
+        "hull": 0,
+        "point": [
+          32.0,
+          0.0,
+          -32.25
+        ],
+        "margin": 0.25,
+        "want": -1,
+        "actual": -2
+      },
+      {
+        "hull": 0,
+        "point": [
+          32.0,
+          0.0,
+          -32.25
+        ],
+        "margin": 0.25,
+        "want": -1,
+        "actual": -2
+      },
+      {
+        "hull": 0,
+        "point": [
+          32.0,
+          0.0,
+          -32.25
+        ],
+        "margin": 0.25,
+        "want": -1,
+        "actual": -2
+      },
+      {
+        "hull": 0,
+        "point": [
+          32.0,
+          0.0,
+          -32.25
+        ],
+        "margin": 0.25,
+        "want": -1,
+        "actual": -2
+      },
+      {
+        "hull": 0,
+        "point": [
+          32.0,
+          0.0,
+          32.25
+        ],
+        "margin": 0.25,
+        "want": -1,
+        "actual": -2
+      },
+      {
+        "hull": 0,
+        "point": [
+          32.0,
+          0.0,
+          32.25
+        ],
+        "margin": 0.25,
+        "want": -1,
+        "actual": -2
+      },
+      {
+        "hull": 0,
+        "point": [
+          32.0,
+          0.0,
+          32.25
+        ],
+        "margin": 0.25,
+        "want": -1,
+        "actual": -2
+      },
+      {
+        "hull": 0,
+        "point": [
+          32.0,
+          0.0,
+          32.25
+        ],
+        "margin": 0.25,
+        "want": -1,
+        "actual": -2
+      },
+      {
+        "hull": 0,
+        "point": [
+          32.0,
+          0.0,
+          -32.25
+        ],
+        "margin": 0.25,
+        "want": -1,
+        "actual": -2
+      },
+      {
+        "hull": 0,
+        "point": [
+          32.0,
+          0.0,
+          -32.25
+        ],
+        "margin": 0.25,
+        "want": -1,
+        "actual": -2
+      },
+      {
+        "hull": 0,
+        "point": [
+          32.0,
+          0.0,
+          -32.25
+        ],
+        "margin": 0.25,
+        "want": -1,
+        "actual": -2
+      },
+      {
+        "hull": 0,
+        "point": [
+          32.0,
+          0.0,
+          32.25
+        ],
+        "margin": 0.25,
+        "want": -1,
+        "actual": -2
+      },
+      {
+        "hull": 0,
+        "point": [
+          32.0,
+          0.0,
+          32.25
+        ],
+        "margin": 0.25,
+        "want": -1,
+        "actual": -2
+      },
+      {
+        "hull": 0,
+        "point": [
+          32.0,
+          0.0,
+          32.25
+        ],
+        "margin": 0.25,
+        "want": -1,
+        "actual": -2
+      },
+      {
+        "hull": 0,
+        "point": [
+          32.0,
+          0.0,
+          -32.25
+        ],
+        "margin": 0.25,
+        "want": -1,
+        "actual": -2
+      },
+      {
+        "hull": 0,
+        "point": [
+          32.0,
+          0.0,
+          32.25
+        ],
+        "margin": 0.25,
+        "want": -1,
+        "actual": -2
+      }
+    ],
+    "counts": {
+      "0": 377,
+      "1": 377,
+      "2": 377
+    },
+    "seconds": 0.0036123869940638542,
+    "map_sha256": "2cb223c4214478876116fd2bf555c9c559477a4bc81b9fe6f85cd85c0f9e0627",
+    "bsp_sha256": "399a3ad833c57e63141161d4480956a22afc964db8149fcd7453f4975fc5f2c6"
+  },
+  "axis-1-default": {
+    "failures": [
+      {
+        "hull": 0,
+        "point": [
+          0.0,
+          0.0,
+          -0.25
+        ],
+        "margin": 0.25,
+        "want": -1,
+        "actual": -2
+      },
+      {
+        "hull": 0,
+        "point": [
+          0.0,
+          0.0,
+          64.25
+        ],
+        "margin": 0.25,
+        "want": -1,
+        "actual": -2
+      },
+      {
+        "hull": 0,
+        "point": [
+          0.0,
+          -32.25,
+          32.0
+        ],
+        "margin": 0.25,
+        "want": -1,
+        "actual": -2
+      },
+      {
+        "hull": 0,
+        "point": [
+          0.0,
+          32.25,
+          32.0
+        ],
+        "margin": 0.25,
+        "want": -1,
+        "actual": -2
+      },
+      {
+        "hull": 0,
+        "point": [
+          0.0,
+          32.25,
+          32.0
+        ],
+        "margin": 0.25,
+        "want": -1,
+        "actual": -2
+      },
+      {
+        "hull": 0,
+        "point": [
+          0.0,
+          -32.25,
+          32.0
+        ],
+        "margin": 0.25,
+        "want": -1,
+        "actual": -2
+      },
+      {
+        "hull": 0,
+        "point": [
+          0.0,
+          0.0,
+          64.25
+        ],
+        "margin": 0.25,
+        "want": -1,
+        "actual": -2
+      },
+      {
+        "hull": 0,
+        "point": [
+          0.0,
+          0.0,
+          -0.25
+        ],
+        "margin": 0.25,
+        "want": -1,
+        "actual": -2
+      },
+      {
+        "hull": 0,
+        "point": [
+          0.0,
+          0.0,
+          -0.25
+        ],
+        "margin": 0.25,
+        "want": -1,
+        "actual": -2
+      },
+      {
+        "hull": 0,
+        "point": [
+          0.0,
+          -32.25,
+          32.0
+        ],
+        "margin": 0.25,
+        "want": -1,
+        "actual": -2
+      },
+      {
+        "hull": 0,
+        "point": [
+          0.0,
+          0.0,
+          -0.25
+        ],
+        "margin": 0.25,
+        "want": -1,
+        "actual": -2
+      },
+      {
+        "hull": 0,
+        "point": [
+          0.0,
+          -32.25,
+          32.0
+        ],
+        "margin": 0.25,
+        "want": -1,
+        "actual": -2
+      },
+      {
+        "hull": 0,
+        "point": [
+          0.0,
+          0.0,
+          -0.25
+        ],
+        "margin": 0.25,
+        "want": -1,
+        "actual": -2
+      },
+      {
+        "hull": 0,
+        "point": [
+          0.0,
+          0.0,
+          -0.25
+        ],
+        "margin": 0.25,
+        "want": -1,
+        "actual": -2
+      },
+      {
+        "hull": 0,
+        "point": [
+          0.0,
+          -32.25,
+          32.0
+        ],
+        "margin": 0.25,
+        "want": -1,
+        "actual": -2
+      },
+      {
+        "hull": 0,
+        "point": [
+          0.0,
+          -32.25,
+          32.0
+        ],
+        "margin": 0.25,
+        "want": -1,
+        "actual": -2
+      },
+      {
+        "hull": 0,
+        "point": [
+          0.0,
+          32.25,
+          32.0
+        ],
+        "margin": 0.25,
+        "want": -1,
+        "actual": -2
+      },
+      {
+        "hull": 0,
+        "point": [
+          0.0,
+          0.0,
+          -0.25
+        ],
+        "margin": 0.25,
+        "want": -1,
+        "actual": -2
+      },
+      {
+        "hull": 0,
+        "point": [
+          0.0,
+          0.0,
+          -0.25
+        ],
+        "margin": 0.25,
+        "want": -1,
+        "actual": -2
+      },
+      {
+        "hull": 0,
+        "point": [
+          0.0,
+          0.0,
+          -0.25
+        ],
+        "margin": 0.25,
+        "want": -1,
+        "actual": -2
+      },
+      {
+        "hull": 0,
+        "point": [
+          0.0,
+          32.25,
+          32.0
+        ],
+        "margin": 0.25,
+        "want": -1,
+        "actual": -2
+      },
+      {
+        "hull": 0,
+        "point": [
+          0.0,
+          32.25,
+          32.0
+        ],
+        "margin": 0.25,
+        "want": -1,
+        "actual": -2
+      },
+      {
+        "hull": 0,
+        "point": [
+          0.0,
+          32.25,
+          32.0
+        ],
+        "margin": 0.25,
+        "want": -1,
+        "actual": -2
+      },
+      {
+        "hull": 0,
+        "point": [
+          0.0,
+          0.0,
+          64.25
+        ],
+        "margin": 0.25,
+        "want": -1,
+        "actual": -2
+      },
+      {
+        "hull": 0,
+        "point": [
+          0.0,
+          -32.25,
+          32.0
+        ],
+        "margin": 0.25,
+        "want": -1,
+        "actual": -2
+      },
+      {
+        "hull": 0,
+        "point": [
+          0.0,
+          -32.25,
+          32.0
+        ],
+        "margin": 0.25,
+        "want": -1,
+        "actual": -2
+      },
+      {
+        "hull": 0,
+        "point": [
+          0.0,
+          0.0,
+          64.25
+        ],
+        "margin": 0.25,
+        "want": -1,
+        "actual": -2
+      },
+      {
+        "hull": 0,
+        "point": [
+          0.0,
+          -32.25,
+          32.0
+        ],
+        "margin": 0.25,
+        "want": -1,
+        "actual": -2
+      },
+      {
+        "hull": 0,
+        "point": [
+          0.0,
+          0.0,
+          64.25
+        ],
+        "margin": 0.25,
+        "want": -1,
+        "actual": -2
+      },
+      {
+        "hull": 0,
+        "point": [
+          0.0,
+          0.0,
+          64.25
+        ],
+        "margin": 0.25,
+        "want": -1,
+        "actual": -2
+      },
+      {
+        "hull": 0,
+        "point": [
+          0.0,
+          32.25,
+          32.0
+        ],
+        "margin": 0.25,
+        "want": -1,
+        "actual": -2
+      },
+      {
+        "hull": 0,
+        "point": [
+          0.0,
+          32.25,
+          32.0
+        ],
+        "margin": 0.25,
+        "want": -1,
+        "actual": -2
+      },
+      {
+        "hull": 0,
+        "point": [
+          0.0,
+          0.0,
+          64.25
+        ],
+        "margin": 0.25,
+        "want": -1,
+        "actual": -2
+      },
+      {
+        "hull": 0,
+        "point": [
+          0.0,
+          0.0,
+          64.25
+        ],
+        "margin": 0.25,
+        "want": -1,
+        "actual": -2
+      },
+      {
+        "hull": 0,
+        "point": [
+          0.0,
+          0.0,
+          64.25
+        ],
+        "margin": 0.25,
+        "want": -1,
+        "actual": -2
+      },
+      {
+        "hull": 0,
+        "point": [
+          0.0,
+          32.25,
+          32.0
+        ],
+        "margin": 0.25,
+        "want": -1,
+        "actual": -2
+      },
+      {
+        "hull": 0,
+        "point": [
+          0.0,
+          0.0,
+          -0.25
+        ],
+        "margin": 0.25,
+        "want": -1,
+        "actual": -2
+      },
+      {
+        "hull": 0,
+        "point": [
+          0.0,
+          -32.25,
+          32.0
+        ],
+        "margin": 0.25,
+        "want": -1,
+        "actual": -2
+      },
+      {
+        "hull": 0,
+        "point": [
+          0.0,
+          32.25,
+          32.0
+        ],
+        "margin": 0.25,
+        "want": -1,
+        "actual": -2
+      },
+      {
+        "hull": 0,
+        "point": [
+          0.0,
+          0.0,
+          64.25
+        ],
+        "margin": 0.25,
+        "want": -1,
+        "actual": -2
+      }
+    ],
+    "counts": {
+      "0": 377,
+      "1": 377,
+      "2": 377
+    },
+    "seconds": 0.0037670989986509085,
+    "map_sha256": "25f3a93a10937a5dccfe378e400ad6ffd98f73ee8ef042b9caa6b6adae8088e8",
+    "bsp_sha256": "9c9edb0dcdb55abf81452213a4961b38c7ca630e984b832a510edaebe7275bf6"
+  },
+  "axis-1-chopfragment": {
+    "failures": [
+      {
+        "hull": 0,
+        "point": [
+          0.0,
+          0.0,
+          -0.25
+        ],
+        "margin": 0.25,
+        "want": -1,
+        "actual": -2
+      },
+      {
+        "hull": 0,
+        "point": [
+          0.0,
+          0.0,
+          64.25
+        ],
+        "margin": 0.25,
+        "want": -1,
+        "actual": -2
+      },
+      {
+        "hull": 0,
+        "point": [
+          0.0,
+          -32.25,
+          32.0
+        ],
+        "margin": 0.25,
+        "want": -1,
+        "actual": -2
+      },
+      {
+        "hull": 0,
+        "point": [
+          0.0,
+          32.25,
+          32.0
+        ],
+        "margin": 0.25,
+        "want": -1,
+        "actual": -2
+      },
+      {
+        "hull": 0,
+        "point": [
+          0.0,
+          32.25,
+          32.0
+        ],
+        "margin": 0.25,
+        "want": -1,
+        "actual": -2
+      },
+      {
+        "hull": 0,
+        "point": [
+          0.0,
+          -32.25,
+          32.0
+        ],
+        "margin": 0.25,
+        "want": -1,
+        "actual": -2
+      },
+      {
+        "hull": 0,
+        "point": [
+          0.0,
+          0.0,
+          64.25
+        ],
+        "margin": 0.25,
+        "want": -1,
+        "actual": -2
+      },
+      {
+        "hull": 0,
+        "point": [
+          0.0,
+          0.0,
+          -0.25
+        ],
+        "margin": 0.25,
+        "want": -1,
+        "actual": -2
+      },
+      {
+        "hull": 0,
+        "point": [
+          0.0,
+          0.0,
+          -0.25
+        ],
+        "margin": 0.25,
+        "want": -1,
+        "actual": -2
+      },
+      {
+        "hull": 0,
+        "point": [
+          0.0,
+          -32.25,
+          32.0
+        ],
+        "margin": 0.25,
+        "want": -1,
+        "actual": -2
+      },
+      {
+        "hull": 0,
+        "point": [
+          0.0,
+          0.0,
+          -0.25
+        ],
+        "margin": 0.25,
+        "want": -1,
+        "actual": -2
+      },
+      {
+        "hull": 0,
+        "point": [
+          0.0,
+          -32.25,
+          32.0
+        ],
+        "margin": 0.25,
+        "want": -1,
+        "actual": -2
+      },
+      {
+        "hull": 0,
+        "point": [
+          0.0,
+          0.0,
+          -0.25
+        ],
+        "margin": 0.25,
+        "want": -1,
+        "actual": -2
+      },
+      {
+        "hull": 0,
+        "point": [
+          0.0,
+          0.0,
+          -0.25
+        ],
+        "margin": 0.25,
+        "want": -1,
+        "actual": -2
+      },
+      {
+        "hull": 0,
+        "point": [
+          0.0,
+          -32.25,
+          32.0
+        ],
+        "margin": 0.25,
+        "want": -1,
+        "actual": -2
+      },
+      {
+        "hull": 0,
+        "point": [
+          0.0,
+          -32.25,
+          32.0
+        ],
+        "margin": 0.25,
+        "want": -1,
+        "actual": -2
+      },
+      {
+        "hull": 0,
+        "point": [
+          0.0,
+          32.25,
+          32.0
+        ],
+        "margin": 0.25,
+        "want": -1,
+        "actual": -2
+      },
+      {
+        "hull": 0,
+        "point": [
+          0.0,
+          0.0,
+          -0.25
+        ],
+        "margin": 0.25,
+        "want": -1,
+        "actual": -2
+      },
+      {
+        "hull": 0,
+        "point": [
+          0.0,
+          0.0,
+          -0.25
+        ],
+        "margin": 0.25,
+        "want": -1,
+        "actual": -2
+      },
+      {
+        "hull": 0,
+        "point": [
+          0.0,
+          0.0,
+          -0.25
+        ],
+        "margin": 0.25,
+        "want": -1,
+        "actual": -2
+      },
+      {
+        "hull": 0,
+        "point": [
+          0.0,
+          32.25,
+          32.0
+        ],
+        "margin": 0.25,
+        "want": -1,
+        "actual": -2
+      },
+      {
+        "hull": 0,
+        "point": [
+          0.0,
+          32.25,
+          32.0
+        ],
+        "margin": 0.25,
+        "want": -1,
+        "actual": -2
+      },
+      {
+        "hull": 0,
+        "point": [
+          0.0,
+          32.25,
+          32.0
+        ],
+        "margin": 0.25,
+        "want": -1,
+        "actual": -2
+      },
+      {
+        "hull": 0,
+        "point": [
+          0.0,
+          0.0,
+          64.25
+        ],
+        "margin": 0.25,
+        "want": -1,
+        "actual": -2
+      },
+      {
+        "hull": 0,
+        "point": [
+          0.0,
+          -32.25,
+          32.0
+        ],
+        "margin": 0.25,
+        "want": -1,
+        "actual": -2
+      },
+      {
+        "hull": 0,
+        "point": [
+          0.0,
+          -32.25,
+          32.0
+        ],
+        "margin": 0.25,
+        "want": -1,
+        "actual": -2
+      },
+      {
+        "hull": 0,
+        "point": [
+          0.0,
+          0.0,
+          64.25
+        ],
+        "margin": 0.25,
+        "want": -1,
+        "actual": -2
+      },
+      {
+        "hull": 0,
+        "point": [
+          0.0,
+          -32.25,
+          32.0
+        ],
+        "margin": 0.25,
+        "want": -1,
+        "actual": -2
+      },
+      {
+        "hull": 0,
+        "point": [
+          0.0,
+          0.0,
+          64.25
+        ],
+        "margin": 0.25,
+        "want": -1,
+        "actual": -2
+      },
+      {
+        "hull": 0,
+        "point": [
+          0.0,
+          0.0,
+          64.25
+        ],
+        "margin": 0.25,
+        "want": -1,
+        "actual": -2
+      },
+      {
+        "hull": 0,
+        "point": [
+          0.0,
+          32.25,
+          32.0
+        ],
+        "margin": 0.25,
+        "want": -1,
+        "actual": -2
+      },
+      {
+        "hull": 0,
+        "point": [
+          0.0,
+          32.25,
+          32.0
+        ],
+        "margin": 0.25,
+        "want": -1,
+        "actual": -2
+      },
+      {
+        "hull": 0,
+        "point": [
+          0.0,
+          0.0,
+          64.25
+        ],
+        "margin": 0.25,
+        "want": -1,
+        "actual": -2
+      },
+      {
+        "hull": 0,
+        "point": [
+          0.0,
+          0.0,
+          64.25
+        ],
+        "margin": 0.25,
+        "want": -1,
+        "actual": -2
+      },
+      {
+        "hull": 0,
+        "point": [
+          0.0,
+          0.0,
+          64.25
+        ],
+        "margin": 0.25,
+        "want": -1,
+        "actual": -2
+      },
+      {
+        "hull": 0,
+        "point": [
+          0.0,
+          32.25,
+          32.0
+        ],
+        "margin": 0.25,
+        "want": -1,
+        "actual": -2
+      },
+      {
+        "hull": 0,
+        "point": [
+          0.0,
+          0.0,
+          -0.25
+        ],
+        "margin": 0.25,
+        "want": -1,
+        "actual": -2
+      },
+      {
+        "hull": 0,
+        "point": [
+          0.0,
+          -32.25,
+          32.0
+        ],
+        "margin": 0.25,
+        "want": -1,
+        "actual": -2
+      },
+      {
+        "hull": 0,
+        "point": [
+          0.0,
+          32.25,
+          32.0
+        ],
+        "margin": 0.25,
+        "want": -1,
+        "actual": -2
+      },
+      {
+        "hull": 0,
+        "point": [
+          0.0,
+          0.0,
+          64.25
+        ],
+        "margin": 0.25,
+        "want": -1,
+        "actual": -2
+      }
+    ],
+    "counts": {
+      "0": 377,
+      "1": 377,
+      "2": 377
+    },
+    "seconds": 0.003748908988200128,
+    "map_sha256": "25f3a93a10937a5dccfe378e400ad6ffd98f73ee8ef042b9caa6b6adae8088e8",
+    "bsp_sha256": "9c9edb0dcdb55abf81452213a4961b38c7ca630e984b832a510edaebe7275bf6"
+  },
+  "translated-default": {
+    "failures": [],
+    "counts": {
+      "0": 377,
+      "1": 377,
+      "2": 377
+    },
+    "seconds": 0.004231564002111554,
+    "map_sha256": "5b083f380041ad53daae11e76d94a7d80d7fe93922f87718272099f673a64463",
+    "bsp_sha256": "7c76cd821e832145eea1c8236327b8a33893f7eb8a85b3b3b91812872d7c7f27"
+  },
+  "translated-chopfragment": {
+    "failures": [],
+    "counts": {
+      "0": 377,
+      "1": 377,
+      "2": 377
+    },
+    "seconds": 0.0036897779209539294,
+    "map_sha256": "5b083f380041ad53daae11e76d94a7d80d7fe93922f87718272099f673a64463",
+    "bsp_sha256": "7c76cd821e832145eea1c8236327b8a33893f7eb8a85b3b3b91812872d7c7f27"
+  },
+  "rotated-default": {
+    "failures": [
+      {
+        "hull": 0,
+        "point": [
+          0.08802319850106599,
+          -0.23308183639692004,
+          -0.02061004768835817
+        ],
+        "margin": 0.2499999999999945,
+        "want": -1,
+        "actual": -2
+      },
+      {
+        "hull": 0,
+        "point": [
+          -22.621962015760076,
+          59.90203195518774,
+          5.296782249364112
+        ],
+        "margin": 0.2500000000000142,
+        "want": -1,
+        "actual": -2
+      },
+      {
+        "hull": 0,
+        "point": [
+          -40.54273913796072,
+          18.172377378524722,
+          9.492813260770681
+        ],
+        "margin": 0.25,
+        "want": -1,
+        "actual": -2
+      },
+      {
+        "hull": 0,
+        "point": [
+          18.008800320703116,
+          41.49657274026475,
+          -4.216641059074513
+        ],
+        "margin": 0.25,
+        "want": -1,
+        "actual": -2
+      },
+      {
+        "hull": 0,
+        "point": [
+          -11.266969408628952,
+          64.4071838706412,
+          2.638086100847477
+        ],
+        "margin": 0.23308183640151015,
+        "want": -1,
+        "actual": -2
+      },
+      {
+        "hull": 0,
+        "point": [
+          -11.266969408628952,
+          -4.738233751853151,
+          2.638086100847477
+        ],
+        "margin": 0.23308183640149413,
+        "want": -1,
+        "actual": -2
+      },
+      {
+        "hull": 0,
+        "point": [
+          -11.266969408628952,
+          -4.738233751853151,
+          2.638086100847477
+        ],
+        "margin": 0.23308183640149413,
+        "want": -1,
+        "actual": -2
+      },
+      {
+        "hull": 0,
+        "point": [
+          -11.266969408628952,
+          -4.738233751853151,
+          2.638086100847477
+        ],
+        "margin": 0.23308183640149413,
+        "want": -1,
+        "actual": -2
+      },
+      {
+        "hull": 0,
+        "point": [
+          22.395315345178467,
+          29.834475059394748,
+          -5.2437144358923895
+        ],
+        "margin": 0.23308183640151015,
+        "want": -1,
+        "actual": -2
+      },
+      {
+        "hull": 0,
+        "point": [
+          -44.9292541624283,
+          29.834475059394748,
+          10.519886637621854
+        ],
+        "margin": 0.23308183640150304,
+        "want": -1,
+        "actual": -2
+      },
+      {
+        "hull": 0,
+        "point": [
+          -11.266969408628952,
+          64.4071838706412,
+          2.638086100847477
+        ],
+        "margin": 0.23308183640151015,
+        "want": -1,
+        "actual": -2
+      },
+      {
+        "hull": 0,
+        "point": [
+          -11.266969408628952,
+          64.4071838706412,
+          2.638086100847477
+        ],
+        "margin": 0.23308183640151015,
+        "want": -1,
+        "actual": -2
+      }
+    ],
+    "counts": {
+      "0": 333,
+      "1": 333,
+      "2": 333
+    },
+    "seconds": 0.0065063179936259985,
+    "map_sha256": "fe6c20500f91fd53fcd75b00e6295f93700ae30aca45cd01a3a5a34eac3bbbd0",
+    "bsp_sha256": "7f3abc2746ab80b3906bfa2cd93ee39a82a4ddaa4d470cb175ebc73f0088701d"
+  },
+  "rotated-chopfragment": {
+    "failures": [
+      {
+        "hull": 0,
+        "point": [
+          0.08802319850106599,
+          -0.23308183639692004,
+          -0.02061004768835817
+        ],
+        "margin": 0.2499999999999945,
+        "want": -1,
+        "actual": -2
+      },
+      {
+        "hull": 0,
+        "point": [
+          -22.621962015760076,
+          59.90203195518774,
+          5.296782249364112
+        ],
+        "margin": 0.2500000000000142,
+        "want": -1,
+        "actual": -2
+      },
+      {
+        "hull": 0,
+        "point": [
+          -40.54273913796072,
+          18.172377378524722,
+          9.492813260770681
+        ],
+        "margin": 0.25,
+        "want": -1,
+        "actual": -2
+      },
+      {
+        "hull": 0,
+        "point": [
+          18.008800320703116,
+          41.49657274026475,
+          -4.216641059074513
+        ],
+        "margin": 0.25,
+        "want": -1,
+        "actual": -2
+      },
+      {
+        "hull": 0,
+        "point": [
+          -11.266969408628952,
+          64.4071838706412,
+          2.638086100847477
+        ],
+        "margin": 0.23308183640151015,
+        "want": -1,
+        "actual": -2
+      },
+      {
+        "hull": 0,
+        "point": [
+          -11.266969408628952,
+          -4.738233751853151,
+          2.638086100847477
+        ],
+        "margin": 0.23308183640149413,
+        "want": -1,
+        "actual": -2
+      },
+      {
+        "hull": 0,
+        "point": [
+          -11.266969408628952,
+          -4.738233751853151,
+          2.638086100847477
+        ],
+        "margin": 0.23308183640149413,
+        "want": -1,
+        "actual": -2
+      },
+      {
+        "hull": 0,
+        "point": [
+          -11.266969408628952,
+          -4.738233751853151,
+          2.638086100847477
+        ],
+        "margin": 0.23308183640149413,
+        "want": -1,
+        "actual": -2
+      },
+      {
+        "hull": 0,
+        "point": [
+          22.395315345178467,
+          29.834475059394748,
+          -5.2437144358923895
+        ],
+        "margin": 0.23308183640151015,
+        "want": -1,
+        "actual": -2
+      },
+      {
+        "hull": 0,
+        "point": [
+          -44.9292541624283,
+          29.834475059394748,
+          10.519886637621854
+        ],
+        "margin": 0.23308183640150304,
+        "want": -1,
+        "actual": -2
+      },
+      {
+        "hull": 0,
+        "point": [
+          -11.266969408628952,
+          64.4071838706412,
+          2.638086100847477
+        ],
+        "margin": 0.23308183640151015,
+        "want": -1,
+        "actual": -2
+      },
+      {
+        "hull": 0,
+        "point": [
+          -11.266969408628952,
+          64.4071838706412,
+          2.638086100847477
+        ],
+        "margin": 0.23308183640151015,
+        "want": -1,
+        "actual": -2
+      }
+    ],
+    "counts": {
+      "0": 333,
+      "1": 333,
+      "2": 333
+    },
+    "seconds": 0.00793438300024718,
+    "map_sha256": "fe6c20500f91fd53fcd75b00e6295f93700ae30aca45cd01a3a5a34eac3bbbd0",
+    "bsp_sha256": "7f3abc2746ab80b3906bfa2cd93ee39a82a4ddaa4d470cb175ebc73f0088701d"
+  },
+  "adjacent-default": {
+    "failures": [],
+    "counts": {
+      "0": 498,
+      "1": 498,
+      "2": 498
+    },
+    "seconds": 0.004989492008462548,
+    "map_sha256": "675ca0c5d94907e3e22a8686ae61b4b1c4e5bd30e2eb7c112b29e20fa8c350b3",
+    "bsp_sha256": "f1d1b7dca896817b8f12e0cd2d1b02c4aef38f9f541db791122430728c1153a0"
+  },
+  "adjacent-chopfragment": {
+    "failures": [],
+    "counts": {
+      "0": 498,
+      "1": 498,
+      "2": 498
+    },
+    "seconds": 0.00582158996257931,
+    "map_sha256": "675ca0c5d94907e3e22a8686ae61b4b1c4e5bd30e2eb7c112b29e20fa8c350b3",
+    "bsp_sha256": "f1d1b7dca896817b8f12e0cd2d1b02c4aef38f9f541db791122430728c1153a0"
+  },
+  "overlap-default": {
+    "failures": [
+      {
+        "hull": 0,
+        "point": [
+          16.0,
+          64.0,
+          0.00585
+        ],
+        "margin": -0.00014999999999999996,
+        "want": -2,
+        "actual": -1
+      },
+      {
+        "hull": 0,
+        "point": [
+          16.0,
+          64.0,
+          0.00585
+        ],
+        "margin": -0.00014999999999999996,
+        "want": -2,
+        "actual": -1
+      },
+      {
+        "hull": 0,
+        "point": [
+          16.0,
+          64.0,
+          0.00585
+        ],
+        "margin": -0.00014999999999999996,
+        "want": -2,
+        "actual": -1
+      },
+      {
+        "hull": 0,
+        "point": [
+          16.0,
+          64.0,
+          0.00585
+        ],
+        "margin": -0.00014999999999999996,
+        "want": -2,
+        "actual": -1
+      },
+      {
+        "hull": 0,
+        "point": [
+          16.0,
+          64.0,
+          0.00585
+        ],
+        "margin": -0.00014999999999999996,
+        "want": -2,
+        "actual": -1
+      },
+      {
+        "hull": 0,
+        "point": [
+          16.0,
+          64.0,
+          0.00585
+        ],
+        "margin": -0.00014999999999999996,
+        "want": -2,
+        "actual": -1
+      },
+      {
+        "hull": 0,
+        "point": [
+          16.0,
+          64.0,
+          0.00585
+        ],
+        "margin": -0.00014999999999999996,
+        "want": -2,
+        "actual": -1
+      },
+      {
+        "hull": 0,
+        "point": [
+          16.0,
+          64.0,
+          0.00585
+        ],
+        "margin": -0.00014999999999999996,
+        "want": -2,
+        "actual": -1
+      },
+      {
+        "hull": 0,
+        "point": [
+          16.0,
+          64.0,
+          0.00585
+        ],
+        "margin": -0.00014999999999999996,
+        "want": -2,
+        "actual": -1
+      },
+      {
+        "hull": 0,
+        "point": [
+          16.0,
+          64.0,
+          0.00585
+        ],
+        "margin": -0.00014999999999999996,
+        "want": -2,
+        "actual": -1
+      },
+      {
+        "hull": 1,
+        "point": [
+          0.0,
+          32.0,
+          -28.00385
+        ],
+        "margin": -0.00015000000000142677,
+        "want": -2,
+        "actual": -1
+      },
+      {
+        "hull": 1,
+        "point": [
+          0.0,
+          32.0,
+          -28.00385
+        ],
+        "margin": -0.00015000000000142677,
+        "want": -2,
+        "actual": -1
+      },
+      {
+        "hull": 1,
+        "point": [
+          0.0,
+          32.0,
+          -28.00385
+        ],
+        "margin": -0.00015000000000142677,
+        "want": -2,
+        "actual": -1
+      },
+      {
+        "hull": 1,
+        "point": [
+          0.0,
+          32.0,
+          -28.00385
+        ],
+        "margin": -0.00015000000000142677,
+        "want": -2,
+        "actual": -1
+      },
+      {
+        "hull": 1,
+        "point": [
+          0.0,
+          32.0,
+          -28.00385
+        ],
+        "margin": -0.00015000000000142677,
+        "want": -2,
+        "actual": -1
+      },
+      {
+        "hull": 1,
+        "point": [
+          0.0,
+          32.0,
+          -28.00385
+        ],
+        "margin": -0.00015000000000142677,
+        "want": -2,
+        "actual": -1
+      },
+      {
+        "hull": 1,
+        "point": [
+          0.0,
+          32.0,
+          -28.00385
+        ],
+        "margin": -0.00015000000000142677,
+        "want": -2,
+        "actual": -1
+      },
+      {
+        "hull": 1,
+        "point": [
+          0.0,
+          32.0,
+          -28.00385
+        ],
+        "margin": -0.00015000000000142677,
+        "want": -2,
+        "actual": -1
+      },
+      {
+        "hull": 1,
+        "point": [
+          0.0,
+          32.0,
+          -28.00385
+        ],
+        "margin": -0.00015000000000142677,
+        "want": -2,
+        "actual": -1
+      },
+      {
+        "hull": 1,
+        "point": [
+          0.0,
+          32.0,
+          -28.00385
+        ],
+        "margin": -0.00015000000000142677,
+        "want": -2,
+        "actual": -1
+      },
+      {
+        "hull": 1,
+        "point": [
+          16.0,
+          64.0,
+          28.00585
+        ],
+        "margin": -0.00015000000000142677,
+        "want": -2,
+        "actual": -1
+      },
+      {
+        "hull": 1,
+        "point": [
+          16.0,
+          64.0,
+          28.00585
+        ],
+        "margin": -0.00015000000000142677,
+        "want": -2,
+        "actual": -1
+      },
+      {
+        "hull": 1,
+        "point": [
+          16.0,
+          64.0,
+          28.00585
+        ],
+        "margin": -0.00015000000000142677,
+        "want": -2,
+        "actual": -1
+      },
+      {
+        "hull": 1,
+        "point": [
+          16.0,
+          64.0,
+          28.00585
+        ],
+        "margin": -0.00015000000000142677,
+        "want": -2,
+        "actual": -1
+      },
+      {
+        "hull": 1,
+        "point": [
+          16.0,
+          64.0,
+          28.00585
+        ],
+        "margin": -0.00015000000000142677,
+        "want": -2,
+        "actual": -1
+      },
+      {
+        "hull": 1,
+        "point": [
+          16.0,
+          64.0,
+          28.00585
+        ],
+        "margin": -0.00015000000000142677,
+        "want": -2,
+        "actual": -1
+      },
+      {
+        "hull": 1,
+        "point": [
+          16.0,
+          64.0,
+          28.00585
+        ],
+        "margin": -0.00015000000000142677,
+        "want": -2,
+        "actual": -1
+      },
+      {
+        "hull": 1,
+        "point": [
+          16.0,
+          64.0,
+          28.00585
+        ],
+        "margin": -0.00015000000000142677,
+        "want": -2,
+        "actual": -1
+      },
+      {
+        "hull": 1,
+        "point": [
+          16.0,
+          64.0,
+          28.00585
+        ],
+        "margin": -0.00015000000000142677,
+        "want": -2,
+        "actual": -1
+      },
+      {
+        "hull": 1,
+        "point": [
+          16.0,
+          64.0,
+          28.00585
+        ],
+        "margin": -0.00015000000000142677,
+        "want": -2,
+        "actual": -1
+      },
+      {
+        "hull": 2,
+        "point": [
+          0.0,
+          32.0,
+          -44.00385
+        ],
+        "margin": -0.00014999999999787406,
+        "want": -2,
+        "actual": -1
+      },
+      {
+        "hull": 2,
+        "point": [
+          0.0,
+          32.0,
+          -44.00385
+        ],
+        "margin": -0.00014999999999787406,
+        "want": -2,
+        "actual": -1
+      },
+      {
+        "hull": 2,
+        "point": [
+          0.0,
+          32.0,
+          -44.00385
+        ],
+        "margin": -0.00014999999999787406,
+        "want": -2,
+        "actual": -1
+      },
+      {
+        "hull": 2,
+        "point": [
+          0.0,
+          32.0,
+          -44.00385
+        ],
+        "margin": -0.00014999999999787406,
+        "want": -2,
+        "actual": -1
+      },
+      {
+        "hull": 2,
+        "point": [
+          0.0,
+          32.0,
+          -44.00385
+        ],
+        "margin": -0.00014999999999787406,
+        "want": -2,
+        "actual": -1
+      },
+      {
+        "hull": 2,
+        "point": [
+          0.0,
+          32.0,
+          -44.00385
+        ],
+        "margin": -0.00014999999999787406,
+        "want": -2,
+        "actual": -1
+      },
+      {
+        "hull": 2,
+        "point": [
+          0.0,
+          32.0,
+          -44.00385
+        ],
+        "margin": -0.00014999999999787406,
+        "want": -2,
+        "actual": -1
+      },
+      {
+        "hull": 2,
+        "point": [
+          0.0,
+          32.0,
+          -44.00385
+        ],
+        "margin": -0.00014999999999787406,
+        "want": -2,
+        "actual": -1
+      },
+      {
+        "hull": 2,
+        "point": [
+          0.0,
+          32.0,
+          -44.00385
+        ],
+        "margin": -0.00014999999999787406,
+        "want": -2,
+        "actual": -1
+      },
+      {
+        "hull": 2,
+        "point": [
+          0.0,
+          32.0,
+          -44.00385
+        ],
+        "margin": -0.00014999999999787406,
+        "want": -2,
+        "actual": -1
+      },
+      {
+        "hull": 2,
+        "point": [
+          16.0,
+          64.0,
+          44.00585
+        ],
+        "margin": -0.00014999999999787406,
+        "want": -2,
+        "actual": -1
+      },
+      {
+        "hull": 2,
+        "point": [
+          16.0,
+          64.0,
+          44.00585
+        ],
+        "margin": -0.00014999999999787406,
+        "want": -2,
+        "actual": -1
+      },
+      {
+        "hull": 2,
+        "point": [
+          16.0,
+          64.0,
+          44.00585
+        ],
+        "margin": -0.00014999999999787406,
+        "want": -2,
+        "actual": -1
+      },
+      {
+        "hull": 2,
+        "point": [
+          16.0,
+          64.0,
+          44.00585
+        ],
+        "margin": -0.00014999999999787406,
+        "want": -2,
+        "actual": -1
+      },
+      {
+        "hull": 2,
+        "point": [
+          16.0,
+          64.0,
+          44.00585
+        ],
+        "margin": -0.00014999999999787406,
+        "want": -2,
+        "actual": -1
+      },
+      {
+        "hull": 2,
+        "point": [
+          16.0,
+          64.0,
+          44.00585
+        ],
+        "margin": -0.00014999999999787406,
+        "want": -2,
+        "actual": -1
+      },
+      {
+        "hull": 2,
+        "point": [
+          16.0,
+          64.0,
+          44.00585
+        ],
+        "margin": -0.00014999999999787406,
+        "want": -2,
+        "actual": -1
+      },
+      {
+        "hull": 2,
+        "point": [
+          16.0,
+          64.0,
+          44.00585
+        ],
+        "margin": -0.00014999999999787406,
+        "want": -2,
+        "actual": -1
+      },
+      {
+        "hull": 2,
+        "point": [
+          16.0,
+          64.0,
+          44.00585
+        ],
+        "margin": -0.00014999999999787406,
+        "want": -2,
+        "actual": -1
+      },
+      {
+        "hull": 2,
+        "point": [
+          16.0,
+          64.0,
+          44.00585
+        ],
+        "margin": -0.00014999999999787406,
+        "want": -2,
+        "actual": -1
+      }
+    ],
+    "counts": {
+      "0": 478,
+      "1": 498,
+      "2": 498
+    },
+    "seconds": 0.005112082930281758,
+    "map_sha256": "f9e0eaefb43dca84c363bc486e8fcf37f772872a1fda582c805f224cbb14e912",
+    "bsp_sha256": "f5c5d4e531d9d25019569401ef02e3bc19e1df9890c55aedf1bfadd5887a610a"
+  },
+  "overlap-chopfragment": {
+    "failures": [
+      {
+        "hull": 0,
+        "point": [
+          16.0,
+          64.0,
+          0.00585
+        ],
+        "margin": -0.00014999999999999996,
+        "want": -2,
+        "actual": -1
+      },
+      {
+        "hull": 0,
+        "point": [
+          16.0,
+          64.0,
+          0.00585
+        ],
+        "margin": -0.00014999999999999996,
+        "want": -2,
+        "actual": -1
+      },
+      {
+        "hull": 0,
+        "point": [
+          16.0,
+          64.0,
+          0.00585
+        ],
+        "margin": -0.00014999999999999996,
+        "want": -2,
+        "actual": -1
+      },
+      {
+        "hull": 0,
+        "point": [
+          16.0,
+          64.0,
+          0.00585
+        ],
+        "margin": -0.00014999999999999996,
+        "want": -2,
+        "actual": -1
+      },
+      {
+        "hull": 0,
+        "point": [
+          16.0,
+          64.0,
+          0.00585
+        ],
+        "margin": -0.00014999999999999996,
+        "want": -2,
+        "actual": -1
+      },
+      {
+        "hull": 0,
+        "point": [
+          16.0,
+          64.0,
+          0.00585
+        ],
+        "margin": -0.00014999999999999996,
+        "want": -2,
+        "actual": -1
+      },
+      {
+        "hull": 0,
+        "point": [
+          16.0,
+          64.0,
+          0.00585
+        ],
+        "margin": -0.00014999999999999996,
+        "want": -2,
+        "actual": -1
+      },
+      {
+        "hull": 0,
+        "point": [
+          16.0,
+          64.0,
+          0.00585
+        ],
+        "margin": -0.00014999999999999996,
+        "want": -2,
+        "actual": -1
+      },
+      {
+        "hull": 0,
+        "point": [
+          16.0,
+          64.0,
+          0.00585
+        ],
+        "margin": -0.00014999999999999996,
+        "want": -2,
+        "actual": -1
+      },
+      {
+        "hull": 0,
+        "point": [
+          16.0,
+          64.0,
+          0.00585
+        ],
+        "margin": -0.00014999999999999996,
+        "want": -2,
+        "actual": -1
+      },
+      {
+        "hull": 1,
+        "point": [
+          0.0,
+          32.0,
+          -28.00385
+        ],
+        "margin": -0.00015000000000142677,
+        "want": -2,
+        "actual": -1
+      },
+      {
+        "hull": 1,
+        "point": [
+          0.0,
+          32.0,
+          -28.00385
+        ],
+        "margin": -0.00015000000000142677,
+        "want": -2,
+        "actual": -1
+      },
+      {
+        "hull": 1,
+        "point": [
+          0.0,
+          32.0,
+          -28.00385
+        ],
+        "margin": -0.00015000000000142677,
+        "want": -2,
+        "actual": -1
+      },
+      {
+        "hull": 1,
+        "point": [
+          0.0,
+          32.0,
+          -28.00385
+        ],
+        "margin": -0.00015000000000142677,
+        "want": -2,
+        "actual": -1
+      },
+      {
+        "hull": 1,
+        "point": [
+          0.0,
+          32.0,
+          -28.00385
+        ],
+        "margin": -0.00015000000000142677,
+        "want": -2,
+        "actual": -1
+      },
+      {
+        "hull": 1,
+        "point": [
+          0.0,
+          32.0,
+          -28.00385
+        ],
+        "margin": -0.00015000000000142677,
+        "want": -2,
+        "actual": -1
+      },
+      {
+        "hull": 1,
+        "point": [
+          0.0,
+          32.0,
+          -28.00385
+        ],
+        "margin": -0.00015000000000142677,
+        "want": -2,
+        "actual": -1
+      },
+      {
+        "hull": 1,
+        "point": [
+          0.0,
+          32.0,
+          -28.00385
+        ],
+        "margin": -0.00015000000000142677,
+        "want": -2,
+        "actual": -1
+      },
+      {
+        "hull": 1,
+        "point": [
+          0.0,
+          32.0,
+          -28.00385
+        ],
+        "margin": -0.00015000000000142677,
+        "want": -2,
+        "actual": -1
+      },
+      {
+        "hull": 1,
+        "point": [
+          0.0,
+          32.0,
+          -28.00385
+        ],
+        "margin": -0.00015000000000142677,
+        "want": -2,
+        "actual": -1
+      },
+      {
+        "hull": 2,
+        "point": [
+          0.0,
+          32.0,
+          -44.00385
+        ],
+        "margin": -0.00014999999999787406,
+        "want": -2,
+        "actual": -1
+      },
+      {
+        "hull": 2,
+        "point": [
+          0.0,
+          32.0,
+          -44.00385
+        ],
+        "margin": -0.00014999999999787406,
+        "want": -2,
+        "actual": -1
+      },
+      {
+        "hull": 2,
+        "point": [
+          0.0,
+          32.0,
+          -44.00385
+        ],
+        "margin": -0.00014999999999787406,
+        "want": -2,
+        "actual": -1
+      },
+      {
+        "hull": 2,
+        "point": [
+          0.0,
+          32.0,
+          -44.00385
+        ],
+        "margin": -0.00014999999999787406,
+        "want": -2,
+        "actual": -1
+      },
+      {
+        "hull": 2,
+        "point": [
+          0.0,
+          32.0,
+          -44.00385
+        ],
+        "margin": -0.00014999999999787406,
+        "want": -2,
+        "actual": -1
+      },
+      {
+        "hull": 2,
+        "point": [
+          0.0,
+          32.0,
+          -44.00385
+        ],
+        "margin": -0.00014999999999787406,
+        "want": -2,
+        "actual": -1
+      },
+      {
+        "hull": 2,
+        "point": [
+          0.0,
+          32.0,
+          -44.00385
+        ],
+        "margin": -0.00014999999999787406,
+        "want": -2,
+        "actual": -1
+      },
+      {
+        "hull": 2,
+        "point": [
+          0.0,
+          32.0,
+          -44.00385
+        ],
+        "margin": -0.00014999999999787406,
+        "want": -2,
+        "actual": -1
+      },
+      {
+        "hull": 2,
+        "point": [
+          0.0,
+          32.0,
+          -44.00385
+        ],
+        "margin": -0.00014999999999787406,
+        "want": -2,
+        "actual": -1
+      },
+      {
+        "hull": 2,
+        "point": [
+          0.0,
+          32.0,
+          -44.00385
+        ],
+        "margin": -0.00014999999999787406,
+        "want": -2,
+        "actual": -1
+      }
+    ],
+    "counts": {
+      "0": 478,
+      "1": 498,
+      "2": 498
+    },
+    "seconds": 0.005872161942534149,
+    "map_sha256": "f9e0eaefb43dca84c363bc486e8fcf37f772872a1fda582c805f224cbb14e912",
+    "bsp_sha256": "cd188cb553ab411c567960f744f1662b1a44120eaf406b80936b594196e07763"
+  },
+  "near-coplanar-default": {
+    "failures": [
+      {
+        "hull": 1,
+        "point": [
+          0.0,
+          32.0,
+          -28.00385
+        ],
+        "margin": -0.00015000000000142677,
+        "want": -2,
+        "actual": -1
+      },
+      {
+        "hull": 1,
+        "point": [
+          0.0,
+          32.0,
+          -28.00385
+        ],
+        "margin": -0.00015000000000142677,
+        "want": -2,
+        "actual": -1
+      },
+      {
+        "hull": 1,
+        "point": [
+          0.0,
+          32.0,
+          -28.00385
+        ],
+        "margin": -0.00015000000000142677,
+        "want": -2,
+        "actual": -1
+      },
+      {
+        "hull": 1,
+        "point": [
+          0.0,
+          32.0,
+          -28.00385
+        ],
+        "margin": -0.00015000000000142677,
+        "want": -2,
+        "actual": -1
+      },
+      {
+        "hull": 1,
+        "point": [
+          0.0,
+          32.0,
+          -28.00385
+        ],
+        "margin": -0.00015000000000142677,
+        "want": -2,
+        "actual": -1
+      },
+      {
+        "hull": 1,
+        "point": [
+          0.0,
+          32.0,
+          -28.00385
+        ],
+        "margin": -0.00015000000000142677,
+        "want": -2,
+        "actual": -1
+      },
+      {
+        "hull": 1,
+        "point": [
+          0.0,
+          32.0,
+          -28.00385
+        ],
+        "margin": -0.00015000000000142677,
+        "want": -2,
+        "actual": -1
+      },
+      {
+        "hull": 1,
+        "point": [
+          0.0,
+          32.0,
+          -28.00385
+        ],
+        "margin": -0.00015000000000142677,
+        "want": -2,
+        "actual": -1
+      },
+      {
+        "hull": 1,
+        "point": [
+          0.0,
+          32.0,
+          -28.00385
+        ],
+        "margin": -0.00015000000000142677,
+        "want": -2,
+        "actual": -1
+      },
+      {
+        "hull": 1,
+        "point": [
+          0.0,
+          32.0,
+          -28.00385
+        ],
+        "margin": -0.00015000000000142677,
+        "want": -2,
+        "actual": -1
+      },
+      {
+        "hull": 2,
+        "point": [
+          0.0,
+          32.0,
+          -44.00385
+        ],
+        "margin": -0.00014999999999787406,
+        "want": -2,
+        "actual": -1
+      },
+      {
+        "hull": 2,
+        "point": [
+          0.0,
+          32.0,
+          -44.00385
+        ],
+        "margin": -0.00014999999999787406,
+        "want": -2,
+        "actual": -1
+      },
+      {
+        "hull": 2,
+        "point": [
+          0.0,
+          32.0,
+          -44.00385
+        ],
+        "margin": -0.00014999999999787406,
+        "want": -2,
+        "actual": -1
+      },
+      {
+        "hull": 2,
+        "point": [
+          0.0,
+          32.0,
+          -44.00385
+        ],
+        "margin": -0.00014999999999787406,
+        "want": -2,
+        "actual": -1
+      },
+      {
+        "hull": 2,
+        "point": [
+          0.0,
+          32.0,
+          -44.00385
+        ],
+        "margin": -0.00014999999999787406,
+        "want": -2,
+        "actual": -1
+      },
+      {
+        "hull": 2,
+        "point": [
+          0.0,
+          32.0,
+          -44.00385
+        ],
+        "margin": -0.00014999999999787406,
+        "want": -2,
+        "actual": -1
+      },
+      {
+        "hull": 2,
+        "point": [
+          0.0,
+          32.0,
+          -44.00385
+        ],
+        "margin": -0.00014999999999787406,
+        "want": -2,
+        "actual": -1
+      },
+      {
+        "hull": 2,
+        "point": [
+          0.0,
+          32.0,
+          -44.00385
+        ],
+        "margin": -0.00014999999999787406,
+        "want": -2,
+        "actual": -1
+      },
+      {
+        "hull": 2,
+        "point": [
+          0.0,
+          32.0,
+          -44.00385
+        ],
+        "margin": -0.00014999999999787406,
+        "want": -2,
+        "actual": -1
+      },
+      {
+        "hull": 2,
+        "point": [
+          0.0,
+          32.0,
+          -44.00385
+        ],
+        "margin": -0.00014999999999787406,
+        "want": -2,
+        "actual": -1
+      }
+    ],
+    "counts": {
+      "0": 498,
+      "1": 498,
+      "2": 498
+    },
+    "seconds": 0.005456757033243775,
+    "map_sha256": "acb20f5374601518281fc7d98ce2c4efe17cae966dff29f6103774961b29fa6b",
+    "bsp_sha256": "7d0764158cdac7678608e85368ca1be83efbcf86cfa141e8e983abd09c790c7d"
+  },
+  "near-coplanar-chopfragment": {
+    "failures": [
+      {
+        "hull": 1,
+        "point": [
+          0.0,
+          32.0,
+          -28.00385
+        ],
+        "margin": -0.00015000000000142677,
+        "want": -2,
+        "actual": -1
+      },
+      {
+        "hull": 1,
+        "point": [
+          0.0,
+          32.0,
+          -28.00385
+        ],
+        "margin": -0.00015000000000142677,
+        "want": -2,
+        "actual": -1
+      },
+      {
+        "hull": 1,
+        "point": [
+          0.0,
+          32.0,
+          -28.00385
+        ],
+        "margin": -0.00015000000000142677,
+        "want": -2,
+        "actual": -1
+      },
+      {
+        "hull": 1,
+        "point": [
+          0.0,
+          32.0,
+          -28.00385
+        ],
+        "margin": -0.00015000000000142677,
+        "want": -2,
+        "actual": -1
+      },
+      {
+        "hull": 1,
+        "point": [
+          0.0,
+          32.0,
+          -28.00385
+        ],
+        "margin": -0.00015000000000142677,
+        "want": -2,
+        "actual": -1
+      },
+      {
+        "hull": 1,
+        "point": [
+          0.0,
+          32.0,
+          -28.00385
+        ],
+        "margin": -0.00015000000000142677,
+        "want": -2,
+        "actual": -1
+      },
+      {
+        "hull": 1,
+        "point": [
+          0.0,
+          32.0,
+          -28.00385
+        ],
+        "margin": -0.00015000000000142677,
+        "want": -2,
+        "actual": -1
+      },
+      {
+        "hull": 1,
+        "point": [
+          0.0,
+          32.0,
+          -28.00385
+        ],
+        "margin": -0.00015000000000142677,
+        "want": -2,
+        "actual": -1
+      },
+      {
+        "hull": 1,
+        "point": [
+          0.0,
+          32.0,
+          -28.00385
+        ],
+        "margin": -0.00015000000000142677,
+        "want": -2,
+        "actual": -1
+      },
+      {
+        "hull": 1,
+        "point": [
+          0.0,
+          32.0,
+          -28.00385
+        ],
+        "margin": -0.00015000000000142677,
+        "want": -2,
+        "actual": -1
+      },
+      {
+        "hull": 2,
+        "point": [
+          0.0,
+          32.0,
+          -44.00385
+        ],
+        "margin": -0.00014999999999787406,
+        "want": -2,
+        "actual": -1
+      },
+      {
+        "hull": 2,
+        "point": [
+          0.0,
+          32.0,
+          -44.00385
+        ],
+        "margin": -0.00014999999999787406,
+        "want": -2,
+        "actual": -1
+      },
+      {
+        "hull": 2,
+        "point": [
+          0.0,
+          32.0,
+          -44.00385
+        ],
+        "margin": -0.00014999999999787406,
+        "want": -2,
+        "actual": -1
+      },
+      {
+        "hull": 2,
+        "point": [
+          0.0,
+          32.0,
+          -44.00385
+        ],
+        "margin": -0.00014999999999787406,
+        "want": -2,
+        "actual": -1
+      },
+      {
+        "hull": 2,
+        "point": [
+          0.0,
+          32.0,
+          -44.00385
+        ],
+        "margin": -0.00014999999999787406,
+        "want": -2,
+        "actual": -1
+      },
+      {
+        "hull": 2,
+        "point": [
+          0.0,
+          32.0,
+          -44.00385
+        ],
+        "margin": -0.00014999999999787406,
+        "want": -2,
+        "actual": -1
+      },
+      {
+        "hull": 2,
+        "point": [
+          0.0,
+          32.0,
+          -44.00385
+        ],
+        "margin": -0.00014999999999787406,
+        "want": -2,
+        "actual": -1
+      },
+      {
+        "hull": 2,
+        "point": [
+          0.0,
+          32.0,
+          -44.00385
+        ],
+        "margin": -0.00014999999999787406,
+        "want": -2,
+        "actual": -1
+      },
+      {
+        "hull": 2,
+        "point": [
+          0.0,
+          32.0,
+          -44.00385
+        ],
+        "margin": -0.00014999999999787406,
+        "want": -2,
+        "actual": -1
+      },
+      {
+        "hull": 2,
+        "point": [
+          0.0,
+          32.0,
+          -44.00385
+        ],
+        "margin": -0.00014999999999787406,
+        "want": -2,
+        "actual": -1
+      }
+    ],
+    "counts": {
+      "0": 498,
+      "1": 498,
+      "2": 498
+    },
+    "seconds": 0.005314895999617875,
+    "map_sha256": "acb20f5374601518281fc7d98ce2c4efe17cae966dff29f6103774961b29fa6b",
+    "bsp_sha256": "7d0764158cdac7678608e85368ca1be83efbcf86cfa141e8e983abd09c790c7d"
+  }
+}

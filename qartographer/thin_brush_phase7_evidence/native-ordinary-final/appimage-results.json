@@ -1,0 +1,45 @@
+{
+  "engine_sha256": "cefbd107e21a6cb362401f8b1009c313f7d5b94053364165a4a8d141c8e08656",
+  "command": [
+    "/home/warrenmarshall/.local/share/Steam/steamapps/common/Quake/qrustyquake",
+    "-basedir",
+    "/tmp/qqbsp-phase7/evidence/native-ordinary-final/game",
+    "-window",
+    "-width",
+    "960",
+    "-height",
+    "640",
+    "-nosound",
+    "+exec",
+    "acceptance.cfg"
+  ],
+  "exit": 127,
+  "seconds": 0.011255579069256783,
+  "consumers": [
+    {
+      "command": [
+        "/mnt/fb91e326-b6dc-4352-b43c-7517fcce8b77/Dropbox/Quake/Utils/linux/vis",
+        "-fast",
+        "-nopercent",
+        "/tmp/qqbsp-phase7/evidence/native-ordinary-final/ordinary.bsp"
+      ],
+      "exit": 0,
+      "sha256": "9068c8293a5ca4d10bd073fb43d51875c895a8e27e938268d2412ad2f528d0bb"
+    },
+    {
+      "command": [
+        "/mnt/fb91e326-b6dc-4352-b43c-7517fcce8b77/Dropbox/Quake/Utils/linux/light",
+        "-minlight",
+        "50",
+        "-nopercent",
+        "/tmp/qqbsp-phase7/evidence/native-ordinary-final/ordinary.bsp"
+      ],
+      "exit": 0,
+      "sha256": "6e72e261d38cd53089657926d879238feeea15e1fff87085ac67a83b67e53f43"
+    }
+  ],
+  "compiled_bsp_sha256": "e71bfe52224b7a88efeb34cffed0c7315a104162426a6d1d865d49f29907d0c4",
+  "consumed_bsp_sha256": "f0647df1ad929ea43f248366eb19e67e9868c9ea3d158c840010a93b5fc5c442",
+  "states": {},
+  "acceptance": "INCOMPLETE"
+}

@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/tmp/qqbsp-phase7/ordinary_compare.py", line 15, in <module>
+    baseline=c.BSP(m.with_suffix('.bsp'));candidate=c.BSP(source.with_suffix('.bsp'));geometry=brushes(m.read_text())
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/qqbsp-phase7/source/qartographer/spline_smooth_collision_compile.py", line 16, in __init__
+    self.b=pathlib.Path(path).read_bytes();assert self.b[:4]==b'BSP2'
+                                                  ^^^^^^^^^^^^^^^^^^^
+AssertionError

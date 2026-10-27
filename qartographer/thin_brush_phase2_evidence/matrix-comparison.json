@@ -1,0 +1,638 @@
+{
+  "P1": {
+    "original-default": {
+      "0": 111,
+      "1": 0,
+      "2": 0
+    },
+    "original-chopfragment": {
+      "0": 111,
+      "1": 0,
+      "2": 0
+    },
+    "control-default": {
+      "0": 0,
+      "1": 0,
+      "2": 0
+    },
+    "control-chopfragment": {
+      "0": 0,
+      "1": 0,
+      "2": 0
+    },
+    "thickness-0.0005-default": {
+      "0": 111,
+      "1": 0,
+      "2": 0
+    },
+    "thickness-0.0005-chopfragment": {
+      "0": 111,
+      "1": 0,
+      "2": 0
+    },
+    "thickness-0.002-default": {
+      "0": 111,
+      "1": 0,
+      "2": 0
+    },
+    "thickness-0.002-chopfragment": {
+      "0": 111,
+      "1": 0,
+      "2": 0
+    },
+    "thickness-0.008-default": {
+      "0": 111,
+      "1": 0,
+      "2": 0
+    },
+    "thickness-0.008-chopfragment": {
+      "0": 111,
+      "1": 0,
+      "2": 0
+    },
+    "thickness-0.015625-default": {
+      "0": 111,
+      "1": 0,
+      "2": 0
+    },
+    "thickness-0.015625-chopfragment": {
+      "0": 111,
+      "1": 0,
+      "2": 0
+    },
+    "thickness-0.02-default": {
+      "0": 111,
+      "1": 0,
+      "2": 0
+    },
+    "thickness-0.02-chopfragment": {
+      "0": 111,
+      "1": 0,
+      "2": 0
+    },
+    "thickness-0.05-default": {
+      "0": 111,
+      "1": 0,
+      "2": 0
+    },
+    "thickness-0.05-chopfragment": {
+      "0": 111,
+      "1": 0,
+      "2": 0
+    },
+    "thickness-0.099-default": {
+      "0": 109,
+      "1": 0,
+      "2": 0
+    },
+    "thickness-0.099-chopfragment": {
+      "0": 109,
+      "1": 0,
+      "2": 0
+    },
+    "thickness-0.1-default": {
+      "0": 0,
+      "1": 0,
+      "2": 0
+    },
+    "thickness-0.1-chopfragment": {
+      "0": 0,
+      "1": 0,
+      "2": 0
+    },
+    "thickness-0.101-default": {
+      "0": 0,
+      "1": 0,
+      "2": 0
+    },
+    "thickness-0.101-chopfragment": {
+      "0": 0,
+      "1": 0,
+      "2": 0
+    },
+    "thickness-0.25-default": {
+      "0": 0,
+      "1": 0,
+      "2": 0
+    },
+    "thickness-0.25-chopfragment": {
+      "0": 0,
+      "1": 0,
+      "2": 0
+    },
+    "thickness-1-default": {
+      "0": 0,
+      "1": 0,
+      "2": 0
+    },
+    "thickness-1-chopfragment": {
+      "0": 0,
+      "1": 0,
+      "2": 0
+    },
+    "thickness-16-default": {
+      "0": 0,
+      "1": 0,
+      "2": 0
+    },
+    "thickness-16-chopfragment": {
+      "0": 0,
+      "1": 0,
+      "2": 0
+    },
+    "axis-0-default": {
+      "0": 110,
+      "1": 0,
+      "2": 0
+    },
+    "axis-0-chopfragment": {
+      "0": 110,
+      "1": 0,
+      "2": 0
+    },
+    "axis-1-default": {
+      "0": 108,
+      "1": 0,
+      "2": 0
+    },
+    "axis-1-chopfragment": {
+      "0": 108,
+      "1": 0,
+      "2": 0
+    },
+    "translated-default": {
+      "0": 111,
+      "1": 0,
+      "2": 0
+    },
+    "translated-chopfragment": {
+      "0": 111,
+      "1": 0,
+      "2": 0
+    },
+    "rotated-default": {
+      "0": 75,
+      "1": 0,
+      "2": 0
+    },
+    "rotated-chopfragment": {
+      "0": 75,
+      "1": 0,
+      "2": 0
+    },
+    "adjacent-default": {
+      "0": 124,
+      "1": 0,
+      "2": 0
+    },
+    "adjacent-chopfragment": {
+      "0": 124,
+      "1": 0,
+      "2": 0
+    },
+    "overlap-default": {
+      "0": 130,
+      "1": 20,
+      "2": 20
+    },
+    "overlap-chopfragment": {
+      "0": 130,
+      "1": 10,
+      "2": 10
+    },
+    "near-coplanar-default": {
+      "0": 240,
+      "1": 10,
+      "2": 10
+    },
+    "near-coplanar-chopfragment": {
+      "0": 240,
+      "1": 10,
+      "2": 10
+    }
+  },
+  "node-volume-only": {
+    "original-default": {
+      "0": 0,
+      "1": 0,
+      "2": 0
+    },
+    "original-chopfragment": {
+      "0": 0,
+      "1": 0,
+      "2": 0
+    },
+    "control-default": {
+      "0": 0,
+      "1": 0,
+      "2": 0
+    },
+    "control-chopfragment": {
+      "0": 0,
+      "1": 0,
+      "2": 0
+    },
+    "thickness-0.0005-default": {
+      "0": 0,
+      "1": 0,
+      "2": 0
+    },
+    "thickness-0.0005-chopfragment": {
+      "0": 0,
+      "1": 0,
+      "2": 0
+    },
+    "thickness-0.002-default": {
+      "0": 0,
+      "1": 0,
+      "2": 0
+    },
+    "thickness-0.002-chopfragment": {
+      "0": 0,
+      "1": 0,
+      "2": 0
+    },
+    "thickness-0.008-default": {
+      "0": 0,
+      "1": 0,
+      "2": 0
+    },
+    "thickness-0.008-chopfragment": {
+      "0": 0,
+      "1": 0,
+      "2": 0
+    },
+    "thickness-0.015625-default": {
+      "0": 0,
+      "1": 0,
+      "2": 0
+    },
+    "thickness-0.015625-chopfragment": {
+      "0": 0,
+      "1": 0,
+      "2": 0
+    },
+    "thickness-0.02-default": {
+      "0": 0,
+      "1": 0,
+      "2": 0
+    },
+    "thickness-0.02-chopfragment": {
+      "0": 0,
+      "1": 0,
+      "2": 0
+    },
+    "thickness-0.05-default": {
+      "0": 0,
+      "1": 0,
+      "2": 0
+    },
+    "thickness-0.05-chopfragment": {
+      "0": 0,
+      "1": 0,
+      "2": 0
+    },
+    "thickness-0.099-default": {
+      "0": 0,
+      "1": 0,
+      "2": 0
+    },
+    "thickness-0.099-chopfragment": {
+      "0": 0,
+      "1": 0,
+      "2": 0
+    },
+    "thickness-0.1-default": {
+      "0": 0,
+      "1": 0,
+      "2": 0
+    },
+    "thickness-0.1-chopfragment": {
+      "0": 0,
+      "1": 0,
+      "2": 0
+    },
+    "thickness-0.101-default": {
+      "0": 0,
+      "1": 0,
+      "2": 0
+    },
+    "thickness-0.101-chopfragment": {
+      "0": 0,
+      "1": 0,
+      "2": 0
+    },
+    "thickness-0.25-default": {
+      "0": 0,
+      "1": 0,
+      "2": 0
+    },
+    "thickness-0.25-chopfragment": {
+      "0": 0,
+      "1": 0,
+      "2": 0
+    },
+    "thickness-1-default": {
+      "0": 0,
+      "1": 0,
+      "2": 0
+    },
+    "thickness-1-chopfragment": {
+      "0": 0,
+      "1": 0,
+      "2": 0
+    },
+    "thickness-16-default": {
+      "0": 0,
+      "1": 0,
+      "2": 0
+    },
+    "thickness-16-chopfragment": {
+      "0": 0,
+      "1": 0,
+      "2": 0
+    },
+    "axis-0-default": {
+      "0": 20,
+      "1": 0,
+      "2": 0
+    },
+    "axis-0-chopfragment": {
+      "0": 20,
+      "1": 0,
+      "2": 0
+    },
+    "axis-1-default": {
+      "0": 40,
+      "1": 0,
+      "2": 0
+    },
+    "axis-1-chopfragment": {
+      "0": 40,
+      "1": 0,
+      "2": 0
+    },
+    "translated-default": {
+      "0": 0,
+      "1": 0,
+      "2": 0
+    },
+    "translated-chopfragment": {
+      "0": 0,
+      "1": 0,
+      "2": 0
+    },
+    "rotated-default": {
+      "0": 12,
+      "1": 0,
+      "2": 0
+    },
+    "rotated-chopfragment": {
+      "0": 12,
+      "1": 0,
+      "2": 0
+    },
+    "adjacent-default": {
+      "0": 0,
+      "1": 0,
+      "2": 0
+    },
+    "adjacent-chopfragment": {
+      "0": 0,
+      "1": 0,
+      "2": 0
+    },
+    "overlap-default": {
+      "0": 10,
+      "1": 20,
+      "2": 20
+    },
+    "overlap-chopfragment": {
+      "0": 10,
+      "1": 10,
+      "2": 10
+    },
+    "near-coplanar-default": {
+      "0": 0,
+      "1": 10,
+      "2": 10
+    },
+    "near-coplanar-chopfragment": {
+      "0": 0,
+      "1": 10,
+      "2": 10
+    }
+  },
+  "uniform-diagnostic": {
+    "original-default": {
+      "0": 0,
+      "1": 0,
+      "2": 0
+    },
+    "original-chopfragment": {
+      "0": 0,
+      "1": 0,
+      "2": 0
+    },
+    "control-default": {
+      "0": 0,
+      "1": 0,
+      "2": 0
+    },
+    "control-chopfragment": {
+      "0": 0,
+      "1": 0,
+      "2": 0
+    },
+    "thickness-0.0005-default": {
+      "0": 0,
+      "1": 0,
+      "2": 0
+    },
+    "thickness-0.0005-chopfragment": {
+      "0": 0,
+      "1": 0,
+      "2": 0
+    },
+    "thickness-0.002-default": {
+      "0": 0,
+      "1": 0,
+      "2": 0
+    },
+    "thickness-0.002-chopfragment": {
+      "0": 0,
+      "1": 0,
+      "2": 0
+    },
+    "thickness-0.008-default": {
+      "0": 0,
+      "1": 0,
+      "2": 0
+    },
+    "thickness-0.008-chopfragment": {
+      "0": 0,
+      "1": 0,
+      "2": 0
+    },
+    "thickness-0.015625-default": {
+      "0": 0,
+      "1": 0,
+      "2": 0
+    },
+    "thickness-0.015625-chopfragment": {
+      "0": 0,
+      "1": 0,
+      "2": 0
+    },
+    "thickness-0.02-default": {
+      "0": 0,
+      "1": 0,
+      "2": 0
+    },
+    "thickness-0.02-chopfragment": {
+      "0": 0,
+      "1": 0,
+      "2": 0
+    },
+    "thickness-0.05-default": {
+      "0": 0,
+      "1": 0,
+      "2": 0
+    },
+    "thickness-0.05-chopfragment": {
+      "0": 0,
+      "1": 0,
+      "2": 0
+    },
+    "thickness-0.099-default": {
+      "0": 0,
+      "1": 0,
+      "2": 0
+    },
+    "thickness-0.099-chopfragment": {
+      "0": 0,
+      "1": 0,
+      "2": 0
+    },
+    "thickness-0.1-default": {
+      "0": 0,
+      "1": 0,
+      "2": 0
+    },
+    "thickness-0.1-chopfragment": {
+      "0": 0,
+      "1": 0,
+      "2": 0
+    },
+    "thickness-0.101-default": {
+      "0": 0,
+      "1": 0,
+      "2": 0
+    },
+    "thickness-0.101-chopfragment": {
+      "0": 0,
+      "1": 0,
+      "2": 0
+    },
+    "thickness-0.25-default": {
+      "0": 0,
+      "1": 0,
+      "2": 0
+    },
+    "thickness-0.25-chopfragment": {
+      "0": 0,
+      "1": 0,
+      "2": 0
+    },
+    "thickness-1-default": {
+      "0": 0,
+      "1": 0,
+      "2": 0
+    },
+    "thickness-1-chopfragment": {
+      "0": 0,
+      "1": 0,
+      "2": 0
+    },
+    "thickness-16-default": {
+      "0": 0,
+      "1": 0,
+      "2": 0
+    },
+    "thickness-16-chopfragment": {
+      "0": 0,
+      "1": 0,
+      "2": 0
+    },
+    "axis-0-default": {
+      "0": 0,
+      "1": 0,
+      "2": 0
+    },
+    "axis-0-chopfragment": {
+      "0": 0,
+      "1": 0,
+      "2": 0
+    },
+    "axis-1-default": {
+      "0": 0,
+      "1": 0,
+      "2": 0
+    },
+    "axis-1-chopfragment": {
+      "0": 0,
+      "1": 0,
+      "2": 0
+    },
+    "translated-default": {
+      "0": 0,
+      "1": 0,
+      "2": 0
+    },
+    "translated-chopfragment": {
+      "0": 0,
+      "1": 0,
+      "2": 0
+    },
+    "rotated-default": {
+      "0": 0,
+      "1": 0,
+      "2": 0
+    },
+    "rotated-chopfragment": {
+      "0": 0,
+      "1": 0,
+      "2": 0
+    },
+    "adjacent-default": {
+      "0": 0,
+      "1": 0,
+      "2": 0
+    },
+    "adjacent-chopfragment": {
+      "0": 0,
+      "1": 0,
+      "2": 0
+    },
+    "overlap-default": {
+      "0": 0,
+      "1": 0,
+      "2": 0
+    },
+    "overlap-chopfragment": {
+      "0": 0,
+      "1": 0,
+      "2": 0
+    },
+    "near-coplanar-default": {
+      "0": 0,
+      "1": 0,
+      "2": 0
+    },
+    "near-coplanar-chopfragment": {
+      "0": 0,
+      "1": 0,
+      "2": 0
+    }
+  }
+}

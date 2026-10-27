@@ -1,0 +1,83 @@
+[
+  {
+    "name": "D-halloween-rounded-extent",
+    "original_count": 5,
+    "planes": [
+      [
+        0.0,
+        -1.0,
+        0.0,
+        -789.599975586
+      ],
+      [
+        0.730462728846962,
+        0.6829525618704786,
+        -0.0,
+        691.1956183632868
+      ]
+    ],
+    "query": [
+      1.0,
+      0.0,
+      0.0,
+      208.000061035
+    ],
+    "note": "Oracle-minimized decision supports; may be unbounded without the original parent domain. Not substituted for the bounded API fixture."
+  },
+  {
+    "name": "E-p1-rounded-extent",
+    "original_count": 24,
+    "planes": [
+      [
+        0.0,
+        0.0,
+        -1.0,
+        24.28125
+      ],
+      [
+        -0.9995592833630517,
+        0.02968566056131813,
+        -2.449042505883687e-05,
+        1806.2138989574262
+      ],
+      [
+        0.9854601157443479,
+        -0.0,
+        0.1699069165076462,
+        -1791.9349760484006
+      ]
+    ],
+    "query": [
+      0.0,
+      0.9854585047956871,
+      -0.1699162597453492,
+      -234.04722319586585
+    ],
+    "note": "Oracle-minimized decision supports; may be unbounded without the original parent domain. Not substituted for the bounded API fixture."
+  },
+  {
+    "name": "F-rotated-portal",
+    "original_count": 20,
+    "planes": [
+      [
+        -0.2588190451025225,
+        -0.9659258262890678,
+        -0.0,
+        -14.584829175234235
+      ],
+      [
+        0.2588190451025225,
+        0.9659258262890678,
+        0.0,
+        14.584829175234235
+      ]
+    ],
+    "query": [
+      0.9659258262890679,
+      -0.25881904510252246,
+      0.0,
+      -106.74928961242328
+    ],
+    "note": "Oracle-minimized decision supports; may be unbounded without the original parent domain. Not substituted for the bounded API fixture."
+  }
+]

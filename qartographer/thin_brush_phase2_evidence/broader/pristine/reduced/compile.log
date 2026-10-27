@@ -1,0 +1,105 @@
+---- qbsp / ericw-tools 2.0.0-alpha10 ----
+low priority not compiled into this version
+logging to /tmp/qqbsp-phase2/uniform-regression/pristine/reduced/wildspline.log (truncate)
+
+--- Options Summary ---
+    "nopercent" was set to "1" (from command line)
+    "bsp2" was set to "1" (from command line)
+    "chopfragment" was set to "1" (from command line)
+    "notex" was set to "1" (from command line)
+
+Input file: /tmp/qqbsp-phase2/uniform-regression/pristine/reduced/wildspline.map
+Output file: /tmp/qqbsp-phase2/uniform-regression/pristine/reduced/wildspline.bsp
+
+INFO: using built-in palette.
+---- LoadMapFile ----
+[33mWARNING: No wad or _wad key exists in the worldmodel
+[0m[36m      2 entities
+[0m[36m      3 unique textures
+[0m[36m     17 texinfos
+[0m[36m    120 unique planes
+[0m[36m
+[0m---- ProcessMapBrushes ----
+INFO: world extents calculated to 4072 units
+[36m     4 brushes
+[0m[36m    60 sides
+[0m[36m    36 side bevels
+[0m[36m
+[0m[36m            0 texture frames added
+[0m[33mWARNING: unable to find texture skip
+[0m[33mWARNING: unable to find texture CLIP
+[0m[33mWARNING: unable to find texture TF_Panels02
+[0mProcessing hull 0...
+---- Brush_LoadEntity ----
+---- CountBrushes ----
+[36m    2 SOLID | DETAIL brushes
+[0m[36m    2 brushes total
+[0m[36m    12 visible sides
+[0m[33mWARNING: 7 faces were crunched away by being too small. Use -verbose to see which faces were affected.
+[0m[36mINFO: calculating BSP for 2 brushes with 12 sides
+[0m---- BrushBSP ----
+[36m     2 brushes
+[0m[36m    12 visible faces
+[0m[36m    12 nodes
+[0m[36m    12 expensive split nodes
+[0m[36m    13 leaves
+[0m---- CountLeafs ----
+[36m     2 SOLID | DETAIL leafs
+[0m[36m    11 EMPTY leafs
+[0m[36m    13 leafs total
+[0m[36m    8 max tree height
+[0m[36m    5 avg tree height
+[0m---- MakeTreePortals ----
+---- CalcTreeBounds ----
+[36m    68 tree portals
+[0m---- FillOutside ----
+[33mWARNING: No entities in empty space -- no filling performed (hull 0)
+[0m---- MakeTreePortals ----
+---- CalcTreeBounds ----
+[36m    68 tree portals
+[0m---- MarkVisibleSides ----
+[36m    24 sides visible
+[0m---- MakeFaces ----
+[36m    12 makefaces
+[0m---- PruneNodes ----
+---- WritePortalFile ----
+[36m    11 player-occupiable leaves
+[0m[36m     1 clusters of leaves
+[0m---- CountLeafs ----
+[36m     2 SOLID | DETAIL leafs
+[0m[36m    11 EMPTY leafs
+[0m[36m    13 leafs total
+[0m[36m    8 max tree height
+[0m[36m    5 avg tree height
+[0m---- TJunc ----
+[36m    12 faces optimized through MWT
+[0m[36m    24 triangles computed from MWT
+[0m---- EmitFaces ----
+[36m    24 edges
+[0m[36m    12 faces
+[0mProcessing hull 1...
+[33mWARNING: No entities in empty space -- no filling performed (hull 1)
+[0mProcessing hull 2...
+[33mWARNING: No entities in empty space -- no filling performed (hull 2)
+[0m---- FinishBSPFile ----
+Writing /tmp/qqbsp-phase2/uniform-regression/pristine/reduced/wildspline.bsp as Quake BSP2 bsp2
+Wrote /tmp/qqbsp-phase2/uniform-regression/pristine/reduced/wildspline.bsp
+
+count   lump name    byte size 
+      1 models               64
+    170 planes             3400
+     16 vertexes            192
+     12 nodes               528
+     10 texinfos            400
+     12 faces               336
+    372 clipnodes          4464
+     12 leafs               528
+     12 marksurfaces         48
+     25 edges               200
+     48 surfedges           192
+      3 textures             16
+        lightdata             0
+        visdata               0
+        entdata              30
+
+0.010s seconds elapsed

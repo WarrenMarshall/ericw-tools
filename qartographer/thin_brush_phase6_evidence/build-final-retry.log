@@ -1,0 +1,5 @@
+In file included from /tmp/qqbsp-phase6/component/main.cpp:1:
+/tmp/qqbsp-phase6/component/halfspace.hpp: In member function ‘bool p6::ProjectiveRank::add(p6::Candidate&)’:
+/tmp/qqbsp-phase6/component/halfspace.hpp:124:79: warning: comparison of integer expressions of different signedness: ‘std::_If_is_unsigned_integer<unsigned int, int>’ {aka ‘int’} and ‘std::vector<p6::Candidate*>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+  124 |   for(int mask=1;mask<16;++mask){if(std::popcount(static_cast<unsigned>(mask))!=rows.size())continue;
+      |                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~

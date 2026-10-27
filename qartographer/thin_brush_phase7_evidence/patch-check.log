@@ -1,0 +1,12 @@
+checking file include/qbsp/halfspace.hh
+checking file include/qbsp/supported_geometry.hh
+checking file include/qbsp/brushbsp.hh
+checking file include/qbsp/portals.hh
+checking file qbsp/brushbsp.cc
+checking file qbsp/portals.cc
+checking file qbsp/prtfile.cc
+checking file qbsp/CMakeLists.txt
+checking file qartographer/CMakeLists.txt
+checking file tests/test_qbsp.cc
+checking file qartographer/phase5-witness.json
+checking file qartographer/phase7-cases.json

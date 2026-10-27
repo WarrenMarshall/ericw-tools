@@ -1,0 +1,79 @@
+Note: Google Test filter = testmapsQ1.simpleSealed
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from testmapsQ1
+[ RUN      ] testmapsQ1.simpleSealed
+----  / ericw-tools  ----
+running with 1 thread(s)
+low priority not compiled into this version
+
+--- Options Summary ---
+    "threads" was set to "1" (from command line)
+    "nopercent" was set to "1" (from command line)
+    "nostat" was set to "1" (from command line)
+    "noprogress" was set to "1" (from command line)
+    "path" was set to ""/tmp/qqbsp-phase6/probe-build/qartographer/upstream-testmaps/q2_wal_metadata"" (from command line)
+
+Input file: /tmp/qqbsp-phase6/probe-build/qartographer/upstream-testmaps/qbsp_simple_sealed.map
+Output file: /tmp/qqbsp-phase6/probe-build/qartographer/upstream-testmaps/qbsp_simple_sealed.bsp
+
+INFO: using built-in palette.
+WARNING: texture name openquartzmirror (/tmp/qqbsp-phase6/probe-build/qartographer/upstream-testmaps/deprecated/free_wad.wad) is not null-terminated
+INFO: world extents calculated to 616 units
+Processing hull 0...
+Processing hull 1...
+Processing hull 2...
+Writing /tmp/qqbsp-phase6/probe-build/qartographer/upstream-testmaps/qbsp_simple_sealed.bsp as Quake BSP bsp29
+Wrote /tmp/qqbsp-phase6/probe-build/qartographer/upstream-testmaps/qbsp_simple_sealed.bsp
+
+count   lump name    byte size 
+      1 models               64
+     17 planes              340
+      8 vertexes             96
+      6 nodes               144
+      6 texinfos            240
+      6 faces               120
+     12 clipnodes            96
+      2 leafs                56
+      6 marksurfaces         12
+     13 edges                52
+     24 surfedges            96
+      2 textures          10972
+        lightdata             0
+        visdata               0
+        entdata             227
+LoadBSPFile: '/tmp/qqbsp-phase6/probe-build/qartographer/upstream-testmaps/qbsp_simple_sealed.bsp'
+BSP is version Quake BSP bsp29
+INFO: using built-in palette.
+wrote /tmp/qqbsp-phase6/probe-build/qartographer/upstream-testmaps/qbsp_simple_sealed.bsp.geometry.obj
+wrote /tmp/qqbsp-phase6/probe-build/qartographer/upstream-testmaps/qbsp_simple_sealed.bsp.json
+----  / ericw-tools  ----
+ignoring multiple configureTBB calls
+
+--- Options Summary ---
+    "threads" was set to "1" (from command line)
+    "nopercent" was set to "1" (from command line)
+    "nostat" was set to "1" (from command line)
+    "noprogress" was set to "1" (from command line)
+    "path" was set to ""/tmp/qqbsp-phase6/probe-build/qartographer/upstream-testmaps/q2_wal_metadata"" (from command line)
+
+Input file: /tmp/qqbsp-phase6/probe-build/qartographer/upstream-testmaps/qbsp_simple_sealed_rotated.map
+Output file: /tmp/qqbsp-phase6/probe-build/qartographer/upstream-testmaps/qbsp_simple_sealed_rotated.bsp
+
+INFO: using built-in palette.
+WARNING: texture name openquartzmirror (/tmp/qqbsp-phase6/probe-build/qartographer/upstream-testmaps/deprecated/free_wad.wad) is not null-terminated
+INFO: world extents calculated to 648 units
+Processing hull 0...
+unknown file: Failure
+C++ exception with description "PHASE5 NUMERICAL_UNCERTAINTY: portal area/rank unresolved" thrown in the test body.
+
+[  FAILED  ] testmapsQ1.simpleSealed (32 ms)
+[----------] 1 test from testmapsQ1 (32 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (32 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] testmapsQ1.simpleSealed
+
+ 1 FAILED TEST

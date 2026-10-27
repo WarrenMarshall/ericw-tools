@@ -1,0 +1,13 @@
+Note: Google Test filter = phase5.*
+[==========] Running 2 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 2 tests from phase5
+[ RUN      ] phase5.Hull2ResolvedFrontFragment
+[       OK ] phase5.Hull2ResolvedFrontFragment (0 ms)
+[ RUN      ] phase5.NarrowQuadrilateralRankAndRealization
+[       OK ] phase5.NarrowQuadrilateralRankAndRealization (0 ms)
+[----------] 2 tests from phase5 (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 2 tests from 1 test suite ran. (0 ms total)
+[  PASSED  ] 2 tests.

@@ -1,0 +1,540 @@
+Qartographer qqbsp, upstream=ccaeb8457a1267860ebe99ed1df7394ebdd6b435, downstream=2f6fc5b79734f56348766cbec83533f1d50b3642, patches=P1
+---- p1-trace-qqbsp / ericw-tools  ----
+running with 1 thread(s)
+low priority not compiled into this version
+logging to /tmp/qqbsp-phase3/trace-p1/full-on.log (truncate)
+
+--- Options Summary ---
+    "threads" was set to "1" (from command line)
+    "nopercent" was set to "1" (from command line)
+    "bsp2" was set to "1" (from command line)
+    "chopfragment" was set to "1" (from command line)
+    "notex" was set to "1" (from command line)
+
+Input file: /tmp/qqbsp-phase3/trace-p1/full-on.map
+Output file: /tmp/qqbsp-phase3/trace-p1/full-on.bsp
+
+INFO: using built-in palette.
+---- LoadMapFile ----
+/tmp/qqbsp-phase3/trace-p1/full-on.map[line 8114]: Brush with duplicate plane
+/tmp/qqbsp-phase3/trace-p1/full-on.map[line 8125]: Brush with duplicate plane
+/tmp/qqbsp-phase3/trace-p1/full-on.map[line 14734]: Brush with duplicate plane
+/tmp/qqbsp-phase3/trace-p1/full-on.map[line 14777]: Brush with duplicate plane
+/tmp/qqbsp-phase3/trace-p1/full-on.map[line 14864]: Brush with duplicate plane
+/tmp/qqbsp-phase3/trace-p1/full-on.map[line 14873]: Brush with duplicate plane
+/tmp/qqbsp-phase3/trace-p1/full-on.map[line 14898]: Brush with duplicate plane
+/tmp/qqbsp-phase3/trace-p1/full-on.map[line 14907]: Brush with duplicate plane
+/tmp/qqbsp-phase3/trace-p1/full-on.map[line 14941]: Brush with duplicate plane
+/tmp/qqbsp-phase3/trace-p1/full-on.map[line 14966]: Brush with duplicate plane
+/tmp/qqbsp-phase3/trace-p1/full-on.map[line 14996]: Brush with duplicate plane
+/tmp/qqbsp-phase3/trace-p1/full-on.map[line 15036]: Brush with duplicate plane
+/tmp/qqbsp-phase3/trace-p1/full-on.map[line 15076]: Brush with duplicate plane
+/tmp/qqbsp-phase3/trace-p1/full-on.map[line 17743]: Brush with duplicate plane
+[33mWARNING: /tmp/qqbsp-phase3/trace-p1/full-on.map[line 3470]: brush has multiple face contents (SKY vs SOLID), the former will be used.
+[0m[33mWARNING: /tmp/qqbsp-phase3/trace-p1/full-on.map[line 3479]: brush has multiple face contents (SKY vs SOLID), the former will be used.
+[0m[33mWARNING: /tmp/qqbsp-phase3/trace-p1/full-on.map[line 14287]: brush has multiple face contents (SKY vs SOLID), the former will be used.
+[0m[33mWARNING: /tmp/qqbsp-phase3/trace-p1/full-on.map[line 24533]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+[0m[33mWARNING: /tmp/qqbsp-phase3/trace-p1/full-on.map[line 24540]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+[0m[33mWARNING: /tmp/qqbsp-phase3/trace-p1/full-on.map[line 24547]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+[0m[33mWARNING: /tmp/qqbsp-phase3/trace-p1/full-on.map[line 24554]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+[0m[33mWARNING: /tmp/qqbsp-phase3/trace-p1/full-on.map[line 24561]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+[0m[33mWARNING: /tmp/qqbsp-phase3/trace-p1/full-on.map[line 24568]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+[0m[33mWARNING: /tmp/qqbsp-phase3/trace-p1/full-on.map[line 24575]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+[0m[33mWARNING: /tmp/qqbsp-phase3/trace-p1/full-on.map[line 24582]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+[0m[33mWARNING: /tmp/qqbsp-phase3/trace-p1/full-on.map[line 24589]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+[0m[33mWARNING: /tmp/qqbsp-phase3/trace-p1/full-on.map[line 24596]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+[0m[33mWARNING: /tmp/qqbsp-phase3/trace-p1/full-on.map[line 24603]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+[0m[33mWARNING: /tmp/qqbsp-phase3/trace-p1/full-on.map[line 24610]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+[0m[33mWARNING: /tmp/qqbsp-phase3/trace-p1/full-on.map[line 24617]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+[0m[33mWARNING: /tmp/qqbsp-phase3/trace-p1/full-on.map[line 24624]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+[0m[33mWARNING: /tmp/qqbsp-phase3/trace-p1/full-on.map[line 24631]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+[0m[33mWARNING: /tmp/qqbsp-phase3/trace-p1/full-on.map[line 24638]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+[0m[33mWARNING: /tmp/qqbsp-phase3/trace-p1/full-on.map[line 24645]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+[0m[33mWARNING: /tmp/qqbsp-phase3/trace-p1/full-on.map[line 24652]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+[0m[33mWARNING: /tmp/qqbsp-phase3/trace-p1/full-on.map[line 24659]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+[0m[33mWARNING: /tmp/qqbsp-phase3/trace-p1/full-on.map[line 24666]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+[0m[33mWARNING: /tmp/qqbsp-phase3/trace-p1/full-on.map[line 24673]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+[0m[33mWARNING: /tmp/qqbsp-phase3/trace-p1/full-on.map[line 24680]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+[0m[33mWARNING: /tmp/qqbsp-phase3/trace-p1/full-on.map[line 24687]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+[0m[33mWARNING: /tmp/qqbsp-phase3/trace-p1/full-on.map[line 24694]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+[0m[33mWARNING: /tmp/qqbsp-phase3/trace-p1/full-on.map[line 24701]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+[0m[33mWARNING: /tmp/qqbsp-phase3/trace-p1/full-on.map[line 25668]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+[0m[33mWARNING: /tmp/qqbsp-phase3/trace-p1/full-on.map[line 25675]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+[0m[33mWARNING: /tmp/qqbsp-phase3/trace-p1/full-on.map[line 25682]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+[0m[33mWARNING: /tmp/qqbsp-phase3/trace-p1/full-on.map[line 25689]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+[0m[33mWARNING: /tmp/qqbsp-phase3/trace-p1/full-on.map[line 25696]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+[0m[33mWARNING: /tmp/qqbsp-phase3/trace-p1/full-on.map[line 25703]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+[0m[33mWARNING: /tmp/qqbsp-phase3/trace-p1/full-on.map[line 25710]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+[0m[33mWARNING: /tmp/qqbsp-phase3/trace-p1/full-on.map[line 25717]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+[0m[33mWARNING: /tmp/qqbsp-phase3/trace-p1/full-on.map[line 25724]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+[0m[33mWARNING: /tmp/qqbsp-phase3/trace-p1/full-on.map[line 25731]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+[0m[33mWARNING: /tmp/qqbsp-phase3/trace-p1/full-on.map[line 25738]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+[0m[33mWARNING: /tmp/qqbsp-phase3/trace-p1/full-on.map[line 25745]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+[0m[33mWARNING: /tmp/qqbsp-phase3/trace-p1/full-on.map[line 25752]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+[0m[33mWARNING: /tmp/qqbsp-phase3/trace-p1/full-on.map[line 25759]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+[0m[33mWARNING: /tmp/qqbsp-phase3/trace-p1/full-on.map[line 25766]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+[0m[33mWARNING: /tmp/qqbsp-phase3/trace-p1/full-on.map[line 25773]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+[0m[33mWARNING: /tmp/qqbsp-phase3/trace-p1/full-on.map[line 25780]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+[0m[33mWARNING: /tmp/qqbsp-phase3/trace-p1/full-on.map[line 25787]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+[0m[33mWARNING: /tmp/qqbsp-phase3/trace-p1/full-on.map[line 25794]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+[0m[33mWARNING: /tmp/qqbsp-phase3/trace-p1/full-on.map[line 25801]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+[0m[33mWARNING: /tmp/qqbsp-phase3/trace-p1/full-on.map[line 25808]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+[0m[33mWARNING: /tmp/qqbsp-phase3/trace-p1/full-on.map[line 25815]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+[0m[33mWARNING: /tmp/qqbsp-phase3/trace-p1/full-on.map[line 25822]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+[0m[33mWARNING: /tmp/qqbsp-phase3/trace-p1/full-on.map[line 25829]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+[0m[33mWARNING: /tmp/qqbsp-phase3/trace-p1/full-on.map[line 25836]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+[0m[36m       606 entities
+[0m[36m        89 unique textures
+[0m[36m     7,768 texinfos
+[0m[36m    18,746 unique planes
+[0m[36m
+[0m---- ProcessMapBrushes ----
+INFO: world extents calculated to 6104 units
+[36m     2,791 brushes
+[0m[36m    19,335 sides
+[0m[36m    13,950 side bevels
+[0m[36m
+[0m[36m            3 texture frames added
+[0mProcessing hull 0...
+---- Brush_LoadEntity ----
+[33mWARNING: /tmp/qqbsp-phase3/trace-p1/full-on.map[line 8085]: Healing degenerate edge (4.623417738843956e-07) at (415.969 694 -36.3)
+[0m[33mWARNING: /tmp/qqbsp-phase3/trace-p1/full-on.map[line 8121]: Healing degenerate edge (2.204564220233973e-06) at (432.031 694 -36.3)
+[0m[33mWARNING: /tmp/qqbsp-phase3/trace-p1/full-on.map[line 8205]: Healing degenerate edge (6.883439665746502e-05) at (353.469 730 -36.4)
+[0m---- CountBrushes ----
+[36m       79 MIST | MIRROR_INSIDE_SET | TRANSLUCENT | DETAIL brushes
+[0m[36m      198 SOLID | DETAIL brushes
+[0m[36m        1 MIST | MIRROR_INSIDE | MIRROR_INSIDE_SET | TRANSLUCENT | DETAIL brushes
+[0m[36m        1 WINDOW | MIRROR_INSIDE_SET | TRANSLUCENT | DETAIL brushes
+[0m[36m       53 WATER | TRANSLUCENT | DETAIL brushes
+[0m[36m       16 SKY brushes
+[0m[36m    1,906 SOLID brushes
+[0m[36m    2,254 brushes total
+[0m[36m    13,317 visible sides
+[0m[33mWARNING: 174 faces were crunched away by being too small. Use -verbose to see which faces were affected.
+[0m[36mINFO: calculating BSP for 2254 brushes with 13317 sides
+[0mP3 SNAP source count=2254 hash=8768995481860569871
+P3 SNAP post-csg count=2254 hash=8768995481860569871
+---- BrushBSP ----
+P3 SNAP bsp-input count=2254 hash=8768995481860569871
+[36m     2,254 brushes
+[0m[36m    13,191 visible faces
+[0m[36m       126 non-visible faces
+[0m[36m    57,486 nodes
+[0m[36m       298 non-visible nodes
+[0m[36m    47,839 expensive split nodes
+[0m[36m     9,647 mid-split nodes
+[0m[36m    57,487 leaves
+[0m---- CountLeafs ----
+[36m         7 MIST | MIRROR_INSIDE | MIRROR_INSIDE_SET | TRANSLUCENT | DETAIL leafs
+[0m[36m        15 SOLID | WATER | MIST | MIRROR_INSIDE_SET leafs
+[0m[36m    16,401 EMPTY leafs
+[0m[36m     2,019 SKY leafs
+[0m[36m    33,476 SOLID leafs
+[0m[36m        93 SOLID | WINDOW | MIRROR_INSIDE_SET leafs
+[0m[36m        17 WATER | MIST | MIRROR_INSIDE_SET | TRANSLUCENT | DETAIL leafs
+[0m[36m     2,202 SOLID | SKY leafs
+[0m[36m       758 SOLID | DETAIL leafs
+[0m[36m        12 SOLID | MIST | MIRROR_INSIDE | MIRROR_INSIDE_SET leafs
+[0m[36m       755 WATER | TRANSLUCENT | DETAIL leafs
+[0m[36m       326 SOLID | WATER | TRANSLUCENT | DETAIL leafs
+[0m[36m     1,139 SOLID | WATER leafs
+[0m[36m       104 SOLID | MIST | MIRROR_INSIDE_SET leafs
+[0m[36m       152 MIST | MIRROR_INSIDE_SET | TRANSLUCENT | DETAIL leafs
+[0m[36m        11 WINDOW | MIRROR_INSIDE_SET | TRANSLUCENT | DETAIL leafs
+[0m[36m    57,487 leafs total
+[0m[36m    50 max tree height
+[0m[36m    22 avg tree height
+[0m---- MakeTreePortals ----
+[36m    2,762 tiny portals
+[0m---- CalcTreeBounds ----
+[38;2;255;000;000mP3 PORTALS count=213943 points=849086 area_min=0.008807294636537366 area_max=3345601.0227485015 area_lt_001=1 ancestor_bad=4733 max_error=83.56424917793606
+[0m[36m    213,943 tree portals
+[0m---- FillOutside ----
+[36m    7,119 outside leaves
+[0m---- FillDetail ----
+[36m    1 detail filled leafs
+[0m---- BrushBSP ----
+P3 SNAP bsp-input count=2254 hash=8768995481860569871
+[36m    2,254 brushes
+[0m[36m    5,114 visible faces
+[0m[36m    8,203 non-visible faces
+[0m[36m    37,531 nodes
+[0m[36m    22,261 non-visible nodes
+[0m[36m    37,531 expensive split nodes
+[0m[36m    37,532 leaves
+[0m---- CountLeafs ----
+[36m         2 MIST | MIRROR_INSIDE | MIRROR_INSIDE_SET | TRANSLUCENT | DETAIL leafs
+[0m[36m       325 SOLID | WATER | TRANSLUCENT | DETAIL leafs
+[0m[36m     7,552 EMPTY leafs
+[0m[36m       498 SKY leafs
+[0m[36m    25,922 SOLID leafs
+[0m[36m        44 SOLID | WINDOW | MIRROR_INSIDE_SET leafs
+[0m[36m        11 WATER | MIST | MIRROR_INSIDE_SET | TRANSLUCENT | DETAIL leafs
+[0m[36m       937 SOLID | SKY leafs
+[0m[36m       675 SOLID | DETAIL leafs
+[0m[36m       104 MIST | MIRROR_INSIDE_SET | TRANSLUCENT | DETAIL leafs
+[0m[36m        68 SOLID | MIST | MIRROR_INSIDE_SET leafs
+[0m[36m       914 SOLID | WATER leafs
+[0m[36m        11 SOLID | MIST | MIRROR_INSIDE | MIRROR_INSIDE_SET leafs
+[0m[36m       457 WATER | TRANSLUCENT | DETAIL leafs
+[0m[36m         1 WINDOW | MIRROR_INSIDE_SET | TRANSLUCENT | DETAIL leafs
+[0m[36m        11 SOLID | WATER | MIST | MIRROR_INSIDE_SET leafs
+[0m[36m    37,532 leafs total
+[0m[36m    78 max tree height
+[0m[36m    27 avg tree height
+[0m---- MakeTreePortals ----
+[36m    2,424 tiny portals
+[0m---- CalcTreeBounds ----
+[38;2;255;000;000mP3 PORTALS count=146630 points=577321 area_min=0.005516634999732421 area_max=4480771.316298456 area_lt_001=5 ancestor_bad=5457 max_error=147.7416938630828
+[0m[36m    146,630 tree portals
+[0m---- FillOutside ----
+[36m    3,627 outside leaves
+[0m---- FillDetail ----
+[36m    0 detail filled leafs
+[0m---- MakeTreePortals ----
+[36m    2,424 tiny portals
+[0m---- CalcTreeBounds ----
+[38;2;255;000;000mP3 PORTALS count=146630 points=577321 area_min=0.005516634999732421 area_max=4480771.316298456 area_lt_001=5 ancestor_bad=5457 max_error=147.7416938630828
+[0m[36m    146,630 tree portals
+[0m---- MarkVisibleSides ----
+[33mWARNING: 9 sides not found (use -verbose to display)
+[0m[36m    39,201 sides visible
+[0m---- MakeFaces ----
+[36m    19,548 makefaces
+[0m[36m     7,254 merged
+[0m[36m       422 subdivided
+[0m---- PruneNodes ----
+[36m    26,634 nodes pruned
+[0m---- WritePortalFile ----
+[36m    480 tiny portals
+[0m[36m     5,070 player-occupiable leaves
+[0m[36m     3,863 clusters of leaves
+[0m[36m    12,119 vis portals
+[0mfixing up cluster at 616 64.00000591652261 176
+---- CountLeafs ----
+[36m         2 MIST | MIRROR_INSIDE | MIRROR_INSIDE_SET | TRANSLUCENT | DETAIL leafs
+[0m[36m       161 SOLID | WATER | TRANSLUCENT | DETAIL leafs
+[0m[36m         1 SOLID | SKY | MIST | MIRROR_INSIDE_SET leafs
+[0m[36m       498 SKY leafs
+[0m[36m     4,879 SOLID leafs
+[0m[36m         7 SOLID | WINDOW | MIRROR_INSIDE_SET leafs
+[0m[36m         9 WATER | MIST | MIRROR_INSIDE_SET | TRANSLUCENT | DETAIL leafs
+[0m[36m     4,238 EMPTY leafs
+[0m[36m       308 SOLID | SKY leafs
+[0m[36m       323 SOLID | DETAIL leafs
+[0m[36m       104 MIST | MIRROR_INSIDE_SET | TRANSLUCENT | DETAIL leafs
+[0m[36m        37 SOLID | MIST | MIRROR_INSIDE_SET leafs
+[0m[36m        98 SOLID | WATER leafs
+[0m[36m         4 SOLID | MIST | MIRROR_INSIDE | MIRROR_INSIDE_SET leafs
+[0m[36m       218 WATER | TRANSLUCENT | DETAIL leafs
+[0m[36m         1 WINDOW | MIRROR_INSIDE_SET | TRANSLUCENT | DETAIL leafs
+[0m[36m        10 SOLID | WATER | MIST | MIRROR_INSIDE_SET leafs
+[0m[36m    10,898 leafs total
+[0m[36m    78 max tree height
+[0m[36m    27 avg tree height
+[0m---- TJunc ----
+[36m        50 edges degenerated
+[0m[36m     7,880 edges added by tjunctions
+[0m[36m    10,643 faces optimized through MWT
+[0m[36m    30,211 triangles computed from MWT
+[0m[36m     2,150 faces created via optimization of MWT triangles
+[0m---- EmitFaces ----
+[36m    31,178 edges
+[0m[36m    14,559 faces
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=768 area_max=9216 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=768 area_max=7680 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=57.754057104394946 area_max=28924.415231280178 area_lt_001=0 ancestor_bad=0 max_error=5.755396159656812e-13
+[0m[38;2;255;000;000mP3 PORTALS count=38 points=154 area_min=1.2383738807558609 area_max=28924.415231280178 area_lt_001=0 ancestor_bad=0 max_error=1.0729195309977513e-12
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=384 area_max=29536 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=1504 area_max=15040 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=2136 area_max=35551.998657296004 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=2136 area_max=35551.998657296004 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=192 area_max=9216 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=192 area_max=5376 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=576 area_max=15232 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=576 area_max=15232 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=576 area_max=26048 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=1728 area_max=12800 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=70 points=280 area_min=63.99902344 area_max=11264.01562502401 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=46 points=184 area_min=63.99902344 area_max=11264.013671913113 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=46 points=184 area_min=127.99975585600009 area_max=12799.99609376 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=46 points=184 area_min=127.99975585600009 area_max=12799.989990161866 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=96 points=384 area_min=8.000000000000057 area_max=19199.994140640003 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=98 points=392 area_min=8.000000000000057 area_max=28799.99121096 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=269 points=1064 area_min=31.99999999999963 area_max=15360 area_lt_001=0 ancestor_bad=0 max_error=9.094947017729282e-13
+[0m[38;2;255;000;000mP3 PORTALS count=129 points=505 area_min=31.99999999999818 area_max=34816.00000000006 area_lt_001=0 ancestor_bad=0 max_error=4.547473508864641e-13
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=1536 area_max=22799.993042010003 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=1536 area_max=22799.993042010003 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=100 points=403 area_min=10.620728395358517 area_max=26854.673999889983 area_lt_001=0 ancestor_bad=1 max_error=0.1777521807198923
+[0m[38;2;255;000;000mP3 PORTALS count=103 points=417 area_min=131.74640584173252 area_max=25824.611086800018 area_lt_001=0 ancestor_bad=1 max_error=0.1777521807198923
+[0m[38;2;255;000;000mP3 PORTALS count=94 points=376 area_min=18.825158152534545 area_max=9856 area_lt_001=0 ancestor_bad=0 max_error=1.3642420526593924e-12
+[0m[38;2;255;000;000mP3 PORTALS count=92 points=368 area_min=57.938314322252154 area_max=19350.187500000102 area_lt_001=0 ancestor_bad=0 max_error=9.094947017729282e-13
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=1008 area_max=20516 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=1008 area_max=20516 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=336 area_max=8280 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=192 area_max=5152 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=552 area_max=7360 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=552 area_max=6532 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=336 area_max=12656 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=896 area_max=6944 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=1440 area_max=63232 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=1440 area_max=53248 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=65.67293718710292 area_max=11753.39214056605 area_lt_001=0 ancestor_bad=0 max_error=6.572520305780927e-13
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=65.67293718710326 area_max=11753.39214056605 area_lt_001=0 ancestor_bad=0 max_error=2.8421709430404007e-13
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=86.8690765205533 area_max=11698.28022736616 area_lt_001=0 ancestor_bad=0 max_error=5.542233338928781e-13
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=84.67304541631233 area_max=11698.28022736616 area_lt_001=0 ancestor_bad=0 max_error=1.0800249583553523e-12
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=76.13320154897725 area_max=12955.236896771268 area_lt_001=0 ancestor_bad=0 max_error=2.7355895326763857e-13
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=67.31496753054266 area_max=12955.236896771268 area_lt_001=0 ancestor_bad=0 max_error=3.481659405224491e-13
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=584.2383595277631 area_max=14080.000335720099 area_lt_001=0 ancestor_bad=0 max_error=1.1368683772161603e-13
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=1802.1386718720232 area_max=12014.258098945198 area_lt_001=0 ancestor_bad=0 max_error=4.618527782440651e-13
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=168 area_max=8640 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=96 area_max=8640 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=168 area_max=8640 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=96 area_max=4992 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=256 area_max=12544 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=96 area_max=7168 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=64 area_max=4352 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=64 area_max=3536 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=174 points=684 area_min=31.999877936000303 area_max=28160.00000000054 area_lt_001=0 ancestor_bad=0 max_error=4.547473508864641e-13
+[0m[38;2;255;000;000mP3 PORTALS count=113 points=442 area_min=31.999877936000303 area_max=28160.00000000054 area_lt_001=0 ancestor_bad=0 max_error=9.094947017729282e-13
+[0m[38;2;255;000;000mP3 PORTALS count=97 points=388 area_min=384 area_max=7743.999328648 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=77 points=308 area_min=384 area_max=25344 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=1536 area_max=39424 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=1536 area_max=39424 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=720 area_max=29568 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=720 area_max=29568 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=384 area_max=8960 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=384 area_max=8960 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=417 points=1647 area_min=0.083253538976536 area_max=90115.68674989384 area_lt_001=0 ancestor_bad=6 max_error=0.00017033999233717623
+[0m[38;2;255;000;000mP3 PORTALS count=672 points=2634 area_min=0.24907069706173326 area_max=58808.350151735496 area_lt_001=0 ancestor_bad=35 max_error=0.1746243839901922
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=378.53188871878615 area_max=17343.32657675301 area_lt_001=0 ancestor_bad=0 max_error=5.684341886080801e-13
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=378.53188871878615 area_max=17343.32657675301 area_lt_001=0 ancestor_bad=0 max_error=5.684341886080801e-13
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=2592 area_max=77520 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=2592 area_max=61200 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=768 area_max=14400 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=768 area_max=14400 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=49 points=196 area_min=256 area_max=41216 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=57 points=228 area_min=256 area_max=23040 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=768 area_max=42240 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=768 area_max=30720 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=214 points=856 area_min=192 area_max=36864 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=130 points=520 area_min=256 area_max=38912 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=384 area_max=19584 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=384 area_max=12672 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=384 area_max=27968 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=384 area_max=19136 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=768 area_max=42432 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=1344 area_max=28800 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=116 points=448 area_min=8 area_max=14336.0000000002 area_lt_001=0 ancestor_bad=0 max_error=2.2737367544323206e-13
+[0m[38;2;255;000;000mP3 PORTALS count=96 points=372 area_min=7.9999999999990905 area_max=14336.0000000002 area_lt_001=0 ancestor_bad=0 max_error=4.547473508864641e-13
+[0m[38;2;255;000;000mP3 PORTALS count=108 points=418 area_min=7.999999999998636 area_max=14336.000000000135 area_lt_001=0 ancestor_bad=0 max_error=4.547473508864641e-13
+[0m[38;2;255;000;000mP3 PORTALS count=96 points=372 area_min=7.9999999999990905 area_max=14336.000000000135 area_lt_001=0 ancestor_bad=0 max_error=4.547473508864641e-13
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=192 area_max=28160 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=192 area_max=19712 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=130.60092547410022 area_max=34960.27244871908 area_lt_001=0 ancestor_bad=0 max_error=1.3642420526593924e-12
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=194.96329394725308 area_max=23471.049154787437 area_lt_001=0 ancestor_bad=0 max_error=1.1368683772161603e-12
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=96 area_max=20736 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=96 area_max=20736 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=53 points=212 area_min=32 area_max=12320 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=53 points=212 area_min=24 area_max=12320 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=53 points=212 area_min=31.579452515 area_max=19712 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=41 points=164 area_min=24 area_max=19712 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=53 points=212 area_min=20 area_max=18352 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=53 points=212 area_min=20 area_max=18352 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=20.92423483352718 area_max=34845.2780539796 area_lt_001=0 ancestor_bad=0 max_error=6.821210263296962e-13
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=20.92423483352718 area_max=34845.2780539796 area_lt_001=0 ancestor_bad=0 max_error=4.547473508864641e-13
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=64 area_max=19712 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=64 area_max=19712 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=24.000000000000007 area_max=12543.999359136 area_lt_001=0 ancestor_bad=0 max_error=7.105427357601002e-15
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=24.000000000000007 area_max=12543.999359136 area_lt_001=0 ancestor_bad=0 max_error=7.105427357601002e-15
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=63.999994278 area_max=12543.999359136 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=63.999994278 area_max=12543.999359136 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=64 area_max=12544 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=64 area_max=12544 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=64 area_max=19712 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=64 area_max=19712 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=64 area_max=19712 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=64 area_max=19712 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=64 area_max=12544 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=64 area_max=12544 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=64 area_max=12544 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=64 area_max=12544 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=64 area_max=12544 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=64 area_max=12544 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=64 area_max=12544 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=64 area_max=12544 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=64 area_max=12544 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=64 area_max=12544 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=64 area_max=12544 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=64 area_max=12544 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=64 area_max=12544 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=64 area_max=12544 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=64 area_max=19712 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=64 area_max=19712 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=41 points=164 area_min=5.999931334999985 area_max=4662 area_lt_001=0 ancestor_bad=0 max_error=4.263256414560601e-14
+[0m[38;2;255;000;000mP3 PORTALS count=41 points=164 area_min=5.999931334999985 area_max=4662 area_lt_001=0 ancestor_bad=0 max_error=4.263256414560601e-14
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=24 area_max=30352.3027326041 area_lt_001=0 ancestor_bad=0 max_error=1.4210854715202004e-14
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=23.999999999999993 area_max=30352.3027326041 area_lt_001=0 ancestor_bad=0 max_error=1.4210854715202004e-14
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=21 area_max=5215.215299601 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=21 area_max=5215.215299601 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=21.636850263580783 area_max=9797.806566117644 area_lt_001=0 ancestor_bad=0 max_error=4.547473508864641e-13
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=21.410542750825456 area_max=9797.806566117644 area_lt_001=0 ancestor_bad=0 max_error=4.547473508864641e-13
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=17.808651150230645 area_max=14933.258702461259 area_lt_001=0 ancestor_bad=0 max_error=9.094947017729282e-13
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=17.798923642350875 area_max=14933.258702461259 area_lt_001=0 ancestor_bad=0 max_error=9.094947017729282e-13
+[0m[38;2;255;000;000mP3 PORTALS count=53 points=212 area_min=15.999938964999998 area_max=19965.01670077449 area_lt_001=0 ancestor_bad=0 max_error=6.103499998744155e-05
+[0m[38;2;255;000;000mP3 PORTALS count=53 points=212 area_min=15.999938964999998 area_max=19965.01670077449 area_lt_001=0 ancestor_bad=0 max_error=6.103499998744155e-05
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=15.999969483000001 area_max=4480.000000000008 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=15.999969483000001 area_max=4480.000000000008 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=64 area_max=12544 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=64 area_max=12544 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=64 area_max=12544 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=64 area_max=12544 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=64 area_max=12544 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=64 area_max=12544 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=62.625976562000005 area_max=12390.109374944 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=62.625976562000005 area_max=12390.109374944 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=70 points=280 area_min=0.958256586096752 area_max=51839.75893051812 area_lt_001=0 ancestor_bad=0 max_error=6.916280176483269e-05
+[0m[38;2;255;000;000mP3 PORTALS count=62 points=248 area_min=0.958357009339494 area_max=51839.75893051812 area_lt_001=0 ancestor_bad=0 max_error=6.916280176483269e-05
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=16 area_max=4736 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=16 area_max=4736 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=76.35168456999997 area_max=16744.3064951761 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=76.35168456999997 area_max=16744.3064951761 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=17.8085226010312 area_max=14918.459008527292 area_lt_001=0 ancestor_bad=0 max_error=1.1368683772161603e-12
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=17.8085226010312 area_max=14918.459008527292 area_lt_001=0 ancestor_bad=0 max_error=1.1368683772161603e-12
+[0m[38;2;255;000;000mP3 PORTALS count=46 points=184 area_min=2.9926798196420545 area_max=11989.643955005882 area_lt_001=0 ancestor_bad=0 max_error=9.094947017729282e-13
+[0m[38;2;255;000;000mP3 PORTALS count=46 points=184 area_min=2.9926798196420545 area_max=11989.643955005882 area_lt_001=0 ancestor_bad=0 max_error=9.094947017729282e-13
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=42 area_max=10080 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=42 area_max=10080 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=64 area_max=12544 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=24 area_max=12544 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=36 area_max=9408 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=36 area_max=9408 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=23.99998474099999 area_max=5183.998901351999 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=23.99998474099999 area_max=5183.998901351999 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=15 area_max=4472.999879859 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=15 area_max=4472.999879859 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=80 area_max=16896 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=80 area_max=16896 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=63.768554687999995 area_max=12518.078338310403 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=63.768554687999995 area_max=12518.078338310403 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=76 area_max=17856 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=36 points=144 area_min=24 area_max=17856 area_lt_001=0 ancestor_bad=0 max_error=0
+[0m[38;2;255;000;000mP3 PORTALS count=148 points=596 area_min=0.13479904202994142 area_max=17431.444542878216 area_lt_001=0 ancestor_bad=21 max_error=0.1740881894611448
+[0m[38;2;255;000;000mP3 PORTALS count=142 points=574 area_min=0.13479904203011275 area_max=17431.444542878216 area_lt_001=0 ancestor_bad=20 max_error=0.3348500693641654
+[0m[38;2;255;000;000mP3 PORTALS count=296 points=1163 area_min=1.9893667928114442 area_max=17266.69087412271 area_lt_001=0 ancestor_bad=14 max_error=0.14122093267312152
+[0m[38;2;255;000;000mP3 PORTALS count=193 points=760 area_min=4.753552109670091 area_max=26689.6732066757 area_lt_001=0 ancestor_bad=22 max_error=0.4499624204114525
+[0m[38;2;255;000;000mP3 PORTALS count=738 points=2924 area_min=0.2122455729883484 area_max=78208.091797416 area_lt_001=0 ancestor_bad=49 max_error=0.9511676022227675
+[0m[38;2;255;000;000mP3 PORTALS count=425 points=1675 area_min=0.07160726891125715 area_max=83968 area_lt_001=0 ancestor_bad=22 max_error=0.1288506441796926
+[0m[38;2;255;000;000mP3 PORTALS count=8099 points=32041 area_min=0.03878293103732329 area_max=559922.4432493395 area_lt_001=0 ancestor_bad=1018 max_error=109.41660874239687
+[0m[38;2;255;000;000mP3 PORTALS count=5851 points=22872 area_min=0.05090648588330114 area_max=559922.4432493395 area_lt_001=0 ancestor_bad=692 max_error=9.738442081213861
+[0mProcessing hull 1...
+[33mWARNING: unknown/unset location: Healing degenerate edge (8.652370470292034e-05) at (999.822 -155 -48)
+[0m[33mWARNING: /tmp/qqbsp-phase3/trace-p1/full-on.map[line 8121]: Healing degenerate edge (2.2045641800697253e-06) at (448.031 710 -12.3)
+[0m[33mWARNING: unknown/unset location: Healing degenerate edge (4.008165825759368e-05) at (499.889 317 -36)
+[0m[33mWARNING: unknown/unset location: Healing degenerate edge (5.2973400813826664e-05) at (-1744.000 -2.05e+03 183)
+[0m[33mWARNING: unknown/unset location: Healing degenerate edge (9.406164545653558e-05) at (-1505.285 -2.05e+03 183)
+[0m[33mWARNING: /tmp/qqbsp-phase3/trace-p1/full-on.map[line 13063]: Healing degenerate edge (5.823161271056717e-05) at (-1744.000 -2.04e+03 193)
+[0m[33mWARNING: unknown/unset location: Healing degenerate edge (8.537965016068877e-05) at (-1721.949 -48.1 234)
+[0m[33mWARNING: unknown/unset location: Healing degenerate edge (4.78618457672574e-05) at (-1523.070 -401 266)
+[0m[33mWARNING: unknown/unset location: Healing degenerate edge (8.67103833097155e-05) at (-1554.888 -303 253)
+[0m[33mWARNING: unknown/unset location: Healing degenerate edge (9.14765537619508e-05) at (-1561.086 -295 253)
+[0m[33mWARNING: unknown/unset location: Healing degenerate edge (7.917335361747953e-05) at (-1605.893 -238 178)
+[0m[33mWARNING: unknown/unset location: Healing degenerate edge (7.485022780317136e-05) at (-1625.396 -257 253)
+[0m[33mWARNING: unknown/unset location: Healing degenerate edge (4.956102107686305e-05) at (-1649.160 -249 253)
+[0m[33mWARNING: unknown/unset location: Healing degenerate edge (2.5471818201156557e-05) at (-1703.610 -199 178)
+[0m[33mWARNING: unknown/unset location: Healing degenerate edge (7.831162512495213e-05) at (-1954.842 -160 184)
+[0m[33mWARNING: unknown/unset location: Healing degenerate edge (9.320952507767137e-05) at (-1952.478 -195 33.3)
+[0mP3 SNAP source count=2306 hash=3662830499230158971
+P3 SNAP post-csg count=7793 hash=16356146191169487913
+P3 SNAP bsp-input count=7793 hash=16356146191169487913
+[38;2;255;000;000mP3 PORTALS count=1890919 points=7532077 area_min=0.001536015511158846 area_max=3569217.1454366078 area_lt_001=29 ancestor_bad=74972 max_error=662.7723445368322
+[0mP3 SNAP bsp-input count=7793 hash=16356146191169487913
+[38;2;255;000;000mP3 PORTALS count=850223 points=3380088 area_min=0.0009587818356718905 area_max=2625216.740682611 area_lt_001=21 ancestor_bad=40900 max_error=306.8345565308349
+[0m[33mWARNING: unknown/unset location: Healing degenerate edge (7.051548919108255e-05) at (182.144 7.95 184)
+[0m[33mWARNING: unknown/unset location: Healing degenerate edge (8.518128343022097e-05) at (462.525 -34.8 141)
+[0m[33mWARNING: unknown/unset location: Healing degenerate edge (8.686921570767144e-05) at (492.914 -44.2 146)
+[0m[33mWARNING: unknown/unset location: Healing degenerate edge (8.452378446736805e-05) at (430.002 -68.7 84)
+[0m[33mWARNING: unknown/unset location: Healing degenerate edge (5.127142509209647e-05) at (520.238 -62.5 160)
+[0m[33mWARNING: unknown/unset location: Healing degenerate edge (4.790669752272907e-05) at (432.126 617 -280)
+[0m[33mWARNING: unknown/unset location: Healing degenerate edge (4.790669591587157e-05) at (337.560 753 -352)
+[0m[33mWARNING: unknown/unset location: Healing degenerate edge (4.5999039133827267e-05) at (-1851.746 -67.2 149)
+[0m[33mWARNING: unknown/unset location: Healing degenerate edge (4.527703467687127e-05) at (-1889.080 -232 -13.4)
+[0m[33mWARNING: unknown/unset location: Healing degenerate edge (5.618334257826675e-05) at (369.188 713 -176)
+[0m[33mWARNING: unknown/unset location: Healing degenerate edge (4.243715218965717e-05) at (-1644.819 -87.1 -151)
+[0m[33mWARNING: unknown/unset location: Healing degenerate edge (4.132093911491016e-05) at (-1683.471 -78.4 -151)
+[0m[33mWARNING: unknown/unset location: Healing degenerate edge (5.437178809067337e-05) at (-1751.477 -72.2 -151)
+[0m[33mWARNING: unknown/unset location: Healing degenerate edge (5.621061285173602e-05) at (-1809.083 -68.8 -151)
+[0m[33mWARNING: unknown/unset location: Healing degenerate edge (4.6205388393016264e-05) at (-1729.310 -271 63.3)
+[0m[33mWARNING: unknown/unset location: Healing degenerate edge (6.739444705448151e-05) at (-1636.972 -286 71.2)
+[0m[33mWARNING: unknown/unset location: Healing degenerate edge (6.824777582612337e-05) at (-1572.781 -125 41.3)
+[0m[33mWARNING: unknown/unset location: Healing degenerate edge (1.8687848052920385e-05) at (-1719.045 -96.9 41.3)
+[0m[33mWARNING: unknown/unset location: Healing degenerate edge (8.631658667160441e-05) at (-1285.371 -369 250)
+[0m[33mWARNING: unknown/unset location: Healing degenerate edge (6.268152666946499e-05) at (-1299.761 -317 232)
+[0m[33mWARNING: unknown/unset location: Healing degenerate edge (4.864374704719088e-05) at (-1308.583 -266 228)
+[0m[33mWARNING: unknown/unset location: Healing degenerate edge (3.881193056993338e-05) at (-1593.905 -19.4 217)
+[0m[33mWARNING: unknown/unset location: Healing degenerate edge (9.590042729755266e-05) at (-1687.508 -51.6 220)
+[0m[33mWARNING: unknown/unset location: Healing degenerate edge (2.3066174350975757e-05) at (-1728.319 -255 255)
+[0mProcessing hull 2...
+[33mWARNING: unknown/unset location: Healing degenerate edge (8.65237047229603e-05) at (983.822 -171 -80)
+[0m[33mWARNING: /tmp/qqbsp-phase3/trace-p1/full-on.map[line 8121]: Healing degenerate edge (2.2045641800727314e-06) at (464.031 726 -12.3)
+[0m[33mWARNING: unknown/unset location: Healing degenerate edge (4.008165707840956e-05) at (515.889 301 -36)
+[0m[33mWARNING: unknown/unset location: Healing degenerate edge (6.268065295462642e-05) at (-1760.000 -2.07e+03 151)
+[0m[33mWARNING: /tmp/qqbsp-phase3/trace-p1/full-on.map[line 13063]: Healing degenerate edge (5.823161249019985e-05) at (-1760.000 -2.06e+03 161)
+[0m[33mWARNING: unknown/unset location: Healing degenerate edge (6.623065201371507e-05) at (-1559.412 -232 356)
+[0m[33mWARNING: unknown/unset location: Healing degenerate edge (6.820226198046016e-05) at (-1743.086 -91.9 365)
+[0m[33mWARNING: unknown/unset location: Healing degenerate edge (4.786184419983999e-05) at (-1539.070 -417 266)
+[0m[33mWARNING: unknown/unset location: Healing degenerate edge (9.50854928105115e-05) at (-1570.888 -287 253)
+[0m[33mWARNING: unknown/unset location: Healing degenerate edge (9.147655422297474e-05) at (-1545.086 -311 253)
+[0m[33mWARNING: unknown/unset location: Healing degenerate edge (7.917335313307628e-05) at (-1621.893 -222 146)
+[0m[33mWARNING: unknown/unset location: Healing degenerate edge (8.644192542588984e-05) at (-1565.161 -296 253)
+[0m[33mWARNING: unknown/unset location: Healing degenerate edge (3.8406496964182145e-05) at (-1719.610 -183 146)
+[0m[33mWARNING: unknown/unset location: Healing degenerate edge (7.831162630239172e-05) at (-1970.842 -176 184)
+[0mP3 SNAP source count=2306 hash=14716151364580024049
+P3 SNAP post-csg count=7789 hash=16747424518114811870
+P3 SNAP bsp-input count=7789 hash=16747424518114811870
+[33mWARNING: huge winding
+[0m[38;2;255;000;000mP3 PORTALS count=2142330 points=8535561 area_min=0.0016192881304677733 area_max=3580417.212129957 area_lt_001=30 ancestor_bad=91423 max_error=138.48094020015537
+[0mP3 SNAP bsp-input count=7789 hash=16747424518114811870
+[38;2;255;000;000mP3 PORTALS count=1185853 points=4719780 area_min=0.00495777180843094 area_max=2712000.793266516 area_lt_001=23 ancestor_bad=55086 max_error=573.1345816918799
+[0m[33mWARNING: unknown/unset location: Healing degenerate edge (5.1271425410509415e-05) at (504.238 -46.5 160)
+[0m[33mWARNING: unknown/unset location: Healing degenerate edge (7.528195015941068e-05) at (448.126 601 -280)
+[0m[33mWARNING: unknown/unset location: Healing degenerate edge (7.528194849658465e-05) at (321.560 769 -384)
+[0m[33mWARNING: unknown/unset location: Healing degenerate edge (9.199807509030917e-05) at (-1835.746 -51.2 149)
+[0m[33mWARNING: unknown/unset location: Healing degenerate edge (9.055406771982286e-05) at (-1905.080 -248 -45.4)
+[0m[33mWARNING: unknown/unset location: Healing degenerate edge (5.6183342578315434e-05) at (385.188 697 -208)
+[0m[33mWARNING: unknown/unset location: Healing degenerate edge (4.545977237625556e-05) at (-1660.819 -71.1 -183)
+[0m[33mWARNING: unknown/unset location: Healing degenerate edge (7.567655343324468e-05) at (-1699.471 -62.4 -183)
+[0m[33mWARNING: unknown/unset location: Healing degenerate edge (8.544138159071277e-05) at (-1767.477 -56.2 -183)
+[0m[33mWARNING: unknown/unset location: Healing degenerate edge (8.672559358326499e-05) at (-1825.083 -52.8 -183)
+[0m[33mWARNING: unknown/unset location: Healing degenerate edge (7.727498129466668e-05) at (-1713.310 -287 63.3)
+[0m[33mWARNING: unknown/unset location: Healing degenerate edge (7.632762414589816e-05) at (-1485.964 -178 41.3)
+[0m[33mWARNING: unknown/unset location: Healing degenerate edge (1.8687846663450963e-05) at (-1703.045 -113 41.3)
+[0m[33mWARNING: unknown/unset location: Healing degenerate edge (8.631657689204975e-05) at (-1269.371 -385 250)
+[0m[33mWARNING: unknown/unset location: Healing degenerate edge (6.268152678237145e-05) at (-1283.761 -333 232)
+[0m[33mWARNING: unknown/unset location: Healing degenerate edge (4.864375032123326e-05) at (-1292.583 -250 228)
+[0m[33mWARNING: unknown/unset location: Healing degenerate edge (7.35872742617919e-05) at (-1459.756 -139 220)
+[0m[33mWARNING: unknown/unset location: Healing degenerate edge (3.8811930825926705e-05) at (-1577.905 -3.39 217)
+[0m[33mWARNING: unknown/unset location: Healing degenerate edge (2.306617393436327e-05) at (-1712.319 -271 255)
+[0m[33mWARNING: worldspawn at 0 0 0 has long value for key wad (length 921 >= 127)
+[0m---- FinishBSPFile ----
+Writing /tmp/qqbsp-phase3/trace-p1/full-on.bsp as Quake BSP2 bsp2
+Wrote /tmp/qqbsp-phase3/trace-p1/full-on.bsp
+
+count   lump name    byte size 
+     94 models             6016
+  10458 planes           209160
+  17338 vertexes         208056
+  13364 nodes            588016
+   4135 texinfos         165400
+  16424 faces            459872
+  26296 clipnodes        315552
+   7631 leafs            335764
+  20693 marksurfaces      82772
+  35130 edges            281040
+  68693 surfedges        274772
+     92 textures           4052
+        lightdata             0
+        visdata               0
+        entdata           45802
+
+57.778s seconds elapsed

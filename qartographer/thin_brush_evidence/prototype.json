@@ -1,0 +1,7 @@
+{
+  "status": "REJECTED: broader geometry checks fail",
+  "binary": "/tmp/qqbsp-p3/build/qbsp/qqbsp",
+  "sha256": "80c501a363dd19e2d8645d40024c102b21042d983172693a22cc61a4d5508262",
+  "patch_sha256": "f8fea7ae6be144c49776ca3437fbd2a619f8c3bc9cd4cc03bf064f83e39485ea",
+  "source_snapshot_commit": "2f6fc5b79734f56348766cbec83533f1d50b3642"
+}

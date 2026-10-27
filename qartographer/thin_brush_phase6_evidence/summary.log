@@ -1,0 +1,100 @@
+{
+  "filtered": {
+    "cases": 87,
+    "all_oracle_comparisons_pass": true,
+    "aggregate_ms": 106.80470600000001,
+    "stats": {
+      "fast": 508461,
+      "adaptive": 1489,
+      "exact": 2186,
+      "triples": 129165,
+      "exact_homogeneous_builds": 2133,
+      "exact_rank_constraints": 394
+    },
+    "percentages": {
+      "fast": 99.2824171704391,
+      "adaptive": 0.29074308386834746,
+      "exact": 0.4268397456925504
+    },
+    "region_api_calls": 345,
+    "worst_region_api_us": 4028.824,
+    "worst_bundle_us": 23423.382,
+    "allocation_calls": 750126,
+    "allocated_bytes": 11084699,
+    "peak_case_live_increment_bytes": 22016,
+    "bundles_with_exact_sign": 33
+  },
+  "double-exact": {
+    "cases": 87,
+    "all_oracle_comparisons_pass": true,
+    "aggregate_ms": 102.963526,
+    "stats": {
+      "fast": 508461,
+      "adaptive": 0,
+      "exact": 3675,
+      "triples": 129165,
+      "exact_homogeneous_builds": 2783,
+      "exact_rank_constraints": 394
+    },
+    "percentages": {
+      "fast": 99.2824171704391,
+      "adaptive": 0.0,
+      "exact": 0.7175828295608979
+    },
+    "region_api_calls": 345,
+    "worst_region_api_us": 3248.655,
+    "worst_bundle_us": 22574.862,
+    "allocation_calls": 939700,
+    "allocated_bytes": 13294891,
+    "peak_case_live_increment_bytes": 22016,
+    "bundles_with_exact_sign": 33
+  },
+  "exact": {
+    "cases": 87,
+    "all_oracle_comparisons_pass": true,
+    "aggregate_ms": 1211.8719170000002,
+    "stats": {
+      "fast": 0,
+      "adaptive": 0,
+      "exact": 512136,
+      "triples": 129165,
+      "exact_homogeneous_builds": 129165,
+      "exact_rank_constraints": 394
+    },
+    "percentages": {
+      "fast": 0.0,
+      "adaptive": 0.0,
+      "exact": 100.0
+    },
+    "region_api_calls": 345,
+    "worst_region_api_us": 38704.825,
+    "worst_bundle_us": 245961.112,
+    "allocation_calls": 40477851,
+    "allocated_bytes": 463875643,
+    "peak_case_live_increment_bytes": 22464,
+    "bundles_with_exact_sign": 87
+  },
+  "latency_instrumented": {
+    "worst_sign_ns": 89661,
+    "worst_case": "B-narrow-quadrilateral",
+    "note": "Separate instrumented run: timer overhead included, ordinary throughput measurements do not enable sign timers."
+  },
+  "permutation_duplicate_variants": 54
+}
+A-hull2-front 3 3 3 2 251.72 {'adaptive': 0, 'exact': 7, 'exact_homogeneous_builds': 14, 'exact_rank_constraints': 2, 'fast': 212, 'triples': 90}
+A-actual-post-csg-route 3 3 3 2 782.76 {'adaptive': 0, 'exact': 5, 'exact_homogeneous_builds': 14, 'exact_rank_constraints': 2, 'fast': 4321, 'triples': 2139}
+B-narrow-quadrilateral 3 3 3 2 12414.4 {'adaptive': 79, 'exact': 49, 'exact_homogeneous_builds': 58, 'exact_rank_constraints': 2, 'fast': 60924, 'triples': 12005}
+C-sky-roof-gap 3 3 3 2 123.52 {'adaptive': 0, 'exact': 3, 'exact_homogeneous_builds': 6, 'exact_rank_constraints': 2, 'fast': 216, 'triples': 90}
+D-halloween-rounded-extent 3 3 3 2 506.81 {'adaptive': 16, 'exact': 6, 'exact_homogeneous_builds': 15, 'exact_rank_constraints': 2, 'fast': 2276, 'triples': 948}
+E-p1-rounded-extent 3 -1 3 -1 10997.35 {'adaptive': 154, 'exact': 127, 'exact_homogeneous_builds': 133, 'exact_rank_constraints': 2, 'fast': 51630, 'triples': 10486}
+F-rotated-portal 1 1 1 1 4129.43 {'adaptive': 268, 'exact': 356, 'exact_homogeneous_builds': 292, 'exact_rank_constraints': 16, 'fast': 5772, 'triples': 2776}
+F-base-winding 3 3 3 2 301.28 {'adaptive': 0, 'exact': 14, 'exact_homogeneous_builds': 19, 'exact_rank_constraints': 2, 'fast': 414, 'triples': 180}
+F-make-portal 3 3 3 2 282.67 {'adaptive': 0, 'exact': 14, 'exact_homogeneous_builds': 19, 'exact_rank_constraints': 2, 'fast': 452, 'triples': 192}
+depth-0 3 3 3 2 42.16 {'adaptive': 0, 'exact': 0, 'exact_homogeneous_builds': 0, 'exact_rank_constraints': 2, 'fast': 220, 'triples': 90}
+depth-8 3 3 3 2 158.01 {'adaptive': 0, 'exact': 0, 'exact_homogeneous_builds': 0, 'exact_rank_constraints': 2, 'fast': 1648, 'triples': 470}
+depth-16 3 3 3 2 362.78 {'adaptive': 0, 'exact': 0, 'exact_homogeneous_builds': 0, 'exact_rank_constraints': 2, 'fast': 4292, 'triples': 1170}
+depth-32 3 3 3 2 1087.33 {'adaptive': 0, 'exact': 0, 'exact_homogeneous_builds': 0, 'exact_rank_constraints': 2, 'fast': 13228, 'triples': 3530}
+depth-64 3 3 3 2 3712.87 {'adaptive': 0, 'exact': 0, 'exact_homogeneous_builds': 0, 'exact_rank_constraints': 2, 'fast': 45692, 'triples': 12090}
+ordinary-box 3 3 3 2 50.79 {'adaptive': 0, 'exact': 0, 'exact_homogeneous_builds': 0, 'exact_rank_constraints': 2, 'fast': 227, 'triples': 90}
+transformed-box 3 3 3 2 388.18 {'adaptive': 0, 'exact': 0, 'exact_homogeneous_builds': 0, 'exact_rank_constraints': 2, 'fast': 3886, 'triples': 1246}
+rotated-translated 3 3 3 2 371.21 {'adaptive': 0, 'exact': 0, 'exact_homogeneous_builds': 0, 'exact_rank_constraints': 2, 'fast': 3880, 'triples': 1246}

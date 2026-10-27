@@ -1,0 +1,2226 @@
+{
+  "THIN_BRUSH_PHASE8.md": {
+    "sha256": "08aadb5142f5e022b6ab915f3cbf7c962d7a26303cab3b77b40bf60fe315ebe8",
+    "bytes": 23861
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-campaign/halloween-off-auto/input.log": {
+    "sha256": "e0041bc4238b00ab84473498a6ee05370a0a9018531a99365576b92a85d7f2c8",
+    "bytes": 30928
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-campaign/halloween-off-auto/input.map": {
+    "sha256": "d5f2ab2a0c5a22d2f0ecaecf77a1bbd72a3c2ce2e3c444fe0b4c517092e5986c",
+    "bytes": 2978291
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-campaign/halloween-off-auto/node.json.fragment.json": {
+    "sha256": "34a3df2b6874dc78a24361db8a32b77ecae0b7150ce2234263ff0aa674ef55a1",
+    "bytes": 1429
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-campaign/halloween-off-auto/node.json.partition-1510.json": {
+    "sha256": "671b2dc3824b6fcd292412ea1111eefe324009742560bb655b41fd5313a1826d",
+    "bytes": 3724360
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-campaign/halloween-off-auto/node.json.partition-2768.json": {
+    "sha256": "d8255ebc3619dbb6ed7dbca846a925736140e8c2b3a1efce3d3c0ccd30bacdd7",
+    "bytes": 3724360
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-campaign/halloween-off-auto/node.json.partition-9236.json": {
+    "sha256": "66631f448e4f1b51549ca21238be2dbb65fe148a96892a71ddafc0aac4d8cd99",
+    "bytes": 2000089
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-campaign/halloween-off-auto/node.json.partition-9240.json": {
+    "sha256": "bf79b3105d341117e8a532d7c21081f489c663a125a010e8f3b37cf0e90f7941",
+    "bytes": 1998664
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-campaign/halloween-off-auto/node.json.partition-98.json": {
+    "sha256": "d5c5ce0b5db24d878c2f3a8250ae90a476c23778af6e327f6811ee89c6179753",
+    "bytes": 2000718
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-campaign/halloween-off-auto/stdout.log": {
+    "sha256": "f60a6aa10253d8d46c511b30e1ed8c5f1654725bd279ea1253e2cd7f2ea9ae27",
+    "bytes": 32176
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-campaign/halloween-off-auto/time.txt": {
+    "sha256": "133aeb968fe519f382f7706d82b81ddd022701294debb9d8ebd985a5fcc11490",
+    "bytes": 935
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-campaign/halloween-on-auto/input.log": {
+    "sha256": "9fbaa99387641b080775b92f2e0d4f8172941c49b3605293c5337c8b059f6457",
+    "bytes": 32408
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-campaign/halloween-on-auto/input.map": {
+    "sha256": "16250e50546f9d1c4654d75e0a6683f70f7eff332ec730793c5f836d39716318",
+    "bytes": 3494056
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-campaign/halloween-on-auto/node.json.fragment.json": {
+    "sha256": "d6540c20b37f5213169c631cb00a0dd8edd8d55a33a383706b23af37e916e5bc",
+    "bytes": 1430
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-campaign/halloween-on-auto/node.json.partition-14184.json": {
+    "sha256": "e1da693683b096151b27e6bd0ce69b3452ea79a89606c81dae513a208fa66671",
+    "bytes": 1856038
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-campaign/halloween-on-auto/node.json.partition-14188.json": {
+    "sha256": "06c3fdfe9a7184ef0c1dfec6b6a64970944ae49374840665151b3c5cbe2d81d7",
+    "bytes": 1854615
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-campaign/halloween-on-auto/node.json.partition-1510.json": {
+    "sha256": "b5ec32fb173dcec25ae8127b807bfa5f20ebbf068a180e3110cfbbe7267bc92d",
+    "bytes": 3436390
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-campaign/halloween-on-auto/node.json.partition-2768.json": {
+    "sha256": "cc6098f46fd7e03bb0b139ea18ab89e63be7aa395b377dc99b3c8a477f0a38a1",
+    "bytes": 3436390
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-campaign/halloween-on-auto/node.json.partition-98.json": {
+    "sha256": "a7851a7c3f8acad4460e12ba565e942da692e930da46c16ad44979b93979ed5c",
+    "bytes": 1856664
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-campaign/halloween-on-auto/stdout.log": {
+    "sha256": "3c2ee9fb7c1b3aa8b84b35451a961d9c22b9084a11831b600bdea237d3db2804",
+    "bytes": 33655
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-campaign/halloween-on-auto/time.txt": {
+    "sha256": "c8e0014703dbf719338fdccbdac5951ffcb44aaab19fdace3780c732c0d39a8c",
+    "bytes": 934
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-campaign/ordinary/input.bsp.bin": {
+    "sha256": "157ea29bccafb860b9e7d9c47dec688e1351d66bfc524deb7df54e9e37511118",
+    "bytes": 1680
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-campaign/ordinary/input.content.json": {
+    "sha256": "7d21bca3c528e805425d09e12fd8f7d2693aea4f3cd14662cb3d04f96c41a2c2",
+    "bytes": 14
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-campaign/ordinary/input.log": {
+    "sha256": "2c3c7063e6fb4191e5773b5897a2d998c43c0c46bb85388eddf2442f260afd88",
+    "bytes": 3431
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-campaign/ordinary/input.map": {
+    "sha256": "6f5b00bd3ce1808ffc9f921d31cb969f74f03b6bbd44691f1d6c3a82d3695b83",
+    "bytes": 3837
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-campaign/ordinary/input.prt": {
+    "sha256": "b1ac538e53efc28ace2088324b1c0504d0f09b013d30b39ce231d76124bc6c22",
+    "bytes": 9
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-campaign/ordinary/input.texinfo.json": {
+    "sha256": "37384dd2ebd4076ee1e73b2bbec84c6dd58fa61d86cc308506a9d10caa2c9c63",
+    "bytes": 43
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-campaign/ordinary/stdout.log": {
+    "sha256": "7ff9d2d016c7eea706acfde222fe30d75a130d1c8a46bfb9cb4ada23431f7069",
+    "bytes": 5013
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-campaign/ordinary/time.txt": {
+    "sha256": "71e81f0104473a0c5a575da181c879a55914c0d21b9bb20fb23b0698866bcb6e",
+    "bytes": 880
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-campaign/ordinary-L-room/input.bsp.bin": {
+    "sha256": "5b9eca26c5af4f33c3b6f30a06d968605cff8ef64a708000d25fbfaa33305665",
+    "bytes": 2288
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-campaign/ordinary-L-room/input.content.json": {
+    "sha256": "b26c8088b1ecbd9d8a315941f17e05d039a57c3f9f308a9eb59f59e42645780f",
+    "bytes": 17
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-campaign/ordinary-L-room/input.log": {
+    "sha256": "bced2562202cdca40c158cb84fb88e194863e5e8b2a7138c075e5966123c1f26",
+    "bytes": 3566
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-campaign/ordinary-L-room/input.map": {
+    "sha256": "853473f20086124c62dc7c99c4aa49f974ab6a690d756d79d50565aacb4a3564",
+    "bytes": 8411
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-campaign/ordinary-L-room/input.prt": {
+    "sha256": "a8b4e1cb84660efd8549ff3c4824742b48e0920019935cc6b1ab5a6862e60455",
+    "bytes": 76
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-campaign/ordinary-L-room/input.texinfo.json": {
+    "sha256": "37384dd2ebd4076ee1e73b2bbec84c6dd58fa61d86cc308506a9d10caa2c9c63",
+    "bytes": 43
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-campaign/ordinary-L-room/stdout.log": {
+    "sha256": "2985ed46005b8d5024ccbc5dd2151f8b79db76bc3d524c59ccbab66c93aceff1",
+    "bytes": 5182
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-campaign/ordinary-L-room/time.txt": {
+    "sha256": "6f0fed61b5dd32206ce986981821f56d22098089a62b1abeb0833102db44a34f",
+    "bytes": 888
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-campaign/ordinary-rotated-hull0/input.bsp.bin": {
+    "sha256": "5d71b873685de5ee38c063b510da458b402e8da56800bb02fb906ed3bd13b971",
+    "bytes": 1500
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-campaign/ordinary-rotated-hull0/input.content.json": {
+    "sha256": "7d21bca3c528e805425d09e12fd8f7d2693aea4f3cd14662cb3d04f96c41a2c2",
+    "bytes": 14
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-campaign/ordinary-rotated-hull0/input.log": {
+    "sha256": "61d76ff5dcdaec9a68e0fd21a1379c745a1842ccf1ddcf547f2ce002ba95b624",
+    "bytes": 3695
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-campaign/ordinary-rotated-hull0/input.map": {
+    "sha256": "345366ef6646c035f9581965548a404f2a15533be95f9af7ff3a4a59f5adee32",
+    "bytes": 7072
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-campaign/ordinary-rotated-hull0/input.prt": {
+    "sha256": "b1ac538e53efc28ace2088324b1c0504d0f09b013d30b39ce231d76124bc6c22",
+    "bytes": 9
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-campaign/ordinary-rotated-hull0/input.texinfo.json": {
+    "sha256": "37384dd2ebd4076ee1e73b2bbec84c6dd58fa61d86cc308506a9d10caa2c9c63",
+    "bytes": 43
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-campaign/ordinary-rotated-hull0/stdout.log": {
+    "sha256": "b9542cd6c17ef6355445d54190fc7d494516a5cfe12eef7ebf6756cfcfaf242d",
+    "bytes": 5327
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-campaign/ordinary-rotated-hull0/time.txt": {
+    "sha256": "8d2b8bef0a6d13595899d4b83d1268f00e03ab7ac477d44533b68b87b05a8245",
+    "bytes": 901
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-campaign/p1-reduced/input.log": {
+    "sha256": "cb22524ee5b02bfd04410e9965f1d48ec5759b2f830eb4c31a192572145f1093",
+    "bytes": 19288
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-campaign/p1-reduced/input.map": {
+    "sha256": "5f4c588e6f4482f933138def59a2cd64660491b146cbcf0683f32266bcd24d93",
+    "bytes": 10491
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-campaign/p1-reduced/input.prt": {
+    "sha256": "c610b34a8550e252352bf2e904cf0998f1c688779a71522830956419d4726d03",
+    "bytes": 38
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-campaign/p1-reduced/node.json.fragment.json": {
+    "sha256": "182f0bdfc64a8ce50b08e27d7da63266e78e24403c32071412b36b85952c4339",
+    "bytes": 2697
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-campaign/p1-reduced/node.json.no-route.json": {
+    "sha256": "c77d1ff65a1e80d6b83833c82ae2e5753bb47f395b63ae3637d7f2f248d377e2",
+    "bytes": 4717
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-campaign/p1-reduced/node.json.partition-278.json": {
+    "sha256": "3e7752cab76c9538b606194067d57d694fb9912c587bc1ce91bf5aeae2264ad8",
+    "bytes": 28464
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-campaign/p1-reduced/node.json.portal-proofs.jsonl": {
+    "sha256": "67e166f73e5f76b53d714bce26fc56c4e703c4397843c333eab476353ed06a3c",
+    "bytes": 145406
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-campaign/p1-reduced/node.json.portal.json": {
+    "sha256": "578843bc42768d55950dc2eaf3a92ec0718a43c55f24755867a499cfe60e76eb",
+    "bytes": 5202
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-campaign/p1-reduced/stdout.log": {
+    "sha256": "9e5fc96c965b68a03a320d3a47fa0bc4310c7ffd1f36c8a5b56175de3df1e0f8",
+    "bytes": 20500
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-campaign/p1-reduced/time.txt": {
+    "sha256": "c8968f5fb02c7d4360699e3ea2ccdf08038de40ef9e2af7438befb642f52312b",
+    "bytes": 924
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-campaign/results.json": {
+    "sha256": "cb40590635b925c64f20a65163f934a66a0ef9bb8c2217eb9056ca4037137ccb",
+    "bytes": 5869
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-campaign/rotated-actors/input.log": {
+    "sha256": "3635b2614d5c541f9429912e30bf3872c9734b8c5bfa1ece75f71a93ef00bf79",
+    "bytes": 16755
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-campaign/rotated-actors/input.map": {
+    "sha256": "345366ef6646c035f9581965548a404f2a15533be95f9af7ff3a4a59f5adee32",
+    "bytes": 7072
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-campaign/rotated-actors/input.prt": {
+    "sha256": "b1ac538e53efc28ace2088324b1c0504d0f09b013d30b39ce231d76124bc6c22",
+    "bytes": 9
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-campaign/rotated-actors/node.json.fragment.json": {
+    "sha256": "aefd8c9afcac8d0985e6b79373c07452e63ff0752f201ab2566c4daa3ca34225",
+    "bytes": 1472
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-campaign/rotated-actors/node.json.partition-122.json": {
+    "sha256": "f7515e16ecebf8a383ef3e8882f548f847833abb48cc30b3eb9fbeae93440c4c",
+    "bytes": 12491
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-campaign/rotated-actors/node.json.partition-68.json": {
+    "sha256": "ae6921d1f15a5da617c4c80a57fe644940aa3f29cfef26bb56d3402135b78cdc",
+    "bytes": 14008
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-campaign/rotated-actors/stdout.log": {
+    "sha256": "7faf0c7fb73646c940a43bf6dba03a7bcb1d0ca3dabf50534406b1c72ead3a17",
+    "bytes": 18378
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-campaign/rotated-actors/time.txt": {
+    "sha256": "446884d1dbabd977a59d49a95a500850edbf15588a0016c136bcc19830ee645e",
+    "bytes": 924
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/adjacent-chopfragment/compile.log": {
+    "sha256": "4c313cde5fd83b2515e8a3c6e69775fe2865931c07a7805e06398f7f3b9ac689",
+    "bytes": 3809
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/adjacent-chopfragment/input.bsp.bin": {
+    "sha256": "78939ce84bb2664402cb3c166da6f7ae3ac84c600fa54d8ae3cf0f5ae46a460d",
+    "bytes": 2280
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/adjacent-chopfragment/input.content.json": {
+    "sha256": "7cff4cd85f37ff154e7af5099e48fd9cf03162a55c62547b647ad123ba187176",
+    "bytes": 41
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/adjacent-chopfragment/input.log": {
+    "sha256": "f33d9e4cd2d75ad3a717d48eab54ddd14c564637d1116fc8c14cb8eb20e33cc0",
+    "bytes": 2585
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/adjacent-chopfragment/input.map": {
+    "sha256": "675ca0c5d94907e3e22a8686ae61b4b1c4e5bd30e2eb7c112b29e20fa8c350b3",
+    "bytes": 1085
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/adjacent-chopfragment/input.prt": {
+    "sha256": "f3e25f974b2381c1743044877a12d7192c902ae3b5a22d35fa01d6c685b73450",
+    "bytes": 1419
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/adjacent-chopfragment/input.texinfo.json": {
+    "sha256": "2c47c5fd0721df0a879be3a55898e689314bd9406503dc24ff2c8b2629917120",
+    "bytes": 15
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/adjacent-default/compile.log": {
+    "sha256": "28348272edeea218de7f36877f5501020c67c69f2676bb2950d761733e05d229",
+    "bytes": 3730
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/adjacent-default/input.bsp.bin": {
+    "sha256": "78939ce84bb2664402cb3c166da6f7ae3ac84c600fa54d8ae3cf0f5ae46a460d",
+    "bytes": 2280
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/adjacent-default/input.content.json": {
+    "sha256": "7cff4cd85f37ff154e7af5099e48fd9cf03162a55c62547b647ad123ba187176",
+    "bytes": 41
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/adjacent-default/input.log": {
+    "sha256": "8091e6b45d12f3a937c02232356e832f580939d9ed862f39c0e2d1d305a1233c",
+    "bytes": 2511
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/adjacent-default/input.map": {
+    "sha256": "675ca0c5d94907e3e22a8686ae61b4b1c4e5bd30e2eb7c112b29e20fa8c350b3",
+    "bytes": 1085
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/adjacent-default/input.prt": {
+    "sha256": "f3e25f974b2381c1743044877a12d7192c902ae3b5a22d35fa01d6c685b73450",
+    "bytes": 1419
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/adjacent-default/input.texinfo.json": {
+    "sha256": "2c47c5fd0721df0a879be3a55898e689314bd9406503dc24ff2c8b2629917120",
+    "bytes": 15
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/axis-0-chopfragment/compile.log": {
+    "sha256": "b13e7d1d701e87b60ca65e0c174367293d5ae0251ee5aec7f8943ea2b48b769f",
+    "bytes": 3778
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/axis-0-chopfragment/input.bsp.bin": {
+    "sha256": "5ce383c3090f1ea6a67fc300639083f7bce20ca929f29b07d1fc9dd94291e3b6",
+    "bytes": 1512
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/axis-0-chopfragment/input.content.json": {
+    "sha256": "8c28763c41a1654fb913f5d30153c9d673ae9739394b9d4f5994234fb03683a4",
+    "bytes": 29
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/axis-0-chopfragment/input.log": {
+    "sha256": "b4486bf965e9b600fba2f9738591825c83d37b5ef122fa4d2cbc295c05cf5bf9",
+    "bytes": 2556
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/axis-0-chopfragment/input.map": {
+    "sha256": "2cb223c4214478876116fd2bf555c9c559477a4bc81b9fe6f85cd85c0f9e0627",
+    "bytes": 458
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/axis-0-chopfragment/input.prt": {
+    "sha256": "c531e4986d613f8d1c7a4b9be80171ac94079899b342ce294b4342fe8b2ea476",
+    "bytes": 802
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/axis-0-chopfragment/input.texinfo.json": {
+    "sha256": "a2569df3cd3c77f5d1307252ed3fa9d777725552e0549893c2edace186856645",
+    "bytes": 8
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/axis-0-default/compile.log": {
+    "sha256": "c61ba39bb5e8f1d8835e6f6ff250e191ce3e77e7267b97f89fa5531f02b0e428",
+    "bytes": 3699
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/axis-0-default/input.bsp.bin": {
+    "sha256": "5ce383c3090f1ea6a67fc300639083f7bce20ca929f29b07d1fc9dd94291e3b6",
+    "bytes": 1512
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/axis-0-default/input.content.json": {
+    "sha256": "8c28763c41a1654fb913f5d30153c9d673ae9739394b9d4f5994234fb03683a4",
+    "bytes": 29
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/axis-0-default/input.log": {
+    "sha256": "09ffafe08189e7afc693649426a1a85247b49de09d75495dc6c5079da79878c2",
+    "bytes": 2482
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/axis-0-default/input.map": {
+    "sha256": "2cb223c4214478876116fd2bf555c9c559477a4bc81b9fe6f85cd85c0f9e0627",
+    "bytes": 458
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/axis-0-default/input.prt": {
+    "sha256": "c531e4986d613f8d1c7a4b9be80171ac94079899b342ce294b4342fe8b2ea476",
+    "bytes": 802
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/axis-0-default/input.texinfo.json": {
+    "sha256": "a2569df3cd3c77f5d1307252ed3fa9d777725552e0549893c2edace186856645",
+    "bytes": 8
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/axis-1-chopfragment/compile.log": {
+    "sha256": "5fd0a84857f0f693008425408bc1e114a38500fe1a715a138c766d8bd2266b46",
+    "bytes": 3778
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/axis-1-chopfragment/input.bsp.bin": {
+    "sha256": "ef4be9a333b5078735e33661efce8064ef9623aae7c57308b8ffd741d8c677ee",
+    "bytes": 1512
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/axis-1-chopfragment/input.content.json": {
+    "sha256": "8c28763c41a1654fb913f5d30153c9d673ae9739394b9d4f5994234fb03683a4",
+    "bytes": 29
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/axis-1-chopfragment/input.log": {
+    "sha256": "e87191642b82e05ac2c58ef17d6be2dd119a02e38184e921d256a937adf2a172",
+    "bytes": 2556
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/axis-1-chopfragment/input.map": {
+    "sha256": "25f3a93a10937a5dccfe378e400ad6ffd98f73ee8ef042b9caa6b6adae8088e8",
+    "bytes": 458
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/axis-1-chopfragment/input.prt": {
+    "sha256": "ef5055433a589915fb093a791b02e1eaa7dd7c9f361811c5fa34842b026af552",
+    "bytes": 830
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/axis-1-chopfragment/input.texinfo.json": {
+    "sha256": "a2569df3cd3c77f5d1307252ed3fa9d777725552e0549893c2edace186856645",
+    "bytes": 8
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/axis-1-default/compile.log": {
+    "sha256": "f8b56b8e7cad4ce8d768a2f78f421c8590c47b88e723134b15214ac8a75cb68c",
+    "bytes": 3699
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/axis-1-default/input.bsp.bin": {
+    "sha256": "ef4be9a333b5078735e33661efce8064ef9623aae7c57308b8ffd741d8c677ee",
+    "bytes": 1512
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/axis-1-default/input.content.json": {
+    "sha256": "8c28763c41a1654fb913f5d30153c9d673ae9739394b9d4f5994234fb03683a4",
+    "bytes": 29
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/axis-1-default/input.log": {
+    "sha256": "08b97d3ed7c4bc26dca453d77c0c9822804bf219f14a52f656ae12b5aa272e16",
+    "bytes": 2482
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/axis-1-default/input.map": {
+    "sha256": "25f3a93a10937a5dccfe378e400ad6ffd98f73ee8ef042b9caa6b6adae8088e8",
+    "bytes": 458
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/axis-1-default/input.prt": {
+    "sha256": "ef5055433a589915fb093a791b02e1eaa7dd7c9f361811c5fa34842b026af552",
+    "bytes": 830
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/axis-1-default/input.texinfo.json": {
+    "sha256": "a2569df3cd3c77f5d1307252ed3fa9d777725552e0549893c2edace186856645",
+    "bytes": 8
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/compiler.json": {
+    "sha256": "d4e82ff48790853f3c5dd9eecfdab0e9e01a4eb8ee9f33d5ea8708ce6c8e6eca",
+    "bytes": 126
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/control-chopfragment/compile.log": {
+    "sha256": "aa7b05cf259251e5112d6cc6f9517536a5d33346efcb1760554151952b8bf1b2",
+    "bytes": 3721
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/control-chopfragment/input.bsp.bin": {
+    "sha256": "170cd6e08c690fcdbffec44ea33862e1170f2b8035763722c74575a03d44064e",
+    "bytes": 1896
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/control-chopfragment/input.content.json": {
+    "sha256": "8c28763c41a1654fb913f5d30153c9d673ae9739394b9d4f5994234fb03683a4",
+    "bytes": 29
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/control-chopfragment/input.log": {
+    "sha256": "0efa91e53301d957d17b6734f27b27c919b50f6b0c048fcb8a0814630b490748",
+    "bytes": 2516
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/control-chopfragment/input.map": {
+    "sha256": "b9227e6eef074702bfd95edb67d14bed105749b30ea37248bf4e9d009be0c39d",
+    "bytes": 638
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/control-chopfragment/input.prt": {
+    "sha256": "3bbe239340d919572e36a0970927c2c30e4256846103d22d6fdc24384bb6bbd3",
+    "bytes": 838
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/control-chopfragment/input.texinfo.json": {
+    "sha256": "41ea9adb8ea53166e0748c3c10468c408c50066835767fe970265a03149dfb3d",
+    "bytes": 22
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/control-default/compile.log": {
+    "sha256": "c96adbefdfbbb18e298ca29455494517ca03f6838deb00786c369e8d5e1b1c10",
+    "bytes": 3642
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/control-default/input.bsp.bin": {
+    "sha256": "170cd6e08c690fcdbffec44ea33862e1170f2b8035763722c74575a03d44064e",
+    "bytes": 1896
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/control-default/input.content.json": {
+    "sha256": "8c28763c41a1654fb913f5d30153c9d673ae9739394b9d4f5994234fb03683a4",
+    "bytes": 29
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/control-default/input.log": {
+    "sha256": "89c72b34745e95e789621193e490f8eaa200f075321174cefd95bb4ea5a0a497",
+    "bytes": 2442
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/control-default/input.map": {
+    "sha256": "b9227e6eef074702bfd95edb67d14bed105749b30ea37248bf4e9d009be0c39d",
+    "bytes": 638
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/control-default/input.prt": {
+    "sha256": "3bbe239340d919572e36a0970927c2c30e4256846103d22d6fdc24384bb6bbd3",
+    "bytes": 838
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/control-default/input.texinfo.json": {
+    "sha256": "41ea9adb8ea53166e0748c3c10468c408c50066835767fe970265a03149dfb3d",
+    "bytes": 22
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/identity.txt": {
+    "sha256": "b2cc9c7d4579537676f90fecdd20415fcb79b79ffb0aab3cec01f51643b76788",
+    "bytes": 9341
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/near-coplanar-chopfragment/compile.log": {
+    "sha256": "c1844171ccd77a5b9ba53032b2ee0791d192c2100518ec36abd1c31f268a35b3",
+    "bytes": 3826
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/near-coplanar-chopfragment/input.bsp.bin": {
+    "sha256": "469bb325524e040cbaacb8e74951420b16b2be31f1e69443fe7afb9d770b9177",
+    "bytes": 2044
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/near-coplanar-chopfragment/input.content.json": {
+    "sha256": "2fe09c48fd9f4040ecf5b4537b437a1e226e97fa80258fc0e23aba1e01b2d788",
+    "bytes": 32
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/near-coplanar-chopfragment/input.log": {
+    "sha256": "b01167b1294477da8c4b480d54970c78430874c1790713938f98523def4f20ff",
+    "bytes": 2597
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/near-coplanar-chopfragment/input.map": {
+    "sha256": "acb20f5374601518281fc7d98ce2c4efe17cae966dff29f6103774961b29fa6b",
+    "bytes": 1074
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/near-coplanar-chopfragment/input.prt": {
+    "sha256": "147320390e87a382f2255826da262bce2b8edfee265616aa397956728a3e9e91",
+    "bytes": 1122
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/near-coplanar-chopfragment/input.texinfo.json": {
+    "sha256": "2c47c5fd0721df0a879be3a55898e689314bd9406503dc24ff2c8b2629917120",
+    "bytes": 15
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/near-coplanar-default/compile.log": {
+    "sha256": "8d843c82c248200f90d55ecf369477bb1082993aebc7de1184849807745e49ca",
+    "bytes": 3747
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/near-coplanar-default/input.bsp.bin": {
+    "sha256": "469bb325524e040cbaacb8e74951420b16b2be31f1e69443fe7afb9d770b9177",
+    "bytes": 2044
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/near-coplanar-default/input.content.json": {
+    "sha256": "2fe09c48fd9f4040ecf5b4537b437a1e226e97fa80258fc0e23aba1e01b2d788",
+    "bytes": 32
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/near-coplanar-default/input.log": {
+    "sha256": "a1c220f65e4eaa6127658a475a8fb788858d8da86aa2e2c939190c83354ffbe4",
+    "bytes": 2523
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/near-coplanar-default/input.map": {
+    "sha256": "acb20f5374601518281fc7d98ce2c4efe17cae966dff29f6103774961b29fa6b",
+    "bytes": 1074
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/near-coplanar-default/input.prt": {
+    "sha256": "147320390e87a382f2255826da262bce2b8edfee265616aa397956728a3e9e91",
+    "bytes": 1122
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/near-coplanar-default/input.texinfo.json": {
+    "sha256": "2c47c5fd0721df0a879be3a55898e689314bd9406503dc24ff2c8b2629917120",
+    "bytes": 15
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/original-chopfragment/compile.log": {
+    "sha256": "eff8279c83c645d2539083a221c893adc1191fbd764a219a9c179f189a8ffbfc",
+    "bytes": 3788
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/original-chopfragment/input.bsp.bin": {
+    "sha256": "dd5bab48582c56ed8e37c866e264e00a999a488559fc4fe0ebed4749bfe7d064",
+    "bytes": 1512
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/original-chopfragment/input.content.json": {
+    "sha256": "8c28763c41a1654fb913f5d30153c9d673ae9739394b9d4f5994234fb03683a4",
+    "bytes": 29
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/original-chopfragment/input.log": {
+    "sha256": "43df67b8898653b8b4fc30c87a395abd4d03fbb0e44669b2ea9ff715558f8281",
+    "bytes": 2564
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/original-chopfragment/input.map": {
+    "sha256": "dc3bd5aecde1e9bd502decc72b33f28f4ecff2c0712e1b4c5184f2b5ae3fad42",
+    "bytes": 638
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/original-chopfragment/input.prt": {
+    "sha256": "dac095c0df6f174b118657e7387694a1128f9f906a8724a8c36f53f608535f2d",
+    "bytes": 838
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/original-chopfragment/input.texinfo.json": {
+    "sha256": "a2569df3cd3c77f5d1307252ed3fa9d777725552e0549893c2edace186856645",
+    "bytes": 8
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/original-default/compile.log": {
+    "sha256": "e164afab8b679b68494b25ea21b6bb44c24b8e440dab5267d61a5b7da93008de",
+    "bytes": 3709
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/original-default/input.bsp.bin": {
+    "sha256": "dd5bab48582c56ed8e37c866e264e00a999a488559fc4fe0ebed4749bfe7d064",
+    "bytes": 1512
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/original-default/input.content.json": {
+    "sha256": "8c28763c41a1654fb913f5d30153c9d673ae9739394b9d4f5994234fb03683a4",
+    "bytes": 29
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/original-default/input.log": {
+    "sha256": "c0f1a5c8b187daa6ad635c64ae4f5325be9bc9ce64c4d8bac8f12f44ded9eaef",
+    "bytes": 2490
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/original-default/input.map": {
+    "sha256": "dc3bd5aecde1e9bd502decc72b33f28f4ecff2c0712e1b4c5184f2b5ae3fad42",
+    "bytes": 638
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/original-default/input.prt": {
+    "sha256": "dac095c0df6f174b118657e7387694a1128f9f906a8724a8c36f53f608535f2d",
+    "bytes": 838
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/original-default/input.texinfo.json": {
+    "sha256": "a2569df3cd3c77f5d1307252ed3fa9d777725552e0549893c2edace186856645",
+    "bytes": 8
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/overlap-chopfragment/compile.log": {
+    "sha256": "ede0a3f48682e76c99fd473e83976eb9987e3b3568d0643032851cb11e2aae7d",
+    "bytes": 3967
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/overlap-chopfragment/input.bsp.bin": {
+    "sha256": "aeb2cc5d3d31d7954f17383dcf24144e447a3e1b151eb23274d9ec7ecaa5495c",
+    "bytes": 3644
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/overlap-chopfragment/input.content.json": {
+    "sha256": "e61173831ff19d16b82dd69746aeed319aff78120d3a528f982500b1481e68f0",
+    "bytes": 47
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/overlap-chopfragment/input.log": {
+    "sha256": "c1481ab1d3802831619e87f285aa2e8bc29357d24166c3412cdbd85524c78d57",
+    "bytes": 2708
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/overlap-chopfragment/input.map": {
+    "sha256": "f9e0eaefb43dca84c363bc486e8fcf37f772872a1fda582c805f224cbb14e912",
+    "bytes": 1078
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/overlap-chopfragment/input.prt": {
+    "sha256": "0f2b84856782d355ab1b4eecc8fd2897fa9e42a1704b11a664dec0479dc9c2bb",
+    "bytes": 2437
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/overlap-chopfragment/input.texinfo.json": {
+    "sha256": "c7a796d2c01095fcdd1bb44bd5e50d8d41697e88ce44c5861dac0408ef35e97a",
+    "bytes": 29
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/overlap-default/compile.log": {
+    "sha256": "cac45b16e222bbd5616111263f7d3b180c39f498293f1187f711d86addbd5ed4",
+    "bytes": 3888
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/overlap-default/input.bsp.bin": {
+    "sha256": "c30952541ac80308f15628332e97e76f9bc26bad9743ed23b9db7202d032bca3",
+    "bytes": 3644
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/overlap-default/input.content.json": {
+    "sha256": "e61173831ff19d16b82dd69746aeed319aff78120d3a528f982500b1481e68f0",
+    "bytes": 47
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/overlap-default/input.log": {
+    "sha256": "71993ca31753fe3ce430ce83dd0331c28670ee5656b2c87182bb781aeeb8356a",
+    "bytes": 2634
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/overlap-default/input.map": {
+    "sha256": "f9e0eaefb43dca84c363bc486e8fcf37f772872a1fda582c805f224cbb14e912",
+    "bytes": 1078
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/overlap-default/input.prt": {
+    "sha256": "0f2b84856782d355ab1b4eecc8fd2897fa9e42a1704b11a664dec0479dc9c2bb",
+    "bytes": 2437
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/overlap-default/input.texinfo.json": {
+    "sha256": "c7a796d2c01095fcdd1bb44bd5e50d8d41697e88ce44c5861dac0408ef35e97a",
+    "bytes": 29
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/results.json": {
+    "sha256": "e0389696795d871aa0345bf8ddd624bb9ab553af710f811d4bada3033e9d9956",
+    "bytes": 13976
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/rotated-chopfragment/compile.log": {
+    "sha256": "740c0a025b3f4c9c543470b10cecf4fdb277413574025072f8f3243216597180",
+    "bytes": 5028
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/rotated-chopfragment/input.bsp.bin": {
+    "sha256": "916c2aa5e584d118c1ed7628baa08da97ea2ab7054dd2f94f582186807b27d66",
+    "bytes": 2540
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/rotated-chopfragment/input.content.json": {
+    "sha256": "8c28763c41a1654fb913f5d30153c9d673ae9739394b9d4f5994234fb03683a4",
+    "bytes": 29
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/rotated-chopfragment/input.log": {
+    "sha256": "3512009f29e6800dc852b1cd5fdc10eb60b5e49514a7e9f4bf6cb4350d4cfba2",
+    "bytes": 3787
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/rotated-chopfragment/input.map": {
+    "sha256": "fe6c20500f91fd53fcd75b00e6295f93700ae30aca45cd01a3a5a34eac3bbbd0",
+    "bytes": 1165
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/rotated-chopfragment/input.prt": {
+    "sha256": "b0c47790ed97ec799ce242b8c4ae6ec1e81fbfcd7a7b3d4f727f223376b767d4",
+    "bytes": 3165
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/rotated-chopfragment/input.texinfo.json": {
+    "sha256": "2c47c5fd0721df0a879be3a55898e689314bd9406503dc24ff2c8b2629917120",
+    "bytes": 15
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/rotated-chopfragment/node.json.portal-proofs.jsonl": {
+    "sha256": "ae0528cef0606467ac894d0623cc9744b589eec21b96aea046e795c70ef2241a",
+    "bytes": 88346
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/rotated-chopfragment/node.json.portal.json": {
+    "sha256": "0354dc3d05b4736e5bb79d4639797122719d49efa3d443547b7bd691ca74fadd",
+    "bytes": 9146
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/rotated-default/compile.log": {
+    "sha256": "99757d99f1ca690876041f8bbbed84e75161d4bd7a336754d490b7d526e7314a",
+    "bytes": 4949
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/rotated-default/input.bsp.bin": {
+    "sha256": "916c2aa5e584d118c1ed7628baa08da97ea2ab7054dd2f94f582186807b27d66",
+    "bytes": 2540
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/rotated-default/input.content.json": {
+    "sha256": "8c28763c41a1654fb913f5d30153c9d673ae9739394b9d4f5994234fb03683a4",
+    "bytes": 29
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/rotated-default/input.log": {
+    "sha256": "a77d2723b7908781e1cd8bc1e09619c2c25305c5e3df8ae43267b42d1c022fae",
+    "bytes": 3713
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/rotated-default/input.map": {
+    "sha256": "fe6c20500f91fd53fcd75b00e6295f93700ae30aca45cd01a3a5a34eac3bbbd0",
+    "bytes": 1165
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/rotated-default/input.prt": {
+    "sha256": "b0c47790ed97ec799ce242b8c4ae6ec1e81fbfcd7a7b3d4f727f223376b767d4",
+    "bytes": 3165
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/rotated-default/input.texinfo.json": {
+    "sha256": "2c47c5fd0721df0a879be3a55898e689314bd9406503dc24ff2c8b2629917120",
+    "bytes": 15
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/rotated-default/node.json.portal-proofs.jsonl": {
+    "sha256": "ae0528cef0606467ac894d0623cc9744b589eec21b96aea046e795c70ef2241a",
+    "bytes": 88346
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/rotated-default/node.json.portal.json": {
+    "sha256": "0354dc3d05b4736e5bb79d4639797122719d49efa3d443547b7bd691ca74fadd",
+    "bytes": 9146
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-0.0005-chopfragment/compile.log": {
+    "sha256": "b8029823a7c0488b8cbe42d38a6d77e04281d73fed88bc814a2bfb8e5fb60cc3",
+    "bytes": 3828
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-0.0005-chopfragment/input.bsp.bin": {
+    "sha256": "984fa1798f70a12a09a557c0d415c4d3f6974953710df95aa684cbfae271e023",
+    "bytes": 1512
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-0.0005-chopfragment/input.content.json": {
+    "sha256": "8c28763c41a1654fb913f5d30153c9d673ae9739394b9d4f5994234fb03683a4",
+    "bytes": 29
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-0.0005-chopfragment/input.log": {
+    "sha256": "f1ce5f55645d70d402287f27ca227238e0ce8d73dd14f6dd1795ac00e49aa46f",
+    "bytes": 2596
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-0.0005-chopfragment/input.map": {
+    "sha256": "9d6491db2bc31136dab82741dda209a06ad75a8baa1aca0f4a7ddba46acd8ea2",
+    "bytes": 494
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-0.0005-chopfragment/input.prt": {
+    "sha256": "319faba819ae51fd1075c66504c9c3d3161c1be44f4fc1b35105d54a45735768",
+    "bytes": 934
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-0.0005-chopfragment/input.texinfo.json": {
+    "sha256": "a2569df3cd3c77f5d1307252ed3fa9d777725552e0549893c2edace186856645",
+    "bytes": 8
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-0.0005-default/compile.log": {
+    "sha256": "0ed2b7c183b933ebac5ce5bd6a8fea8198bef168e21074d874f29ff99ca57332",
+    "bytes": 3749
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-0.0005-default/input.bsp.bin": {
+    "sha256": "984fa1798f70a12a09a557c0d415c4d3f6974953710df95aa684cbfae271e023",
+    "bytes": 1512
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-0.0005-default/input.content.json": {
+    "sha256": "8c28763c41a1654fb913f5d30153c9d673ae9739394b9d4f5994234fb03683a4",
+    "bytes": 29
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-0.0005-default/input.log": {
+    "sha256": "65d1bdf233e8f5dc11cc8b06d838d6d41e920178b7b7e9ebd410d5657951de72",
+    "bytes": 2522
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-0.0005-default/input.map": {
+    "sha256": "9d6491db2bc31136dab82741dda209a06ad75a8baa1aca0f4a7ddba46acd8ea2",
+    "bytes": 494
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-0.0005-default/input.prt": {
+    "sha256": "319faba819ae51fd1075c66504c9c3d3161c1be44f4fc1b35105d54a45735768",
+    "bytes": 934
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-0.0005-default/input.texinfo.json": {
+    "sha256": "a2569df3cd3c77f5d1307252ed3fa9d777725552e0549893c2edace186856645",
+    "bytes": 8
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-0.002-chopfragment/compile.log": {
+    "sha256": "66753a9ccd2349696a28e1a29725aa59f49fc5f06897faf1f6c3f15b5d96a950",
+    "bytes": 3823
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-0.002-chopfragment/input.bsp.bin": {
+    "sha256": "0921b241bfaf19efde0d3d4c6f5434a68ca61d1ebeb37cb6c97eb413cb0233c0",
+    "bytes": 1512
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-0.002-chopfragment/input.content.json": {
+    "sha256": "8c28763c41a1654fb913f5d30153c9d673ae9739394b9d4f5994234fb03683a4",
+    "bytes": 29
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-0.002-chopfragment/input.log": {
+    "sha256": "b785cc0274cd6b322f40d5f9f08ad5b6a88156d1d6936a6f0b29729cf42607dc",
+    "bytes": 2592
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-0.002-chopfragment/input.map": {
+    "sha256": "7b7304bc395eca303a783389b621c09b03206b982bd7a13516b058f1a2ec1ae3",
+    "bytes": 458
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-0.002-chopfragment/input.prt": {
+    "sha256": "4e03c96641fb3eb3e0dee97813c5f5b241b8f5d6da21a97debe8f1dd7f7d2620",
+    "bytes": 838
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-0.002-chopfragment/input.texinfo.json": {
+    "sha256": "a2569df3cd3c77f5d1307252ed3fa9d777725552e0549893c2edace186856645",
+    "bytes": 8
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-0.002-default/compile.log": {
+    "sha256": "56b797fe75e030c7b191919689287dd7436010cc32b71374c91efed757ff5120",
+    "bytes": 3744
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-0.002-default/input.bsp.bin": {
+    "sha256": "0921b241bfaf19efde0d3d4c6f5434a68ca61d1ebeb37cb6c97eb413cb0233c0",
+    "bytes": 1512
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-0.002-default/input.content.json": {
+    "sha256": "8c28763c41a1654fb913f5d30153c9d673ae9739394b9d4f5994234fb03683a4",
+    "bytes": 29
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-0.002-default/input.log": {
+    "sha256": "ade9534bff7abfa3b3b15663d93cbf1a21848b4bccaa99aa33ec08b2e8cd945b",
+    "bytes": 2518
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-0.002-default/input.map": {
+    "sha256": "7b7304bc395eca303a783389b621c09b03206b982bd7a13516b058f1a2ec1ae3",
+    "bytes": 458
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-0.002-default/input.prt": {
+    "sha256": "4e03c96641fb3eb3e0dee97813c5f5b241b8f5d6da21a97debe8f1dd7f7d2620",
+    "bytes": 838
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-0.002-default/input.texinfo.json": {
+    "sha256": "a2569df3cd3c77f5d1307252ed3fa9d777725552e0549893c2edace186856645",
+    "bytes": 8
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-0.008-chopfragment/compile.log": {
+    "sha256": "b7385ec7c5b68afa58d4bba8138dd66e05f9bb65b44a46e8aaa45eacb03fb5b8",
+    "bytes": 3823
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-0.008-chopfragment/input.bsp.bin": {
+    "sha256": "fff9aba6727e515b18c87e9188ee63c47fe0183364ae67e2dabc68a6e470b473",
+    "bytes": 1512
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-0.008-chopfragment/input.content.json": {
+    "sha256": "8c28763c41a1654fb913f5d30153c9d673ae9739394b9d4f5994234fb03683a4",
+    "bytes": 29
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-0.008-chopfragment/input.log": {
+    "sha256": "354401dc954158a3763047db3f062ecb3b7ec503f6cec4569a4bde797d5678f4",
+    "bytes": 2592
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-0.008-chopfragment/input.map": {
+    "sha256": "9de9fbfaedb34e079cb7a395dce59a847ee9f52f427d1b1bcfb1eab4283058aa",
+    "bytes": 458
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-0.008-chopfragment/input.prt": {
+    "sha256": "dac095c0df6f174b118657e7387694a1128f9f906a8724a8c36f53f608535f2d",
+    "bytes": 838
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-0.008-chopfragment/input.texinfo.json": {
+    "sha256": "a2569df3cd3c77f5d1307252ed3fa9d777725552e0549893c2edace186856645",
+    "bytes": 8
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-0.008-default/compile.log": {
+    "sha256": "e83d0339ea29361d0eaee3d8167dfffd417f9ecdbb31dd9574142ce3c907592a",
+    "bytes": 3744
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-0.008-default/input.bsp.bin": {
+    "sha256": "fff9aba6727e515b18c87e9188ee63c47fe0183364ae67e2dabc68a6e470b473",
+    "bytes": 1512
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-0.008-default/input.content.json": {
+    "sha256": "8c28763c41a1654fb913f5d30153c9d673ae9739394b9d4f5994234fb03683a4",
+    "bytes": 29
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-0.008-default/input.log": {
+    "sha256": "b6c42428de9ce059ca724ede645f847d017b951a8951299361f009b40afaf7be",
+    "bytes": 2518
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-0.008-default/input.map": {
+    "sha256": "9de9fbfaedb34e079cb7a395dce59a847ee9f52f427d1b1bcfb1eab4283058aa",
+    "bytes": 458
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-0.008-default/input.prt": {
+    "sha256": "dac095c0df6f174b118657e7387694a1128f9f906a8724a8c36f53f608535f2d",
+    "bytes": 838
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-0.008-default/input.texinfo.json": {
+    "sha256": "a2569df3cd3c77f5d1307252ed3fa9d777725552e0549893c2edace186856645",
+    "bytes": 8
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-0.015625-chopfragment/compile.log": {
+    "sha256": "f53ce8fc7184b191799cd0270da764a011bcb39c87b315d83fe83249e3b08a38",
+    "bytes": 3838
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-0.015625-chopfragment/input.bsp.bin": {
+    "sha256": "f54ddfebc388751f8ae3e5d3ac8d22e83f0e416cd68600fed984ddb11782641a",
+    "bytes": 1512
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-0.015625-chopfragment/input.content.json": {
+    "sha256": "8c28763c41a1654fb913f5d30153c9d673ae9739394b9d4f5994234fb03683a4",
+    "bytes": 29
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-0.015625-chopfragment/input.log": {
+    "sha256": "f5827fba0ab88e5a29a6df1064b416c09d8287b96bc27d5b68f8e12f5f6e6d82",
+    "bytes": 2604
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-0.015625-chopfragment/input.map": {
+    "sha256": "305ae2ef959d004fa23aff74f5e80c9c2208a5d114c03a1e4091bee082d350fa",
+    "bytes": 530
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-0.015625-chopfragment/input.prt": {
+    "sha256": "2685762ee08fe6e122c5322f97a1ce8c87a2056bf721592fed31ed10114b6d98",
+    "bytes": 1030
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-0.015625-chopfragment/input.texinfo.json": {
+    "sha256": "a2569df3cd3c77f5d1307252ed3fa9d777725552e0549893c2edace186856645",
+    "bytes": 8
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-0.015625-default/compile.log": {
+    "sha256": "4036d183e6d273f630d7a4e1ac60380e27d5bd512493754ff1a3718c689a9fbe",
+    "bytes": 3759
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-0.015625-default/input.bsp.bin": {
+    "sha256": "f54ddfebc388751f8ae3e5d3ac8d22e83f0e416cd68600fed984ddb11782641a",
+    "bytes": 1512
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-0.015625-default/input.content.json": {
+    "sha256": "8c28763c41a1654fb913f5d30153c9d673ae9739394b9d4f5994234fb03683a4",
+    "bytes": 29
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-0.015625-default/input.log": {
+    "sha256": "f1a54dc4a61d8787bfd97c3a54657e8ed6a846d05484519884effa1130b02c8e",
+    "bytes": 2530
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-0.015625-default/input.map": {
+    "sha256": "305ae2ef959d004fa23aff74f5e80c9c2208a5d114c03a1e4091bee082d350fa",
+    "bytes": 530
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-0.015625-default/input.prt": {
+    "sha256": "2685762ee08fe6e122c5322f97a1ce8c87a2056bf721592fed31ed10114b6d98",
+    "bytes": 1030
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-0.015625-default/input.texinfo.json": {
+    "sha256": "a2569df3cd3c77f5d1307252ed3fa9d777725552e0549893c2edace186856645",
+    "bytes": 8
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-0.02-chopfragment/compile.log": {
+    "sha256": "a2df31d4ee684b97ba111a15d1a8e96d5e9d00814f9a76626ebe8ffb496bd44d",
+    "bytes": 3818
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-0.02-chopfragment/input.bsp.bin": {
+    "sha256": "0782cf935ac21a2be547a83a27aeeed1303ea1def03f3812d54d50f58f4846ac",
+    "bytes": 1512
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-0.02-chopfragment/input.content.json": {
+    "sha256": "8c28763c41a1654fb913f5d30153c9d673ae9739394b9d4f5994234fb03683a4",
+    "bytes": 29
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-0.02-chopfragment/input.log": {
+    "sha256": "f2f3f79e9ecbd95374f83188b0fe09ec1097bf0851e96d1edbd7012d00cd14aa",
+    "bytes": 2588
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-0.02-chopfragment/input.map": {
+    "sha256": "52f538c4db8d266600a1cb52f0241ac49b297cfbd59b09defbafea125c89ee6d",
+    "bytes": 440
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-0.02-chopfragment/input.prt": {
+    "sha256": "3a98b1a2d5d26a6fda38940bb6c70d5203d9488ee022c3dc4cfdcafd216b8db0",
+    "bytes": 790
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-0.02-chopfragment/input.texinfo.json": {
+    "sha256": "a2569df3cd3c77f5d1307252ed3fa9d777725552e0549893c2edace186856645",
+    "bytes": 8
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-0.02-default/compile.log": {
+    "sha256": "f0eed246802db281e2aef6979c0765b5542c55ff8ba203b2e66ca3aa0ad501b3",
+    "bytes": 3739
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-0.02-default/input.bsp.bin": {
+    "sha256": "0782cf935ac21a2be547a83a27aeeed1303ea1def03f3812d54d50f58f4846ac",
+    "bytes": 1512
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-0.02-default/input.content.json": {
+    "sha256": "8c28763c41a1654fb913f5d30153c9d673ae9739394b9d4f5994234fb03683a4",
+    "bytes": 29
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-0.02-default/input.log": {
+    "sha256": "e003e7fb29e153401cdf8f59ac52eaabcbbb8b34191465ba2b1bb4fcded86c5e",
+    "bytes": 2514
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-0.02-default/input.map": {
+    "sha256": "52f538c4db8d266600a1cb52f0241ac49b297cfbd59b09defbafea125c89ee6d",
+    "bytes": 440
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-0.02-default/input.prt": {
+    "sha256": "3a98b1a2d5d26a6fda38940bb6c70d5203d9488ee022c3dc4cfdcafd216b8db0",
+    "bytes": 790
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-0.02-default/input.texinfo.json": {
+    "sha256": "a2569df3cd3c77f5d1307252ed3fa9d777725552e0549893c2edace186856645",
+    "bytes": 8
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-0.05-chopfragment/compile.log": {
+    "sha256": "a8ed01f032c6ec690437b2f3d24e58a50dbd2cc1956cbd2dfaa56494dd91db9a",
+    "bytes": 3756
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-0.05-chopfragment/input.bsp.bin": {
+    "sha256": "5379b1d6eabbad16c44ed74e5641cfa9a465e8c3475c6802f201eb0788dfd539",
+    "bytes": 1896
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-0.05-chopfragment/input.content.json": {
+    "sha256": "8c28763c41a1654fb913f5d30153c9d673ae9739394b9d4f5994234fb03683a4",
+    "bytes": 29
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-0.05-chopfragment/input.log": {
+    "sha256": "b79673db254ff9e92e98ab73d1f0041098e3d38f2c5196b98fb35277df45379f",
+    "bytes": 2544
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-0.05-chopfragment/input.map": {
+    "sha256": "bec4b49d370355de789ae45d40109e6b426f479f0334e6fbab79f10756d2f4ed",
+    "bytes": 458
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-0.05-chopfragment/input.prt": {
+    "sha256": "66c6672516169f7e462ad9cc4fcfd01b5fa6605988a88c2871ba31da88b14170",
+    "bytes": 838
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-0.05-chopfragment/input.texinfo.json": {
+    "sha256": "41ea9adb8ea53166e0748c3c10468c408c50066835767fe970265a03149dfb3d",
+    "bytes": 22
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-0.05-default/compile.log": {
+    "sha256": "cc60473ca3ba5139b5e67c59200f3ae2193674a031fa70c7d8fc1f5a80cd2d91",
+    "bytes": 3677
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-0.05-default/input.bsp.bin": {
+    "sha256": "5379b1d6eabbad16c44ed74e5641cfa9a465e8c3475c6802f201eb0788dfd539",
+    "bytes": 1896
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-0.05-default/input.content.json": {
+    "sha256": "8c28763c41a1654fb913f5d30153c9d673ae9739394b9d4f5994234fb03683a4",
+    "bytes": 29
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-0.05-default/input.log": {
+    "sha256": "a2682e794b8d134a3c67c8527c233292511aed5b59175449cc52f17f48591b0a",
+    "bytes": 2470
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-0.05-default/input.map": {
+    "sha256": "bec4b49d370355de789ae45d40109e6b426f479f0334e6fbab79f10756d2f4ed",
+    "bytes": 458
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-0.05-default/input.prt": {
+    "sha256": "66c6672516169f7e462ad9cc4fcfd01b5fa6605988a88c2871ba31da88b14170",
+    "bytes": 838
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-0.05-default/input.texinfo.json": {
+    "sha256": "41ea9adb8ea53166e0748c3c10468c408c50066835767fe970265a03149dfb3d",
+    "bytes": 22
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-0.099-chopfragment/compile.log": {
+    "sha256": "99ed760a308d0972fd2256a7968bb9efa74444f94997c41a8e7bb815bd695d98",
+    "bytes": 3761
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-0.099-chopfragment/input.bsp.bin": {
+    "sha256": "3ec802b77f2d4afa4bcf49f9752d060be54884911fd25614168ae9a1b4726f2a",
+    "bytes": 1896
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-0.099-chopfragment/input.content.json": {
+    "sha256": "8c28763c41a1654fb913f5d30153c9d673ae9739394b9d4f5994234fb03683a4",
+    "bytes": 29
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-0.099-chopfragment/input.log": {
+    "sha256": "f775569df6134bd8a1926f4d3912620723b97f79889ff07462f731a9b8e8963f",
+    "bytes": 2548
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-0.099-chopfragment/input.map": {
+    "sha256": "d556b0652b0b232f81bce8628aa4175dcacb05042b724fba4990c23e55e75381",
+    "bytes": 476
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-0.099-chopfragment/input.prt": {
+    "sha256": "6b1818741ab44252af229697ec7879b4d42a638fbc433bb2bec7c1892ce3a8ed",
+    "bytes": 886
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-0.099-chopfragment/input.texinfo.json": {
+    "sha256": "41ea9adb8ea53166e0748c3c10468c408c50066835767fe970265a03149dfb3d",
+    "bytes": 22
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-0.099-default/compile.log": {
+    "sha256": "d951e7b22c95a9df288571ce28c7c9430217266169474f83e6c361fde83c6ddb",
+    "bytes": 3682
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-0.099-default/input.bsp.bin": {
+    "sha256": "3ec802b77f2d4afa4bcf49f9752d060be54884911fd25614168ae9a1b4726f2a",
+    "bytes": 1896
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-0.099-default/input.content.json": {
+    "sha256": "8c28763c41a1654fb913f5d30153c9d673ae9739394b9d4f5994234fb03683a4",
+    "bytes": 29
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-0.099-default/input.log": {
+    "sha256": "3fd28db6c62612b7fa00fd9480d845d2a809bddc4be632777abb5f8b3e08a551",
+    "bytes": 2474
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-0.099-default/input.map": {
+    "sha256": "d556b0652b0b232f81bce8628aa4175dcacb05042b724fba4990c23e55e75381",
+    "bytes": 476
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-0.099-default/input.prt": {
+    "sha256": "6b1818741ab44252af229697ec7879b4d42a638fbc433bb2bec7c1892ce3a8ed",
+    "bytes": 886
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-0.099-default/input.texinfo.json": {
+    "sha256": "41ea9adb8ea53166e0748c3c10468c408c50066835767fe970265a03149dfb3d",
+    "bytes": 22
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-0.1-chopfragment/compile.log": {
+    "sha256": "f4d29e94489c07504f9ed40181f56c76e71e128fb449be164cf21038bccaecd4",
+    "bytes": 3751
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-0.1-chopfragment/input.bsp.bin": {
+    "sha256": "d6e2cb930b0e2dfe5c3370ff07a36f3e52c7d49b36619ff7ca32c4f3572900b2",
+    "bytes": 1896
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-0.1-chopfragment/input.content.json": {
+    "sha256": "8c28763c41a1654fb913f5d30153c9d673ae9739394b9d4f5994234fb03683a4",
+    "bytes": 29
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-0.1-chopfragment/input.log": {
+    "sha256": "f369f540707e726a7b6d627f433f992f13573746ff2272350b98a18535417874",
+    "bytes": 2540
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-0.1-chopfragment/input.map": {
+    "sha256": "5919c16a78a94cb112e2dc3e587af8b326087a0793fb4aa30b89ca7f30aed510",
+    "bytes": 440
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-0.1-chopfragment/input.prt": {
+    "sha256": "e962ce31b1e86562d016905b435bda8b7b534ac3d7645a9613113c96196148e8",
+    "bytes": 790
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-0.1-chopfragment/input.texinfo.json": {
+    "sha256": "41ea9adb8ea53166e0748c3c10468c408c50066835767fe970265a03149dfb3d",
+    "bytes": 22
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-0.1-default/compile.log": {
+    "sha256": "1b8e52d874ab6ba06bccb691cd1c7ec833b6bcf6c0e2f6b7b03e58a1287e77ca",
+    "bytes": 3672
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-0.1-default/input.bsp.bin": {
+    "sha256": "d6e2cb930b0e2dfe5c3370ff07a36f3e52c7d49b36619ff7ca32c4f3572900b2",
+    "bytes": 1896
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-0.1-default/input.content.json": {
+    "sha256": "8c28763c41a1654fb913f5d30153c9d673ae9739394b9d4f5994234fb03683a4",
+    "bytes": 29
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-0.1-default/input.log": {
+    "sha256": "3e81c1b062e521f4eda1778e8b511c00d1a09196c0c761acbc2c65bcfc403d40",
+    "bytes": 2466
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-0.1-default/input.map": {
+    "sha256": "5919c16a78a94cb112e2dc3e587af8b326087a0793fb4aa30b89ca7f30aed510",
+    "bytes": 440
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-0.1-default/input.prt": {
+    "sha256": "e962ce31b1e86562d016905b435bda8b7b534ac3d7645a9613113c96196148e8",
+    "bytes": 790
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-0.1-default/input.texinfo.json": {
+    "sha256": "41ea9adb8ea53166e0748c3c10468c408c50066835767fe970265a03149dfb3d",
+    "bytes": 22
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-0.101-chopfragment/compile.log": {
+    "sha256": "d59f346336ea4a0fb77fdb0c2d38ac2478612245cf9e1990de0feb5ffc95f9d2",
+    "bytes": 3761
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-0.101-chopfragment/input.bsp.bin": {
+    "sha256": "ff10f307097f282b5dfc5f7c1a5071b5015e5f68a8b8cc3677072fa152958b72",
+    "bytes": 1896
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-0.101-chopfragment/input.content.json": {
+    "sha256": "8c28763c41a1654fb913f5d30153c9d673ae9739394b9d4f5994234fb03683a4",
+    "bytes": 29
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-0.101-chopfragment/input.log": {
+    "sha256": "5cd95c4b8cd0e76242f69821e413136d5549dd79019b8bc7e153db33e71fb19a",
+    "bytes": 2548
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-0.101-chopfragment/input.map": {
+    "sha256": "7610020e6c680fbc4151ffe4348356a244f5f16ccbf0557b747e4697d0f98710",
+    "bytes": 476
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-0.101-chopfragment/input.prt": {
+    "sha256": "026e4412188e36e8b7bbcf511abf99fddc972a848bc2f8e515febc1e379c4de0",
+    "bytes": 886
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-0.101-chopfragment/input.texinfo.json": {
+    "sha256": "41ea9adb8ea53166e0748c3c10468c408c50066835767fe970265a03149dfb3d",
+    "bytes": 22
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-0.101-default/compile.log": {
+    "sha256": "d70850699802ec85cb61a29b32bc636c4dfe67c3dd258e1bd7584a5e682f37e5",
+    "bytes": 3682
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-0.101-default/input.bsp.bin": {
+    "sha256": "ff10f307097f282b5dfc5f7c1a5071b5015e5f68a8b8cc3677072fa152958b72",
+    "bytes": 1896
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-0.101-default/input.content.json": {
+    "sha256": "8c28763c41a1654fb913f5d30153c9d673ae9739394b9d4f5994234fb03683a4",
+    "bytes": 29
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-0.101-default/input.log": {
+    "sha256": "bde96f31f7ac0a7e787ddb00cc953c4680bc0597b43dca086ba87ea2bf2b9635",
+    "bytes": 2474
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-0.101-default/input.map": {
+    "sha256": "7610020e6c680fbc4151ffe4348356a244f5f16ccbf0557b747e4697d0f98710",
+    "bytes": 476
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-0.101-default/input.prt": {
+    "sha256": "026e4412188e36e8b7bbcf511abf99fddc972a848bc2f8e515febc1e379c4de0",
+    "bytes": 886
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-0.101-default/input.texinfo.json": {
+    "sha256": "41ea9adb8ea53166e0748c3c10468c408c50066835767fe970265a03149dfb3d",
+    "bytes": 22
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-0.25-chopfragment/compile.log": {
+    "sha256": "d3039da65f257a134779c212a96d0fcf8079a91425e260cac5b22e0d4fcd56fc",
+    "bytes": 3756
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-0.25-chopfragment/input.bsp.bin": {
+    "sha256": "67316d535c55ba16c6d379fd67425f15f6cbbb06b96969b508534d996b0dbd31",
+    "bytes": 1896
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-0.25-chopfragment/input.content.json": {
+    "sha256": "8c28763c41a1654fb913f5d30153c9d673ae9739394b9d4f5994234fb03683a4",
+    "bytes": 29
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-0.25-chopfragment/input.log": {
+    "sha256": "ddf72c1f7a676b6f7feee30d8815c8cd9611d801844eee64c0d80a9348487ade",
+    "bytes": 2544
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-0.25-chopfragment/input.map": {
+    "sha256": "468e974abb5d38a9e3d104aeb7dc98f935152a86bc0fbc0cc9ecb903c14de84f",
+    "bytes": 458
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-0.25-chopfragment/input.prt": {
+    "sha256": "3bbe239340d919572e36a0970927c2c30e4256846103d22d6fdc24384bb6bbd3",
+    "bytes": 838
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-0.25-chopfragment/input.texinfo.json": {
+    "sha256": "41ea9adb8ea53166e0748c3c10468c408c50066835767fe970265a03149dfb3d",
+    "bytes": 22
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-0.25-default/compile.log": {
+    "sha256": "f8c68bab6946b08d1bbcda81de6517aba9a981f4cc9c77ec55f9cc3e0f87a46c",
+    "bytes": 3677
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-0.25-default/input.bsp.bin": {
+    "sha256": "67316d535c55ba16c6d379fd67425f15f6cbbb06b96969b508534d996b0dbd31",
+    "bytes": 1896
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-0.25-default/input.content.json": {
+    "sha256": "8c28763c41a1654fb913f5d30153c9d673ae9739394b9d4f5994234fb03683a4",
+    "bytes": 29
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-0.25-default/input.log": {
+    "sha256": "67f4a9bb39a133dfca6281c1dd7da70348175fce2c4171f4b195e73e42cb72d2",
+    "bytes": 2470
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-0.25-default/input.map": {
+    "sha256": "468e974abb5d38a9e3d104aeb7dc98f935152a86bc0fbc0cc9ecb903c14de84f",
+    "bytes": 458
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-0.25-default/input.prt": {
+    "sha256": "3bbe239340d919572e36a0970927c2c30e4256846103d22d6fdc24384bb6bbd3",
+    "bytes": 838
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-0.25-default/input.texinfo.json": {
+    "sha256": "41ea9adb8ea53166e0748c3c10468c408c50066835767fe970265a03149dfb3d",
+    "bytes": 22
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-1-chopfragment/compile.log": {
+    "sha256": "011306f223b5332b33d0a996d2df34917367c41a169a2dacbc350e5a59e19a30",
+    "bytes": 3741
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-1-chopfragment/input.bsp.bin": {
+    "sha256": "ff1db3fcdbc188755520fb7f90f2548c8a8e8aac8252a2dd1f3240e339d2d503",
+    "bytes": 1896
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-1-chopfragment/input.content.json": {
+    "sha256": "8c28763c41a1654fb913f5d30153c9d673ae9739394b9d4f5994234fb03683a4",
+    "bytes": 29
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-1-chopfragment/input.log": {
+    "sha256": "87067dbe556507940dc8b71ad75066fbb6a97524f1a26b54b0b75f219e5c8357",
+    "bytes": 2532
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-1-chopfragment/input.map": {
+    "sha256": "c1257984981a12ee37a9cead66a786b990206683b66d5d309771e5889dc619ca",
+    "bytes": 422
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-1-chopfragment/input.prt": {
+    "sha256": "863f13496a76aab5f672fd3153b1a9535b5651bbc9398735ec80307704cdaf03",
+    "bytes": 742
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-1-chopfragment/input.texinfo.json": {
+    "sha256": "41ea9adb8ea53166e0748c3c10468c408c50066835767fe970265a03149dfb3d",
+    "bytes": 22
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-1-default/compile.log": {
+    "sha256": "acad869b3da4fa26f51424457ed2deb1ad8a95606e518dd831e40a81aa68d37a",
+    "bytes": 3662
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-1-default/input.bsp.bin": {
+    "sha256": "ff1db3fcdbc188755520fb7f90f2548c8a8e8aac8252a2dd1f3240e339d2d503",
+    "bytes": 1896
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-1-default/input.content.json": {
+    "sha256": "8c28763c41a1654fb913f5d30153c9d673ae9739394b9d4f5994234fb03683a4",
+    "bytes": 29
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-1-default/input.log": {
+    "sha256": "5f675a9deb926399962f0aa9d4fd97d93bf95b6194947f6148955adcdee5764c",
+    "bytes": 2458
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-1-default/input.map": {
+    "sha256": "c1257984981a12ee37a9cead66a786b990206683b66d5d309771e5889dc619ca",
+    "bytes": 422
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-1-default/input.prt": {
+    "sha256": "863f13496a76aab5f672fd3153b1a9535b5651bbc9398735ec80307704cdaf03",
+    "bytes": 742
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-1-default/input.texinfo.json": {
+    "sha256": "41ea9adb8ea53166e0748c3c10468c408c50066835767fe970265a03149dfb3d",
+    "bytes": 22
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-16-chopfragment/compile.log": {
+    "sha256": "d7a201af28388065ebc67d5860e451db2150b1ceafc2f03e25f38fc384a9e211",
+    "bytes": 3746
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-16-chopfragment/input.bsp.bin": {
+    "sha256": "6abedabcb18aff5dcf8dd77a563b6182f7bebd8c71529bcfa02cc205403c411b",
+    "bytes": 1896
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-16-chopfragment/input.content.json": {
+    "sha256": "8c28763c41a1654fb913f5d30153c9d673ae9739394b9d4f5994234fb03683a4",
+    "bytes": 29
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-16-chopfragment/input.log": {
+    "sha256": "b73b999b59cad46e56aca307cc080bbd9a1c3c49f6e9c974938a43aef3d40aca",
+    "bytes": 2536
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-16-chopfragment/input.map": {
+    "sha256": "304144084e0889f655ae688e70a2b42ce634620a784802a47dfb3fec15167fda",
+    "bytes": 386
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-16-chopfragment/input.prt": {
+    "sha256": "5895c60e749de6bbb41e5ebbefa26cbfafbac68a726ef3357dc29ca1554457bb",
+    "bytes": 646
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-16-chopfragment/input.texinfo.json": {
+    "sha256": "41ea9adb8ea53166e0748c3c10468c408c50066835767fe970265a03149dfb3d",
+    "bytes": 22
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-16-default/compile.log": {
+    "sha256": "528459035f3f70bee44d7c54ba2158db8dfc9fe69f787620f357683a39106e30",
+    "bytes": 3667
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-16-default/input.bsp.bin": {
+    "sha256": "6abedabcb18aff5dcf8dd77a563b6182f7bebd8c71529bcfa02cc205403c411b",
+    "bytes": 1896
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-16-default/input.content.json": {
+    "sha256": "8c28763c41a1654fb913f5d30153c9d673ae9739394b9d4f5994234fb03683a4",
+    "bytes": 29
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-16-default/input.log": {
+    "sha256": "b17a04cc6b9f361c674898476ce0404f0726daa67656de3cd7d46422e649dae3",
+    "bytes": 2462
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-16-default/input.map": {
+    "sha256": "304144084e0889f655ae688e70a2b42ce634620a784802a47dfb3fec15167fda",
+    "bytes": 386
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-16-default/input.prt": {
+    "sha256": "5895c60e749de6bbb41e5ebbefa26cbfafbac68a726ef3357dc29ca1554457bb",
+    "bytes": 646
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/thickness-16-default/input.texinfo.json": {
+    "sha256": "41ea9adb8ea53166e0748c3c10468c408c50066835767fe970265a03149dfb3d",
+    "bytes": 22
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/translated-chopfragment/compile.log": {
+    "sha256": "cb46b0c5a26efe729c9bd77be60c5b06608073c32f033f63db4f7b1c47ae6fb1",
+    "bytes": 3799
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/translated-chopfragment/input.bsp.bin": {
+    "sha256": "c5f29849b1e32b69a38bced1b45f04beefacd660ebc5fea75f13b9f93c01b1d0",
+    "bytes": 1512
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/translated-chopfragment/input.content.json": {
+    "sha256": "8c28763c41a1654fb913f5d30153c9d673ae9739394b9d4f5994234fb03683a4",
+    "bytes": 29
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/translated-chopfragment/input.log": {
+    "sha256": "1bc8810660983c628afb4658f0716a5cc4b838cd17a030eb8e5cd75ecac961af",
+    "bytes": 2573
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/translated-chopfragment/input.map": {
+    "sha256": "5b083f380041ad53daae11e76d94a7d80d7fe93922f87718272099f673a64463",
+    "bytes": 663
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/translated-chopfragment/input.prt": {
+    "sha256": "09571ecf56579745d1128634b1d605a21363c785f888c7df8e82937190b714b3",
+    "bytes": 1518
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/translated-chopfragment/input.texinfo.json": {
+    "sha256": "a2569df3cd3c77f5d1307252ed3fa9d777725552e0549893c2edace186856645",
+    "bytes": 8
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/translated-default/compile.log": {
+    "sha256": "368c0e0dbde26e778a578d129c34616abfe1402e0301b6b2616c01990157f591",
+    "bytes": 3720
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/translated-default/input.bsp.bin": {
+    "sha256": "c5f29849b1e32b69a38bced1b45f04beefacd660ebc5fea75f13b9f93c01b1d0",
+    "bytes": 1512
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/translated-default/input.content.json": {
+    "sha256": "8c28763c41a1654fb913f5d30153c9d673ae9739394b9d4f5994234fb03683a4",
+    "bytes": 29
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/translated-default/input.log": {
+    "sha256": "6d905816003862f00a6f28ba3f1895deb016b13658b9f905128ccc30f13c1180",
+    "bytes": 2499
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/translated-default/input.map": {
+    "sha256": "5b083f380041ad53daae11e76d94a7d80d7fe93922f87718272099f673a64463",
+    "bytes": 663
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/translated-default/input.prt": {
+    "sha256": "09571ecf56579745d1128634b1d605a21363c785f888c7df8e82937190b714b3",
+    "bytes": 1518
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-matrix/translated-default/input.texinfo.json": {
+    "sha256": "a2569df3cd3c77f5d1307252ed3fa9d777725552e0549893c2edace186856645",
+    "bytes": 8
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-roller/chopfragment.log": {
+    "sha256": "0a2e6c6bd0e3ed0740195d0c36512975462018e9c9033cb7f14bcd4757bc008f",
+    "bytes": 9355
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-roller/chopfragment.map": {
+    "sha256": "a281bdf08b070bfc7a728acf8212f5e401b04b572a706a353716fc898d861300",
+    "bytes": 41460
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-roller/chopfragment.time": {
+    "sha256": "01778afa9c4ef88cd905b54c5c70c9ee990df301be3b86aa2208da59da0b0399",
+    "bytes": 48
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-roller/default.log": {
+    "sha256": "84866b49be60ec72292759231379e380b7e4fde04d81dc432af5f58d58b1d845",
+    "bytes": 9281
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-roller/default.map": {
+    "sha256": "a281bdf08b070bfc7a728acf8212f5e401b04b572a706a353716fc898d861300",
+    "bytes": 41460
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-roller/default.time": {
+    "sha256": "553c16d49a200a05fb98e7c408abcced0681314405471fd7961a691fbbd3728d",
+    "bytes": 48
+  },
+  "thin_brush_phase8_evidence/accepted-experiment-roller/results.json": {
+    "sha256": "3c9cbe8e1037ea1e2ea7ad7456b9d3e12eaa5f18a369db3c6c6c930a055266d0",
+    "bytes": 496
+  },
+  "thin_brush_phase8_evidence/bsp-structure.json": {
+    "sha256": "a6a3ba24d0072b6db9688219fa6341deee32517724cdf2fe71c0781c6e4aba5d",
+    "bytes": 11422
+  },
+  "thin_brush_phase8_evidence/build-final5.log": {
+    "sha256": "03c91a31ef7996f717e6c5e5fbabca9a10eb4bc56415e7b32961ba27e448b14f",
+    "bytes": 144
+  },
+  "thin_brush_phase8_evidence/build-restored.log": {
+    "sha256": "d37bc1de2c8e83af32617fcb1a0d0aa2c1a2324b5b327aafb9250eebcd83492f",
+    "bytes": 370
+  },
+  "thin_brush_phase8_evidence/certify_context.py": {
+    "sha256": "ebc5ec27340af767e86b3a6c353ca549a6e2a5a1843662ddbacb2af571628335",
+    "bytes": 1733
+  },
+  "thin_brush_phase8_evidence/configure.log": {
+    "sha256": "d9265c7ba6aa73ab5e1aaf95113fd94954708a7c2234c8b93565512b169ed3ff",
+    "bytes": 2859
+  },
+  "thin_brush_phase8_evidence/final-focused.log": {
+    "sha256": "f5f685ae86c671d46c64bca24e9678dafad66d92e0d3e80a6bb1723b6fe3699e",
+    "bytes": 1586
+  },
+  "thin_brush_phase8_evidence/final-focused.xml": {
+    "sha256": "141a7ebeb03f890d91273f695c53e5e63292686e2450754423c3b846c075dfda",
+    "bytes": 2852
+  },
+  "thin_brush_phase8_evidence/final-p1-regression.log": {
+    "sha256": "dbfce9ca2eb070fafb1a6992ebcd5956b426f5cbe8330b6d8f32423a5d6ee364",
+    "bytes": 905
+  },
+  "thin_brush_phase8_evidence/implementation/include/qbsp/portals.hh": {
+    "sha256": "909e494c8f555a17021da877f96d705f5dc2b59e994f089d93755c1b1a0199c3",
+    "bytes": 2905
+  },
+  "thin_brush_phase8_evidence/implementation/include/qbsp/supported_geometry.hh": {
+    "sha256": "803b2125443a7577d136e15e70a17bb0ac8a31ab68d7e7949ccc554bf3079685",
+    "bytes": 5470
+  },
+  "thin_brush_phase8_evidence/implementation/qartographer/phase8-unrepresentable-portal.json": {
+    "sha256": "8f6acf5af482044fe79d1db95562b3620b93c9b7f3ef2c4a631538c9a005824a",
+    "bytes": 5683
+  },
+  "thin_brush_phase8_evidence/implementation/qbsp/CMakeLists.txt": {
+    "sha256": "60e45693c4bd85e3ee51b132ee37b7f0cc232008c7a5617220c60ce934a611b1",
+    "bytes": 2215
+  },
+  "thin_brush_phase8_evidence/implementation/qbsp/brushbsp.cc": {
+    "sha256": "f7aae03b2b0fd9e0c70ecba1afb29afc61066a876312227cf0c985cdbd173690",
+    "bytes": 50549
+  },
+  "thin_brush_phase8_evidence/implementation/qbsp/portals.cc": {
+    "sha256": "99b3598a951cea461296c286f94d87622686e422d76b76d9c02895f764b33c2b",
+    "bytes": 46764
+  },
+  "thin_brush_phase8_evidence/implementation/qbsp/qbsp.cc": {
+    "sha256": "11db365eb750e5c15e4613839418ce6a20b704dad74bc8d5eab392570e156068",
+    "bytes": 61173
+  },
+  "thin_brush_phase8_evidence/implementation/tests/test_qbsp.cc": {
+    "sha256": "a59cae2731e2cd1886a265bce164c4bcc5d3f15d86194dde32ca99d5ef19db03",
+    "bytes": 108058
+  },
+  "thin_brush_phase8_evidence/independent-component/__pycache__/oracle.cpython-312.pyc": {
+    "sha256": "e586845e9d0a5f08d6ceb11f54fd0e1374c57c0f625acd61fd79916594cd9476",
+    "bytes": 12365
+  },
+  "thin_brush_phase8_evidence/independent-component/check_modes.py": {
+    "sha256": "2c11b663f578d72be3030a5781279c091c7abdd131271dd6fde4d813b201486d",
+    "bytes": 512
+  },
+  "thin_brush_phase8_evidence/independent-component/fixtures.py": {
+    "sha256": "0ffd3f9bb97744e7efb1940450cf9886847fe945f467deb9d9e3203840623338",
+    "bytes": 5770
+  },
+  "thin_brush_phase8_evidence/independent-component/halfspace.hpp": {
+    "sha256": "2fe4ea9a683c13b2b530294f0c9f2faa5e923024e812382403931af9438891dd",
+    "bytes": 11623
+  },
+  "thin_brush_phase8_evidence/independent-component/main.cpp": {
+    "sha256": "20c6e04539da39f521a4dfdb3b629e4f73e66fbf24c4575300ba9063584277f4",
+    "bytes": 4696
+  },
+  "thin_brush_phase8_evidence/independent-component/minimize.py": {
+    "sha256": "b802a63b4377e60c308ccce7ec6db7ac9d900113787f995f923d1067035d9ba2",
+    "bytes": 1288
+  },
+  "thin_brush_phase8_evidence/independent-component/oracle.py": {
+    "sha256": "36a3b0af57cb4a699dc28d82ce7856a0caefe15cd97b535f71e1a43ef1ca7842",
+    "bytes": 4226
+  },
+  "thin_brush_phase8_evidence/independent-component/practical_policy.py": {
+    "sha256": "f949bb06a8797fbf2a34c57604c1909f093d76b1549ece4a3cf5024590a8bc7e",
+    "bytes": 6391
+  },
+  "thin_brush_phase8_evidence/independent-component/project_extents.py": {
+    "sha256": "68e48fab5b4d6b36f952cc8f403a4f25fee1dd56481298bf3a0439a6fdeeb1de",
+    "bytes": 391
+  },
+  "thin_brush_phase8_evidence/independent-component/quantized_check.py": {
+    "sha256": "584b5c808232045b977193e7c521fdbc871bfda5b5184f28205c92c59a7ede27",
+    "bytes": 709
+  },
+  "thin_brush_phase8_evidence/independent-component/run.sh": {
+    "sha256": "9ffec44c5b422539eee1b0df974173979856e4a6f480b1e1853bd3979bb6f379",
+    "bytes": 1267
+  },
+  "thin_brush_phase8_evidence/independent-component/selftest.cpp": {
+    "sha256": "8f3d603bc651f3497e3c980422252262f90904e89bc474bebfd498caa45d4e1b",
+    "bytes": 1557
+  },
+  "thin_brush_phase8_evidence/independent-component/source_route.py": {
+    "sha256": "8ff7af502f5bddd7c17819f1b51c49298c20fa8068a3a93f7217c327494ec152",
+    "bytes": 2500
+  },
+  "thin_brush_phase8_evidence/independent-component/summarize.py": {
+    "sha256": "c56e3f480c328c0d29a4b37aa5fb1c6988996fb50501b4792eec45f89a42cd54",
+    "bytes": 3545
+  },
+  "thin_brush_phase8_evidence/independent-component/validate.py": {
+    "sha256": "71be37df2cc4c04175e407a656cac1ea7287b2cc0f0db6a70c92548916913993",
+    "bytes": 1714
+  },
+  "thin_brush_phase8_evidence/inspect_render.py": {
+    "sha256": "f9a01ec5211cc800b3b99d70eeb146f6105403c539d7613c6adc7401e51ccc38",
+    "bytes": 1063
+  },
+  "thin_brush_phase8_evidence/mixed-context-replay.log": {
+    "sha256": "92d7182a8963160a37361ee9247ba9171225beb971ea170f6cd523fcb16a57ae",
+    "bytes": 150
+  },
+  "thin_brush_phase8_evidence/native-ordinary-final/acceptance.cfg": {
+    "sha256": "e4474c0f8128e09546f184b14310edd637874257ef268e6d8d1c253dfdaca952",
+    "bytes": 1288
+  },
+  "thin_brush_phase8_evidence/native-ordinary-final/end.sav": {
+    "sha256": "37cb76fb57668fc76bcece949167ab9290248ff418c1f0fca89a5121fbcdfb76",
+    "bytes": 4909
+  },
+  "thin_brush_phase8_evidence/native-ordinary-final/engine.log": {
+    "sha256": "b941cea58ab3ebc876c299613882b96cb1ee685713ea741b443b645b90317cf6",
+    "bytes": 1533
+  },
+  "thin_brush_phase8_evidence/native-ordinary-final/light.log": {
+    "sha256": "dccfdd266454974a7a598e916c89011281dc35a2cd379acfbe6ecc7fac75a052",
+    "bytes": 1693
+  },
+  "thin_brush_phase8_evidence/native-ordinary-final/ordinary-light.log": {
+    "sha256": "6096ecece8124f306cd17fb8c144de5e1c6e1d1fa981232324a0e70e7ead8db0",
+    "bytes": 1100
+  },
+  "thin_brush_phase8_evidence/native-ordinary-final/ordinary-vis.log": {
+    "sha256": "8e945ff61d442580b92feda7291b318b3a248dbc0b1dd404bf14ee77db0e6bc2",
+    "bytes": 600
+  },
+  "thin_brush_phase8_evidence/native-ordinary-final/ordinary.bsp.bin": {
+    "sha256": "af95fb4f94be4c833558d304070e36883c80c6cfdd5f739fc5b9d456e45400a9",
+    "bytes": 2748
+  },
+  "thin_brush_phase8_evidence/native-ordinary-final/ordinary.prt": {
+    "sha256": "a8b4e1cb84660efd8549ff3c4824742b48e0920019935cc6b1ab5a6862e60455",
+    "bytes": 76
+  },
+  "thin_brush_phase8_evidence/native-ordinary-final/results.json": {
+    "sha256": "aa7bf8c9e350c257b7163b9a9d362abae24f27543f08d096865f2911836cb46f",
+    "bytes": 2649
+  },
+  "thin_brush_phase8_evidence/native-ordinary-final/start.sav": {
+    "sha256": "d6f2acc9a5c813b550fed13cece953ef73993a5cf47d59748b987a8044c598fa",
+    "bytes": 4916
+  },
+  "thin_brush_phase8_evidence/native-ordinary-final/vis.log": {
+    "sha256": "a0cbcf664c29ee58d596d5f19d629a833826b302c9c234d5cc1575939284c7f7",
+    "bytes": 758
+  },
+  "thin_brush_phase8_evidence/native-validation.log": {
+    "sha256": "aa7bf8c9e350c257b7163b9a9d362abae24f27543f08d096865f2911836cb46f",
+    "bytes": 2649
+  },
+  "thin_brush_phase8_evidence/native.log": {
+    "sha256": "a0c650e018b3cf6960a05fcce099943566624d6fdc26d1c8806f115a509a75d7",
+    "bytes": 2348
+  },
+  "thin_brush_phase8_evidence/native_ordinary.py": {
+    "sha256": "c480112bcfbec622f3a82b91cb44b37eddcc7e6bfcad872937c244de94e08484",
+    "bytes": 3907
+  },
+  "thin_brush_phase8_evidence/native_validate_saved.py": {
+    "sha256": "336b44ca26cfc981aabbeada8979a855284b83192c6afb01b9da1c5d682bf8f0",
+    "bytes": 2920
+  },
+  "thin_brush_phase8_evidence/ordinary-comparison/ordinary/input.map": {
+    "sha256": "6f5b00bd3ce1808ffc9f921d31cb969f74f03b6bbd44691f1d6c3a82d3695b83",
+    "bytes": 3837
+  },
+  "thin_brush_phase8_evidence/ordinary-comparison/ordinary-L-room/input.map": {
+    "sha256": "853473f20086124c62dc7c99c4aa49f974ab6a690d756d79d50565aacb4a3564",
+    "bytes": 8411
+  },
+  "thin_brush_phase8_evidence/ordinary-comparison/ordinary-rotated-hull0/input.map": {
+    "sha256": "345366ef6646c035f9581965548a404f2a15533be95f9af7ff3a4a59f5adee32",
+    "bytes": 7072
+  },
+  "thin_brush_phase8_evidence/ordinary-comparison/results.json": {
+    "sha256": "7db38b1b94742e8caab63094bf1062ee106577b16739642c8d49b6dd0c94d750",
+    "bytes": 1728
+  },
+  "thin_brush_phase8_evidence/ordinary-comparison.log": {
+    "sha256": "7ea5d2e476e648c1c26ad78c805bd61b03ce62c25f8ed1c3fbd03086c44b79ad",
+    "bytes": 145
+  },
+  "thin_brush_phase8_evidence/ordinary-nofill/accepted/compile.log": {
+    "sha256": "4dd5d95a24e97a1ab8dae0e66ec4e59c245a42a8f2db6513e5d73105f7cb78ce",
+    "bytes": 4203
+  },
+  "thin_brush_phase8_evidence/ordinary-nofill/accepted/input.bsp.bin": {
+    "sha256": "c8fd83975e15c205f7c727fd9c5a2f83bf42376085cced2dbfbcb9143ec706f5",
+    "bytes": 12940
+  },
+  "thin_brush_phase8_evidence/ordinary-nofill/accepted/input.content.json": {
+    "sha256": "2a58cd7c47d080ec778f1601960d59651ca067484eb9facf3f376ec3aeff4450",
+    "bytes": 77
+  },
+  "thin_brush_phase8_evidence/ordinary-nofill/accepted/input.log": {
+    "sha256": "7f86d655051295a750b29e145cd38df0eb54366a9748fb81e03b956d714b372d",
+    "bytes": 3023
+  },
+  "thin_brush_phase8_evidence/ordinary-nofill/accepted/input.map": {
+    "sha256": "853473f20086124c62dc7c99c4aa49f974ab6a690d756d79d50565aacb4a3564",
+    "bytes": 8411
+  },
+  "thin_brush_phase8_evidence/ordinary-nofill/accepted/input.prt": {
+    "sha256": "4406305c02f025966c9f3f5e3f0782dd6f380061e377fd5316c4040c273bc0d4",
+    "bytes": 4074
+  },
+  "thin_brush_phase8_evidence/ordinary-nofill/accepted/input.texinfo.json": {
+    "sha256": "37384dd2ebd4076ee1e73b2bbec84c6dd58fa61d86cc308506a9d10caa2c9c63",
+    "bytes": 43
+  },
+  "thin_brush_phase8_evidence/ordinary-nofill/candidate/compile.log": {
+    "sha256": "8188ec24d92212d30d035d5f6cd5c3836df582ee977018bd9b04aa90fe86793f",
+    "bytes": 4332
+  },
+  "thin_brush_phase8_evidence/ordinary-nofill/candidate/input.bsp.bin": {
+    "sha256": "c8fd83975e15c205f7c727fd9c5a2f83bf42376085cced2dbfbcb9143ec706f5",
+    "bytes": 12940
+  },
+  "thin_brush_phase8_evidence/ordinary-nofill/candidate/input.content.json": {
+    "sha256": "2a58cd7c47d080ec778f1601960d59651ca067484eb9facf3f376ec3aeff4450",
+    "bytes": 77
+  },
+  "thin_brush_phase8_evidence/ordinary-nofill/candidate/input.log": {
+    "sha256": "cc3d26063f935a384c3512d307328ec8520be9cc10165fbbc4ca069c83d5cadf",
+    "bytes": 3074
+  },
+  "thin_brush_phase8_evidence/ordinary-nofill/candidate/input.map": {
+    "sha256": "853473f20086124c62dc7c99c4aa49f974ab6a690d756d79d50565aacb4a3564",
+    "bytes": 8411
+  },
+  "thin_brush_phase8_evidence/ordinary-nofill/candidate/input.prt": {
+    "sha256": "d8685b3b02a78e5fe27ac5194e60dd19af82693491cbaa978f8e4e3b48069ec9",
+    "bytes": 3964
+  },
+  "thin_brush_phase8_evidence/ordinary-nofill/candidate/input.texinfo.json": {
+    "sha256": "37384dd2ebd4076ee1e73b2bbec84c6dd58fa61d86cc308506a9d10caa2c9c63",
+    "bytes": 43
+  },
+  "thin_brush_phase8_evidence/ordinary-nofill/results.json": {
+    "sha256": "7445c8d419fb3eab3a4c2d1426c7f586e89261c6cd9001f31b558ffb618c79e5",
+    "bytes": 1133
+  },
+  "thin_brush_phase8_evidence/ordinary-nofill.log": {
+    "sha256": "2ed4149e52702e1a0ef61aa36d1aca49c0f2bf40ae5e8c32194e5cf8411432fc",
+    "bytes": 36
+  },
+  "thin_brush_phase8_evidence/ordinary_compare.py": {
+    "sha256": "80e68047a7ca215a7fcfca0ac46afd8128955593231cd83d89c4cfc499cb1541",
+    "bytes": 2931
+  },
+  "thin_brush_phase8_evidence/ordinary_nofill.py": {
+    "sha256": "246d11f4c2608adc9d084f405ace6c5f91a361834a8aafd8185e67ee0f53eec1",
+    "bytes": 2438
+  },
+  "thin_brush_phase8_evidence/p1-regression-patched/identity.txt": {
+    "sha256": "b2cc9c7d4579537676f90fecdd20415fcb79b79ffb0aab3cec01f51643b76788",
+    "bytes": 9341
+  },
+  "thin_brush_phase8_evidence/p1-regression-patched/reduced/compile.log": {
+    "sha256": "33c195a7e485e1b39c9f4b0fd9a4388edc7d8dbc3d229dff0a60e4d48bec346f",
+    "bytes": 20478
+  },
+  "thin_brush_phase8_evidence/p1-regression-patched/reduced/wildspline.log": {
+    "sha256": "bf3abc4714e1a9cbed6a40ff1265d9c3e0c7c169e660b8c582a49464c92ffa37",
+    "bytes": 19290
+  },
+  "thin_brush_phase8_evidence/p1-regression-patched/reduced/wildspline.map": {
+    "sha256": "5f4c588e6f4482f933138def59a2cd64660491b146cbcf0683f32266bcd24d93",
+    "bytes": 10491
+  },
+  "thin_brush_phase8_evidence/p1-regression-patched/reduced/wildspline.prt": {
+    "sha256": "c610b34a8550e252352bf2e904cf0998f1c688779a71522830956419d4726d03",
+    "bytes": 38
+  },
+  "thin_brush_phase8_evidence/p1-regression-patched/reduced.log": {
+    "sha256": "31bdcd0eb0c9ab19d24918ef664788506a9ba6d9bc6eaf0f3fd52d63d9c7a0fe",
+    "bytes": 20851
+  },
+  "thin_brush_phase8_evidence/package.py": {
+    "sha256": "887d7c7da258e999d40ab3ea7404b3040c8505a6b1c4cea7a4990e6693a4337c",
+    "bytes": 4354
+  },
+  "thin_brush_phase8_evidence/patch-check.log": {
+    "sha256": "26cd61ce9228bc93541ff8ebdfb63bf54aa85f71e162bf08f14899e10aae9c6b",
+    "bytes": 304
+  },
+  "thin_brush_phase8_evidence/phase7-halloween-node-occupancy.json": {
+    "sha256": "3787b72e28d35d6e0c2bf0931d0f00e2301b36bf116fe006da4c161d7c1d8577",
+    "bytes": 80795
+  },
+  "thin_brush_phase8_evidence/phase7-new-blocker-oracle.json": {
+    "sha256": "cdbb526ed15026d44b7bc96ff5807d0b1ae0afd3e0d2546d2c055887da301327",
+    "bytes": 1627
+  },
+  "thin_brush_phase8_evidence/phase7-sealed-node.json.fragment.json": {
+    "sha256": "7edd991df7f91582187ecb1a511be2a26289b0c21f47f98f84a8a0829119a036",
+    "bytes": 1316
+  },
+  "thin_brush_phase8_evidence/phase7-unaccepted.patch": {
+    "sha256": "16cfd1615c7c2a6641c451d85583cc6deb21a68822bfb70956d8a1810cdb298a",
+    "bytes": 94979
+  },
+  "thin_brush_phase8_evidence/phase8-on-phase7.patch": {
+    "sha256": "0f3c4114c9b588faaab81c667b7c3fd4334306c7084e1ad523fced97947d9bff",
+    "bytes": 40681
+  },
+  "thin_brush_phase8_evidence/policy/bsp-quantized-cases.json": {
+    "sha256": "55a5219741001e748fad8146374a00f45de130e143cd59522a2350123da9c14e",
+    "bytes": 12719
+  },
+  "thin_brush_phase8_evidence/policy/cases.json": {
+    "sha256": "2ab0737ad8eeb12d26d43316dc52a15a549806706ff5a0b179ee904e325be182",
+    "bytes": 102322
+  },
+  "thin_brush_phase8_evidence/policy/practical-policy-results.json": {
+    "sha256": "46136f3f4d599f6e8b2ccc108656da53a7af483eed7b36cc241eb56e8ea8896c",
+    "bytes": 1954
+  },
+  "thin_brush_phase8_evidence/policy.log": {
+    "sha256": "f9498c8d01517839aacbba880ab718115171db91be969598b38afa1407e278a0",
+    "bytes": 132
+  },
+  "thin_brush_phase8_evidence/portal-oracle.json": {
+    "sha256": "73f1e0852ce38bd2c4a2b2ae427bc6eaedafe5e0da9a2c13aeb55c38a8d886d6",
+    "bytes": 572
+  },
+  "thin_brush_phase8_evidence/portal-oracle.log": {
+    "sha256": "bf6f27329c2cd021e7350ca0fb73d6348edfe92d341d18fa0aa9a4d6c0bea6e0",
+    "bytes": 472
+  },
+  "thin_brush_phase8_evidence/precise/campaign-results.json": {
+    "sha256": "ea9714b590e74fcc611884090efa1a745ce0bb62dd0d0e2c05eabab97a700e30",
+    "bytes": 7428
+  },
+  "thin_brush_phase8_evidence/precise/halloween-off-precise/stdout.log": {
+    "sha256": "514e2b52d3c7747b178dd00e4edf1c987f15a52a0bec7a9b4df71573bb5c2747",
+    "bytes": 13584
+  },
+  "thin_brush_phase8_evidence/precise/halloween-off-precise/time.txt": {
+    "sha256": "ee7faeacdd9b65e628818e7bf47ed5415a87dd8f91bebd38a8170b261141f842",
+    "bytes": 955
+  },
+  "thin_brush_phase8_evidence/precise/halloween-on-precise/stdout.log": {
+    "sha256": "727eb200788dc55905095a860f18384886d1718d0be83ba3470410daea015320",
+    "bytes": 14880
+  },
+  "thin_brush_phase8_evidence/precise/halloween-on-precise/time.txt": {
+    "sha256": "f83123a4d6c214c8153737b9c3443efbc44b3c3b0c7034c17230ec563b6b89fc",
+    "bytes": 954
+  },
+  "thin_brush_phase8_evidence/reconstruction-roller.log": {
+    "sha256": "56674d284ecdcb2363f29ff0e1f8ecb3302b7383bb5c89c50d92da5d71261278",
+    "bytes": 396
+  },
+  "thin_brush_phase8_evidence/reconstruction.log": {
+    "sha256": "5ab380b41c92a944664e60d9101d301686eabede8fb03f76d18b5747f9a549b9",
+    "bytes": 68
+  },
+  "thin_brush_phase8_evidence/rejected-reconstruction/brushbsp.cc": {
+    "sha256": "2edf417caae6026ba6c4f7b1e167a69cf1e7e9a98524f4d269124f51e123ba90",
+    "bytes": 50720
+  },
+  "thin_brush_phase8_evidence/rejected-reconstruction/campaign/p1-reduced/input.log": {
+    "sha256": "3f1d0b8d94c23b4a228349878334323d83ea26bdd3d534f365b05f8b0701bad1",
+    "bytes": 19227
+  },
+  "thin_brush_phase8_evidence/rejected-reconstruction/campaign/p1-reduced/input.map": {
+    "sha256": "5f4c588e6f4482f933138def59a2cd64660491b146cbcf0683f32266bcd24d93",
+    "bytes": 10491
+  },
+  "thin_brush_phase8_evidence/rejected-reconstruction/campaign/p1-reduced/input.prt": {
+    "sha256": "c610b34a8550e252352bf2e904cf0998f1c688779a71522830956419d4726d03",
+    "bytes": 38
+  },
+  "thin_brush_phase8_evidence/rejected-reconstruction/campaign/p1-reduced/node.json.fragment.json": {
+    "sha256": "aa38f5a6b231eb12f55d7c74173558e47334e7837d3b947af898c3943383619e",
+    "bytes": 2683
+  },
+  "thin_brush_phase8_evidence/rejected-reconstruction/campaign/p1-reduced/node.json.no-route.json": {
+    "sha256": "c77d1ff65a1e80d6b83833c82ae2e5753bb47f395b63ae3637d7f2f248d377e2",
+    "bytes": 4717
+  },
+  "thin_brush_phase8_evidence/rejected-reconstruction/campaign/p1-reduced/node.json.partition-278.json": {
+    "sha256": "3131e88010756e812fe5a4c3d9f75b48dc64241ef224a708f295db2b3c9f462c",
+    "bytes": 28338
+  },
+  "thin_brush_phase8_evidence/rejected-reconstruction/campaign/p1-reduced/node.json.portal-proofs.jsonl": {
+    "sha256": "67e166f73e5f76b53d714bce26fc56c4e703c4397843c333eab476353ed06a3c",
+    "bytes": 145406
+  },
+  "thin_brush_phase8_evidence/rejected-reconstruction/campaign/p1-reduced/node.json.portal.json": {
+    "sha256": "578843bc42768d55950dc2eaf3a92ec0718a43c55f24755867a499cfe60e76eb",
+    "bytes": 5202
+  },
+  "thin_brush_phase8_evidence/rejected-reconstruction/campaign/p1-reduced/stdout.log": {
+    "sha256": "eb7e2df33c3d4482541e36ff8560590803e846ed2a88117610bcdd56d39f5011",
+    "bytes": 20425
+  },
+  "thin_brush_phase8_evidence/rejected-reconstruction/campaign/p1-reduced/time.txt": {
+    "sha256": "3dea93f7f72791b724beb35d27ce08308312dbffb6cb1d687b1e6d6e108bc7d0",
+    "bytes": 901
+  },
+  "thin_brush_phase8_evidence/rejected-reconstruction/campaign/results.json": {
+    "sha256": "c12fda34b9e0c8813f96034be1bf0c7785580a1b2e12ca5e0f6b5305bbebfc78",
+    "bytes": 1461
+  },
+  "thin_brush_phase8_evidence/rejected-reconstruction/campaign/rotated-actors/input.log": {
+    "sha256": "63096d48944ea5d1e51955a61470fc93377b7295a52bdd9de997732289df4107",
+    "bytes": 16638
+  },
+  "thin_brush_phase8_evidence/rejected-reconstruction/campaign/rotated-actors/input.map": {
+    "sha256": "345366ef6646c035f9581965548a404f2a15533be95f9af7ff3a4a59f5adee32",
+    "bytes": 7072
+  },
+  "thin_brush_phase8_evidence/rejected-reconstruction/campaign/rotated-actors/input.prt": {
+    "sha256": "b1ac538e53efc28ace2088324b1c0504d0f09b013d30b39ce231d76124bc6c22",
+    "bytes": 9
+  },
+  "thin_brush_phase8_evidence/rejected-reconstruction/campaign/rotated-actors/node.json.fragment.json": {
+    "sha256": "aefd8c9afcac8d0985e6b79373c07452e63ff0752f201ab2566c4daa3ca34225",
+    "bytes": 1472
+  },
+  "thin_brush_phase8_evidence/rejected-reconstruction/campaign/rotated-actors/node.json.partition-122.json": {
+    "sha256": "799a94273044a110b594254087d4e545b2aa380af3a747a30ccd5b8668c37668",
+    "bytes": 12379
+  },
+  "thin_brush_phase8_evidence/rejected-reconstruction/campaign/rotated-actors/node.json.partition-68.json": {
+    "sha256": "4d0a8a053ce2b734df3c9107ab79ad4a1c318d061eb8ecef7eb904194aea7203",
+    "bytes": 13868
+  },
+  "thin_brush_phase8_evidence/rejected-reconstruction/campaign/rotated-actors/stdout.log": {
+    "sha256": "4f8a7626a8f3d4d52b68c845ca35066dc9d6cce446300e60e0c0aa91e014ee9d",
+    "bytes": 18247
+  },
+  "thin_brush_phase8_evidence/rejected-reconstruction/campaign/rotated-actors/time.txt": {
+    "sha256": "9aa45db1e5199a9f121a8ac1f26167a06d1e942ea3592d8d8c38cb3148d3eeb3",
+    "bytes": 902
+  },
+  "thin_brush_phase8_evidence/rejected-reconstruction/on-final6.patch": {
+    "sha256": "b61e17cb0d0a78b73cbf182d08f48a71d100297867018844e23ca35b17e6bd5c",
+    "bytes": 4241
+  },
+  "thin_brush_phase8_evidence/rejected-reconstruction/portals.cc": {
+    "sha256": "5ffe0f691a7ea3cd6dac006c6246525cdd2695254a3617590503251d60ac49c1",
+    "bytes": 46844
+  },
+  "thin_brush_phase8_evidence/rejected-reconstruction/roller/chopfragment.log": {
+    "sha256": "86a01f68e4140e986d6cc7271bb31d21f972f2d4c697ae2f573b48ef62f551b0",
+    "bytes": 9344
+  },
+  "thin_brush_phase8_evidence/rejected-reconstruction/roller/chopfragment.map": {
+    "sha256": "a281bdf08b070bfc7a728acf8212f5e401b04b572a706a353716fc898d861300",
+    "bytes": 41460
+  },
+  "thin_brush_phase8_evidence/rejected-reconstruction/roller/chopfragment.time": {
+    "sha256": "dee1b569c722fd4834cf517c82cf266b174b5b7d37ac90784b00fc1e004900da",
+    "bytes": 48
+  },
+  "thin_brush_phase8_evidence/rejected-reconstruction/roller/default.log": {
+    "sha256": "e5b832d12c055f615db1c5bfe3eb001b0cd766b1ec7b88cd5f9f63fa5d6fc2ce",
+    "bytes": 9270
+  },
+  "thin_brush_phase8_evidence/rejected-reconstruction/roller/default.map": {
+    "sha256": "a281bdf08b070bfc7a728acf8212f5e401b04b572a706a353716fc898d861300",
+    "bytes": 41460
+  },
+  "thin_brush_phase8_evidence/rejected-reconstruction/roller/default.time": {
+    "sha256": "c547597f4d0765c5d652d2d6de62d44c654e03f9104f73bd15a2f75fc9c4c14d",
+    "bytes": 48
+  },
+  "thin_brush_phase8_evidence/rejected-reconstruction/roller/results.json": {
+    "sha256": "6d0d69d865aaeef9ab0260ee0a54978c8083e24756d4ca1b50d57102bc081e46",
+    "bytes": 504
+  },
+  "thin_brush_phase8_evidence/rejected-reconstruction/supported_geometry.hh": {
+    "sha256": "2dddc1fdd4479184a889eb1148869ce0f9043d5efd85beaf7776c890f26f1cb4",
+    "bytes": 8231
+  },
+  "thin_brush_phase8_evidence/remaining-oracle.json": {
+    "sha256": "d7a2776f9dcc7232cbc88444f1d812a9bd8789bfe0106696d34732f1aeb7f736",
+    "bytes": 5050
+  },
+  "thin_brush_phase8_evidence/remaining-oracle.log": {
+    "sha256": "ef4255046d72db86e346166a3706cc127da68ddb392075d757e426c27f2c8cea",
+    "bytes": 4008
+  },
+  "thin_brush_phase8_evidence/replay_portals.py": {
+    "sha256": "a6c94d09670e8ea86913d3591828d67b36725e03dacce02dba6d1d15ccf0db33",
+    "bytes": 992
+  },
+  "thin_brush_phase8_evidence/replay_remaining.py": {
+    "sha256": "611d1e6d7f9a2d31577c1b0db931ab5ddc70647e417106c8f2b54e05f17a8ee3",
+    "bytes": 1302
+  },
+  "thin_brush_phase8_evidence/reproduction/halloween/compile.log": {
+    "sha256": "1fdd3cf2696bfa97a4471d9f43571e67b1d85882e36fbada713f25ee25280198",
+    "bytes": 14680
+  },
+  "thin_brush_phase8_evidence/reproduction/halloween/input.log": {
+    "sha256": "f43ac45dce6820e5cb3a106671c5cd28449ffd12511a3d9b650c0154984a5f98",
+    "bytes": 13466
+  },
+  "thin_brush_phase8_evidence/reproduction/halloween/input.map": {
+    "sha256": "d5f2ab2a0c5a22d2f0ecaecf77a1bbd72a3c2ce2e3c444fe0b4c517092e5986c",
+    "bytes": 2978291
+  },
+  "thin_brush_phase8_evidence/reproduction/halloween/node.json": {
+    "sha256": "a123b5647037426b8eacbd3c931b85fa309d825d3489e0d6a6209d9653328356",
+    "bytes": 1936835
+  },
+  "thin_brush_phase8_evidence/reproduction/halloween/node.json.fragment.json": {
+    "sha256": "5d6fe067c2d1f2c843fdf4eb5c0c461bf0720294d6f632de9fa8b36cd08af653",
+    "bytes": 746
+  },
+  "thin_brush_phase8_evidence/reproduction/halloween/time.txt": {
+    "sha256": "88a0c6287abe45b1d8b71ef4e5bb60cb2f3c95e9fd3add1d9a6689d5e990bed4",
+    "bytes": 904
+  },
+  "thin_brush_phase8_evidence/reproduction/halloween-node-occupancy.json": {
+    "sha256": "bdf8f7b9cbfe5af73b3b14a7d8beb4995f2b86552235c6c770f778278c45568d",
+    "bytes": 80813
+  },
+  "thin_brush_phase8_evidence/reproduction/p1/compile.log": {
+    "sha256": "2db01afbd640e8ed0556ddff97672b300e3e9d8a363f76c431014979cc7ccb0b",
+    "bytes": 7765
+  },
+  "thin_brush_phase8_evidence/reproduction/p1/input.log": {
+    "sha256": "1842c40d9f528dc7975ec7f037b53e19a64b126cae60c2d791fe790072b35c5b",
+    "bytes": 6577
+  },
+  "thin_brush_phase8_evidence/reproduction/p1/input.map": {
+    "sha256": "5f4c588e6f4482f933138def59a2cd64660491b146cbcf0683f32266bcd24d93",
+    "bytes": 10491
+  },
+  "thin_brush_phase8_evidence/reproduction/p1/input.prt": {
+    "sha256": "c610b34a8550e252352bf2e904cf0998f1c688779a71522830956419d4726d03",
+    "bytes": 38
+  },
+  "thin_brush_phase8_evidence/reproduction/p1/node.json": {
+    "sha256": "d3148ab36f4e07ad25b472a2da71b3a684f0aedf4420b2b7a1f2d51485f076ff",
+    "bytes": 14300
+  },
+  "thin_brush_phase8_evidence/reproduction/p1/node.json.fragment.json": {
+    "sha256": "be5f5e29c26b45391425c2c487ce09003a51e8f674a51a1ee410707c31f7761a",
+    "bytes": 2552
+  },
+  "thin_brush_phase8_evidence/reproduction/p1/time.txt": {
+    "sha256": "0b3226875db6b402242dee0b08f97354b87511fcf34bdf3d610d565b2a37af7f",
+    "bytes": 890
+  },
+  "thin_brush_phase8_evidence/reproduction/results.json": {
+    "sha256": "24f75157d60519f06c601eb6700ee71d64bc87e475819eff5c00644615d17647",
+    "bytes": 1421
+  },
+  "thin_brush_phase8_evidence/reproduction/rotated/compile.log": {
+    "sha256": "c43b696938c5dc061ea2c47d35a32c3d18a382c81b2640abdd305f744617fb98",
+    "bytes": 7952
+  },
+  "thin_brush_phase8_evidence/reproduction/rotated/input.log": {
+    "sha256": "572e3e3e27428b60cc0479393f90948e3c620a19ac97a758296a31d11476919d",
+    "bytes": 6352
+  },
+  "thin_brush_phase8_evidence/reproduction/rotated/input.map": {
+    "sha256": "345366ef6646c035f9581965548a404f2a15533be95f9af7ff3a4a59f5adee32",
+    "bytes": 7072
+  },
+  "thin_brush_phase8_evidence/reproduction/rotated/input.prt": {
+    "sha256": "b1ac538e53efc28ace2088324b1c0504d0f09b013d30b39ce231d76124bc6c22",
+    "bytes": 9
+  },
+  "thin_brush_phase8_evidence/reproduction/rotated/node.json": {
+    "sha256": "ec8c17684b11629751aa5af8a5dc9895d5da4287f27ab0a2effe26419f058c03",
+    "bytes": 8475
+  },
+  "thin_brush_phase8_evidence/reproduction/rotated/node.json.fragment.json": {
+    "sha256": "760c83fb285fc1b7dbb58cab9e6888424ce0b6b4241aecd30df5696a02a94691",
+    "bytes": 1533
+  },
+  "thin_brush_phase8_evidence/reproduction/rotated/time.txt": {
+    "sha256": "44f428da7f78f6b3c8a0f1b8414ef2a05929c6b3218a6998d441797f695bf3c3",
+    "bytes": 896
+  },
+  "thin_brush_phase8_evidence/reproduction/sealed-test/compile.log": {
+    "sha256": "c7cbde1f10dbd23aef92f622e2ce7b18db0da3519a2aff3a68a87af48a2804fa",
+    "bytes": 6594
+  },
+  "thin_brush_phase8_evidence/reproduction/sealed-test/node.json": {
+    "sha256": "e8ceba84e669fc881a704cfabd39d9686a7ec3766faa53ce0eb2ab1ed793d057",
+    "bytes": 8888
+  },
+  "thin_brush_phase8_evidence/reproduction/sealed-test/node.json.fragment.json": {
+    "sha256": "7edd991df7f91582187ecb1a511be2a26289b0c21f47f98f84a8a0829119a036",
+    "bytes": 1316
+  },
+  "thin_brush_phase8_evidence/reproduction/sealed-test/tests.xml": {
+    "sha256": "9d1613334860f2e60061f88a2364f39bb767e4adb935f18a69ef94046b485584",
+    "bytes": 1159
+  },
+  "thin_brush_phase8_evidence/reproduction/sealed-test/time.txt": {
+    "sha256": "0235ff1b4beff549f0bc8c2577c6d56fa4453e62b67ba8eaed489a446e16c7a9",
+    "bytes": 931
+  },
+  "thin_brush_phase8_evidence/roller-context/compile.log": {
+    "sha256": "1bd55fbf267db56b802232d9acb20271288f52d023b4f88322495f383fab9a0b",
+    "bytes": 18501
+  },
+  "thin_brush_phase8_evidence/roller-context/input.log": {
+    "sha256": "7e016c1e07437698accc268e66c3823d6f8d63bcf325c3bc45b17c05cc4ddb22",
+    "bytes": 17844
+  },
+  "thin_brush_phase8_evidence/roller-context/input.map": {
+    "sha256": "a281bdf08b070bfc7a728acf8212f5e401b04b572a706a353716fc898d861300",
+    "bytes": 41460
+  },
+  "thin_brush_phase8_evidence/roller-context/node.json.fragment.json": {
+    "sha256": "ba66473c24ff9f2eba3a363554f95d424ef8352117ce22074440febbfcafdb65",
+    "bytes": 2015
+  },
+  "thin_brush_phase8_evidence/roller-context/node.json.partition-120.json": {
+    "sha256": "d9fa1d302b4efc13161a700f3f382fd30c2609949c48f058319f7c4f8dd58972",
+    "bytes": 45212
+  },
+  "thin_brush_phase8_evidence/roller-context/node.json.partition-80.json": {
+    "sha256": "8276faea24cab10798a837ff0851ebb78e8f18c9753a3fe88942e6556b1b7bc1",
+    "bytes": 30431
+  },
+  "thin_brush_phase8_evidence/roller-context/node.json.partition-92.json": {
+    "sha256": "e165f4991aba1926028645ee1e7648a30aea3193c39f922d9ecf95a2a8833e13",
+    "bytes": 45277
+  },
+  "thin_brush_phase8_evidence/roller-context/time.txt": {
+    "sha256": "97bba98ff4a572c7c90c2b26494da5e88d953e3cfc9543cf98d6004238934edc",
+    "bytes": 870
+  },
+  "thin_brush_phase8_evidence/rotated-render-faces.json": {
+    "sha256": "fc178474abab0df8a3d8192c6dac46fe9e46299c4099124a12b812c4c8af7bdb",
+    "bytes": 10916
+  },
+  "thin_brush_phase8_evidence/rotated-render-verification.json": {
+    "sha256": "66cd8a96fd5ba593f6e9a21db387ed89510f1bb842c2cca9612bd39be32596c9",
+    "bytes": 1867
+  },
+  "thin_brush_phase8_evidence/route-verification.json": {
+    "sha256": "9c5146e91a087a643b3e300b5c4149db1dc2eb229ecbbbe55bafdae53efbdfd9",
+    "bytes": 731
+  },
+  "thin_brush_phase8_evidence/route-verification.log": {
+    "sha256": "9db83e137fadc4034c0ea721a092814950358b92afb891fb1e76650bcdc77c32",
+    "bytes": 638
+  },
+  "thin_brush_phase8_evidence/run_acceptance_campaign.py": {
+    "sha256": "70af5e2ebc3ec7eda642cbfac6c63e6c5e1e2618a77fca02c77c8871d57bb635",
+    "bytes": 1824
+  },
+  "thin_brush_phase8_evidence/run_campaign.py": {
+    "sha256": "ef76127fb80f63f84373c2c04563d57b8cbc0127d0b62ffc5d5bf84a09832c0f",
+    "bytes": 1787
+  },
+  "thin_brush_phase8_evidence/run_final_campaign.py": {
+    "sha256": "49a1cb09595f8318355237cb730cf8cd048c6a4a7f08432560c9908eeca50689",
+    "bytes": 1818
+  },
+  "thin_brush_phase8_evidence/run_matrix.py": {
+    "sha256": "aba4893c549cdb4aeacbad1c005852dcde497473aa49142e196761f5f653291c",
+    "bytes": 5231
+  },
+  "thin_brush_phase8_evidence/run_reconstruction.py": {
+    "sha256": "d100f99050dcc3b2fb4bcfb5cb67d494ba59fd96b053998cf27716237f96c174",
+    "bytes": 1794
+  },
+  "thin_brush_phase8_evidence/run_revision2.py": {
+    "sha256": "c1151c9fd18bbfd50b0a4d91a0b54eb59db0d31510908ea2f917e95ba980672c",
+    "bytes": 1784
+  },
+  "thin_brush_phase8_evidence/run_revision3.py": {
+    "sha256": "0a40869a471efc194dd563ecc83cbe90aa08a7eb9487265da9d98f5a6582164f",
+    "bytes": 1784
+  },
+  "thin_brush_phase8_evidence/run_revision4.py": {
+    "sha256": "077a57b71b505672f1a8a7fa81452da140f435afcf7df7b66625bd88975c8f71",
+    "bytes": 1784
+  },
+  "thin_brush_phase8_evidence/run_revision5.py": {
+    "sha256": "19376af8f7563bb98d380ce37449a948cc57427edd06c1897bd38f6e8c8ed65a",
+    "bytes": 1784
+  },
+  "thin_brush_phase8_evidence/run_roller.py": {
+    "sha256": "1c4819144dcd69d6082294b46f5a476b5161eaeb320df43f9b5582b85458b1ca",
+    "bytes": 3847
+  },
+  "thin_brush_phase8_evidence/status.json": {
+    "sha256": "29995b0d21a4219685e5437f18f650e07f5068889e636df1b88ed4875aa57e7e",
+    "bytes": 2504
+  },
+  "thin_brush_phase8_evidence/verify_render.py": {
+    "sha256": "0b3df583a72f32e2a5d317d4bffcee9a9e35ddd152737bb5b656556ae3fa47bf",
+    "bytes": 1808
+  },
+  "thin_brush_phase8_evidence/verify_routes.py": {
+    "sha256": "dd45bbd42bbe4955f843bb3e05b397d806890c7695d5dca8b681d99edf8be0ee",
+    "bytes": 1672
+  },
+  "thin_brush_phase8_evidence/write_report.py": {
+    "sha256": "8e4b91b79b154792eb34dfeb84f300c5c39ece691e4f05d266145fd17384c550",
+    "bytes": 22111
+  }
+}

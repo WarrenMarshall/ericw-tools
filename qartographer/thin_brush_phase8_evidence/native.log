@@ -1,0 +1,94 @@
+{
+  "engine_sha256": "a367fc302ace3e808b7db73b461830ba375747d72039b596e745f39baa464e02",
+  "command": [
+    "/tmp/appimage_extracted_740db85dc4875cfdb26a910527520a99/usr/bin/qrustyquake",
+    "-basedir",
+    "/tmp/qqbsp-phase8/evidence/native-ordinary-final/game",
+    "-window",
+    "-width",
+    "960",
+    "-height",
+    "640",
+    "-nosound",
+    "+exec",
+    "acceptance.cfg"
+  ],
+  "exit": 0,
+  "seconds": 3.069429471041076,
+  "consumers": [
+    {
+      "command": [
+        "/mnt/fb91e326-b6dc-4352-b43c-7517fcce8b77/Dropbox/Quake/Utils/linux/vis",
+        "-fast",
+        "-nopercent",
+        "/tmp/qqbsp-phase8/evidence/native-ordinary-final/ordinary.bsp"
+      ],
+      "exit": 0,
+      "sha256": "9068c8293a5ca4d10bd073fb43d51875c895a8e27e938268d2412ad2f528d0bb"
+    },
+    {
+      "command": [
+        "/mnt/fb91e326-b6dc-4352-b43c-7517fcce8b77/Dropbox/Quake/Utils/linux/light",
+        "-minlight",
+        "50",
+        "-nopercent",
+        "/tmp/qqbsp-phase8/evidence/native-ordinary-final/ordinary.bsp"
+      ],
+      "exit": 0,
+      "sha256": "6e72e261d38cd53089657926d879238feeea15e1fff87085ac67a83b67e53f43"
+    }
+  ],
+  "compiled_bsp_sha256": "5b9eca26c5af4f33c3b6f30a06d968605cff8ef64a708000d25fbfaa33305665",
+  "consumed_bsp_sha256": "af95fb4f94be4c833558d304070e36883c80c6cfdd5f739fc5b9d456e45400a9",
+  "states": {
+    "start": {
+      "origin": "-56.000000 -96.000000 88.031250",
+      "velocity": "0",
+      "movetype": "3.000000",
+      "flags": "4616.000000",
+      "health": "100.000000",
+      "server_time": 2.286111
+    },
+    "end": {
+      "origin": "79.968750 -96.000000 88.031250",
+      "velocity": "0",
+      "movetype": "3.000000",
+      "flags": "4616.000000",
+      "health": "100.000000",
+      "server_time": 4.286111
+    }
+  },
+  "acceptance": "PASS",
+  "source_checks": [
+    {
+      "name": "start",
+      "oracle_point": [
+        -56.0,
+        -96.0,
+        92.03125
+      ],
+      "source_margin": 0.03125,
+      "solid": false
+    },
+    {
+      "name": "end",
+      "oracle_point": [
+        79.96875,
+        -96.0,
+        92.03125
+      ],
+      "source_margin": 0.03125,
+      "solid": false
+    },
+    {
+      "name": "past_wall",
+      "oracle_point": [
+        80.1,
+        -96.0,
+        92.03125
+      ],
+      "source_margin": -0.09999999999999432,
+      "solid": true
+    }
+  ]
+}

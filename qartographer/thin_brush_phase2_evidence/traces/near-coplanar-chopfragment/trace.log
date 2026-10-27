@@ -1,0 +1,884 @@
+Qartographer qqbsp, upstream=ccaeb8457a1267860ebe99ed1df7394ebdd6b435, downstream=2f6fc5b79734f56348766cbec83533f1d50b3642, patches=P1
+---- qqbsp / ericw-tools  ----
+running with 1 thread(s)
+low priority not compiled into this version
+logging to /tmp/qqbsp-phase2/traces/near-coplanar-chopfragment/input.log (truncate)
+
+--- Options Summary ---
+    "threads" was set to "1" (from command line)
+    "nopercent" was set to "1" (from command line)
+    "bsp2" was set to "1" (from command line)
+    "chopfragment" was set to "1" (from command line)
+    "notex" was set to "1" (from command line)
+
+Input file: /tmp/qqbsp-phase2/traces/near-coplanar-chopfragment/input.map
+Output file: /tmp/qqbsp-phase2/traces/near-coplanar-chopfragment/input.bsp
+
+INFO: using built-in palette.
+---- LoadMapFile ----
+[33mWARNING: No wad or _wad key exists in the worldmodel
+[0m[36m     1 entities
+[0m[36m     2 unique textures
+[0m[36m     7 texinfos
+[0m[36m    16 unique planes
+[0m[36m
+[0m---- ProcessMapBrushes ----
+INFO: world extents calculated to 328 units
+[36m     2 brushes
+[0m[36m    12 sides
+[0m[36m
+[0m[36m            0 texture frames added
+[0m[33mWARNING: unable to find texture skip
+[0m[33mWARNING: unable to find texture NO_TEXTURE
+[0mProcessing hull 0...
+---- Brush_LoadEntity ----
+---- CountBrushes ----
+[36m    2 SOLID brushes
+[0m[36m    2 brushes total
+[0m[36m    12 visible sides
+[0m[36mINFO: calculating BSP for 2 brushes with 12 sides
+[0m---- BrushBSP ----
+[36m     2 brushes
+[0m[36m    12 visible faces
+[0mEXTENT check p=8 front=88 back=-24
+CLIP p=8 by=16 points=4->4
+CLIP p=8 by=20 points=4->4
+CLIP p=8 by=24 points=4->4
+CLIP p=8 by=19 points=4->4
+CLIP p=8 by=23 points=4->4
+CLIP p=8 by=27 points=4->4
+EXTENT check p=10 front=24 back=-88
+CLIP p=10 by=16 points=4->4
+CLIP p=10 by=20 points=4->4
+CLIP p=10 by=24 points=4->4
+CLIP p=10 by=19 points=4->4
+CLIP p=10 by=23 points=4->4
+CLIP p=10 by=27 points=4->4
+EXTENT check p=4 front=88 back=-24
+CLIP p=4 by=16 points=4->4
+CLIP p=4 by=20 points=4->4
+CLIP p=4 by=24 points=4->4
+CLIP p=4 by=19 points=4->4
+CLIP p=4 by=23 points=4->4
+CLIP p=4 by=27 points=4->4
+EXTENT check p=6 front=24 back=-88
+CLIP p=6 by=16 points=4->4
+CLIP p=6 by=20 points=4->4
+CLIP p=6 by=24 points=4->4
+CLIP p=6 by=19 points=4->4
+CLIP p=6 by=23 points=4->4
+CLIP p=6 by=27 points=4->4
+EXTENT check p=0 front=24.0162 back=-24
+CLIP p=0 by=16 points=4->4
+CLIP p=0 by=20 points=4->4
+CLIP p=0 by=24 points=4->4
+CLIP p=0 by=19 points=4->4
+CLIP p=0 by=23 points=4->4
+CLIP p=0 by=27 points=4->4
+EXTENT check p=2 front=24.0082 back=-24.008
+CLIP p=2 by=16 points=4->4
+CLIP p=2 by=20 points=4->4
+CLIP p=2 by=24 points=4->4
+CLIP p=2 by=19 points=4->4
+CLIP p=2 by=23 points=4->4
+CLIP p=2 by=27 points=4->4
+EXTENT check p=12 front=24.008 back=-24.0082
+CLIP p=12 by=16 points=4->4
+CLIP p=12 by=20 points=4->4
+CLIP p=12 by=24 points=4->4
+CLIP p=12 by=19 points=4->4
+CLIP p=12 by=23 points=4->4
+CLIP p=12 by=27 points=4->4
+EXTENT check p=14 front=24 back=-24.0162
+CLIP p=14 by=16 points=4->4
+CLIP p=14 by=20 points=4->4
+CLIP p=14 by=24 points=4->4
+CLIP p=14 by=19 points=4->4
+CLIP p=14 by=23 points=4->4
+CLIP p=14 by=27 points=4->4
+SELECT level=0 p=8 brushes=2
+EXTENT real volume=1 p=8 front=88 back=-24
+CLIP p=8 by=16 points=4->4
+CLIP p=8 by=20 points=4->4
+CLIP p=8 by=24 points=4->4
+CLIP p=8 by=19 points=4->4
+CLIP p=8 by=23 points=4->4
+CLIP p=8 by=27 points=4->4
+LEAF level=1 brushes=0 volume=1
+EXTENT check p=10 front=24 back=-64
+CLIP p=10 by=16 points=4->4
+CLIP p=10 by=20 points=4->4
+CLIP p=10 by=24 points=4->4
+CLIP p=10 by=23 points=4->4
+CLIP p=10 by=27 points=4->4
+CLIP p=10 by=9 points=4->4
+EXTENT check p=4 front=88 back=-24
+CLIP p=4 by=16 points=4->4
+CLIP p=4 by=20 points=4->4
+CLIP p=4 by=24 points=4->4
+CLIP p=4 by=23 points=4->4
+CLIP p=4 by=27 points=4->4
+CLIP p=4 by=9 points=4->4
+EXTENT check p=6 front=24 back=-88
+CLIP p=6 by=16 points=4->4
+CLIP p=6 by=20 points=4->4
+CLIP p=6 by=24 points=4->4
+CLIP p=6 by=23 points=4->4
+CLIP p=6 by=27 points=4->4
+CLIP p=6 by=9 points=4->4
+EXTENT check p=0 front=24.0162 back=-24
+CLIP p=0 by=16 points=4->4
+CLIP p=0 by=20 points=4->4
+CLIP p=0 by=24 points=4->4
+CLIP p=0 by=23 points=4->4
+CLIP p=0 by=27 points=4->4
+CLIP p=0 by=9 points=4->4
+EXTENT check p=2 front=24.0082 back=-24.008
+CLIP p=2 by=16 points=4->4
+CLIP p=2 by=20 points=4->4
+CLIP p=2 by=24 points=4->4
+CLIP p=2 by=23 points=4->4
+CLIP p=2 by=27 points=4->4
+CLIP p=2 by=9 points=4->4
+EXTENT check p=12 front=24.008 back=-24.0082
+CLIP p=12 by=16 points=4->4
+CLIP p=12 by=20 points=4->4
+CLIP p=12 by=24 points=4->4
+CLIP p=12 by=23 points=4->4
+CLIP p=12 by=27 points=4->4
+CLIP p=12 by=9 points=4->4
+EXTENT check p=14 front=24 back=-24.0162
+CLIP p=14 by=16 points=4->4
+CLIP p=14 by=20 points=4->4
+CLIP p=14 by=24 points=4->4
+CLIP p=14 by=23 points=4->4
+CLIP p=14 by=27 points=4->4
+CLIP p=14 by=9 points=4->4
+SELECT level=1 p=10 brushes=2
+EXTENT real volume=1 p=10 front=24 back=-64
+CLIP p=10 by=16 points=4->4
+CLIP p=10 by=20 points=4->4
+CLIP p=10 by=24 points=4->4
+CLIP p=10 by=23 points=4->4
+CLIP p=10 by=27 points=4->4
+CLIP p=10 by=9 points=4->4
+EXTENT check p=4 front=88 back=-24
+CLIP p=4 by=20 points=4->4
+CLIP p=4 by=24 points=4->4
+CLIP p=4 by=23 points=4->4
+CLIP p=4 by=27 points=4->4
+CLIP p=4 by=9 points=4->4
+CLIP p=4 by=10 points=4->4
+EXTENT check p=6 front=24 back=-88
+CLIP p=6 by=20 points=4->4
+CLIP p=6 by=24 points=4->4
+CLIP p=6 by=23 points=4->4
+CLIP p=6 by=27 points=4->4
+CLIP p=6 by=9 points=4->4
+CLIP p=6 by=10 points=4->4
+EXTENT check p=0 front=24.0162 back=-24
+CLIP p=0 by=20 points=4->4
+CLIP p=0 by=24 points=4->4
+CLIP p=0 by=23 points=4->4
+CLIP p=0 by=27 points=4->4
+CLIP p=0 by=9 points=4->4
+CLIP p=0 by=10 points=4->4
+EXTENT check p=2 front=24.0082 back=-24.008
+CLIP p=2 by=20 points=4->4
+CLIP p=2 by=24 points=4->4
+CLIP p=2 by=23 points=4->4
+CLIP p=2 by=27 points=4->4
+CLIP p=2 by=9 points=4->4
+CLIP p=2 by=10 points=4->4
+EXTENT check p=12 front=24.008 back=-24.0082
+CLIP p=12 by=20 points=4->4
+CLIP p=12 by=24 points=4->4
+CLIP p=12 by=23 points=4->4
+CLIP p=12 by=27 points=4->4
+CLIP p=12 by=9 points=4->4
+CLIP p=12 by=10 points=4->4
+EXTENT check p=14 front=24 back=-24.0162
+CLIP p=14 by=20 points=4->4
+CLIP p=14 by=24 points=4->4
+CLIP p=14 by=23 points=4->4
+CLIP p=14 by=27 points=4->4
+CLIP p=14 by=9 points=4->4
+CLIP p=14 by=10 points=4->4
+SELECT level=2 p=4 brushes=2
+EXTENT real volume=1 p=4 front=88 back=-24
+CLIP p=4 by=20 points=4->4
+CLIP p=4 by=24 points=4->4
+CLIP p=4 by=23 points=4->4
+CLIP p=4 by=27 points=4->4
+CLIP p=4 by=9 points=4->4
+CLIP p=4 by=10 points=4->4
+LEAF level=3 brushes=0 volume=1
+EXTENT check p=6 front=24 back=-64
+CLIP p=6 by=20 points=4->4
+CLIP p=6 by=24 points=4->4
+CLIP p=6 by=27 points=4->4
+CLIP p=6 by=9 points=4->4
+CLIP p=6 by=10 points=4->4
+CLIP p=6 by=5 points=4->4
+EXTENT check p=0 front=24.0162 back=-24
+CLIP p=0 by=20 points=4->4
+CLIP p=0 by=24 points=4->4
+CLIP p=0 by=27 points=4->4
+CLIP p=0 by=9 points=4->4
+CLIP p=0 by=10 points=4->4
+CLIP p=0 by=5 points=4->4
+EXTENT check p=2 front=24.0082 back=-24.008
+CLIP p=2 by=20 points=4->4
+CLIP p=2 by=24 points=4->4
+CLIP p=2 by=27 points=4->4
+CLIP p=2 by=9 points=4->4
+CLIP p=2 by=10 points=4->4
+CLIP p=2 by=5 points=4->4
+EXTENT check p=12 front=24.008 back=-24.0082
+CLIP p=12 by=20 points=4->4
+CLIP p=12 by=24 points=4->4
+CLIP p=12 by=27 points=4->4
+CLIP p=12 by=9 points=4->4
+CLIP p=12 by=10 points=4->4
+CLIP p=12 by=5 points=4->4
+EXTENT check p=14 front=24 back=-24.0162
+CLIP p=14 by=20 points=4->4
+CLIP p=14 by=24 points=4->4
+CLIP p=14 by=27 points=4->4
+CLIP p=14 by=9 points=4->4
+CLIP p=14 by=10 points=4->4
+CLIP p=14 by=5 points=4->4
+SELECT level=3 p=6 brushes=2
+EXTENT real volume=1 p=6 front=24 back=-64
+CLIP p=6 by=20 points=4->4
+CLIP p=6 by=24 points=4->4
+CLIP p=6 by=27 points=4->4
+CLIP p=6 by=9 points=4->4
+CLIP p=6 by=10 points=4->4
+CLIP p=6 by=5 points=4->4
+EXTENT check p=0 front=24.0162 back=-24
+CLIP p=0 by=24 points=4->4
+CLIP p=0 by=27 points=4->4
+CLIP p=0 by=9 points=4->4
+CLIP p=0 by=10 points=4->4
+CLIP p=0 by=5 points=4->4
+CLIP p=0 by=6 points=4->4
+EXTENT check p=2 front=24.0082 back=-24.008
+CLIP p=2 by=24 points=4->4
+CLIP p=2 by=27 points=4->4
+CLIP p=2 by=9 points=4->4
+CLIP p=2 by=10 points=4->4
+CLIP p=2 by=5 points=4->4
+CLIP p=2 by=6 points=4->4
+EXTENT check p=12 front=24.008 back=-24.0082
+CLIP p=12 by=24 points=4->4
+CLIP p=12 by=27 points=4->4
+CLIP p=12 by=9 points=4->4
+CLIP p=12 by=10 points=4->4
+CLIP p=12 by=5 points=4->4
+CLIP p=12 by=6 points=4->4
+EXTENT check p=14 front=24 back=-24.0162
+CLIP p=14 by=24 points=4->4
+CLIP p=14 by=27 points=4->4
+CLIP p=14 by=9 points=4->4
+CLIP p=14 by=10 points=4->4
+CLIP p=14 by=5 points=4->4
+CLIP p=14 by=6 points=4->4
+SELECT level=4 p=2 brushes=2
+EXTENT real volume=1 p=2 front=24.0082 back=-24.008
+CLIP p=2 by=24 points=4->4
+CLIP p=2 by=27 points=4->4
+CLIP p=2 by=9 points=4->4
+CLIP p=2 by=10 points=4->4
+CLIP p=2 by=5 points=4->4
+CLIP p=2 by=6 points=4->4
+EXTENT check p=0 front=0.008 back=-24
+CLIP p=0 by=27 points=4->4
+CLIP p=0 by=9 points=4->4
+CLIP p=0 by=10 points=4->4
+CLIP p=0 by=5 points=4->4
+CLIP p=0 by=6 points=4->4
+CLIP p=0 by=2 points=4->4
+SELECT level=5 p=0 brushes=1
+EXTENT real volume=1 p=0 front=0.008 back=-24
+CLIP p=0 by=27 points=4->4
+CLIP p=0 by=9 points=4->4
+CLIP p=0 by=10 points=4->4
+CLIP p=0 by=5 points=4->4
+CLIP p=0 by=6 points=4->4
+CLIP p=0 by=2 points=4->4
+LEAF level=6 brushes=0 volume=1
+LEAF level=6 brushes=1 volume=1
+REMAIN p=9 w=4 onnode=1 bevel=0
+REMAIN p=10 w=4 onnode=1 bevel=0
+REMAIN p=5 w=4 onnode=1 bevel=0
+REMAIN p=6 w=4 onnode=1 bevel=0
+REMAIN p=1 w=4 onnode=1 bevel=0
+REMAIN p=2 w=4 onnode=1 bevel=0
+EXTENT check p=12 front=24.008 back=-0.0002
+CLIP p=12 by=24 points=4->4
+CLIP p=12 by=9 points=4->4
+CLIP p=12 by=10 points=4->4
+CLIP p=12 by=5 points=4->4
+CLIP p=12 by=6 points=4->4
+CLIP p=12 by=3 points=4->4
+EXTENT check p=14 front=24 back=-0.0082
+CLIP p=14 by=24 points=4->4
+CLIP p=14 by=9 points=4->4
+CLIP p=14 by=10 points=4->4
+CLIP p=14 by=5 points=4->4
+CLIP p=14 by=6 points=4->4
+CLIP p=14 by=3 points=4->4
+SELECT level=5 p=12 brushes=1
+EXTENT real volume=1 p=12 front=24.008 back=-0.0002
+CLIP p=12 by=24 points=4->4
+CLIP p=12 by=9 points=4->4
+CLIP p=12 by=10 points=4->4
+CLIP p=12 by=5 points=4->4
+CLIP p=12 by=6 points=4->4
+CLIP p=12 by=3 points=4->4
+LEAF level=6 brushes=0 volume=1
+EXTENT check p=14 front=24 back=-0.008
+CLIP p=14 by=24 points=4->4
+CLIP p=14 by=9 points=4->4
+CLIP p=14 by=10 points=4->4
+CLIP p=14 by=5 points=4->4
+CLIP p=14 by=6 points=4->4
+CLIP p=14 by=13 points=4->4
+SELECT level=6 p=14 brushes=1
+EXTENT real volume=1 p=14 front=24 back=-0.008
+CLIP p=14 by=24 points=4->4
+CLIP p=14 by=9 points=4->4
+CLIP p=14 by=10 points=4->4
+CLIP p=14 by=5 points=4->4
+CLIP p=14 by=6 points=4->4
+CLIP p=14 by=13 points=4->4
+LEAF level=7 brushes=1 volume=1
+REMAIN p=9 w=4 onnode=1 bevel=0
+REMAIN p=10 w=4 onnode=1 bevel=0
+REMAIN p=5 w=4 onnode=1 bevel=0
+REMAIN p=6 w=4 onnode=1 bevel=0
+REMAIN p=13 w=4 onnode=1 bevel=0
+REMAIN p=14 w=4 onnode=1 bevel=0
+LEAF level=7 brushes=0 volume=1
+LEAF level=4 brushes=0 volume=1
+LEAF level=2 brushes=0 volume=1
+[36m    8 nodes
+[0m[36m    8 expensive split nodes
+[0m[36m    9 leaves
+[0m---- CountLeafs ----
+[36m    2 SOLID leafs
+[0m[36m    7 EMPTY leafs
+[0m[36m    9 leafs total
+[0m[36m    8 max tree height
+[0m[36m    5 avg tree height
+[0m---- MakeTreePortals ----
+[36m    8 tiny portals
+[0m---- CalcTreeBounds ----
+[36m    33 tree portals
+[0m---- FillOutside ----
+[33mWARNING: No entities in empty space -- no filling performed (hull 0)
+[0m---- MakeTreePortals ----
+[36m    8 tiny portals
+[0m---- CalcTreeBounds ----
+[36m    33 tree portals
+[0m---- MarkVisibleSides ----
+[36m    4 sides visible
+[0m---- MakeFaces ----
+[36m    2 makefaces
+[0m---- PruneNodes ----
+---- WritePortalFile ----
+[36m    8 tiny portals
+[0m[36m     7 player-occupiable leaves
+[0m[36m     7 clusters of leaves
+[0m[36m    12 vis portals
+[0m---- CountLeafs ----
+[36m    2 SOLID leafs
+[0m[36m    7 EMPTY leafs
+[0m[36m    9 leafs total
+[0m[36m    8 max tree height
+[0m[36m    5 avg tree height
+[0m---- TJunc ----
+[36m    2 faces optimized through MWT
+[0m[36m    4 triangles computed from MWT
+[0m---- EmitFaces ----
+[36m    4 edges
+[0m[36m    2 faces
+[0mProcessing hull 1...
+SUBTRACT a=0x5a73fbfb06b0 b=0x5a73fbfabb40 p=29
+EXTENT real volume=0 p=29 front=0 back=-96
+SUBRESULT front=0 back=1
+SUBTRACT a=0x5a73fbfb06b0 b=0x5a73fbfabb40 p=30
+EXTENT real volume=0 p=30 front=0 back=-96
+SUBRESULT front=0 back=1
+SUBTRACT a=0x5a73fbfb06b0 b=0x5a73fbfabb40 p=33
+EXTENT real volume=0 p=33 front=0 back=-96
+SUBRESULT front=0 back=1
+SUBTRACT a=0x5a73fbfb06b0 b=0x5a73fbfabb40 p=34
+EXTENT real volume=0 p=34 front=0 back=-96
+SUBRESULT front=0 back=1
+SUBTRACT a=0x5a73fbfb06b0 b=0x5a73fbfabb40 p=41
+EXTENT real volume=0 p=41 front=0.0082 back=-55.9998
+SUBRESULT front=0 back=1
+SUBTRACT a=0x5a73fbfb06b0 b=0x5a73fbfabb40 p=24
+EXTENT real volume=0 p=24 front=0 back=-56.0162
+SUBRESULT front=0 back=1
+EXTENT check p=28 front=120 back=-24
+CLIP p=28 by=42 points=4->4
+CLIP p=28 by=46 points=4->4
+CLIP p=28 by=50 points=4->4
+CLIP p=28 by=45 points=4->4
+CLIP p=28 by=49 points=4->4
+CLIP p=28 by=53 points=4->4
+EXTENT check p=30 front=24 back=-120
+CLIP p=30 by=42 points=4->4
+CLIP p=30 by=46 points=4->4
+CLIP p=30 by=50 points=4->4
+CLIP p=30 by=45 points=4->4
+CLIP p=30 by=49 points=4->4
+CLIP p=30 by=53 points=4->4
+EXTENT check p=32 front=120 back=-24
+CLIP p=32 by=42 points=4->4
+CLIP p=32 by=46 points=4->4
+CLIP p=32 by=50 points=4->4
+CLIP p=32 by=45 points=4->4
+CLIP p=32 by=49 points=4->4
+CLIP p=32 by=53 points=4->4
+EXTENT check p=34 front=24 back=-120
+CLIP p=34 by=42 points=4->4
+CLIP p=34 by=46 points=4->4
+CLIP p=34 by=50 points=4->4
+CLIP p=34 by=45 points=4->4
+CLIP p=34 by=49 points=4->4
+CLIP p=34 by=53 points=4->4
+EXTENT check p=40 front=80.008 back=-24.0082
+CLIP p=40 by=42 points=4->4
+CLIP p=40 by=46 points=4->4
+CLIP p=40 by=50 points=4->4
+CLIP p=40 by=45 points=4->4
+CLIP p=40 by=49 points=4->4
+CLIP p=40 by=53 points=4->4
+EXTENT check p=24 front=24 back=-80.0162
+CLIP p=24 by=42 points=4->4
+CLIP p=24 by=46 points=4->4
+CLIP p=24 by=50 points=4->4
+CLIP p=24 by=45 points=4->4
+CLIP p=24 by=49 points=4->4
+CLIP p=24 by=53 points=4->4
+SELECT level=0 p=40 brushes=1
+EXTENT real volume=1 p=40 front=80.008 back=-24.0082
+CLIP p=40 by=42 points=4->4
+CLIP p=40 by=46 points=4->4
+CLIP p=40 by=50 points=4->4
+CLIP p=40 by=45 points=4->4
+CLIP p=40 by=49 points=4->4
+CLIP p=40 by=53 points=4->4
+LEAF level=1 brushes=0 volume=1
+EXTENT check p=28 front=120 back=-24
+CLIP p=28 by=42 points=4->4
+CLIP p=28 by=46 points=4->4
+CLIP p=28 by=50 points=4->4
+CLIP p=28 by=45 points=4->4
+CLIP p=28 by=49 points=4->4
+CLIP p=28 by=41 points=4->4
+EXTENT check p=30 front=24 back=-120
+CLIP p=30 by=42 points=4->4
+CLIP p=30 by=46 points=4->4
+CLIP p=30 by=50 points=4->4
+CLIP p=30 by=45 points=4->4
+CLIP p=30 by=49 points=4->4
+CLIP p=30 by=41 points=4->4
+EXTENT check p=32 front=120 back=-24
+CLIP p=32 by=42 points=4->4
+CLIP p=32 by=46 points=4->4
+CLIP p=32 by=50 points=4->4
+CLIP p=32 by=45 points=4->4
+CLIP p=32 by=49 points=4->4
+CLIP p=32 by=41 points=4->4
+EXTENT check p=34 front=24 back=-120
+CLIP p=34 by=42 points=4->4
+CLIP p=34 by=46 points=4->4
+CLIP p=34 by=50 points=4->4
+CLIP p=34 by=45 points=4->4
+CLIP p=34 by=49 points=4->4
+CLIP p=34 by=41 points=4->4
+EXTENT check p=24 front=24 back=-56.008
+CLIP p=24 by=42 points=4->4
+CLIP p=24 by=46 points=4->4
+CLIP p=24 by=50 points=4->4
+CLIP p=24 by=45 points=4->4
+CLIP p=24 by=49 points=4->4
+CLIP p=24 by=41 points=4->4
+SELECT level=1 p=24 brushes=1
+EXTENT real volume=1 p=24 front=24 back=-56.008
+CLIP p=24 by=42 points=4->4
+CLIP p=24 by=46 points=4->4
+CLIP p=24 by=50 points=4->4
+CLIP p=24 by=45 points=4->4
+CLIP p=24 by=49 points=4->4
+CLIP p=24 by=41 points=4->4
+EXTENT check p=28 front=120 back=-24
+CLIP p=28 by=42 points=4->4
+CLIP p=28 by=46 points=4->4
+CLIP p=28 by=45 points=4->4
+CLIP p=28 by=49 points=4->4
+CLIP p=28 by=41 points=4->4
+CLIP p=28 by=24 points=4->4
+EXTENT check p=30 front=24 back=-120
+CLIP p=30 by=42 points=4->4
+CLIP p=30 by=46 points=4->4
+CLIP p=30 by=45 points=4->4
+CLIP p=30 by=49 points=4->4
+CLIP p=30 by=41 points=4->4
+CLIP p=30 by=24 points=4->4
+EXTENT check p=32 front=120 back=-24
+CLIP p=32 by=42 points=4->4
+CLIP p=32 by=46 points=4->4
+CLIP p=32 by=45 points=4->4
+CLIP p=32 by=49 points=4->4
+CLIP p=32 by=41 points=4->4
+CLIP p=32 by=24 points=4->4
+EXTENT check p=34 front=24 back=-120
+CLIP p=34 by=42 points=4->4
+CLIP p=34 by=46 points=4->4
+CLIP p=34 by=45 points=4->4
+CLIP p=34 by=49 points=4->4
+CLIP p=34 by=41 points=4->4
+CLIP p=34 by=24 points=4->4
+SELECT level=2 p=28 brushes=1
+EXTENT real volume=1 p=28 front=120 back=-24
+CLIP p=28 by=42 points=4->4
+CLIP p=28 by=46 points=4->4
+CLIP p=28 by=45 points=4->4
+CLIP p=28 by=49 points=4->4
+CLIP p=28 by=41 points=4->4
+CLIP p=28 by=24 points=4->4
+LEAF level=3 brushes=0 volume=1
+EXTENT check p=30 front=24 back=-96
+CLIP p=30 by=42 points=4->4
+CLIP p=30 by=46 points=4->4
+CLIP p=30 by=49 points=4->4
+CLIP p=30 by=41 points=4->4
+CLIP p=30 by=24 points=4->4
+CLIP p=30 by=29 points=4->4
+EXTENT check p=32 front=120 back=-24
+CLIP p=32 by=42 points=4->4
+CLIP p=32 by=46 points=4->4
+CLIP p=32 by=49 points=4->4
+CLIP p=32 by=41 points=4->4
+CLIP p=32 by=24 points=4->4
+CLIP p=32 by=29 points=4->4
+EXTENT check p=34 front=24 back=-120
+CLIP p=34 by=42 points=4->4
+CLIP p=34 by=46 points=4->4
+CLIP p=34 by=49 points=4->4
+CLIP p=34 by=41 points=4->4
+CLIP p=34 by=24 points=4->4
+CLIP p=34 by=29 points=4->4
+SELECT level=3 p=30 brushes=1
+EXTENT real volume=1 p=30 front=24 back=-96
+CLIP p=30 by=42 points=4->4
+CLIP p=30 by=46 points=4->4
+CLIP p=30 by=49 points=4->4
+CLIP p=30 by=41 points=4->4
+CLIP p=30 by=24 points=4->4
+CLIP p=30 by=29 points=4->4
+EXTENT check p=32 front=120 back=-24
+CLIP p=32 by=46 points=4->4
+CLIP p=32 by=49 points=4->4
+CLIP p=32 by=41 points=4->4
+CLIP p=32 by=24 points=4->4
+CLIP p=32 by=29 points=4->4
+CLIP p=32 by=30 points=4->4
+EXTENT check p=34 front=24 back=-120
+CLIP p=34 by=46 points=4->4
+CLIP p=34 by=49 points=4->4
+CLIP p=34 by=41 points=4->4
+CLIP p=34 by=24 points=4->4
+CLIP p=34 by=29 points=4->4
+CLIP p=34 by=30 points=4->4
+SELECT level=4 p=32 brushes=1
+EXTENT real volume=1 p=32 front=120 back=-24
+CLIP p=32 by=46 points=4->4
+CLIP p=32 by=49 points=4->4
+CLIP p=32 by=41 points=4->4
+CLIP p=32 by=24 points=4->4
+CLIP p=32 by=29 points=4->4
+CLIP p=32 by=30 points=4->4
+LEAF level=5 brushes=0 volume=1
+EXTENT check p=34 front=24 back=-96
+CLIP p=34 by=46 points=4->4
+CLIP p=34 by=41 points=4->4
+CLIP p=34 by=24 points=4->4
+CLIP p=34 by=29 points=4->4
+CLIP p=34 by=30 points=4->4
+CLIP p=34 by=33 points=4->4
+SELECT level=5 p=34 brushes=1
+EXTENT real volume=1 p=34 front=24 back=-96
+CLIP p=34 by=46 points=4->4
+CLIP p=34 by=41 points=4->4
+CLIP p=34 by=24 points=4->4
+CLIP p=34 by=29 points=4->4
+CLIP p=34 by=30 points=4->4
+CLIP p=34 by=33 points=4->4
+LEAF level=6 brushes=1 volume=1
+REMAIN p=29 w=4 onnode=1 bevel=0
+REMAIN p=30 w=4 onnode=1 bevel=0
+REMAIN p=33 w=4 onnode=1 bevel=0
+REMAIN p=34 w=4 onnode=1 bevel=0
+REMAIN p=41 w=4 onnode=1 bevel=0
+REMAIN p=24 w=4 onnode=1 bevel=0
+LEAF level=6 brushes=0 volume=1
+LEAF level=4 brushes=0 volume=1
+LEAF level=2 brushes=0 volume=1
+[33mWARNING: No entities in empty space -- no filling performed (hull 1)
+[0mProcessing hull 2...
+SUBTRACT a=0x5a73fbfada60 b=0x5a73fbfadfd0 p=55
+EXTENT real volume=0 p=55 front=0 back=-128
+SUBRESULT front=0 back=1
+SUBTRACT a=0x5a73fbfada60 b=0x5a73fbfadfd0 p=56
+EXTENT real volume=0 p=56 front=0 back=-128
+SUBRESULT front=0 back=1
+SUBTRACT a=0x5a73fbfada60 b=0x5a73fbfadfd0 p=59
+EXTENT real volume=0 p=59 front=0 back=-128
+SUBRESULT front=0 back=1
+SUBTRACT a=0x5a73fbfada60 b=0x5a73fbfadfd0 p=60
+EXTENT real volume=0 p=60 front=0 back=-128
+SUBRESULT front=0 back=1
+SUBTRACT a=0x5a73fbfada60 b=0x5a73fbfadfd0 p=65
+EXTENT real volume=0 p=65 front=0.0082 back=-87.9998
+SUBRESULT front=0 back=1
+SUBTRACT a=0x5a73fbfada60 b=0x5a73fbfadfd0 p=24
+EXTENT real volume=0 p=24 front=0 back=-88.0162
+SUBRESULT front=0 back=1
+EXTENT check p=54 front=152 back=-24
+CLIP p=54 by=66 points=4->4
+CLIP p=54 by=70 points=4->4
+CLIP p=54 by=50 points=4->4
+CLIP p=54 by=69 points=4->4
+CLIP p=54 by=73 points=4->4
+CLIP p=54 by=75 points=4->4
+EXTENT check p=56 front=24 back=-152
+CLIP p=56 by=66 points=4->4
+CLIP p=56 by=70 points=4->4
+CLIP p=56 by=50 points=4->4
+CLIP p=56 by=69 points=4->4
+CLIP p=56 by=73 points=4->4
+CLIP p=56 by=75 points=4->4
+EXTENT check p=58 front=152 back=-24
+CLIP p=58 by=66 points=4->4
+CLIP p=58 by=70 points=4->4
+CLIP p=58 by=50 points=4->4
+CLIP p=58 by=69 points=4->4
+CLIP p=58 by=73 points=4->4
+CLIP p=58 by=75 points=4->4
+EXTENT check p=60 front=24 back=-152
+CLIP p=60 by=66 points=4->4
+CLIP p=60 by=70 points=4->4
+CLIP p=60 by=50 points=4->4
+CLIP p=60 by=69 points=4->4
+CLIP p=60 by=73 points=4->4
+CLIP p=60 by=75 points=4->4
+EXTENT check p=64 front=112.008 back=-24.0082
+CLIP p=64 by=66 points=4->4
+CLIP p=64 by=70 points=4->4
+CLIP p=64 by=50 points=4->4
+CLIP p=64 by=69 points=4->4
+CLIP p=64 by=73 points=4->4
+CLIP p=64 by=75 points=4->4
+EXTENT check p=24 front=24 back=-112.0162
+CLIP p=24 by=66 points=4->4
+CLIP p=24 by=70 points=4->4
+CLIP p=24 by=50 points=4->4
+CLIP p=24 by=69 points=4->4
+CLIP p=24 by=73 points=4->4
+CLIP p=24 by=75 points=4->4
+SELECT level=0 p=64 brushes=1
+EXTENT real volume=1 p=64 front=112.008 back=-24.0082
+CLIP p=64 by=66 points=4->4
+CLIP p=64 by=70 points=4->4
+CLIP p=64 by=50 points=4->4
+CLIP p=64 by=69 points=4->4
+CLIP p=64 by=73 points=4->4
+CLIP p=64 by=75 points=4->4
+LEAF level=1 brushes=0 volume=1
+EXTENT check p=54 front=152 back=-24
+CLIP p=54 by=66 points=4->4
+CLIP p=54 by=70 points=4->4
+CLIP p=54 by=50 points=4->4
+CLIP p=54 by=69 points=4->4
+CLIP p=54 by=73 points=4->4
+CLIP p=54 by=65 points=4->4
+EXTENT check p=56 front=24 back=-152
+CLIP p=56 by=66 points=4->4
+CLIP p=56 by=70 points=4->4
+CLIP p=56 by=50 points=4->4
+CLIP p=56 by=69 points=4->4
+CLIP p=56 by=73 points=4->4
+CLIP p=56 by=65 points=4->4
+EXTENT check p=58 front=152 back=-24
+CLIP p=58 by=66 points=4->4
+CLIP p=58 by=70 points=4->4
+CLIP p=58 by=50 points=4->4
+CLIP p=58 by=69 points=4->4
+CLIP p=58 by=73 points=4->4
+CLIP p=58 by=65 points=4->4
+EXTENT check p=60 front=24 back=-152
+CLIP p=60 by=66 points=4->4
+CLIP p=60 by=70 points=4->4
+CLIP p=60 by=50 points=4->4
+CLIP p=60 by=69 points=4->4
+CLIP p=60 by=73 points=4->4
+CLIP p=60 by=65 points=4->4
+EXTENT check p=24 front=24 back=-88.008
+CLIP p=24 by=66 points=4->4
+CLIP p=24 by=70 points=4->4
+CLIP p=24 by=50 points=4->4
+CLIP p=24 by=69 points=4->4
+CLIP p=24 by=73 points=4->4
+CLIP p=24 by=65 points=4->4
+SELECT level=1 p=24 brushes=1
+EXTENT real volume=1 p=24 front=24 back=-88.008
+CLIP p=24 by=66 points=4->4
+CLIP p=24 by=70 points=4->4
+CLIP p=24 by=50 points=4->4
+CLIP p=24 by=69 points=4->4
+CLIP p=24 by=73 points=4->4
+CLIP p=24 by=65 points=4->4
+EXTENT check p=54 front=152 back=-24
+CLIP p=54 by=66 points=4->4
+CLIP p=54 by=70 points=4->4
+CLIP p=54 by=69 points=4->4
+CLIP p=54 by=73 points=4->4
+CLIP p=54 by=65 points=4->4
+CLIP p=54 by=24 points=4->4
+EXTENT check p=56 front=24 back=-152
+CLIP p=56 by=66 points=4->4
+CLIP p=56 by=70 points=4->4
+CLIP p=56 by=69 points=4->4
+CLIP p=56 by=73 points=4->4
+CLIP p=56 by=65 points=4->4
+CLIP p=56 by=24 points=4->4
+EXTENT check p=58 front=152 back=-24
+CLIP p=58 by=66 points=4->4
+CLIP p=58 by=70 points=4->4
+CLIP p=58 by=69 points=4->4
+CLIP p=58 by=73 points=4->4
+CLIP p=58 by=65 points=4->4
+CLIP p=58 by=24 points=4->4
+EXTENT check p=60 front=24 back=-152
+CLIP p=60 by=66 points=4->4
+CLIP p=60 by=70 points=4->4
+CLIP p=60 by=69 points=4->4
+CLIP p=60 by=73 points=4->4
+CLIP p=60 by=65 points=4->4
+CLIP p=60 by=24 points=4->4
+SELECT level=2 p=54 brushes=1
+EXTENT real volume=1 p=54 front=152 back=-24
+CLIP p=54 by=66 points=4->4
+CLIP p=54 by=70 points=4->4
+CLIP p=54 by=69 points=4->4
+CLIP p=54 by=73 points=4->4
+CLIP p=54 by=65 points=4->4
+CLIP p=54 by=24 points=4->4
+LEAF level=3 brushes=0 volume=1
+EXTENT check p=56 front=24 back=-128
+CLIP p=56 by=66 points=4->4
+CLIP p=56 by=70 points=4->4
+CLIP p=56 by=73 points=4->4
+CLIP p=56 by=65 points=4->4
+CLIP p=56 by=24 points=4->4
+CLIP p=56 by=55 points=4->4
+EXTENT check p=58 front=152 back=-24
+CLIP p=58 by=66 points=4->4
+CLIP p=58 by=70 points=4->4
+CLIP p=58 by=73 points=4->4
+CLIP p=58 by=65 points=4->4
+CLIP p=58 by=24 points=4->4
+CLIP p=58 by=55 points=4->4
+EXTENT check p=60 front=24 back=-152
+CLIP p=60 by=66 points=4->4
+CLIP p=60 by=70 points=4->4
+CLIP p=60 by=73 points=4->4
+CLIP p=60 by=65 points=4->4
+CLIP p=60 by=24 points=4->4
+CLIP p=60 by=55 points=4->4
+SELECT level=3 p=56 brushes=1
+EXTENT real volume=1 p=56 front=24 back=-128
+CLIP p=56 by=66 points=4->4
+CLIP p=56 by=70 points=4->4
+CLIP p=56 by=73 points=4->4
+CLIP p=56 by=65 points=4->4
+CLIP p=56 by=24 points=4->4
+CLIP p=56 by=55 points=4->4
+EXTENT check p=58 front=152 back=-24
+CLIP p=58 by=70 points=4->4
+CLIP p=58 by=73 points=4->4
+CLIP p=58 by=65 points=4->4
+CLIP p=58 by=24 points=4->4
+CLIP p=58 by=55 points=4->4
+CLIP p=58 by=56 points=4->4
+EXTENT check p=60 front=24 back=-152
+CLIP p=60 by=70 points=4->4
+CLIP p=60 by=73 points=4->4
+CLIP p=60 by=65 points=4->4
+CLIP p=60 by=24 points=4->4
+CLIP p=60 by=55 points=4->4
+CLIP p=60 by=56 points=4->4
+SELECT level=4 p=58 brushes=1
+EXTENT real volume=1 p=58 front=152 back=-24
+CLIP p=58 by=70 points=4->4
+CLIP p=58 by=73 points=4->4
+CLIP p=58 by=65 points=4->4
+CLIP p=58 by=24 points=4->4
+CLIP p=58 by=55 points=4->4
+CLIP p=58 by=56 points=4->4
+LEAF level=5 brushes=0 volume=1
+EXTENT check p=60 front=24 back=-128
+CLIP p=60 by=70 points=4->4
+CLIP p=60 by=65 points=4->4
+CLIP p=60 by=24 points=4->4
+CLIP p=60 by=55 points=4->4
+CLIP p=60 by=56 points=4->4
+CLIP p=60 by=59 points=4->4
+SELECT level=5 p=60 brushes=1
+EXTENT real volume=1 p=60 front=24 back=-128
+CLIP p=60 by=70 points=4->4
+CLIP p=60 by=65 points=4->4
+CLIP p=60 by=24 points=4->4
+CLIP p=60 by=55 points=4->4
+CLIP p=60 by=56 points=4->4
+CLIP p=60 by=59 points=4->4
+LEAF level=6 brushes=1 volume=1
+REMAIN p=55 w=4 onnode=1 bevel=0
+REMAIN p=56 w=4 onnode=1 bevel=0
+REMAIN p=59 w=4 onnode=1 bevel=0
+REMAIN p=60 w=4 onnode=1 bevel=0
+REMAIN p=65 w=4 onnode=1 bevel=0
+REMAIN p=24 w=4 onnode=1 bevel=0
+LEAF level=6 brushes=0 volume=1
+LEAF level=4 brushes=0 volume=1
+LEAF level=2 brushes=0 volume=1
+[33mWARNING: No entities in empty space -- no filling performed (hull 2)
+[0m---- FinishBSPFile ----
+Writing /tmp/qqbsp-phase2/traces/near-coplanar-chopfragment/input.bsp as Quake BSP2 bsp2
+Wrote /tmp/qqbsp-phase2/traces/near-coplanar-chopfragment/input.bsp
+
+count   lump name    byte size 
+      1 models               64
+     19 planes              380
+      4 vertexes             48
+      8 nodes               352
+      2 texinfos             80
+      2 faces                56
+     12 clipnodes           144
+      8 leafs               352
+      2 marksurfaces          8
+      5 edges                40
+      8 surfedges            32
+      2 textures             12
+        lightdata             0
+        visdata               0
+        entdata              30
+
+0.003s seconds elapsed

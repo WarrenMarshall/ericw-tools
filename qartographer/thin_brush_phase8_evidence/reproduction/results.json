@@ -1,0 +1,56 @@
+[
+  {
+    "name": "p1",
+    "exit": 1,
+    "command": [
+      "/usr/bin/time",
+      "-v",
+      "-o",
+      "/tmp/qqbsp-phase8/evidence/reproduction/p1/time.txt",
+      "/tmp/qqbsp-phase7/phase7-unaccepted-qqbsp",
+      "-notex",
+      "-nopercent",
+      "-chopfragment",
+      "-threads",
+      "1",
+      "/tmp/qqbsp-phase8/evidence/reproduction/p1/input.map"
+    ],
+    "input_sha256": "5f4c588e6f4482f933138def59a2cd64660491b146cbcf0683f32266bcd24d93"
+  },
+  {
+    "name": "rotated",
+    "exit": 1,
+    "command": [
+      "/usr/bin/time",
+      "-v",
+      "-o",
+      "/tmp/qqbsp-phase8/evidence/reproduction/rotated/time.txt",
+      "/tmp/qqbsp-phase7/phase7-unaccepted-qqbsp",
+      "-notex",
+      "-nopercent",
+      "-chopfragment",
+      "-threads",
+      "1",
+      "/tmp/qqbsp-phase8/evidence/reproduction/rotated/input.map"
+    ],
+    "input_sha256": "345366ef6646c035f9581965548a404f2a15533be95f9af7ff3a4a59f5adee32"
+  },
+  {
+    "name": "halloween",
+    "exit": 1,
+    "command": [
+      "/usr/bin/time",
+      "-v",
+      "-o",
+      "/tmp/qqbsp-phase8/evidence/reproduction/halloween/time.txt",
+      "/tmp/qqbsp-phase7/phase7-unaccepted-qqbsp",
+      "-notex",
+      "-nopercent",
+      "-chopfragment",
+      "-threads",
+      "1",
+      "/tmp/qqbsp-phase8/evidence/reproduction/halloween/input.map"
+    ],
+    "input_sha256": "d5f2ab2a0c5a22d2f0ecaecf77a1bbd72a3c2ce2e3c444fe0b4c517092e5986c"
+  }
+]

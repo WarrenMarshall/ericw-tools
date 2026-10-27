@@ -1,0 +1,116 @@
+Qartographer qqbsp, upstream=ccaeb8457a1267860ebe99ed1df7394ebdd6b435, downstream=4b505ae25e508a8910b031e94d6f1ea60ac06a95-phase7-experimental, patches=P1, experiment=phase7-unaccepted
+---- phase7-unaccepted-qqbsp / ericw-tools  ----
+running with 1 thread(s)
+low priority not compiled into this version
+logging to /tmp/qqbsp-phase8/evidence/reproduction/halloween/input.log (truncate)
+
+--- Options Summary ---
+    "threads" was set to "1" (from command line)
+    "nopercent" was set to "1" (from command line)
+    "chopfragment" was set to "1" (from command line)
+    "notex" was set to "1" (from command line)
+
+Input file: /tmp/qqbsp-phase8/evidence/reproduction/halloween/input.map
+Output file: /tmp/qqbsp-phase8/evidence/reproduction/halloween/input.bsp
+
+INFO: using built-in palette.
+---- LoadMapFile ----
+/tmp/qqbsp-phase8/evidence/reproduction/halloween/input.map[line 8114]: Brush with duplicate plane
+/tmp/qqbsp-phase8/evidence/reproduction/halloween/input.map[line 8125]: Brush with duplicate plane
+[33mWARNING: /tmp/qqbsp-phase8/evidence/reproduction/halloween/input.map[line 3470]: brush has multiple face contents (SKY vs SOLID), the former will be used.
+[0m[33mWARNING: /tmp/qqbsp-phase8/evidence/reproduction/halloween/input.map[line 3479]: brush has multiple face contents (SKY vs SOLID), the former will be used.
+[0m[33mWARNING: /tmp/qqbsp-phase8/evidence/reproduction/halloween/input.map[line 14287]: brush has multiple face contents (SKY vs SOLID), the former will be used.
+[0m[33mWARNING: /tmp/qqbsp-phase8/evidence/reproduction/halloween/input.map[line 21954]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+[0m[33mWARNING: /tmp/qqbsp-phase8/evidence/reproduction/halloween/input.map[line 21961]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+[0m[33mWARNING: /tmp/qqbsp-phase8/evidence/reproduction/halloween/input.map[line 21968]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+[0m[33mWARNING: /tmp/qqbsp-phase8/evidence/reproduction/halloween/input.map[line 21975]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+[0m[33mWARNING: /tmp/qqbsp-phase8/evidence/reproduction/halloween/input.map[line 21982]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+[0m[33mWARNING: /tmp/qqbsp-phase8/evidence/reproduction/halloween/input.map[line 21989]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+[0m[33mWARNING: /tmp/qqbsp-phase8/evidence/reproduction/halloween/input.map[line 21996]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+[0m[33mWARNING: /tmp/qqbsp-phase8/evidence/reproduction/halloween/input.map[line 22003]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+[0m[33mWARNING: /tmp/qqbsp-phase8/evidence/reproduction/halloween/input.map[line 22010]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+[0m[33mWARNING: /tmp/qqbsp-phase8/evidence/reproduction/halloween/input.map[line 22017]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+[0m[33mWARNING: /tmp/qqbsp-phase8/evidence/reproduction/halloween/input.map[line 22024]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+[0m[33mWARNING: /tmp/qqbsp-phase8/evidence/reproduction/halloween/input.map[line 22031]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+[0m[33mWARNING: /tmp/qqbsp-phase8/evidence/reproduction/halloween/input.map[line 22038]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+[0m[33mWARNING: /tmp/qqbsp-phase8/evidence/reproduction/halloween/input.map[line 22045]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+[0m[33mWARNING: /tmp/qqbsp-phase8/evidence/reproduction/halloween/input.map[line 22052]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+[0m[33mWARNING: /tmp/qqbsp-phase8/evidence/reproduction/halloween/input.map[line 22059]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+[0m[33mWARNING: /tmp/qqbsp-phase8/evidence/reproduction/halloween/input.map[line 22066]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+[0m[33mWARNING: /tmp/qqbsp-phase8/evidence/reproduction/halloween/input.map[line 22073]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+[0m[33mWARNING: /tmp/qqbsp-phase8/evidence/reproduction/halloween/input.map[line 22080]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+[0m[33mWARNING: /tmp/qqbsp-phase8/evidence/reproduction/halloween/input.map[line 22087]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+[0m[33mWARNING: /tmp/qqbsp-phase8/evidence/reproduction/halloween/input.map[line 22094]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+[0m[33mWARNING: /tmp/qqbsp-phase8/evidence/reproduction/halloween/input.map[line 22101]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+[0m[33mWARNING: /tmp/qqbsp-phase8/evidence/reproduction/halloween/input.map[line 22108]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+[0m[33mWARNING: /tmp/qqbsp-phase8/evidence/reproduction/halloween/input.map[line 22115]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+[0m[33mWARNING: /tmp/qqbsp-phase8/evidence/reproduction/halloween/input.map[line 22122]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+[0m[33mWARNING: /tmp/qqbsp-phase8/evidence/reproduction/halloween/input.map[line 23089]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+[0m[33mWARNING: /tmp/qqbsp-phase8/evidence/reproduction/halloween/input.map[line 23096]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+[0m[33mWARNING: /tmp/qqbsp-phase8/evidence/reproduction/halloween/input.map[line 23103]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+[0m[33mWARNING: /tmp/qqbsp-phase8/evidence/reproduction/halloween/input.map[line 23110]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+[0m[33mWARNING: /tmp/qqbsp-phase8/evidence/reproduction/halloween/input.map[line 23117]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+[0m[33mWARNING: /tmp/qqbsp-phase8/evidence/reproduction/halloween/input.map[line 23124]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+[0m[33mWARNING: /tmp/qqbsp-phase8/evidence/reproduction/halloween/input.map[line 23131]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+[0m[33mWARNING: /tmp/qqbsp-phase8/evidence/reproduction/halloween/input.map[line 23138]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+[0m[33mWARNING: /tmp/qqbsp-phase8/evidence/reproduction/halloween/input.map[line 23145]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+[0m[33mWARNING: /tmp/qqbsp-phase8/evidence/reproduction/halloween/input.map[line 23152]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+[0m[33mWARNING: /tmp/qqbsp-phase8/evidence/reproduction/halloween/input.map[line 23159]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+[0m[33mWARNING: /tmp/qqbsp-phase8/evidence/reproduction/halloween/input.map[line 23166]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+[0m[33mWARNING: /tmp/qqbsp-phase8/evidence/reproduction/halloween/input.map[line 23173]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+[0m[33mWARNING: /tmp/qqbsp-phase8/evidence/reproduction/halloween/input.map[line 23180]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+[0m[33mWARNING: /tmp/qqbsp-phase8/evidence/reproduction/halloween/input.map[line 23187]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+[0m[33mWARNING: /tmp/qqbsp-phase8/evidence/reproduction/halloween/input.map[line 23194]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+[0m[33mWARNING: /tmp/qqbsp-phase8/evidence/reproduction/halloween/input.map[line 23201]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+[0m[33mWARNING: /tmp/qqbsp-phase8/evidence/reproduction/halloween/input.map[line 23208]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+[0m[33mWARNING: /tmp/qqbsp-phase8/evidence/reproduction/halloween/input.map[line 23215]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+[0m[33mWARNING: /tmp/qqbsp-phase8/evidence/reproduction/halloween/input.map[line 23222]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+[0m[33mWARNING: /tmp/qqbsp-phase8/evidence/reproduction/halloween/input.map[line 23229]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+[0m[33mWARNING: /tmp/qqbsp-phase8/evidence/reproduction/halloween/input.map[line 23236]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+[0m[33mWARNING: /tmp/qqbsp-phase8/evidence/reproduction/halloween/input.map[line 23243]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+[0m[33mWARNING: /tmp/qqbsp-phase8/evidence/reproduction/halloween/input.map[line 23250]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+[0m[33mWARNING: /tmp/qqbsp-phase8/evidence/reproduction/halloween/input.map[line 23257]: brush has multiple face contents (WATER | TRANSLUCENT | DETAIL vs SOLID), the former will be used.
+[0m[36m       605 entities
+[0m[36m        89 unique textures
+[0m[36m     7,371 texinfos
+[0m[36m    12,684 unique planes
+[0m[36m
+[0m---- ProcessMapBrushes ----
+INFO: world extents calculated to 6104 units
+[36m     2,648 brushes
+[0m[36m    15,911 sides
+[0m[36m    13,954 side bevels
+[0m[36m
+[0m[36m            3 texture frames added
+[0mProcessing hull 0...
+---- Brush_LoadEntity ----
+[33mWARNING: /tmp/qqbsp-phase8/evidence/reproduction/halloween/input.map[line 8085]: Healing degenerate edge (4.623417738843956e-07) at (415.969 694 -36.3)
+[0m[33mWARNING: /tmp/qqbsp-phase8/evidence/reproduction/halloween/input.map[line 8121]: Healing degenerate edge (2.204564220233973e-06) at (432.031 694 -36.3)
+[0m[33mWARNING: /tmp/qqbsp-phase8/evidence/reproduction/halloween/input.map[line 8205]: Healing degenerate edge (6.883439665746502e-05) at (353.469 730 -36.4)
+[0m---- CountBrushes ----
+[36m       79 MIST | MIRROR_INSIDE_SET | TRANSLUCENT | DETAIL brushes
+[0m[36m      198 SOLID | DETAIL brushes
+[0m[36m        1 MIST | MIRROR_INSIDE | MIRROR_INSIDE_SET | TRANSLUCENT | DETAIL brushes
+[0m[36m        1 WINDOW | MIRROR_INSIDE_SET | TRANSLUCENT | DETAIL brushes
+[0m[36m       53 WATER | TRANSLUCENT | DETAIL brushes
+[0m[36m       16 SKY brushes
+[0m[36m    2,049 SOLID brushes
+[0m[36m    2,397 brushes total
+[0m[36m    14,174 visible sides
+[0m[33mWARNING: 10 faces were crunched away by being too small. Use -verbose to see which faces were affected.
+[0m[36mINFO: calculating BSP for 2397 brushes with 14174 sides
+[0m---- BrushBSP ----
+[36m     2,397 brushes
+[0m[36m    14,048 visible faces
+[0m[36m       126 non-visible faces
+[0mPHASE7_REJECT partition=2768 plane={normal: 1 0 0, dist: 208.000061035} reason=UNREPRESENTABLE_BOUNDARY: support-certified positive children, approximate cap unavailable; semantic simplification not certified
+PHASE7_SUPPORT id=2767 plane={normal: -1 0 0, dist: -116.000091553} onnode=false bevel=false winding={(116.000091553 789.599975586 -43.999938965000005), (116.000091553 789.599975586 -48.999938965), (116.000091553 888 -48.999938965), (116.000091553 888 -43.999938965000005)}
+PHASE7_SUPPORT id=2753 plane={normal: 0 -1 0, dist: -789.599975586} onnode=false bevel=false winding={(208.00006103500002 789.599975586 -39.999938965043484), (208.00006103500002 789.599975586 -48.999938965), (116.000091553 789.599975586 -48.999938965), (116.000091553 789.599975586 -43.999938965000005)}
+PHASE7_SUPPORT id=2743 plane={normal: 0 0 -1, dist: 48.999938965} onnode=false bevel=false winding={(116.000091553 888 -48.999938965), (116.000091553 789.599975586 -48.999938965), (208.00006103500002 789.599975586 -48.999938965)}
+PHASE7_SUPPORT id=2770 plane={normal: 0.730462728846962 0.6829525618704786 -0, dist: 691.1956183632868} onnode=false bevel=false winding={(116.000091553 888.0000000000002 -43.999938965000005), (116.000091553 888.0000000000002 -48.999938965), (208.00006103500016 789.599975586 -48.999938965), (208.00006103500016 789.599975586 -39.99993896504348)}
+PHASE7_SUPPORT id=2764 plane={normal: -0.043437238657536584 0 0.9990561577297885, dist: -48.997133623801865} onnode=false bevel=false winding={(208.00006103500002 789.599975586 -39.99993896504348), (116.000091553 789.599975586 -43.999938965), (116.000091553 888 -43.999938965)}
+[36m    1 nodes
+[0m[36m    2 mid-split nodes
+[0m[38;2;255;000;000m************ ERROR ************
+PHASE7 CONSTRUCTION_UNSUPPORTED source=/tmp/qqbsp-phase8/evidence/reproduction/halloween/input.map[line 6336] partition=2768: UNREPRESENTABLE_BOUNDARY: support-certified positive children, approximate cap unavailable; semantic simplification not certified
+[0m

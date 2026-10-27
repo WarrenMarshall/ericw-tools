@@ -1,0 +1,76 @@
+{
+  "pristine": {
+    "full/full-on.bsp": {
+      "bytes": 2993988,
+      "clipnodes": 27275,
+      "nodes": 13364,
+      "faces": 16424,
+      "sha256": "d6c985c9fe184999b9bd7aef30224d7621784d2d172f94bc9860e5f6931ddfe8"
+    },
+    "full/full-off.bsp": {
+      "bytes": 2915532,
+      "clipnodes": 28039,
+      "nodes": 12653,
+      "faces": 16377,
+      "sha256": "0d453ae01072cd54b63bddc5e447edc6d5c1c71f2da2970e8fed8e56bb60aedb"
+    },
+    "roller/default.bsp": {
+      "bytes": 46404,
+      "clipnodes": 1545,
+      "nodes": 101,
+      "faces": 145,
+      "sha256": "967dbfa988e9286c3ddc7114d237ac520a37cfa8b3fccf128d58a8ef4ee3b932"
+    },
+    "roller/chopfragment.bsp": {
+      "bytes": 38836,
+      "clipnodes": 1011,
+      "nodes": 101,
+      "faces": 145,
+      "sha256": "d98a0f98d53eb48ae4413b5b53d3c3df057ca827ffc400414f7b3b0ca2585d49"
+    },
+    "reduced/wildspline.bsp": {
+      "bytes": 10524,
+      "clipnodes": 372,
+      "nodes": 12,
+      "faces": 12,
+      "sha256": "648a31400a21df815721fb6612509522f3cc82064ac51019bd469d1f3f0a927b"
+    }
+  },
+  "patched": {
+    "full/full-on.bsp": {
+      "bytes": 7133828,
+      "clipnodes": 29635,
+      "nodes": 42458,
+      "faces": 42664,
+      "sha256": "d5e71bea7910e8aa73642baeb4d82afbb7b540072dd2a6c0a3528d5d44f02af0"
+    },
+    "full/full-off.bsp": {
+      "bytes": 6996688,
+      "clipnodes": 47121,
+      "nodes": 40067,
+      "faces": 40609,
+      "sha256": "3e4f4119daecb56c37514ddb07196a975a5c33d7a9983bf0e2203c906982851f"
+    },
+    "roller/default.bsp": {
+      "bytes": 59536,
+      "clipnodes": 2303,
+      "nodes": 114,
+      "faces": 155,
+      "sha256": "e0772ef6b76310f11d5b3f038ffac41240be1f846ea662981d205118b2ddc45b"
+    },
+    "roller/chopfragment.bsp": {
+      "bytes": 50608,
+      "clipnodes": 1639,
+      "nodes": 114,
+      "faces": 155,
+      "sha256": "faeae42eb9b4c39f8860d62133c6797e1466a56783eb673a8507089741666b33"
+    },
+    "reduced/wildspline.bsp": {
+      "bytes": 12104,
+      "clipnodes": 467,
+      "nodes": 12,
+      "faces": 12,
+      "sha256": "e8e2824275a1c2b0e984b549df8eeb9a229634b40827cc62211c9533c597b247"
+    }
+  }
+}

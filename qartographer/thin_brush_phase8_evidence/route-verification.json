@@ -1,0 +1,21 @@
+{
+  "routes": [
+    {
+      "file": "/tmp/qqbsp-phase8/evidence/accepted-experiment-matrix/rotated-chopfragment/node.json.portal-proofs.jsonl",
+      "omitted_portals": 8,
+      "alternative_edges_checked": 16,
+      "exact_and_float32_area_and_volumes": true,
+      "continuous_path_between_original_empty_endpoints": true
+    },
+    {
+      "file": "/tmp/qqbsp-phase8/evidence/accepted-experiment-matrix/rotated-default/node.json.portal-proofs.jsonl",
+      "omitted_portals": 8,
+      "alternative_edges_checked": 16,
+      "exact_and_float32_area_and_volumes": true,
+      "continuous_path_between_original_empty_endpoints": true
+    }
+  ],
+  "compiles": 42,
+  "occupancy_comparisons": 49376,
+  "unchanged_oracle_failures": 0
+}

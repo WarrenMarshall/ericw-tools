@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="4" failures="1" disabled="0" errors="0" time="0.044" timestamp="2026-10-26T14:32:38.118" name="AllTests">
+  <testsuite name="phase5" tests="2" failures="0" disabled="0" skipped="0" errors="0" time="0.006" timestamp="2026-10-26T14:32:38.118">
+    <testcase name="Hull2ResolvedFrontFragment" file="/tmp/qqbsp-phase7/source/tests/test_qbsp.cc" line="2720" status="run" result="completed" time="0." timestamp="2026-10-26T14:32:38.118" classname="phase5">
+      <properties>
+        <property name="front_width" value="0.00024414099993919081"/>
+        <property name="parent_volume" value="1155678.882245101"/>
+        <property name="children_volume" value="1155678.882245101"/>
+      </properties>
+    </testcase>
+    <testcase name="NarrowQuadrilateralRankAndRealization" file="/tmp/qqbsp-phase7/source/tests/test_qbsp.cc" line="2747" status="run" result="completed" time="0.005" timestamp="2026-10-26T14:32:38.119" classname="phase5">
+      <properties>
+        <property name="actual_cut_area" value="0.0074346256473068455"/>
+        <property name="expected_cut_area" value="0.007434625516377664"/>
+        <property name="parent_volume" value="26436.66707115664"/>
+        <property name="children_volume" value="26436.667070281077"/>
+      </properties>
+    </testcase>
+  </testsuite>
+  <testsuite name="phase7" tests="2" failures="1" disabled="0" skipped="0" errors="0" time="0.038" timestamp="2026-10-26T14:32:38.125">
+    <testcase name="FailureSiteSupportDecisions" file="/tmp/qqbsp-phase7/source/tests/test_qbsp.cc" line="2786" status="run" result="completed" time="0.037" timestamp="2026-10-26T14:32:38.125" classname="phase7" />
+    <testcase name="CompleteRegionCoverage" file="/tmp/qqbsp-phase7/source/tests/test_qbsp.cc" line="2823" status="run" result="completed" time="0." timestamp="2026-10-26T14:32:38.162" classname="phase7">
+      <failure message="/tmp/qqbsp-phase7/source/tests/test_qbsp.cc:2831&#x0A;Value of: SupportedCoversRegion(*node,*wall) == false&#x0A;  Actual: false&#x0A;Expected: true&#x0A;" type=""><![CDATA[/tmp/qqbsp-phase7/source/tests/test_qbsp.cc:2831
+Value of: SupportedCoversRegion(*node,*wall) == false
+  Actual: false
+Expected: true
+]]></failure>
+    </testcase>
+  </testsuite>
+</testsuites>

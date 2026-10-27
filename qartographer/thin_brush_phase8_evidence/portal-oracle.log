@@ -1,0 +1,2 @@
+{'name': 'p1', 'source': '/tmp/qqbsp-phase8/evidence/final-campaign/p1-reduced/node.json.portal.json', 'distinct_constraints': 18, 'contents': ['EMPTY', 'EMPTY'], 'binary64_section_dimension': 2, 'float32_section_dimension': -1}
+{'name': 'rotated-matrix', 'source': '/tmp/qqbsp-phase8/evidence/final-matrix/rotated-default/node.json.portal.json', 'distinct_constraints': 27, 'contents': ['EMPTY', 'EMPTY'], 'binary64_section_dimension': 2, 'float32_section_dimension': 2}

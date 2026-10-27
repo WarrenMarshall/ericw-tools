@@ -1,0 +1,31 @@
+{
+  "source_empty_margins": {
+    "full-on": [
+      0.13090506484354592,
+      0.8469610158824707,
+      0.2612034930921254
+    ],
+    "full-off": [
+      0.13090506484354592,
+      0.8469610158824707,
+      0.2612034930921254
+    ]
+  },
+  "actor_source_box": [
+    [
+      -1584.000488281,
+      -1488.0,
+      80.0
+    ],
+    [
+      -1232.0,
+      -1392.0,
+      392.0
+    ]
+  ],
+  "actor_interior_margin": 48.0,
+  "discarded_front_width": 0.0002441409999391908,
+  "rejected_diagnostic_false_solids_detected": 3,
+  "terminal_cut_area": 0.007434625516377664,
+  "status": "PASS: preserved failure witnesses replayed; not compiler acceptance"
+}

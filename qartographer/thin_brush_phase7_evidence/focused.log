@@ -1,0 +1,46 @@
+Note: Google Test filter = phase5.*:phase7.*:testmapsQ1.simpleSealed
+[==========] Running 4 tests from 3 test suites.
+[----------] Global test environment set-up.
+[----------] 1 test from testmapsQ1
+[ RUN      ] testmapsQ1.simpleSealed
+----  / ericw-tools  ----
+low priority not compiled into this version
+
+--- Options Summary ---
+    "nopercent" was set to "1" (from command line)
+    "nostat" was set to "1" (from command line)
+    "noprogress" was set to "1" (from command line)
+    "path" was set to ""/tmp/qqbsp-phase7/build/qartographer/upstream-testmaps/q2_wal_metadata"" (from command line)
+
+Input file: /tmp/qqbsp-phase7/build/qartographer/upstream-testmaps/qbsp_simple_sealed.map
+Output file: /tmp/qqbsp-phase7/build/qartographer/upstream-testmaps/qbsp_simple_sealed.bsp
+
+INFO: using built-in palette.
+WARNING: texture name openquartzmirror (/tmp/qqbsp-phase7/build/qartographer/upstream-testmaps/deprecated/free_wad.wad) is not null-terminated
+INFO: world extents calculated to 616 units
+Processing hull 0...
+unknown file: Failure
+C++ exception with description "PHASE7 UNCERTIFIED_PORTAL: missing root boundary" thrown in the test body.
+
+[  FAILED  ] testmapsQ1.simpleSealed (9 ms)
+[----------] 1 test from testmapsQ1 (9 ms total)
+
+[----------] 2 tests from phase5
+[ RUN      ] phase5.Hull2ResolvedFrontFragment
+[       OK ] phase5.Hull2ResolvedFrontFragment (0 ms)
+[ RUN      ] phase5.NarrowQuadrilateralRankAndRealization
+[       OK ] phase5.NarrowQuadrilateralRankAndRealization (5 ms)
+[----------] 2 tests from phase5 (5 ms total)
+
+[----------] 1 test from phase7
+[ RUN      ] phase7.FailureSiteSupportDecisions
+[       OK ] phase7.FailureSiteSupportDecisions (32 ms)
+[----------] 1 test from phase7 (32 ms total)
+
+[----------] Global test environment tear-down
+[==========] 4 tests from 3 test suites ran. (47 ms total)
+[  PASSED  ] 3 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] testmapsQ1.simpleSealed
+
+ 1 FAILED TEST

@@ -1,0 +1,23 @@
+[1/8] Building CXX object qbsp/CMakeFiles/libqbsp.dir/brushbsp.cc.o
+FAILED: qbsp/CMakeFiles/libqbsp.dir/brushbsp.cc.o 
+/usr/bin/c++ -DERICWTOOLS_VERSION=\"\" -DLINUX -DUSE_PTHREADS -I/tmp/qqbsp-phase4/source/include -I/tmp/qqbsp-phase4/source/3rdparty/fmt/include -I/tmp/qqbsp-bootstrap/pinned/deps/json/json/include -I/tmp/qqbsp-phase4/source/3rdparty/pareto/source -isystem /tmp/qqbsp-bootstrap/pinned/deps/tbb/oneapi-tbb-2021.11.0/include -O2 -g -DNDEBUG -std=gnu++20 -Winvalid-pch -include /tmp/qqbsp-phase4/build/qbsp/CMakeFiles/libqbsp.dir/cmake_pch.hxx -MD -MT qbsp/CMakeFiles/libqbsp.dir/brushbsp.cc.o -MF qbsp/CMakeFiles/libqbsp.dir/brushbsp.cc.o.d -o qbsp/CMakeFiles/libqbsp.dir/brushbsp.cc.o -c /tmp/qqbsp-phase4/source/qbsp/brushbsp.cc
+/tmp/qqbsp-phase4/source/qbsp/brushbsp.cc: In lambda function:
+/tmp/qqbsp-phase4/source/qbsp/brushbsp.cc:380:175: error: ‘const struct qbsp_plane_t’ has no member named ‘normal’; did you mean ‘normalize’?
+  380 |  for(auto &s:b.sides){const auto &p=s.get_plane();f<<"SIDE\t"<<p3pass<<"\t"<<path<<"\t"<<line<<"\t"<<s.planenum<<"\t"<<s.onnode<<"\t"<<s.bevel<<"\t"<<s.is_visible()<<"\t"<<p.normal[0]<<" "<<p.normal[1]<<" "<<p.normal[2]<<" "<<p.dist<<"\t";for(auto &v:s.w)f<<v[0]<<" "<<v[1]<<" "<<v[2]<<";";f<<"\n";}
+      |                                                                                                                                                                               ^~~~~~
+      |                                                                                                                                                                               normalize
+/tmp/qqbsp-phase4/source/qbsp/brushbsp.cc:380:193: error: ‘const struct qbsp_plane_t’ has no member named ‘normal’; did you mean ‘normalize’?
+  380 |  for(auto &s:b.sides){const auto &p=s.get_plane();f<<"SIDE\t"<<p3pass<<"\t"<<path<<"\t"<<line<<"\t"<<s.planenum<<"\t"<<s.onnode<<"\t"<<s.bevel<<"\t"<<s.is_visible()<<"\t"<<p.normal[0]<<" "<<p.normal[1]<<" "<<p.normal[2]<<" "<<p.dist<<"\t";for(auto &v:s.w)f<<v[0]<<" "<<v[1]<<" "<<v[2]<<";";f<<"\n";}
+      |                                                                                                                                                                                                 ^~~~~~
+      |                                                                                                                                                                                                 normalize
+/tmp/qqbsp-phase4/source/qbsp/brushbsp.cc:380:211: error: ‘const struct qbsp_plane_t’ has no member named ‘normal’; did you mean ‘normalize’?
+  380 |  for(auto &s:b.sides){const auto &p=s.get_plane();f<<"SIDE\t"<<p3pass<<"\t"<<path<<"\t"<<line<<"\t"<<s.planenum<<"\t"<<s.onnode<<"\t"<<s.bevel<<"\t"<<s.is_visible()<<"\t"<<p.normal[0]<<" "<<p.normal[1]<<" "<<p.normal[2]<<" "<<p.dist<<"\t";for(auto &v:s.w)f<<v[0]<<" "<<v[1]<<" "<<v[2]<<";";f<<"\n";}
+      |                                                                                                                                                                                                                   ^~~~~~
+      |                                                                                                                                                                                                                   normalize
+/tmp/qqbsp-phase4/source/qbsp/brushbsp.cc:380:229: error: ‘const struct qbsp_plane_t’ has no member named ‘dist’
+  380 |  for(auto &s:b.sides){const auto &p=s.get_plane();f<<"SIDE\t"<<p3pass<<"\t"<<path<<"\t"<<line<<"\t"<<s.planenum<<"\t"<<s.onnode<<"\t"<<s.bevel<<"\t"<<s.is_visible()<<"\t"<<p.normal[0]<<" "<<p.normal[1]<<" "<<p.normal[2]<<" "<<p.dist<<"\t";for(auto &v:s.w)f<<v[0]<<" "<<v[1]<<" "<<v[2]<<";";f<<"\n";}
+      |                                                                                                                                                                                                                                     ^~~~
+[2/8] Building CXX object qbsp/CMakeFiles/libqbsp.dir/tree.cc.o
+[3/8] Building CXX object qbsp/CMakeFiles/libqbsp.dir/tjunc.cc.o
+[4/8] Building CXX object qbsp/CMakeFiles/libqbsp.dir/writebsp.cc.o
+ninja: build stopped: subcommand failed.

@@ -1,0 +1,3 @@
+[1/3] Building CXX object qbsp/CMakeFiles/libqbsp.dir/portals.cc.o
+[2/3] Linking CXX static library qbsp/liblibqbsp.a
+[3/3] Linking CXX executable qartographer/qqbsp_tests

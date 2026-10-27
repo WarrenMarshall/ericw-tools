@@ -1,0 +1,12 @@
+patching file include/qbsp/halfspace.hh
+patching file include/qbsp/supported_geometry.hh
+patching file include/qbsp/brushbsp.hh
+patching file include/qbsp/portals.hh
+patching file qbsp/brushbsp.cc
+patching file qbsp/portals.cc
+patching file qbsp/prtfile.cc
+patching file qbsp/CMakeLists.txt
+patching file qartographer/CMakeLists.txt
+patching file tests/test_qbsp.cc
+patching file qartographer/phase5-witness.json
+patching file qartographer/phase7-cases.json

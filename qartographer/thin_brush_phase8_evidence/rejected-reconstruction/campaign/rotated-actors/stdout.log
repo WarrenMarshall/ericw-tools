@@ -1,0 +1,192 @@
+Qartographer qqbsp, upstream=ccaeb8457a1267860ebe99ed1df7394ebdd6b435, downstream=4b505ae25e508a8910b031e94d6f1ea60ac06a95-phase7-experimental, patches=P1, experiment=phase8-unaccepted
+---- reconstruction-qqbsp / ericw-tools  ----
+running with 1 thread(s)
+low priority not compiled into this version
+logging to /tmp/qqbsp-phase8/evidence/reconstruction/rotated-actors/input.log (truncate)
+
+--- Options Summary ---
+    "threads" was set to "1" (from command line)
+    "nopercent" was set to "1" (from command line)
+    "chopfragment" was set to "1" (from command line)
+    "notex" was set to "1" (from command line)
+
+Input file: /tmp/qqbsp-phase8/evidence/reconstruction/rotated-actors/input.map
+Output file: /tmp/qqbsp-phase8/evidence/reconstruction/rotated-actors/input.bsp
+
+INFO: using built-in palette.
+---- LoadMapFile ----
+[33maddArchive: WARNING: archive '/tmp/qqbsp-phase8/evidence/reconstruction/rotated-actors/deprecated/free_wad.wad' not found
+[0m[33maddArchive: WARNING: archive 'deprecated/free_wad.wad' not found
+[0m[33maddArchive: WARNING: archive '/tmp/qqbsp-phase8/evidence/reconstruction/rotated-actors/deprecated/fence.wad' not found
+[0m[33maddArchive: WARNING: archive 'deprecated/fence.wad' not found
+[0m[33maddArchive: WARNING: archive '/tmp/qqbsp-phase8/evidence/reconstruction/rotated-actors/deprecated/origin.wad' not found
+[0m[33maddArchive: WARNING: archive 'deprecated/origin.wad' not found
+[0m[33maddArchive: WARNING: archive '/tmp/qqbsp-phase8/evidence/reconstruction/rotated-actors/deprecated/hintskip.wad' not found
+[0m[33maddArchive: WARNING: archive 'deprecated/hintskip.wad' not found
+[0m[33mWARNING: No valid WAD filenames in worldmodel
+[0m[36m     2 entities
+[0m[36m     3 unique textures
+[0m[36m    16 texinfos
+[0m[36m    24 unique planes
+[0m[36m
+[0m---- ProcessMapBrushes ----
+INFO: world extents calculated to 648 units
+[36m     6 brushes
+[0m[36m    36 sides
+[0m[36m    24 side bevels
+[0m[36m
+[0m[36m            0 texture frames added
+[0m[33mWARNING: unable to find texture skip
+[0m[33mWARNING: unable to find texture orangestuff8
+[0m[33mWARNING: unable to find texture bolt16
+[0mProcessing hull 0...
+---- Brush_LoadEntity ----
+---- CountBrushes ----
+[36m    6 SOLID brushes
+[0m[36m    6 brushes total
+[0m[36m    36 visible sides
+[0m[36mINFO: calculating BSP for 6 brushes with 36 sides
+[0m---- BrushBSP ----
+[36m     6 brushes
+[0m[36m    36 visible faces
+[0m[36m    24 nodes
+[0m[36m    24 expensive split nodes
+[0m[36m    25 leaves
+[0m---- CountLeafs ----
+[36m     6 SOLID leafs
+[0m[36m    19 EMPTY leafs
+[0m[36m    25 leafs total
+[0m[36m    8 max tree height
+[0m[36m    6 avg tree height
+[0m---- MakeTreePortals ----
+[36m    130 tiny portals
+[0m---- CalcTreeBounds ----
+[36m    114 tree portals
+[0m---- FillOutside ----
+[36m    18 outside leaves
+[0m---- FillDetail ----
+[36m    0 detail filled leafs
+[0m---- BrushBSP ----
+[36m     6 brushes
+[0m[36m     6 visible faces
+[0m[36m    30 non-visible faces
+[0m[36m    24 nodes
+[0m[36m    18 non-visible nodes
+[0m[36m    24 expensive split nodes
+[0m[36m    25 leaves
+[0m---- CountLeafs ----
+[36m     6 SOLID leafs
+[0m[36m    19 EMPTY leafs
+[0m[36m    25 leafs total
+[0m[36m    8 max tree height
+[0m[36m    6 avg tree height
+[0m---- MakeTreePortals ----
+[36m    132 tiny portals
+[0m---- CalcTreeBounds ----
+[36m    114 tree portals
+[0m---- FillOutside ----
+[36m    18 outside leaves
+[0m---- FillDetail ----
+[36m    0 detail filled leafs
+[0m---- MakeTreePortals ----
+[36m    132 tiny portals
+[0m---- CalcTreeBounds ----
+[36m    6 tree portals
+[0m---- MarkVisibleSides ----
+[36m    12 sides visible
+[0m---- MakeFaces ----
+[36m    6 makefaces
+[0m---- PruneNodes ----
+[36m    18 nodes pruned
+[0m---- WritePortalFile ----
+[36m    3 tiny portals
+[0m[36m    1 player-occupiable leaves
+[0m[36m    1 clusters of leaves
+[0m---- CountLeafs ----
+[36m    1 EMPTY leafs
+[0m[36m    6 SOLID leafs
+[0m[36m    7 leafs total
+[0m[36m    7 max tree height
+[0m[36m    4 avg tree height
+[0m---- TJunc ----
+[36m     3 edges added by tjunctions
+[0m[36m     6 faces optimized through MWT
+[0m[36m    18 triangles computed from MWT
+[0m[36m     1 faces created via optimization of MWT triangles
+[0m---- EmitFaces ----
+[36m    16 edges
+[0m[36m     7 faces
+[0mProcessing hull 1...
+PHASE7_REJECT partition=68 plane={normal: 1 0 0, dist: 51.33706421453343} reason=UNREPRESENTABLE_BOUNDARY: support-certified positive children, approximate cap unavailable; semantic simplification not certified
+PHASE7_SUPPORT id=117 plane={normal: -1 0 0, dist: 169.17142559585812} onnode=false bevel=false winding={}
+PHASE7_SUPPORT id=118 plane={normal: 1 0 0, dist: 83.33706421453343} onnode=false bevel=false winding={}
+PHASE7_SUPPORT id=121 plane={normal: 0 -1 0, dist: 233.1714255958582} onnode=false bevel=false winding={}
+PHASE7_SUPPORT id=122 plane={normal: 0 1 0, dist: -127.74114627226822} onnode=false bevel=false winding={}
+PHASE7_SUPPORT id=77 plane={normal: 0 0 -1, dist: -16} onnode=false bevel=false winding={}
+PHASE7_SUPPORT id=78 plane={normal: 0 0 1, dist: 232} onnode=true bevel=false winding={(51.33706421453366 -217.71661237523307 232), (-10.48218866796637 -217.71661237523307 232), (-165.03032087421778 -176.30556515882935 232), (-165.03032087421778 -159.74114627226822 232), (-165.03032087421747 -159.74114627226822 232)}
+PHASE7_SUPPORT id=109 plane={normal: -0.9659258262890679 0.25881904510252246 -0, dist: 126.34520755468873} onnode=false bevel=false winding={}
+PHASE7_SUPPORT id=125 plane={normal: -0.25881904510252235 -0.9659258262890679 0, dist: 213.01108876703125} onnode=false bevel=false winding={(-165.03032087421778 -176.30556515882935 176), (-165.03032087421778 -176.30556515882935 232), (-10.482188667966426 -217.71661237523307 232), (-10.482188667966426 -217.71661237523307 176)}
+PHASE7_SUPPORT id=126 plane={normal: 0.25881904510252174 0.9659258262890681 -0, dist: -157.81925288250045} onnode=false bevel=false winding={}
+PHASE7_SUPPORT id=114 plane={normal: 0.9659258262890679 -0.2588190451025224 -0, dist: 136.84662832984216} onnode=false bevel=false winding={}
+PHASE7_SUPPORT id=129 plane={normal: -1 0 0, dist: 165.03032087421778} onnode=false bevel=false winding={(-165.03032087421778 -159.74114627226822 232), (-165.03032087421778 -176.30556515882938 232), (-165.03032087421778 -176.30556515882938 176), (-165.03032087421778 -159.74114627226822 176)}
+PHASE7_SUPPORT id=133 plane={normal: 0 -1 0, dist: 217.71661237523307} onnode=true bevel=false winding={(51.337064214533676 -217.71661237523307 176), (-10.48218866796643 -217.71661237523307 176), (-10.482188667966426 -217.71661237523307 232), (51.337064214533676 -217.71661237523307 232)}
+PHASE7_SUPPORT id=137 plane={normal: 0 0 -1, dist: -176} onnode=true bevel=false winding={(-165.03032087421778 -176.30556515882935 176), (-10.48218866796637 -217.71661237523307 176), (51.337064214533655 -217.71661237523307 176), (-165.03032087421747 -159.74114627226822 176), (-165.03032087421778 -159.74114627226822 176)}
+PHASE7_SUPPORT id=82 plane={normal: 0.25881904510252174 0.9659258262890681 -0, dist: -197.0110887670313} onnode=false bevel=false winding={(51.33706421453355 -217.71661237523307 176), (51.33706421453354 -217.71661237523307 232), (-165.03032087421755 -159.74114627226822 232), (-165.03032087421758 -159.74114627226822 176)}
+PHASE7_SUPPORT id=92 plane={normal: 0 1 0, dist: -159.74114627226822} onnode=true bevel=false winding={(-165.03032087421755 -159.74114627226822 232), (-165.03032087421778 -159.74114627226822 232), (-165.03032087421778 -159.74114627226822 176), (-165.03032087421755 -159.74114627226822 176)}
+PHASE8 DEFER_PARTITION partition=68 reason=PHASE7 CONSTRUCTION_UNSUPPORTED source=/tmp/qqbsp-phase8/evidence/reconstruction/rotated-actors/input.map[line 39] partition=68: UNREPRESENTABLE_BOUNDARY: support-certified positive children, approximate cap unavailable; semantic simplification not certified
+PHASE7_REJECT partition=68 plane={normal: 1 0 0, dist: 51.33706421453343} reason=UNREPRESENTABLE_BOUNDARY: support-certified positive children, approximate cap unavailable; semantic simplification not certified
+PHASE7_SUPPORT id=117 plane={normal: -1 0 0, dist: 169.17142559585812} onnode=true bevel=false winding={}
+PHASE7_SUPPORT id=118 plane={normal: 1 0 0, dist: 83.33706421453343} onnode=false bevel=false winding={}
+PHASE7_SUPPORT id=121 plane={normal: 0 -1 0, dist: 233.1714255958582} onnode=false bevel=false winding={}
+PHASE7_SUPPORT id=122 plane={normal: 0 1 0, dist: -127.74114627226822} onnode=false bevel=false winding={}
+PHASE7_SUPPORT id=77 plane={normal: 0 0 -1, dist: -16} onnode=false bevel=false winding={}
+PHASE7_SUPPORT id=78 plane={normal: 0 0 1, dist: 232} onnode=true bevel=false winding={(51.33706421453366 -217.71661237523307 232), (-10.48218866796637 -217.71661237523307 232), (-165.03032087421778 -176.30556515882935 232), (-165.03032087421778 -159.74114627226822 232), (-165.03032087421747 -159.74114627226822 232)}
+PHASE7_SUPPORT id=109 plane={normal: -0.9659258262890679 0.25881904510252246 -0, dist: 126.34520755468873} onnode=false bevel=false winding={}
+PHASE7_SUPPORT id=125 plane={normal: -0.25881904510252235 -0.9659258262890679 0, dist: 213.01108876703125} onnode=false bevel=false winding={(-165.03032087421778 -176.30556515882935 176), (-165.03032087421778 -176.30556515882935 232), (-10.482188667966426 -217.71661237523307 232), (-10.482188667966426 -217.71661237523307 176)}
+PHASE7_SUPPORT id=126 plane={normal: 0.25881904510252174 0.9659258262890681 -0, dist: -157.81925288250045} onnode=false bevel=false winding={}
+PHASE7_SUPPORT id=114 plane={normal: 0.9659258262890679 -0.2588190451025224 -0, dist: 136.84662832984216} onnode=false bevel=false winding={}
+PHASE7_SUPPORT id=129 plane={normal: -1 0 0, dist: 165.03032087421778} onnode=false bevel=false winding={(-165.03032087421778 -159.74114627226822 232), (-165.03032087421778 -176.30556515882938 232), (-165.03032087421778 -176.30556515882938 176), (-165.03032087421778 -159.74114627226822 176)}
+PHASE7_SUPPORT id=133 plane={normal: 0 -1 0, dist: 217.71661237523307} onnode=true bevel=false winding={(51.337064214533676 -217.71661237523307 176), (-10.48218866796643 -217.71661237523307 176), (-10.482188667966426 -217.71661237523307 232), (51.337064214533676 -217.71661237523307 232)}
+PHASE7_SUPPORT id=137 plane={normal: 0 0 -1, dist: -176} onnode=true bevel=false winding={(-165.03032087421778 -176.30556515882935 176), (-10.48218866796637 -217.71661237523307 176), (51.337064214533655 -217.71661237523307 176), (-165.03032087421747 -159.74114627226822 176), (-165.03032087421778 -159.74114627226822 176)}
+PHASE7_SUPPORT id=82 plane={normal: 0.25881904510252174 0.9659258262890681 -0, dist: -197.0110887670313} onnode=false bevel=false winding={(51.33706421453355 -217.71661237523307 176), (51.33706421453354 -217.71661237523307 232), (-165.03032087421755 -159.74114627226822 232), (-165.03032087421758 -159.74114627226822 176)}
+PHASE7_SUPPORT id=92 plane={normal: 0 1 0, dist: -159.74114627226822} onnode=true bevel=false winding={(-165.03032087421755 -159.74114627226822 232), (-165.03032087421778 -159.74114627226822 232), (-165.03032087421778 -159.74114627226822 176), (-165.03032087421755 -159.74114627226822 176)}
+PHASE8 DEFER_PARTITION partition=68 reason=PHASE7 CONSTRUCTION_UNSUPPORTED source=/tmp/qqbsp-phase8/evidence/reconstruction/rotated-actors/input.map[line 39] partition=68: UNREPRESENTABLE_BOUNDARY: support-certified positive children, approximate cap unavailable; semantic simplification not certified
+PHASE7_REJECT partition=68 plane={normal: 1 0 0, dist: 51.33706421453343} reason=UNREPRESENTABLE_BOUNDARY: support-certified positive children, approximate cap unavailable; semantic simplification not certified
+PHASE7_SUPPORT id=117 plane={normal: -1 0 0, dist: 169.17142559585812} onnode=true bevel=false winding={}
+PHASE7_SUPPORT id=118 plane={normal: 1 0 0, dist: 83.33706421453343} onnode=false bevel=false winding={}
+PHASE7_SUPPORT id=121 plane={normal: 0 -1 0, dist: 233.1714255958582} onnode=false bevel=false winding={}
+PHASE7_SUPPORT id=122 plane={normal: 0 1 0, dist: -127.74114627226822} onnode=false bevel=false winding={}
+PHASE7_SUPPORT id=77 plane={normal: 0 0 -1, dist: -16} onnode=false bevel=false winding={}
+PHASE7_SUPPORT id=78 plane={normal: 0 0 1, dist: 232} onnode=true bevel=false winding={(51.33706421453366 -217.71661237523307 232), (42.76269005673747 -217.71661237523307 232), (43.33706421453343 -215.573018835784 232)}
+PHASE7_SUPPORT id=109 plane={normal: -0.9659258262890679 0.25881904510252246 -0, dist: 126.34520755468873} onnode=false bevel=false winding={}
+PHASE7_SUPPORT id=125 plane={normal: -0.25881904510252235 -0.9659258262890679 0, dist: 213.01108876703125} onnode=false bevel=false winding={}
+PHASE7_SUPPORT id=126 plane={normal: 0.25881904510252174 0.9659258262890681 -0, dist: -157.81925288250045} onnode=false bevel=false winding={}
+PHASE7_SUPPORT id=114 plane={normal: 0.9659258262890679 -0.2588190451025224 -0, dist: 136.84662832984216} onnode=false bevel=false winding={}
+PHASE7_SUPPORT id=129 plane={normal: -1 0 0, dist: 165.03032087421778} onnode=false bevel=false winding={}
+PHASE7_SUPPORT id=133 plane={normal: 0 -1 0, dist: 217.71661237523307} onnode=true bevel=false winding={(51.337064214533676 -217.71661237523307 176), (42.762690056737455 -217.71661237523307 176), (42.76269005673745 -217.71661237523307 232), (51.337064214533676 -217.71661237523307 232)}
+PHASE7_SUPPORT id=137 plane={normal: 0 0 -1, dist: -176} onnode=true bevel=false winding={(42.76269005673746 -217.71661237523307 176), (51.337064214533655 -217.71661237523307 176), (43.33706421453341 -215.573018835784 176)}
+PHASE7_SUPPORT id=82 plane={normal: 0.25881904510252174 0.9659258262890681 -0, dist: -197.0110887670313} onnode=false bevel=false winding={(51.33706421453355 -217.71661237523307 176), (51.33706421453354 -217.71661237523307 232), (43.337064214533406 -215.57301883578404 232), (43.3370642145334 -215.57301883578404 176)}
+PHASE7_SUPPORT id=92 plane={normal: 0 1 0, dist: -159.74114627226822} onnode=true bevel=false winding={}
+PHASE7_SUPPORT id=81 plane={normal: -0.9659258262890679 0.2588190451025224 0, dist: -97.65479244531127} onnode=true bevel=false winding={(43.33706421453343 -215.573018835784 176), (43.337064214533434 -215.573018835784 232), (42.76269005673748 -217.71661237523307 232), (42.76269005673748 -217.71661237523307 176)}
+PHASE8 DEFER_PARTITION partition=68 reason=PHASE7 CONSTRUCTION_UNSUPPORTED source=/tmp/qqbsp-phase8/evidence/reconstruction/rotated-actors/input.map[line 39] partition=68: UNREPRESENTABLE_BOUNDARY: support-certified positive children, approximate cap unavailable; semantic simplification not certified
+PHASE7_REJECT partition=122 plane={normal: 0 1 0, dist: -127.74114627226822} reason=UNREPRESENTABLE_BOUNDARY: support-certified positive children, approximate cap unavailable; semantic simplification not certified
+PHASE7_SUPPORT id=142 plane={normal: 1 0 0, dist: 172.48513409484292} onnode=false bevel=false winding={}
+PHASE7_SUPPORT id=146 plane={normal: 0 1 0, dist: 97.17142559585811} onnode=false bevel=false winding={}
+PHASE7_SUPPORT id=150 plane={normal: 0 0 1, dist: 272} onnode=false bevel=false winding={}
+PHASE7_SUPPORT id=145 plane={normal: -1 0 0, dist: 204.48513409484295} onnode=false bevel=false winding={}
+PHASE7_SUPPORT id=149 plane={normal: 0 -1 0, dist: 257.1714255958582} onnode=false bevel=false winding={}
+PHASE7_SUPPORT id=153 plane={normal: 0 0 -1, dist: 24} onnode=false bevel=false winding={}
+PHASE7_SUPPORT id=104 plane={normal: 0 1 0, dist: -32.258853727731974} onnode=true bevel=false winding={}
+PHASE7_SUPPORT id=93 plane={normal: 0 -1 0, dist: 159.74114627226822} onnode=true bevel=false winding={}
+PHASE7_SUPPORT id=137 plane={normal: 0 0 -1, dist: -176} onnode=true bevel=false winding={(-169.17142559585812 -143.19595949289322 176), (-169.17142559585812 -158.63154060633192 176), (-165.03032087421778 -159.74114627226817 176), (-165.03032087421778 -127.74114627226814 176)}
+PHASE7_SUPPORT id=78 plane={normal: 0 0 1, dist: 232} onnode=true bevel=false winding={(-165.03032087421778 -127.7411462722681 232), (-165.03032087421778 -159.74114627226817 232), (-169.17142559585812 -158.63154060633192 232), (-169.17142559585812 -143.19595949289322 232)}
+PHASE7_SUPPORT id=128 plane={normal: 1 0 0, dist: -165.03032087421778} onnode=true bevel=false winding={(-165.03032087421778 -159.74114627226817 232), (-165.03032087421778 -127.74114627226814 232), (-165.03032087421778 -127.7411462722681 176), (-165.03032087421778 -159.74114627226817 176)}
+PHASE7_SUPPORT id=89 plane={normal: -1 0 0, dist: 180.48513409484295} onnode=true bevel=false winding={}
+PHASE7_SUPPORT id=117 plane={normal: -1 0 0, dist: 169.17142559585812} onnode=true bevel=false winding={(-169.17142559585812 -143.19595949289322 232), (-169.17142559585812 -158.63154060633192 232), (-169.17142559585812 -158.63154060633192 176), (-169.17142559585812 -143.19595949289322 176)}
+PHASE7_SUPPORT id=97 plane={normal: -0.9659258262890678 0.2588190451025224 0, dist: 142.34520755468876} onnode=true bevel=false winding={}
+PHASE7_SUPPORT id=109 plane={normal: -0.9659258262890679 0.25881904510252246 -0, dist: 126.34520755468873} onnode=true bevel=false winding={(-169.17142559585812 -143.1959594928931 176), (-165.03032087421778 -127.74114627226805 176), (-165.03032087421778 -127.74114627226805 232), (-169.17142559585812 -143.1959594928931 232)}
+PHASE7_SUPPORT id=83 plane={normal: -0.25881904510252174 -0.9659258262890681 0, dist: 197.0110887670313} onnode=true bevel=false winding={(-169.17142559585812 -158.63154060633192 232), (-165.03032087421778 -159.74114627226817 232), (-165.03032087421778 -159.74114627226817 176), (-169.17142559585812 -158.63154060633192 176)}
+PHASE8 DEFER_PARTITION partition=122 reason=PHASE7 CONSTRUCTION_UNSUPPORTED source=node-volume partition=122: UNREPRESENTABLE_BOUNDARY: support-certified positive children, approximate cap unavailable; semantic simplification not certified
+[38;2;255;000;000m************ ERROR ************
+PHASE8 CONSTRUCTION_UNSUPPORTED: exhausted 1 local partitions; source union retained
+[0m

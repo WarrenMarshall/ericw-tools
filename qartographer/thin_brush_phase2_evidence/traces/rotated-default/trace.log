@@ -1,0 +1,4675 @@
+Qartographer qqbsp, upstream=ccaeb8457a1267860ebe99ed1df7394ebdd6b435, downstream=2f6fc5b79734f56348766cbec83533f1d50b3642, patches=P1
+---- qqbsp / ericw-tools  ----
+running with 1 thread(s)
+low priority not compiled into this version
+logging to /tmp/qqbsp-phase2/traces/rotated-default/input.log (truncate)
+
+--- Options Summary ---
+    "threads" was set to "1" (from command line)
+    "nopercent" was set to "1" (from command line)
+    "bsp2" was set to "1" (from command line)
+    "notex" was set to "1" (from command line)
+
+Input file: /tmp/qqbsp-phase2/traces/rotated-default/input.map
+Output file: /tmp/qqbsp-phase2/traces/rotated-default/input.bsp
+
+INFO: using built-in palette.
+---- LoadMapFile ----
+[33mWARNING: No wad or _wad key exists in the worldmodel
+[0m[36m     1 entities
+[0m[36m     2 unique textures
+[0m[36m     4 texinfos
+[0m[36m    12 unique planes
+[0m[36m
+[0m---- ProcessMapBrushes ----
+INFO: world extents calculated to 343 units
+[36m     1 brushes
+[0m[36m     6 sides
+[0m[36m    14 side bevels
+[0m[36m
+[0m[36m            0 texture frames added
+[0m[33mWARNING: unable to find texture skip
+[0m[33mWARNING: unable to find texture NO_TEXTURE
+[0mProcessing hull 0...
+---- Brush_LoadEntity ----
+---- CountBrushes ----
+[36m    1 SOLID brushes
+[0m[36m    1 brushes total
+[0m[36m    6 visible sides
+[0m[36mINFO: calculating BSP for 1 brushes with 6 sides
+[0m---- BrushBSP ----
+[36m    1 brushes
+[0m[36m    6 visible faces
+[0mEXTENT check p=0 front=47.229644337 back=-47.221644337
+CLIP p=0 by=40 points=4->4
+CLIP p=0 by=44 points=4->4
+CLIP p=0 by=48 points=4->4
+CLIP p=0 by=43 points=4->4
+CLIP p=0 by=47 points=4->4
+CLIP p=0 by=51 points=4->4
+EXTENT check p=2 front=47.221644337 back=-47.229644337
+CLIP p=2 by=40 points=4->4
+CLIP p=2 by=44 points=4->4
+CLIP p=2 by=48 points=4->4
+CLIP p=2 by=43 points=4->4
+CLIP p=2 by=47 points=4->4
+CLIP p=2 by=51 points=4->4
+EXTENT check p=4 front=118.382503253 back=-54.3825032527
+CLIP p=4 by=40 points=4->4
+CLIP p=4 by=44 points=4->4
+CLIP p=4 by=48 points=4->4
+CLIP p=4 by=43 points=4->4
+CLIP p=4 by=47 points=4->4
+CLIP p=4 by=51 points=4->4
+EXTENT check p=6 front=54.3825032527 back=-118.382503253
+CLIP p=6 by=40 points=4->4
+CLIP p=6 by=44 points=4->5
+CLIP p=6 by=48 points=5->5
+CLIP p=6 by=43 points=5->5
+CLIP p=6 by=47 points=5->5
+CLIP p=6 by=51 points=5->4
+EXTENT check p=8 front=121.145450798 back=-57.1454507976
+CLIP p=8 by=40 points=4->5
+CLIP p=8 by=44 points=5->5
+CLIP p=8 by=48 points=5->5
+CLIP p=8 by=43 points=5->6
+CLIP p=8 by=47 points=6->4
+CLIP p=8 by=51 points=4->5
+EXTENT check p=10 front=57.1454507976 back=-121.145450798
+CLIP p=10 by=40 points=4->4
+CLIP p=10 by=44 points=4->3
+CLIP p=10 by=48 points=3->4
+CLIP p=10 by=43 points=4->5
+CLIP p=10 by=47 points=5->6
+CLIP p=10 by=51 points=6->5
+SELECT level=0 p=0 brushes=1
+EXTENT real volume=1 p=0 front=47.229644337 back=-47.221644337
+CLIP p=0 by=40 points=4->4
+CLIP p=0 by=44 points=4->4
+CLIP p=0 by=48 points=4->4
+CLIP p=0 by=43 points=4->4
+CLIP p=0 by=47 points=4->4
+CLIP p=0 by=51 points=4->4
+LEAF level=1 brushes=0 volume=1
+EXTENT check p=2 front=47.221644337 back=-0.00800000000012
+CLIP p=2 by=40 points=4->4
+CLIP p=2 by=44 points=4->4
+CLIP p=2 by=48 points=4->4
+CLIP p=2 by=43 points=4->4
+CLIP p=2 by=47 points=4->4
+CLIP p=2 by=1 points=4->4
+EXTENT check p=4 front=118.382503253 back=-52.8672416443
+CLIP p=4 by=40 points=4->4
+CLIP p=4 by=44 points=4->4
+CLIP p=4 by=48 points=4->4
+CLIP p=4 by=43 points=4->4
+CLIP p=4 by=47 points=4->4
+CLIP p=4 by=1 points=4->4
+EXTENT check p=6 front=54.3825032527 back=-116.867241644
+CLIP p=6 by=40 points=4->4
+CLIP p=6 by=44 points=4->5
+CLIP p=6 by=48 points=5->5
+CLIP p=6 by=43 points=5->5
+CLIP p=6 by=47 points=5->5
+CLIP p=6 by=1 points=5->4
+EXTENT check p=8 front=117.238759577 back=-57.1454507976
+CLIP p=8 by=40 points=4->5
+CLIP p=8 by=44 points=5->5
+CLIP p=8 by=48 points=5->5
+CLIP p=8 by=43 points=5->6
+CLIP p=8 by=47 points=6->4
+CLIP p=8 by=1 points=4->4
+EXTENT check p=10 front=53.2387595771 back=-121.145450798
+CLIP p=10 by=40 points=4->4
+CLIP p=10 by=44 points=4->3
+CLIP p=10 by=48 points=3->4
+CLIP p=10 by=43 points=4->5
+CLIP p=10 by=47 points=5->6
+CLIP p=10 by=1 points=6->5
+SELECT level=1 p=2 brushes=1
+EXTENT real volume=1 p=2 front=47.221644337 back=-0.00800000000012
+CLIP p=2 by=40 points=4->4
+CLIP p=2 by=44 points=4->4
+CLIP p=2 by=48 points=4->4
+CLIP p=2 by=43 points=4->4
+CLIP p=2 by=47 points=4->4
+CLIP p=2 by=1 points=4->4
+EXTENT check p=4 front=116.867241644 back=-52.8672416443
+CLIP p=4 by=40 points=4->4
+CLIP p=4 by=44 points=4->4
+CLIP p=4 by=43 points=4->4
+CLIP p=4 by=47 points=4->5
+CLIP p=4 by=1 points=5->5
+CLIP p=4 by=2 points=5->0
+TRACE operator() tiny-or-null plane=4 n=-0.35209279402,0.932327345606,0.0824401906523 d=-3.52606832621e-12 sides=6
+EXTENT check p=6 front=52.8672416443 back=-116.867241644
+CLIP p=6 by=40 points=4->4
+CLIP p=6 by=44 points=4->5
+CLIP p=6 by=43 points=5->5
+CLIP p=6 by=47 points=5->5
+CLIP p=6 by=1 points=5->4
+CLIP p=6 by=2 points=4->0
+TRACE operator() tiny-or-null plane=6 n=-0.35209279402,0.932327345606,0.0824401906517 d=64 sides=6
+EXTENT check p=8 front=117.238759577 back=-53.2387595771
+CLIP p=8 by=40 points=4->5
+CLIP p=8 by=44 points=5->5
+CLIP p=8 by=43 points=5->6
+CLIP p=8 by=47 points=6->5
+CLIP p=8 by=1 points=5->5
+CLIP p=8 by=2 points=5->0
+TRACE operator() tiny-or-null plane=8 n=0.907775805561,0.361615431965,-0.212549679377 d=-32 sides=6
+EXTENT check p=10 front=53.2387595771 back=-117.238759577
+CLIP p=10 by=40 points=4->4
+CLIP p=10 by=44 points=4->3
+CLIP p=10 by=43 points=3->4
+CLIP p=10 by=47 points=4->5
+CLIP p=10 by=1 points=5->4
+CLIP p=10 by=2 points=4->0
+TRACE operator() tiny-or-null plane=10 n=0.907775805561,0.361615431965,-0.212549679377 d=32 sides=6
+LEAF level=2 brushes=1 volume=1
+REMAIN p=1 w=4 onnode=1 bevel=0
+REMAIN p=2 w=4 onnode=1 bevel=0
+REMAIN p=5 w=4 onnode=0 bevel=0
+REMAIN p=6 w=4 onnode=0 bevel=0
+REMAIN p=9 w=4 onnode=0 bevel=0
+REMAIN p=10 w=4 onnode=0 bevel=0
+LEAF level=2 brushes=0 volume=1
+[36m    2 nodes
+[0m[36m    2 expensive split nodes
+[0m[36m    3 leaves
+[0m---- CountLeafs ----
+[36m    1 SOLID leafs
+[0m[36m    2 EMPTY leafs
+[0m[36m    3 leafs total
+[0m[36m    3 max tree height
+[0m[36m    2 avg tree height
+[0m---- MakeTreePortals ----
+[36m    4 tiny portals
+[0m---- CalcTreeBounds ----
+[36m    12 tree portals
+[0m---- FillOutside ----
+[33mWARNING: No entities in empty space -- no filling performed (hull 0)
+[0m---- MakeTreePortals ----
+[36m    4 tiny portals
+[0m---- CalcTreeBounds ----
+[36m    12 tree portals
+[0m---- MarkVisibleSides ----
+[36m    4 sides visible
+[0m---- MakeFaces ----
+[36m    2 makefaces
+[0m---- PruneNodes ----
+---- WritePortalFile ----
+[36m    2 player-occupiable leaves
+[0m[36m    2 clusters of leaves
+[0m---- CountLeafs ----
+[36m    1 SOLID leafs
+[0m[36m    2 EMPTY leafs
+[0m[36m    3 leafs total
+[0m[36m    3 max tree height
+[0m[36m    2 avg tree height
+[0m---- TJunc ----
+[36m    2 faces optimized through MWT
+[0m[36m    4 triangles computed from MWT
+[0m---- EmitFaces ----
+[36m    4 edges
+[0m[36m    2 faces
+[0mProcessing hull 1...
+EXTENT check p=52 front=136.633414193 back=-24
+CLIP p=52 by=90 points=4->4
+CLIP p=52 by=94 points=4->4
+CLIP p=52 by=98 points=4->4
+CLIP p=52 by=93 points=4->4
+CLIP p=52 by=97 points=4->4
+CLIP p=52 by=101 points=4->4
+EXTENT check p=54 front=24 back=-136.633414193
+CLIP p=54 by=90 points=4->4
+CLIP p=54 by=94 points=4->4
+CLIP p=54 by=98 points=4->4
+CLIP p=54 by=93 points=4->4
+CLIP p=54 by=97 points=4->4
+CLIP p=54 by=101 points=4->4
+EXTENT check p=56 front=138.812337765 back=-24
+CLIP p=56 by=90 points=4->4
+CLIP p=56 by=94 points=4->4
+CLIP p=56 by=98 points=4->4
+CLIP p=56 by=93 points=4->4
+CLIP p=56 by=97 points=4->4
+CLIP p=56 by=101 points=4->4
+EXTENT check p=58 front=24 back=-138.812337765
+CLIP p=58 by=90 points=4->4
+CLIP p=58 by=94 points=4->4
+CLIP p=58 by=98 points=4->4
+CLIP p=58 by=93 points=4->4
+CLIP p=58 by=97 points=4->4
+CLIP p=58 by=101 points=4->4
+EXTENT check p=60 front=98.8871410129 back=-24
+CLIP p=60 by=90 points=4->4
+CLIP p=60 by=94 points=4->4
+CLIP p=60 by=98 points=4->4
+CLIP p=60 by=93 points=4->4
+CLIP p=60 by=97 points=4->4
+CLIP p=60 by=101 points=4->4
+EXTENT check p=48 front=24 back=-98.8871410129
+CLIP p=48 by=90 points=4->4
+CLIP p=48 by=94 points=4->4
+CLIP p=48 by=98 points=4->4
+CLIP p=48 by=93 points=4->4
+CLIP p=48 by=97 points=4->4
+CLIP p=48 by=101 points=4->4
+EXTENT check p=62 front=109.05024321 back=-47.221644337
+CLIP p=62 by=90 points=4->4
+CLIP p=62 by=94 points=4->4
+CLIP p=62 by=98 points=4->4
+CLIP p=62 by=93 points=4->4
+CLIP p=62 by=97 points=4->4
+CLIP p=62 by=101 points=4->4
+EXTENT check p=64 front=47.221644337 back=-109.05024321
+CLIP p=64 by=90 points=4->4
+CLIP p=64 by=94 points=4->4
+CLIP p=64 by=98 points=4->4
+CLIP p=64 by=93 points=4->4
+CLIP p=64 by=97 points=4->4
+CLIP p=64 by=101 points=4->4
+EXTENT check p=66 front=164.100598397 back=-54.3825032527
+CLIP p=66 by=90 points=4->4
+CLIP p=66 by=94 points=4->4
+CLIP p=66 by=98 points=4->4
+CLIP p=66 by=93 points=4->4
+CLIP p=66 by=97 points=4->5
+CLIP p=66 by=101 points=5->4
+EXTENT check p=68 front=54.3825032527 back=-164.100598397
+CLIP p=68 by=90 points=4->4
+CLIP p=68 by=94 points=4->5
+CLIP p=68 by=98 points=5->4
+CLIP p=68 by=93 points=4->4
+CLIP p=68 by=97 points=4->4
+CLIP p=68 by=101 points=4->4
+EXTENT check p=70 front=173.668752444 back=-57.1454507976
+CLIP p=70 by=90 points=4->5
+CLIP p=70 by=94 points=5->5
+CLIP p=70 by=98 points=5->5
+CLIP p=70 by=93 points=5->5
+CLIP p=70 by=97 points=5->3
+CLIP p=70 by=101 points=3->4
+EXTENT check p=72 front=57.1454507976 back=-173.668752444
+CLIP p=72 by=90 points=4->4
+CLIP p=72 by=94 points=4->3
+CLIP p=72 by=98 points=3->4
+CLIP p=72 by=93 points=4->4
+CLIP p=72 by=97 points=4->5
+CLIP p=72 by=101 points=5->4
+EXTENT check p=74 front=52.6780773496 back=-158.020963132
+CLIP p=74 by=90 points=4->4
+CLIP p=74 by=94 points=4->4
+CLIP p=74 by=98 points=4->4
+CLIP p=74 by=93 points=4->4
+CLIP p=74 by=97 points=4->4
+CLIP p=74 by=101 points=4->4
+EXTENT check p=76 front=155.783168597 back=-52.0121393127
+CLIP p=76 by=90 points=4->4
+CLIP p=76 by=94 points=4->4
+CLIP p=76 by=98 points=4->4
+CLIP p=76 by=93 points=4->4
+CLIP p=76 by=97 points=4->4
+CLIP p=76 by=101 points=4->4
+EXTENT check p=78 front=143.86385507 back=-44.5793969639
+CLIP p=78 by=90 points=4->4
+CLIP p=78 by=94 points=4->4
+CLIP p=78 by=98 points=4->4
+CLIP p=78 by=93 points=4->4
+CLIP p=78 by=97 points=4->4
+CLIP p=78 by=101 points=4->4
+EXTENT check p=80 front=105.473785174 back=-31.276316351
+CLIP p=80 by=90 points=4->4
+CLIP p=80 by=94 points=4->4
+CLIP p=80 by=98 points=4->4
+CLIP p=80 by=93 points=4->4
+CLIP p=80 by=97 points=4->4
+CLIP p=80 by=101 points=4->4
+EXTENT check p=82 front=158.020963132 back=-52.6780773496
+CLIP p=82 by=90 points=4->4
+CLIP p=82 by=94 points=4->4
+CLIP p=82 by=98 points=4->4
+CLIP p=82 by=93 points=4->4
+CLIP p=82 by=97 points=4->4
+CLIP p=82 by=101 points=4->4
+EXTENT check p=84 front=31.276316351 back=-105.473785174
+CLIP p=84 by=90 points=4->4
+CLIP p=84 by=94 points=4->4
+CLIP p=84 by=98 points=4->4
+CLIP p=84 by=93 points=4->4
+CLIP p=84 by=97 points=4->4
+CLIP p=84 by=101 points=4->4
+EXTENT check p=86 front=44.5793969639 back=-143.86385507
+CLIP p=86 by=90 points=4->4
+CLIP p=86 by=94 points=4->4
+CLIP p=86 by=98 points=4->4
+CLIP p=86 by=93 points=4->4
+CLIP p=86 by=97 points=4->4
+CLIP p=86 by=101 points=4->4
+EXTENT check p=88 front=52.0121393127 back=-155.783168597
+CLIP p=88 by=90 points=4->4
+CLIP p=88 by=94 points=4->4
+CLIP p=88 by=98 points=4->4
+CLIP p=88 by=93 points=4->4
+CLIP p=88 by=97 points=4->4
+CLIP p=88 by=101 points=4->4
+SELECT level=0 p=60 brushes=1
+EXTENT real volume=1 p=60 front=98.8871410129 back=-24
+CLIP p=60 by=90 points=4->4
+CLIP p=60 by=94 points=4->4
+CLIP p=60 by=98 points=4->4
+CLIP p=60 by=93 points=4->4
+CLIP p=60 by=97 points=4->4
+CLIP p=60 by=101 points=4->4
+LEAF level=1 brushes=0 volume=1
+EXTENT check p=52 front=136.633414193 back=-24
+CLIP p=52 by=90 points=4->4
+CLIP p=52 by=94 points=4->4
+CLIP p=52 by=98 points=4->4
+CLIP p=52 by=93 points=4->4
+CLIP p=52 by=97 points=4->4
+CLIP p=52 by=61 points=4->4
+EXTENT check p=54 front=24 back=-136.633414193
+CLIP p=54 by=90 points=4->4
+CLIP p=54 by=94 points=4->4
+CLIP p=54 by=98 points=4->4
+CLIP p=54 by=93 points=4->4
+CLIP p=54 by=97 points=4->4
+CLIP p=54 by=61 points=4->4
+EXTENT check p=56 front=138.812337765 back=-24
+CLIP p=56 by=90 points=4->4
+CLIP p=56 by=94 points=4->4
+CLIP p=56 by=98 points=4->4
+CLIP p=56 by=93 points=4->4
+CLIP p=56 by=97 points=4->4
+CLIP p=56 by=61 points=4->4
+EXTENT check p=58 front=24 back=-138.812337765
+CLIP p=58 by=90 points=4->4
+CLIP p=58 by=94 points=4->4
+CLIP p=58 by=98 points=4->4
+CLIP p=58 by=93 points=4->4
+CLIP p=58 by=97 points=4->4
+CLIP p=58 by=61 points=4->4
+EXTENT check p=48 front=24 back=-74.8871410129
+CLIP p=48 by=90 points=4->4
+CLIP p=48 by=94 points=4->4
+CLIP p=48 by=98 points=4->4
+CLIP p=48 by=93 points=4->4
+CLIP p=48 by=97 points=4->4
+CLIP p=48 by=61 points=4->4
+EXTENT check p=62 front=109.05024321 back=-23.8536508568
+CLIP p=62 by=90 points=4->4
+CLIP p=62 by=94 points=4->4
+CLIP p=62 by=98 points=4->4
+CLIP p=62 by=93 points=4->4
+CLIP p=62 by=97 points=4->4
+CLIP p=62 by=61 points=4->4
+EXTENT check p=64 front=47.221644337 back=-85.6822497303
+CLIP p=64 by=90 points=4->4
+CLIP p=64 by=94 points=4->4
+CLIP p=64 by=98 points=4->4
+CLIP p=64 by=93 points=4->4
+CLIP p=64 by=97 points=4->4
+CLIP p=64 by=61 points=4->4
+EXTENT check p=66 front=164.100598397 back=-52.4039386771
+CLIP p=66 by=90 points=4->4
+CLIP p=66 by=94 points=4->4
+CLIP p=66 by=98 points=4->4
+CLIP p=66 by=93 points=4->4
+CLIP p=66 by=97 points=4->5
+CLIP p=66 by=61 points=5->4
+EXTENT check p=68 front=54.3825032527 back=-162.122033822
+CLIP p=68 by=90 points=4->4
+CLIP p=68 by=94 points=4->5
+CLIP p=68 by=98 points=5->4
+CLIP p=68 by=93 points=4->4
+CLIP p=68 by=97 points=4->4
+CLIP p=68 by=61 points=4->4
+EXTENT check p=70 front=168.567560139 back=-57.1454507976
+CLIP p=70 by=90 points=4->5
+CLIP p=70 by=94 points=5->5
+CLIP p=70 by=98 points=5->5
+CLIP p=70 by=93 points=5->5
+CLIP p=70 by=97 points=5->3
+CLIP p=70 by=61 points=3->4
+EXTENT check p=72 front=52.0442584926 back=-173.668752444
+CLIP p=72 by=90 points=4->4
+CLIP p=72 by=94 points=4->3
+CLIP p=72 by=98 points=3->4
+CLIP p=72 by=93 points=4->4
+CLIP p=72 by=97 points=4->5
+CLIP p=72 by=61 points=5->4
+EXTENT check p=74 front=52.6780773496 back=-158.020963132
+CLIP p=74 by=90 points=4->4
+CLIP p=74 by=94 points=4->4
+CLIP p=74 by=98 points=4->4
+CLIP p=74 by=93 points=4->4
+CLIP p=74 by=97 points=4->4
+CLIP p=74 by=61 points=4->4
+EXTENT check p=76 front=155.783168597 back=-52.0121393127
+CLIP p=76 by=90 points=4->4
+CLIP p=76 by=94 points=4->4
+CLIP p=76 by=98 points=4->4
+CLIP p=76 by=93 points=4->4
+CLIP p=76 by=97 points=4->4
+CLIP p=76 by=61 points=4->4
+EXTENT check p=78 front=143.86385507 back=-23.8888441746
+CLIP p=78 by=90 points=4->4
+CLIP p=78 by=94 points=4->4
+CLIP p=78 by=98 points=4->4
+CLIP p=78 by=93 points=4->4
+CLIP p=78 by=97 points=4->4
+CLIP p=78 by=61 points=4->4
+EXTENT check p=80 front=105.473785174 back=-7.36959552789
+CLIP p=80 by=90 points=4->4
+CLIP p=80 by=94 points=4->4
+CLIP p=80 by=98 points=4->4
+CLIP p=80 by=93 points=4->4
+CLIP p=80 by=97 points=4->4
+CLIP p=80 by=61 points=4->4
+EXTENT check p=82 front=158.020963132 back=-52.6780773496
+CLIP p=82 by=90 points=4->4
+CLIP p=82 by=94 points=4->4
+CLIP p=82 by=98 points=4->4
+CLIP p=82 by=93 points=4->4
+CLIP p=82 by=97 points=4->4
+CLIP p=82 by=61 points=4->4
+EXTENT check p=84 front=31.276316351 back=-81.567064351
+CLIP p=84 by=90 points=4->4
+CLIP p=84 by=94 points=4->4
+CLIP p=84 by=98 points=4->4
+CLIP p=84 by=93 points=4->4
+CLIP p=84 by=97 points=4->4
+CLIP p=84 by=61 points=4->4
+EXTENT check p=86 front=44.5793969639 back=-123.17330228
+CLIP p=86 by=90 points=4->4
+CLIP p=86 by=94 points=4->4
+CLIP p=86 by=98 points=4->4
+CLIP p=86 by=93 points=4->4
+CLIP p=86 by=97 points=4->4
+CLIP p=86 by=61 points=4->4
+EXTENT check p=88 front=52.0121393127 back=-155.783168597
+CLIP p=88 by=90 points=4->4
+CLIP p=88 by=94 points=4->4
+CLIP p=88 by=98 points=4->4
+CLIP p=88 by=93 points=4->4
+CLIP p=88 by=97 points=4->4
+CLIP p=88 by=61 points=4->4
+SELECT level=1 p=48 brushes=1
+EXTENT real volume=1 p=48 front=24 back=-74.8871410129
+CLIP p=48 by=90 points=4->4
+CLIP p=48 by=94 points=4->4
+CLIP p=48 by=98 points=4->4
+CLIP p=48 by=93 points=4->4
+CLIP p=48 by=97 points=4->4
+CLIP p=48 by=61 points=4->4
+EXTENT check p=52 front=136.633414193 back=-24
+CLIP p=52 by=90 points=4->4
+CLIP p=52 by=94 points=4->4
+CLIP p=52 by=93 points=4->4
+CLIP p=52 by=97 points=4->4
+CLIP p=52 by=61 points=4->4
+CLIP p=52 by=48 points=4->4
+EXTENT check p=54 front=24 back=-136.633414193
+CLIP p=54 by=90 points=4->4
+CLIP p=54 by=94 points=4->4
+CLIP p=54 by=93 points=4->4
+CLIP p=54 by=97 points=4->4
+CLIP p=54 by=61 points=4->4
+CLIP p=54 by=48 points=4->4
+EXTENT check p=56 front=138.812337765 back=-24
+CLIP p=56 by=90 points=4->4
+CLIP p=56 by=94 points=4->4
+CLIP p=56 by=93 points=4->4
+CLIP p=56 by=97 points=4->4
+CLIP p=56 by=61 points=4->4
+CLIP p=56 by=48 points=4->4
+EXTENT check p=58 front=24 back=-138.812337765
+CLIP p=58 by=90 points=4->4
+CLIP p=58 by=94 points=4->4
+CLIP p=58 by=93 points=4->4
+CLIP p=58 by=97 points=4->4
+CLIP p=58 by=61 points=4->4
+CLIP p=58 by=48 points=4->4
+EXTENT check p=62 front=85.6822497303 back=-23.8536508568
+CLIP p=62 by=90 points=4->4
+CLIP p=62 by=94 points=4->4
+CLIP p=62 by=93 points=4->4
+CLIP p=62 by=97 points=4->4
+CLIP p=62 by=61 points=4->4
+CLIP p=62 by=48 points=4->4
+EXTENT check p=64 front=23.8536508568 back=-85.6822497303
+CLIP p=64 by=90 points=4->4
+CLIP p=64 by=94 points=4->4
+CLIP p=64 by=93 points=4->4
+CLIP p=64 by=97 points=4->4
+CLIP p=64 by=61 points=4->4
+CLIP p=64 by=48 points=4->4
+EXTENT check p=66 front=162.122033822 back=-52.4039386771
+CLIP p=66 by=90 points=4->4
+CLIP p=66 by=94 points=4->4
+CLIP p=66 by=93 points=4->4
+CLIP p=66 by=97 points=4->5
+CLIP p=66 by=61 points=5->4
+CLIP p=66 by=48 points=4->4
+EXTENT check p=68 front=52.4039386771 back=-162.122033822
+CLIP p=68 by=90 points=4->4
+CLIP p=68 by=94 points=4->5
+CLIP p=68 by=93 points=5->5
+CLIP p=68 by=97 points=5->5
+CLIP p=68 by=61 points=5->5
+CLIP p=68 by=48 points=5->4
+EXTENT check p=70 front=168.567560139 back=-52.0442584926
+CLIP p=70 by=90 points=4->5
+CLIP p=70 by=94 points=5->5
+CLIP p=70 by=93 points=5->6
+CLIP p=70 by=97 points=6->4
+CLIP p=70 by=61 points=4->5
+CLIP p=70 by=48 points=5->4
+EXTENT check p=72 front=52.0442584926 back=-168.567560139
+CLIP p=72 by=90 points=4->4
+CLIP p=72 by=94 points=4->3
+CLIP p=72 by=93 points=3->3
+CLIP p=72 by=97 points=3->4
+CLIP p=72 by=61 points=4->3
+CLIP p=72 by=48 points=3->4
+EXTENT check p=74 front=52.6780773496 back=-158.020963132
+CLIP p=74 by=90 points=4->4
+CLIP p=74 by=94 points=4->4
+CLIP p=74 by=93 points=4->4
+CLIP p=74 by=97 points=4->4
+CLIP p=74 by=61 points=4->4
+CLIP p=74 by=48 points=4->4
+EXTENT check p=76 front=155.783168597 back=-52.0121393127
+CLIP p=76 by=90 points=4->4
+CLIP p=76 by=94 points=4->4
+CLIP p=76 by=93 points=4->4
+CLIP p=76 by=97 points=4->4
+CLIP p=76 by=61 points=4->4
+CLIP p=76 by=48 points=4->4
+EXTENT check p=78 front=123.17330228 back=-23.8888441746
+CLIP p=78 by=90 points=4->4
+CLIP p=78 by=94 points=4->4
+CLIP p=78 by=93 points=4->4
+CLIP p=78 by=97 points=4->4
+CLIP p=78 by=61 points=4->4
+CLIP p=78 by=48 points=4->4
+EXTENT check p=80 front=81.567064351 back=-7.36959552789
+CLIP p=80 by=90 points=4->4
+CLIP p=80 by=94 points=4->4
+CLIP p=80 by=93 points=4->4
+CLIP p=80 by=97 points=4->4
+CLIP p=80 by=61 points=4->4
+CLIP p=80 by=48 points=4->4
+EXTENT check p=82 front=158.020963132 back=-52.6780773496
+CLIP p=82 by=90 points=4->4
+CLIP p=82 by=94 points=4->4
+CLIP p=82 by=93 points=4->4
+CLIP p=82 by=97 points=4->4
+CLIP p=82 by=61 points=4->4
+CLIP p=82 by=48 points=4->4
+EXTENT check p=84 front=7.36959552789 back=-81.567064351
+CLIP p=84 by=90 points=4->4
+CLIP p=84 by=94 points=4->4
+CLIP p=84 by=93 points=4->4
+CLIP p=84 by=97 points=4->4
+CLIP p=84 by=61 points=4->4
+CLIP p=84 by=48 points=4->4
+EXTENT check p=86 front=23.8888441746 back=-123.17330228
+CLIP p=86 by=90 points=4->4
+CLIP p=86 by=94 points=4->4
+CLIP p=86 by=93 points=4->4
+CLIP p=86 by=97 points=4->4
+CLIP p=86 by=61 points=4->4
+CLIP p=86 by=48 points=4->4
+EXTENT check p=88 front=52.0121393127 back=-155.783168597
+CLIP p=88 by=90 points=4->4
+CLIP p=88 by=94 points=4->4
+CLIP p=88 by=93 points=4->4
+CLIP p=88 by=97 points=4->4
+CLIP p=88 by=61 points=4->4
+CLIP p=88 by=48 points=4->4
+SELECT level=2 p=52 brushes=1
+EXTENT real volume=1 p=52 front=136.633414193 back=-24
+CLIP p=52 by=90 points=4->4
+CLIP p=52 by=94 points=4->4
+CLIP p=52 by=93 points=4->4
+CLIP p=52 by=97 points=4->4
+CLIP p=52 by=61 points=4->4
+CLIP p=52 by=48 points=4->4
+LEAF level=3 brushes=0 volume=1
+EXTENT check p=54 front=24 back=-112.633414193
+CLIP p=54 by=90 points=4->4
+CLIP p=54 by=94 points=4->4
+CLIP p=54 by=97 points=4->4
+CLIP p=54 by=61 points=4->4
+CLIP p=54 by=48 points=4->4
+CLIP p=54 by=53 points=4->4
+EXTENT check p=56 front=138.812337765 back=-24
+CLIP p=56 by=90 points=4->4
+CLIP p=56 by=94 points=4->4
+CLIP p=56 by=97 points=4->4
+CLIP p=56 by=61 points=4->4
+CLIP p=56 by=48 points=4->4
+CLIP p=56 by=53 points=4->4
+EXTENT check p=58 front=24 back=-138.812337765
+CLIP p=58 by=90 points=4->4
+CLIP p=58 by=94 points=4->4
+CLIP p=58 by=97 points=4->4
+CLIP p=58 by=61 points=4->4
+CLIP p=58 by=48 points=4->4
+CLIP p=58 by=53 points=4->4
+EXTENT check p=62 front=85.6822497303 back=-18.382190292
+CLIP p=62 by=90 points=4->4
+CLIP p=62 by=94 points=4->4
+CLIP p=62 by=97 points=4->4
+CLIP p=62 by=61 points=4->4
+CLIP p=62 by=48 points=4->4
+CLIP p=62 by=53 points=4->4
+EXTENT check p=64 front=23.8536508568 back=-80.2107891654
+CLIP p=64 by=90 points=4->4
+CLIP p=64 by=94 points=4->4
+CLIP p=64 by=97 points=4->4
+CLIP p=64 by=61 points=4->4
+CLIP p=64 by=48 points=4->4
+CLIP p=64 by=53 points=4->4
+EXTENT check p=66 front=153.671806765 back=-52.4039386771
+CLIP p=66 by=90 points=4->4
+CLIP p=66 by=94 points=4->4
+CLIP p=66 by=97 points=4->4
+CLIP p=66 by=61 points=4->4
+CLIP p=66 by=48 points=4->4
+CLIP p=66 by=53 points=4->5
+EXTENT check p=68 front=43.9537116206 back=-162.122033822
+CLIP p=68 by=90 points=4->4
+CLIP p=68 by=94 points=4->5
+CLIP p=68 by=97 points=5->6
+CLIP p=68 by=61 points=6->6
+CLIP p=68 by=48 points=6->4
+CLIP p=68 by=53 points=4->4
+EXTENT check p=70 front=168.567560139 back=-30.2576391591
+CLIP p=70 by=90 points=4->5
+CLIP p=70 by=94 points=5->5
+CLIP p=70 by=97 points=5->4
+CLIP p=70 by=61 points=4->4
+CLIP p=70 by=48 points=4->4
+CLIP p=70 by=53 points=4->4
+EXTENT check p=72 front=52.0442584926 back=-146.780940805
+CLIP p=72 by=90 points=4->4
+CLIP p=72 by=94 points=4->3
+CLIP p=72 by=97 points=3->4
+CLIP p=72 by=61 points=4->3
+CLIP p=72 by=48 points=3->4
+CLIP p=72 by=53 points=4->4
+EXTENT check p=74 front=43.796362113 back=-158.020963132
+CLIP p=74 by=90 points=4->4
+CLIP p=74 by=94 points=4->4
+CLIP p=74 by=97 points=4->4
+CLIP p=74 by=61 points=4->4
+CLIP p=74 by=48 points=4->4
+CLIP p=74 by=53 points=4->4
+EXTENT check p=76 front=155.783168597 back=-29.5598557575
+CLIP p=76 by=90 points=4->4
+CLIP p=76 by=94 points=4->4
+CLIP p=76 by=97 points=4->4
+CLIP p=76 by=61 points=4->4
+CLIP p=76 by=48 points=4->4
+CLIP p=76 by=53 points=4->4
+EXTENT check p=78 front=123.17330228 back=-23.8888441746
+CLIP p=78 by=90 points=4->4
+CLIP p=78 by=94 points=4->4
+CLIP p=78 by=97 points=4->4
+CLIP p=78 by=61 points=4->4
+CLIP p=78 by=48 points=4->4
+CLIP p=78 by=53 points=4->4
+EXTENT check p=80 front=81.567064351 back=-7.36959552789
+CLIP p=80 by=90 points=4->4
+CLIP p=80 by=94 points=4->4
+CLIP p=80 by=97 points=4->4
+CLIP p=80 by=61 points=4->4
+CLIP p=80 by=48 points=4->4
+CLIP p=80 by=53 points=4->4
+EXTENT check p=82 front=149.139247895 back=-52.6780773496
+CLIP p=82 by=90 points=4->4
+CLIP p=82 by=94 points=4->4
+CLIP p=82 by=97 points=4->4
+CLIP p=82 by=61 points=4->4
+CLIP p=82 by=48 points=4->4
+CLIP p=82 by=53 points=4->4
+EXTENT check p=84 front=7.36959552789 back=-81.567064351
+CLIP p=84 by=90 points=4->4
+CLIP p=84 by=94 points=4->4
+CLIP p=84 by=97 points=4->4
+CLIP p=84 by=61 points=4->4
+CLIP p=84 by=48 points=4->4
+CLIP p=84 by=53 points=4->4
+EXTENT check p=86 front=23.8888441746 back=-123.17330228
+CLIP p=86 by=90 points=4->4
+CLIP p=86 by=94 points=4->4
+CLIP p=86 by=97 points=4->4
+CLIP p=86 by=61 points=4->4
+CLIP p=86 by=48 points=4->4
+CLIP p=86 by=53 points=4->4
+EXTENT check p=88 front=52.0121393127 back=-133.330885042
+CLIP p=88 by=90 points=4->4
+CLIP p=88 by=94 points=4->4
+CLIP p=88 by=97 points=4->4
+CLIP p=88 by=61 points=4->4
+CLIP p=88 by=48 points=4->4
+CLIP p=88 by=53 points=4->4
+SELECT level=3 p=54 brushes=1
+EXTENT real volume=1 p=54 front=24 back=-112.633414193
+CLIP p=54 by=90 points=4->4
+CLIP p=54 by=94 points=4->4
+CLIP p=54 by=97 points=4->4
+CLIP p=54 by=61 points=4->4
+CLIP p=54 by=48 points=4->4
+CLIP p=54 by=53 points=4->4
+EXTENT check p=56 front=138.812337765 back=-24
+CLIP p=56 by=94 points=4->4
+CLIP p=56 by=97 points=4->4
+CLIP p=56 by=61 points=4->4
+CLIP p=56 by=48 points=4->4
+CLIP p=56 by=53 points=4->4
+CLIP p=56 by=54 points=4->4
+EXTENT check p=58 front=24 back=-138.812337765
+CLIP p=58 by=94 points=4->4
+CLIP p=58 by=97 points=4->4
+CLIP p=58 by=61 points=4->4
+CLIP p=58 by=48 points=4->4
+CLIP p=58 by=53 points=4->4
+CLIP p=58 by=54 points=4->4
+EXTENT check p=62 front=80.2107891654 back=-18.382190292
+CLIP p=62 by=94 points=4->4
+CLIP p=62 by=97 points=4->4
+CLIP p=62 by=61 points=4->4
+CLIP p=62 by=48 points=4->4
+CLIP p=62 by=53 points=4->4
+CLIP p=62 by=54 points=4->4
+EXTENT check p=64 front=18.382190292 back=-80.2107891654
+CLIP p=64 by=94 points=4->4
+CLIP p=64 by=97 points=4->4
+CLIP p=64 by=61 points=4->4
+CLIP p=64 by=48 points=4->4
+CLIP p=64 by=53 points=4->4
+CLIP p=64 by=54 points=4->4
+EXTENT check p=66 front=153.671806765 back=-43.9537116206
+CLIP p=66 by=94 points=4->5
+CLIP p=66 by=97 points=5->5
+CLIP p=66 by=61 points=5->4
+CLIP p=66 by=48 points=4->4
+CLIP p=66 by=53 points=4->5
+CLIP p=66 by=54 points=5->5
+EXTENT check p=68 front=43.9537116206 back=-153.671806765
+CLIP p=68 by=94 points=4->4
+CLIP p=68 by=97 points=4->5
+CLIP p=68 by=61 points=5->5
+CLIP p=68 by=48 points=5->4
+CLIP p=68 by=53 points=4->4
+CLIP p=68 by=54 points=4->5
+EXTENT check p=70 front=146.780940805 back=-30.2576391591
+CLIP p=70 by=94 points=4->4
+CLIP p=70 by=97 points=4->4
+CLIP p=70 by=61 points=4->4
+CLIP p=70 by=48 points=4->4
+CLIP p=70 by=53 points=4->4
+CLIP p=70 by=54 points=4->4
+EXTENT check p=72 front=30.2576391591 back=-146.780940805
+CLIP p=72 by=94 points=4->4
+CLIP p=72 by=97 points=4->4
+CLIP p=72 by=61 points=4->4
+CLIP p=72 by=48 points=4->4
+CLIP p=72 by=53 points=4->4
+CLIP p=72 by=54 points=4->4
+EXTENT check p=74 front=43.796362113 back=-149.139247895
+CLIP p=74 by=94 points=4->4
+CLIP p=74 by=97 points=4->4
+CLIP p=74 by=61 points=4->4
+CLIP p=74 by=48 points=4->4
+CLIP p=74 by=53 points=4->4
+CLIP p=74 by=54 points=4->4
+EXTENT check p=76 front=133.330885042 back=-29.5598557575
+CLIP p=76 by=94 points=4->4
+CLIP p=76 by=97 points=4->4
+CLIP p=76 by=61 points=4->4
+CLIP p=76 by=48 points=4->4
+CLIP p=76 by=53 points=4->4
+CLIP p=76 by=54 points=4->4
+EXTENT check p=78 front=123.17330228 back=-23.8888441746
+CLIP p=78 by=94 points=4->4
+CLIP p=78 by=97 points=4->4
+CLIP p=78 by=61 points=4->4
+CLIP p=78 by=48 points=4->4
+CLIP p=78 by=53 points=4->4
+CLIP p=78 by=54 points=4->4
+EXTENT check p=80 front=81.567064351 back=-7.36959552789
+CLIP p=80 by=94 points=4->4
+CLIP p=80 by=97 points=4->4
+CLIP p=80 by=61 points=4->4
+CLIP p=80 by=48 points=4->4
+CLIP p=80 by=53 points=4->4
+CLIP p=80 by=54 points=4->4
+EXTENT check p=82 front=149.139247895 back=-43.796362113
+CLIP p=82 by=94 points=4->4
+CLIP p=82 by=97 points=4->4
+CLIP p=82 by=61 points=4->4
+CLIP p=82 by=48 points=4->4
+CLIP p=82 by=53 points=4->4
+CLIP p=82 by=54 points=4->4
+EXTENT check p=84 front=7.36959552789 back=-81.567064351
+CLIP p=84 by=94 points=4->4
+CLIP p=84 by=97 points=4->4
+CLIP p=84 by=61 points=4->4
+CLIP p=84 by=48 points=4->4
+CLIP p=84 by=53 points=4->4
+CLIP p=84 by=54 points=4->4
+EXTENT check p=86 front=23.8888441746 back=-123.17330228
+CLIP p=86 by=94 points=4->4
+CLIP p=86 by=97 points=4->4
+CLIP p=86 by=61 points=4->4
+CLIP p=86 by=48 points=4->4
+CLIP p=86 by=53 points=4->4
+CLIP p=86 by=54 points=4->4
+EXTENT check p=88 front=29.5598557575 back=-133.330885042
+CLIP p=88 by=94 points=4->4
+CLIP p=88 by=97 points=4->4
+CLIP p=88 by=61 points=4->4
+CLIP p=88 by=48 points=4->4
+CLIP p=88 by=53 points=4->4
+CLIP p=88 by=54 points=4->4
+SELECT level=4 p=56 brushes=1
+EXTENT real volume=1 p=56 front=138.812337765 back=-24
+CLIP p=56 by=94 points=4->4
+CLIP p=56 by=97 points=4->4
+CLIP p=56 by=61 points=4->4
+CLIP p=56 by=48 points=4->4
+CLIP p=56 by=53 points=4->4
+CLIP p=56 by=54 points=4->4
+LEAF level=5 brushes=0 volume=1
+EXTENT check p=58 front=24 back=-114.812337765
+CLIP p=58 by=94 points=4->4
+CLIP p=58 by=61 points=4->4
+CLIP p=58 by=48 points=4->4
+CLIP p=58 by=53 points=4->4
+CLIP p=58 by=54 points=4->4
+CLIP p=58 by=57 points=4->4
+EXTENT check p=62 front=80.2107891654 back=-18.382190292
+CLIP p=62 by=94 points=4->4
+CLIP p=62 by=61 points=4->4
+CLIP p=62 by=48 points=4->4
+CLIP p=62 by=53 points=4->4
+CLIP p=62 by=54 points=4->4
+CLIP p=62 by=57 points=4->4
+EXTENT check p=64 front=18.382190292 back=-80.2107891654
+CLIP p=64 by=94 points=4->4
+CLIP p=64 by=61 points=4->4
+CLIP p=64 by=48 points=4->4
+CLIP p=64 by=53 points=4->4
+CLIP p=64 by=54 points=4->4
+CLIP p=64 by=57 points=4->4
+EXTENT check p=66 front=153.671806765 back=-21.5778553261
+CLIP p=66 by=94 points=4->5
+CLIP p=66 by=61 points=5->4
+CLIP p=66 by=48 points=4->4
+CLIP p=66 by=53 points=4->4
+CLIP p=66 by=54 points=4->4
+CLIP p=66 by=57 points=4->4
+EXTENT check p=68 front=43.9537116206 back=-131.295950471
+CLIP p=68 by=94 points=4->4
+CLIP p=68 by=61 points=4->4
+CLIP p=68 by=48 points=4->4
+CLIP p=68 by=53 points=4->4
+CLIP p=68 by=54 points=4->5
+CLIP p=68 by=57 points=5->5
+EXTENT check p=70 front=146.780940805 back=-21.5788687919
+CLIP p=70 by=94 points=4->4
+CLIP p=70 by=61 points=4->4
+CLIP p=70 by=48 points=4->4
+CLIP p=70 by=53 points=4->4
+CLIP p=70 by=54 points=4->4
+CLIP p=70 by=57 points=4->4
+EXTENT check p=72 front=30.2576391591 back=-138.102170438
+CLIP p=72 by=94 points=4->4
+CLIP p=72 by=61 points=4->4
+CLIP p=72 by=48 points=4->4
+CLIP p=72 by=53 points=4->4
+CLIP p=72 by=54 points=4->4
+CLIP p=72 by=57 points=4->4
+EXTENT check p=74 front=43.796362113 back=-126.843168992
+CLIP p=74 by=94 points=4->4
+CLIP p=74 by=61 points=4->4
+CLIP p=74 by=48 points=4->4
+CLIP p=74 by=53 points=4->4
+CLIP p=74 by=54 points=4->4
+CLIP p=74 by=57 points=4->4
+EXTENT check p=76 front=133.330885042 back=-21.0807659975
+CLIP p=76 by=94 points=4->4
+CLIP p=76 by=61 points=4->4
+CLIP p=76 by=48 points=4->4
+CLIP p=76 by=53 points=4->4
+CLIP p=76 by=54 points=4->4
+CLIP p=76 by=57 points=4->4
+EXTENT check p=78 front=123.17330228 back=-11.7273876306
+CLIP p=78 by=94 points=4->4
+CLIP p=78 by=61 points=4->4
+CLIP p=78 by=48 points=4->4
+CLIP p=78 by=53 points=4->4
+CLIP p=78 by=54 points=4->4
+CLIP p=78 by=57 points=4->4
+EXTENT check p=80 front=79.4531344831 back=-7.36959552789
+CLIP p=80 by=94 points=4->4
+CLIP p=80 by=61 points=4->4
+CLIP p=80 by=48 points=4->4
+CLIP p=80 by=53 points=4->4
+CLIP p=80 by=54 points=4->4
+CLIP p=80 by=57 points=4->4
+EXTENT check p=82 front=149.139247895 back=-21.5002832098
+CLIP p=82 by=94 points=4->4
+CLIP p=82 by=61 points=4->4
+CLIP p=82 by=48 points=4->4
+CLIP p=82 by=53 points=4->4
+CLIP p=82 by=54 points=4->4
+CLIP p=82 by=57 points=4->4
+EXTENT check p=84 front=5.25566566002 back=-81.567064351
+CLIP p=84 by=94 points=4->4
+CLIP p=84 by=61 points=4->4
+CLIP p=84 by=48 points=4->4
+CLIP p=84 by=53 points=4->4
+CLIP p=84 by=54 points=4->4
+CLIP p=84 by=57 points=4->4
+EXTENT check p=86 front=23.8888441746 back=-111.011845736
+CLIP p=86 by=94 points=4->4
+CLIP p=86 by=61 points=4->4
+CLIP p=86 by=48 points=4->4
+CLIP p=86 by=53 points=4->4
+CLIP p=86 by=54 points=4->4
+CLIP p=86 by=57 points=4->4
+EXTENT check p=88 front=29.5598557575 back=-124.851795282
+CLIP p=88 by=94 points=4->4
+CLIP p=88 by=61 points=4->4
+CLIP p=88 by=48 points=4->4
+CLIP p=88 by=53 points=4->4
+CLIP p=88 by=54 points=4->4
+CLIP p=88 by=57 points=4->4
+SELECT level=5 p=58 brushes=1
+EXTENT real volume=1 p=58 front=24 back=-114.812337765
+CLIP p=58 by=94 points=4->4
+CLIP p=58 by=61 points=4->4
+CLIP p=58 by=48 points=4->4
+CLIP p=58 by=53 points=4->4
+CLIP p=58 by=54 points=4->4
+CLIP p=58 by=57 points=4->4
+EXTENT check p=62 front=80.2107891654 back=-18.382190292
+CLIP p=62 by=61 points=4->4
+CLIP p=62 by=48 points=4->4
+CLIP p=62 by=53 points=4->4
+CLIP p=62 by=54 points=4->4
+CLIP p=62 by=57 points=4->4
+CLIP p=62 by=58 points=4->4
+EXTENT check p=64 front=18.382190292 back=-80.2107891654
+CLIP p=64 by=61 points=4->4
+CLIP p=64 by=48 points=4->4
+CLIP p=64 by=53 points=4->4
+CLIP p=64 by=54 points=4->4
+CLIP p=64 by=57 points=4->4
+CLIP p=64 by=58 points=4->4
+EXTENT check p=66 front=131.295950471 back=-21.5778553261
+CLIP p=66 by=61 points=4->4
+CLIP p=66 by=48 points=4->4
+CLIP p=66 by=53 points=4->4
+CLIP p=66 by=54 points=4->4
+CLIP p=66 by=57 points=4->4
+CLIP p=66 by=58 points=4->4
+EXTENT check p=68 front=21.577855326 back=-131.295950471
+CLIP p=68 by=61 points=4->4
+CLIP p=68 by=48 points=4->4
+CLIP p=68 by=53 points=4->4
+CLIP p=68 by=54 points=4->4
+CLIP p=68 by=57 points=4->4
+CLIP p=68 by=58 points=4->4
+EXTENT check p=70 front=138.102170438 back=-21.5788687919
+CLIP p=70 by=61 points=4->4
+CLIP p=70 by=48 points=4->4
+CLIP p=70 by=53 points=4->4
+CLIP p=70 by=54 points=4->4
+CLIP p=70 by=57 points=4->4
+CLIP p=70 by=58 points=4->4
+EXTENT check p=72 front=21.5788687919 back=-138.102170438
+CLIP p=72 by=61 points=4->4
+CLIP p=72 by=48 points=4->4
+CLIP p=72 by=53 points=4->5
+CLIP p=72 by=54 points=5->5
+CLIP p=72 by=57 points=5->5
+CLIP p=72 by=58 points=5->4
+EXTENT check p=74 front=21.5002832098 back=-126.843168992
+CLIP p=74 by=61 points=4->4
+CLIP p=74 by=48 points=4->4
+CLIP p=74 by=53 points=4->4
+CLIP p=74 by=54 points=4->4
+CLIP p=74 by=57 points=4->4
+CLIP p=74 by=58 points=4->4
+EXTENT check p=76 front=124.851795282 back=-21.0807659975
+CLIP p=76 by=61 points=4->4
+CLIP p=76 by=48 points=4->4
+CLIP p=76 by=53 points=4->4
+CLIP p=76 by=54 points=4->4
+CLIP p=76 by=57 points=4->4
+CLIP p=76 by=58 points=4->4
+EXTENT check p=78 front=111.011845736 back=-11.7273876306
+CLIP p=78 by=61 points=4->4
+CLIP p=78 by=48 points=4->4
+CLIP p=78 by=53 points=4->4
+CLIP p=78 by=54 points=4->4
+CLIP p=78 by=57 points=4->4
+CLIP p=78 by=58 points=4->4
+EXTENT check p=80 front=79.4531344831 back=-5.25566566002
+CLIP p=80 by=61 points=4->4
+CLIP p=80 by=48 points=4->4
+CLIP p=80 by=53 points=4->4
+CLIP p=80 by=54 points=4->4
+CLIP p=80 by=57 points=4->4
+CLIP p=80 by=58 points=4->4
+EXTENT check p=82 front=126.843168992 back=-21.5002832098
+CLIP p=82 by=61 points=4->4
+CLIP p=82 by=48 points=4->4
+CLIP p=82 by=53 points=4->4
+CLIP p=82 by=54 points=4->4
+CLIP p=82 by=57 points=4->4
+CLIP p=82 by=58 points=4->4
+EXTENT check p=84 front=5.25566566002 back=-79.4531344831
+CLIP p=84 by=61 points=4->4
+CLIP p=84 by=48 points=4->4
+CLIP p=84 by=53 points=4->4
+CLIP p=84 by=54 points=4->4
+CLIP p=84 by=57 points=4->4
+CLIP p=84 by=58 points=4->4
+EXTENT check p=86 front=11.7273876306 back=-111.011845736
+CLIP p=86 by=61 points=4->4
+CLIP p=86 by=48 points=4->4
+CLIP p=86 by=53 points=4->4
+CLIP p=86 by=54 points=4->4
+CLIP p=86 by=57 points=4->4
+CLIP p=86 by=58 points=4->4
+EXTENT check p=88 front=21.0807659975 back=-124.851795282
+CLIP p=88 by=61 points=4->4
+CLIP p=88 by=48 points=4->4
+CLIP p=88 by=53 points=4->4
+CLIP p=88 by=54 points=4->4
+CLIP p=88 by=57 points=4->4
+CLIP p=88 by=58 points=4->4
+SELECT level=6 p=62 brushes=1
+EXTENT real volume=1 p=62 front=80.2107891654 back=-18.382190292
+CLIP p=62 by=61 points=4->4
+CLIP p=62 by=48 points=4->4
+CLIP p=62 by=53 points=4->4
+CLIP p=62 by=54 points=4->4
+CLIP p=62 by=57 points=4->4
+CLIP p=62 by=58 points=4->4
+LEAF level=7 brushes=0 volume=1
+EXTENT check p=64 front=18.382190292 back=-61.8285988734
+CLIP p=64 by=61 points=4->4
+CLIP p=64 by=48 points=4->4
+CLIP p=64 by=53 points=4->4
+CLIP p=64 by=54 points=4->4
+CLIP p=64 by=57 points=4->4
+CLIP p=64 by=58 points=4->4
+CLIP p=64 by=63 points=4->4
+EXTENT check p=66 front=131.295950471 back=-21.5778553261
+CLIP p=66 by=61 points=4->4
+CLIP p=66 by=48 points=4->4
+CLIP p=66 by=53 points=4->4
+CLIP p=66 by=54 points=4->4
+CLIP p=66 by=57 points=4->4
+CLIP p=66 by=58 points=4->4
+CLIP p=66 by=63 points=4->5
+EXTENT check p=68 front=21.577855326 back=-131.295950471
+CLIP p=68 by=61 points=4->4
+CLIP p=68 by=48 points=4->4
+CLIP p=68 by=53 points=4->4
+CLIP p=68 by=54 points=4->4
+CLIP p=68 by=57 points=4->4
+CLIP p=68 by=58 points=4->4
+CLIP p=68 by=63 points=4->4
+EXTENT check p=70 front=138.102170438 back=-21.5788687919
+CLIP p=70 by=61 points=4->4
+CLIP p=70 by=48 points=4->4
+CLIP p=70 by=53 points=4->4
+CLIP p=70 by=54 points=4->4
+CLIP p=70 by=57 points=4->4
+CLIP p=70 by=58 points=4->4
+CLIP p=70 by=63 points=4->4
+EXTENT check p=72 front=21.5788687919 back=-138.102170438
+CLIP p=72 by=61 points=4->4
+CLIP p=72 by=48 points=4->4
+CLIP p=72 by=53 points=4->5
+CLIP p=72 by=54 points=5->5
+CLIP p=72 by=57 points=5->5
+CLIP p=72 by=58 points=5->4
+CLIP p=72 by=63 points=4->4
+EXTENT check p=74 front=21.5002832098 back=-126.843168992
+CLIP p=74 by=61 points=4->4
+CLIP p=74 by=48 points=4->4
+CLIP p=74 by=53 points=4->4
+CLIP p=74 by=54 points=4->4
+CLIP p=74 by=57 points=4->4
+CLIP p=74 by=58 points=4->4
+CLIP p=74 by=63 points=4->4
+EXTENT check p=76 front=124.851795282 back=-21.0807659975
+CLIP p=76 by=61 points=4->4
+CLIP p=76 by=48 points=4->4
+CLIP p=76 by=53 points=4->4
+CLIP p=76 by=54 points=4->4
+CLIP p=76 by=57 points=4->4
+CLIP p=76 by=58 points=4->4
+CLIP p=76 by=63 points=4->4
+EXTENT check p=78 front=111.011845736 back=-11.7273876306
+CLIP p=78 by=61 points=4->4
+CLIP p=78 by=48 points=4->4
+CLIP p=78 by=53 points=4->4
+CLIP p=78 by=54 points=4->4
+CLIP p=78 by=57 points=4->4
+CLIP p=78 by=58 points=4->4
+CLIP p=78 by=63 points=4->4
+EXTENT check p=80 front=79.4531344831 back=-5.25566566002
+CLIP p=80 by=61 points=4->4
+CLIP p=80 by=48 points=4->4
+CLIP p=80 by=53 points=4->4
+CLIP p=80 by=54 points=4->4
+CLIP p=80 by=57 points=4->4
+CLIP p=80 by=58 points=4->4
+CLIP p=80 by=63 points=4->4
+EXTENT check p=82 front=126.843168992 back=-21.5002832098
+CLIP p=82 by=61 points=4->4
+CLIP p=82 by=48 points=4->4
+CLIP p=82 by=53 points=4->4
+CLIP p=82 by=54 points=4->4
+CLIP p=82 by=57 points=4->4
+CLIP p=82 by=58 points=4->4
+CLIP p=82 by=63 points=4->5
+EXTENT check p=84 front=5.25566566002 back=-79.4531344831
+CLIP p=84 by=61 points=4->4
+CLIP p=84 by=48 points=4->4
+CLIP p=84 by=53 points=4->4
+CLIP p=84 by=54 points=4->4
+CLIP p=84 by=57 points=4->4
+CLIP p=84 by=58 points=4->4
+CLIP p=84 by=63 points=4->4
+EXTENT check p=86 front=11.7273876306 back=-111.011845736
+CLIP p=86 by=61 points=4->4
+CLIP p=86 by=48 points=4->4
+CLIP p=86 by=53 points=4->4
+CLIP p=86 by=54 points=4->4
+CLIP p=86 by=57 points=4->4
+CLIP p=86 by=58 points=4->4
+CLIP p=86 by=63 points=4->4
+EXTENT check p=88 front=21.0807659975 back=-124.851795282
+CLIP p=88 by=61 points=4->4
+CLIP p=88 by=48 points=4->4
+CLIP p=88 by=53 points=4->4
+CLIP p=88 by=54 points=4->4
+CLIP p=88 by=57 points=4->4
+CLIP p=88 by=58 points=4->4
+CLIP p=88 by=63 points=4->4
+SELECT level=7 p=64 brushes=1
+EXTENT real volume=1 p=64 front=18.382190292 back=-61.8285988734
+CLIP p=64 by=61 points=4->4
+CLIP p=64 by=48 points=4->4
+CLIP p=64 by=53 points=4->4
+CLIP p=64 by=54 points=4->4
+CLIP p=64 by=57 points=4->4
+CLIP p=64 by=58 points=4->4
+CLIP p=64 by=63 points=4->4
+EXTENT check p=66 front=131.295950471 back=-21.5778553261
+CLIP p=66 by=61 points=4->4
+CLIP p=66 by=48 points=4->4
+CLIP p=66 by=53 points=4->4
+CLIP p=66 by=54 points=4->4
+CLIP p=66 by=57 points=4->4
+CLIP p=66 by=58 points=4->4
+CLIP p=66 by=63 points=4->5
+CLIP p=66 by=64 points=5->5
+EXTENT check p=68 front=21.577855326 back=-131.295950471
+CLIP p=68 by=61 points=4->4
+CLIP p=68 by=48 points=4->4
+CLIP p=68 by=53 points=4->4
+CLIP p=68 by=54 points=4->4
+CLIP p=68 by=57 points=4->4
+CLIP p=68 by=58 points=4->4
+CLIP p=68 by=63 points=4->4
+CLIP p=68 by=64 points=4->5
+EXTENT check p=70 front=138.102170438 back=-21.5788687919
+CLIP p=70 by=61 points=4->4
+CLIP p=70 by=48 points=4->4
+CLIP p=70 by=53 points=4->4
+CLIP p=70 by=54 points=4->4
+CLIP p=70 by=57 points=4->4
+CLIP p=70 by=58 points=4->4
+CLIP p=70 by=63 points=4->4
+CLIP p=70 by=64 points=4->4
+EXTENT check p=72 front=21.5788687919 back=-138.102170438
+CLIP p=72 by=61 points=4->4
+CLIP p=72 by=48 points=4->4
+CLIP p=72 by=53 points=4->5
+CLIP p=72 by=54 points=5->5
+CLIP p=72 by=57 points=5->5
+CLIP p=72 by=58 points=5->4
+CLIP p=72 by=63 points=4->4
+CLIP p=72 by=64 points=4->4
+EXTENT check p=74 front=21.5002832098 back=-126.843168992
+CLIP p=74 by=61 points=4->4
+CLIP p=74 by=48 points=4->4
+CLIP p=74 by=53 points=4->4
+CLIP p=74 by=54 points=4->4
+CLIP p=74 by=57 points=4->4
+CLIP p=74 by=58 points=4->4
+CLIP p=74 by=63 points=4->4
+CLIP p=74 by=64 points=4->5
+EXTENT check p=76 front=124.851795282 back=-21.0807659975
+CLIP p=76 by=61 points=4->4
+CLIP p=76 by=48 points=4->4
+CLIP p=76 by=53 points=4->4
+CLIP p=76 by=54 points=4->4
+CLIP p=76 by=57 points=4->4
+CLIP p=76 by=58 points=4->4
+CLIP p=76 by=63 points=4->4
+CLIP p=76 by=64 points=4->4
+EXTENT check p=78 front=111.011845736 back=-11.7273876306
+CLIP p=78 by=61 points=4->4
+CLIP p=78 by=48 points=4->4
+CLIP p=78 by=53 points=4->4
+CLIP p=78 by=54 points=4->4
+CLIP p=78 by=57 points=4->4
+CLIP p=78 by=58 points=4->4
+CLIP p=78 by=63 points=4->4
+CLIP p=78 by=64 points=4->4
+EXTENT check p=80 front=79.4531344831 back=-5.25566566002
+CLIP p=80 by=61 points=4->4
+CLIP p=80 by=48 points=4->4
+CLIP p=80 by=53 points=4->4
+CLIP p=80 by=54 points=4->4
+CLIP p=80 by=57 points=4->4
+CLIP p=80 by=58 points=4->4
+CLIP p=80 by=63 points=4->4
+CLIP p=80 by=64 points=4->4
+EXTENT check p=82 front=126.843168992 back=-21.5002832098
+CLIP p=82 by=61 points=4->4
+CLIP p=82 by=48 points=4->4
+CLIP p=82 by=53 points=4->4
+CLIP p=82 by=54 points=4->4
+CLIP p=82 by=57 points=4->4
+CLIP p=82 by=58 points=4->4
+CLIP p=82 by=63 points=4->5
+CLIP p=82 by=64 points=5->5
+EXTENT check p=84 front=5.25566566002 back=-79.4531344831
+CLIP p=84 by=61 points=4->4
+CLIP p=84 by=48 points=4->4
+CLIP p=84 by=53 points=4->4
+CLIP p=84 by=54 points=4->4
+CLIP p=84 by=57 points=4->4
+CLIP p=84 by=58 points=4->4
+CLIP p=84 by=63 points=4->4
+CLIP p=84 by=64 points=4->4
+EXTENT check p=86 front=11.7273876306 back=-111.011845736
+CLIP p=86 by=61 points=4->4
+CLIP p=86 by=48 points=4->4
+CLIP p=86 by=53 points=4->4
+CLIP p=86 by=54 points=4->4
+CLIP p=86 by=57 points=4->4
+CLIP p=86 by=58 points=4->4
+CLIP p=86 by=63 points=4->4
+CLIP p=86 by=64 points=4->4
+EXTENT check p=88 front=21.0807659975 back=-124.851795282
+CLIP p=88 by=61 points=4->4
+CLIP p=88 by=48 points=4->4
+CLIP p=88 by=53 points=4->4
+CLIP p=88 by=54 points=4->4
+CLIP p=88 by=57 points=4->4
+CLIP p=88 by=58 points=4->4
+CLIP p=88 by=63 points=4->4
+CLIP p=88 by=64 points=4->4
+SELECT level=8 p=70 brushes=1
+EXTENT real volume=1 p=70 front=138.102170438 back=-21.5788687919
+CLIP p=70 by=61 points=4->4
+CLIP p=70 by=48 points=4->4
+CLIP p=70 by=53 points=4->4
+CLIP p=70 by=54 points=4->4
+CLIP p=70 by=57 points=4->4
+CLIP p=70 by=58 points=4->4
+CLIP p=70 by=63 points=4->4
+CLIP p=70 by=64 points=4->4
+LEAF level=9 brushes=0 volume=1
+EXTENT check p=66 front=131.295950471 back=-21.5778553261
+CLIP p=66 by=61 points=4->4
+CLIP p=66 by=48 points=4->4
+CLIP p=66 by=53 points=4->4
+CLIP p=66 by=54 points=4->4
+CLIP p=66 by=57 points=4->4
+CLIP p=66 by=58 points=4->4
+CLIP p=66 by=63 points=4->5
+CLIP p=66 by=64 points=5->5
+CLIP p=66 by=71 points=5->5
+EXTENT check p=68 front=21.577855326 back=-131.295950471
+CLIP p=68 by=61 points=4->4
+CLIP p=68 by=48 points=4->4
+CLIP p=68 by=53 points=4->4
+CLIP p=68 by=54 points=4->4
+CLIP p=68 by=57 points=4->4
+CLIP p=68 by=58 points=4->4
+CLIP p=68 by=63 points=4->4
+CLIP p=68 by=64 points=4->5
+CLIP p=68 by=71 points=5->5
+EXTENT check p=72 front=21.5788687919 back=-116.523301646
+CLIP p=72 by=61 points=4->4
+CLIP p=72 by=48 points=4->4
+CLIP p=72 by=53 points=4->5
+CLIP p=72 by=54 points=5->5
+CLIP p=72 by=57 points=5->5
+CLIP p=72 by=58 points=5->4
+CLIP p=72 by=63 points=4->4
+CLIP p=72 by=64 points=4->4
+CLIP p=72 by=71 points=4->4
+EXTENT check p=74 front=21.5002832098 back=-126.843168992
+CLIP p=74 by=61 points=4->4
+CLIP p=74 by=48 points=4->4
+CLIP p=74 by=53 points=4->4
+CLIP p=74 by=54 points=4->4
+CLIP p=74 by=57 points=4->4
+CLIP p=74 by=58 points=4->4
+CLIP p=74 by=63 points=4->4
+CLIP p=74 by=64 points=4->5
+CLIP p=74 by=71 points=5->5
+EXTENT check p=76 front=124.851795282 back=-11.6289235784
+CLIP p=76 by=61 points=4->4
+CLIP p=76 by=48 points=4->4
+CLIP p=76 by=53 points=4->4
+CLIP p=76 by=54 points=4->4
+CLIP p=76 by=57 points=4->4
+CLIP p=76 by=58 points=4->4
+CLIP p=76 by=63 points=4->4
+CLIP p=76 by=64 points=4->4
+CLIP p=76 by=71 points=4->4
+EXTENT check p=78 front=111.011845736 back=-11.7273876306
+CLIP p=78 by=61 points=4->4
+CLIP p=78 by=48 points=4->4
+CLIP p=78 by=53 points=4->4
+CLIP p=78 by=54 points=4->4
+CLIP p=78 by=57 points=4->4
+CLIP p=78 by=58 points=4->4
+CLIP p=78 by=63 points=4->4
+CLIP p=78 by=64 points=4->4
+CLIP p=78 by=71 points=4->4
+EXTENT check p=80 front=79.4531344831 back=-5.25566566002
+CLIP p=80 by=61 points=4->4
+CLIP p=80 by=48 points=4->4
+CLIP p=80 by=53 points=4->4
+CLIP p=80 by=54 points=4->4
+CLIP p=80 by=57 points=4->4
+CLIP p=80 by=58 points=4->4
+CLIP p=80 by=63 points=4->4
+CLIP p=80 by=64 points=4->4
+CLIP p=80 by=71 points=4->4
+EXTENT check p=82 front=126.843168992 back=-21.5002832098
+CLIP p=82 by=61 points=4->4
+CLIP p=82 by=48 points=4->4
+CLIP p=82 by=53 points=4->4
+CLIP p=82 by=54 points=4->4
+CLIP p=82 by=57 points=4->4
+CLIP p=82 by=58 points=4->4
+CLIP p=82 by=63 points=4->5
+CLIP p=82 by=64 points=5->5
+CLIP p=82 by=71 points=5->5
+EXTENT check p=84 front=5.25566566002 back=-79.4531344831
+CLIP p=84 by=61 points=4->4
+CLIP p=84 by=48 points=4->4
+CLIP p=84 by=53 points=4->4
+CLIP p=84 by=54 points=4->4
+CLIP p=84 by=57 points=4->4
+CLIP p=84 by=58 points=4->4
+CLIP p=84 by=63 points=4->4
+CLIP p=84 by=64 points=4->4
+CLIP p=84 by=71 points=4->4
+EXTENT check p=86 front=11.7273876306 back=-111.011845736
+CLIP p=86 by=61 points=4->4
+CLIP p=86 by=48 points=4->4
+CLIP p=86 by=53 points=4->4
+CLIP p=86 by=54 points=4->4
+CLIP p=86 by=57 points=4->4
+CLIP p=86 by=58 points=4->4
+CLIP p=86 by=63 points=4->4
+CLIP p=86 by=64 points=4->4
+CLIP p=86 by=71 points=4->4
+EXTENT check p=88 front=21.0807659975 back=-115.399952863
+CLIP p=88 by=61 points=4->4
+CLIP p=88 by=48 points=4->4
+CLIP p=88 by=53 points=4->4
+CLIP p=88 by=54 points=4->4
+CLIP p=88 by=57 points=4->4
+CLIP p=88 by=58 points=4->4
+CLIP p=88 by=63 points=4->4
+CLIP p=88 by=64 points=4->4
+CLIP p=88 by=71 points=4->4
+SELECT level=9 p=72 brushes=1
+EXTENT real volume=1 p=72 front=21.5788687919 back=-116.523301646
+CLIP p=72 by=61 points=4->4
+CLIP p=72 by=48 points=4->4
+CLIP p=72 by=53 points=4->5
+CLIP p=72 by=54 points=5->5
+CLIP p=72 by=57 points=5->5
+CLIP p=72 by=58 points=5->4
+CLIP p=72 by=63 points=4->4
+CLIP p=72 by=64 points=4->4
+CLIP p=72 by=71 points=4->4
+EXTENT check p=66 front=131.295950471 back=-21.5778553261
+CLIP p=66 by=61 points=4->4
+CLIP p=66 by=48 points=4->4
+CLIP p=66 by=53 points=4->4
+CLIP p=66 by=54 points=4->4
+CLIP p=66 by=57 points=4->4
+CLIP p=66 by=58 points=4->4
+CLIP p=66 by=63 points=4->5
+CLIP p=66 by=64 points=5->5
+CLIP p=66 by=71 points=5->5
+CLIP p=66 by=72 points=5->5
+EXTENT check p=68 front=21.577855326 back=-131.295950471
+CLIP p=68 by=61 points=4->4
+CLIP p=68 by=48 points=4->4
+CLIP p=68 by=53 points=4->4
+CLIP p=68 by=54 points=4->4
+CLIP p=68 by=57 points=4->4
+CLIP p=68 by=58 points=4->4
+CLIP p=68 by=63 points=4->4
+CLIP p=68 by=64 points=4->5
+CLIP p=68 by=71 points=5->5
+CLIP p=68 by=72 points=5->5
+EXTENT check p=74 front=21.5002832098 back=-126.843168992
+CLIP p=74 by=61 points=4->4
+CLIP p=74 by=48 points=4->4
+CLIP p=74 by=53 points=4->4
+CLIP p=74 by=54 points=4->4
+CLIP p=74 by=57 points=4->4
+CLIP p=74 by=58 points=4->4
+CLIP p=74 by=63 points=4->4
+CLIP p=74 by=64 points=4->5
+CLIP p=74 by=71 points=5->5
+CLIP p=74 by=72 points=5->5
+EXTENT check p=76 front=115.399952863 back=-11.6289235784
+CLIP p=76 by=61 points=4->4
+CLIP p=76 by=48 points=4->4
+CLIP p=76 by=53 points=4->4
+CLIP p=76 by=54 points=4->4
+CLIP p=76 by=57 points=4->4
+CLIP p=76 by=58 points=4->4
+CLIP p=76 by=63 points=4->4
+CLIP p=76 by=64 points=4->4
+CLIP p=76 by=71 points=4->4
+CLIP p=76 by=72 points=4->4
+EXTENT check p=78 front=111.011845736 back=-11.7273876306
+CLIP p=78 by=61 points=4->4
+CLIP p=78 by=48 points=4->4
+CLIP p=78 by=53 points=4->4
+CLIP p=78 by=54 points=4->4
+CLIP p=78 by=57 points=4->4
+CLIP p=78 by=58 points=4->4
+CLIP p=78 by=63 points=4->4
+CLIP p=78 by=64 points=4->4
+CLIP p=78 by=71 points=4->4
+CLIP p=78 by=72 points=4->4
+EXTENT check p=80 front=79.4531344831 back=-5.25566566002
+CLIP p=80 by=61 points=4->4
+CLIP p=80 by=48 points=4->4
+CLIP p=80 by=53 points=4->4
+CLIP p=80 by=54 points=4->4
+CLIP p=80 by=57 points=4->4
+CLIP p=80 by=58 points=4->4
+CLIP p=80 by=63 points=4->4
+CLIP p=80 by=64 points=4->4
+CLIP p=80 by=71 points=4->4
+CLIP p=80 by=72 points=4->4
+EXTENT check p=82 front=126.843168992 back=-21.5002832098
+CLIP p=82 by=61 points=4->4
+CLIP p=82 by=48 points=4->4
+CLIP p=82 by=53 points=4->4
+CLIP p=82 by=54 points=4->4
+CLIP p=82 by=57 points=4->4
+CLIP p=82 by=58 points=4->4
+CLIP p=82 by=63 points=4->5
+CLIP p=82 by=64 points=5->5
+CLIP p=82 by=71 points=5->5
+CLIP p=82 by=72 points=5->5
+EXTENT check p=84 front=5.25566566002 back=-79.4531344831
+CLIP p=84 by=61 points=4->4
+CLIP p=84 by=48 points=4->4
+CLIP p=84 by=53 points=4->4
+CLIP p=84 by=54 points=4->4
+CLIP p=84 by=57 points=4->4
+CLIP p=84 by=58 points=4->4
+CLIP p=84 by=63 points=4->4
+CLIP p=84 by=64 points=4->4
+CLIP p=84 by=71 points=4->4
+CLIP p=84 by=72 points=4->4
+EXTENT check p=86 front=11.7273876306 back=-111.011845736
+CLIP p=86 by=61 points=4->4
+CLIP p=86 by=48 points=4->4
+CLIP p=86 by=53 points=4->4
+CLIP p=86 by=54 points=4->4
+CLIP p=86 by=57 points=4->4
+CLIP p=86 by=58 points=4->4
+CLIP p=86 by=63 points=4->4
+CLIP p=86 by=64 points=4->4
+CLIP p=86 by=71 points=4->4
+CLIP p=86 by=72 points=4->4
+EXTENT check p=88 front=11.6289235784 back=-115.399952863
+CLIP p=88 by=61 points=4->4
+CLIP p=88 by=48 points=4->4
+CLIP p=88 by=53 points=4->4
+CLIP p=88 by=54 points=4->4
+CLIP p=88 by=57 points=4->4
+CLIP p=88 by=58 points=4->4
+CLIP p=88 by=63 points=4->4
+CLIP p=88 by=64 points=4->4
+CLIP p=88 by=71 points=4->4
+CLIP p=88 by=72 points=4->4
+SELECT level=10 p=66 brushes=1
+EXTENT real volume=1 p=66 front=131.295950471 back=-21.5778553261
+CLIP p=66 by=61 points=4->4
+CLIP p=66 by=48 points=4->4
+CLIP p=66 by=53 points=4->4
+CLIP p=66 by=54 points=4->4
+CLIP p=66 by=57 points=4->4
+CLIP p=66 by=58 points=4->4
+CLIP p=66 by=63 points=4->5
+CLIP p=66 by=64 points=5->5
+CLIP p=66 by=71 points=5->5
+CLIP p=66 by=72 points=5->5
+LEAF level=11 brushes=0 volume=1
+EXTENT check p=68 front=21.577855326 back=-109.718095145
+CLIP p=68 by=61 points=4->4
+CLIP p=68 by=48 points=4->4
+CLIP p=68 by=53 points=4->4
+CLIP p=68 by=54 points=4->4
+CLIP p=68 by=57 points=4->4
+CLIP p=68 by=58 points=4->4
+CLIP p=68 by=63 points=4->4
+CLIP p=68 by=64 points=4->5
+CLIP p=68 by=71 points=5->5
+CLIP p=68 by=72 points=5->5
+CLIP p=68 by=67 points=5->5
+EXTENT check p=74 front=21.5002832098 back=-109.943076559
+CLIP p=74 by=61 points=4->4
+CLIP p=74 by=48 points=4->4
+CLIP p=74 by=53 points=4->4
+CLIP p=74 by=54 points=4->4
+CLIP p=74 by=57 points=4->4
+CLIP p=74 by=58 points=4->4
+CLIP p=74 by=63 points=4->4
+CLIP p=74 by=64 points=4->5
+CLIP p=74 by=71 points=5->5
+CLIP p=74 by=72 points=5->5
+CLIP p=74 by=67 points=5->5
+EXTENT check p=76 front=115.399952863 back=-11.6289235784
+CLIP p=76 by=61 points=4->4
+CLIP p=76 by=48 points=4->4
+CLIP p=76 by=53 points=4->4
+CLIP p=76 by=54 points=4->4
+CLIP p=76 by=57 points=4->4
+CLIP p=76 by=58 points=4->4
+CLIP p=76 by=63 points=4->4
+CLIP p=76 by=64 points=4->4
+CLIP p=76 by=71 points=4->4
+CLIP p=76 by=72 points=4->4
+CLIP p=76 by=67 points=4->4
+EXTENT check p=78 front=111.011845736 back=-6.1236878286
+CLIP p=78 by=61 points=4->4
+CLIP p=78 by=48 points=4->4
+CLIP p=78 by=53 points=4->4
+CLIP p=78 by=54 points=4->4
+CLIP p=78 by=57 points=4->4
+CLIP p=78 by=58 points=4->4
+CLIP p=78 by=63 points=4->4
+CLIP p=78 by=64 points=4->4
+CLIP p=78 by=71 points=4->4
+CLIP p=78 by=72 points=4->4
+CLIP p=78 by=67 points=4->4
+EXTENT check p=80 front=79.4531344831 back=-5.25566566002
+CLIP p=80 by=61 points=4->4
+CLIP p=80 by=48 points=4->4
+CLIP p=80 by=53 points=4->4
+CLIP p=80 by=54 points=4->4
+CLIP p=80 by=57 points=4->4
+CLIP p=80 by=58 points=4->4
+CLIP p=80 by=63 points=4->4
+CLIP p=80 by=64 points=4->4
+CLIP p=80 by=71 points=4->4
+CLIP p=80 by=72 points=4->4
+CLIP p=80 by=67 points=4->4
+EXTENT check p=82 front=126.843168992 back=-4.60019077693
+CLIP p=82 by=61 points=4->4
+CLIP p=82 by=48 points=4->4
+CLIP p=82 by=53 points=4->4
+CLIP p=82 by=54 points=4->4
+CLIP p=82 by=57 points=4->4
+CLIP p=82 by=58 points=4->4
+CLIP p=82 by=63 points=4->5
+CLIP p=82 by=64 points=5->5
+CLIP p=82 by=71 points=5->5
+CLIP p=82 by=72 points=5->5
+CLIP p=82 by=67 points=5->4
+EXTENT check p=84 front=5.25566566002 back=-79.4531344831
+CLIP p=84 by=61 points=4->4
+CLIP p=84 by=48 points=4->4
+CLIP p=84 by=53 points=4->4
+CLIP p=84 by=54 points=4->4
+CLIP p=84 by=57 points=4->4
+CLIP p=84 by=58 points=4->4
+CLIP p=84 by=63 points=4->4
+CLIP p=84 by=64 points=4->4
+CLIP p=84 by=71 points=4->4
+CLIP p=84 by=72 points=4->4
+CLIP p=84 by=67 points=4->4
+EXTENT check p=86 front=11.7273876306 back=-105.408145934
+CLIP p=86 by=61 points=4->4
+CLIP p=86 by=48 points=4->4
+CLIP p=86 by=53 points=4->4
+CLIP p=86 by=54 points=4->4
+CLIP p=86 by=57 points=4->4
+CLIP p=86 by=58 points=4->4
+CLIP p=86 by=63 points=4->4
+CLIP p=86 by=64 points=4->4
+CLIP p=86 by=71 points=4->4
+CLIP p=86 by=72 points=4->4
+CLIP p=86 by=67 points=4->4
+EXTENT check p=88 front=11.6289235784 back=-115.399952863
+CLIP p=88 by=61 points=4->4
+CLIP p=88 by=48 points=4->4
+CLIP p=88 by=53 points=4->4
+CLIP p=88 by=54 points=4->4
+CLIP p=88 by=57 points=4->4
+CLIP p=88 by=58 points=4->4
+CLIP p=88 by=63 points=4->4
+CLIP p=88 by=64 points=4->4
+CLIP p=88 by=71 points=4->4
+CLIP p=88 by=72 points=4->4
+CLIP p=88 by=67 points=4->4
+SELECT level=11 p=68 brushes=1
+EXTENT real volume=1 p=68 front=21.577855326 back=-109.718095145
+CLIP p=68 by=61 points=4->4
+CLIP p=68 by=48 points=4->4
+CLIP p=68 by=53 points=4->4
+CLIP p=68 by=54 points=4->4
+CLIP p=68 by=57 points=4->4
+CLIP p=68 by=58 points=4->4
+CLIP p=68 by=63 points=4->4
+CLIP p=68 by=64 points=4->5
+CLIP p=68 by=71 points=5->5
+CLIP p=68 by=72 points=5->5
+CLIP p=68 by=67 points=5->5
+EXTENT check p=74 front=4.6001907769 back=-109.943076559
+CLIP p=74 by=61 points=4->4
+CLIP p=74 by=48 points=4->4
+CLIP p=74 by=53 points=4->4
+CLIP p=74 by=54 points=4->4
+CLIP p=74 by=57 points=4->4
+CLIP p=74 by=58 points=4->4
+CLIP p=74 by=63 points=4->4
+CLIP p=74 by=64 points=4->5
+CLIP p=74 by=71 points=5->5
+CLIP p=74 by=72 points=5->5
+CLIP p=74 by=67 points=5->5
+CLIP p=74 by=68 points=5->4
+EXTENT check p=76 front=115.399952863 back=-11.6289235784
+CLIP p=76 by=61 points=4->4
+CLIP p=76 by=48 points=4->4
+CLIP p=76 by=53 points=4->4
+CLIP p=76 by=54 points=4->4
+CLIP p=76 by=57 points=4->4
+CLIP p=76 by=58 points=4->4
+CLIP p=76 by=63 points=4->4
+CLIP p=76 by=64 points=4->4
+CLIP p=76 by=71 points=4->4
+CLIP p=76 by=72 points=4->4
+CLIP p=76 by=67 points=4->4
+CLIP p=76 by=68 points=4->4
+EXTENT check p=78 front=105.408145934 back=-6.1236878286
+CLIP p=78 by=61 points=4->4
+CLIP p=78 by=48 points=4->4
+CLIP p=78 by=53 points=4->4
+CLIP p=78 by=54 points=4->4
+CLIP p=78 by=57 points=4->4
+CLIP p=78 by=58 points=4->4
+CLIP p=78 by=63 points=4->4
+CLIP p=78 by=64 points=4->4
+CLIP p=78 by=71 points=4->4
+CLIP p=78 by=72 points=4->4
+CLIP p=78 by=67 points=4->4
+CLIP p=78 by=68 points=4->4
+EXTENT check p=80 front=79.4531344831 back=-5.25566566002
+CLIP p=80 by=61 points=4->4
+CLIP p=80 by=48 points=4->4
+CLIP p=80 by=53 points=4->4
+CLIP p=80 by=54 points=4->4
+CLIP p=80 by=57 points=4->4
+CLIP p=80 by=58 points=4->4
+CLIP p=80 by=63 points=4->4
+CLIP p=80 by=64 points=4->4
+CLIP p=80 by=71 points=4->4
+CLIP p=80 by=72 points=4->4
+CLIP p=80 by=67 points=4->4
+CLIP p=80 by=68 points=4->4
+EXTENT check p=82 front=109.943076559 back=-4.60019077693
+CLIP p=82 by=61 points=4->4
+CLIP p=82 by=48 points=4->4
+CLIP p=82 by=53 points=4->4
+CLIP p=82 by=54 points=4->4
+CLIP p=82 by=57 points=4->4
+CLIP p=82 by=58 points=4->4
+CLIP p=82 by=63 points=4->5
+CLIP p=82 by=64 points=5->5
+CLIP p=82 by=71 points=5->5
+CLIP p=82 by=72 points=5->5
+CLIP p=82 by=67 points=5->4
+CLIP p=82 by=68 points=4->4
+EXTENT check p=84 front=5.25566566002 back=-79.4531344831
+CLIP p=84 by=61 points=4->4
+CLIP p=84 by=48 points=4->4
+CLIP p=84 by=53 points=4->4
+CLIP p=84 by=54 points=4->4
+CLIP p=84 by=57 points=4->4
+CLIP p=84 by=58 points=4->4
+CLIP p=84 by=63 points=4->4
+CLIP p=84 by=64 points=4->4
+CLIP p=84 by=71 points=4->4
+CLIP p=84 by=72 points=4->4
+CLIP p=84 by=67 points=4->4
+CLIP p=84 by=68 points=4->4
+EXTENT check p=86 front=6.1236878286 back=-105.408145934
+CLIP p=86 by=61 points=4->4
+CLIP p=86 by=48 points=4->4
+CLIP p=86 by=53 points=4->4
+CLIP p=86 by=54 points=4->4
+CLIP p=86 by=57 points=4->4
+CLIP p=86 by=58 points=4->4
+CLIP p=86 by=63 points=4->4
+CLIP p=86 by=64 points=4->4
+CLIP p=86 by=71 points=4->4
+CLIP p=86 by=72 points=4->4
+CLIP p=86 by=67 points=4->4
+CLIP p=86 by=68 points=4->4
+EXTENT check p=88 front=11.6289235784 back=-115.399952863
+CLIP p=88 by=61 points=4->4
+CLIP p=88 by=48 points=4->4
+CLIP p=88 by=53 points=4->4
+CLIP p=88 by=54 points=4->4
+CLIP p=88 by=57 points=4->4
+CLIP p=88 by=58 points=4->4
+CLIP p=88 by=63 points=4->4
+CLIP p=88 by=64 points=4->4
+CLIP p=88 by=71 points=4->4
+CLIP p=88 by=72 points=4->4
+CLIP p=88 by=67 points=4->4
+CLIP p=88 by=68 points=4->4
+SELECT level=12 p=82 brushes=1
+EXTENT real volume=1 p=82 front=109.943076559 back=-4.60019077693
+CLIP p=82 by=61 points=4->4
+CLIP p=82 by=48 points=4->4
+CLIP p=82 by=53 points=4->4
+CLIP p=82 by=54 points=4->4
+CLIP p=82 by=57 points=4->4
+CLIP p=82 by=58 points=4->4
+CLIP p=82 by=63 points=4->5
+CLIP p=82 by=64 points=5->5
+CLIP p=82 by=71 points=5->5
+CLIP p=82 by=72 points=5->5
+CLIP p=82 by=67 points=5->4
+CLIP p=82 by=68 points=4->4
+LEAF level=13 brushes=0 volume=1
+EXTENT check p=74 front=4.6001907769 back=-105.342885782
+CLIP p=74 by=61 points=4->4
+CLIP p=74 by=48 points=4->4
+CLIP p=74 by=53 points=4->4
+CLIP p=74 by=54 points=4->4
+CLIP p=74 by=57 points=4->4
+CLIP p=74 by=58 points=4->4
+CLIP p=74 by=63 points=4->4
+CLIP p=74 by=64 points=4->5
+CLIP p=74 by=71 points=5->5
+CLIP p=74 by=72 points=5->5
+CLIP p=74 by=67 points=5->5
+CLIP p=74 by=68 points=5->4
+CLIP p=74 by=83 points=4->4
+EXTENT check p=76 front=115.399952863 back=-11.6289235784
+CLIP p=76 by=61 points=4->4
+CLIP p=76 by=48 points=4->4
+CLIP p=76 by=53 points=4->4
+CLIP p=76 by=54 points=4->4
+CLIP p=76 by=57 points=4->4
+CLIP p=76 by=58 points=4->4
+CLIP p=76 by=63 points=4->4
+CLIP p=76 by=64 points=4->4
+CLIP p=76 by=71 points=4->4
+CLIP p=76 by=72 points=4->4
+CLIP p=76 by=67 points=4->4
+CLIP p=76 by=68 points=4->4
+CLIP p=76 by=83 points=4->4
+EXTENT check p=78 front=105.408145934 back=-6.1236878286
+CLIP p=78 by=61 points=4->4
+CLIP p=78 by=48 points=4->4
+CLIP p=78 by=53 points=4->4
+CLIP p=78 by=54 points=4->4
+CLIP p=78 by=57 points=4->4
+CLIP p=78 by=58 points=4->4
+CLIP p=78 by=63 points=4->4
+CLIP p=78 by=64 points=4->4
+CLIP p=78 by=71 points=4->4
+CLIP p=78 by=72 points=4->4
+CLIP p=78 by=67 points=4->4
+CLIP p=78 by=68 points=4->4
+CLIP p=78 by=83 points=4->4
+EXTENT check p=80 front=79.4531344831 back=-5.25566566002
+CLIP p=80 by=61 points=4->4
+CLIP p=80 by=48 points=4->4
+CLIP p=80 by=53 points=4->4
+CLIP p=80 by=54 points=4->4
+CLIP p=80 by=57 points=4->4
+CLIP p=80 by=58 points=4->4
+CLIP p=80 by=63 points=4->4
+CLIP p=80 by=64 points=4->4
+CLIP p=80 by=71 points=4->4
+CLIP p=80 by=72 points=4->4
+CLIP p=80 by=67 points=4->4
+CLIP p=80 by=68 points=4->4
+CLIP p=80 by=83 points=4->4
+EXTENT check p=84 front=5.25566566002 back=-79.4531344831
+CLIP p=84 by=61 points=4->4
+CLIP p=84 by=48 points=4->4
+CLIP p=84 by=53 points=4->4
+CLIP p=84 by=54 points=4->4
+CLIP p=84 by=57 points=4->4
+CLIP p=84 by=58 points=4->4
+CLIP p=84 by=63 points=4->4
+CLIP p=84 by=64 points=4->4
+CLIP p=84 by=71 points=4->4
+CLIP p=84 by=72 points=4->4
+CLIP p=84 by=67 points=4->4
+CLIP p=84 by=68 points=4->4
+CLIP p=84 by=83 points=4->4
+EXTENT check p=86 front=6.1236878286 back=-105.408145934
+CLIP p=86 by=61 points=4->4
+CLIP p=86 by=48 points=4->4
+CLIP p=86 by=53 points=4->4
+CLIP p=86 by=54 points=4->4
+CLIP p=86 by=57 points=4->4
+CLIP p=86 by=58 points=4->4
+CLIP p=86 by=63 points=4->4
+CLIP p=86 by=64 points=4->4
+CLIP p=86 by=71 points=4->4
+CLIP p=86 by=72 points=4->4
+CLIP p=86 by=67 points=4->4
+CLIP p=86 by=68 points=4->4
+CLIP p=86 by=83 points=4->4
+EXTENT check p=88 front=11.6289235784 back=-115.399952863
+CLIP p=88 by=61 points=4->4
+CLIP p=88 by=48 points=4->4
+CLIP p=88 by=53 points=4->4
+CLIP p=88 by=54 points=4->4
+CLIP p=88 by=57 points=4->4
+CLIP p=88 by=58 points=4->4
+CLIP p=88 by=63 points=4->4
+CLIP p=88 by=64 points=4->4
+CLIP p=88 by=71 points=4->4
+CLIP p=88 by=72 points=4->4
+CLIP p=88 by=67 points=4->4
+CLIP p=88 by=68 points=4->4
+CLIP p=88 by=83 points=4->4
+SELECT level=13 p=76 brushes=1
+EXTENT real volume=1 p=76 front=115.399952863 back=-11.6289235784
+CLIP p=76 by=61 points=4->4
+CLIP p=76 by=48 points=4->4
+CLIP p=76 by=53 points=4->4
+CLIP p=76 by=54 points=4->4
+CLIP p=76 by=57 points=4->4
+CLIP p=76 by=58 points=4->4
+CLIP p=76 by=63 points=4->4
+CLIP p=76 by=64 points=4->4
+CLIP p=76 by=71 points=4->4
+CLIP p=76 by=72 points=4->4
+CLIP p=76 by=67 points=4->4
+CLIP p=76 by=68 points=4->4
+CLIP p=76 by=83 points=4->4
+LEAF level=14 brushes=0 volume=1
+EXTENT check p=74 front=4.6001907769 back=-105.342885782
+CLIP p=74 by=61 points=4->4
+CLIP p=74 by=48 points=4->4
+CLIP p=74 by=53 points=4->4
+CLIP p=74 by=54 points=4->4
+CLIP p=74 by=57 points=4->4
+CLIP p=74 by=58 points=4->4
+CLIP p=74 by=63 points=4->4
+CLIP p=74 by=64 points=4->5
+CLIP p=74 by=71 points=5->5
+CLIP p=74 by=72 points=5->5
+CLIP p=74 by=67 points=5->5
+CLIP p=74 by=68 points=5->4
+CLIP p=74 by=83 points=4->4
+CLIP p=74 by=77 points=4->4
+EXTENT check p=78 front=105.408145934 back=-6.1236878286
+CLIP p=78 by=61 points=4->4
+CLIP p=78 by=48 points=4->4
+CLIP p=78 by=53 points=4->4
+CLIP p=78 by=54 points=4->4
+CLIP p=78 by=57 points=4->4
+CLIP p=78 by=58 points=4->4
+CLIP p=78 by=63 points=4->4
+CLIP p=78 by=64 points=4->4
+CLIP p=78 by=71 points=4->4
+CLIP p=78 by=72 points=4->4
+CLIP p=78 by=67 points=4->4
+CLIP p=78 by=68 points=4->4
+CLIP p=78 by=83 points=4->4
+CLIP p=78 by=77 points=4->4
+EXTENT check p=80 front=79.4531344831 back=-5.25566566002
+CLIP p=80 by=61 points=4->4
+CLIP p=80 by=48 points=4->4
+CLIP p=80 by=53 points=4->4
+CLIP p=80 by=54 points=4->4
+CLIP p=80 by=57 points=4->4
+CLIP p=80 by=58 points=4->4
+CLIP p=80 by=63 points=4->4
+CLIP p=80 by=64 points=4->4
+CLIP p=80 by=71 points=4->4
+CLIP p=80 by=72 points=4->4
+CLIP p=80 by=67 points=4->4
+CLIP p=80 by=68 points=4->4
+CLIP p=80 by=83 points=4->4
+CLIP p=80 by=77 points=4->4
+EXTENT check p=84 front=5.25566566002 back=-79.4531344831
+CLIP p=84 by=61 points=4->4
+CLIP p=84 by=48 points=4->4
+CLIP p=84 by=53 points=4->4
+CLIP p=84 by=54 points=4->4
+CLIP p=84 by=57 points=4->4
+CLIP p=84 by=58 points=4->4
+CLIP p=84 by=63 points=4->4
+CLIP p=84 by=64 points=4->4
+CLIP p=84 by=71 points=4->4
+CLIP p=84 by=72 points=4->4
+CLIP p=84 by=67 points=4->4
+CLIP p=84 by=68 points=4->4
+CLIP p=84 by=83 points=4->4
+CLIP p=84 by=77 points=4->4
+EXTENT check p=86 front=6.1236878286 back=-105.408145934
+CLIP p=86 by=61 points=4->4
+CLIP p=86 by=48 points=4->4
+CLIP p=86 by=53 points=4->4
+CLIP p=86 by=54 points=4->4
+CLIP p=86 by=57 points=4->4
+CLIP p=86 by=58 points=4->4
+CLIP p=86 by=63 points=4->4
+CLIP p=86 by=64 points=4->4
+CLIP p=86 by=71 points=4->4
+CLIP p=86 by=72 points=4->4
+CLIP p=86 by=67 points=4->4
+CLIP p=86 by=68 points=4->4
+CLIP p=86 by=83 points=4->4
+CLIP p=86 by=77 points=4->4
+EXTENT check p=88 front=11.6289235784 back=-103.771029285
+CLIP p=88 by=61 points=4->4
+CLIP p=88 by=48 points=4->4
+CLIP p=88 by=53 points=4->4
+CLIP p=88 by=54 points=4->4
+CLIP p=88 by=57 points=4->4
+CLIP p=88 by=58 points=4->4
+CLIP p=88 by=63 points=4->4
+CLIP p=88 by=64 points=4->4
+CLIP p=88 by=71 points=4->4
+CLIP p=88 by=72 points=4->4
+CLIP p=88 by=67 points=4->4
+CLIP p=88 by=68 points=4->4
+CLIP p=88 by=83 points=4->4
+CLIP p=88 by=77 points=4->4
+SELECT level=14 p=74 brushes=1
+EXTENT real volume=1 p=74 front=4.6001907769 back=-105.342885782
+CLIP p=74 by=61 points=4->4
+CLIP p=74 by=48 points=4->4
+CLIP p=74 by=53 points=4->4
+CLIP p=74 by=54 points=4->4
+CLIP p=74 by=57 points=4->4
+CLIP p=74 by=58 points=4->4
+CLIP p=74 by=63 points=4->4
+CLIP p=74 by=64 points=4->5
+CLIP p=74 by=71 points=5->5
+CLIP p=74 by=72 points=5->5
+CLIP p=74 by=67 points=5->5
+CLIP p=74 by=68 points=5->4
+CLIP p=74 by=83 points=4->4
+CLIP p=74 by=77 points=4->4
+EXTENT check p=78 front=105.408145934 back=-6.1236878286
+CLIP p=78 by=61 points=4->4
+CLIP p=78 by=48 points=4->4
+CLIP p=78 by=53 points=4->4
+CLIP p=78 by=54 points=4->4
+CLIP p=78 by=57 points=4->4
+CLIP p=78 by=58 points=4->4
+CLIP p=78 by=63 points=4->4
+CLIP p=78 by=64 points=4->4
+CLIP p=78 by=71 points=4->4
+CLIP p=78 by=72 points=4->4
+CLIP p=78 by=67 points=4->4
+CLIP p=78 by=68 points=4->4
+CLIP p=78 by=83 points=4->4
+CLIP p=78 by=77 points=4->4
+CLIP p=78 by=74 points=4->4
+EXTENT check p=80 front=79.4531344831 back=-5.25566566002
+CLIP p=80 by=61 points=4->4
+CLIP p=80 by=48 points=4->4
+CLIP p=80 by=53 points=4->4
+CLIP p=80 by=54 points=4->4
+CLIP p=80 by=57 points=4->4
+CLIP p=80 by=58 points=4->4
+CLIP p=80 by=63 points=4->4
+CLIP p=80 by=64 points=4->4
+CLIP p=80 by=71 points=4->4
+CLIP p=80 by=72 points=4->4
+CLIP p=80 by=67 points=4->4
+CLIP p=80 by=68 points=4->4
+CLIP p=80 by=83 points=4->4
+CLIP p=80 by=77 points=4->4
+CLIP p=80 by=74 points=4->4
+EXTENT check p=84 front=5.25566566002 back=-79.4531344831
+CLIP p=84 by=61 points=4->4
+CLIP p=84 by=48 points=4->4
+CLIP p=84 by=53 points=4->4
+CLIP p=84 by=54 points=4->4
+CLIP p=84 by=57 points=4->4
+CLIP p=84 by=58 points=4->4
+CLIP p=84 by=63 points=4->4
+CLIP p=84 by=64 points=4->4
+CLIP p=84 by=71 points=4->4
+CLIP p=84 by=72 points=4->4
+CLIP p=84 by=67 points=4->4
+CLIP p=84 by=68 points=4->4
+CLIP p=84 by=83 points=4->4
+CLIP p=84 by=77 points=4->4
+CLIP p=84 by=74 points=4->4
+EXTENT check p=86 front=6.1236878286 back=-105.408145934
+CLIP p=86 by=61 points=4->4
+CLIP p=86 by=48 points=4->4
+CLIP p=86 by=53 points=4->4
+CLIP p=86 by=54 points=4->4
+CLIP p=86 by=57 points=4->4
+CLIP p=86 by=58 points=4->4
+CLIP p=86 by=63 points=4->4
+CLIP p=86 by=64 points=4->4
+CLIP p=86 by=71 points=4->4
+CLIP p=86 by=72 points=4->4
+CLIP p=86 by=67 points=4->4
+CLIP p=86 by=68 points=4->4
+CLIP p=86 by=83 points=4->4
+CLIP p=86 by=77 points=4->4
+CLIP p=86 by=74 points=4->4
+EXTENT check p=88 front=11.6289235784 back=-103.771029285
+CLIP p=88 by=61 points=4->4
+CLIP p=88 by=48 points=4->4
+CLIP p=88 by=53 points=4->4
+CLIP p=88 by=54 points=4->4
+CLIP p=88 by=57 points=4->4
+CLIP p=88 by=58 points=4->4
+CLIP p=88 by=63 points=4->4
+CLIP p=88 by=64 points=4->4
+CLIP p=88 by=71 points=4->4
+CLIP p=88 by=72 points=4->4
+CLIP p=88 by=67 points=4->4
+CLIP p=88 by=68 points=4->4
+CLIP p=88 by=83 points=4->4
+CLIP p=88 by=77 points=4->4
+CLIP p=88 by=74 points=4->4
+SELECT level=15 p=88 brushes=1
+EXTENT real volume=1 p=88 front=11.6289235784 back=-103.771029285
+CLIP p=88 by=61 points=4->4
+CLIP p=88 by=48 points=4->4
+CLIP p=88 by=53 points=4->4
+CLIP p=88 by=54 points=4->4
+CLIP p=88 by=57 points=4->4
+CLIP p=88 by=58 points=4->4
+CLIP p=88 by=63 points=4->4
+CLIP p=88 by=64 points=4->4
+CLIP p=88 by=71 points=4->4
+CLIP p=88 by=72 points=4->4
+CLIP p=88 by=67 points=4->4
+CLIP p=88 by=68 points=4->4
+CLIP p=88 by=83 points=4->4
+CLIP p=88 by=77 points=4->4
+CLIP p=88 by=74 points=4->4
+EXTENT check p=78 front=105.408145934 back=-6.1236878286
+CLIP p=78 by=61 points=4->4
+CLIP p=78 by=48 points=4->4
+CLIP p=78 by=53 points=4->4
+CLIP p=78 by=54 points=4->4
+CLIP p=78 by=57 points=4->4
+CLIP p=78 by=58 points=4->4
+CLIP p=78 by=63 points=4->4
+CLIP p=78 by=64 points=4->4
+CLIP p=78 by=71 points=4->4
+CLIP p=78 by=72 points=4->4
+CLIP p=78 by=67 points=4->4
+CLIP p=78 by=68 points=4->4
+CLIP p=78 by=83 points=4->4
+CLIP p=78 by=77 points=4->4
+CLIP p=78 by=74 points=4->4
+CLIP p=78 by=88 points=4->4
+EXTENT check p=80 front=79.4531344831 back=-5.25566566002
+CLIP p=80 by=61 points=4->4
+CLIP p=80 by=48 points=4->4
+CLIP p=80 by=53 points=4->4
+CLIP p=80 by=54 points=4->4
+CLIP p=80 by=57 points=4->4
+CLIP p=80 by=58 points=4->4
+CLIP p=80 by=63 points=4->4
+CLIP p=80 by=64 points=4->4
+CLIP p=80 by=71 points=4->4
+CLIP p=80 by=72 points=4->4
+CLIP p=80 by=67 points=4->4
+CLIP p=80 by=68 points=4->4
+CLIP p=80 by=83 points=4->4
+CLIP p=80 by=77 points=4->4
+CLIP p=80 by=74 points=4->4
+CLIP p=80 by=88 points=4->4
+EXTENT check p=84 front=5.25566566002 back=-79.4531344831
+CLIP p=84 by=61 points=4->4
+CLIP p=84 by=48 points=4->4
+CLIP p=84 by=53 points=4->4
+CLIP p=84 by=54 points=4->4
+CLIP p=84 by=57 points=4->4
+CLIP p=84 by=58 points=4->4
+CLIP p=84 by=63 points=4->4
+CLIP p=84 by=64 points=4->4
+CLIP p=84 by=71 points=4->4
+CLIP p=84 by=72 points=4->4
+CLIP p=84 by=67 points=4->4
+CLIP p=84 by=68 points=4->4
+CLIP p=84 by=83 points=4->4
+CLIP p=84 by=77 points=4->4
+CLIP p=84 by=74 points=4->4
+CLIP p=84 by=88 points=4->4
+EXTENT check p=86 front=6.1236878286 back=-105.408145934
+CLIP p=86 by=61 points=4->4
+CLIP p=86 by=48 points=4->4
+CLIP p=86 by=53 points=4->4
+CLIP p=86 by=54 points=4->4
+CLIP p=86 by=57 points=4->4
+CLIP p=86 by=58 points=4->4
+CLIP p=86 by=63 points=4->4
+CLIP p=86 by=64 points=4->4
+CLIP p=86 by=71 points=4->4
+CLIP p=86 by=72 points=4->4
+CLIP p=86 by=67 points=4->4
+CLIP p=86 by=68 points=4->4
+CLIP p=86 by=83 points=4->4
+CLIP p=86 by=77 points=4->4
+CLIP p=86 by=74 points=4->4
+CLIP p=86 by=88 points=4->4
+SELECT level=16 p=78 brushes=1
+EXTENT real volume=1 p=78 front=105.408145934 back=-6.1236878286
+CLIP p=78 by=61 points=4->4
+CLIP p=78 by=48 points=4->4
+CLIP p=78 by=53 points=4->4
+CLIP p=78 by=54 points=4->4
+CLIP p=78 by=57 points=4->4
+CLIP p=78 by=58 points=4->4
+CLIP p=78 by=63 points=4->4
+CLIP p=78 by=64 points=4->4
+CLIP p=78 by=71 points=4->4
+CLIP p=78 by=72 points=4->4
+CLIP p=78 by=67 points=4->4
+CLIP p=78 by=68 points=4->4
+CLIP p=78 by=83 points=4->4
+CLIP p=78 by=77 points=4->4
+CLIP p=78 by=74 points=4->4
+CLIP p=78 by=88 points=4->4
+LEAF level=17 brushes=0 volume=1
+EXTENT check p=80 front=79.4531344831 back=-5.25566566002
+CLIP p=80 by=61 points=4->4
+CLIP p=80 by=48 points=4->4
+CLIP p=80 by=53 points=4->4
+CLIP p=80 by=54 points=4->4
+CLIP p=80 by=57 points=4->4
+CLIP p=80 by=58 points=4->4
+CLIP p=80 by=63 points=4->4
+CLIP p=80 by=64 points=4->4
+CLIP p=80 by=71 points=4->4
+CLIP p=80 by=72 points=4->4
+CLIP p=80 by=67 points=4->4
+CLIP p=80 by=68 points=4->4
+CLIP p=80 by=83 points=4->4
+CLIP p=80 by=77 points=4->4
+CLIP p=80 by=74 points=4->4
+CLIP p=80 by=88 points=4->4
+CLIP p=80 by=79 points=4->4
+EXTENT check p=84 front=5.25566566002 back=-79.4531344831
+CLIP p=84 by=61 points=4->4
+CLIP p=84 by=48 points=4->4
+CLIP p=84 by=53 points=4->4
+CLIP p=84 by=54 points=4->4
+CLIP p=84 by=57 points=4->4
+CLIP p=84 by=58 points=4->4
+CLIP p=84 by=63 points=4->4
+CLIP p=84 by=64 points=4->4
+CLIP p=84 by=71 points=4->4
+CLIP p=84 by=72 points=4->4
+CLIP p=84 by=67 points=4->4
+CLIP p=84 by=68 points=4->4
+CLIP p=84 by=83 points=4->4
+CLIP p=84 by=77 points=4->4
+CLIP p=84 by=74 points=4->4
+CLIP p=84 by=88 points=4->4
+CLIP p=84 by=79 points=4->4
+EXTENT check p=86 front=6.1236878286 back=-99.2844581058
+CLIP p=86 by=61 points=4->4
+CLIP p=86 by=48 points=4->4
+CLIP p=86 by=53 points=4->4
+CLIP p=86 by=54 points=4->4
+CLIP p=86 by=57 points=4->4
+CLIP p=86 by=58 points=4->4
+CLIP p=86 by=63 points=4->4
+CLIP p=86 by=64 points=4->4
+CLIP p=86 by=71 points=4->4
+CLIP p=86 by=72 points=4->4
+CLIP p=86 by=67 points=4->4
+CLIP p=86 by=68 points=4->4
+CLIP p=86 by=83 points=4->4
+CLIP p=86 by=77 points=4->4
+CLIP p=86 by=74 points=4->4
+CLIP p=86 by=88 points=4->4
+CLIP p=86 by=79 points=4->4
+SELECT level=17 p=84 brushes=1
+EXTENT real volume=1 p=84 front=5.25566566002 back=-79.4531344831
+CLIP p=84 by=61 points=4->4
+CLIP p=84 by=48 points=4->4
+CLIP p=84 by=53 points=4->4
+CLIP p=84 by=54 points=4->4
+CLIP p=84 by=57 points=4->4
+CLIP p=84 by=58 points=4->4
+CLIP p=84 by=63 points=4->4
+CLIP p=84 by=64 points=4->4
+CLIP p=84 by=71 points=4->4
+CLIP p=84 by=72 points=4->4
+CLIP p=84 by=67 points=4->4
+CLIP p=84 by=68 points=4->4
+CLIP p=84 by=83 points=4->4
+CLIP p=84 by=77 points=4->4
+CLIP p=84 by=74 points=4->4
+CLIP p=84 by=88 points=4->4
+CLIP p=84 by=79 points=4->4
+EXTENT check p=80 front=74.1974688231 back=-5.25566566002
+CLIP p=80 by=61 points=4->4
+CLIP p=80 by=48 points=4->4
+CLIP p=80 by=53 points=4->4
+CLIP p=80 by=54 points=4->4
+CLIP p=80 by=57 points=4->4
+CLIP p=80 by=58 points=4->4
+CLIP p=80 by=63 points=4->4
+CLIP p=80 by=64 points=4->4
+CLIP p=80 by=71 points=4->4
+CLIP p=80 by=72 points=4->4
+CLIP p=80 by=67 points=4->4
+CLIP p=80 by=68 points=4->4
+CLIP p=80 by=83 points=4->4
+CLIP p=80 by=77 points=4->4
+CLIP p=80 by=74 points=4->4
+CLIP p=80 by=88 points=4->4
+CLIP p=80 by=79 points=4->4
+CLIP p=80 by=84 points=4->4
+EXTENT check p=86 front=6.1236878286 back=-99.2844581058
+CLIP p=86 by=61 points=4->4
+CLIP p=86 by=48 points=4->4
+CLIP p=86 by=53 points=4->4
+CLIP p=86 by=54 points=4->4
+CLIP p=86 by=57 points=4->4
+CLIP p=86 by=58 points=4->4
+CLIP p=86 by=63 points=4->4
+CLIP p=86 by=64 points=4->4
+CLIP p=86 by=71 points=4->4
+CLIP p=86 by=72 points=4->4
+CLIP p=86 by=67 points=4->4
+CLIP p=86 by=68 points=4->4
+CLIP p=86 by=83 points=4->4
+CLIP p=86 by=77 points=4->4
+CLIP p=86 by=74 points=4->4
+CLIP p=86 by=88 points=4->4
+CLIP p=86 by=79 points=4->4
+CLIP p=86 by=84 points=4->4
+SELECT level=18 p=80 brushes=1
+EXTENT real volume=1 p=80 front=74.1974688231 back=-5.25566566002
+CLIP p=80 by=61 points=4->4
+CLIP p=80 by=48 points=4->4
+CLIP p=80 by=53 points=4->4
+CLIP p=80 by=54 points=4->4
+CLIP p=80 by=57 points=4->4
+CLIP p=80 by=58 points=4->4
+CLIP p=80 by=63 points=4->4
+CLIP p=80 by=64 points=4->4
+CLIP p=80 by=71 points=4->4
+CLIP p=80 by=72 points=4->4
+CLIP p=80 by=67 points=4->4
+CLIP p=80 by=68 points=4->4
+CLIP p=80 by=83 points=4->4
+CLIP p=80 by=77 points=4->4
+CLIP p=80 by=74 points=4->4
+CLIP p=80 by=88 points=4->4
+CLIP p=80 by=79 points=4->4
+CLIP p=80 by=84 points=4->4
+LEAF level=19 brushes=0 volume=1
+EXTENT check p=86 front=6.1236878286 back=-99.2844581058
+CLIP p=86 by=61 points=4->4
+CLIP p=86 by=48 points=4->4
+CLIP p=86 by=53 points=4->4
+CLIP p=86 by=54 points=4->4
+CLIP p=86 by=57 points=4->4
+CLIP p=86 by=58 points=4->4
+CLIP p=86 by=63 points=4->4
+CLIP p=86 by=64 points=4->4
+CLIP p=86 by=71 points=4->4
+CLIP p=86 by=72 points=4->4
+CLIP p=86 by=67 points=4->4
+CLIP p=86 by=68 points=4->4
+CLIP p=86 by=83 points=4->4
+CLIP p=86 by=77 points=4->4
+CLIP p=86 by=74 points=4->4
+CLIP p=86 by=88 points=4->4
+CLIP p=86 by=79 points=4->4
+CLIP p=86 by=84 points=4->4
+CLIP p=86 by=81 points=4->4
+SELECT level=19 p=86 brushes=1
+EXTENT real volume=1 p=86 front=6.1236878286 back=-99.2844581058
+CLIP p=86 by=61 points=4->4
+CLIP p=86 by=48 points=4->4
+CLIP p=86 by=53 points=4->4
+CLIP p=86 by=54 points=4->4
+CLIP p=86 by=57 points=4->4
+CLIP p=86 by=58 points=4->4
+CLIP p=86 by=63 points=4->4
+CLIP p=86 by=64 points=4->4
+CLIP p=86 by=71 points=4->4
+CLIP p=86 by=72 points=4->4
+CLIP p=86 by=67 points=4->4
+CLIP p=86 by=68 points=4->4
+CLIP p=86 by=83 points=4->4
+CLIP p=86 by=77 points=4->4
+CLIP p=86 by=74 points=4->4
+CLIP p=86 by=88 points=4->4
+CLIP p=86 by=79 points=4->4
+CLIP p=86 by=84 points=4->4
+CLIP p=86 by=81 points=4->4
+LEAF level=20 brushes=1 volume=1
+REMAIN p=53 w=6 onnode=1 bevel=0
+REMAIN p=54 w=6 onnode=1 bevel=0
+REMAIN p=57 w=6 onnode=1 bevel=0
+REMAIN p=58 w=6 onnode=1 bevel=0
+REMAIN p=61 w=6 onnode=1 bevel=0
+REMAIN p=48 w=6 onnode=1 bevel=0
+REMAIN p=63 w=6 onnode=1 bevel=0
+REMAIN p=64 w=6 onnode=1 bevel=0
+REMAIN p=67 w=5 onnode=1 bevel=0
+REMAIN p=68 w=5 onnode=1 bevel=0
+REMAIN p=71 w=5 onnode=1 bevel=0
+REMAIN p=72 w=5 onnode=1 bevel=0
+REMAIN p=74 w=4 onnode=1 bevel=0
+REMAIN p=77 w=4 onnode=1 bevel=0
+REMAIN p=79 w=4 onnode=1 bevel=0
+REMAIN p=81 w=4 onnode=1 bevel=0
+REMAIN p=83 w=4 onnode=1 bevel=0
+REMAIN p=84 w=4 onnode=1 bevel=0
+REMAIN p=86 w=4 onnode=1 bevel=0
+REMAIN p=88 w=4 onnode=1 bevel=0
+LEAF level=20 brushes=0 volume=1
+LEAF level=18 brushes=0 volume=1
+LEAF level=16 brushes=0 volume=1
+LEAF level=15 brushes=0 volume=1
+LEAF level=12 brushes=0 volume=1
+LEAF level=10 brushes=0 volume=1
+LEAF level=8 brushes=0 volume=1
+LEAF level=6 brushes=0 volume=1
+LEAF level=4 brushes=0 volume=1
+LEAF level=2 brushes=0 volume=1
+[33mWARNING: No entities in empty space -- no filling performed (hull 1)
+[0mProcessing hull 2...
+EXTENT check p=102 front=168.633414193 back=-24
+CLIP p=102 by=140 points=4->4
+CLIP p=102 by=144 points=4->4
+CLIP p=102 by=98 points=4->4
+CLIP p=102 by=143 points=4->4
+CLIP p=102 by=147 points=4->4
+CLIP p=102 by=149 points=4->4
+EXTENT check p=104 front=24 back=-168.633414193
+CLIP p=104 by=140 points=4->4
+CLIP p=104 by=144 points=4->4
+CLIP p=104 by=98 points=4->4
+CLIP p=104 by=143 points=4->4
+CLIP p=104 by=147 points=4->4
+CLIP p=104 by=149 points=4->4
+EXTENT check p=106 front=170.812337765 back=-24
+CLIP p=106 by=140 points=4->4
+CLIP p=106 by=144 points=4->4
+CLIP p=106 by=98 points=4->4
+CLIP p=106 by=143 points=4->4
+CLIP p=106 by=147 points=4->4
+CLIP p=106 by=149 points=4->4
+EXTENT check p=108 front=24 back=-170.812337765
+CLIP p=108 by=140 points=4->4
+CLIP p=108 by=144 points=4->4
+CLIP p=108 by=98 points=4->4
+CLIP p=108 by=143 points=4->4
+CLIP p=108 by=147 points=4->4
+CLIP p=108 by=149 points=4->4
+EXTENT check p=110 front=130.887141013 back=-24
+CLIP p=110 by=140 points=4->4
+CLIP p=110 by=144 points=4->4
+CLIP p=110 by=98 points=4->4
+CLIP p=110 by=143 points=4->4
+CLIP p=110 by=147 points=4->4
+CLIP p=110 by=149 points=4->4
+EXTENT check p=48 front=24 back=-130.887141013
+CLIP p=48 by=140 points=4->4
+CLIP p=48 by=144 points=4->4
+CLIP p=48 by=98 points=4->4
+CLIP p=48 by=143 points=4->4
+CLIP p=48 by=147 points=4->4
+CLIP p=48 by=149 points=4->4
+EXTENT check p=112 front=147.502848604 back=-47.221644337
+CLIP p=112 by=140 points=4->4
+CLIP p=112 by=144 points=4->4
+CLIP p=112 by=98 points=4->4
+CLIP p=112 by=143 points=4->4
+CLIP p=112 by=147 points=4->4
+CLIP p=112 by=149 points=4->4
+EXTENT check p=114 front=47.221644337 back=-147.502848604
+CLIP p=114 by=140 points=4->4
+CLIP p=114 by=144 points=4->4
+CLIP p=114 by=98 points=4->4
+CLIP p=114 by=143 points=4->4
+CLIP p=114 by=147 points=4->4
+CLIP p=114 by=149 points=4->4
+EXTENT check p=116 front=207.840128966 back=-54.3825032527
+CLIP p=116 by=140 points=4->4
+CLIP p=116 by=144 points=4->4
+CLIP p=116 by=98 points=4->4
+CLIP p=116 by=143 points=4->4
+CLIP p=116 by=147 points=4->5
+CLIP p=116 by=149 points=5->4
+EXTENT check p=118 front=54.3825032527 back=-207.840128966
+CLIP p=118 by=140 points=4->4
+CLIP p=118 by=144 points=4->5
+CLIP p=118 by=98 points=5->4
+CLIP p=118 by=143 points=4->4
+CLIP p=118 by=147 points=4->4
+CLIP p=118 by=149 points=4->4
+EXTENT check p=120 front=221.090861784 back=-57.1454507976
+CLIP p=120 by=140 points=4->5
+CLIP p=120 by=144 points=5->5
+CLIP p=120 by=98 points=5->4
+CLIP p=120 by=143 points=4->4
+CLIP p=120 by=147 points=4->3
+CLIP p=120 by=149 points=3->4
+EXTENT check p=122 front=57.1454507976 back=-221.090861784
+CLIP p=122 by=140 points=4->4
+CLIP p=122 by=144 points=4->3
+CLIP p=122 by=98 points=3->4
+CLIP p=122 by=143 points=4->4
+CLIP p=122 by=147 points=4->5
+CLIP p=122 by=149 points=5->4
+EXTENT check p=124 front=52.6780773496 back=-199.591355318
+CLIP p=124 by=140 points=4->4
+CLIP p=124 by=144 points=4->4
+CLIP p=124 by=98 points=4->4
+CLIP p=124 by=143 points=4->4
+CLIP p=124 by=147 points=4->4
+CLIP p=124 by=149 points=4->4
+EXTENT check p=126 front=197.024999684 back=-52.0121393127
+CLIP p=126 by=140 points=4->4
+CLIP p=126 by=144 points=4->4
+CLIP p=126 by=98 points=4->4
+CLIP p=126 by=143 points=4->4
+CLIP p=126 by=147 points=4->4
+CLIP p=126 by=149 points=4->4
+EXTENT check p=128 front=187.666534181 back=-44.5793969639
+CLIP p=128 by=140 points=4->4
+CLIP p=128 by=144 points=4->4
+CLIP p=128 by=98 points=4->4
+CLIP p=128 by=143 points=4->4
+CLIP p=128 by=147 points=4->4
+CLIP p=128 by=149 points=4->4
+EXTENT check p=130 front=140.167986095 back=-31.276316351
+CLIP p=130 by=140 points=4->4
+CLIP p=130 by=144 points=4->4
+CLIP p=130 by=98 points=4->4
+CLIP p=130 by=143 points=4->4
+CLIP p=130 by=147 points=4->4
+CLIP p=130 by=149 points=4->4
+EXTENT check p=132 front=199.591355318 back=-52.6780773496
+CLIP p=132 by=140 points=4->4
+CLIP p=132 by=144 points=4->4
+CLIP p=132 by=98 points=4->4
+CLIP p=132 by=143 points=4->4
+CLIP p=132 by=147 points=4->4
+CLIP p=132 by=149 points=4->4
+EXTENT check p=134 front=31.276316351 back=-140.167986095
+CLIP p=134 by=140 points=4->4
+CLIP p=134 by=144 points=4->4
+CLIP p=134 by=98 points=4->4
+CLIP p=134 by=143 points=4->4
+CLIP p=134 by=147 points=4->4
+CLIP p=134 by=149 points=4->4
+EXTENT check p=136 front=44.5793969639 back=-187.666534181
+CLIP p=136 by=140 points=4->4
+CLIP p=136 by=144 points=4->4
+CLIP p=136 by=98 points=4->4
+CLIP p=136 by=143 points=4->4
+CLIP p=136 by=147 points=4->4
+CLIP p=136 by=149 points=4->4
+EXTENT check p=138 front=52.0121393127 back=-197.024999684
+CLIP p=138 by=140 points=4->4
+CLIP p=138 by=144 points=4->4
+CLIP p=138 by=98 points=4->4
+CLIP p=138 by=143 points=4->4
+CLIP p=138 by=147 points=4->4
+CLIP p=138 by=149 points=4->4
+SELECT level=0 p=110 brushes=1
+EXTENT real volume=1 p=110 front=130.887141013 back=-24
+CLIP p=110 by=140 points=4->4
+CLIP p=110 by=144 points=4->4
+CLIP p=110 by=98 points=4->4
+CLIP p=110 by=143 points=4->4
+CLIP p=110 by=147 points=4->4
+CLIP p=110 by=149 points=4->4
+LEAF level=1 brushes=0 volume=1
+EXTENT check p=102 front=168.633414193 back=-24
+CLIP p=102 by=140 points=4->4
+CLIP p=102 by=144 points=4->4
+CLIP p=102 by=98 points=4->4
+CLIP p=102 by=143 points=4->4
+CLIP p=102 by=147 points=4->4
+CLIP p=102 by=111 points=4->4
+EXTENT check p=104 front=24 back=-168.633414193
+CLIP p=104 by=140 points=4->4
+CLIP p=104 by=144 points=4->4
+CLIP p=104 by=98 points=4->4
+CLIP p=104 by=143 points=4->4
+CLIP p=104 by=147 points=4->4
+CLIP p=104 by=111 points=4->4
+EXTENT check p=106 front=170.812337765 back=-24
+CLIP p=106 by=140 points=4->4
+CLIP p=106 by=144 points=4->4
+CLIP p=106 by=98 points=4->4
+CLIP p=106 by=143 points=4->4
+CLIP p=106 by=147 points=4->4
+CLIP p=106 by=111 points=4->4
+EXTENT check p=108 front=24 back=-170.812337765
+CLIP p=108 by=140 points=4->4
+CLIP p=108 by=144 points=4->4
+CLIP p=108 by=98 points=4->4
+CLIP p=108 by=143 points=4->4
+CLIP p=108 by=147 points=4->4
+CLIP p=108 by=111 points=4->4
+EXTENT check p=48 front=24 back=-106.887141013
+CLIP p=48 by=140 points=4->4
+CLIP p=48 by=144 points=4->4
+CLIP p=48 by=98 points=4->4
+CLIP p=48 by=143 points=4->4
+CLIP p=48 by=147 points=4->4
+CLIP p=48 by=111 points=4->4
+EXTENT check p=112 front=147.502848604 back=-23.8536508568
+CLIP p=112 by=140 points=4->4
+CLIP p=112 by=144 points=4->4
+CLIP p=112 by=98 points=4->4
+CLIP p=112 by=143 points=4->4
+CLIP p=112 by=147 points=4->4
+CLIP p=112 by=111 points=4->4
+EXTENT check p=114 front=47.221644337 back=-124.134855124
+CLIP p=114 by=140 points=4->4
+CLIP p=114 by=144 points=4->4
+CLIP p=114 by=98 points=4->4
+CLIP p=114 by=143 points=4->4
+CLIP p=114 by=147 points=4->4
+CLIP p=114 by=111 points=4->4
+EXTENT check p=116 front=207.840128966 back=-52.4039386771
+CLIP p=116 by=140 points=4->4
+CLIP p=116 by=144 points=4->4
+CLIP p=116 by=98 points=4->4
+CLIP p=116 by=143 points=4->4
+CLIP p=116 by=147 points=4->5
+CLIP p=116 by=111 points=5->4
+EXTENT check p=118 front=54.3825032527 back=-205.86156439
+CLIP p=118 by=140 points=4->4
+CLIP p=118 by=144 points=4->5
+CLIP p=118 by=98 points=5->4
+CLIP p=118 by=143 points=4->4
+CLIP p=118 by=147 points=4->4
+CLIP p=118 by=111 points=4->4
+EXTENT check p=120 front=215.989669479 back=-57.1454507976
+CLIP p=120 by=140 points=4->5
+CLIP p=120 by=144 points=5->5
+CLIP p=120 by=98 points=5->4
+CLIP p=120 by=143 points=4->4
+CLIP p=120 by=147 points=4->3
+CLIP p=120 by=111 points=3->4
+EXTENT check p=122 front=52.0442584926 back=-221.090861784
+CLIP p=122 by=140 points=4->4
+CLIP p=122 by=144 points=4->3
+CLIP p=122 by=98 points=3->4
+CLIP p=122 by=143 points=4->4
+CLIP p=122 by=147 points=4->5
+CLIP p=122 by=111 points=5->4
+EXTENT check p=124 front=52.6780773496 back=-199.591355318
+CLIP p=124 by=140 points=4->4
+CLIP p=124 by=144 points=4->4
+CLIP p=124 by=98 points=4->4
+CLIP p=124 by=143 points=4->4
+CLIP p=124 by=147 points=4->4
+CLIP p=124 by=111 points=4->4
+EXTENT check p=126 front=197.024999684 back=-52.0121393127
+CLIP p=126 by=140 points=4->4
+CLIP p=126 by=144 points=4->4
+CLIP p=126 by=98 points=4->4
+CLIP p=126 by=143 points=4->4
+CLIP p=126 by=147 points=4->4
+CLIP p=126 by=111 points=4->4
+EXTENT check p=128 front=187.666534181 back=-23.8888441746
+CLIP p=128 by=140 points=4->4
+CLIP p=128 by=144 points=4->4
+CLIP p=128 by=98 points=4->4
+CLIP p=128 by=143 points=4->4
+CLIP p=128 by=147 points=4->4
+CLIP p=128 by=111 points=4->4
+EXTENT check p=130 front=140.167986095 back=-7.36959552789
+CLIP p=130 by=140 points=4->4
+CLIP p=130 by=144 points=4->4
+CLIP p=130 by=98 points=4->4
+CLIP p=130 by=143 points=4->4
+CLIP p=130 by=147 points=4->4
+CLIP p=130 by=111 points=4->4
+EXTENT check p=132 front=199.591355318 back=-52.6780773496
+CLIP p=132 by=140 points=4->4
+CLIP p=132 by=144 points=4->4
+CLIP p=132 by=98 points=4->4
+CLIP p=132 by=143 points=4->4
+CLIP p=132 by=147 points=4->4
+CLIP p=132 by=111 points=4->4
+EXTENT check p=134 front=31.276316351 back=-116.261265272
+CLIP p=134 by=140 points=4->4
+CLIP p=134 by=144 points=4->4
+CLIP p=134 by=98 points=4->4
+CLIP p=134 by=143 points=4->4
+CLIP p=134 by=147 points=4->4
+CLIP p=134 by=111 points=4->4
+EXTENT check p=136 front=44.5793969639 back=-166.975981391
+CLIP p=136 by=140 points=4->4
+CLIP p=136 by=144 points=4->4
+CLIP p=136 by=98 points=4->4
+CLIP p=136 by=143 points=4->4
+CLIP p=136 by=147 points=4->4
+CLIP p=136 by=111 points=4->4
+EXTENT check p=138 front=52.0121393127 back=-197.024999684
+CLIP p=138 by=140 points=4->4
+CLIP p=138 by=144 points=4->4
+CLIP p=138 by=98 points=4->4
+CLIP p=138 by=143 points=4->4
+CLIP p=138 by=147 points=4->4
+CLIP p=138 by=111 points=4->4
+SELECT level=1 p=48 brushes=1
+EXTENT real volume=1 p=48 front=24 back=-106.887141013
+CLIP p=48 by=140 points=4->4
+CLIP p=48 by=144 points=4->4
+CLIP p=48 by=98 points=4->4
+CLIP p=48 by=143 points=4->4
+CLIP p=48 by=147 points=4->4
+CLIP p=48 by=111 points=4->4
+EXTENT check p=102 front=168.633414193 back=-24
+CLIP p=102 by=140 points=4->4
+CLIP p=102 by=144 points=4->4
+CLIP p=102 by=143 points=4->4
+CLIP p=102 by=147 points=4->4
+CLIP p=102 by=111 points=4->4
+CLIP p=102 by=48 points=4->4
+EXTENT check p=104 front=24 back=-168.633414193
+CLIP p=104 by=140 points=4->4
+CLIP p=104 by=144 points=4->4
+CLIP p=104 by=143 points=4->4
+CLIP p=104 by=147 points=4->4
+CLIP p=104 by=111 points=4->4
+CLIP p=104 by=48 points=4->4
+EXTENT check p=106 front=170.812337765 back=-24
+CLIP p=106 by=140 points=4->4
+CLIP p=106 by=144 points=4->4
+CLIP p=106 by=143 points=4->4
+CLIP p=106 by=147 points=4->4
+CLIP p=106 by=111 points=4->4
+CLIP p=106 by=48 points=4->4
+EXTENT check p=108 front=24 back=-170.812337765
+CLIP p=108 by=140 points=4->4
+CLIP p=108 by=144 points=4->4
+CLIP p=108 by=143 points=4->4
+CLIP p=108 by=147 points=4->4
+CLIP p=108 by=111 points=4->4
+CLIP p=108 by=48 points=4->4
+EXTENT check p=112 front=124.134855124 back=-23.8536508568
+CLIP p=112 by=140 points=4->4
+CLIP p=112 by=144 points=4->4
+CLIP p=112 by=143 points=4->4
+CLIP p=112 by=147 points=4->4
+CLIP p=112 by=111 points=4->4
+CLIP p=112 by=48 points=4->4
+EXTENT check p=114 front=23.8536508568 back=-124.134855124
+CLIP p=114 by=140 points=4->4
+CLIP p=114 by=144 points=4->4
+CLIP p=114 by=143 points=4->4
+CLIP p=114 by=147 points=4->4
+CLIP p=114 by=111 points=4->4
+CLIP p=114 by=48 points=4->4
+EXTENT check p=116 front=205.861564391 back=-52.4039386771
+CLIP p=116 by=140 points=4->4
+CLIP p=116 by=144 points=4->4
+CLIP p=116 by=143 points=4->4
+CLIP p=116 by=147 points=4->5
+CLIP p=116 by=111 points=5->4
+CLIP p=116 by=48 points=4->4
+EXTENT check p=118 front=52.4039386771 back=-205.86156439
+CLIP p=118 by=140 points=4->4
+CLIP p=118 by=144 points=4->5
+CLIP p=118 by=143 points=5->5
+CLIP p=118 by=147 points=5->5
+CLIP p=118 by=111 points=5->5
+CLIP p=118 by=48 points=5->4
+EXTENT check p=120 front=215.989669479 back=-52.0442584926
+CLIP p=120 by=140 points=4->5
+CLIP p=120 by=144 points=5->5
+CLIP p=120 by=143 points=5->6
+CLIP p=120 by=147 points=6->4
+CLIP p=120 by=111 points=4->5
+CLIP p=120 by=48 points=5->4
+EXTENT check p=122 front=52.0442584926 back=-215.989669479
+CLIP p=122 by=140 points=4->4
+CLIP p=122 by=144 points=4->3
+CLIP p=122 by=143 points=3->3
+CLIP p=122 by=147 points=3->4
+CLIP p=122 by=111 points=4->3
+CLIP p=122 by=48 points=3->4
+EXTENT check p=124 front=52.6780773496 back=-199.591355318
+CLIP p=124 by=140 points=4->4
+CLIP p=124 by=144 points=4->4
+CLIP p=124 by=143 points=4->4
+CLIP p=124 by=147 points=4->4
+CLIP p=124 by=111 points=4->4
+CLIP p=124 by=48 points=4->4
+EXTENT check p=126 front=197.024999684 back=-52.0121393127
+CLIP p=126 by=140 points=4->4
+CLIP p=126 by=144 points=4->4
+CLIP p=126 by=143 points=4->4
+CLIP p=126 by=147 points=4->4
+CLIP p=126 by=111 points=4->4
+CLIP p=126 by=48 points=4->4
+EXTENT check p=128 front=166.975981391 back=-23.8888441746
+CLIP p=128 by=140 points=4->4
+CLIP p=128 by=144 points=4->4
+CLIP p=128 by=143 points=4->4
+CLIP p=128 by=147 points=4->4
+CLIP p=128 by=111 points=4->4
+CLIP p=128 by=48 points=4->4
+EXTENT check p=130 front=116.261265272 back=-7.36959552789
+CLIP p=130 by=140 points=4->4
+CLIP p=130 by=144 points=4->4
+CLIP p=130 by=143 points=4->4
+CLIP p=130 by=147 points=4->4
+CLIP p=130 by=111 points=4->4
+CLIP p=130 by=48 points=4->4
+EXTENT check p=132 front=199.591355318 back=-52.6780773496
+CLIP p=132 by=140 points=4->4
+CLIP p=132 by=144 points=4->4
+CLIP p=132 by=143 points=4->4
+CLIP p=132 by=147 points=4->4
+CLIP p=132 by=111 points=4->4
+CLIP p=132 by=48 points=4->4
+EXTENT check p=134 front=7.36959552789 back=-116.261265272
+CLIP p=134 by=140 points=4->4
+CLIP p=134 by=144 points=4->4
+CLIP p=134 by=143 points=4->4
+CLIP p=134 by=147 points=4->4
+CLIP p=134 by=111 points=4->4
+CLIP p=134 by=48 points=4->4
+EXTENT check p=136 front=23.8888441746 back=-166.975981391
+CLIP p=136 by=140 points=4->4
+CLIP p=136 by=144 points=4->4
+CLIP p=136 by=143 points=4->4
+CLIP p=136 by=147 points=4->4
+CLIP p=136 by=111 points=4->4
+CLIP p=136 by=48 points=4->4
+EXTENT check p=138 front=52.0121393127 back=-197.024999684
+CLIP p=138 by=140 points=4->4
+CLIP p=138 by=144 points=4->4
+CLIP p=138 by=143 points=4->4
+CLIP p=138 by=147 points=4->4
+CLIP p=138 by=111 points=4->4
+CLIP p=138 by=48 points=4->4
+SELECT level=2 p=102 brushes=1
+EXTENT real volume=1 p=102 front=168.633414193 back=-24
+CLIP p=102 by=140 points=4->4
+CLIP p=102 by=144 points=4->4
+CLIP p=102 by=143 points=4->4
+CLIP p=102 by=147 points=4->4
+CLIP p=102 by=111 points=4->4
+CLIP p=102 by=48 points=4->4
+LEAF level=3 brushes=0 volume=1
+EXTENT check p=104 front=24 back=-144.633414193
+CLIP p=104 by=140 points=4->4
+CLIP p=104 by=144 points=4->4
+CLIP p=104 by=147 points=4->4
+CLIP p=104 by=111 points=4->4
+CLIP p=104 by=48 points=4->4
+CLIP p=104 by=103 points=4->4
+EXTENT check p=106 front=170.812337765 back=-24
+CLIP p=106 by=140 points=4->4
+CLIP p=106 by=144 points=4->4
+CLIP p=106 by=147 points=4->4
+CLIP p=106 by=111 points=4->4
+CLIP p=106 by=48 points=4->4
+CLIP p=106 by=103 points=4->4
+EXTENT check p=108 front=24 back=-170.812337765
+CLIP p=108 by=140 points=4->4
+CLIP p=108 by=144 points=4->4
+CLIP p=108 by=147 points=4->4
+CLIP p=108 by=111 points=4->4
+CLIP p=108 by=48 points=4->4
+CLIP p=108 by=103 points=4->4
+EXTENT check p=112 front=124.134855124 back=-18.382190292
+CLIP p=112 by=140 points=4->4
+CLIP p=112 by=144 points=4->4
+CLIP p=112 by=147 points=4->4
+CLIP p=112 by=111 points=4->4
+CLIP p=112 by=48 points=4->4
+CLIP p=112 by=103 points=4->4
+EXTENT check p=114 front=23.8536508568 back=-118.663394559
+CLIP p=114 by=140 points=4->4
+CLIP p=114 by=144 points=4->4
+CLIP p=114 by=147 points=4->4
+CLIP p=114 by=111 points=4->4
+CLIP p=114 by=48 points=4->4
+CLIP p=114 by=103 points=4->4
+EXTENT check p=116 front=197.411337334 back=-52.4039386771
+CLIP p=116 by=140 points=4->4
+CLIP p=116 by=144 points=4->4
+CLIP p=116 by=147 points=4->4
+CLIP p=116 by=111 points=4->4
+CLIP p=116 by=48 points=4->4
+CLIP p=116 by=103 points=4->4
+EXTENT check p=118 front=43.9537116206 back=-205.86156439
+CLIP p=118 by=140 points=4->4
+CLIP p=118 by=144 points=4->5
+CLIP p=118 by=147 points=5->5
+CLIP p=118 by=111 points=5->5
+CLIP p=118 by=48 points=5->4
+CLIP p=118 by=103 points=4->4
+EXTENT check p=120 front=215.989669479 back=-30.2576391591
+CLIP p=120 by=140 points=4->5
+CLIP p=120 by=144 points=5->5
+CLIP p=120 by=147 points=5->4
+CLIP p=120 by=111 points=4->4
+CLIP p=120 by=48 points=4->4
+CLIP p=120 by=103 points=4->4
+EXTENT check p=122 front=52.0442584926 back=-194.203050146
+CLIP p=122 by=140 points=4->4
+CLIP p=122 by=144 points=4->3
+CLIP p=122 by=147 points=3->4
+CLIP p=122 by=111 points=4->3
+CLIP p=122 by=48 points=3->4
+CLIP p=122 by=103 points=4->4
+EXTENT check p=124 front=43.796362113 back=-199.591355318
+CLIP p=124 by=140 points=4->4
+CLIP p=124 by=144 points=4->4
+CLIP p=124 by=147 points=4->4
+CLIP p=124 by=111 points=4->4
+CLIP p=124 by=48 points=4->4
+CLIP p=124 by=103 points=4->4
+EXTENT check p=126 front=197.024999684 back=-29.5598557575
+CLIP p=126 by=140 points=4->4
+CLIP p=126 by=144 points=4->4
+CLIP p=126 by=147 points=4->4
+CLIP p=126 by=111 points=4->4
+CLIP p=126 by=48 points=4->4
+CLIP p=126 by=103 points=4->4
+EXTENT check p=128 front=166.975981391 back=-23.8888441746
+CLIP p=128 by=140 points=4->4
+CLIP p=128 by=144 points=4->4
+CLIP p=128 by=147 points=4->4
+CLIP p=128 by=111 points=4->4
+CLIP p=128 by=48 points=4->4
+CLIP p=128 by=103 points=4->4
+EXTENT check p=130 front=116.261265272 back=-7.36959552789
+CLIP p=130 by=140 points=4->4
+CLIP p=130 by=144 points=4->4
+CLIP p=130 by=147 points=4->4
+CLIP p=130 by=111 points=4->4
+CLIP p=130 by=48 points=4->4
+CLIP p=130 by=103 points=4->4
+EXTENT check p=132 front=190.709640082 back=-52.6780773496
+CLIP p=132 by=140 points=4->4
+CLIP p=132 by=144 points=4->4
+CLIP p=132 by=147 points=4->4
+CLIP p=132 by=111 points=4->4
+CLIP p=132 by=48 points=4->4
+CLIP p=132 by=103 points=4->4
+EXTENT check p=134 front=7.36959552789 back=-116.261265272
+CLIP p=134 by=140 points=4->4
+CLIP p=134 by=144 points=4->4
+CLIP p=134 by=147 points=4->4
+CLIP p=134 by=111 points=4->4
+CLIP p=134 by=48 points=4->4
+CLIP p=134 by=103 points=4->4
+EXTENT check p=136 front=23.8888441746 back=-166.975981391
+CLIP p=136 by=140 points=4->4
+CLIP p=136 by=144 points=4->4
+CLIP p=136 by=147 points=4->4
+CLIP p=136 by=111 points=4->4
+CLIP p=136 by=48 points=4->4
+CLIP p=136 by=103 points=4->4
+EXTENT check p=138 front=52.0121393127 back=-174.572716129
+CLIP p=138 by=140 points=4->4
+CLIP p=138 by=144 points=4->4
+CLIP p=138 by=147 points=4->4
+CLIP p=138 by=111 points=4->4
+CLIP p=138 by=48 points=4->4
+CLIP p=138 by=103 points=4->4
+SELECT level=3 p=104 brushes=1
+EXTENT real volume=1 p=104 front=24 back=-144.633414193
+CLIP p=104 by=140 points=4->4
+CLIP p=104 by=144 points=4->4
+CLIP p=104 by=147 points=4->4
+CLIP p=104 by=111 points=4->4
+CLIP p=104 by=48 points=4->4
+CLIP p=104 by=103 points=4->4
+EXTENT check p=106 front=170.812337765 back=-24
+CLIP p=106 by=144 points=4->4
+CLIP p=106 by=147 points=4->4
+CLIP p=106 by=111 points=4->4
+CLIP p=106 by=48 points=4->4
+CLIP p=106 by=103 points=4->4
+CLIP p=106 by=104 points=4->4
+EXTENT check p=108 front=24 back=-170.812337765
+CLIP p=108 by=144 points=4->4
+CLIP p=108 by=147 points=4->4
+CLIP p=108 by=111 points=4->4
+CLIP p=108 by=48 points=4->4
+CLIP p=108 by=103 points=4->4
+CLIP p=108 by=104 points=4->4
+EXTENT check p=112 front=118.663394559 back=-18.382190292
+CLIP p=112 by=144 points=4->4
+CLIP p=112 by=147 points=4->4
+CLIP p=112 by=111 points=4->4
+CLIP p=112 by=48 points=4->4
+CLIP p=112 by=103 points=4->4
+CLIP p=112 by=104 points=4->4
+EXTENT check p=114 front=18.382190292 back=-118.663394559
+CLIP p=114 by=144 points=4->4
+CLIP p=114 by=147 points=4->4
+CLIP p=114 by=111 points=4->4
+CLIP p=114 by=48 points=4->4
+CLIP p=114 by=103 points=4->4
+CLIP p=114 by=104 points=4->4
+EXTENT check p=116 front=197.411337334 back=-43.9537116206
+CLIP p=116 by=144 points=4->4
+CLIP p=116 by=147 points=4->4
+CLIP p=116 by=111 points=4->4
+CLIP p=116 by=48 points=4->4
+CLIP p=116 by=103 points=4->4
+CLIP p=116 by=104 points=4->4
+EXTENT check p=118 front=43.9537116206 back=-197.411337334
+CLIP p=118 by=144 points=4->4
+CLIP p=118 by=147 points=4->4
+CLIP p=118 by=111 points=4->4
+CLIP p=118 by=48 points=4->4
+CLIP p=118 by=103 points=4->4
+CLIP p=118 by=104 points=4->4
+EXTENT check p=120 front=194.203050146 back=-30.2576391591
+CLIP p=120 by=144 points=4->4
+CLIP p=120 by=147 points=4->4
+CLIP p=120 by=111 points=4->4
+CLIP p=120 by=48 points=4->4
+CLIP p=120 by=103 points=4->4
+CLIP p=120 by=104 points=4->4
+EXTENT check p=122 front=30.2576391591 back=-194.203050146
+CLIP p=122 by=144 points=4->4
+CLIP p=122 by=147 points=4->4
+CLIP p=122 by=111 points=4->4
+CLIP p=122 by=48 points=4->4
+CLIP p=122 by=103 points=4->4
+CLIP p=122 by=104 points=4->4
+EXTENT check p=124 front=43.796362113 back=-190.709640082
+CLIP p=124 by=144 points=4->4
+CLIP p=124 by=147 points=4->4
+CLIP p=124 by=111 points=4->4
+CLIP p=124 by=48 points=4->4
+CLIP p=124 by=103 points=4->4
+CLIP p=124 by=104 points=4->4
+EXTENT check p=126 front=174.572716129 back=-29.5598557575
+CLIP p=126 by=144 points=4->4
+CLIP p=126 by=147 points=4->4
+CLIP p=126 by=111 points=4->4
+CLIP p=126 by=48 points=4->4
+CLIP p=126 by=103 points=4->4
+CLIP p=126 by=104 points=4->4
+EXTENT check p=128 front=166.975981391 back=-23.8888441746
+CLIP p=128 by=144 points=4->4
+CLIP p=128 by=147 points=4->4
+CLIP p=128 by=111 points=4->4
+CLIP p=128 by=48 points=4->4
+CLIP p=128 by=103 points=4->4
+CLIP p=128 by=104 points=4->4
+EXTENT check p=130 front=116.261265272 back=-7.36959552789
+CLIP p=130 by=144 points=4->4
+CLIP p=130 by=147 points=4->4
+CLIP p=130 by=111 points=4->4
+CLIP p=130 by=48 points=4->4
+CLIP p=130 by=103 points=4->4
+CLIP p=130 by=104 points=4->4
+EXTENT check p=132 front=190.709640082 back=-43.796362113
+CLIP p=132 by=144 points=4->4
+CLIP p=132 by=147 points=4->4
+CLIP p=132 by=111 points=4->4
+CLIP p=132 by=48 points=4->4
+CLIP p=132 by=103 points=4->4
+CLIP p=132 by=104 points=4->4
+EXTENT check p=134 front=7.36959552789 back=-116.261265272
+CLIP p=134 by=144 points=4->4
+CLIP p=134 by=147 points=4->4
+CLIP p=134 by=111 points=4->4
+CLIP p=134 by=48 points=4->4
+CLIP p=134 by=103 points=4->4
+CLIP p=134 by=104 points=4->4
+EXTENT check p=136 front=23.8888441746 back=-166.975981391
+CLIP p=136 by=144 points=4->4
+CLIP p=136 by=147 points=4->4
+CLIP p=136 by=111 points=4->4
+CLIP p=136 by=48 points=4->4
+CLIP p=136 by=103 points=4->4
+CLIP p=136 by=104 points=4->4
+EXTENT check p=138 front=29.5598557575 back=-174.572716129
+CLIP p=138 by=144 points=4->4
+CLIP p=138 by=147 points=4->4
+CLIP p=138 by=111 points=4->4
+CLIP p=138 by=48 points=4->4
+CLIP p=138 by=103 points=4->4
+CLIP p=138 by=104 points=4->4
+SELECT level=4 p=106 brushes=1
+EXTENT real volume=1 p=106 front=170.812337765 back=-24
+CLIP p=106 by=144 points=4->4
+CLIP p=106 by=147 points=4->4
+CLIP p=106 by=111 points=4->4
+CLIP p=106 by=48 points=4->4
+CLIP p=106 by=103 points=4->4
+CLIP p=106 by=104 points=4->4
+LEAF level=5 brushes=0 volume=1
+EXTENT check p=108 front=24 back=-146.812337765
+CLIP p=108 by=144 points=4->4
+CLIP p=108 by=111 points=4->4
+CLIP p=108 by=48 points=4->4
+CLIP p=108 by=103 points=4->4
+CLIP p=108 by=104 points=4->4
+CLIP p=108 by=107 points=4->4
+EXTENT check p=112 front=118.663394559 back=-18.382190292
+CLIP p=112 by=144 points=4->4
+CLIP p=112 by=111 points=4->4
+CLIP p=112 by=48 points=4->4
+CLIP p=112 by=103 points=4->4
+CLIP p=112 by=104 points=4->4
+CLIP p=112 by=107 points=4->4
+EXTENT check p=114 front=18.382190292 back=-118.663394559
+CLIP p=114 by=144 points=4->4
+CLIP p=114 by=111 points=4->4
+CLIP p=114 by=48 points=4->4
+CLIP p=114 by=103 points=4->4
+CLIP p=114 by=104 points=4->4
+CLIP p=114 by=107 points=4->4
+EXTENT check p=116 front=197.411337334 back=-21.5778553261
+CLIP p=116 by=144 points=4->4
+CLIP p=116 by=111 points=4->4
+CLIP p=116 by=48 points=4->4
+CLIP p=116 by=103 points=4->4
+CLIP p=116 by=104 points=4->4
+CLIP p=116 by=107 points=4->4
+EXTENT check p=118 front=43.9537116206 back=-175.035481039
+CLIP p=118 by=144 points=4->4
+CLIP p=118 by=111 points=4->4
+CLIP p=118 by=48 points=4->4
+CLIP p=118 by=103 points=4->4
+CLIP p=118 by=104 points=4->4
+CLIP p=118 by=107 points=4->4
+EXTENT check p=120 front=194.203050146 back=-21.5788687919
+CLIP p=120 by=144 points=4->4
+CLIP p=120 by=111 points=4->4
+CLIP p=120 by=48 points=4->4
+CLIP p=120 by=103 points=4->4
+CLIP p=120 by=104 points=4->4
+CLIP p=120 by=107 points=4->3
+EXTENT check p=122 front=30.2576391591 back=-185.524279779
+CLIP p=122 by=144 points=4->4
+CLIP p=122 by=111 points=4->4
+CLIP p=122 by=48 points=4->4
+CLIP p=122 by=103 points=4->4
+CLIP p=122 by=104 points=4->4
+CLIP p=122 by=107 points=4->4
+EXTENT check p=124 front=43.796362113 back=-168.413561179
+CLIP p=124 by=144 points=4->4
+CLIP p=124 by=111 points=4->4
+CLIP p=124 by=48 points=4->4
+CLIP p=124 by=103 points=4->4
+CLIP p=124 by=104 points=4->4
+CLIP p=124 by=107 points=4->4
+EXTENT check p=126 front=174.572716129 back=-21.0807659975
+CLIP p=126 by=144 points=4->4
+CLIP p=126 by=111 points=4->4
+CLIP p=126 by=48 points=4->4
+CLIP p=126 by=103 points=4->4
+CLIP p=126 by=104 points=4->4
+CLIP p=126 by=107 points=4->4
+EXTENT check p=128 front=166.975981391 back=-11.7273876306
+CLIP p=128 by=144 points=4->4
+CLIP p=128 by=111 points=4->4
+CLIP p=128 by=48 points=4->4
+CLIP p=128 by=103 points=4->4
+CLIP p=128 by=104 points=4->4
+CLIP p=128 by=107 points=4->4
+EXTENT check p=130 front=114.147335404 back=-7.36959552789
+CLIP p=130 by=144 points=4->4
+CLIP p=130 by=111 points=4->4
+CLIP p=130 by=48 points=4->4
+CLIP p=130 by=103 points=4->4
+CLIP p=130 by=104 points=4->4
+CLIP p=130 by=107 points=4->4
+EXTENT check p=132 front=190.709640082 back=-21.5002832098
+CLIP p=132 by=144 points=4->4
+CLIP p=132 by=111 points=4->4
+CLIP p=132 by=48 points=4->4
+CLIP p=132 by=103 points=4->4
+CLIP p=132 by=104 points=4->4
+CLIP p=132 by=107 points=4->4
+EXTENT check p=134 front=5.25566566002 back=-116.261265272
+CLIP p=134 by=144 points=4->4
+CLIP p=134 by=111 points=4->4
+CLIP p=134 by=48 points=4->4
+CLIP p=134 by=103 points=4->4
+CLIP p=134 by=104 points=4->4
+CLIP p=134 by=107 points=4->4
+EXTENT check p=136 front=23.8888441746 back=-154.814524847
+CLIP p=136 by=144 points=4->4
+CLIP p=136 by=111 points=4->4
+CLIP p=136 by=48 points=4->4
+CLIP p=136 by=103 points=4->4
+CLIP p=136 by=104 points=4->4
+CLIP p=136 by=107 points=4->4
+EXTENT check p=138 front=29.5598557575 back=-166.093626369
+CLIP p=138 by=144 points=4->4
+CLIP p=138 by=111 points=4->4
+CLIP p=138 by=48 points=4->4
+CLIP p=138 by=103 points=4->4
+CLIP p=138 by=104 points=4->4
+CLIP p=138 by=107 points=4->4
+SELECT level=5 p=108 brushes=1
+EXTENT real volume=1 p=108 front=24 back=-146.812337765
+CLIP p=108 by=144 points=4->4
+CLIP p=108 by=111 points=4->4
+CLIP p=108 by=48 points=4->4
+CLIP p=108 by=103 points=4->4
+CLIP p=108 by=104 points=4->4
+CLIP p=108 by=107 points=4->4
+EXTENT check p=112 front=118.663394559 back=-18.382190292
+CLIP p=112 by=111 points=4->4
+CLIP p=112 by=48 points=4->4
+CLIP p=112 by=103 points=4->4
+CLIP p=112 by=104 points=4->4
+CLIP p=112 by=107 points=4->4
+CLIP p=112 by=108 points=4->4
+EXTENT check p=114 front=18.382190292 back=-118.663394559
+CLIP p=114 by=111 points=4->4
+CLIP p=114 by=48 points=4->4
+CLIP p=114 by=103 points=4->4
+CLIP p=114 by=104 points=4->4
+CLIP p=114 by=107 points=4->4
+CLIP p=114 by=108 points=4->4
+EXTENT check p=116 front=175.035481039 back=-21.5778553261
+CLIP p=116 by=111 points=4->4
+CLIP p=116 by=48 points=4->4
+CLIP p=116 by=103 points=4->4
+CLIP p=116 by=104 points=4->4
+CLIP p=116 by=107 points=4->4
+CLIP p=116 by=108 points=4->4
+EXTENT check p=118 front=21.577855326 back=-175.035481039
+CLIP p=118 by=111 points=4->4
+CLIP p=118 by=48 points=4->4
+CLIP p=118 by=103 points=4->4
+CLIP p=118 by=104 points=4->4
+CLIP p=118 by=107 points=4->4
+CLIP p=118 by=108 points=4->4
+EXTENT check p=120 front=185.524279779 back=-21.5788687919
+CLIP p=120 by=111 points=4->4
+CLIP p=120 by=48 points=4->4
+CLIP p=120 by=103 points=4->4
+CLIP p=120 by=104 points=4->4
+CLIP p=120 by=107 points=4->3
+CLIP p=120 by=108 points=3->3
+EXTENT check p=122 front=21.5788687919 back=-185.524279779
+CLIP p=122 by=111 points=4->4
+CLIP p=122 by=48 points=4->4
+CLIP p=122 by=103 points=4->4
+CLIP p=122 by=104 points=4->4
+CLIP p=122 by=107 points=4->4
+CLIP p=122 by=108 points=4->3
+EXTENT check p=124 front=21.5002832098 back=-168.413561179
+CLIP p=124 by=111 points=4->4
+CLIP p=124 by=48 points=4->4
+CLIP p=124 by=103 points=4->4
+CLIP p=124 by=104 points=4->4
+CLIP p=124 by=107 points=4->4
+CLIP p=124 by=108 points=4->4
+EXTENT check p=126 front=166.093626369 back=-21.0807659975
+CLIP p=126 by=111 points=4->4
+CLIP p=126 by=48 points=4->4
+CLIP p=126 by=103 points=4->4
+CLIP p=126 by=104 points=4->4
+CLIP p=126 by=107 points=4->4
+CLIP p=126 by=108 points=4->4
+EXTENT check p=128 front=154.814524847 back=-11.7273876306
+CLIP p=128 by=111 points=4->4
+CLIP p=128 by=48 points=4->4
+CLIP p=128 by=103 points=4->4
+CLIP p=128 by=104 points=4->4
+CLIP p=128 by=107 points=4->4
+CLIP p=128 by=108 points=4->4
+EXTENT check p=130 front=114.147335404 back=-5.25566566002
+CLIP p=130 by=111 points=4->4
+CLIP p=130 by=48 points=4->4
+CLIP p=130 by=103 points=4->4
+CLIP p=130 by=104 points=4->4
+CLIP p=130 by=107 points=4->4
+CLIP p=130 by=108 points=4->4
+EXTENT check p=132 front=168.413561179 back=-21.5002832098
+CLIP p=132 by=111 points=4->4
+CLIP p=132 by=48 points=4->4
+CLIP p=132 by=103 points=4->4
+CLIP p=132 by=104 points=4->4
+CLIP p=132 by=107 points=4->4
+CLIP p=132 by=108 points=4->4
+EXTENT check p=134 front=5.25566566002 back=-114.147335404
+CLIP p=134 by=111 points=4->4
+CLIP p=134 by=48 points=4->4
+CLIP p=134 by=103 points=4->4
+CLIP p=134 by=104 points=4->4
+CLIP p=134 by=107 points=4->4
+CLIP p=134 by=108 points=4->4
+EXTENT check p=136 front=11.7273876306 back=-154.814524847
+CLIP p=136 by=111 points=4->4
+CLIP p=136 by=48 points=4->4
+CLIP p=136 by=103 points=4->4
+CLIP p=136 by=104 points=4->4
+CLIP p=136 by=107 points=4->4
+CLIP p=136 by=108 points=4->4
+EXTENT check p=138 front=21.0807659975 back=-166.093626369
+CLIP p=138 by=111 points=4->4
+CLIP p=138 by=48 points=4->4
+CLIP p=138 by=103 points=4->4
+CLIP p=138 by=104 points=4->4
+CLIP p=138 by=107 points=4->4
+CLIP p=138 by=108 points=4->4
+SELECT level=6 p=112 brushes=1
+EXTENT real volume=1 p=112 front=118.663394559 back=-18.382190292
+CLIP p=112 by=111 points=4->4
+CLIP p=112 by=48 points=4->4
+CLIP p=112 by=103 points=4->4
+CLIP p=112 by=104 points=4->4
+CLIP p=112 by=107 points=4->4
+CLIP p=112 by=108 points=4->4
+LEAF level=7 brushes=0 volume=1
+EXTENT check p=114 front=18.382190292 back=-100.281204267
+CLIP p=114 by=111 points=4->4
+CLIP p=114 by=48 points=4->4
+CLIP p=114 by=103 points=4->4
+CLIP p=114 by=104 points=4->4
+CLIP p=114 by=107 points=4->4
+CLIP p=114 by=108 points=4->4
+CLIP p=114 by=113 points=4->4
+EXTENT check p=116 front=175.035481039 back=-21.5778553261
+CLIP p=116 by=111 points=4->4
+CLIP p=116 by=48 points=4->4
+CLIP p=116 by=103 points=4->4
+CLIP p=116 by=104 points=4->4
+CLIP p=116 by=107 points=4->4
+CLIP p=116 by=108 points=4->4
+CLIP p=116 by=113 points=4->4
+EXTENT check p=118 front=21.577855326 back=-175.035481039
+CLIP p=118 by=111 points=4->4
+CLIP p=118 by=48 points=4->4
+CLIP p=118 by=103 points=4->4
+CLIP p=118 by=104 points=4->4
+CLIP p=118 by=107 points=4->4
+CLIP p=118 by=108 points=4->4
+CLIP p=118 by=113 points=4->4
+EXTENT check p=120 front=185.524279779 back=-21.5788687919
+CLIP p=120 by=111 points=4->4
+CLIP p=120 by=48 points=4->4
+CLIP p=120 by=103 points=4->4
+CLIP p=120 by=104 points=4->4
+CLIP p=120 by=107 points=4->3
+CLIP p=120 by=108 points=3->3
+CLIP p=120 by=113 points=3->4
+EXTENT check p=122 front=21.5788687919 back=-185.524279779
+CLIP p=122 by=111 points=4->4
+CLIP p=122 by=48 points=4->4
+CLIP p=122 by=103 points=4->4
+CLIP p=122 by=104 points=4->4
+CLIP p=122 by=107 points=4->4
+CLIP p=122 by=108 points=4->3
+CLIP p=122 by=113 points=3->3
+EXTENT check p=124 front=21.5002832098 back=-168.413561179
+CLIP p=124 by=111 points=4->4
+CLIP p=124 by=48 points=4->4
+CLIP p=124 by=103 points=4->4
+CLIP p=124 by=104 points=4->4
+CLIP p=124 by=107 points=4->4
+CLIP p=124 by=108 points=4->4
+CLIP p=124 by=113 points=4->4
+EXTENT check p=126 front=166.093626369 back=-21.0807659975
+CLIP p=126 by=111 points=4->4
+CLIP p=126 by=48 points=4->4
+CLIP p=126 by=103 points=4->4
+CLIP p=126 by=104 points=4->4
+CLIP p=126 by=107 points=4->4
+CLIP p=126 by=108 points=4->4
+CLIP p=126 by=113 points=4->4
+EXTENT check p=128 front=154.814524847 back=-11.7273876306
+CLIP p=128 by=111 points=4->4
+CLIP p=128 by=48 points=4->4
+CLIP p=128 by=103 points=4->4
+CLIP p=128 by=104 points=4->4
+CLIP p=128 by=107 points=4->4
+CLIP p=128 by=108 points=4->4
+CLIP p=128 by=113 points=4->4
+EXTENT check p=130 front=114.147335404 back=-5.25566566002
+CLIP p=130 by=111 points=4->4
+CLIP p=130 by=48 points=4->4
+CLIP p=130 by=103 points=4->4
+CLIP p=130 by=104 points=4->4
+CLIP p=130 by=107 points=4->4
+CLIP p=130 by=108 points=4->4
+CLIP p=130 by=113 points=4->4
+EXTENT check p=132 front=168.413561179 back=-21.5002832098
+CLIP p=132 by=111 points=4->4
+CLIP p=132 by=48 points=4->4
+CLIP p=132 by=103 points=4->4
+CLIP p=132 by=104 points=4->4
+CLIP p=132 by=107 points=4->4
+CLIP p=132 by=108 points=4->4
+CLIP p=132 by=113 points=4->4
+EXTENT check p=134 front=5.25566566002 back=-114.147335404
+CLIP p=134 by=111 points=4->4
+CLIP p=134 by=48 points=4->4
+CLIP p=134 by=103 points=4->4
+CLIP p=134 by=104 points=4->4
+CLIP p=134 by=107 points=4->4
+CLIP p=134 by=108 points=4->4
+CLIP p=134 by=113 points=4->4
+EXTENT check p=136 front=11.7273876306 back=-154.814524847
+CLIP p=136 by=111 points=4->4
+CLIP p=136 by=48 points=4->4
+CLIP p=136 by=103 points=4->4
+CLIP p=136 by=104 points=4->4
+CLIP p=136 by=107 points=4->4
+CLIP p=136 by=108 points=4->4
+CLIP p=136 by=113 points=4->4
+EXTENT check p=138 front=21.0807659975 back=-166.093626369
+CLIP p=138 by=111 points=4->4
+CLIP p=138 by=48 points=4->4
+CLIP p=138 by=103 points=4->4
+CLIP p=138 by=104 points=4->4
+CLIP p=138 by=107 points=4->4
+CLIP p=138 by=108 points=4->4
+CLIP p=138 by=113 points=4->4
+SELECT level=7 p=114 brushes=1
+EXTENT real volume=1 p=114 front=18.382190292 back=-100.281204267
+CLIP p=114 by=111 points=4->4
+CLIP p=114 by=48 points=4->4
+CLIP p=114 by=103 points=4->4
+CLIP p=114 by=104 points=4->4
+CLIP p=114 by=107 points=4->4
+CLIP p=114 by=108 points=4->4
+CLIP p=114 by=113 points=4->4
+EXTENT check p=116 front=175.035481039 back=-21.5778553261
+CLIP p=116 by=111 points=4->4
+CLIP p=116 by=48 points=4->4
+CLIP p=116 by=103 points=4->4
+CLIP p=116 by=104 points=4->4
+CLIP p=116 by=107 points=4->4
+CLIP p=116 by=108 points=4->4
+CLIP p=116 by=113 points=4->4
+CLIP p=116 by=114 points=4->4
+EXTENT check p=118 front=21.577855326 back=-175.035481039
+CLIP p=118 by=111 points=4->4
+CLIP p=118 by=48 points=4->4
+CLIP p=118 by=103 points=4->4
+CLIP p=118 by=104 points=4->4
+CLIP p=118 by=107 points=4->4
+CLIP p=118 by=108 points=4->4
+CLIP p=118 by=113 points=4->4
+CLIP p=118 by=114 points=4->4
+EXTENT check p=120 front=185.524279779 back=-21.5788687919
+CLIP p=120 by=111 points=4->4
+CLIP p=120 by=48 points=4->4
+CLIP p=120 by=103 points=4->4
+CLIP p=120 by=104 points=4->4
+CLIP p=120 by=107 points=4->3
+CLIP p=120 by=108 points=3->3
+CLIP p=120 by=113 points=3->4
+CLIP p=120 by=114 points=4->4
+EXTENT check p=122 front=21.5788687919 back=-185.524279779
+CLIP p=122 by=111 points=4->4
+CLIP p=122 by=48 points=4->4
+CLIP p=122 by=103 points=4->4
+CLIP p=122 by=104 points=4->4
+CLIP p=122 by=107 points=4->4
+CLIP p=122 by=108 points=4->3
+CLIP p=122 by=113 points=3->3
+CLIP p=122 by=114 points=3->4
+EXTENT check p=124 front=21.5002832098 back=-168.413561179
+CLIP p=124 by=111 points=4->4
+CLIP p=124 by=48 points=4->4
+CLIP p=124 by=103 points=4->4
+CLIP p=124 by=104 points=4->4
+CLIP p=124 by=107 points=4->4
+CLIP p=124 by=108 points=4->4
+CLIP p=124 by=113 points=4->4
+CLIP p=124 by=114 points=4->4
+EXTENT check p=126 front=166.093626369 back=-21.0807659975
+CLIP p=126 by=111 points=4->4
+CLIP p=126 by=48 points=4->4
+CLIP p=126 by=103 points=4->4
+CLIP p=126 by=104 points=4->4
+CLIP p=126 by=107 points=4->4
+CLIP p=126 by=108 points=4->4
+CLIP p=126 by=113 points=4->4
+CLIP p=126 by=114 points=4->4
+EXTENT check p=128 front=154.814524847 back=-11.7273876306
+CLIP p=128 by=111 points=4->4
+CLIP p=128 by=48 points=4->4
+CLIP p=128 by=103 points=4->4
+CLIP p=128 by=104 points=4->4
+CLIP p=128 by=107 points=4->4
+CLIP p=128 by=108 points=4->4
+CLIP p=128 by=113 points=4->4
+CLIP p=128 by=114 points=4->4
+EXTENT check p=130 front=114.147335404 back=-5.25566566002
+CLIP p=130 by=111 points=4->4
+CLIP p=130 by=48 points=4->4
+CLIP p=130 by=103 points=4->4
+CLIP p=130 by=104 points=4->4
+CLIP p=130 by=107 points=4->4
+CLIP p=130 by=108 points=4->4
+CLIP p=130 by=113 points=4->4
+CLIP p=130 by=114 points=4->4
+EXTENT check p=132 front=168.413561179 back=-21.5002832098
+CLIP p=132 by=111 points=4->4
+CLIP p=132 by=48 points=4->4
+CLIP p=132 by=103 points=4->4
+CLIP p=132 by=104 points=4->4
+CLIP p=132 by=107 points=4->4
+CLIP p=132 by=108 points=4->4
+CLIP p=132 by=113 points=4->4
+CLIP p=132 by=114 points=4->4
+EXTENT check p=134 front=5.25566566002 back=-114.147335404
+CLIP p=134 by=111 points=4->4
+CLIP p=134 by=48 points=4->4
+CLIP p=134 by=103 points=4->4
+CLIP p=134 by=104 points=4->4
+CLIP p=134 by=107 points=4->4
+CLIP p=134 by=108 points=4->4
+CLIP p=134 by=113 points=4->4
+CLIP p=134 by=114 points=4->4
+EXTENT check p=136 front=11.7273876306 back=-154.814524847
+CLIP p=136 by=111 points=4->4
+CLIP p=136 by=48 points=4->4
+CLIP p=136 by=103 points=4->4
+CLIP p=136 by=104 points=4->4
+CLIP p=136 by=107 points=4->4
+CLIP p=136 by=108 points=4->4
+CLIP p=136 by=113 points=4->4
+CLIP p=136 by=114 points=4->4
+EXTENT check p=138 front=21.0807659975 back=-166.093626369
+CLIP p=138 by=111 points=4->4
+CLIP p=138 by=48 points=4->4
+CLIP p=138 by=103 points=4->4
+CLIP p=138 by=104 points=4->4
+CLIP p=138 by=107 points=4->4
+CLIP p=138 by=108 points=4->4
+CLIP p=138 by=113 points=4->4
+CLIP p=138 by=114 points=4->4
+SELECT level=8 p=116 brushes=1
+EXTENT real volume=1 p=116 front=175.035481039 back=-21.5778553261
+CLIP p=116 by=111 points=4->4
+CLIP p=116 by=48 points=4->4
+CLIP p=116 by=103 points=4->4
+CLIP p=116 by=104 points=4->4
+CLIP p=116 by=107 points=4->4
+CLIP p=116 by=108 points=4->4
+CLIP p=116 by=113 points=4->4
+CLIP p=116 by=114 points=4->4
+LEAF level=9 brushes=0 volume=1
+EXTENT check p=118 front=21.577855326 back=-153.457625713
+CLIP p=118 by=111 points=4->4
+CLIP p=118 by=48 points=4->4
+CLIP p=118 by=103 points=4->4
+CLIP p=118 by=104 points=4->4
+CLIP p=118 by=107 points=4->4
+CLIP p=118 by=108 points=4->4
+CLIP p=118 by=113 points=4->4
+CLIP p=118 by=114 points=4->4
+CLIP p=118 by=117 points=4->4
+EXTENT check p=120 front=185.524279779 back=-21.5788687919
+CLIP p=120 by=111 points=4->4
+CLIP p=120 by=48 points=4->4
+CLIP p=120 by=103 points=4->4
+CLIP p=120 by=104 points=4->4
+CLIP p=120 by=107 points=4->3
+CLIP p=120 by=108 points=3->3
+CLIP p=120 by=113 points=3->4
+CLIP p=120 by=114 points=4->4
+CLIP p=120 by=117 points=4->4
+EXTENT check p=122 front=21.5788687919 back=-185.524279779
+CLIP p=122 by=111 points=4->4
+CLIP p=122 by=48 points=4->4
+CLIP p=122 by=103 points=4->4
+CLIP p=122 by=104 points=4->4
+CLIP p=122 by=107 points=4->4
+CLIP p=122 by=108 points=4->3
+CLIP p=122 by=113 points=3->3
+CLIP p=122 by=114 points=3->4
+CLIP p=122 by=117 points=4->4
+EXTENT check p=124 front=21.5002832098 back=-154.14214919
+CLIP p=124 by=111 points=4->4
+CLIP p=124 by=48 points=4->4
+CLIP p=124 by=103 points=4->4
+CLIP p=124 by=104 points=4->4
+CLIP p=124 by=107 points=4->4
+CLIP p=124 by=108 points=4->4
+CLIP p=124 by=113 points=4->4
+CLIP p=124 by=114 points=4->4
+CLIP p=124 by=117 points=4->4
+EXTENT check p=126 front=166.093626369 back=-21.0807659975
+CLIP p=126 by=111 points=4->4
+CLIP p=126 by=48 points=4->4
+CLIP p=126 by=103 points=4->4
+CLIP p=126 by=104 points=4->4
+CLIP p=126 by=107 points=4->4
+CLIP p=126 by=108 points=4->4
+CLIP p=126 by=113 points=4->4
+CLIP p=126 by=114 points=4->4
+CLIP p=126 by=117 points=4->4
+EXTENT check p=128 front=154.814524847 back=-11.7273876306
+CLIP p=128 by=111 points=4->4
+CLIP p=128 by=48 points=4->4
+CLIP p=128 by=103 points=4->4
+CLIP p=128 by=104 points=4->4
+CLIP p=128 by=107 points=4->4
+CLIP p=128 by=108 points=4->4
+CLIP p=128 by=113 points=4->4
+CLIP p=128 by=114 points=4->4
+CLIP p=128 by=117 points=4->4
+EXTENT check p=130 front=114.147335404 back=-5.25566566002
+CLIP p=130 by=111 points=4->4
+CLIP p=130 by=48 points=4->4
+CLIP p=130 by=103 points=4->4
+CLIP p=130 by=104 points=4->4
+CLIP p=130 by=107 points=4->4
+CLIP p=130 by=108 points=4->4
+CLIP p=130 by=113 points=4->4
+CLIP p=130 by=114 points=4->4
+CLIP p=130 by=117 points=4->4
+EXTENT check p=132 front=168.413561179 back=-7.2288712209
+CLIP p=132 by=111 points=4->4
+CLIP p=132 by=48 points=4->4
+CLIP p=132 by=103 points=4->4
+CLIP p=132 by=104 points=4->4
+CLIP p=132 by=107 points=4->4
+CLIP p=132 by=108 points=4->4
+CLIP p=132 by=113 points=4->4
+CLIP p=132 by=114 points=4->4
+CLIP p=132 by=117 points=4->4
+EXTENT check p=134 front=5.25566566002 back=-114.147335404
+CLIP p=134 by=111 points=4->4
+CLIP p=134 by=48 points=4->4
+CLIP p=134 by=103 points=4->4
+CLIP p=134 by=104 points=4->4
+CLIP p=134 by=107 points=4->4
+CLIP p=134 by=108 points=4->4
+CLIP p=134 by=113 points=4->4
+CLIP p=134 by=114 points=4->4
+CLIP p=134 by=117 points=4->4
+EXTENT check p=136 front=11.7273876306 back=-154.814524847
+CLIP p=136 by=111 points=4->4
+CLIP p=136 by=48 points=4->4
+CLIP p=136 by=103 points=4->4
+CLIP p=136 by=104 points=4->4
+CLIP p=136 by=107 points=4->4
+CLIP p=136 by=108 points=4->4
+CLIP p=136 by=113 points=4->4
+CLIP p=136 by=114 points=4->4
+CLIP p=136 by=117 points=4->4
+EXTENT check p=138 front=21.0807659975 back=-166.093626369
+CLIP p=138 by=111 points=4->4
+CLIP p=138 by=48 points=4->4
+CLIP p=138 by=103 points=4->4
+CLIP p=138 by=104 points=4->4
+CLIP p=138 by=107 points=4->4
+CLIP p=138 by=108 points=4->4
+CLIP p=138 by=113 points=4->4
+CLIP p=138 by=114 points=4->4
+CLIP p=138 by=117 points=4->4
+SELECT level=9 p=118 brushes=1
+EXTENT real volume=1 p=118 front=21.577855326 back=-153.457625713
+CLIP p=118 by=111 points=4->4
+CLIP p=118 by=48 points=4->4
+CLIP p=118 by=103 points=4->4
+CLIP p=118 by=104 points=4->4
+CLIP p=118 by=107 points=4->4
+CLIP p=118 by=108 points=4->4
+CLIP p=118 by=113 points=4->4
+CLIP p=118 by=114 points=4->4
+CLIP p=118 by=117 points=4->4
+EXTENT check p=120 front=185.524279779 back=-21.5788687919
+CLIP p=120 by=111 points=4->4
+CLIP p=120 by=48 points=4->4
+CLIP p=120 by=103 points=4->4
+CLIP p=120 by=104 points=4->4
+CLIP p=120 by=107 points=4->3
+CLIP p=120 by=108 points=3->3
+CLIP p=120 by=113 points=3->4
+CLIP p=120 by=114 points=4->4
+CLIP p=120 by=117 points=4->4
+CLIP p=120 by=118 points=4->4
+EXTENT check p=122 front=21.5788687919 back=-185.524279779
+CLIP p=122 by=111 points=4->4
+CLIP p=122 by=48 points=4->4
+CLIP p=122 by=103 points=4->4
+CLIP p=122 by=104 points=4->4
+CLIP p=122 by=107 points=4->4
+CLIP p=122 by=108 points=4->3
+CLIP p=122 by=113 points=3->3
+CLIP p=122 by=114 points=3->4
+CLIP p=122 by=117 points=4->4
+CLIP p=122 by=118 points=4->4
+EXTENT check p=124 front=7.22887122084 back=-154.14214919
+CLIP p=124 by=111 points=4->4
+CLIP p=124 by=48 points=4->4
+CLIP p=124 by=103 points=4->4
+CLIP p=124 by=104 points=4->4
+CLIP p=124 by=107 points=4->4
+CLIP p=124 by=108 points=4->4
+CLIP p=124 by=113 points=4->4
+CLIP p=124 by=114 points=4->4
+CLIP p=124 by=117 points=4->4
+CLIP p=124 by=118 points=4->4
+EXTENT check p=126 front=166.093626369 back=-21.0807659975
+CLIP p=126 by=111 points=4->4
+CLIP p=126 by=48 points=4->4
+CLIP p=126 by=103 points=4->4
+CLIP p=126 by=104 points=4->4
+CLIP p=126 by=107 points=4->4
+CLIP p=126 by=108 points=4->4
+CLIP p=126 by=113 points=4->4
+CLIP p=126 by=114 points=4->4
+CLIP p=126 by=117 points=4->4
+CLIP p=126 by=118 points=4->4
+EXTENT check p=128 front=154.814524847 back=-11.7273876306
+CLIP p=128 by=111 points=4->4
+CLIP p=128 by=48 points=4->4
+CLIP p=128 by=103 points=4->4
+CLIP p=128 by=104 points=4->4
+CLIP p=128 by=107 points=4->4
+CLIP p=128 by=108 points=4->4
+CLIP p=128 by=113 points=4->4
+CLIP p=128 by=114 points=4->4
+CLIP p=128 by=117 points=4->4
+CLIP p=128 by=118 points=4->4
+EXTENT check p=130 front=114.147335404 back=-5.25566566002
+CLIP p=130 by=111 points=4->4
+CLIP p=130 by=48 points=4->4
+CLIP p=130 by=103 points=4->4
+CLIP p=130 by=104 points=4->4
+CLIP p=130 by=107 points=4->4
+CLIP p=130 by=108 points=4->4
+CLIP p=130 by=113 points=4->4
+CLIP p=130 by=114 points=4->4
+CLIP p=130 by=117 points=4->4
+CLIP p=130 by=118 points=4->4
+EXTENT check p=132 front=154.14214919 back=-7.2288712209
+CLIP p=132 by=111 points=4->4
+CLIP p=132 by=48 points=4->4
+CLIP p=132 by=103 points=4->4
+CLIP p=132 by=104 points=4->4
+CLIP p=132 by=107 points=4->4
+CLIP p=132 by=108 points=4->4
+CLIP p=132 by=113 points=4->4
+CLIP p=132 by=114 points=4->4
+CLIP p=132 by=117 points=4->4
+CLIP p=132 by=118 points=4->4
+EXTENT check p=134 front=5.25566566002 back=-114.147335404
+CLIP p=134 by=111 points=4->4
+CLIP p=134 by=48 points=4->4
+CLIP p=134 by=103 points=4->4
+CLIP p=134 by=104 points=4->4
+CLIP p=134 by=107 points=4->4
+CLIP p=134 by=108 points=4->4
+CLIP p=134 by=113 points=4->4
+CLIP p=134 by=114 points=4->4
+CLIP p=134 by=117 points=4->4
+CLIP p=134 by=118 points=4->4
+EXTENT check p=136 front=11.7273876306 back=-154.814524847
+CLIP p=136 by=111 points=4->4
+CLIP p=136 by=48 points=4->4
+CLIP p=136 by=103 points=4->4
+CLIP p=136 by=104 points=4->4
+CLIP p=136 by=107 points=4->4
+CLIP p=136 by=108 points=4->4
+CLIP p=136 by=113 points=4->4
+CLIP p=136 by=114 points=4->4
+CLIP p=136 by=117 points=4->4
+CLIP p=136 by=118 points=4->4
+EXTENT check p=138 front=21.0807659975 back=-166.093626369
+CLIP p=138 by=111 points=4->4
+CLIP p=138 by=48 points=4->4
+CLIP p=138 by=103 points=4->4
+CLIP p=138 by=104 points=4->4
+CLIP p=138 by=107 points=4->4
+CLIP p=138 by=108 points=4->4
+CLIP p=138 by=113 points=4->4
+CLIP p=138 by=114 points=4->4
+CLIP p=138 by=117 points=4->4
+CLIP p=138 by=118 points=4->4
+SELECT level=10 p=120 brushes=1
+EXTENT real volume=1 p=120 front=185.524279779 back=-21.5788687919
+CLIP p=120 by=111 points=4->4
+CLIP p=120 by=48 points=4->4
+CLIP p=120 by=103 points=4->4
+CLIP p=120 by=104 points=4->4
+CLIP p=120 by=107 points=4->3
+CLIP p=120 by=108 points=3->3
+CLIP p=120 by=113 points=3->4
+CLIP p=120 by=114 points=4->4
+CLIP p=120 by=117 points=4->4
+CLIP p=120 by=118 points=4->4
+LEAF level=11 brushes=0 volume=1
+EXTENT check p=122 front=21.5788687919 back=-163.945410987
+CLIP p=122 by=111 points=4->4
+CLIP p=122 by=48 points=4->4
+CLIP p=122 by=103 points=4->4
+CLIP p=122 by=104 points=4->4
+CLIP p=122 by=107 points=4->4
+CLIP p=122 by=108 points=4->3
+CLIP p=122 by=113 points=3->3
+CLIP p=122 by=114 points=3->4
+CLIP p=122 by=117 points=4->4
+CLIP p=122 by=118 points=4->4
+CLIP p=122 by=121 points=4->4
+EXTENT check p=124 front=7.22887122084 back=-154.14214919
+CLIP p=124 by=111 points=4->4
+CLIP p=124 by=48 points=4->4
+CLIP p=124 by=103 points=4->4
+CLIP p=124 by=104 points=4->4
+CLIP p=124 by=107 points=4->4
+CLIP p=124 by=108 points=4->4
+CLIP p=124 by=113 points=4->4
+CLIP p=124 by=114 points=4->4
+CLIP p=124 by=117 points=4->4
+CLIP p=124 by=118 points=4->4
+CLIP p=124 by=121 points=4->4
+EXTENT check p=126 front=166.093626369 back=-18.274022766
+CLIP p=126 by=111 points=4->4
+CLIP p=126 by=48 points=4->4
+CLIP p=126 by=103 points=4->4
+CLIP p=126 by=104 points=4->4
+CLIP p=126 by=107 points=4->4
+CLIP p=126 by=108 points=4->4
+CLIP p=126 by=113 points=4->4
+CLIP p=126 by=114 points=4->4
+CLIP p=126 by=117 points=4->4
+CLIP p=126 by=118 points=4->4
+CLIP p=126 by=121 points=4->4
+EXTENT check p=128 front=154.814524847 back=-11.7273876306
+CLIP p=128 by=111 points=4->4
+CLIP p=128 by=48 points=4->4
+CLIP p=128 by=103 points=4->4
+CLIP p=128 by=104 points=4->4
+CLIP p=128 by=107 points=4->4
+CLIP p=128 by=108 points=4->4
+CLIP p=128 by=113 points=4->4
+CLIP p=128 by=114 points=4->4
+CLIP p=128 by=117 points=4->4
+CLIP p=128 by=118 points=4->4
+CLIP p=128 by=121 points=4->4
+EXTENT check p=130 front=114.147335404 back=-5.25566566002
+CLIP p=130 by=111 points=4->4
+CLIP p=130 by=48 points=4->4
+CLIP p=130 by=103 points=4->4
+CLIP p=130 by=104 points=4->4
+CLIP p=130 by=107 points=4->4
+CLIP p=130 by=108 points=4->4
+CLIP p=130 by=113 points=4->4
+CLIP p=130 by=114 points=4->4
+CLIP p=130 by=117 points=4->4
+CLIP p=130 by=118 points=4->4
+CLIP p=130 by=121 points=4->4
+EXTENT check p=132 front=154.14214919 back=-7.2288712209
+CLIP p=132 by=111 points=4->4
+CLIP p=132 by=48 points=4->4
+CLIP p=132 by=103 points=4->4
+CLIP p=132 by=104 points=4->4
+CLIP p=132 by=107 points=4->4
+CLIP p=132 by=108 points=4->4
+CLIP p=132 by=113 points=4->4
+CLIP p=132 by=114 points=4->4
+CLIP p=132 by=117 points=4->4
+CLIP p=132 by=118 points=4->4
+CLIP p=132 by=121 points=4->4
+EXTENT check p=134 front=5.25566566002 back=-114.147335404
+CLIP p=134 by=111 points=4->4
+CLIP p=134 by=48 points=4->4
+CLIP p=134 by=103 points=4->4
+CLIP p=134 by=104 points=4->4
+CLIP p=134 by=107 points=4->4
+CLIP p=134 by=108 points=4->4
+CLIP p=134 by=113 points=4->4
+CLIP p=134 by=114 points=4->4
+CLIP p=134 by=117 points=4->4
+CLIP p=134 by=118 points=4->4
+CLIP p=134 by=121 points=4->4
+EXTENT check p=136 front=11.7273876306 back=-154.814524847
+CLIP p=136 by=111 points=4->4
+CLIP p=136 by=48 points=4->4
+CLIP p=136 by=103 points=4->4
+CLIP p=136 by=104 points=4->4
+CLIP p=136 by=107 points=4->4
+CLIP p=136 by=108 points=4->4
+CLIP p=136 by=113 points=4->4
+CLIP p=136 by=114 points=4->4
+CLIP p=136 by=117 points=4->4
+CLIP p=136 by=118 points=4->4
+CLIP p=136 by=121 points=4->4
+EXTENT check p=138 front=21.0807659975 back=-163.286883138
+CLIP p=138 by=111 points=4->4
+CLIP p=138 by=48 points=4->4
+CLIP p=138 by=103 points=4->4
+CLIP p=138 by=104 points=4->4
+CLIP p=138 by=107 points=4->4
+CLIP p=138 by=108 points=4->4
+CLIP p=138 by=113 points=4->4
+CLIP p=138 by=114 points=4->4
+CLIP p=138 by=117 points=4->4
+CLIP p=138 by=118 points=4->4
+CLIP p=138 by=121 points=4->4
+SELECT level=11 p=122 brushes=1
+EXTENT real volume=1 p=122 front=21.5788687919 back=-163.945410987
+CLIP p=122 by=111 points=4->4
+CLIP p=122 by=48 points=4->4
+CLIP p=122 by=103 points=4->4
+CLIP p=122 by=104 points=4->4
+CLIP p=122 by=107 points=4->4
+CLIP p=122 by=108 points=4->3
+CLIP p=122 by=113 points=3->3
+CLIP p=122 by=114 points=3->4
+CLIP p=122 by=117 points=4->4
+CLIP p=122 by=118 points=4->4
+CLIP p=122 by=121 points=4->4
+EXTENT check p=124 front=7.22887122084 back=-154.14214919
+CLIP p=124 by=111 points=4->4
+CLIP p=124 by=48 points=4->4
+CLIP p=124 by=103 points=4->4
+CLIP p=124 by=104 points=4->4
+CLIP p=124 by=107 points=4->4
+CLIP p=124 by=108 points=4->4
+CLIP p=124 by=113 points=4->4
+CLIP p=124 by=114 points=4->4
+CLIP p=124 by=117 points=4->4
+CLIP p=124 by=118 points=4->4
+CLIP p=124 by=121 points=4->4
+CLIP p=124 by=122 points=4->4
+EXTENT check p=126 front=163.286883138 back=-18.274022766
+CLIP p=126 by=111 points=4->4
+CLIP p=126 by=48 points=4->4
+CLIP p=126 by=103 points=4->4
+CLIP p=126 by=104 points=4->4
+CLIP p=126 by=107 points=4->4
+CLIP p=126 by=108 points=4->4
+CLIP p=126 by=113 points=4->4
+CLIP p=126 by=114 points=4->4
+CLIP p=126 by=117 points=4->4
+CLIP p=126 by=118 points=4->4
+CLIP p=126 by=121 points=4->4
+CLIP p=126 by=122 points=4->4
+EXTENT check p=128 front=154.814524847 back=-11.7273876306
+CLIP p=128 by=111 points=4->4
+CLIP p=128 by=48 points=4->4
+CLIP p=128 by=103 points=4->4
+CLIP p=128 by=104 points=4->4
+CLIP p=128 by=107 points=4->4
+CLIP p=128 by=108 points=4->4
+CLIP p=128 by=113 points=4->4
+CLIP p=128 by=114 points=4->4
+CLIP p=128 by=117 points=4->4
+CLIP p=128 by=118 points=4->4
+CLIP p=128 by=121 points=4->4
+CLIP p=128 by=122 points=4->4
+EXTENT check p=130 front=114.147335404 back=-5.25566566002
+CLIP p=130 by=111 points=4->4
+CLIP p=130 by=48 points=4->4
+CLIP p=130 by=103 points=4->4
+CLIP p=130 by=104 points=4->4
+CLIP p=130 by=107 points=4->4
+CLIP p=130 by=108 points=4->4
+CLIP p=130 by=113 points=4->4
+CLIP p=130 by=114 points=4->4
+CLIP p=130 by=117 points=4->4
+CLIP p=130 by=118 points=4->4
+CLIP p=130 by=121 points=4->4
+CLIP p=130 by=122 points=4->4
+EXTENT check p=132 front=154.14214919 back=-7.2288712209
+CLIP p=132 by=111 points=4->4
+CLIP p=132 by=48 points=4->4
+CLIP p=132 by=103 points=4->4
+CLIP p=132 by=104 points=4->4
+CLIP p=132 by=107 points=4->4
+CLIP p=132 by=108 points=4->4
+CLIP p=132 by=113 points=4->4
+CLIP p=132 by=114 points=4->4
+CLIP p=132 by=117 points=4->4
+CLIP p=132 by=118 points=4->4
+CLIP p=132 by=121 points=4->4
+CLIP p=132 by=122 points=4->4
+EXTENT check p=134 front=5.25566566002 back=-114.147335404
+CLIP p=134 by=111 points=4->4
+CLIP p=134 by=48 points=4->4
+CLIP p=134 by=103 points=4->4
+CLIP p=134 by=104 points=4->4
+CLIP p=134 by=107 points=4->4
+CLIP p=134 by=108 points=4->4
+CLIP p=134 by=113 points=4->4
+CLIP p=134 by=114 points=4->4
+CLIP p=134 by=117 points=4->4
+CLIP p=134 by=118 points=4->4
+CLIP p=134 by=121 points=4->4
+CLIP p=134 by=122 points=4->4
+EXTENT check p=136 front=11.7273876306 back=-154.814524847
+CLIP p=136 by=111 points=4->4
+CLIP p=136 by=48 points=4->4
+CLIP p=136 by=103 points=4->4
+CLIP p=136 by=104 points=4->4
+CLIP p=136 by=107 points=4->4
+CLIP p=136 by=108 points=4->4
+CLIP p=136 by=113 points=4->4
+CLIP p=136 by=114 points=4->4
+CLIP p=136 by=117 points=4->4
+CLIP p=136 by=118 points=4->4
+CLIP p=136 by=121 points=4->4
+CLIP p=136 by=122 points=4->4
+EXTENT check p=138 front=18.274022766 back=-163.286883138
+CLIP p=138 by=111 points=4->4
+CLIP p=138 by=48 points=4->4
+CLIP p=138 by=103 points=4->4
+CLIP p=138 by=104 points=4->4
+CLIP p=138 by=107 points=4->4
+CLIP p=138 by=108 points=4->4
+CLIP p=138 by=113 points=4->4
+CLIP p=138 by=114 points=4->4
+CLIP p=138 by=117 points=4->4
+CLIP p=138 by=118 points=4->4
+CLIP p=138 by=121 points=4->4
+CLIP p=138 by=122 points=4->4
+SELECT level=12 p=132 brushes=1
+EXTENT real volume=1 p=132 front=154.14214919 back=-7.2288712209
+CLIP p=132 by=111 points=4->4
+CLIP p=132 by=48 points=4->4
+CLIP p=132 by=103 points=4->4
+CLIP p=132 by=104 points=4->4
+CLIP p=132 by=107 points=4->4
+CLIP p=132 by=108 points=4->4
+CLIP p=132 by=113 points=4->4
+CLIP p=132 by=114 points=4->4
+CLIP p=132 by=117 points=4->4
+CLIP p=132 by=118 points=4->4
+CLIP p=132 by=121 points=4->4
+CLIP p=132 by=122 points=4->4
+LEAF level=13 brushes=0 volume=1
+EXTENT check p=124 front=7.22887122084 back=-146.913277969
+CLIP p=124 by=111 points=4->4
+CLIP p=124 by=48 points=4->4
+CLIP p=124 by=103 points=4->4
+CLIP p=124 by=104 points=4->4
+CLIP p=124 by=107 points=4->4
+CLIP p=124 by=108 points=4->4
+CLIP p=124 by=113 points=4->4
+CLIP p=124 by=114 points=4->4
+CLIP p=124 by=117 points=4->4
+CLIP p=124 by=118 points=4->4
+CLIP p=124 by=121 points=4->4
+CLIP p=124 by=122 points=4->4
+CLIP p=124 by=133 points=4->4
+EXTENT check p=126 front=163.286883138 back=-18.274022766
+CLIP p=126 by=111 points=4->4
+CLIP p=126 by=48 points=4->4
+CLIP p=126 by=103 points=4->4
+CLIP p=126 by=104 points=4->4
+CLIP p=126 by=107 points=4->4
+CLIP p=126 by=108 points=4->4
+CLIP p=126 by=113 points=4->4
+CLIP p=126 by=114 points=4->4
+CLIP p=126 by=117 points=4->4
+CLIP p=126 by=118 points=4->4
+CLIP p=126 by=121 points=4->4
+CLIP p=126 by=122 points=4->4
+CLIP p=126 by=133 points=4->4
+EXTENT check p=128 front=154.814524847 back=-11.7273876306
+CLIP p=128 by=111 points=4->4
+CLIP p=128 by=48 points=4->4
+CLIP p=128 by=103 points=4->4
+CLIP p=128 by=104 points=4->4
+CLIP p=128 by=107 points=4->4
+CLIP p=128 by=108 points=4->4
+CLIP p=128 by=113 points=4->4
+CLIP p=128 by=114 points=4->4
+CLIP p=128 by=117 points=4->4
+CLIP p=128 by=118 points=4->4
+CLIP p=128 by=121 points=4->4
+CLIP p=128 by=122 points=4->4
+CLIP p=128 by=133 points=4->4
+EXTENT check p=130 front=114.147335404 back=-5.25566566002
+CLIP p=130 by=111 points=4->4
+CLIP p=130 by=48 points=4->4
+CLIP p=130 by=103 points=4->4
+CLIP p=130 by=104 points=4->4
+CLIP p=130 by=107 points=4->4
+CLIP p=130 by=108 points=4->4
+CLIP p=130 by=113 points=4->4
+CLIP p=130 by=114 points=4->4
+CLIP p=130 by=117 points=4->4
+CLIP p=130 by=118 points=4->4
+CLIP p=130 by=121 points=4->4
+CLIP p=130 by=122 points=4->4
+CLIP p=130 by=133 points=4->4
+EXTENT check p=134 front=5.25566566002 back=-114.147335404
+CLIP p=134 by=111 points=4->4
+CLIP p=134 by=48 points=4->4
+CLIP p=134 by=103 points=4->4
+CLIP p=134 by=104 points=4->4
+CLIP p=134 by=107 points=4->4
+CLIP p=134 by=108 points=4->4
+CLIP p=134 by=113 points=4->4
+CLIP p=134 by=114 points=4->4
+CLIP p=134 by=117 points=4->4
+CLIP p=134 by=118 points=4->4
+CLIP p=134 by=121 points=4->4
+CLIP p=134 by=122 points=4->4
+CLIP p=134 by=133 points=4->4
+EXTENT check p=136 front=11.7273876306 back=-154.814524847
+CLIP p=136 by=111 points=4->4
+CLIP p=136 by=48 points=4->4
+CLIP p=136 by=103 points=4->4
+CLIP p=136 by=104 points=4->4
+CLIP p=136 by=107 points=4->4
+CLIP p=136 by=108 points=4->4
+CLIP p=136 by=113 points=4->4
+CLIP p=136 by=114 points=4->4
+CLIP p=136 by=117 points=4->4
+CLIP p=136 by=118 points=4->4
+CLIP p=136 by=121 points=4->4
+CLIP p=136 by=122 points=4->4
+CLIP p=136 by=133 points=4->4
+EXTENT check p=138 front=18.274022766 back=-163.286883138
+CLIP p=138 by=111 points=4->4
+CLIP p=138 by=48 points=4->4
+CLIP p=138 by=103 points=4->4
+CLIP p=138 by=104 points=4->4
+CLIP p=138 by=107 points=4->4
+CLIP p=138 by=108 points=4->4
+CLIP p=138 by=113 points=4->4
+CLIP p=138 by=114 points=4->4
+CLIP p=138 by=117 points=4->4
+CLIP p=138 by=118 points=4->4
+CLIP p=138 by=121 points=4->4
+CLIP p=138 by=122 points=4->4
+CLIP p=138 by=133 points=4->4
+SELECT level=13 p=126 brushes=1
+EXTENT real volume=1 p=126 front=163.286883138 back=-18.274022766
+CLIP p=126 by=111 points=4->4
+CLIP p=126 by=48 points=4->4
+CLIP p=126 by=103 points=4->4
+CLIP p=126 by=104 points=4->4
+CLIP p=126 by=107 points=4->4
+CLIP p=126 by=108 points=4->4
+CLIP p=126 by=113 points=4->4
+CLIP p=126 by=114 points=4->4
+CLIP p=126 by=117 points=4->4
+CLIP p=126 by=118 points=4->4
+CLIP p=126 by=121 points=4->4
+CLIP p=126 by=122 points=4->4
+CLIP p=126 by=133 points=4->4
+LEAF level=14 brushes=0 volume=1
+EXTENT check p=124 front=7.22887122084 back=-146.913277969
+CLIP p=124 by=111 points=4->4
+CLIP p=124 by=48 points=4->4
+CLIP p=124 by=103 points=4->4
+CLIP p=124 by=104 points=4->4
+CLIP p=124 by=107 points=4->4
+CLIP p=124 by=108 points=4->4
+CLIP p=124 by=113 points=4->4
+CLIP p=124 by=114 points=4->4
+CLIP p=124 by=117 points=4->4
+CLIP p=124 by=118 points=4->4
+CLIP p=124 by=121 points=4->4
+CLIP p=124 by=122 points=4->4
+CLIP p=124 by=133 points=4->4
+CLIP p=124 by=127 points=4->4
+EXTENT check p=128 front=154.814524847 back=-11.7273876306
+CLIP p=128 by=111 points=4->4
+CLIP p=128 by=48 points=4->4
+CLIP p=128 by=103 points=4->4
+CLIP p=128 by=104 points=4->4
+CLIP p=128 by=107 points=4->4
+CLIP p=128 by=108 points=4->4
+CLIP p=128 by=113 points=4->4
+CLIP p=128 by=114 points=4->4
+CLIP p=128 by=117 points=4->4
+CLIP p=128 by=118 points=4->4
+CLIP p=128 by=121 points=4->4
+CLIP p=128 by=122 points=4->4
+CLIP p=128 by=133 points=4->4
+CLIP p=128 by=127 points=4->4
+EXTENT check p=130 front=114.147335404 back=-5.25566566002
+CLIP p=130 by=111 points=4->4
+CLIP p=130 by=48 points=4->4
+CLIP p=130 by=103 points=4->4
+CLIP p=130 by=104 points=4->4
+CLIP p=130 by=107 points=4->4
+CLIP p=130 by=108 points=4->4
+CLIP p=130 by=113 points=4->4
+CLIP p=130 by=114 points=4->4
+CLIP p=130 by=117 points=4->4
+CLIP p=130 by=118 points=4->4
+CLIP p=130 by=121 points=4->4
+CLIP p=130 by=122 points=4->4
+CLIP p=130 by=133 points=4->4
+CLIP p=130 by=127 points=4->4
+EXTENT check p=134 front=5.25566566002 back=-114.147335404
+CLIP p=134 by=111 points=4->4
+CLIP p=134 by=48 points=4->4
+CLIP p=134 by=103 points=4->4
+CLIP p=134 by=104 points=4->4
+CLIP p=134 by=107 points=4->4
+CLIP p=134 by=108 points=4->4
+CLIP p=134 by=113 points=4->4
+CLIP p=134 by=114 points=4->4
+CLIP p=134 by=117 points=4->4
+CLIP p=134 by=118 points=4->4
+CLIP p=134 by=121 points=4->4
+CLIP p=134 by=122 points=4->4
+CLIP p=134 by=133 points=4->4
+CLIP p=134 by=127 points=4->4
+EXTENT check p=136 front=11.7273876306 back=-154.814524847
+CLIP p=136 by=111 points=4->4
+CLIP p=136 by=48 points=4->4
+CLIP p=136 by=103 points=4->4
+CLIP p=136 by=104 points=4->4
+CLIP p=136 by=107 points=4->4
+CLIP p=136 by=108 points=4->4
+CLIP p=136 by=113 points=4->4
+CLIP p=136 by=114 points=4->4
+CLIP p=136 by=117 points=4->4
+CLIP p=136 by=118 points=4->4
+CLIP p=136 by=121 points=4->4
+CLIP p=136 by=122 points=4->4
+CLIP p=136 by=133 points=4->4
+CLIP p=136 by=127 points=4->4
+EXTENT check p=138 front=18.274022766 back=-145.012860372
+CLIP p=138 by=111 points=4->4
+CLIP p=138 by=48 points=4->4
+CLIP p=138 by=103 points=4->4
+CLIP p=138 by=104 points=4->4
+CLIP p=138 by=107 points=4->4
+CLIP p=138 by=108 points=4->4
+CLIP p=138 by=113 points=4->4
+CLIP p=138 by=114 points=4->4
+CLIP p=138 by=117 points=4->4
+CLIP p=138 by=118 points=4->4
+CLIP p=138 by=121 points=4->4
+CLIP p=138 by=122 points=4->4
+CLIP p=138 by=133 points=4->4
+CLIP p=138 by=127 points=4->4
+SELECT level=14 p=124 brushes=1
+EXTENT real volume=1 p=124 front=7.22887122084 back=-146.913277969
+CLIP p=124 by=111 points=4->4
+CLIP p=124 by=48 points=4->4
+CLIP p=124 by=103 points=4->4
+CLIP p=124 by=104 points=4->4
+CLIP p=124 by=107 points=4->4
+CLIP p=124 by=108 points=4->4
+CLIP p=124 by=113 points=4->4
+CLIP p=124 by=114 points=4->4
+CLIP p=124 by=117 points=4->4
+CLIP p=124 by=118 points=4->4
+CLIP p=124 by=121 points=4->4
+CLIP p=124 by=122 points=4->4
+CLIP p=124 by=133 points=4->4
+CLIP p=124 by=127 points=4->4
+EXTENT check p=128 front=154.814524847 back=-11.7273876306
+CLIP p=128 by=111 points=4->4
+CLIP p=128 by=48 points=4->4
+CLIP p=128 by=103 points=4->4
+CLIP p=128 by=104 points=4->4
+CLIP p=128 by=107 points=4->4
+CLIP p=128 by=108 points=4->4
+CLIP p=128 by=113 points=4->4
+CLIP p=128 by=114 points=4->4
+CLIP p=128 by=117 points=4->4
+CLIP p=128 by=118 points=4->4
+CLIP p=128 by=121 points=4->4
+CLIP p=128 by=122 points=4->4
+CLIP p=128 by=133 points=4->4
+CLIP p=128 by=127 points=4->4
+CLIP p=128 by=124 points=4->4
+EXTENT check p=130 front=114.147335404 back=-5.25566566002
+CLIP p=130 by=111 points=4->4
+CLIP p=130 by=48 points=4->4
+CLIP p=130 by=103 points=4->4
+CLIP p=130 by=104 points=4->4
+CLIP p=130 by=107 points=4->4
+CLIP p=130 by=108 points=4->4
+CLIP p=130 by=113 points=4->4
+CLIP p=130 by=114 points=4->4
+CLIP p=130 by=117 points=4->4
+CLIP p=130 by=118 points=4->4
+CLIP p=130 by=121 points=4->4
+CLIP p=130 by=122 points=4->4
+CLIP p=130 by=133 points=4->4
+CLIP p=130 by=127 points=4->4
+CLIP p=130 by=124 points=4->4
+EXTENT check p=134 front=5.25566566002 back=-114.147335404
+CLIP p=134 by=111 points=4->4
+CLIP p=134 by=48 points=4->4
+CLIP p=134 by=103 points=4->4
+CLIP p=134 by=104 points=4->4
+CLIP p=134 by=107 points=4->4
+CLIP p=134 by=108 points=4->4
+CLIP p=134 by=113 points=4->4
+CLIP p=134 by=114 points=4->4
+CLIP p=134 by=117 points=4->4
+CLIP p=134 by=118 points=4->4
+CLIP p=134 by=121 points=4->4
+CLIP p=134 by=122 points=4->4
+CLIP p=134 by=133 points=4->4
+CLIP p=134 by=127 points=4->4
+CLIP p=134 by=124 points=4->4
+EXTENT check p=136 front=11.7273876306 back=-154.814524847
+CLIP p=136 by=111 points=4->4
+CLIP p=136 by=48 points=4->4
+CLIP p=136 by=103 points=4->4
+CLIP p=136 by=104 points=4->4
+CLIP p=136 by=107 points=4->4
+CLIP p=136 by=108 points=4->4
+CLIP p=136 by=113 points=4->4
+CLIP p=136 by=114 points=4->4
+CLIP p=136 by=117 points=4->4
+CLIP p=136 by=118 points=4->4
+CLIP p=136 by=121 points=4->4
+CLIP p=136 by=122 points=4->4
+CLIP p=136 by=133 points=4->4
+CLIP p=136 by=127 points=4->4
+CLIP p=136 by=124 points=4->4
+EXTENT check p=138 front=18.274022766 back=-145.012860372
+CLIP p=138 by=111 points=4->4
+CLIP p=138 by=48 points=4->4
+CLIP p=138 by=103 points=4->4
+CLIP p=138 by=104 points=4->4
+CLIP p=138 by=107 points=4->4
+CLIP p=138 by=108 points=4->4
+CLIP p=138 by=113 points=4->4
+CLIP p=138 by=114 points=4->4
+CLIP p=138 by=117 points=4->4
+CLIP p=138 by=118 points=4->4
+CLIP p=138 by=121 points=4->4
+CLIP p=138 by=122 points=4->4
+CLIP p=138 by=133 points=4->4
+CLIP p=138 by=127 points=4->4
+CLIP p=138 by=124 points=4->4
+SELECT level=15 p=138 brushes=1
+EXTENT real volume=1 p=138 front=18.274022766 back=-145.012860372
+CLIP p=138 by=111 points=4->4
+CLIP p=138 by=48 points=4->4
+CLIP p=138 by=103 points=4->4
+CLIP p=138 by=104 points=4->4
+CLIP p=138 by=107 points=4->4
+CLIP p=138 by=108 points=4->4
+CLIP p=138 by=113 points=4->4
+CLIP p=138 by=114 points=4->4
+CLIP p=138 by=117 points=4->4
+CLIP p=138 by=118 points=4->4
+CLIP p=138 by=121 points=4->4
+CLIP p=138 by=122 points=4->4
+CLIP p=138 by=133 points=4->4
+CLIP p=138 by=127 points=4->4
+CLIP p=138 by=124 points=4->4
+EXTENT check p=128 front=154.814524847 back=-11.7273876306
+CLIP p=128 by=111 points=4->4
+CLIP p=128 by=48 points=4->4
+CLIP p=128 by=103 points=4->4
+CLIP p=128 by=104 points=4->4
+CLIP p=128 by=107 points=4->4
+CLIP p=128 by=108 points=4->4
+CLIP p=128 by=113 points=4->4
+CLIP p=128 by=114 points=4->4
+CLIP p=128 by=117 points=4->4
+CLIP p=128 by=118 points=4->4
+CLIP p=128 by=121 points=4->4
+CLIP p=128 by=122 points=4->4
+CLIP p=128 by=133 points=4->4
+CLIP p=128 by=127 points=4->4
+CLIP p=128 by=124 points=4->4
+CLIP p=128 by=138 points=4->4
+EXTENT check p=130 front=114.147335404 back=-5.25566566002
+CLIP p=130 by=111 points=4->4
+CLIP p=130 by=48 points=4->4
+CLIP p=130 by=103 points=4->4
+CLIP p=130 by=104 points=4->4
+CLIP p=130 by=107 points=4->4
+CLIP p=130 by=108 points=4->4
+CLIP p=130 by=113 points=4->4
+CLIP p=130 by=114 points=4->4
+CLIP p=130 by=117 points=4->4
+CLIP p=130 by=118 points=4->4
+CLIP p=130 by=121 points=4->4
+CLIP p=130 by=122 points=4->4
+CLIP p=130 by=133 points=4->4
+CLIP p=130 by=127 points=4->4
+CLIP p=130 by=124 points=4->4
+CLIP p=130 by=138 points=4->4
+EXTENT check p=134 front=5.25566566002 back=-114.147335404
+CLIP p=134 by=111 points=4->4
+CLIP p=134 by=48 points=4->4
+CLIP p=134 by=103 points=4->4
+CLIP p=134 by=104 points=4->4
+CLIP p=134 by=107 points=4->4
+CLIP p=134 by=108 points=4->4
+CLIP p=134 by=113 points=4->4
+CLIP p=134 by=114 points=4->4
+CLIP p=134 by=117 points=4->4
+CLIP p=134 by=118 points=4->4
+CLIP p=134 by=121 points=4->4
+CLIP p=134 by=122 points=4->4
+CLIP p=134 by=133 points=4->4
+CLIP p=134 by=127 points=4->4
+CLIP p=134 by=124 points=4->4
+CLIP p=134 by=138 points=4->4
+EXTENT check p=136 front=11.7273876306 back=-154.814524847
+CLIP p=136 by=111 points=4->4
+CLIP p=136 by=48 points=4->4
+CLIP p=136 by=103 points=4->4
+CLIP p=136 by=104 points=4->4
+CLIP p=136 by=107 points=4->4
+CLIP p=136 by=108 points=4->4
+CLIP p=136 by=113 points=4->4
+CLIP p=136 by=114 points=4->4
+CLIP p=136 by=117 points=4->4
+CLIP p=136 by=118 points=4->4
+CLIP p=136 by=121 points=4->4
+CLIP p=136 by=122 points=4->4
+CLIP p=136 by=133 points=4->4
+CLIP p=136 by=127 points=4->4
+CLIP p=136 by=124 points=4->4
+CLIP p=136 by=138 points=4->4
+SELECT level=16 p=128 brushes=1
+EXTENT real volume=1 p=128 front=154.814524847 back=-11.7273876306
+CLIP p=128 by=111 points=4->4
+CLIP p=128 by=48 points=4->4
+CLIP p=128 by=103 points=4->4
+CLIP p=128 by=104 points=4->4
+CLIP p=128 by=107 points=4->4
+CLIP p=128 by=108 points=4->4
+CLIP p=128 by=113 points=4->4
+CLIP p=128 by=114 points=4->4
+CLIP p=128 by=117 points=4->4
+CLIP p=128 by=118 points=4->4
+CLIP p=128 by=121 points=4->4
+CLIP p=128 by=122 points=4->4
+CLIP p=128 by=133 points=4->4
+CLIP p=128 by=127 points=4->4
+CLIP p=128 by=124 points=4->4
+CLIP p=128 by=138 points=4->4
+LEAF level=17 brushes=0 volume=1
+EXTENT check p=130 front=114.147335404 back=-5.25566566002
+CLIP p=130 by=111 points=4->4
+CLIP p=130 by=48 points=4->4
+CLIP p=130 by=103 points=4->4
+CLIP p=130 by=104 points=4->4
+CLIP p=130 by=107 points=4->4
+CLIP p=130 by=108 points=4->4
+CLIP p=130 by=113 points=4->4
+CLIP p=130 by=114 points=4->4
+CLIP p=130 by=117 points=4->4
+CLIP p=130 by=118 points=4->4
+CLIP p=130 by=121 points=4->4
+CLIP p=130 by=122 points=4->4
+CLIP p=130 by=133 points=4->4
+CLIP p=130 by=127 points=4->4
+CLIP p=130 by=124 points=4->4
+CLIP p=130 by=138 points=4->4
+CLIP p=130 by=129 points=4->4
+EXTENT check p=134 front=5.25566566002 back=-114.147335404
+CLIP p=134 by=111 points=4->4
+CLIP p=134 by=48 points=4->4
+CLIP p=134 by=103 points=4->4
+CLIP p=134 by=104 points=4->4
+CLIP p=134 by=107 points=4->4
+CLIP p=134 by=108 points=4->4
+CLIP p=134 by=113 points=4->4
+CLIP p=134 by=114 points=4->4
+CLIP p=134 by=117 points=4->4
+CLIP p=134 by=118 points=4->4
+CLIP p=134 by=121 points=4->4
+CLIP p=134 by=122 points=4->4
+CLIP p=134 by=133 points=4->4
+CLIP p=134 by=127 points=4->4
+CLIP p=134 by=124 points=4->4
+CLIP p=134 by=138 points=4->4
+CLIP p=134 by=129 points=4->4
+EXTENT check p=136 front=11.7273876306 back=-143.087137217
+CLIP p=136 by=111 points=4->4
+CLIP p=136 by=48 points=4->4
+CLIP p=136 by=103 points=4->4
+CLIP p=136 by=104 points=4->4
+CLIP p=136 by=107 points=4->4
+CLIP p=136 by=108 points=4->4
+CLIP p=136 by=113 points=4->4
+CLIP p=136 by=114 points=4->4
+CLIP p=136 by=117 points=4->4
+CLIP p=136 by=118 points=4->4
+CLIP p=136 by=121 points=4->4
+CLIP p=136 by=122 points=4->4
+CLIP p=136 by=133 points=4->4
+CLIP p=136 by=127 points=4->4
+CLIP p=136 by=124 points=4->4
+CLIP p=136 by=138 points=4->4
+CLIP p=136 by=129 points=4->4
+SELECT level=17 p=134 brushes=1
+EXTENT real volume=1 p=134 front=5.25566566002 back=-114.147335404
+CLIP p=134 by=111 points=4->4
+CLIP p=134 by=48 points=4->4
+CLIP p=134 by=103 points=4->4
+CLIP p=134 by=104 points=4->4
+CLIP p=134 by=107 points=4->4
+CLIP p=134 by=108 points=4->4
+CLIP p=134 by=113 points=4->4
+CLIP p=134 by=114 points=4->4
+CLIP p=134 by=117 points=4->4
+CLIP p=134 by=118 points=4->4
+CLIP p=134 by=121 points=4->4
+CLIP p=134 by=122 points=4->4
+CLIP p=134 by=133 points=4->4
+CLIP p=134 by=127 points=4->4
+CLIP p=134 by=124 points=4->4
+CLIP p=134 by=138 points=4->4
+CLIP p=134 by=129 points=4->4
+EXTENT check p=130 front=108.891669744 back=-5.25566566002
+CLIP p=130 by=111 points=4->4
+CLIP p=130 by=48 points=4->4
+CLIP p=130 by=103 points=4->4
+CLIP p=130 by=104 points=4->4
+CLIP p=130 by=107 points=4->4
+CLIP p=130 by=108 points=4->4
+CLIP p=130 by=113 points=4->4
+CLIP p=130 by=114 points=4->4
+CLIP p=130 by=117 points=4->4
+CLIP p=130 by=118 points=4->4
+CLIP p=130 by=121 points=4->4
+CLIP p=130 by=122 points=4->4
+CLIP p=130 by=133 points=4->4
+CLIP p=130 by=127 points=4->4
+CLIP p=130 by=124 points=4->4
+CLIP p=130 by=138 points=4->4
+CLIP p=130 by=129 points=4->4
+CLIP p=130 by=134 points=4->4
+EXTENT check p=136 front=11.7273876306 back=-143.087137217
+CLIP p=136 by=111 points=4->4
+CLIP p=136 by=48 points=4->4
+CLIP p=136 by=103 points=4->4
+CLIP p=136 by=104 points=4->4
+CLIP p=136 by=107 points=4->4
+CLIP p=136 by=108 points=4->4
+CLIP p=136 by=113 points=4->4
+CLIP p=136 by=114 points=4->4
+CLIP p=136 by=117 points=4->4
+CLIP p=136 by=118 points=4->4
+CLIP p=136 by=121 points=4->4
+CLIP p=136 by=122 points=4->4
+CLIP p=136 by=133 points=4->4
+CLIP p=136 by=127 points=4->4
+CLIP p=136 by=124 points=4->4
+CLIP p=136 by=138 points=4->4
+CLIP p=136 by=129 points=4->4
+CLIP p=136 by=134 points=4->4
+SELECT level=18 p=130 brushes=1
+EXTENT real volume=1 p=130 front=108.891669744 back=-5.25566566002
+CLIP p=130 by=111 points=4->4
+CLIP p=130 by=48 points=4->4
+CLIP p=130 by=103 points=4->4
+CLIP p=130 by=104 points=4->4
+CLIP p=130 by=107 points=4->4
+CLIP p=130 by=108 points=4->4
+CLIP p=130 by=113 points=4->4
+CLIP p=130 by=114 points=4->4
+CLIP p=130 by=117 points=4->4
+CLIP p=130 by=118 points=4->4
+CLIP p=130 by=121 points=4->4
+CLIP p=130 by=122 points=4->4
+CLIP p=130 by=133 points=4->4
+CLIP p=130 by=127 points=4->4
+CLIP p=130 by=124 points=4->4
+CLIP p=130 by=138 points=4->4
+CLIP p=130 by=129 points=4->4
+CLIP p=130 by=134 points=4->4
+LEAF level=19 brushes=0 volume=1
+EXTENT check p=136 front=11.7273876306 back=-143.087137217
+CLIP p=136 by=111 points=4->4
+CLIP p=136 by=48 points=4->4
+CLIP p=136 by=103 points=4->4
+CLIP p=136 by=104 points=4->4
+CLIP p=136 by=107 points=4->4
+CLIP p=136 by=108 points=4->4
+CLIP p=136 by=113 points=4->4
+CLIP p=136 by=114 points=4->4
+CLIP p=136 by=117 points=4->4
+CLIP p=136 by=118 points=4->4
+CLIP p=136 by=121 points=4->4
+CLIP p=136 by=122 points=4->4
+CLIP p=136 by=133 points=4->4
+CLIP p=136 by=127 points=4->4
+CLIP p=136 by=124 points=4->4
+CLIP p=136 by=138 points=4->4
+CLIP p=136 by=129 points=4->4
+CLIP p=136 by=134 points=4->4
+CLIP p=136 by=131 points=4->4
+SELECT level=19 p=136 brushes=1
+EXTENT real volume=1 p=136 front=11.7273876306 back=-143.087137217
+CLIP p=136 by=111 points=4->4
+CLIP p=136 by=48 points=4->4
+CLIP p=136 by=103 points=4->4
+CLIP p=136 by=104 points=4->4
+CLIP p=136 by=107 points=4->4
+CLIP p=136 by=108 points=4->4
+CLIP p=136 by=113 points=4->4
+CLIP p=136 by=114 points=4->4
+CLIP p=136 by=117 points=4->4
+CLIP p=136 by=118 points=4->4
+CLIP p=136 by=121 points=4->4
+CLIP p=136 by=122 points=4->4
+CLIP p=136 by=133 points=4->4
+CLIP p=136 by=127 points=4->4
+CLIP p=136 by=124 points=4->4
+CLIP p=136 by=138 points=4->4
+CLIP p=136 by=129 points=4->4
+CLIP p=136 by=134 points=4->4
+CLIP p=136 by=131 points=4->4
+LEAF level=20 brushes=1 volume=1
+REMAIN p=103 w=6 onnode=1 bevel=0
+REMAIN p=104 w=6 onnode=1 bevel=0
+REMAIN p=107 w=6 onnode=1 bevel=0
+REMAIN p=108 w=6 onnode=1 bevel=0
+REMAIN p=111 w=6 onnode=1 bevel=0
+REMAIN p=48 w=6 onnode=1 bevel=0
+REMAIN p=113 w=6 onnode=1 bevel=0
+REMAIN p=114 w=6 onnode=1 bevel=0
+REMAIN p=117 w=5 onnode=1 bevel=0
+REMAIN p=118 w=5 onnode=1 bevel=0
+REMAIN p=121 w=5 onnode=1 bevel=0
+REMAIN p=122 w=5 onnode=1 bevel=0
+REMAIN p=124 w=4 onnode=1 bevel=0
+REMAIN p=127 w=4 onnode=1 bevel=0
+REMAIN p=129 w=4 onnode=1 bevel=0
+REMAIN p=131 w=4 onnode=1 bevel=0
+REMAIN p=133 w=4 onnode=1 bevel=0
+REMAIN p=134 w=4 onnode=1 bevel=0
+REMAIN p=136 w=4 onnode=1 bevel=0
+REMAIN p=138 w=4 onnode=1 bevel=0
+LEAF level=20 brushes=0 volume=1
+LEAF level=18 brushes=0 volume=1
+LEAF level=16 brushes=0 volume=1
+LEAF level=15 brushes=0 volume=1
+LEAF level=12 brushes=0 volume=1
+LEAF level=10 brushes=0 volume=1
+LEAF level=8 brushes=0 volume=1
+LEAF level=6 brushes=0 volume=1
+LEAF level=4 brushes=0 volume=1
+LEAF level=2 brushes=0 volume=1
+[33mWARNING: No entities in empty space -- no filling performed (hull 2)
+[0m---- FinishBSPFile ----
+Writing /tmp/qqbsp-phase2/traces/rotated-default/input.bsp as Quake BSP2 bsp2
+Wrote /tmp/qqbsp-phase2/traces/rotated-default/input.bsp
+
+count   lump name    byte size 
+      1 models               64
+     41 planes              820
+      4 vertexes             48
+      2 nodes                88
+      1 texinfos             40
+      2 faces                56
+     40 clipnodes           480
+      3 leafs               132
+      2 marksurfaces          8
+      5 edges                40
+      8 surfedges            32
+      2 textures             12
+        lightdata             0
+        visdata               0
+        entdata              30
+
+0.008s seconds elapsed

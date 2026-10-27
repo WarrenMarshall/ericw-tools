@@ -1,0 +1,9 @@
+{
+  "/tmp/qqbsp-phase2/uniform-epsilon-qqbsp": "830d77aad4512515e3ac0ef608f4c43dca0406a952dbe60c6da68e91af7d84d5",
+  "/tmp/qqbsp-phase2/rejected-qqbsp": "80c501a363dd19e2d8645d40024c102b21042d983172693a22cc61a4d5508262",
+  "/tmp/qqbsp-phase2/uniform-epsilon-REJECTED.patch": "af3275d14ce2d4c844c10c89741934e46bae600713769f8e5e9bdef451be167d",
+  "/home/warrenmarshall/dev/ericw-tools/qbsp/brush.cc": "e1b6fe03e95687af61377a4fc32be4663935d9241ac10a81d2abbdb8ffeeb6fe",
+  "/home/warrenmarshall/dev/ericw-tools/qbsp/brushbsp.cc": "6baec9ac3fb33508c5c089a9934699e5837223641805c1367905949a192e571a",
+  "/home/warrenmarshall/dev/ericw-tools/qartographer/P2-unapplied.patch": "5c8e66e1c6bef8b8777750edb91a5bbea7b0ca47b1106f614489a6813964c73b",
+  "/mnt/fb91e326-b6dc-4352-b43c-7517fcce8b77/Dropbox/Quake/Utils/linux/qqbsp": "49d766579a03701d6a5bb3560112bc756afdb8cf4488242e0b8db72668d8c8c0"
+}

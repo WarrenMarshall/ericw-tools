@@ -1,0 +1,90 @@
+--- a/include/qbsp/supported_geometry.hh
++++ b/include/qbsp/supported_geometry.hh
+@@ -107,6 +107,64 @@
+     return rank_t::uncertain; // small is not proof of degeneracy
+ }
+ 
++// Selective construction of a target-area-bearing section, reusing Phase 6's
++// feasible homogeneous candidates. This does not change any existence decision.
++inline std::optional<winding_t> reconstruct_section(const qplane3d &plane,
++    const std::vector<qplane3d> &supports)
++{
++    std::vector<p6::Plane> ps;
++    for (auto &p : supports) ps.push_back(coefficients(p));
++    auto q = coefficients(plane);
++    ps.push_back(q); ps.push_back(p6::opposite(q));
++    auto target = ps;
++    for (auto &p : target) for (double &v : p) v = static_cast<float>(v);
++    if (dimension(target) != 2 || dimension(ps) != 2) return std::nullopt;
++    std::sort(ps.begin(),ps.end()); ps.erase(std::unique(ps.begin(),ps.end()),ps.end());
++    using point_t = std::array<p6::Q,3>;
++    std::vector<point_t> points;
++    p6::Stats stats;
++    p6::vertices(ps,stats,p6::Mode::filtered,[&](p6::Candidate &v) {
++        auto h = v.rational();
++        point_t point{h[0]/h[3],h[1]/h[3],h[2]/h[3]};
++        if (std::find(points.begin(),points.end(),point)==points.end()) points.push_back(std::move(point));
++        return false;
++    });
++    if (points.size()<3) return std::nullopt;
++    int axis=0;
++    for (int i=1;i<3;++i) if (std::abs(plane.normal[i])>std::abs(plane.normal[axis])) axis=i;
++    int u=(axis+1)%3, v=(axis+2)%3;
++    p6::Q cu=0,cv=0;
++    for (auto &p : points) { cu+=p[u]; cv+=p[v]; }
++    cu/=points.size();cv/=points.size();
++    auto upper = [&](const point_t &p) { return p[v]>cv || (p[v]==cv && p[u]>=cu); };
++    std::sort(points.begin(),points.end(),[&](const point_t &a,const point_t &b) {
++        if (upper(a)!=upper(b)) return upper(a)>upper(b);
++        p6::Q cross=(a[u]-cu)*(b[v]-cv)-(a[v]-cv)*(b[u]-cu);
++        return cross>0;
++    });
++    if (plane.normal[axis]>0) std::reverse(points.begin(),points.end());
++    winding_t result;
++    std::vector<point_t> rounded;
++    for (auto &p : points) {
++        qvec3d point{p[0].get_d(),p[1].get_d(),p[2].get_d()};
++        result.push_back(point);
++        rounded.push_back({p6::Q(point[0]),p6::Q(point[1]),p6::Q(point[2])});
++    }
++    // Narrowing must preserve distinct vertices and every projected orientation.
++    // Reject a collapse or changed incidence instead of welding or perturbing it.
++    for (size_t a=0;a<points.size();++a) for (size_t b=a+1;b<points.size();++b) {
++        if (rounded[a]==rounded[b]) return std::nullopt;
++        for (size_t c=b+1;c<points.size();++c) {
++            auto orientation = [&](const std::vector<point_t> &p) {
++                p6::Q cross=(p[b][u]-p[a][u])*(p[c][v]-p[a][v])-(p[b][v]-p[a][v])*(p[c][u]-p[a][u]);
++                return p6::qsign(cross);
++            };
++            if (orientation(points)!=orientation(rounded)) return std::nullopt;
++        }
++    }
++    return result;
++}
++
+ // A backward-residual check, not a forward bound on an ill-conditioned solve.
+ inline bool boundary_residual_ok(const qvec3d &p, const qplane3d &plane, bool on_plane)
+ {
+--- a/qbsp/brushbsp.cc
++++ b/qbsp/brushbsp.cc
+@@ -459,7 +459,9 @@
+ {
+     std::vector<qplane3d> supports;
+     for (auto &side : brush.sides) supports.push_back(side.get_plane());
+-    return supported_geometry::reconstruct_boundary(plane, supports, qbsp_options.worldextent.value());
++    auto w = supported_geometry::reconstruct_boundary(plane, supports, qbsp_options.worldextent.value());
++    if (w && supported_geometry::winding_rank(*w,plane)==supported_geometry::rank_t::area) return w;
++    return supported_geometry::reconstruct_section(plane,supports);
+ }
+ 
+ // Adapt a private representation using retained halfspaces, never a hull/weld.
+--- a/qbsp/portals.cc
++++ b/qbsp/portals.cc
+@@ -224,6 +224,7 @@
+     };
+     if (usable()) return;
+     w = supported_geometry::reconstruct_boundary(plane, supports, qbsp_options.worldextent.value());
++    if (!usable()) w = supported_geometry::reconstruct_section(plane,supports);
+     if (!usable())
+         Error("PHASE8 UNREPRESENTABLE_PORTAL: certified area section cannot be constructed against retained supports");
+ }

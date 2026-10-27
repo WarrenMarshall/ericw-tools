@@ -1,0 +1,76 @@
+{
+  "rotated-chopfragment": {
+    "compile_exit": 1,
+    "failures": [
+      {
+        "kind": "compile failure"
+      }
+    ]
+  },
+  "adjacent-default": {
+    "failures": [],
+    "counts": {
+      "0": 498,
+      "1": 498,
+      "2": 498
+    },
+    "seconds": 0.034932689974084496,
+    "map_sha256": "675ca0c5d94907e3e22a8686ae61b4b1c4e5bd30e2eb7c112b29e20fa8c350b3",
+    "bsp_sha256": "78939ce84bb2664402cb3c166da6f7ae3ac84c600fa54d8ae3cf0f5ae46a460d"
+  },
+  "adjacent-chopfragment": {
+    "failures": [],
+    "counts": {
+      "0": 498,
+      "1": 498,
+      "2": 498
+    },
+    "seconds": 0.03497484000399709,
+    "map_sha256": "675ca0c5d94907e3e22a8686ae61b4b1c4e5bd30e2eb7c112b29e20fa8c350b3",
+    "bsp_sha256": "78939ce84bb2664402cb3c166da6f7ae3ac84c600fa54d8ae3cf0f5ae46a460d"
+  },
+  "overlap-default": {
+    "failures": [],
+    "counts": {
+      "0": 478,
+      "1": 498,
+      "2": 498
+    },
+    "seconds": 0.10462513798847795,
+    "map_sha256": "f9e0eaefb43dca84c363bc486e8fcf37f772872a1fda582c805f224cbb14e912",
+    "bsp_sha256": "c30952541ac80308f15628332e97e76f9bc26bad9743ed23b9db7202d032bca3"
+  },
+  "overlap-chopfragment": {
+    "failures": [],
+    "counts": {
+      "0": 478,
+      "1": 498,
+      "2": 498
+    },
+    "seconds": 0.10148568509612232,
+    "map_sha256": "f9e0eaefb43dca84c363bc486e8fcf37f772872a1fda582c805f224cbb14e912",
+    "bsp_sha256": "aeb2cc5d3d31d7954f17383dcf24144e447a3e1b151eb23274d9ec7ecaa5495c"
+  },
+  "near-coplanar-default": {
+    "failures": [],
+    "counts": {
+      "0": 498,
+      "1": 498,
+      "2": 498
+    },
+    "seconds": 0.03481786896008998,
+    "map_sha256": "acb20f5374601518281fc7d98ce2c4efe17cae966dff29f6103774961b29fa6b",
+    "bsp_sha256": "469bb325524e040cbaacb8e74951420b16b2be31f1e69443fe7afb9d770b9177"
+  },
+  "near-coplanar-chopfragment": {
+    "failures": [],
+    "counts": {
+      "0": 498,
+      "1": 498,
+      "2": 498
+    },
+    "seconds": 0.03458822600077838,
+    "map_sha256": "acb20f5374601518281fc7d98ce2c4efe17cae966dff29f6103774961b29fa6b",
+    "bsp_sha256": "469bb325524e040cbaacb8e74951420b16b2be31f1e69443fe7afb9d770b9177"
+  }
+}

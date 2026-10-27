@@ -1,0 +1,525 @@
+Note: Google Test filter = qbsp.duplicatePlanes:qbsp.emptyBrush:testmapsQ1.simpleSealed:testmapsQ1.chopNoChange:testmapsQ1.cube:testmapsQ1.cubes:testmapsQ1.brushClippingOrder:testmapsQ1.angledBrush:testmapsQ1.sealingContents:testmapsQ1.detailTouchingWater:testmapsQ1.hull1ContentTypes:testmapsQ1.sealingHull1Onnode:testmapsQ1.csg
+[==========] Running 13 tests from 2 test suites.
+[----------] Global test environment set-up.
+[----------] 2 tests from qbsp
+[ RUN      ] qbsp.duplicatePlanes
+duplicatePlanes[line 11]: Brush with duplicate plane
+WARNING: No wad or _wad key exists in the worldmodel
+INFO: world extents calculated to 2568 units
+[       OK ] qbsp.duplicatePlanes (0 ms)
+[ RUN      ] qbsp.emptyBrush
+WARNING: No wad or _wad key exists in the worldmodel
+INFO: world extents calculated to 616 units
+[       OK ] qbsp.emptyBrush (0 ms)
+[----------] 2 tests from qbsp (0 ms total)
+
+[----------] 11 tests from testmapsQ1
+[ RUN      ] testmapsQ1.chopNoChange
+----  / ericw-tools  ----
+low priority not compiled into this version
+
+--- Options Summary ---
+    "nopercent" was set to "1" (from command line)
+    "nostat" was set to "1" (from command line)
+    "noprogress" was set to "1" (from command line)
+    "path" was set to ""/tmp/qqbsp-p3/build/qartographer/upstream-testmaps/q2_wal_metadata"" (from command line)
+
+Input file: /tmp/qqbsp-p3/build/qartographer/upstream-testmaps/qbsp_chop_no_change.map
+Output file: /tmp/qqbsp-p3/build/qartographer/upstream-testmaps/qbsp_chop_no_change.bsp
+
+INFO: using built-in palette.
+WARNING: texture name openquartzmirror (/tmp/qqbsp-p3/build/qartographer/upstream-testmaps/deprecated/free_wad.wad) is not null-terminated
+INFO: world extents calculated to 552 units
+Processing hull 0...
+WARNING: Reached occupant "info_player_start" at (-88 -64 120), no filling performed.
+Leak file written to /tmp/qqbsp-p3/build/qartographer/upstream-testmaps/qbsp_chop_no_change.pts
+Processing hull 1...
+WARNING: Reached occupant "info_player_start" at (-88 -64 120), no filling performed.
+Processing hull 2...
+WARNING: Reached occupant "info_player_start" at (-88 -64 120), no filling performed.
+Writing /tmp/qqbsp-p3/build/qartographer/upstream-testmaps/qbsp_chop_no_change.bsp as Quake BSP bsp29
+Wrote /tmp/qqbsp-p3/build/qartographer/upstream-testmaps/qbsp_chop_no_change.bsp
+
+count   lump name    byte size 
+      1 models               64
+     33 planes              660
+     32 vertexes            384
+     15 nodes               360
+     16 texinfos            640
+     33 faces               660
+     44 clipnodes           352
+     15 leafs               420
+     33 marksurfaces         66
+     70 edges               280
+    138 surfedges           552
+      4 textures          38260
+        lightdata             0
+        visdata               0
+        entdata             227
+LoadBSPFile: '/tmp/qqbsp-p3/build/qartographer/upstream-testmaps/qbsp_chop_no_change.bsp'
+BSP is version Quake BSP bsp29
+INFO: using built-in palette.
+wrote /tmp/qqbsp-p3/build/qartographer/upstream-testmaps/qbsp_chop_no_change.bsp.geometry.obj
+wrote /tmp/qqbsp-p3/build/qartographer/upstream-testmaps/qbsp_chop_no_change.bsp.json
+[       OK ] testmapsQ1.chopNoChange (9 ms)
+[ RUN      ] testmapsQ1.simpleSealed
+----  / ericw-tools  ----
+low priority not compiled into this version
+
+--- Options Summary ---
+    "nopercent" was set to "1" (from command line)
+    "nostat" was set to "1" (from command line)
+    "noprogress" was set to "1" (from command line)
+    "path" was set to ""/tmp/qqbsp-p3/build/qartographer/upstream-testmaps/q2_wal_metadata"" (from command line)
+
+Input file: /tmp/qqbsp-p3/build/qartographer/upstream-testmaps/qbsp_simple_sealed.map
+Output file: /tmp/qqbsp-p3/build/qartographer/upstream-testmaps/qbsp_simple_sealed.bsp
+
+INFO: using built-in palette.
+WARNING: texture name openquartzmirror (/tmp/qqbsp-p3/build/qartographer/upstream-testmaps/deprecated/free_wad.wad) is not null-terminated
+INFO: world extents calculated to 616 units
+Processing hull 0...
+Processing hull 1...
+Processing hull 2...
+Writing /tmp/qqbsp-p3/build/qartographer/upstream-testmaps/qbsp_simple_sealed.bsp as Quake BSP bsp29
+Wrote /tmp/qqbsp-p3/build/qartographer/upstream-testmaps/qbsp_simple_sealed.bsp
+
+count   lump name    byte size 
+      1 models               64
+     17 planes              340
+      8 vertexes             96
+      6 nodes               144
+      6 texinfos            240
+      6 faces               120
+     12 clipnodes            96
+      2 leafs                56
+      6 marksurfaces         12
+     13 edges                52
+     24 surfedges            96
+      2 textures          10972
+        lightdata             0
+        visdata               0
+        entdata             227
+LoadBSPFile: '/tmp/qqbsp-p3/build/qartographer/upstream-testmaps/qbsp_simple_sealed.bsp'
+BSP is version Quake BSP bsp29
+INFO: using built-in palette.
+wrote /tmp/qqbsp-p3/build/qartographer/upstream-testmaps/qbsp_simple_sealed.bsp.geometry.obj
+wrote /tmp/qqbsp-p3/build/qartographer/upstream-testmaps/qbsp_simple_sealed.bsp.json
+----  / ericw-tools  ----
+low priority not compiled into this version
+
+--- Options Summary ---
+    "nopercent" was set to "1" (from command line)
+    "nostat" was set to "1" (from command line)
+    "noprogress" was set to "1" (from command line)
+    "path" was set to ""/tmp/qqbsp-p3/build/qartographer/upstream-testmaps/q2_wal_metadata"" (from command line)
+
+Input file: /tmp/qqbsp-p3/build/qartographer/upstream-testmaps/qbsp_simple_sealed_rotated.map
+Output file: /tmp/qqbsp-p3/build/qartographer/upstream-testmaps/qbsp_simple_sealed_rotated.bsp
+
+INFO: using built-in palette.
+WARNING: texture name openquartzmirror (/tmp/qqbsp-p3/build/qartographer/upstream-testmaps/deprecated/free_wad.wad) is not null-terminated
+INFO: world extents calculated to 648 units
+Processing hull 0...
+Processing hull 1...
+Processing hull 2...
+Writing /tmp/qqbsp-p3/build/qartographer/upstream-testmaps/qbsp_simple_sealed_rotated.bsp as Quake BSP bsp29
+Wrote /tmp/qqbsp-p3/build/qartographer/upstream-testmaps/qbsp_simple_sealed_rotated.bsp
+
+count   lump name    byte size 
+      1 models               64
+     17 planes              340
+      8 vertexes             96
+      6 nodes               144
+      6 texinfos            240
+      6 faces               120
+     12 clipnodes            96
+      2 leafs                56
+      6 marksurfaces         12
+     13 edges                52
+     24 surfedges            96
+      3 textures          16456
+        lightdata             0
+        visdata               0
+        entdata             251
+LoadBSPFile: '/tmp/qqbsp-p3/build/qartographer/upstream-testmaps/qbsp_simple_sealed_rotated.bsp'
+BSP is version Quake BSP bsp29
+INFO: using built-in palette.
+wrote /tmp/qqbsp-p3/build/qartographer/upstream-testmaps/qbsp_simple_sealed_rotated.bsp.geometry.obj
+wrote /tmp/qqbsp-p3/build/qartographer/upstream-testmaps/qbsp_simple_sealed_rotated.bsp.json
+[       OK ] testmapsQ1.simpleSealed (20 ms)
+[ RUN      ] testmapsQ1.sealingContents
+----  / ericw-tools  ----
+low priority not compiled into this version
+
+--- Options Summary ---
+    "nopercent" was set to "1" (from command line)
+    "nostat" was set to "1" (from command line)
+    "noprogress" was set to "1" (from command line)
+    "path" was set to ""/tmp/qqbsp-p3/build/qartographer/upstream-testmaps/q2_wal_metadata"" (from command line)
+
+Input file: /tmp/qqbsp-p3/build/qartographer/upstream-testmaps/q1_sealing_contents.map
+Output file: /tmp/qqbsp-p3/build/qartographer/upstream-testmaps/q1_sealing_contents.bsp
+
+INFO: using built-in palette.
+WARNING: texture name openquartzmirror (/tmp/qqbsp-p3/build/qartographer/upstream-testmaps/deprecated/free_wad.wad) is not null-terminated
+INFO: world extents calculated to 1512 units
+Processing hull 0...
+Processing hull 1...
+Processing hull 2...
+Writing /tmp/qqbsp-p3/build/qartographer/upstream-testmaps/q1_sealing_contents.bsp as Quake BSP bsp29
+Wrote /tmp/qqbsp-p3/build/qartographer/upstream-testmaps/q1_sealing_contents.bsp
+
+count   lump name    byte size 
+      1 models               64
+     38 planes              760
+    118 vertexes           1416
+     37 nodes               888
+     36 texinfos           1440
+    110 faces              2200
+     45 clipnodes           360
+     28 leafs               784
+    143 marksurfaces        286
+    235 edges               940
+    452 surfedges          1808
+      5 textures          65504
+        lightdata             0
+        visdata               0
+        entdata             282
+LoadBSPFile: '/tmp/qqbsp-p3/build/qartographer/upstream-testmaps/q1_sealing_contents.bsp'
+BSP is version Quake BSP bsp29
+INFO: using built-in palette.
+wrote /tmp/qqbsp-p3/build/qartographer/upstream-testmaps/q1_sealing_contents.bsp.geometry.obj
+wrote /tmp/qqbsp-p3/build/qartographer/upstream-testmaps/q1_sealing_contents.bsp.json
+[       OK ] testmapsQ1.sealingContents (18 ms)
+[ RUN      ] testmapsQ1.detailTouchingWater
+----  / ericw-tools  ----
+low priority not compiled into this version
+
+--- Options Summary ---
+    "nopercent" was set to "1" (from command line)
+    "nostat" was set to "1" (from command line)
+    "noprogress" was set to "1" (from command line)
+    "path" was set to ""/tmp/qqbsp-p3/build/qartographer/upstream-testmaps/q2_wal_metadata"" (from command line)
+
+Input file: /tmp/qqbsp-p3/build/qartographer/upstream-testmaps/q1_detail_touching_water.map
+Output file: /tmp/qqbsp-p3/build/qartographer/upstream-testmaps/q1_detail_touching_water.bsp
+
+INFO: using built-in palette.
+WARNING: texture name openquartzmirror (/tmp/qqbsp-p3/build/qartographer/upstream-testmaps/deprecated/free_wad.wad) is not null-terminated
+INFO: world extents calculated to 1512 units
+Processing hull 0...
+Processing hull 1...
+Processing hull 2...
+Writing /tmp/qqbsp-p3/build/qartographer/upstream-testmaps/q1_detail_touching_water.bsp as Quake BSP bsp29
+Wrote /tmp/qqbsp-p3/build/qartographer/upstream-testmaps/q1_detail_touching_water.bsp
+
+count   lump name    byte size 
+      1 models               64
+     33 planes              660
+     71 vertexes            852
+     29 nodes               696
+     17 texinfos            680
+     63 faces              1260
+     27 clipnodes           216
+     12 leafs               336
+     63 marksurfaces        126
+    139 edges               556
+    270 surfedges          1080
+      5 textures          61424
+        lightdata             0
+        visdata               0
+        entdata             282
+LoadBSPFile: '/tmp/qqbsp-p3/build/qartographer/upstream-testmaps/q1_detail_touching_water.bsp'
+BSP is version Quake BSP bsp29
+INFO: using built-in palette.
+wrote /tmp/qqbsp-p3/build/qartographer/upstream-testmaps/q1_detail_touching_water.bsp.geometry.obj
+wrote /tmp/qqbsp-p3/build/qartographer/upstream-testmaps/q1_detail_touching_water.bsp.json
+[       OK ] testmapsQ1.detailTouchingWater (19 ms)
+[ RUN      ] testmapsQ1.brushClippingOrder
+----  / ericw-tools  ----
+low priority not compiled into this version
+
+--- Options Summary ---
+    "nopercent" was set to "1" (from command line)
+    "nostat" was set to "1" (from command line)
+    "noprogress" was set to "1" (from command line)
+    "path" was set to ""/tmp/qqbsp-p3/build/qartographer/upstream-testmaps/q2_wal_metadata"" (from command line)
+    "tjunc" was set to "rotate" (from command line)
+
+Input file: /tmp/qqbsp-p3/build/qartographer/upstream-testmaps/qbsp_brush_clipping_order.map
+Output file: /tmp/qqbsp-p3/build/qartographer/upstream-testmaps/qbsp_brush_clipping_order.bsp
+
+INFO: using built-in palette.
+WARNING: texture name openquartzmirror (/tmp/qqbsp-p3/build/qartographer/upstream-testmaps/deprecated/free_wad.wad) is not null-terminated
+INFO: world extents calculated to 968 units
+Processing hull 0...
+Processing hull 1...
+Processing hull 2...
+Writing /tmp/qqbsp-p3/build/qartographer/upstream-testmaps/qbsp_brush_clipping_order.bsp as Quake BSP bsp29
+Wrote /tmp/qqbsp-p3/build/qartographer/upstream-testmaps/qbsp_brush_clipping_order.bsp
+
+count   lump name    byte size 
+      2 models              128
+     63 planes             1260
+     32 vertexes            384
+     40 nodes               960
+      4 texinfos            160
+     20 faces               400
+    125 clipnodes          1000
+     19 leafs               532
+     20 marksurfaces         40
+     49 edges               196
+     96 surfedges           384
+      3 textures          32776
+        lightdata             0
+        visdata               0
+        entdata             204
+LoadBSPFile: '/tmp/qqbsp-p3/build/qartographer/upstream-testmaps/qbsp_brush_clipping_order.bsp'
+BSP is version Quake BSP bsp29
+INFO: using built-in palette.
+wrote /tmp/qqbsp-p3/build/qartographer/upstream-testmaps/qbsp_brush_clipping_order.bsp.geometry.obj
+wrote /tmp/qqbsp-p3/build/qartographer/upstream-testmaps/qbsp_brush_clipping_order.bsp.json
+[       OK ] testmapsQ1.brushClippingOrder (15 ms)
+[ RUN      ] testmapsQ1.cube
+----  / ericw-tools  ----
+low priority not compiled into this version
+
+--- Options Summary ---
+    "nopercent" was set to "1" (from command line)
+    "nostat" was set to "1" (from command line)
+    "noprogress" was set to "1" (from command line)
+    "path" was set to ""/tmp/qqbsp-p3/build/qartographer/upstream-testmaps/q2_wal_metadata"" (from command line)
+
+Input file: /tmp/qqbsp-p3/build/qartographer/upstream-testmaps/q1_cube.map
+Output file: /tmp/qqbsp-p3/build/qartographer/upstream-testmaps/q1_cube.bsp
+
+INFO: using built-in palette.
+WARNING: texture name openquartzmirror (/tmp/qqbsp-p3/build/qartographer/upstream-testmaps/deprecated/free_wad.wad) is not null-terminated
+INFO: world extents calculated to 680 units
+Processing hull 0...
+WARNING: Reached occupant "info_player_start" at (56 -208 136), no filling performed.
+Leak file written to /tmp/qqbsp-p3/build/qartographer/upstream-testmaps/q1_cube.pts
+Processing hull 1...
+WARNING: Reached occupant "info_player_start" at (56 -208 136), no filling performed.
+Processing hull 2...
+WARNING: Reached occupant "info_player_start" at (56 -208 136), no filling performed.
+Writing /tmp/qqbsp-p3/build/qartographer/upstream-testmaps/q1_cube.bsp as Quake BSP bsp29
+Wrote /tmp/qqbsp-p3/build/qartographer/upstream-testmaps/q1_cube.bsp
+
+count   lump name    byte size 
+      1 models               64
+     17 planes              340
+      8 vertexes             96
+      6 nodes               144
+      6 texinfos            240
+      6 faces               120
+     12 clipnodes            96
+      7 leafs               196
+      6 marksurfaces         12
+     13 edges                52
+     24 surfedges            96
+      2 textures          10972
+        lightdata             0
+        visdata               0
+        entdata             227
+LoadBSPFile: '/tmp/qqbsp-p3/build/qartographer/upstream-testmaps/q1_cube.bsp'
+BSP is version Quake BSP bsp29
+INFO: using built-in palette.
+wrote /tmp/qqbsp-p3/build/qartographer/upstream-testmaps/q1_cube.bsp.geometry.obj
+wrote /tmp/qqbsp-p3/build/qartographer/upstream-testmaps/q1_cube.bsp.json
+[       OK ] testmapsQ1.cube (3 ms)
+[ RUN      ] testmapsQ1.cubes
+----  / ericw-tools  ----
+low priority not compiled into this version
+
+--- Options Summary ---
+    "nopercent" was set to "1" (from command line)
+    "nostat" was set to "1" (from command line)
+    "noprogress" was set to "1" (from command line)
+    "path" was set to ""/tmp/qqbsp-p3/build/qartographer/upstream-testmaps/q2_wal_metadata"" (from command line)
+
+Input file: /tmp/qqbsp-p3/build/qartographer/upstream-testmaps/q1_cubes.map
+Output file: /tmp/qqbsp-p3/build/qartographer/upstream-testmaps/q1_cubes.bsp
+
+INFO: using built-in palette.
+WARNING: texture name openquartzmirror (/tmp/qqbsp-p3/build/qartographer/upstream-testmaps/deprecated/free_wad.wad) is not null-terminated
+INFO: world extents calculated to 872 units
+Processing hull 0...
+WARNING: Reached occupant "info_player_start" at (56 -208 136), no filling performed.
+Leak file written to /tmp/qqbsp-p3/build/qartographer/upstream-testmaps/q1_cubes.pts
+Processing hull 1...
+WARNING: Reached occupant "info_player_start" at (56 -208 136), no filling performed.
+Processing hull 2...
+WARNING: Reached occupant "info_player_start" at (56 -208 136), no filling performed.
+Writing /tmp/qqbsp-p3/build/qartographer/upstream-testmaps/q1_cubes.bsp as Quake BSP bsp29
+Wrote /tmp/qqbsp-p3/build/qartographer/upstream-testmaps/q1_cubes.bsp
+
+count   lump name    byte size 
+      1 models               64
+     27 planes              540
+     14 vertexes            168
+     11 nodes               264
+     12 texinfos            480
+     12 faces               240
+     44 clipnodes           352
+     11 leafs               308
+     12 marksurfaces         24
+     26 edges               104
+     48 surfedges           192
+      2 textures          10972
+        lightdata             0
+        visdata               0
+        entdata             227
+LoadBSPFile: '/tmp/qqbsp-p3/build/qartographer/upstream-testmaps/q1_cubes.bsp'
+BSP is version Quake BSP bsp29
+INFO: using built-in palette.
+wrote /tmp/qqbsp-p3/build/qartographer/upstream-testmaps/q1_cubes.bsp.geometry.obj
+wrote /tmp/qqbsp-p3/build/qartographer/upstream-testmaps/q1_cubes.bsp.json
+[       OK ] testmapsQ1.cubes (4 ms)
+[ RUN      ] testmapsQ1.angledBrush
+----  / ericw-tools  ----
+low priority not compiled into this version
+
+--- Options Summary ---
+    "nopercent" was set to "1" (from command line)
+    "nostat" was set to "1" (from command line)
+    "noprogress" was set to "1" (from command line)
+    "path" was set to ""/tmp/qqbsp-p3/build/qartographer/upstream-testmaps/q2_wal_metadata"" (from command line)
+
+Input file: /tmp/qqbsp-p3/build/qartographer/upstream-testmaps/qbsp_angled_brush.map
+Output file: /tmp/qqbsp-p3/build/qartographer/upstream-testmaps/qbsp_angled_brush.bsp
+
+INFO: using built-in palette.
+WARNING: texture name openquartzmirror (/tmp/qqbsp-p3/build/qartographer/upstream-testmaps/deprecated/free_wad.wad) is not null-terminated
+INFO: world extents calculated to 1096 units
+Processing hull 0...
+Processing hull 1...
+Processing hull 2...
+Writing /tmp/qqbsp-p3/build/qartographer/upstream-testmaps/qbsp_angled_brush.bsp as Quake BSP bsp29
+Wrote /tmp/qqbsp-p3/build/qartographer/upstream-testmaps/qbsp_angled_brush.bsp
+
+count   lump name    byte size 
+      1 models               64
+     58 planes             1160
+     50 vertexes            600
+     12 nodes               288
+      9 texinfos            360
+     38 faces               760
+     66 clipnodes           528
+      7 leafs               196
+     65 marksurfaces        130
+     85 edges               340
+    168 surfedges           672
+      3 textures          32776
+        lightdata             0
+        visdata               0
+        entdata             288
+LoadBSPFile: '/tmp/qqbsp-p3/build/qartographer/upstream-testmaps/qbsp_angled_brush.bsp'
+BSP is version Quake BSP bsp29
+INFO: using built-in palette.
+wrote /tmp/qqbsp-p3/build/qartographer/upstream-testmaps/qbsp_angled_brush.bsp.geometry.obj
+wrote /tmp/qqbsp-p3/build/qartographer/upstream-testmaps/qbsp_angled_brush.bsp.json
+[       OK ] testmapsQ1.angledBrush (18 ms)
+[ RUN      ] testmapsQ1.sealingHull1Onnode
+----  / ericw-tools  ----
+low priority not compiled into this version
+
+--- Options Summary ---
+    "nopercent" was set to "1" (from command line)
+    "nostat" was set to "1" (from command line)
+    "noprogress" was set to "1" (from command line)
+    "path" was set to ""/tmp/qqbsp-p3/build/qartographer/upstream-testmaps/q2_wal_metadata"" (from command line)
+
+Input file: /tmp/qqbsp-p3/build/qartographer/upstream-testmaps/q1_sealing_hull1_onnode.map
+Output file: /tmp/qqbsp-p3/build/qartographer/upstream-testmaps/q1_sealing_hull1_onnode.bsp
+
+INFO: using built-in palette.
+WARNING: texture name openquartzmirror (/tmp/qqbsp-p3/build/qartographer/upstream-testmaps/deprecated/free_wad.wad) is not null-terminated
+INFO: world extents calculated to 808 units
+WARNING: unable to find texture skip
+Processing hull 0...
+Processing hull 1...
+Processing hull 2...
+Writing /tmp/qqbsp-p3/build/qartographer/upstream-testmaps/q1_sealing_hull1_onnode.bsp as Quake BSP bsp29
+Wrote /tmp/qqbsp-p3/build/qartographer/upstream-testmaps/q1_sealing_hull1_onnode.bsp
+
+count   lump name    byte size 
+      1 models               64
+     17 planes              340
+     16 vertexes            192
+      6 nodes               144
+      3 texinfos            120
+     14 faces               280
+     12 clipnodes            96
+      2 leafs                56
+     14 marksurfaces         28
+     29 edges               116
+     56 surfedges           224
+      2 textures           5492
+        lightdata             0
+        visdata               0
+        entdata             121
+LoadBSPFile: '/tmp/qqbsp-p3/build/qartographer/upstream-testmaps/q1_sealing_hull1_onnode.bsp'
+BSP is version Quake BSP bsp29
+INFO: using built-in palette.
+wrote /tmp/qqbsp-p3/build/qartographer/upstream-testmaps/q1_sealing_hull1_onnode.bsp.geometry.obj
+wrote /tmp/qqbsp-p3/build/qartographer/upstream-testmaps/q1_sealing_hull1_onnode.bsp.json
+[       OK ] testmapsQ1.sealingHull1Onnode (8 ms)
+[ RUN      ] testmapsQ1.csg
+addArchive: WARNING: archive 'deprecated/free_wad.wad' not found
+WARNING: No valid WAD filenames in worldmodel
+INFO: world extents calculated to 360 units
+[       OK ] testmapsQ1.csg (0 ms)
+[ RUN      ] testmapsQ1.hull1ContentTypes
+----  / ericw-tools  ----
+low priority not compiled into this version
+
+--- Options Summary ---
+    "nopercent" was set to "1" (from command line)
+    "nostat" was set to "1" (from command line)
+    "noprogress" was set to "1" (from command line)
+    "path" was set to ""/tmp/qqbsp-p3/build/qartographer/upstream-testmaps/q2_wal_metadata"" (from command line)
+
+Input file: /tmp/qqbsp-p3/build/qartographer/upstream-testmaps/q1_hull1_content_types.map
+Output file: /tmp/qqbsp-p3/build/qartographer/upstream-testmaps/q1_hull1_content_types.bsp
+
+INFO: using built-in palette.
+WARNING: texture name openquartzmirror (/tmp/qqbsp-p3/build/qartographer/upstream-testmaps/deprecated/free_wad.wad) is not null-terminated
+INFO: world extents calculated to 2152 units
+WARNING: unable to find texture skip
+Processing hull 0...
+fixing up cluster at 616 0 0
+fixing up cluster at 416 -88 0
+Processing hull 1...
+Processing hull 2...
+Writing /tmp/qqbsp-p3/build/qartographer/upstream-testmaps/q1_hull1_content_types.bsp as Quake BSP bsp29
+Wrote /tmp/qqbsp-p3/build/qartographer/upstream-testmaps/q1_hull1_content_types.bsp
+
+count   lump name    byte size 
+      1 models               64
+     57 planes             1140
+    170 vertexes           2040
+     46 nodes              1104
+     52 texinfos           2080
+    165 faces              3300
+     69 clipnodes           552
+     27 leafs               756
+    169 marksurfaces        338
+    342 edges              1368
+    682 surfedges          2728
+      8 textures          92796
+        lightdata             0
+        visdata               0
+        entdata             225
+LoadBSPFile: '/tmp/qqbsp-p3/build/qartographer/upstream-testmaps/q1_hull1_content_types.bsp'
+BSP is version Quake BSP bsp29
+INFO: using built-in palette.
+wrote /tmp/qqbsp-p3/build/qartographer/upstream-testmaps/q1_hull1_content_types.bsp.geometry.obj
+wrote /tmp/qqbsp-p3/build/qartographer/upstream-testmaps/q1_hull1_content_types.bsp.json
+[       OK ] testmapsQ1.hull1ContentTypes (23 ms)
+[----------] 11 tests from testmapsQ1 (140 ms total)
+
+[----------] Global test environment tear-down
+[==========] 13 tests from 2 test suites ran. (141 ms total)
+[  PASSED  ] 13 tests.

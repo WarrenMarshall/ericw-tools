@@ -1,0 +1,8 @@
+checking file include/qbsp/portals.hh
+checking file include/qbsp/supported_geometry.hh
+checking file qartographer/phase8-unrepresentable-portal.json
+checking file qbsp/CMakeLists.txt
+checking file qbsp/brushbsp.cc
+checking file qbsp/portals.cc
+checking file qbsp/qbsp.cc
+checking file tests/test_qbsp.cc

@@ -1,0 +1,24 @@
+---- vis / ericw-tools 2.0.0-alpha10 ----
+low priority not compiled into this version
+logging to /tmp/qqbsp-phase8/evidence/native-ordinary-final/ordinary-vis.log (truncate)
+
+--- Options Summary ---
+    "nopercent" was set to "1" (from command line)
+    "fast" was set to "1" (from command line)
+
+LoadBSPFile: '/tmp/qqbsp-phase8/evidence/native-ordinary-final/ordinary.bsp'
+BSP is version Quake BSP bsp29
+INFO: using built-in palette.
+     2 leafs
+     2 clusters
+     1 portals
+Calculating Base Vis:
+Calculating Full Vis:
+Expanding clusters...
+average leafs visible: 2
+c_noclip: 0
+c_chains: 0
+visdatasize:2  compressed from 2
+---- CalcAmbientSounds ----
+Writing /tmp/qqbsp-phase8/evidence/native-ordinary-final/ordinary.bsp as Quake BSP bsp29
+0.00s elapsed

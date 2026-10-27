@@ -1,0 +1,99 @@
+---- final-qqbsp / ericw-tools  ----
+
+--- Options Summary ---
+    "nopercent" was set to "1" (from command line)
+    "bsp2" was set to "1" (from command line)
+    "chopfragment" was set to "1" (from command line)
+    "notex" was set to "1" (from command line)
+
+Input file: /tmp/qqbsp-phase8/evidence/accepted-experiment-matrix/rotated-chopfragment/input.map
+Output file: /tmp/qqbsp-phase8/evidence/accepted-experiment-matrix/rotated-chopfragment/input.bsp
+
+INFO: using built-in palette.
+WARNING: No wad or _wad key exists in the worldmodel
+     1 entities
+     2 unique textures
+     4 texinfos
+    12 unique planes
+
+INFO: world extents calculated to 343 units
+     1 brushes
+     6 sides
+    14 side bevels
+
+            0 texture frames added
+WARNING: unable to find texture skip
+WARNING: unable to find texture NO_TEXTURE
+Processing hull 0...
+    1 SOLID brushes
+    1 brushes total
+    6 visible sides
+INFO: calculating BSP for 1 brushes with 6 sides
+    1 brushes
+    6 visible faces
+    6 nodes
+    6 expensive split nodes
+    7 leaves
+    1 SOLID leafs
+    6 EMPTY leafs
+    7 leafs total
+    7 max tree height
+    4 avg tree height
+    12 tiny portals
+    36 tree portals
+WARNING: No entities in empty space -- no filling performed (hull 0)
+    12 tiny portals
+    36 tree portals
+    12 sides visible
+    6 makefaces
+    3 tiny portals
+     6 player-occupiable leaves
+     6 clusters of leaves
+    12 vis portals
+    1 SOLID leafs
+    6 EMPTY leafs
+    7 leafs total
+    7 max tree height
+    4 avg tree height
+    8 edges degenerated
+    3 faces degenerated
+    3 edges added by tjunctions
+    3 faces optimized through MWT
+    8 triangles computed from MWT
+    7 edges
+    3 faces
+Processing hull 1...
+PHASE8 CERTIFIED_REDUNDANT_COLLISION_PORTAL plane={normal: 0.935511814799356 0.3532954066653224 -0, dist: 51.885514642389396} alternative_edges=2
+PHASE8 CERTIFIED_REDUNDANT_COLLISION_PORTAL plane={normal: -0.3700714681925303 0.9290032876313329 0, dist: 84.55735221721442} alternative_edges=2
+PHASE8 CERTIFIED_REDUNDANT_COLLISION_PORTAL plane={normal: 0.9355118147993555 0.35329540666532355 0, dist: -51.88551464238943} alternative_edges=2
+PHASE8 CERTIFIED_REDUNDANT_COLLISION_PORTAL plane={normal: -0.3700714681926348 0.9290032876312914 -0, dist: -20.785533565093743} alternative_edges=2
+WARNING: No entities in empty space -- no filling performed (hull 1)
+Processing hull 2...
+PHASE8 CERTIFIED_REDUNDANT_COLLISION_PORTAL plane={normal: 0.935511814799356 0.3532954066653224 -0, dist: 72.50643018582424} alternative_edges=2
+PHASE8 CERTIFIED_REDUNDANT_COLLISION_PORTAL plane={normal: -0.3700714681925303 0.9290032876313329 0, dist: 105.34254831039623} alternative_edges=2
+PHASE8 CERTIFIED_REDUNDANT_COLLISION_PORTAL plane={normal: 0.9355118147993555 0.35329540666532355 0, dist: -72.5064301858243} alternative_edges=2
+PHASE8 CERTIFIED_REDUNDANT_COLLISION_PORTAL plane={normal: -0.3700714681926348 0.9290032876312914 -0, dist: -41.57072965827656} alternative_edges=2
+WARNING: No entities in empty space -- no filling performed (hull 2)
+Writing /tmp/qqbsp-phase8/evidence/accepted-experiment-matrix/rotated-chopfragment/input.bsp as Quake BSP2 bsp2
+Wrote /tmp/qqbsp-phase8/evidence/accepted-experiment-matrix/rotated-chopfragment/input.bsp
+
+count   lump name    byte size 
+      1 models               64
+     45 planes              900
+      5 vertexes             60
+      6 nodes               264
+      2 texinfos             80
+      3 faces                84
+     40 clipnodes           480
+      7 leafs               308
+      3 marksurfaces         12
+      8 edges                64
+     14 surfedges            56
+      2 textures             12
+        lightdata             0
+        visdata               0
+        entdata              30
+
+1.265s seconds elapsed
+
+

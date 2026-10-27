@@ -1,0 +1,221 @@
+{
+  "checks": [
+    {
+      "hull": 0,
+      "point": [
+        0,
+        32,
+        0
+      ],
+      "source_margin": -0.004,
+      "expected": -2,
+      "actual": -2,
+      "pass_": true
+    },
+    {
+      "hull": 0,
+      "point": [
+        0,
+        32,
+        1
+      ],
+      "source_margin": 0.996,
+      "expected": -1,
+      "actual": -1,
+      "pass_": true
+    },
+    {
+      "hull": 0,
+      "point": [
+        0,
+        32,
+        10
+      ],
+      "source_margin": 9.996,
+      "expected": -1,
+      "actual": -1,
+      "pass_": true
+    },
+    {
+      "hull": 0,
+      "point": [
+        0,
+        32,
+        -10
+      ],
+      "source_margin": 9.996,
+      "expected": -1,
+      "actual": -1,
+      "pass_": true
+    },
+    {
+      "hull": 0,
+      "point": [
+        40,
+        32,
+        0
+      ],
+      "source_margin": 8.0,
+      "expected": -1,
+      "actual": -1,
+      "pass_": true
+    },
+    {
+      "hull": 0,
+      "point": [
+        0,
+        32,
+        128
+      ],
+      "source_margin": 127.996,
+      "expected": -1,
+      "actual": -1,
+      "pass_": true
+    },
+    {
+      "hull": 1,
+      "point": [
+        0,
+        32,
+        0
+      ],
+      "source_margin": -28.004,
+      "expected": -2,
+      "actual": -2,
+      "pass_": true
+    },
+    {
+      "hull": 1,
+      "point": [
+        0,
+        32,
+        1
+      ],
+      "source_margin": -27.004,
+      "expected": -2,
+      "actual": -2,
+      "pass_": true
+    },
+    {
+      "hull": 1,
+      "point": [
+        0,
+        32,
+        10
+      ],
+      "source_margin": -18.004,
+      "expected": -2,
+      "actual": -2,
+      "pass_": true
+    },
+    {
+      "hull": 1,
+      "point": [
+        0,
+        32,
+        -10
+      ],
+      "source_margin": -18.004,
+      "expected": -2,
+      "actual": -2,
+      "pass_": true
+    },
+    {
+      "hull": 1,
+      "point": [
+        40,
+        32,
+        0
+      ],
+      "source_margin": -8.0,
+      "expected": -2,
+      "actual": -2,
+      "pass_": true
+    },
+    {
+      "hull": 1,
+      "point": [
+        0,
+        32,
+        128
+      ],
+      "source_margin": 99.996,
+      "expected": -1,
+      "actual": -1,
+      "pass_": true
+    },
+    {
+      "hull": 2,
+      "point": [
+        0,
+        32,
+        0
+      ],
+      "source_margin": -44.004,
+      "expected": -2,
+      "actual": -2,
+      "pass_": true
+    },
+    {
+      "hull": 2,
+      "point": [
+        0,
+        32,
+        1
+      ],
+      "source_margin": -43.004,
+      "expected": -2,
+      "actual": -2,
+      "pass_": true
+    },
+    {
+      "hull": 2,
+      "point": [
+        0,
+        32,
+        10
+      ],
+      "source_margin": -34.004,
+      "expected": -2,
+      "actual": -2,
+      "pass_": true
+    },
+    {
+      "hull": 2,
+      "point": [
+        0,
+        32,
+        -10
+      ],
+      "source_margin": -34.004,
+      "expected": -2,
+      "actual": -2,
+      "pass_": true
+    },
+    {
+      "hull": 2,
+      "point": [
+        40,
+        32,
+        0
+      ],
+      "source_margin": -24.0,
+      "expected": -2,
+      "actual": -2,
+      "pass_": true
+    },
+    {
+      "hull": 2,
+      "point": [
+        0,
+        32,
+        128
+      ],
+      "source_margin": 83.99600000000001,
+      "expected": -1,
+      "actual": -1,
+      "pass_": true
+    }
+  ],
+  "pass_": true
+}

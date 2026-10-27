@@ -1,0 +1,5 @@
+Note: Google Test filter = phase5.*
+[==========] Running 2 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 2 tests from phase5
+[ RUN      ] phase5.Hull2ResolvedFrontFragment

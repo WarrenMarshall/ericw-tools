@@ -1,0 +1,93 @@
+---- final-qqbsp / ericw-tools  ----
+
+--- Options Summary ---
+    "nopercent" was set to "1" (from command line)
+    "bsp2" was set to "1" (from command line)
+    "chopfragment" was set to "1" (from command line)
+    "notex" was set to "1" (from command line)
+
+Input file: /tmp/qqbsp-phase8/evidence/accepted-experiment-matrix/overlap-chopfragment/input.map
+Output file: /tmp/qqbsp-phase8/evidence/accepted-experiment-matrix/overlap-chopfragment/input.bsp
+
+INFO: using built-in palette.
+WARNING: No wad or _wad key exists in the worldmodel
+     1 entities
+     2 unique textures
+     7 texinfos
+    24 unique planes
+
+INFO: world extents calculated to 392 units
+     2 brushes
+    12 sides
+
+            0 texture frames added
+WARNING: unable to find texture skip
+WARNING: unable to find texture NO_TEXTURE
+Processing hull 0...
+    2 SOLID brushes
+    2 brushes total
+    12 visible sides
+INFO: calculating BSP for 2 brushes with 12 sides
+     2 brushes
+    12 visible faces
+    18 nodes
+    18 expensive split nodes
+    19 leaves
+     7 SOLID leafs
+    12 EMPTY leafs
+    19 leafs total
+    13 max tree height
+     9 avg tree height
+    60 tiny portals
+    78 tree portals
+WARNING: No entities in empty space -- no filling performed (hull 0)
+    60 tiny portals
+    78 tree portals
+    48 sides visible
+    24 makefaces
+     6 merged
+    2 nodes pruned
+    35 tiny portals
+    12 player-occupiable leaves
+    12 clusters of leaves
+    36 vis portals
+     5 SOLID leafs
+    12 EMPTY leafs
+    17 leafs total
+    12 max tree height
+     8 avg tree height
+    24 edges degenerated
+    10 faces degenerated
+    12 edges added by tjunctions
+     8 faces optimized through MWT
+    24 triangles computed from MWT
+     2 faces created via optimization of MWT triangles
+    24 edges
+    10 faces
+Processing hull 1...
+WARNING: No entities in empty space -- no filling performed (hull 1)
+Processing hull 2...
+WARNING: No entities in empty space -- no filling performed (hull 2)
+Writing /tmp/qqbsp-phase8/evidence/accepted-experiment-matrix/overlap-chopfragment/input.bsp as Quake BSP2 bsp2
+Wrote /tmp/qqbsp-phase8/evidence/accepted-experiment-matrix/overlap-chopfragment/input.bsp
+
+count   lump name    byte size 
+      1 models               64
+     28 planes              560
+     12 vertexes            144
+     16 nodes               704
+      4 texinfos            160
+     10 faces               280
+     48 clipnodes           576
+     13 leafs               572
+     10 marksurfaces         40
+     25 edges               200
+     44 surfedges           176
+      2 textures             12
+        lightdata             0
+        visdata               0
+        entdata              30
+
+0.099s seconds elapsed
+
+

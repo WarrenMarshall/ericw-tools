@@ -1,0 +1,362 @@
+[
+  {
+    "case": "overlap",
+    "hull": 1,
+    "label": "original",
+    "original": {
+      "hull": 1,
+      "point": [
+        0.0,
+        32.0,
+        -28.00385
+      ],
+      "margin": -0.00015000000000142677,
+      "want": -2,
+      "actual": -1
+    },
+    "oracle_point": [
+      0.0,
+      32.0,
+      -28.00385
+    ],
+    "engine_point": [
+      0.0,
+      32.0,
+      -32.00385
+    ],
+    "source_margin": -0.00015000000000142677,
+    "expected": -2,
+    "prototype": -1,
+    "diagnostic": -2
+  },
+  {
+    "case": "overlap",
+    "hull": 1,
+    "label": "lower-depth-0.00015",
+    "original": null,
+    "oracle_point": [
+      0,
+      32,
+      -28.00385
+    ],
+    "engine_point": [
+      0,
+      32,
+      -32.00385
+    ],
+    "source_margin": -0.00015000000000142677,
+    "expected": -2,
+    "prototype": -1,
+    "diagnostic": -2
+  },
+  {
+    "case": "overlap",
+    "hull": 1,
+    "label": "lower-depth-0.001",
+    "original": null,
+    "oracle_point": [
+      0,
+      32,
+      -28.003
+    ],
+    "engine_point": [
+      0,
+      32,
+      -32.003
+    ],
+    "source_margin": -0.0010000000000012221,
+    "expected": -2,
+    "prototype": -1,
+    "diagnostic": -2
+  },
+  {
+    "case": "overlap",
+    "hull": 1,
+    "label": "lower-depth-0.004",
+    "original": null,
+    "oracle_point": [
+      0,
+      32,
+      -28.0
+    ],
+    "engine_point": [
+      0,
+      32,
+      -32.0
+    ],
+    "source_margin": -0.004000000000001336,
+    "expected": -2,
+    "prototype": -2,
+    "diagnostic": -2
+  },
+  {
+    "case": "overlap",
+    "hull": 2,
+    "label": "original",
+    "original": {
+      "hull": 2,
+      "point": [
+        0.0,
+        32.0,
+        -44.00385
+      ],
+      "margin": -0.00014999999999787406,
+      "want": -2,
+      "actual": -1
+    },
+    "oracle_point": [
+      0.0,
+      32.0,
+      -44.00385
+    ],
+    "engine_point": [
+      0.0,
+      32.0,
+      -64.00385
+    ],
+    "source_margin": -0.00014999999999787406,
+    "expected": -2,
+    "prototype": -1,
+    "diagnostic": -2
+  },
+  {
+    "case": "overlap",
+    "hull": 2,
+    "label": "lower-depth-0.00015",
+    "original": null,
+    "oracle_point": [
+      0,
+      32,
+      -44.00385
+    ],
+    "engine_point": [
+      0,
+      32,
+      -64.00385
+    ],
+    "source_margin": -0.00014999999999787406,
+    "expected": -2,
+    "prototype": -1,
+    "diagnostic": -2
+  },
+  {
+    "case": "overlap",
+    "hull": 2,
+    "label": "lower-depth-0.001",
+    "original": null,
+    "oracle_point": [
+      0,
+      32,
+      -44.003
+    ],
+    "engine_point": [
+      0,
+      32,
+      -64.003
+    ],
+    "source_margin": -0.0009999999999976694,
+    "expected": -2,
+    "prototype": -1,
+    "diagnostic": -2
+  },
+  {
+    "case": "overlap",
+    "hull": 2,
+    "label": "lower-depth-0.004",
+    "original": null,
+    "oracle_point": [
+      0,
+      32,
+      -44.0
+    ],
+    "engine_point": [
+      0,
+      32,
+      -64.0
+    ],
+    "source_margin": -0.003999999999997783,
+    "expected": -2,
+    "prototype": -2,
+    "diagnostic": -2
+  },
+  {
+    "case": "near-coplanar",
+    "hull": 1,
+    "label": "original",
+    "original": {
+      "hull": 1,
+      "point": [
+        0.0,
+        32.0,
+        -28.00385
+      ],
+      "margin": -0.00015000000000142677,
+      "want": -2,
+      "actual": -1
+    },
+    "oracle_point": [
+      0.0,
+      32.0,
+      -28.00385
+    ],
+    "engine_point": [
+      0.0,
+      32.0,
+      -32.00385
+    ],
+    "source_margin": -0.00015000000000142677,
+    "expected": -2,
+    "prototype": -1,
+    "diagnostic": -2
+  },
+  {
+    "case": "near-coplanar",
+    "hull": 1,
+    "label": "lower-depth-0.00015",
+    "original": null,
+    "oracle_point": [
+      0,
+      32,
+      -28.00385
+    ],
+    "engine_point": [
+      0,
+      32,
+      -32.00385
+    ],
+    "source_margin": -0.00015000000000142677,
+    "expected": -2,
+    "prototype": -1,
+    "diagnostic": -2
+  },
+  {
+    "case": "near-coplanar",
+    "hull": 1,
+    "label": "lower-depth-0.001",
+    "original": null,
+    "oracle_point": [
+      0,
+      32,
+      -28.003
+    ],
+    "engine_point": [
+      0,
+      32,
+      -32.003
+    ],
+    "source_margin": -0.0010000000000012221,
+    "expected": -2,
+    "prototype": -1,
+    "diagnostic": -2
+  },
+  {
+    "case": "near-coplanar",
+    "hull": 1,
+    "label": "lower-depth-0.004",
+    "original": null,
+    "oracle_point": [
+      0,
+      32,
+      -28.0
+    ],
+    "engine_point": [
+      0,
+      32,
+      -32.0
+    ],
+    "source_margin": -0.004000000000001336,
+    "expected": -2,
+    "prototype": -1,
+    "diagnostic": -2
+  },
+  {
+    "case": "near-coplanar",
+    "hull": 2,
+    "label": "original",
+    "original": {
+      "hull": 2,
+      "point": [
+        0.0,
+        32.0,
+        -44.00385
+      ],
+      "margin": -0.00014999999999787406,
+      "want": -2,
+      "actual": -1
+    },
+    "oracle_point": [
+      0.0,
+      32.0,
+      -44.00385
+    ],
+    "engine_point": [
+      0.0,
+      32.0,
+      -64.00385
+    ],
+    "source_margin": -0.00014999999999787406,
+    "expected": -2,
+    "prototype": -1,
+    "diagnostic": -2
+  },
+  {
+    "case": "near-coplanar",
+    "hull": 2,
+    "label": "lower-depth-0.00015",
+    "original": null,
+    "oracle_point": [
+      0,
+      32,
+      -44.00385
+    ],
+    "engine_point": [
+      0,
+      32,
+      -64.00385
+    ],
+    "source_margin": -0.00014999999999787406,
+    "expected": -2,
+    "prototype": -1,
+    "diagnostic": -2
+  },
+  {
+    "case": "near-coplanar",
+    "hull": 2,
+    "label": "lower-depth-0.001",
+    "original": null,
+    "oracle_point": [
+      0,
+      32,
+      -44.003
+    ],
+    "engine_point": [
+      0,
+      32,
+      -64.003
+    ],
+    "source_margin": -0.0009999999999976694,
+    "expected": -2,
+    "prototype": -1,
+    "diagnostic": -2
+  },
+  {
+    "case": "near-coplanar",
+    "hull": 2,
+    "label": "lower-depth-0.004",
+    "original": null,
+    "oracle_point": [
+      0,
+      32,
+      -44.0
+    ],
+    "engine_point": [
+      0,
+      32,
+      -64.0
+    ],
+    "source_margin": -0.003999999999997783,
+    "expected": -2,
+    "prototype": -1,
+    "diagnostic": -2
+  }
+]

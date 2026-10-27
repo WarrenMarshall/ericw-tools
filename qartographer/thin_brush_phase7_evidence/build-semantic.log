@@ -1,0 +1,28 @@
+[1/4] Building CXX object qbsp/CMakeFiles/libqbsp.dir/brushbsp.cc.o
+FAILED: qbsp/CMakeFiles/libqbsp.dir/brushbsp.cc.o 
+/usr/bin/c++ -DERICWTOOLS_VERSION=\"\" -DLINUX -DUSE_PTHREADS -I/tmp/qqbsp-phase7/source/include -I/tmp/qqbsp-phase7/source/3rdparty/fmt/include -I/tmp/qqbsp-bootstrap/pinned/deps/json/json/include -I/tmp/qqbsp-phase7/source/3rdparty/pareto/source -isystem /tmp/qqbsp-bootstrap/pinned/deps/tbb/oneapi-tbb-2021.11.0/include -O2 -g -DNDEBUG -std=gnu++20 -fno-fast-math -ffp-contract=off -Winvalid-pch -include /tmp/qqbsp-phase7/build/qbsp/CMakeFiles/libqbsp.dir/cmake_pch.hxx -MD -MT qbsp/CMakeFiles/libqbsp.dir/brushbsp.cc.o -MF qbsp/CMakeFiles/libqbsp.dir/brushbsp.cc.o.d -o qbsp/CMakeFiles/libqbsp.dir/brushbsp.cc.o -c /tmp/qqbsp-phase7/source/qbsp/brushbsp.cc
+In file included from /tmp/qqbsp-phase7/build/qbsp/CMakeFiles/libqbsp.dir/cmake_pch.hxx:29,
+                 from <command-line>:
+/tmp/qqbsp-phase7/source/3rdparty/fmt/include/fmt/core.h: In instantiation of ‘constexpr decltype (ctx.begin()) fmt::v10::detail::parse_format_specs(ParseContext&) [with T = contentflags_t; ParseContext = compile_parse_context<char>; decltype (ctx.begin()) = const char*]’:
+/tmp/qqbsp-phase7/source/3rdparty/fmt/include/fmt/core.h:2639:51:   required from here
+/tmp/qqbsp-phase7/source/qbsp/brushbsp.cc:369:36:   in ‘constexpr’ expansion of ‘fmt::v10::basic_format_string<char, contentflags_t&>("{}")’
+/tmp/qqbsp-phase7/source/3rdparty/fmt/include/fmt/core.h:2740:40:   in ‘constexpr’ expansion of ‘fmt::v10::detail::parse_format_string<true, char, format_string_checker<char, contentflags_t> >(((fmt::v10::basic_format_string<char, contentflags_t&>*)this)->fmt::v10::basic_format_string<char, contentflags_t&>::str_, fmt::v10::detail::format_string_checker<char, contentflags_t>(fmt::v10::basic_string_view<char>(((const char*)s))))’
+/tmp/qqbsp-phase7/source/3rdparty/fmt/include/fmt/core.h:2489:44:   in ‘constexpr’ expansion of ‘fmt::v10::detail::parse_replacement_field<char, format_string_checker<char, contentflags_t>&>((p + -1), end, (* & handler))’
+/tmp/qqbsp-phase7/source/3rdparty/fmt/include/fmt/core.h:2457:33:   in ‘constexpr’ expansion of ‘(& handler)->fmt::v10::detail::format_string_checker<char, contentflags_t>::on_replacement_field((& handler)->fmt::v10::detail::format_string_checker<char, contentflags_t>::on_arg_id(), begin)’
+/tmp/qqbsp-phase7/source/3rdparty/fmt/include/fmt/core.h:2632:20:   in ‘constexpr’ expansion of ‘((fmt::v10::detail::format_string_checker<char, contentflags_t>*)this)->fmt::v10::detail::format_string_checker<char, contentflags_t>::on_format_specs(id, begin, begin)’
+/tmp/qqbsp-phase7/source/3rdparty/fmt/include/fmt/core.h:2548:45: error: ‘fmt::v10::detail::type_is_unformattable_for<contentflags_t, char> _’ has incomplete type
+ 2548 |     type_is_unformattable_for<T, char_type> _;
+      |                                             ^
+/tmp/qqbsp-phase7/source/3rdparty/fmt/include/fmt/core.h: In instantiation of ‘constexpr fmt::v10::detail::value<Context> fmt::v10::detail::make_arg(T&) [with bool PACKED = true; Context = fmt::v10::basic_format_context<fmt::v10::appender, char>; T = contentflags_t; typename std::enable_if<PACKED, int>::type <anonymous> = 0]’:
+/tmp/qqbsp-phase7/source/3rdparty/fmt/include/fmt/core.h:1808:51:   required from ‘constexpr fmt::v10::format_arg_store<Context, Args>::format_arg_store(T& ...) [with T = {contentflags_t}; Context = fmt::v10::basic_format_context<fmt::v10::appender, char>; Args = {contentflags_t}]’
+/tmp/qqbsp-phase7/source/3rdparty/fmt/include/fmt/core.h:1826:18:   required from ‘constexpr fmt::v10::format_arg_store<Context, typename std::remove_cv<typename std::remove_reference<T>::type>::type ...> fmt::v10::make_format_args(T& ...) [with Context = basic_format_context<appender, char>; T = {contentflags_t}]’
+/tmp/qqbsp-phase7/source/3rdparty/fmt/include/fmt/core.h:2788:44:   required from ‘std::string fmt::v10::format(format_string<T ...>, T&& ...) [with T = {contentflags_t&}; std::string = std::__cxx11::basic_string<char>; format_string<T ...> = basic_format_string<char, contentflags_t&>]’
+/tmp/qqbsp-phase7/source/qbsp/brushbsp.cc:369:36:   required from here
+/tmp/qqbsp-phase7/source/3rdparty/fmt/include/fmt/core.h:1576:63: error: ‘fmt::v10::detail::type_is_unformattable_for<contentflags_t, char> _’ has incomplete type
+ 1576 |     type_is_unformattable_for<T, typename Context::char_type> _;
+      |                                                               ^
+/tmp/qqbsp-phase7/source/3rdparty/fmt/include/fmt/core.h:1580:7: error: static assertion failed: Cannot format an argument. To make type T formattable provide a formatter<T> specialization: https://fmt.dev/latest/api.html#udt
+ 1580 |       formattable,
+      |       ^~~~~~~~~~~
+/tmp/qqbsp-phase7/source/3rdparty/fmt/include/fmt/core.h:1580:7: note: ‘formattable’ evaluates to false
+ninja: build stopped: subcommand failed.

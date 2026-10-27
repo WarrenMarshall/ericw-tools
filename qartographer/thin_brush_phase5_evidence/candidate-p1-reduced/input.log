@@ -1,0 +1,90 @@
+---- qqbsp / ericw-tools  ----
+
+--- Options Summary ---
+    "threads" was set to "1" (from command line)
+    "nopercent" was set to "1" (from command line)
+    "bsp2" was set to "1" (from command line)
+    "chopfragment" was set to "1" (from command line)
+    "notex" was set to "1" (from command line)
+
+Input file: /tmp/qqbsp-phase5/evidence/candidate-p1-reduced/input.map
+Output file: /tmp/qqbsp-phase5/evidence/candidate-p1-reduced/input.bsp
+
+INFO: using built-in palette.
+WARNING: No wad or _wad key exists in the worldmodel
+      2 entities
+      3 unique textures
+     17 texinfos
+    120 unique planes
+
+INFO: world extents calculated to 4072 units
+     4 brushes
+    60 sides
+    36 side bevels
+
+            0 texture frames added
+WARNING: unable to find texture skip
+WARNING: unable to find texture CLIP
+WARNING: unable to find texture TF_Panels02
+Processing hull 0...
+    2 SOLID | DETAIL brushes
+    2 brushes total
+    12 visible sides
+WARNING: 7 faces were crunched away by being too small. Use -verbose to see which faces were affected.
+INFO: calculating BSP for 2 brushes with 12 sides
+     2 brushes
+    12 visible faces
+    12 nodes
+    12 expensive split nodes
+    13 leaves
+     2 SOLID | DETAIL leafs
+    11 EMPTY leafs
+    13 leafs total
+    8 max tree height
+    5 avg tree height
+    70 tree portals
+WARNING: No entities in empty space -- no filling performed (hull 0)
+    70 tree portals
+    24 sides visible
+    12 makefaces
+    11 player-occupiable leaves
+     1 clusters of leaves
+     2 SOLID | DETAIL leafs
+    11 EMPTY leafs
+    13 leafs total
+    8 max tree height
+    5 avg tree height
+    12 faces optimized through MWT
+    24 triangles computed from MWT
+    24 edges
+    12 faces
+Processing hull 1...
+PHASE5_REJECT partition=272 plane={normal: 0 0.9854585047956871 -0.1699162597453492, dist: -234.04722319586585} reason=two resolved extents but cut has no resolved rank-2 winding
+PHASE5_SUPPORT id=205 plane={normal: -1 0 0, dist: 1936.03125} onnode=false bevel=false winding={}
+PHASE5_SUPPORT id=206 plane={normal: 1 0 0, dist: -1776.40625} onnode=false bevel=false winding={}
+PHASE5_SUPPORT id=209 plane={normal: 0 -1 0, dist: 290.09375} onnode=false bevel=false winding={}
+PHASE5_SUPPORT id=210 plane={normal: 0 1 0, dist: -47.0625} onnode=false bevel=false winding={}
+PHASE5_SUPPORT id=213 plane={normal: 0 0 -1, dist: 151.5} onnode=false bevel=false winding={}
+PHASE5_SUPPORT id=214 plane={normal: 0 0 1, dist: 63.34375} onnode=false bevel=false winding={}
+PHASE5_SUPPORT id=217 plane={normal: 0 -0.1699123666066197 -0.9854591760565922, dist: 166.43697515401647} onnode=false bevel=false winding={}
+PHASE5_SUPPORT id=218 plane={normal: 0 0.9854544762611134 -0.1699396222690126, dist: -42.06573337396245} onnode=false bevel=false winding={}
+PHASE5_SUPPORT id=220 plane={normal: 0.999986463778244 0 -0.005203101025605333, dist: -1776.2501754825464} onnode=false bevel=false winding={}
+PHASE5_SUPPORT id=222 plane={normal: 0.9995675165479618 -0.029406853319090008 -0.00012976906279002807, dist: -1773.3078735339366} onnode=false bevel=false winding={}
+PHASE5_SUPPORT id=224 plane={normal: 0.999546426698612 -0.030115459054047135 0, dist: -1773.0801424436531} onnode=false bevel=false winding={}
+PHASE5_SUPPORT id=226 plane={normal: 0.98580124166541 -0 0.16791638374779233, dist: -1746.0305529259344} onnode=false bevel=false winding={}
+PHASE5_SUPPORT id=228 plane={normal: 0.9995680398255388 -0.029389347718689448 0, dist: -1773.3134811080947} onnode=false bevel=false winding={}
+PHASE5_SUPPORT id=230 plane={normal: 0 0.17009769219769055 0.9854272043682475, dist: 22.235074694996783} onnode=false bevel=false winding={}
+PHASE5_SUPPORT id=233 plane={normal: 0 -0.9854206277153194 0.1701357883372746, dist: 275.17771101635583} onnode=false bevel=false winding={(-1814.65625 -283.16100653457715 -22.658288565405975), (-1814.65625 -282.97181539509563 -21.562500000001673), (-1814.467000296297 -283.161327620062 -22.66014828147832)}
+PHASE5_SUPPORT id=234 plane={normal: 0.999567414326611 -0.029410361607495075 -0.00012184633649610198, dist: -1773.3076153931497} onnode=false bevel=false winding={}
+PHASE5_SUPPORT id=237 plane={normal: -1 0 0, dist: 1814.65625} onnode=true bevel=false winding={(-1814.65625 -282.97181539509563 -21.56250000000167), (-1814.65625 -283.16100653457715 -22.658288565405975), (-1814.65625 -273.72610294117646 -24.28125), (-1814.65625 -257.4709929463213 -24.28125), (-1814.65625 -257.4687500000006 -21.56250000000069)}
+PHASE5_SUPPORT id=242 plane={normal: 0 1 0, dist: -203.625} onnode=false bevel=false winding={}
+PHASE5_SUPPORT id=245 plane={normal: 0 0 -1, dist: 24.28125} onnode=true bevel=false winding={(-1814.1875000000002 -241.68750000000452 -24.28125), (-1814.65625 -257.4709929463213 -24.28125), (-1814.65625 -273.72610294117646 -24.28125), (-1814.1875 -273.75367647058823 -24.28125)}
+PHASE5_SUPPORT id=249 plane={normal: -0 -0.17010333730952978 -0.9854262299310691, dist: 71.01942643379891} onnode=false bevel=false winding={}
+PHASE5_SUPPORT id=253 plane={normal: -0.9995592833630517 0.02968566056131813 -2.449042505883687e-05, dist: 1806.2138989574262} onnode=false bevel=false winding={(-1814.65625 -257.46874999998994 -21.56250000000069), (-1814.65625 -257.47099294631045 -24.28125), (-1814.1875000000002 -241.68749999999227 -24.28125)}
+PHASE5_SUPPORT id=265 plane={normal: -0.9999870143059859 0 0.005096196562148286, dist: 1814.8085042105909} onnode=false bevel=false winding={}
+PHASE5_SUPPORT id=267 plane={normal: -0.009971674905035382 -0.1695184733856015 -0.9854765613045312, dist: 88.4253960399445} onnode=false bevel=false winding={(-1814.65625 -283.1610065345771 -22.658288565406018), (-1814.467000296297 -283.16132762006197 -22.660148281478364), (-1814.1875 -273.7536764705886 -24.28125), (-1814.65625 -273.7261029411768 -24.28125)}
+PHASE5_SUPPORT id=270 plane={normal: 0.9854601157443479 -0 0.1699069165076462, dist: -1791.9349760484006} onnode=false bevel=false winding={(-1814.1874999999998 -241.6874999999979 -24.28125), (-1814.1874999999998 -273.7536764705882 -24.28125), (-1814.4670002962966 -283.16132762006197 -22.660148281478318), (-1814.65625 -282.9718153950952 -21.562499999999176), (-1814.65625 -257.4687500000011 -21.56249999999922)}
+************ ERROR ************
+PHASE5 NUMERICAL_UNCERTAINTY source=/tmp/qqbsp-phase5/evidence/candidate-p1-reduced/input.map[line 4] partition=272: two resolved extents but cut has no resolved rank-2 winding
+
+

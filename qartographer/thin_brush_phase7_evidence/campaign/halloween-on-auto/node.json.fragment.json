@@ -1,0 +1,43 @@
+{
+  "partition_id": 2768,
+  "planes": [
+    [
+      -1.0,
+      0.0,
+      0.0,
+      -116.000091553
+    ],
+    [
+      0.0,
+      -1.0,
+      0.0,
+      -789.599975586
+    ],
+    [
+      0.0,
+      0.0,
+      -1.0,
+      48.999938965
+    ],
+    [
+      0.730462728846962,
+      0.6829525618704786,
+      -0.0,
+      691.1956183632868
+    ],
+    [
+      -0.043437238657536584,
+      0.0,
+      0.9990561577297885,
+      -48.997133623801865
+    ]
+  ],
+  "query": [
+    1.0,
+    0.0,
+    0.0,
+    208.000061035
+  ],
+  "reason": "UNREPRESENTABLE_BOUNDARY: support-certified positive children, approximate cap unavailable; semantic simplification not certified",
+  "source": "/tmp/qqbsp-phase7/evidence/campaign/halloween-on-auto/input.map[line 6336]"
+}

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="3" failures="0" disabled="0" errors="0" time="0.001" timestamp="2026-10-26T14:33:28.295" name="AllTests">
+  <testsuite name="qbsp" tests="2" failures="0" disabled="0" skipped="0" errors="0" time="0." timestamp="2026-10-26T14:33:28.295">
+    <testcase name="duplicatePlanes" file="/tmp/qqbsp-phase7/source/tests/test_qbsp.cc" line="339" status="run" result="completed" time="0." timestamp="2026-10-26T14:33:28.295" classname="qbsp" />
+    <testcase name="emptyBrush" file="/tmp/qqbsp-phase7/source/tests/test_qbsp.cc" line="368" status="run" result="completed" time="0." timestamp="2026-10-26T14:33:28.295" classname="qbsp" />
+  </testsuite>
+  <testsuite name="phase7" tests="1" failures="0" disabled="0" skipped="0" errors="0" time="0." timestamp="2026-10-26T14:33:28.296">
+    <testcase name="CompleteRegionCoverage" file="/tmp/qqbsp-phase7/source/tests/test_qbsp.cc" line="2823" status="run" result="completed" time="0." timestamp="2026-10-26T14:33:28.296" classname="phase7" />
+  </testsuite>
+</testsuites>

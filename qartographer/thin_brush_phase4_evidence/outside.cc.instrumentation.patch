@@ -1,0 +1,16 @@
+--- phase3/outside.cc
++++ phase4/outside.cc
+@@ -751,7 +751,13 @@
+     }
+ 
+ 
++
+     if (leakentity) {
++      static int serial=0;std::ofstream f(qbsp_options.bsp_path.string()+".p4-leak"+std::to_string(hullnum.value_or(0))+".tsv");f.precision(17);
++      extern std::string p3nodepath(const node_t *);
++      f<<"ORIGIN\t"<<leakentity->origin[0]<<" "<<leakentity->origin[1]<<" "<<leakentity->origin[2]<<"\n";
++      for(auto *pp:leakline){auto c=pp->winding.center();f<<"PORTAL\t"<<p3nodepath(pp->nodes[0])<<"\t"<<p3nodepath(pp->nodes[1])<<"\t"<<c[0]<<" "<<c[1]<<" "<<c[2]<<"\t";for(auto &v:pp->winding)f<<v[0]<<" "<<v[1]<<" "<<v[2]<<";";f<<"\n";}
++
+         size_t i=0;for(auto *p:leakline){double err=0;for(auto &v:p->winding)for(auto *n:p->nodes)while(n->parent){auto *par=n->parent;auto *nd=par->get_nodedata();double d=nd->get_plane().distance_to(v);if(nd->children[0]==n)d=-d;err=std::max(err,d);n=par;}
+         logging::print("P3 LEAKPORTAL index={} area={} ancestor_error={}\n",i++,p->winding.area(),err);}
+ 

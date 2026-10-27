@@ -1,0 +1,16 @@
+{
+  "full-on": {
+    "map_sha256": "16250e50546f9d1c4654d75e0a6683f70f7eff332ec730793c5f836d39716318",
+    "source_cells": 2607,
+    "segments": 17,
+    "closed_solid_intersections": [],
+    "seconds": 2.2290175720117986
+  },
+  "full-off": {
+    "map_sha256": "d5f2ab2a0c5a22d2f0ecaecf77a1bbd72a3c2ce2e3c444fe0b4c517092e5986c",
+    "source_cells": 2607,
+    "segments": 16,
+    "closed_solid_intersections": [],
+    "seconds": 2.012453618925065
+  }
+}

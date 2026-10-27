@@ -1,0 +1,45 @@
+---- qqbsp / ericw-tools  ----
+
+--- Options Summary ---
+    "nopercent" was set to "1" (from command line)
+    "bsp2" was set to "1" (from command line)
+    "notex" was set to "1" (from command line)
+
+Input file: /tmp/qqbsp-phase7/evidence/thin-matrix/rotated-default/input.map
+Output file: /tmp/qqbsp-phase7/evidence/thin-matrix/rotated-default/input.bsp
+
+INFO: using built-in palette.
+WARNING: No wad or _wad key exists in the worldmodel
+     1 entities
+     2 unique textures
+     4 texinfos
+    12 unique planes
+
+INFO: world extents calculated to 343 units
+     1 brushes
+     6 sides
+    14 side bevels
+
+            0 texture frames added
+WARNING: unable to find texture skip
+WARNING: unable to find texture NO_TEXTURE
+Processing hull 0...
+    1 SOLID brushes
+    1 brushes total
+    6 visible sides
+INFO: calculating BSP for 1 brushes with 6 sides
+    1 brushes
+    6 visible faces
+    6 nodes
+    6 expensive split nodes
+    7 leaves
+    1 SOLID leafs
+    6 EMPTY leafs
+    7 leafs total
+    7 max tree height
+    4 avg tree height
+    12 tiny portals
+************ ERROR ************
+PHASE7 UNCERTIFIED_PORTAL support=2: winding outside incident region
+
+

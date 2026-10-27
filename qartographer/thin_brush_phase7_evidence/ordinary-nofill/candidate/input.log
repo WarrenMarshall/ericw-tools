@@ -1,0 +1,95 @@
+---- qqbsp / ericw-tools  ----
+
+--- Options Summary ---
+    "threads" was set to "1" (from command line)
+    "nopercent" was set to "1" (from command line)
+    "nofill" was set to "1" (from command line)
+    "notex" was set to "1" (from command line)
+
+Input file: /tmp/qqbsp-phase7/evidence/ordinary-nofill/candidate/input.map
+Output file: /tmp/qqbsp-phase7/evidence/ordinary-nofill/candidate/input.bsp
+
+INFO: using built-in palette.
+addArchive: WARNING: archive '/tmp/qqbsp-phase7/evidence/ordinary-nofill/candidate/deprecated/free_wad.wad' not found
+addArchive: WARNING: archive 'deprecated/free_wad.wad' not found
+addArchive: WARNING: archive '/tmp/qqbsp-phase7/evidence/ordinary-nofill/candidate/deprecated/fence.wad' not found
+addArchive: WARNING: archive 'deprecated/fence.wad' not found
+addArchive: WARNING: archive '/tmp/qqbsp-phase7/evidence/ordinary-nofill/candidate/deprecated/origin.wad' not found
+addArchive: WARNING: archive 'deprecated/origin.wad' not found
+addArchive: WARNING: archive '/tmp/qqbsp-phase7/evidence/ordinary-nofill/candidate/deprecated/hintskip.wad' not found
+addArchive: WARNING: archive 'deprecated/hintskip.wad' not found
+WARNING: No valid WAD filenames in worldmodel
+     2 entities
+     2 unique textures
+     7 texinfos
+    56 unique planes
+
+INFO: world extents calculated to 1000 units
+    14 brushes
+    84 sides
+
+            0 texture frames added
+WARNING: unable to find texture skip
+WARNING: unable to find texture orangestuff8
+Processing hull 0...
+    14 SOLID brushes
+    14 brushes total
+    84 visible sides
+INFO: calculating BSP for 14 brushes with 84 sides
+    14 brushes
+    84 visible faces
+    35 nodes
+    35 expensive split nodes
+    36 leaves
+    14 SOLID leafs
+    22 EMPTY leafs
+    36 leafs total
+    13 max tree height
+     8 avg tree height
+    155 tiny portals
+    179 tree portals
+    155 tiny portals
+    179 tree portals
+    138 sides visible
+    69 makefaces
+     7 merged
+    129 tiny portals
+    22 player-occupiable leaves
+    22 clusters of leaves
+    62 vis portals
+    14 SOLID leafs
+    22 EMPTY leafs
+    36 leafs total
+    13 max tree height
+     8 avg tree height
+     24 edges added by tjunctions
+     62 faces optimized through MWT
+    148 triangles computed from MWT
+      4 faces created via optimization of MWT triangles
+    141 edges
+     66 faces
+Processing hull 1...
+Processing hull 2...
+Writing /tmp/qqbsp-phase7/evidence/ordinary-nofill/candidate/input.bsp as Quake BSP bsp29
+Wrote /tmp/qqbsp-phase7/evidence/ordinary-nofill/candidate/input.bsp
+
+count   lump name    byte size 
+      1 models               64
+     64 planes             1280
+     84 vertexes           1008
+     35 nodes               840
+      6 texinfos            240
+     66 faces              1320
+    669 clipnodes          5352
+     23 leafs               644
+     70 marksurfaces        140
+    142 edges               568
+    280 surfedges          1120
+      2 textures             12
+        lightdata             0
+        visdata               0
+        entdata             227
+
+0.703s seconds elapsed
+
+

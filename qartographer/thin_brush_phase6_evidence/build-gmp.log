@@ -1,0 +1,24 @@
+In file included from /tmp/qqbsp-phase6/component/main.cpp:1:
+/tmp/qqbsp-phase6/component/halfspace.hpp: In member function ‘std::optional<int> p6::I<T>::sign() const’:
+/tmp/qqbsp-phase6/component/halfspace.hpp:50:3: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   50 |   if(lo>0)return 1;if(hi<0)return -1;if(lo==0&&hi==0)return 0;return {};
+      |   ^~
+/tmp/qqbsp-phase6/component/halfspace.hpp:50:20: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   50 |   if(lo>0)return 1;if(hi<0)return -1;if(lo==0&&hi==0)return 0;return {};
+      |                    ^~
+/tmp/qqbsp-phase6/component/halfspace.hpp: In member function ‘bool p6::ProjectiveRank::add(p6::Candidate&)’:
+/tmp/qqbsp-phase6/component/halfspace.hpp:115:79: warning: comparison of integer expressions of different signedness: ‘std::_If_is_unsigned_integer<unsigned int, int>’ {aka ‘int’} and ‘std::vector<p6::Candidate*>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+  115 |   for(int mask=1;mask<16;++mask){if(std::popcount(static_cast<unsigned>(mask))!=rows.size())continue;
+      |                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~
+/tmp/qqbsp-phase6/component/halfspace.hpp: In function ‘bool p6::axial_enclosure(const std::vector<std::array<double, 4> >&)’:
+/tmp/qqbsp-phase6/component/halfspace.hpp:138:2: warning: this ‘for’ clause does not guard... [-Wmisleading-indentation]
+  138 |  for(auto&s:seen)if(!s[0]||!s[1])return false;return true;
+      |  ^~~
+/tmp/qqbsp-phase6/component/halfspace.hpp:138:47: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘for’
+  138 |  for(auto&s:seen)if(!s[0]||!s[1])return false;return true;
+      |                                               ^~~~~~
+/tmp/qqbsp-phase6/component/halfspace.hpp: In instantiation of ‘T p6::minor_det(const std::vector<std::array<T, 4> >&, const std::vector<int>&, size_t) [with T = __gmp_expr<__mpq_struct [1], __mpq_struct [1]>; size_t = long unsigned int]’:
+/tmp/qqbsp-phase6/component/halfspace.hpp:120:52:   required from here
+/tmp/qqbsp-phase6/component/halfspace.hpp:98:159: error: operands to ‘?:’ have different types ‘__gmp_expr<__mpq_struct [1], __gmp_binary_expr<__gmp_expr<__mpq_struct [1], __mpq_struct [1]>, __gmp_expr<__mpq_struct [1], __mpq_struct [1]>, __gmp_binary_minus> >’ and ‘__gmp_expr<__mpq_struct [1], __gmp_binary_expr<__gmp_expr<__mpq_struct [1], __mpq_struct [1]>, __gmp_expr<__mpq_struct [1], __mpq_struct [1]>, __gmp_binary_plus> >’
+   98 |  T sum=T(0.);for(size_t i=0;i<columns.size();++i){auto rest=columns;rest.erase(rest.begin()+i);T term=rows[row][columns[i]]*minor_det(rows,rest,row+1);sum=i%2?sum-term:sum+term;}return sum;
+      |                                                                                                                                                            ~~~^~~~~~~~~~~~~~~~~~

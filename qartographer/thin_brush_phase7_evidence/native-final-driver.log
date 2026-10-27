@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "/tmp/qqbsp-phase7/native_ordinary.py", line 31, in <module>
+    assert rc==0
+           ^^^^^
+AssertionError

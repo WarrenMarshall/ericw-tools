@@ -1,0 +1,48 @@
+[0/1] Re-running CMake...
+fatal: not a git repository (or any of the parent directories): .git
+-- git describe returned ""
+-- Version: 10.1.0
+-- Build type: RelWithDebInfo
+-- Using the multi-header code from /tmp/qqbsp-bootstrap/pinned/deps/json/json/include/
+-- Embree library found: /tmp/qqbsp-bootstrap/pinned/deps/embree/lib/libembree4.so.4
+-- Found embree license: /tmp/qqbsp-bootstrap/pinned/deps/embree/doc/LICENSE.txt
+-- TBB .so symlink: /tmp/qqbsp-bootstrap/pinned/deps/tbb/oneapi-tbb-2021.11.0/lib/intel64/gcc4.8/libtbb.so.12
+-- TBB .so symlink name: libtbb.so.12
+-- TBB .so file: /tmp/qqbsp-bootstrap/pinned/deps/tbb/oneapi-tbb-2021.11.0/lib/intel64/gcc4.8/libtbb.so.12.11
+-- TBBMALLOC .so symlink: /tmp/qqbsp-bootstrap/pinned/deps/tbb/oneapi-tbb-2021.11.0/lib/intel64/gcc4.8/libtbbmalloc.so.2
+-- TBBMALLOC .so symlink name: libtbbmalloc.so.2
+-- TBBMALLOC .so file: /tmp/qqbsp-bootstrap/pinned/deps/tbb/oneapi-tbb-2021.11.0/lib/intel64/gcc4.8/libtbbmalloc.so.2.11
+-- Could NOT find Lua (missing: LUA_LIBRARIES LUA_INCLUDE_DIR) 
+CMake Warning at lightpreview/CMakeLists.txt:6 (find_package):
+  By not providing "FindQt6.cmake" in CMAKE_MODULE_PATH this project has
+  asked CMake to find a package configuration file provided by "Qt6", but
+  CMake did not find one.
+
+  Could not find a package configuration file provided by "Qt6" with any of
+  the following names:
+
+    Qt6Config.cmake
+    qt6-config.cmake
+
+  Add the installation prefix of "Qt6" to CMAKE_PREFIX_PATH or set "Qt6_DIR"
+  to a directory containing one of the above files.  If "Qt6" provides a
+  separate development package or SDK, be sure it has been installed.
+
+
+CMake Warning at lightpreview/CMakeLists.txt:9 (message):
+  Qt6 not found, disabling lightpreview
+
+
+-- Failed to find sphinx-build executable (missing: SPHINX_EXECUTABLE) 
+-- Configuring done (0.2s)
+-- Generating done (0.0s)
+-- Build files have been written to: /tmp/qqbsp-phase7/build
+[1/9] Building CXX object qartographer/CMakeFiles/qqbsp_tests.dir/cmake_pch.hxx.gch
+[2/9] Building CXX object qbsp/CMakeFiles/libqbsp.dir/portals.cc.o
+[3/9] Building CXX object qartographer/CMakeFiles/qqbsp_tests.dir/__/tests/test_main.cc.o
+[4/9] Building CXX object qbsp/CMakeFiles/libqbsp.dir/brushbsp.cc.o
+[5/9] Building CXX object qbsp/CMakeFiles/libqbsp.dir/qbsp.cc.o
+[6/9] Linking CXX static library qbsp/liblibqbsp.a
+[7/9] Linking CXX executable qbsp/qqbsp
+[8/9] Building CXX object qartographer/CMakeFiles/qqbsp_tests.dir/__/tests/test_qbsp.cc.o
+[9/9] Linking CXX executable qartographer/qqbsp_tests

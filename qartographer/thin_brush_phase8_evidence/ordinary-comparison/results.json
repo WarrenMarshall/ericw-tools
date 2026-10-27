@@ -1,0 +1,61 @@
+[
+  {
+    "name": "ordinary",
+    "hulls": {
+      "0": {
+        "samples": 512,
+        "failures": [],
+        "differences": []
+      },
+      "1": {
+        "samples": 512,
+        "failures": [],
+        "differences": []
+      },
+      "2": {
+        "samples": 512,
+        "failures": [],
+        "differences": []
+      }
+    },
+    "accepted_compiler_sha256": "49d766579a03701d6a5bb3560112bc756afdb8cf4488242e0b8db72668d8c8c0",
+    "candidate_bsp_sha256": "157ea29bccafb860b9e7d9c47dec688e1351d66bfc524deb7df54e9e37511118",
+    "accepted_bsp_sha256": "77fa4cb0cc0d10a1db56b7c1e408eecf26f7b32993afdd19ece81e3798c5b27e"
+  },
+  {
+    "name": "ordinary-rotated-hull0",
+    "hulls": {
+      "0": {
+        "samples": 512,
+        "failures": [],
+        "differences": []
+      }
+    },
+    "accepted_compiler_sha256": "49d766579a03701d6a5bb3560112bc756afdb8cf4488242e0b8db72668d8c8c0",
+    "candidate_bsp_sha256": "5d71b873685de5ee38c063b510da458b402e8da56800bb02fb906ed3bd13b971",
+    "accepted_bsp_sha256": "1f4964ba2d8280b8ca88fada6d0f25d3299da803b6554a075764675aa2a45951"
+  },
+  {
+    "name": "ordinary-L-room",
+    "hulls": {
+      "0": {
+        "samples": 512,
+        "failures": [],
+        "differences": []
+      },
+      "1": {
+        "samples": 512,
+        "failures": [],
+        "differences": []
+      },
+      "2": {
+        "samples": 512,
+        "failures": [],
+        "differences": []
+      }
+    },
+    "accepted_compiler_sha256": "49d766579a03701d6a5bb3560112bc756afdb8cf4488242e0b8db72668d8c8c0",
+    "candidate_bsp_sha256": "5b9eca26c5af4f33c3b6f30a06d968605cff8ef64a708000d25fbfaa33305665",
+    "accepted_bsp_sha256": "4690914c103a3a3fc1766e461391ea0d5625797858818e4122ecf6d9904fe0a0"
+  }
+]

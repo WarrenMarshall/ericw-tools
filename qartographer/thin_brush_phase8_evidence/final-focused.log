@@ -1,0 +1,37 @@
+Note: Google Test filter = phase5.*:phase7.*:phase8.*:qbsp.duplicatePlanes:qbsp.emptyBrush
+[==========] Running 7 tests from 4 test suites.
+[----------] Global test environment set-up.
+[----------] 2 tests from qbsp
+[ RUN      ] qbsp.duplicatePlanes
+duplicatePlanes[line 11]: Brush with duplicate plane
+WARNING: No wad or _wad key exists in the worldmodel
+INFO: world extents calculated to 2568 units
+[       OK ] qbsp.duplicatePlanes (0 ms)
+[ RUN      ] qbsp.emptyBrush
+WARNING: No wad or _wad key exists in the worldmodel
+INFO: world extents calculated to 616 units
+[       OK ] qbsp.emptyBrush (0 ms)
+[----------] 2 tests from qbsp (0 ms total)
+
+[----------] 2 tests from phase5
+[ RUN      ] phase5.Hull2ResolvedFrontFragment
+[       OK ] phase5.Hull2ResolvedFrontFragment (0 ms)
+[ RUN      ] phase5.NarrowQuadrilateralRankAndRealization
+[       OK ] phase5.NarrowQuadrilateralRankAndRealization (6 ms)
+[----------] 2 tests from phase5 (6 ms total)
+
+[----------] 2 tests from phase7
+[ RUN      ] phase7.FailureSiteSupportDecisions
+[       OK ] phase7.FailureSiteSupportDecisions (38 ms)
+[ RUN      ] phase7.CompleteRegionCoverage
+[       OK ] phase7.CompleteRegionCoverage (0 ms)
+[----------] 2 tests from phase7 (38 ms total)
+
+[----------] 1 test from phase8
+[ RUN      ] phase8.DeferredPortalRequiresOccupancyOrConnectivityProof
+[       OK ] phase8.DeferredPortalRequiresOccupancyOrConnectivityProof (0 ms)
+[----------] 1 test from phase8 (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 7 tests from 4 test suites ran. (46 ms total)
+[  PASSED  ] 7 tests.
